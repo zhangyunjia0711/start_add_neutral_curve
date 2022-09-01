@@ -38,10 +38,17 @@ if (FORTRAN_COMPILER)
   SET(CMAKE_Fortran_COMPILER ${FORTRAN_COMPILER})
   enable_language(Fortran)
 endif (FORTRAN_COMPILER)
-add_compile_options(-cpp -fopenmp -fbacktrace -fbounds-check -fallow-argument-mismatch -I$ENV{MKLROOT}/include 
-	            -I$ENV{MKLROOT}/include/intel64/lp64)
-add_link_options(-fopenmp -L$ENV{MKLROOT}/lib $ENV{MKLROOT}/lib/libmkl_blas95_lp64.a $ENV{MKLROOT}/lib/libmkl_lapack95_lp64.a
-	$ENV{MKLROOT}/lib/libmkl_intel_lp64.a $ENV{MKLROOT}/lib/libmkl_sequential.a $ENV{MKLROOT}/lib/libmkl_core.a)
+
+if ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "GNU")
+  add_compile_options(-cpp -fopenmp -fbacktrace -fbounds-check -fallow-argument-mismatch -I$ENV{MKLROOT}/include 
+                -I$ENV{MKLROOT}/include/intel64/lp64)
+  add_link_options(-fopenmp -L$ENV{MKLROOT}/lib $ENV{MKLROOT}/lib/libmkl_blas95_lp64.a $ENV{MKLROOT}/lib/libmkl_lapack95_lp64.a
+    $ENV{MKLROOT}/lib/libmkl_intel_lp64.a $ENV{MKLROOT}/lib/libmkl_sequential.a $ENV{MKLROOT}/lib/libmkl_core.a)
+elseif ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "Intel")
+  add_compile_options(-cpp -DCOMPLEX_PETSC -qopenmp -traceback -CB -qmkl)
+  add_link_options(-qopenmp -qmkl)
+endif()
+
 #  tells CMake to build the application ex1 from the source file ex1.c
 #  this must appear AFTER the compilers are set
 project(START)
