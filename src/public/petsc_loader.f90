@@ -5,6 +5,7 @@ module mod_petsc_loader
 
    use petsc
    use global_parameters
+   use stdlib_string_type, only: char
    implicit none
 
    public :: load_info

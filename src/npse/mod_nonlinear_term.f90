@@ -85,11 +85,11 @@ module mod_nonlinear_term
 
     use petsc
     !use MKL_fft
-#ifdef MKL
+! #ifdef MKL
     use mod_fft
-#else
+! #else
     use mod_petsc_fft
-#endif
+! #endif
 
     implicit none
 

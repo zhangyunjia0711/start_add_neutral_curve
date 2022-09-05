@@ -1,7 +1,7 @@
-#ifndef MKL
 module mod_petsc_fft
 #include <petsc/finclude/petsc.h>
 
+#ifndef MKL
    use petsc
    use iso_fortran_env, only: REAL64
    implicit none
@@ -159,6 +159,5 @@ contains
       this%shape = 1
 
    end subroutine finalize
-
-end module mod_petsc_fft
 #endif
+end module mod_petsc_fft

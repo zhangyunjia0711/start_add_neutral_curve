@@ -6,7 +6,7 @@ module global_parameters
   use iso_fortran_env, only: REAL64
   use petsc
   use cfgio_mod
-  use stdlib_string_type
+  use stdlib_string_type, only: string_type
   implicit none
 
   public

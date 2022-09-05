@@ -24,6 +24,7 @@ module mod_lst
     use mod_lst_solver_abstract
     use mod_lst_eqn
     use mod_alst_eqn
+    use stdlib_string_type, only: char
 
     implicit none
 
@@ -39,9 +40,9 @@ contains
         implicit none
 
         if (lst_IsAdjoint) then
-            solname = 'ALST'
+            solname = string_type('ALST')
         else
-            solname = 'LST'
+            solname = string_type('LST')
         end if
 
         ! select case (lst_method)

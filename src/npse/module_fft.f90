@@ -18,9 +18,11 @@
 !------------------------------------------------------------------------------
 #ifdef MKL
 #include <mkl_dfti.f90>
+#endif
 
 module mod_fft
 
+#ifdef MKL
    use iso_fortran_env, only: REAL64
    use MKL_DFTI
    ! use global_parameters
@@ -278,6 +280,5 @@ contains
       this%isInitial = .False.
 
    end subroutine finalize
-
-end module mod_fft
 #endif
+end module mod_fft

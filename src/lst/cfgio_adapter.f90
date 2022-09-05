@@ -12,6 +12,7 @@ module mod_cfgio_adapter
 
     use cfgio_mod
     use global_parameters
+    use stdlib_string_type
 
     implicit none
 
@@ -337,78 +338,78 @@ module mod_cfgio_adapter
 
     end subroutine cfg_bc
 
-    subroutine bcast()
+    ! subroutine bcast()
 
-        implicit none
-        integer :: ntmp(100)
-        real(REAL64) :: rtmp(100)
-        character(256) :: ctmp(100)
+    !     implicit none
+    !     integer :: ntmp(100)
+    !     real(REAL64) :: rtmp(100)
+    !     character(256) :: ctmp(100)
 
-        integer :: ierr
+    !     integer :: ierr
 
-        ntmp=0
+    !     ntmp=0
 
-        ntmp(1)=in
-        ntmp(2)=jn
+    !     ntmp(1)=in
+    !     ntmp(2)=jn
 
-        ntmp(4)=istart
-        ntmp(5)=iend
-        ntmp(6)=iloc
-        ntmp(7)=lst_method
-        ntmp(8)=lst_mode
-        ntmp(9)=lst_nev
-        ntmp(10) =bc_y0
-        ntmp(11)=bc_yn
+    !     ntmp(4)=istart
+    !     ntmp(5)=iend
+    !     ntmp(6)=iloc
+    !     ntmp(7)=lst_method
+    !     ntmp(8)=lst_mode
+    !     ntmp(9)=lst_nev
+    !     ntmp(10) =bc_y0
+    !     ntmp(11)=bc_yn
 
-        call MPI_Bcast(ntmp(1), 100, MPI_INTEGER, 0, MPI_COMM_WORLD, ierr)
+    !     call MPI_Bcast(ntmp(1), 100, MPI_INTEGER, 0, MPI_COMM_WORLD, ierr)
 
-        in=ntmp(1)
-        jn=ntmp(2)
+    !     in=ntmp(1)
+    !     jn=ntmp(2)
 
-        istart=ntmp(4)
-        iend=ntmp(5)
-        iloc=ntmp(6)
-        lst_method=ntmp(7)
-        lst_mode=ntmp(8)
-        lst_nev=ntmp(9)
-        bc_y0=ntmp(10)
-        bc_yn=ntmp(11)
+    !     istart=ntmp(4)
+    !     iend=ntmp(5)
+    !     iloc=ntmp(6)
+    !     lst_method=ntmp(7)
+    !     lst_mode=ntmp(8)
+    !     lst_nev=ntmp(9)
+    !     bc_y0=ntmp(10)
+    !     bc_yn=ntmp(11)
 
-        rtmp=0
+    !     rtmp=0
 
-        rtmp(1)=Ma
-        rtmp(2)=Re
-        rtmp(3)=Te
-        rtmp(4)=alpha(1)
-        rtmp(5)=alpha(2)
-        rtmp(6)=omega(1)
-        rtmp(7)=omega(2)
-        rtmp(8)=beta (1)
-        rtmp(9)=beta (2)
+    !     rtmp(1)=Ma
+    !     rtmp(2)=Re
+    !     rtmp(3)=Te
+    !     rtmp(4)=alpha(1)
+    !     rtmp(5)=alpha(2)
+    !     rtmp(6)=omega(1)
+    !     rtmp(7)=omega(2)
+    !     rtmp(8)=beta (1)
+    !     rtmp(9)=beta (2)
 
-        call MPI_bcast(rtmp(1), 100, MPI_DOUBLE_PRECISION, 0, MPI_COMM_WORLD, ierr)
+    !     call MPI_bcast(rtmp(1), 100, MPI_DOUBLE_PRECISION, 0, MPI_COMM_WORLD, ierr)
 
-        Ma=rtmp(1)
-        Re=rtmp(2)
-        Te=rtmp(3)
-        alpha(1)=rtmp(4)
-        alpha(2)=rtmp(5)
-        omega(1)=rtmp(6)
-        omega(2)=rtmp(7)
-        beta (1)=rtmp(8)
-        beta (2)=rtmp(9)
+    !     Ma=rtmp(1)
+    !     Re=rtmp(2)
+    !     Te=rtmp(3)
+    !     alpha(1)=rtmp(4)
+    !     alpha(2)=rtmp(5)
+    !     omega(1)=rtmp(6)
+    !     omega(2)=rtmp(7)
+    !     beta (1)=rtmp(8)
+    !     beta (2)=rtmp(9)
 
-        ctmp(1)=char(gridfile)
-        ctmp(2)=char(flowfile)
+    !     ctmp(1)=char(gridfile)
+    !     ctmp(2)=char(flowfile)
 
-        call MPI_bcast(rtmp(1), 100*256, MPI_CHAR, 0, MPI_COMM_WORLD, ierr)
+    !     call MPI_bcast(rtmp(1), 100*256, MPI_CHAR, 0, MPI_COMM_WORLD, ierr)
 
-        gridfile=trim(ctmp(1))
-        flowfile=trim(ctmp(2))
+    !     gridfile=trim(ctmp(1))
+    !     flowfile=trim(ctmp(2))
 
-        call MPI_Bcast(lst_IsAdjoint, 1, MPI_LOGICAL, 0, MPI_COMM_WORLD, ierr)
-        call MPI_bcast(mpi_ierr, 1, MPI_LOGICAL, 0, MPI_COMM_WORLD, ierr)
+    !     call MPI_Bcast(lst_IsAdjoint, 1, MPI_LOGICAL, 0, MPI_COMM_WORLD, ierr)
+    !     call MPI_bcast(mpi_ierr, 1, MPI_LOGICAL, 0, MPI_COMM_WORLD, ierr)
 
-    end subroutine bcast
+    ! end subroutine bcast
 
 end module mod_cfgio_adapter
