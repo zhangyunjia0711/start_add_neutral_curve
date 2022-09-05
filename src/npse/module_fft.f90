@@ -16,6 +16,7 @@
 !> Liu Jianxin
 !> @date 2017-11-10
 !------------------------------------------------------------------------------
+#ifdef MKL
 #include <mkl_dfti.f90>
 
 module mod_fft
@@ -48,7 +49,7 @@ module mod_fft
 
       generic :: fft => fft_zz, fft_zz_inplace, fft_zz_2d
       generic :: ifft => ifft_zz, ifft_zz_inplace, ifft_zz_2d
-      generic :: Initial => Initial_1d, initial_2d
+      generic :: Initialize => Initial_1d, initial_2d
 
       Procedure, private :: Initial_1d
       procedure, private :: initial_2d
@@ -279,3 +280,4 @@ contains
    end subroutine finalize
 
 end module mod_fft
+#endif

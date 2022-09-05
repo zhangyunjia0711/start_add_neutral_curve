@@ -85,7 +85,11 @@ module mod_nonlinear_term
 
     use petsc
     !use MKL_fft
+#ifdef MKL
     use mod_fft
+#else
+    use mod_petsc_fft
+#endif
 
     implicit none
 
@@ -302,7 +306,7 @@ contains
         end associate
 
         ! call InitialSpectralScheme(this%handle, 4*this%m, 4*this%n)
-        call this%handle_new%initial(this%msp, this%nsp)
+        call this%handle_new%initialize(this%msp, this%nsp)
 
     end subroutine initial_nonliner_term
 
