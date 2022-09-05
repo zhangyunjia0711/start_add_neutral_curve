@@ -47,8 +47,6 @@ elseif ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "Intel")
   add_link_options(-qopenmp -qmkl)
 endif()
 
-
-
 #  tells CMake to build the application ex1 from the source file ex1.c
 #  this must appear AFTER the compilers are set
 project(START)
