@@ -31,6 +31,7 @@ md_extensions: markdown.extensions.toc
 ordered_subpage: theory
 ordered_subpage: guide
 ordered_subpage: examples
+css: ./css/style.css
 
 ---
 [TOC]

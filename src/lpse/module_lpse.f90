@@ -361,7 +361,7 @@ contains
         call DMDAVecGetArrayF90(meshDA, phi_domain, tmp_domain, ierr)
         do i = istart, iend
             call DMDAVecGetArrayReadF90(DM_local, phi(i), tmp_local, ierr)
-            tmp_domain(:, i - 1, :) = tmp_local(:, :)!*exp(ZI*lnA(i))
+            tmp_domain(:, i - 1, :) = tmp_local(:, :) ! *exp(ZI*lnA(i))
             call DMDAVecRestoreArrayReadF90(DM_local, phi(i), tmp_local, ierr)
         end do
         call DMDAVecRestoreArrayF90(meshDA, phi_domain, tmp_domain, ierr)
