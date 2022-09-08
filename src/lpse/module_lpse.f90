@@ -338,23 +338,23 @@ contains
         astring(1) = solname
         astring(2) = string_type(istart); astring(2) = 'istart='//astring(2)
         astring(3) = string_type(iend); astring(3) = 'iend='//astring(3)
-    !     astring(4) = 'alpha.plt'
-    !     name = astring(1)//"_"//astring(2)//"_"//astring(3)//"_"//astring(4)
-    !     strings = "Writing the wave numbers alpha to "//name//'\n'
-    !     call PetscPrintf(PETSC_COMM_WORLD, char(strings), ierr)
+        astring(4) = 'alpha.plt'
+        name = astring(1)//"_"//astring(2)//"_"//astring(3)//"_"//astring(4)
+        strings = "Writing the wave numbers alpha to "//name//'\n'
+        call PetscPrintf(PETSC_COMM_WORLD, char(strings), ierr)
 
-    !     open (newunit=iounit, file='./out/'//char(name), iostat=ios, action="write")
-    !     if (ios /= 0) stop "Error opening file "
+        open (newunit=iounit, file='./out/'//char(name), iostat=ios, action="write")
+        if (ios /= 0) stop "Error opening file "
 
-    !     write (iounit, '(A)') '#variables=i, x, Ma, Re, Te, omega_r, omega_i, &
-    ! &                alpha_r, alpha_i, beta_r, beta_i, c_r, c_i'
-    !     do i = istart, iend
-    !         write (iounit, ('(I0, 12(2X, F20.8))')) &
-    !             i, xx(i, yb + 1), Ma, Re, Te, ome, &
-    !             alf(i), bat, ome/(alf(i) + epsilon)
-    !     end do
-    !     close (iounit)
-    !     call PetscPrintf(PETSC_COMM_WORLD, 'Write wavenum done.\n', ierr)
+        write (iounit, '(A)') '#variables=i, x, Ma, Re, Te, omega_r, omega_i, &
+    &                alpha_r, alpha_i, beta_r, beta_i, c_r, c_i'
+        do i = istart, iend
+            write (iounit, ('(I0, 12(2X, F20.8))')) &
+                i, xx(i, yb + 1), Ma, Re, Te, ome, &
+                alf(i), bat, ome/(alf(i) + epsilon)
+        end do
+        close (iounit)
+        call PetscPrintf(PETSC_COMM_WORLD, 'Write wavenum done.\n', ierr)
 
     !! Write phi
         call DMGetGlobalVector(meshDA, phi_domain, ierr)
