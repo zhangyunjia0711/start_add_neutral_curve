@@ -51,10 +51,12 @@ contains
         type(type_lst_bf_profile) :: baseflow_profile
         type(type_lst_eqn) :: lst
         type(type_alst_eqn) :: alst
-        Vec :: lst_eigf, alst_eigf
+        Vec :: lst_eigf, alst_eigf, vec_local
 
         integer :: k, ki
         real(REAL64) :: pk
+        Mat :: mat_local
+        complex(REAL64) :: Q
 
         call lst%set_parameter("lst_mode", LST_SPATIAL_MODE)
         call lst%initial(jn, Re=Re, Ma=Ma, Te=Te, yb_=yb, ye_=ye)
@@ -81,15 +83,40 @@ contains
         call lst%solve(ome, alf, bat)
         call alst%solve(ome, alf, bat)
 
+        call MatDuplicate(lst%L_LST(2), MAT_COPY_VALUES, mat_local, ierr)
+
         call lst%get_eigf(lst_eigf)
         call alst%get_eigf(alst_eigf)
+
+        call VecDuplicate(lst_eigf, vec_local, ierr)
+
+        !! compute receptivity coefficient
+        call MatAXPY(mat_local, 2.0d0*alf, lst%L_LST(3), SUBSET_NONZERO_PATTERN, ierr)
+        call MatMult(mat_local, lst_eigf, vec_local, ierr)
+
+        Q = inner_product(alst_eigf, vec_local)
+        call VecView(alst_eigf, PETSC_VIEWER_STDOUT_SELF, ierr)
+        read(*, *)
+
 
         call lst%finalize()
         call alst%finalize()
         call grid_profile%finalize()
         call baseflow_profile%finalize()
+        call MatDestroy(mat_local, ierr)
 
     end subroutine solve_lst_receptivity_local
+
+    function inner_product(vec1, vec2)  result(q)
+
+        implicit none
+        Vec, intent(in) :: vec1, vec2
+        complex(REAL64) :: q
+        complex(REAL64), allocatable :: array1(:), array2(:)
+
+
+
+    end function inner_product
 
     subroutine write_lst_function(ome, alf, bat, ix, v)
 
