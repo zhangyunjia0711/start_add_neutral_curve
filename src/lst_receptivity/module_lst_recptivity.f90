@@ -98,10 +98,12 @@ contains
       call MatAXPY(mat_local, 2.0d0*alf, lst%L_LST(3), SUBSET_NONZERO_PATTERN, ierr)
       call MatMult(mat_local, lst_eigf, vec_local, ierr)
       call VecDot(alst_eigf, vec_local, Q, ierr)
+
       ! <\hat phi_{\alpha_s}, \hat S>
       call VecDot(alst_eigf, source_local, force_source, ierr)
+
       ! b.c.
-      bc_force = integral_bc(baseflow_profile, alst_eigf, cmplx([0.0d0, 1.0d0, 0.0d0, 0.0d0]))
+      bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx([0.0d0, 1.0d0, 0.0d0, 0.0d0]))
 
       Cr = (force_source - bc_force)/Q*ZI
 
@@ -117,9 +119,10 @@ contains
 
    end subroutine solve_lst_receptivity_local
 
-   function integral_bc(baseflow, alst_eigf, bcwall) result(bc_force)
+   function integral_bc(baseflow, grid, alst_eigf, bcwall) result(bc_force)
       implicit none
       type(type_lst_bf_profile), intent(in) :: baseflow
+      type(type_lst_grid_profile), intent(in) :: grid
       Vec, intent(in) :: alst_eigf
       complex, intent(in) :: bcwall(4)
       complex(REAL64) :: bc_force
@@ -127,17 +130,23 @@ contains
       complex(REAL64) :: u_w, v_w, w_w, T_w
       complex(REAL64) :: rho_star_w, du_star_w, dv_star_w, dw_star_w, dT_star_w
       real(REAL64) :: Rho0_w, mu0
+      complex(REAL64), pointer :: tmp_(:)
 
       u_w = bcwall(1); v_w = bcwall(2); w_w = bcwall(3); T_w = bcwall(4)
       Rho0_w = baseflow%q0(1, 1)
 
       !! set mu0
-      associate(T=>baseflow%q0(5, 1), C1=> 110.4D0)
-        mu0=T*sqrt(T)*(1.0d0 + C1/Te)/(T + C1/Te)/Re
+      associate (T => baseflow%q0(5, 1), C1 => 110.4D0)
+         mu0 = T*sqrt(T)*(1.0d0 + C1/Te)/(T + C1/Te)/Re
       end associate
       !!set rho_star_w, du_star_w, dv_star_w, dw_star_w, dT_star_w value
-
-      
+      call VecGetArrayReadF90(alst_eigf, tmp_, ierr)
+      rho_star_w = tmp_(1)
+      du_star_w = (-1.0d0*tmp_(12) + 4.0d0*tmp_(7) - 3.0d0*tmp_(2))/2.0d0*grid%eta_y(1)
+      dv_star_w = (-1.0d0*tmp_(13) + 4.0d0*tmp_(8) - 3.0d0*tmp_(3))/2.0d0*grid%eta_y(1)
+      dw_star_w = (-1.0d0*tmp_(14) + 4.0d0*tmp_(9) - 3.0d0*tmp_(4))/2.0d0*grid%eta_y(1)
+      dT_star_w = (-1.0d0*tmp_(15) + 4.0d0*tmp_(10) - 3.0d0*tmp_(5))/2.0d0*grid%eta_y(1)
+      call VecRestoreArrayReadF90(alst_eigf, tmp_, ierr)
 
       bc_force = Rho0_w*rho_star_w*v_w + &
                  mu0*du_star_w*u_w + &
