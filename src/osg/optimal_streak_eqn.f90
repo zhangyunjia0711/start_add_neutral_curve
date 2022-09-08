@@ -76,10 +76,11 @@ module mod_optimal_streak_eqn
 
 contains
 
-    subroutine initial_optimal_streak_eqn(this, jn, Re, Ma, Te, Pr, yb, ye)
+    subroutine initial_optimal_streak_eqn(this, jn, Re, Ma, Te, Pr, yb, ye, isothermal)
         class(type_optimal_streak_eqn), intent(inout) :: this
         integer, intent(in) :: jn, yb, ye
         real(real64), intent(in) :: Re, Ma, Te, Pr
+        logical, intent(in) :: isothermal
 
         this%jn = jn
         this%Ma = Ma
@@ -98,15 +99,17 @@ contains
         call lst%set_parameter("lst_mode", LST_SPATIAL_MODE)
         call lst%initial(jn, Re=Re, Ma=Ma, Te=Te, yb_=yb, ye_=ye)
         call lst%set_parameter("Pr", Pr)
-
+        lst%isothermal = isothermal
         ! allocate(type_lpse_eqn :: lpse)
         call lpse%initial(jn, Re, Ma, Te, yb, ye)
         call lpse%set_parameter("solve_alpha", SOLVE_ALPHA_NONE)
         call lpse%set_parameter("Pr", Pr)
+        lpse%isothermal = isothermal
         ! allocate(type_alpse_eqn :: alpse)
         call alpse%initial(jn, Re, Ma, Te, yb, ye)
         call alpse%set_parameter("solve_alpha", SOLVE_ALPHA_NONE)
         call alpse%set_parameter("Pr", Pr)
+        alpse%isothermal = isothermal
 
     end subroutine initial_optimal_streak_eqn
 

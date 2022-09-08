@@ -76,6 +76,8 @@ module global_parameters
    integer :: xbg, ybg, xlg, ylg, xeg, yeg
    integer :: xb, yb, xl, yl, xe, ye
 
+   logical :: isothermal = .TRUE.
+
    real(REAL64) :: omega_force_factor=1.0d0
    real(REAL64) :: omega_phi_factor=1.0d0
    real(REAL64) :: atol_nonlinear=1.0d-6

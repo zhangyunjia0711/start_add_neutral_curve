@@ -61,7 +61,7 @@ contains
 
     jb=yb+1; je=ye+1
 
-    call solver%initial(jn, Re, Ma, Te, Pr, yb, ye)
+    call solver%initial(jn, Re, Ma, Te, Pr, yb, ye, isothermal)
 
   end subroutine initial_3dsgo
 

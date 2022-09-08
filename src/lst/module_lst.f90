@@ -77,6 +77,7 @@ contains
         call lst%set_parameter("lst_mode", lst_mode)
         call lst%initial(jn, Re=Re, Ma=Ma, Te=Te, yb_=yb, ye_=ye)
         call lst%set_parameter("Pr", Pr)
+        lst%isothermal = isothermal
 
         k = 0; ki = 0; pk = 0.0d0
         if (rank == 0) then

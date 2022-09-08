@@ -38,6 +38,7 @@ module mod_solver_abstract
         real(REAL64) :: Re, Ma, Te
 
         logical :: has_initialized = .FALSE.
+        logical :: isothermal = .TRUE.
 
         type(type_lst_bf_profile) :: baseflow
         type(type_lst_grid_profile) :: grid

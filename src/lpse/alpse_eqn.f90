@@ -1076,7 +1076,11 @@ contains
                 D_0(2, 2, 1) = 1.0d0
                 D_0(3, 3, 1) = 1.0d0
                 D_0(4, 4, 1) = 1.0d0
-                D_0(5, 5, 1) = 1.0d0
+                if(this%isothermal)then
+                    D_0(5, 5, 1) = 1.0d0
+                else
+                    B_0(5, 5, 1) = 1.0d0
+                endif
             case (BC_POLE)
                 D_2(:, :, 1) = 0.0d0
                 B_0(:, :, 1) = 0.0d0

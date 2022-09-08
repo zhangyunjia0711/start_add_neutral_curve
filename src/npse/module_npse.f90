@@ -41,6 +41,7 @@ module mod_npse
     use global_parameters, only: ome0, bat0
     use global_parameters, only: inlet_dis
     use global_parameters, only: ndis
+    use global_parameters, only: isothermal
 
     ! use global_parameters, only: phi
     ! use global_parameters, only: wave_param
@@ -148,6 +149,7 @@ contains
         call npse_eqn%set_parameter("sigma_control", sigma_control)
         call npse_eqn%set_parameter("rd_factor", rd_factor)
         call npse_eqn%set_parameter("Pr", Pr)
+        npse_eqn%isothermal = isothermal
         call npse_eqn%initial_force()
 
         solve_alpha = SOLVE_ALPHA_NONE
@@ -181,7 +183,8 @@ contains
         call lst%set_parameter("lst_mode", LST_SPATIAL_MODE)
         call lst%initial(jn, Re=Re, Ma=Ma, Te=Te, yb_=yb, ye_=ye)
         call lst%set_parameter("Pr", Pr)
-
+        lst%isothermal = isothermal
+        
         grid_profile = assemble_lst_grid_profile(iloc)
         baseflow_profile = assemble_lst_baseflow_profile(iloc)
 

@@ -240,6 +240,11 @@ module mod_cfgio_adapter
             case ('BC_WALL')
                 print*, 'bc wall is used at y0.'
                 bc_y0=BC_WALL
+                if(cfg%has_key("bc", "temperature_type"))then
+                  call cfg%get("bc", "temperature_type", isothermal)
+                else
+                  isothermal = .TRUE.
+                endif
             case default
                 print*, '[bc]y_0 keyword is wrong.'
                 print*, 'The keryword may be BC_WALL.'

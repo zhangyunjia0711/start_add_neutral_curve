@@ -60,6 +60,7 @@ module global_parameters
   integer :: size=1, rank=0
   integer :: xbg, ybg, xlg, ylg, xeg, yeg
   integer :: xb, yb, xl, yl, xe, ye
+  logical :: isothermal = .TRUE.
 
   integer :: i_x0, i_x1
   real(REAL64) :: initial_alf, initial_bat, initial_ome
