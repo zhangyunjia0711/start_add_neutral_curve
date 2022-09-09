@@ -32,6 +32,7 @@ module mod_lst_receptivity
    public :: solve_lst_receptivity
 
    Vec :: source_whole
+   complex(REAL64), allocatable :: Cr(:)
 
 #include "../include/start.f90"
 
@@ -41,9 +42,13 @@ contains
 
       implicit none
 
+      allocate (Cr(in))
+
       call load_source_term()
       call solve_lst_receptivity_local()
       call finalize_receptivity()
+
+      deallocate (Cr)
 
    end subroutine solve_lst_receptivity
 
@@ -53,14 +58,14 @@ contains
       PetscViewer :: viewer
 
       call VecDuplicate(Flowfield, source_whole, ierr)
-      if( char(source_term_file) /= 'none') then
-        call PetscViewerHDF5Open(PETSC_COMM_WORLD, char(source_term_file), FILE_MODE_READ, viewer, ierr)
-        call PetscObjectSetName(source_whole, "source", ierr)
-        call VecLoad(source_whole, viewer, ierr)
-        call PetscViewerDestroy(viewer, ierr)
+      if (char(source_term_file) /= 'none') then
+         call PetscViewerHDF5Open(PETSC_COMM_WORLD, char(source_term_file), FILE_MODE_READ, viewer, ierr)
+         call PetscObjectSetName(source_whole, "source", ierr)
+         call VecLoad(source_whole, viewer, ierr)
+         call PetscViewerDestroy(viewer, ierr)
       else
-        call VecZeroEntries(source_whole, ierr)
-      endif
+         call VecZeroEntries(source_whole, ierr)
+      end if
 
    end subroutine load_source_term
 
@@ -75,7 +80,7 @@ contains
       call DMRestoreLocalVector(meshDA, Flowfield_local, ierr)
       call DMDestroy(meshDA, ierr)
       call DMDestroy(coordDA, ierr)
-    !   call DMDestroy(DA, ierr)
+      !   call DMDestroy(DA, ierr)
 
    end subroutine
 
@@ -88,12 +93,11 @@ contains
       type(type_lst_eqn) :: lst
       type(type_alst_eqn) :: alst
       Vec :: lst_eigf, alst_eigf, vec_local, source_local
-      complex(REAL64) :: Cr
 
-      integer :: k, ki
-      real(REAL64) :: pk
+      integer :: i
       Mat :: mat_local
       complex(REAL64) :: Q, force_source, bc_force
+      complex(REAL64) :: alf_iloc
 
       call lst%set_parameter("lst_mode", LST_SPATIAL_MODE)
       call lst%initial(jn, Re=Re, Ma=Ma, Te=Te, yb_=yb, ye_=ye)
@@ -120,6 +124,8 @@ contains
       call lst%solve(ome, alf, bat)
       call alst%solve(ome, alf, bat)
 
+      alf_iloc = alf
+
       call MatDuplicate(lst%L_LST(2), MAT_COPY_VALUES, mat_local, ierr)
 
       call lst%get_eigf(lst_eigf)
@@ -145,7 +151,87 @@ contains
       ! b.c.
       bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx([0.0d0, 1.0d0, 0.0d0, 0.0d0]))
 
-      Cr = (force_source - bc_force)/Q*ZI
+      Cr(iloc) = (force_source - bc_force)/Q*ZI
+
+      do i = iloc, iend
+         grid_profile = assemble_lst_grid_profile(iloc)
+         baseflow_profile = assemble_lst_baseflow_profile(iloc)
+
+         call lst%set_grid(grid_profile)
+         call lst%set_baseflow(baseflow_profile)
+         call lst%setup()
+
+         call alst%set_grid(grid_profile)
+         call alst%set_baseflow(baseflow_profile)
+         call alst%setup()
+
+         call lst%solve(ome, alf, bat)
+         call alst%solve(ome, alf, bat)
+
+         call lst%get_eigf(lst_eigf)
+         call alst%get_eigf(alst_eigf)
+
+         call get_source_value_local(source_whole, source_local, i)
+
+        !! compute receptivity coefficient
+        !! $C_r = i frac{<\hat phi_{\alpha_s}, \hat S> - B.C.}{Q}
+
+         !Q
+         call MatCopy(lst%L_LST(2), mat_local, DIFFERENT_NONZERO_PATTERN, ierr)
+         call MatAXPY(mat_local, 2.0d0*alf, lst%L_LST(3), SUBSET_NONZERO_PATTERN, ierr)
+         call MatMult(mat_local, lst_eigf, vec_local, ierr)
+         call VecDot(alst_eigf, vec_local, Q, ierr)
+
+         ! <\hat phi_{\alpha_s}, \hat S>
+         call VecDot(alst_eigf, source_local, force_source, ierr)
+
+         ! b.c.
+         bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx([0.0d0, 1.0d0, 0.0d0, 0.0d0]))
+
+         Cr(i) = (force_source - bc_force)/Q*ZI
+         print*, i, Cr(i)
+      end do
+
+      alf = alf_iloc
+      
+      do i = iloc, istart, -1
+        grid_profile = assemble_lst_grid_profile(iloc)
+        baseflow_profile = assemble_lst_baseflow_profile(iloc)
+
+        call lst%set_grid(grid_profile)
+        call lst%set_baseflow(baseflow_profile)
+        call lst%setup()
+
+        call alst%set_grid(grid_profile)
+        call alst%set_baseflow(baseflow_profile)
+        call alst%setup()
+
+        call lst%solve(ome, alf, bat)
+        call alst%solve(ome, alf, bat)
+
+        call lst%get_eigf(lst_eigf)
+        call alst%get_eigf(alst_eigf)
+
+        call get_source_value_local(source_whole, source_local, i)
+
+       !! compute receptivity coefficient
+       !! $C_r = i frac{<\hat phi_{\alpha_s}, \hat S> - B.C.}{Q}
+
+        !Q
+        call MatCopy(lst%L_LST(2), mat_local, DIFFERENT_NONZERO_PATTERN, ierr)
+        call MatAXPY(mat_local, 2.0d0*alf, lst%L_LST(3), SUBSET_NONZERO_PATTERN, ierr)
+        call MatMult(mat_local, lst_eigf, vec_local, ierr)
+        call VecDot(alst_eigf, vec_local, Q, ierr)
+
+        ! <\hat phi_{\alpha_s}, \hat S>
+        call VecDot(alst_eigf, source_local, force_source, ierr)
+
+        ! b.c.
+        bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx([0.0d0, 1.0d0, 0.0d0, 0.0d0]))
+
+        Cr(i) = (force_source - bc_force)/Q*ZI
+        print*, i, Cr(i)
+     end do
 
       call lst%finalize()
       call alst%finalize()
@@ -161,27 +247,27 @@ contains
 
    subroutine get_source_value_local(whole, local, iloc)
 
-    Vec, intent(in) :: whole
-    Vec, intent(inout) :: local
-    integer, intent(in) :: iloc
+      Vec, intent(in) :: whole
+      Vec, intent(inout) :: local
+      integer, intent(in) :: iloc
 
-    complex(REAL64), pointer :: array_whole(:, :, :), array_local(:)
+      complex(REAL64), pointer :: array_whole(:, :, :), array_local(:)
 
-    ! integer :: size_local, size_whole, in
+      ! integer :: size_local, size_whole, in
 
-    ! call VecGetSize(whole, size_whole, ierr)
-    ! call VecGetSize(local, size_local, ierr)
+      ! call VecGetSize(whole, size_whole, ierr)
+      ! call VecGetSize(local, size_local, ierr)
 
-    ! in = size_whole/size_local
+      ! in = size_whole/size_local
 
-    call DMDAVecGetArrayReadF90(meshDA, whole, array_whole, ierr)
-    call VecGetArrayF90(local, array_local, ierr)
+      call DMDAVecGetArrayReadF90(meshDA, whole, array_whole, ierr)
+      call VecGetArrayF90(local, array_local, ierr)
 
-    array_local = pack(array_whole(:, iloc, :), mask = .true.)
+      array_local = pack(array_whole(:, iloc, :), mask=.true.)
 
-    call VecRestoreArrayF90(local, array_local, ierr)
-    call DMDAVecRestoreArrayReadF90(meshDA, whole, array_whole, ierr)
-    
+      call VecRestoreArrayF90(local, array_local, ierr)
+      call DMDAVecRestoreArrayReadF90(meshDA, whole, array_whole, ierr)
+
    end subroutine get_source_value_local
 
    function integral_bc(baseflow, grid, alst_eigf, bcwall) result(bc_force)
