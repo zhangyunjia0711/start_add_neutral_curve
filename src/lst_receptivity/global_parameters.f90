@@ -57,4 +57,6 @@ module global_parameters
   integer :: xbg, ybg, xlg, ylg, xeg, yeg
   integer :: xb, yb, xl, yl, xe, ye
 
+  logical :: isothermal = .TRUE.
+
 end module global_parameters

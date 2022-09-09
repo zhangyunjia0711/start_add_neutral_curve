@@ -104,10 +104,12 @@ contains
       call lst%set_parameter("lst_mode", LST_SPATIAL_MODE)
       call lst%initial(jn, Re=Re, Ma=Ma, Te=Te, yb_=yb, ye_=ye)
       call lst%set_parameter("Pr", Pr)
+      lst%isothermal = isothermal
 
       call alst%set_parameter("lst_mode", LST_SPATIAL_MODE)
       call alst%initial(jn, Re=Re, Ma=Ma, Te=Te, yb_=yb, ye_=ye)
       call alst%set_parameter("Pr", Pr)
+      alst%isothermal = isothermal
 
       grid_profile = assemble_lst_grid_profile(iloc)
       baseflow_profile = assemble_lst_baseflow_profile(iloc)
