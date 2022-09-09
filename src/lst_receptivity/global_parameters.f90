@@ -24,6 +24,7 @@ module global_parameters
   Vec :: Coord, Flowfield
   Vec :: Coord_local, Flowfield_local
   PetscErrorCode :: ierr
+  complex(REAL64) :: bc_disturb(4) = 0.0d0
 
   type(string_type) :: gridfile, flowfile, curfile, source_term_file
 

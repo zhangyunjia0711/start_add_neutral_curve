@@ -33,18 +33,18 @@ contains
       character(len=*), intent(in) :: cfgfn
       integer :: ierr
 
-      if (rank == 0) then
-         cfg = parse_cfg(trim(cfgfn))
-         call cfg_general(cfg)
-         call cfg_filename(cfg)
-         call cfg_domain(cfg)
-         call cfg_freestream(cfg)
-         call cfg_lst(cfg)
-         call cfg_bc(cfg)
-         call cfg_receptivity(cfg)
-         call cfg%write()
-         call cfg%write(trim(cfgfn))
-      end if
+      ! if (rank == 0) then
+      cfg = parse_cfg(trim(cfgfn))
+      call cfg_general(cfg)
+      call cfg_filename(cfg)
+      call cfg_domain(cfg)
+      call cfg_freestream(cfg)
+      call cfg_lst(cfg)
+      call cfg_bc(cfg)
+      call cfg_receptivity(cfg)
+      call cfg%write()
+      call cfg%write(trim(cfgfn))
+      ! end if
       ! call bcast()
       ! if(mpi_ierr) then
       !     print*, 'There is some fatal errors in ini file.'
@@ -277,23 +277,33 @@ contains
 
    subroutine cfg_receptivity(cfg)
 
-    implicit none
-    type(cfg_t), intent(inout) :: cfg
-    character(len=256) :: chartmp
+      implicit none
+      type(cfg_t), intent(inout) :: cfg
+      character(len=256) :: chartmp
+      real(REAL64), allocatable :: rtmp(:)
+      integer :: npar
 
-    if(cfg%has_key("receptivity", "source"))then
-      call cfg%get("receptivity", "source", chartmp)
+      if (cfg%has_key("receptivity", "source")) then
+         call cfg%get("receptivity", "source", chartmp)
 
-      select case(trim(chartmp))
-      case ("none", "zero")
-        source_term_file = 'none'
-      case default
-        source_term_file = trim(dir)//trim(chartmp)
-      end select
-    else
-      call PetscPrintf(PETSC_COMM_WORLD, "No source term in receptivity.\n", ierr)
-      source_term_file = 'none'
-    endif
+         select case (trim(chartmp))
+         case ("none", "zero")
+            source_term_file = 'none'
+         case default
+            source_term_file = trim(dir)//trim(chartmp)
+         end select
+      else
+         call PetscPrintf(PETSC_COMM_WORLD, "No source term in receptivity.\n", ierr)
+         source_term_file = 'none'
+      end if
+
+      if (cfg%has_key("receptivity", "wall")) then
+         call cfg%get("receptivity", "wall", rtmp, npar)
+         if(npar >= 4) npar =4
+         bc_disturb(1:npar) = rtmp(:)
+      else
+         bc_disturb = 0.0d0
+      end if
 
    end subroutine cfg_receptivity
 

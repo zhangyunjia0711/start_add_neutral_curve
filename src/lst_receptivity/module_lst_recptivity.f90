@@ -186,14 +186,14 @@ contains
          call VecDot(alst_eigf, source_local, force_source, ierr)
 
          ! b.c.
-         bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx([0.0d0, 1.0d0, 0.0d0, 0.0d0]))
+         bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx(bc_disturb))
 
          Cr(i) = (force_source - bc_force)/Q*ZI
          print*, i, Cr(i)
       end do
 
       alf = alf_iloc
-      
+
       do i = iloc, istart, -1
         grid_profile = assemble_lst_grid_profile(iloc)
         baseflow_profile = assemble_lst_baseflow_profile(iloc)
