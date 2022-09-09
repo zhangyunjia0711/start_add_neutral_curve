@@ -269,7 +269,7 @@ contains
       call DMDAVecGetArrayReadF90(meshDA, whole, array_whole, ierr)
       call VecGetArrayF90(local, array_local, ierr)
 
-      array_local = pack(array_whole(:, iloc, :), mask=.true.)
+      array_local = pack(array_whole(:, iloc-1, :), mask=.true.)
 
       call VecRestoreArrayF90(local, array_local, ierr)
       call DMDAVecRestoreArrayReadF90(meshDA, whole, array_whole, ierr)
