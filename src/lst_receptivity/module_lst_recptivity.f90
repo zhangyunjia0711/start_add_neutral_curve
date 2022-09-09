@@ -99,6 +99,8 @@ contains
       complex(REAL64) :: Q, force_source, bc_force
       complex(REAL64) :: alf_iloc
 
+      open(999, file='out/receptivity_coef.plt')
+
       call lst%set_parameter("lst_mode", LST_SPATIAL_MODE)
       call lst%initial(jn, Re=Re, Ma=Ma, Te=Te, yb_=yb, ye_=ye)
       call lst%set_parameter("Pr", Pr)
@@ -230,7 +232,7 @@ contains
         bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx([0.0d0, 1.0d0, 0.0d0, 0.0d0]))
 
         Cr(i) = (force_source - bc_force)/Q*ZI
-        print*, i, Cr(i)
+        write(999, *) i, Cr(i)
      end do
 
       call lst%finalize()
@@ -242,6 +244,8 @@ contains
       call VecDestroy(alst_eigf, ierr)
       call VecDestroy(vec_local, ierr)
       call VecDestroy(source_local, ierr)
+
+      close(999)
 
    end subroutine solve_lst_receptivity_local
 
