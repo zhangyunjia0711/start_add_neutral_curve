@@ -193,7 +193,7 @@ contains
          bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx(bc_disturb))
 
          Cr(i) = (force_source - bc_force)/Q*ZI
-         print*, i, Cr(i)
+         write(999, *) i, Cr(i)
       end do
 
       alf = alf_iloc
