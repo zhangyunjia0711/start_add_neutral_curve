@@ -43,6 +43,7 @@ module mod_lst_eqn
    type, extends(type_lst_abstract) :: type_lst_eqn
 
       ! integer :: bc_y0=BC_WALL, bc_yn=BC_FARFIELD
+      Mat, allocatable :: L_LST(:)
       ! integer :: lst_method=LST_LOCAL
       ! integer :: lst_mode=LST_TEMPORAL_MODE
       ! integer :: lst_nev=1
@@ -103,7 +104,6 @@ module mod_lst_eqn
    integer :: yb, ye
 
    DM :: DM_LST
-   Mat, allocatable :: L_LST(:)
 
    class(slepc_type), allocatable :: Solver
 
@@ -208,14 +208,14 @@ contains
       call DMDACreate1d(PETSC_COMM_WORLD, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER, DM_LST, ierr)
       call DMSetUp(DM_LST, ierr)
       if (this%lst_mode == LST_TEMPORAL_MODE) then
-         allocate (L_LST(2))
-         call DMCreateMatrix(DM_LST, L_LST(1), ierr)
-         call DMCreateMatrix(DM_LST, L_LST(2), ierr)
+         allocate (this%L_LST(2))
+         call DMCreateMatrix(DM_LST, this%L_LST(1), ierr)
+         call DMCreateMatrix(DM_LST, this%L_LST(2), ierr)
       else if (this%lst_mode == LST_SPATIAL_MODE) then
-         allocate (L_LST(3))
-         call DMCreateMatrix(DM_LST, L_LST(1), ierr)
-         call DMCreateMatrix(DM_LST, L_LST(2), ierr)
-         call DMCreateMatrix(DM_LST, L_LST(3), ierr)
+         allocate (this%L_LST(3))
+         call DMCreateMatrix(DM_LST, this%L_LST(1), ierr)
+         call DMCreateMatrix(DM_LST, this%L_LST(2), ierr)
+         call DMCreateMatrix(DM_LST, this%L_LST(3), ierr)
       end if
 
       select case (this%lst_mode)
@@ -782,7 +782,7 @@ contains
          idxm(3, 1) = j - 1
 
          associate (eta_y => this%grid%eta_y(j), eta_yy => this%grid%eta_yy(j), &
-                 &  C1=>FDM_C1_4ORD_CENTER, D1=>FDM_D1_4ORD_CENTER)
+                 &  C1 => FDM_C1_4ORD_CENTER, D1 => FDM_D1_4ORD_CENTER)
             tmp_mat_j0 = 0.0d0
             tmp_mat_j1 = 0.0d0
             box1 = 0.0d0
@@ -798,13 +798,13 @@ contains
             box2(:, :) = transpose(tmp_mat_j1(:, :, 0))
          end associate
 
-         call MatSetValuesBlockedStencil(L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
-         call MatSetValuesBlocked(L_LST(2), 1, j - 1, 1, j - 1, box2, INSERT_VALUES, ierr)
+         call MatSetValuesBlockedStencil(this%L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
+         call MatSetValuesBlocked(this%L_LST(2), 1, j - 1, 1, j - 1, box2, INSERT_VALUES, ierr)
       end do
 
       do i = 1, 2
-         call MatAssemblyBegin(L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
-         call MatAssemblyEnd(L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyBegin(this%L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyEnd(this%L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
       end do
 
       call PetscPrintf(PETSC_COMM_WORLD, "Set temporal LST EVP matrix done!\n", ierr)
@@ -852,7 +852,7 @@ contains
          idxm(3, 1) = j - 1
 
          associate (eta_y => this%grid%eta_y(j), eta_yy => this%grid%eta_yy(j), &
-                 &  C1=>FDM_C1_4ORD_CENTER, D1=>FDM_D1_4ORD_CENTER)
+                 &  C1 => FDM_C1_4ORD_CENTER, D1 => FDM_D1_4ORD_CENTER)
             tmp_mat_j0 = 0.0d0
             tmp_mat_j1 = 0.0d0
             box1 = 0.0d0
@@ -873,14 +873,14 @@ contains
             box3(:, :) = transpose(tmp_mat_j2(:, :, 0))
          end associate
 
-         call MatSetValuesBlockedStencil(L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
-         call MatSetValuesBlockedStencil(L_LST(2), 1, idxm, 5, idxn, box2, INSERT_VALUES, ierr)
-         call MatSetValuesBlocked(L_LST(3), 1, j - 1, 1, j - 1, box3, INSERT_VALUES, ierr)
+         call MatSetValuesBlockedStencil(this%L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
+         call MatSetValuesBlockedStencil(this%L_LST(2), 1, idxm, 5, idxn, box2, INSERT_VALUES, ierr)
+         call MatSetValuesBlocked(this%L_LST(3), 1, j - 1, 1, j - 1, box3, INSERT_VALUES, ierr)
       end do
 
       do i = 1, 3
-         call MatAssemblyBegin(L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
-         call MatAssemblyEnd(L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyBegin(this%L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyEnd(this%L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
       end do
 
       call PetscPrintf(PETSC_COMM_WORLD, "Set spatial LST EVP matrix done!\n", ierr)
@@ -920,7 +920,7 @@ contains
       idxm(3, 1) = j - 1
 
       associate (eta_y => this%grid%eta_y(j), eta_yy => this%grid%eta_yy(j), &
-              &  C1=>FDM_C1_4ORD_CENTER, D1=>FDM_D1_4ORD_CENTER)
+              &  C1 => FDM_C1_4ORD_CENTER, D1 => FDM_D1_4ORD_CENTER)
          tmp_mat_j0 = 0.0d0
          tmp_mat_j1 = 0.0d0
          box1 = 0.0d0
@@ -936,12 +936,12 @@ contains
          box2(:, :) = transpose(tmp_mat_j1(:, :, 0))
       end associate
 
-      call MatSetValuesBlockedStencil(L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
-      call MatSetValuesBlocked(L_LST(2), 1, j - 1, 1, j - 1, box2, INSERT_VALUES, ierr)
+      call MatSetValuesBlockedStencil(this%L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
+      call MatSetValuesBlocked(this%L_LST(2), 1, j - 1, 1, j - 1, box2, INSERT_VALUES, ierr)
 
       do i = 1, 2
-         call MatAssemblyBegin(L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
-         call MatAssemblyEnd(L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyBegin(this%L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyEnd(this%L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
       end do
 
       call PetscPrintf(PETSC_COMM_WORLD, "Set temporal LST EVP matrix BC done!\n", ierr)
@@ -982,7 +982,7 @@ contains
       idxm(3, 1) = j - 1
 
       associate (eta_y => this%grid%eta_y(j), eta_yy => this%grid%eta_yy(j), &
-              &  C1=>FDM_C1_4ORD_CENTER, D1=>FDM_D1_4ORD_CENTER)
+              &  C1 => FDM_C1_4ORD_CENTER, D1 => FDM_D1_4ORD_CENTER)
          tmp_mat_j0 = 0.0d0
          tmp_mat_j1 = 0.0d0
          box1 = 0.0d0
@@ -1003,13 +1003,13 @@ contains
          box3(:, :) = transpose(tmp_mat_j2(:, :, 0))
       end associate
 
-      call MatSetValuesBlockedStencil(L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
-      call MatSetValuesBlockedStencil(L_LST(2), 1, idxm, 5, idxn, box2, INSERT_VALUES, ierr)
-      call MatSetValuesBlocked(L_LST(3), 1, j - 1, 1, j - 1, box3, INSERT_VALUES, ierr)
+      call MatSetValuesBlockedStencil(this%L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
+      call MatSetValuesBlockedStencil(this%L_LST(2), 1, idxm, 5, idxn, box2, INSERT_VALUES, ierr)
+      call MatSetValuesBlocked(this%L_LST(3), 1, j - 1, 1, j - 1, box3, INSERT_VALUES, ierr)
 
       do i = 1, 3
-         call MatAssemblyBegin(L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
-         call MatAssemblyEnd(L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyBegin(this%L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyEnd(this%L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
       end do
 
       call PetscPrintf(PETSC_COMM_WORLD, "Set spatial LST EVP matrix BC done!\n", ierr)
@@ -1026,11 +1026,11 @@ contains
 
       select case (this%lst_mode)
       case (LST_TEMPORAL_MODE)
-         call Solver%Solve(2, L_LST, ome)
+         call Solver%Solve(2, this%L_LST, ome)
          call Solver%GetEigenVal(ome)
          if (rank == 0) print('(A, 2F12.7)'), 'omega------------>', ome%re, ome%im
       case (LST_SPATIAL_MODE)
-         call Solver%Solve(3, L_LST, alf)
+         call Solver%Solve(3, this%L_LST, alf)
          call Solver%GetEigenVal(alf)
          if (rank == 0) print('(A, 2F12.7)'), 'alpha------------>', alf%re, alf%im
       end select
@@ -1067,15 +1067,15 @@ contains
       call Solver%Finalize()
       select case (this%lst_mode)
       case (LST_TEMPORAL_MODE)
-         call MatDestroy(L_LST(1), ierr)
-         call MatDestroy(L_LST(2), ierr)
+         call MatDestroy(this%L_LST(1), ierr)
+         call MatDestroy(this%L_LST(2), ierr)
       case (LST_SPATIAL_MODE)
-         call MatDestroy(L_LST(1), ierr)
-         call MatDestroy(L_LST(2), ierr)
-         call MatDestroy(L_LST(3), ierr)
+         call MatDestroy(this%L_LST(1), ierr)
+         call MatDestroy(this%L_LST(2), ierr)
+         call MatDestroy(this%L_LST(3), ierr)
       end select
 
-      deallocate (L_LST)
+      deallocate (this%L_LST)
       call DMDestroy(DM_LST, ierr)
 
    end subroutine lst_finalize
@@ -1114,14 +1114,14 @@ end module mod_lst_eqn
 !   call DMDACreate1d(PETSC_COMM_WORLD, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER, DM_LST, ierr)
 !   call DMSetUp(DM_LST, ierr)
 !   if (lst_mode==LST_TEMPORAL_MODE)then
-!     allocate(L_LST(2))
-!     call DMCreateMatrix(DM_LST, L_LST(1), ierr)
-!     call DMCreateMatrix(DM_LST, L_LST(2), ierr)
+!     allocate(this%L_LST(2))
+!     call DMCreateMatrix(DM_LST, this%L_LST(1), ierr)
+!     call DMCreateMatrix(DM_LST, this%L_LST(2), ierr)
 !   else if(lst_mode==LST_SPATIAL_MODE)then
-!     allocate(L_LST(3))
-!     call DMCreateMatrix(DM_LST, L_LST(1), ierr)
-!     call DMCreateMatrix(DM_LST, L_LST(2), ierr)
-!     call DMCreateMatrix(DM_LST, L_LST(3), ierr)
+!     allocate(this%L_LST(3))
+!     call DMCreateMatrix(DM_LST, this%L_LST(1), ierr)
+!     call DMCreateMatrix(DM_LST, this%L_LST(2), ierr)
+!     call DMCreateMatrix(DM_LST, this%L_LST(3), ierr)
 !   endif
 
 !   select case (lst_mode)
@@ -1182,13 +1182,13 @@ end module mod_lst_eqn
 
 !   select case (this%lst_mode)
 !   case (LST_TEMPORAL_MODE)
-!     call Solver%Solve(2, L_LST, ome)
+!     call Solver%Solve(2, this%L_LST, ome)
 !     call Solver%GetEigenVals(eig_d)
 !     do i=1, size(eig_d)
 !       if(rank==0) print('(A, 2F12.7)'), 'omega------------>', eig_d(i)%re, eig_d(i)%im
 !     enddo
 !   case (LST_SPATIAL_MODE)
-!     call Solver%Solve(3, L_LST, alf)
+!     call Solver%Solve(3, this%L_LST, alf)
 !     call Solver%GetEigenVals(eig_d)
 !     do i=1, size(eig_d)
 !       if(rank==0) print('(A, 2F12.7)'), 'alpha------------>', eig_d(i)%re, eig_d(i)%im
@@ -1262,15 +1262,15 @@ end module mod_lst_eqn
 !   call Solver%Finalize()
 !   select case (lst_mode)
 !   case (LST_TEMPORAL_MODE)
-!     call MatDestroy(L_LST(1), ierr)
-!     call MatDestroy(L_LST(2), ierr)
+!     call MatDestroy(this%L_LST(1), ierr)
+!     call MatDestroy(this%L_LST(2), ierr)
 !   case (LST_SPATIAL_MODE)
-!     call MatDestroy(L_LST(1), ierr)
-!     call MatDestroy(L_LST(2), ierr)
-!     call MatDestroy(L_LST(3), ierr)
+!     call MatDestroy(this%L_LST(1), ierr)
+!     call MatDestroy(this%L_LST(2), ierr)
+!     call MatDestroy(this%L_LST(3), ierr)
 !   end select
 
-!   deallocate(L_LST)
+!   deallocate(this%L_LST)
 !   call DMDestroy(DM_LST, ierr)
 
 ! end subroutine finalize_lst_eqn

@@ -38,7 +38,6 @@ module mod_alst_eqn
    integer :: jn
 
    DM :: DM_ALST
-   Mat, allocatable :: L_ALST(:)
    class(slepc_type), allocatable :: Solver
 
    complex(REAL64), allocatable :: eig_d(:)
@@ -84,6 +83,8 @@ module mod_alst_eqn
 
    type, extends(type_lst_abstract) :: type_alst_eqn
 
+     Mat, allocatable :: L_ALST(:)
+
    contains
       procedure :: initial => alst_intial
       procedure :: setup => alst_setup
@@ -103,6 +104,7 @@ module mod_alst_eqn
       procedure, private :: solve_EVP_matrix
       procedure, private :: solve_EVP_matrix_bc
 
+<<<<<<< HEAD
    end type type_alst_eqn
 
    private
@@ -115,6 +117,25 @@ module mod_alst_eqn
 
 contains
 
+=======
+      procedure, private :: solve_EVP_matrix_temporal
+      procedure, private :: solve_EVP_matrix_spatial
+      procedure, private :: solve_EVP_matrix_bc_temporal
+      procedure, private :: solve_EVP_matrix_bc_spatial
+
+   end type type_alst_eqn
+
+   private
+   ! public :: solve_alst_eqn
+   ! public :: write_alst_function
+   ! public :: initialize_alst_eqn
+   ! public :: finalize_alst_eqn
+
+   public :: type_alst_eqn
+
+contains
+
+>>>>>>> feature/lst_receptivity
    subroutine alst_intial(this, jn_, Re, Ma, Te, yb_, ye_)
 
       implicit none
@@ -177,6 +198,7 @@ contains
       call DMDACreate1d(PETSC_COMM_WORLD, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER, DM_ALST, ierr)
       call DMSetUp(DM_ALST, ierr)
       if (this%lst_mode == LST_TEMPORAL_MODE) then
+<<<<<<< HEAD
          allocate (L_ALST(2))
          call DMCreateMatrix(DM_ALST, L_ALST(1), ierr)
          call DMCreateMatrix(DM_ALST, L_ALST(2), ierr)
@@ -185,6 +207,16 @@ contains
          call DMCreateMatrix(DM_ALST, L_ALST(1), ierr)
          call DMCreateMatrix(DM_ALST, L_ALST(2), ierr)
          call DMCreateMatrix(DM_ALST, L_ALST(3), ierr)
+=======
+         allocate (this%L_ALST(2))
+         call DMCreateMatrix(DM_ALST, this%L_ALST(1), ierr)
+         call DMCreateMatrix(DM_ALST, this%L_ALST(2), ierr)
+      else if (this%lst_mode == LST_SPATIAL_MODE) then
+         allocate (this%L_ALST(3))
+         call DMCreateMatrix(DM_ALST, this%L_ALST(1), ierr)
+         call DMCreateMatrix(DM_ALST, this%L_ALST(2), ierr)
+         call DMCreateMatrix(DM_ALST, this%L_ALST(3), ierr)
+>>>>>>> feature/lst_receptivity
       end if
 
       select case (this%lst_mode)
@@ -629,11 +661,15 @@ contains
             D0(2, 2, 1) = 1.0d0
             D0(3, 3, 1) = 1.0d0
             D0(4, 4, 1) = 1.0d0
+<<<<<<< HEAD
             if (this%isothermal) then
                D0(5, 5, 1) = 1.0d0
             else
                B0(5, 5, 1) = 1.0d0
             end if
+=======
+            D0(5, 5, 1) = 1.0d0
+>>>>>>> feature/lst_receptivity
          case (BC_POLE)
             G0(:, :, 1) = 0.0d0
             A0(:, :, 1) = 0.0d0
@@ -839,9 +875,15 @@ contains
 
       select case (this%lst_mode)
       case (LST_TEMPORAL_MODE)
+<<<<<<< HEAD
          call solve_EVP_matrix_temporal(this%grid)
       case (LST_SPATIAL_MODE)
          call solve_EVP_matrix_spatial(this%grid)
+=======
+         call this%solve_EVP_matrix_temporal()
+      case (LST_SPATIAL_MODE)
+         call this%solve_EVP_matrix_spatial()
+>>>>>>> feature/lst_receptivity
       end select
 
    end subroutine solve_EVP_matrix
@@ -857,19 +899,33 @@ contains
          if (j == 1 .or. j == jn) then
             select case (this%lst_mode)
             case (LST_TEMPORAL_MODE)
+<<<<<<< HEAD
                call solve_EVP_matrix_bc_temporal(j, this%grid)
             case (LST_SPATIAL_MODE)
                call solve_EVP_matrix_bc_spatial(j, this%grid)
+=======
+               call this%solve_EVP_matrix_bc_temporal(j)
+            case (LST_SPATIAL_MODE)
+               call this%solve_EVP_matrix_bc_spatial(j)
+>>>>>>> feature/lst_receptivity
             end select
          end if
       end do
 
    end subroutine solve_EVP_matrix_bc
 
+<<<<<<< HEAD
    subroutine solve_EVP_matrix_temporal(grid_profile)
 
       implicit none
       type(type_lst_grid_profile), intent(in) :: grid_profile
+=======
+   subroutine solve_EVP_matrix_temporal(this)
+
+      implicit none
+      class(type_alst_eqn), intent(inout) :: this
+      ! type(type_lst_grid_profile), intent(in) :: grid_profile
+>>>>>>> feature/lst_receptivity
       real(REAL64), parameter :: delta(-2:2) = [0.0d0, 0.0d0, 1.0d0, 0.0d0, 0.0d0]
 
       complex(REAL64) :: box1(5, -2:2, 5), box2(5, 5)
@@ -906,7 +962,11 @@ contains
          end if
          idxm(3, 1) = j - 1
 
+<<<<<<< HEAD
          associate (eta_y => grid_profile%eta_y(j), eta_yy => grid_profile%eta_yy(j), &
+=======
+         associate (eta_y => this%grid%eta_y(j), eta_yy => this%grid%eta_yy(j), &
+>>>>>>> feature/lst_receptivity
                 &  C1 => FDM_C1_4ORD_CENTER, D1 => FDM_D1_4ORD_CENTER)
             tmp_mat_j0 = 0.0d0
             tmp_mat_j1 = 0.0d0
@@ -923,6 +983,7 @@ contains
             box2(:, :) = transpose(tmp_mat_j1(:, :, 0))
          end associate
 
+<<<<<<< HEAD
          call MatSetValuesBlockedStencil(L_ALST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
          call MatSetValuesBlocked(L_ALST(2), 1, j - 1, 1, j - 1, box2, INSERT_VALUES, ierr)
       end do
@@ -930,17 +991,34 @@ contains
       do i = 1, 2
          call MatAssemblyBegin(L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
          call MatAssemblyEnd(L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+=======
+         call MatSetValuesBlockedStencil(this%L_ALST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
+         call MatSetValuesBlocked(this%L_ALST(2), 1, j - 1, 1, j - 1, box2, INSERT_VALUES, ierr)
+      end do
+
+      do i = 1, 2
+         call MatAssemblyBegin(this%L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyEnd(this%L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+>>>>>>> feature/lst_receptivity
       end do
 
       call PetscPrintf(PETSC_COMM_WORLD, "Set temporal ALST EVP matrix done!\n", ierr)
 
       ! call PetscViewerBinaryOpen(PETSC_COMM_WORLD, 'ALST_matrix1.mat', FILE_MODE_WRITE, &
       ! Viewer, ierr)
+<<<<<<< HEAD
       ! call MatView(L_ALST(1), viewer, ierr)
       ! call PetscViewerDestroy(Viewer, ierr)
       ! call PetscViewerBinaryOpen(PETSC_COMM_WORLD, 'ALST_matrix2.mat', FILE_MODE_WRITE, &
       ! Viewer, ierr)
       ! call MatView(L_ALST(2), viewer, ierr)
+=======
+      ! call MatView(this%L_ALST(1), viewer, ierr)
+      ! call PetscViewerDestroy(Viewer, ierr)
+      ! call PetscViewerBinaryOpen(PETSC_COMM_WORLD, 'ALST_matrix2.mat', FILE_MODE_WRITE, &
+      ! Viewer, ierr)
+      ! call MatView(this%L_ALST(2), viewer, ierr)
+>>>>>>> feature/lst_receptivity
       ! call PetscViewerDestroy(Viewer, ierr)
       !
       ! call SLEPCFinalize(ierr)
@@ -949,10 +1027,17 @@ contains
 
    end subroutine solve_EVP_matrix_temporal
 
+<<<<<<< HEAD
    subroutine solve_EVP_matrix_spatial(grid_profile)
 
       implicit none
       type(type_lst_grid_profile), intent(in) :: grid_profile
+=======
+   subroutine solve_EVP_matrix_spatial(this)
+
+      implicit none
+      class(type_alst_eqn), intent(inout) :: this
+>>>>>>> feature/lst_receptivity
       real(REAL64), parameter :: delta(-2:2) = [0.0d0, 0.0d0, 1.0d0, 0.0d0, 0.0d0]
 
       complex(REAL64) :: box1(5, -2:2, 5), box2(5, -2:2, 5), box3(5, 5)
@@ -989,7 +1074,11 @@ contains
          end if
          idxm(3, 1) = j - 1
 
+<<<<<<< HEAD
          associate (eta_y => grid_profile%eta_y(j), eta_yy => grid_profile%eta_yy(j), &
+=======
+         associate (eta_y => this%grid%eta_y(j), eta_yy => this%grid%eta_yy(j), &
+>>>>>>> feature/lst_receptivity
                 &  C1 => FDM_C1_4ORD_CENTER, D1 => FDM_D1_4ORD_CENTER)
             tmp_mat_j0 = 0.0d0
             tmp_mat_j1 = 0.0d0
@@ -1011,6 +1100,7 @@ contains
             box3(:, :) = transpose(tmp_mat_j2(:, :, 0))
          end associate
 
+<<<<<<< HEAD
          call MatSetValuesBlockedStencil(L_ALST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
          call MatSetValuesBlockedStencil(L_ALST(2), 1, idxm, 5, idxn, box2, INSERT_VALUES, ierr)
          call MatSetValuesBlocked(L_ALST(3), 1, j - 1, 1, j - 1, box3, INSERT_VALUES, ierr)
@@ -1019,17 +1109,35 @@ contains
       do i = 1, 3
          call MatAssemblyBegin(L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
          call MatAssemblyEnd(L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+=======
+         call MatSetValuesBlockedStencil(this%L_ALST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
+         call MatSetValuesBlockedStencil(this%L_ALST(2), 1, idxm, 5, idxn, box2, INSERT_VALUES, ierr)
+         call MatSetValuesBlocked(this%L_ALST(3), 1, j - 1, 1, j - 1, box3, INSERT_VALUES, ierr)
+      end do
+
+      do i = 1, 3
+         call MatAssemblyBegin(this%L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyEnd(this%L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+>>>>>>> feature/lst_receptivity
       end do
 
       call PetscPrintf(PETSC_COMM_WORLD, "Set spatial ALST EVP matrix done!\n", ierr)
 
    end subroutine solve_EVP_matrix_spatial
 
+<<<<<<< HEAD
    subroutine solve_EVP_matrix_bc_temporal(j, grid_profile)
 
       implicit none
       integer, intent(in) :: j
       type(type_lst_grid_profile), intent(in) :: grid_profile
+=======
+   subroutine solve_EVP_matrix_bc_temporal(this, j)
+
+      implicit none
+      class(type_alst_eqn), intent(inout) :: this
+      integer, intent(in) :: j
+>>>>>>> feature/lst_receptivity
       real(REAL64), parameter :: delta(-2:2) = [0.0d0, 0.0d0, 1.0d0, 0.0d0, 0.0d0]
 
       complex(REAL64) :: box1(5, -2:2, 5), box2(5, 5)
@@ -1057,7 +1165,11 @@ contains
       end if
       idxm(3, 1) = j - 1
 
+<<<<<<< HEAD
       associate (eta_y => grid_profile%eta_y(j), eta_yy => grid_profile%eta_yy(j), &
+=======
+      associate (eta_y => this%grid%eta_y(j), eta_yy => this%grid%eta_yy(j), &
+>>>>>>> feature/lst_receptivity
              &  C1 => FDM_C1_4ORD_CENTER, D1 => FDM_D1_4ORD_CENTER)
          tmp_mat_j0 = 0.0d0
          tmp_mat_j1 = 0.0d0
@@ -1074,23 +1186,40 @@ contains
          box2(:, :) = transpose(tmp_mat_j1(:, :, 0))
       end associate
 
+<<<<<<< HEAD
       call MatSetValuesBlockedStencil(L_ALST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
       call MatSetValuesBlocked(L_ALST(2), 1, j - 1, 1, j - 1, box2, INSERT_VALUES, ierr)
 
       do i = 1, 2
          call MatAssemblyBegin(L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
          call MatAssemblyEnd(L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+=======
+      call MatSetValuesBlockedStencil(this%L_ALST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
+      call MatSetValuesBlocked(this%L_ALST(2), 1, j - 1, 1, j - 1, box2, INSERT_VALUES, ierr)
+
+      do i = 1, 2
+         call MatAssemblyBegin(this%L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyEnd(this%L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+>>>>>>> feature/lst_receptivity
       end do
 
       call PetscPrintf(PETSC_COMM_WORLD, "Set temporal ALST EVP matrix BC done!\n", ierr)
 
    end subroutine solve_EVP_matrix_bc_temporal
 
+<<<<<<< HEAD
    subroutine solve_EVP_matrix_bc_spatial(j, grid_profile)
 
       implicit none
       integer, intent(in) :: j
       type(type_lst_grid_profile), intent(in) :: grid_profile
+=======
+   subroutine solve_EVP_matrix_bc_spatial(this, j)
+
+      implicit none
+      class(type_alst_eqn), intent(inout) :: this
+      integer, intent(in) :: j
+>>>>>>> feature/lst_receptivity
       real(REAL64), parameter :: delta(-2:2) = [0.0d0, 0.0d0, 1.0d0, 0.0d0, 0.0d0]
 
       complex(REAL64) :: box1(5, -2:2, 5), box2(5, -2:2, 5), box3(5, 5)
@@ -1119,7 +1248,11 @@ contains
       end if
       idxm(3, 1) = j - 1
 
+<<<<<<< HEAD
       associate (eta_y => grid_profile%eta_y(j), eta_yy => grid_profile%eta_yy(j), &
+=======
+      associate (eta_y => this%grid%eta_y(j), eta_yy => this%grid%eta_yy(j), &
+>>>>>>> feature/lst_receptivity
              &  C1 => FDM_C1_4ORD_CENTER, D1 => FDM_D1_4ORD_CENTER)
          tmp_mat_j0 = 0.0d0
          tmp_mat_j1 = 0.0d0
@@ -1141,6 +1274,7 @@ contains
          box3(:, :) = transpose(tmp_mat_j2(:, :, 0))
       end associate
 
+<<<<<<< HEAD
       call MatSetValuesBlockedStencil(L_ALST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
       call MatSetValuesBlockedStencil(L_ALST(2), 1, idxm, 5, idxn, box2, INSERT_VALUES, ierr)
       call MatSetValuesBlocked(L_ALST(3), 1, j - 1, 1, j - 1, box3, INSERT_VALUES, ierr)
@@ -1148,6 +1282,15 @@ contains
       do i = 1, 3
          call MatAssemblyBegin(L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
          call MatAssemblyEnd(L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+=======
+      call MatSetValuesBlockedStencil(this%L_ALST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
+      call MatSetValuesBlockedStencil(this%L_ALST(2), 1, idxm, 5, idxn, box2, INSERT_VALUES, ierr)
+      call MatSetValuesBlocked(this%L_ALST(3), 1, j - 1, 1, j - 1, box3, INSERT_VALUES, ierr)
+
+      do i = 1, 3
+         call MatAssemblyBegin(this%L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+         call MatAssemblyEnd(this%L_ALST(i), MAT_FINAL_ASSEMBLY, ierr)
+>>>>>>> feature/lst_receptivity
       end do
 
       call PetscPrintf(PETSC_COMM_WORLD, "Set spatial ALST EVP matrix BC done!\n", ierr)
@@ -1164,11 +1307,19 @@ contains
 
       select case (this%lst_mode)
       case (LST_TEMPORAL_MODE)
+<<<<<<< HEAD
          call Solver%Solve(2, L_ALST, ome)
          call Solver%GetEigenVal(ome)
          if (rank == 0) print('(A, 2F12.7)'), 'omega------------>', ome%re, -ome%im
       case (LST_SPATIAL_MODE)
          call Solver%Solve(3, L_ALST, alf)
+=======
+         call Solver%Solve(2, this%L_ALST, ome)
+         call Solver%GetEigenVal(ome)
+         if (rank == 0) print('(A, 2F12.7)'), 'omega------------>', ome%re, -ome%im
+      case (LST_SPATIAL_MODE)
+         call Solver%Solve(3, this%L_ALST, alf)
+>>>>>>> feature/lst_receptivity
          call Solver%GetEigenVal(alf)
          if (rank == 0) print('(A, 2F12.7)'), 'alpha------------>', alf%re, -alf%im
       end select
@@ -1204,6 +1355,7 @@ contains
       call Solver%Finalize()
       select case (this%lst_mode)
       case (LST_TEMPORAL_MODE)
+<<<<<<< HEAD
          call MatDestroy(L_ALST(1), ierr)
          call MatDestroy(L_ALST(2), ierr)
       case (LST_SPATIAL_MODE)
@@ -1213,6 +1365,17 @@ contains
       end select
 
       deallocate (L_ALST)
+=======
+         call MatDestroy(this%L_ALST(1), ierr)
+         call MatDestroy(this%L_ALST(2), ierr)
+      case (LST_SPATIAL_MODE)
+         call MatDestroy(this%L_ALST(1), ierr)
+         call MatDestroy(this%L_ALST(2), ierr)
+         call MatDestroy(this%L_ALST(3), ierr)
+      end select
+
+      deallocate (this%L_ALST)
+>>>>>>> feature/lst_receptivity
       call DMDestroy(DM_ALST, ierr)
 
    end subroutine alst_finalize
@@ -1262,6 +1425,7 @@ end module mod_alst_eqn
 !   call DMDACreate1d(PETSC_COMM_WORLD, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER, DM_ALST, ierr)
 !   call DMSetUp(DM_ALST, ierr)
 !   if (lst_mode==LST_TEMPORAL_MODE)then
+<<<<<<< HEAD
 !     allocate(L_ALST(2))
 !     call DMCreateMatrix(DM_ALST, L_ALST(1), ierr)
 !     call DMCreateMatrix(DM_ALST, L_ALST(2), ierr)
@@ -1270,6 +1434,16 @@ end module mod_alst_eqn
 !     call DMCreateMatrix(DM_ALST, L_ALST(1), ierr)
 !     call DMCreateMatrix(DM_ALST, L_ALST(2), ierr)
 !     call DMCreateMatrix(DM_ALST, L_ALST(3), ierr)
+=======
+!     allocate(this%L_ALST(2))
+!     call DMCreateMatrix(DM_ALST, this%L_ALST(1), ierr)
+!     call DMCreateMatrix(DM_ALST, this%L_ALST(2), ierr)
+!   else if(lst_mode==LST_SPATIAL_MODE)then
+!     allocate(this%L_ALST(3))
+!     call DMCreateMatrix(DM_ALST, this%L_ALST(1), ierr)
+!     call DMCreateMatrix(DM_ALST, this%L_ALST(2), ierr)
+!     call DMCreateMatrix(DM_ALST, this%L_ALST(3), ierr)
+>>>>>>> feature/lst_receptivity
 !   endif
 
 !   select case (lst_mode)
@@ -1349,13 +1523,21 @@ end module mod_alst_eqn
 
 !   select case (lst_mode)
 !   case (LST_TEMPORAL_MODE)
+<<<<<<< HEAD
 !     call Solver%Solve(2, L_ALST, ome)
+=======
+!     call Solver%Solve(2, this%L_ALST, ome)
+>>>>>>> feature/lst_receptivity
 !     call Solver%GetEigenVals(eig_d)
 !     do i=1, size(eig_d)
 !       if(rank==0) print('(A, 2F12.7)'), 'omega------------>', eig_d(i)%re, eig_d(i)%im
 !     enddo
 !   case (LST_SPATIAL_MODE)
+<<<<<<< HEAD
 !     call Solver%Solve(3, L_ALST, alf)
+=======
+!     call Solver%Solve(3, this%L_ALST, alf)
+>>>>>>> feature/lst_receptivity
 !     call Solver%GetEigenVals(eig_d)
 !     do i=1, size(eig_d)
 !       if(rank==0) print('(A, 2F12.7)'), 'alpha------------>', eig_d(i)%re, eig_d(i)%im
@@ -1565,6 +1747,7 @@ end module mod_alst_eqn
 !   call Solver%Finalize()
 !   select case (this%lst_mode)
 !   case (LST_TEMPORAL_MODE)
+<<<<<<< HEAD
 !     call MatDestroy(L_ALST(1), ierr)
 !     call MatDestroy(L_ALST(2), ierr)
 !   case (LST_SPATIAL_MODE)
@@ -1574,6 +1757,17 @@ end module mod_alst_eqn
 !   end select
 
 !   deallocate(L_ALST)
+=======
+!     call MatDestroy(this%L_ALST(1), ierr)
+!     call MatDestroy(this%L_ALST(2), ierr)
+!   case (LST_SPATIAL_MODE)
+!     call MatDestroy(this%L_ALST(1), ierr)
+!     call MatDestroy(this%L_ALST(2), ierr)
+!     call MatDestroy(this%L_ALST(3), ierr)
+!   end select
+
+!   deallocate(this%L_ALST)
+>>>>>>> feature/lst_receptivity
 !   call DMDestroy(DM_ALST, ierr)
 
 ! end subroutine finalize_alst_eqn
