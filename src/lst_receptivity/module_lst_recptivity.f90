@@ -31,6 +31,8 @@ module mod_lst_receptivity
    private
    public :: solve_lst_receptivity
 
+   Vec :: source_whole
+
 #include "../include/start.f90"
 
 contains
@@ -39,9 +41,43 @@ contains
 
       implicit none
 
+      call load_source_term()
       call solve_lst_receptivity_local()
+      call finalize_receptivity()
 
    end subroutine solve_lst_receptivity
+
+   subroutine load_source_term()
+
+      implicit none
+      PetscViewer :: viewer
+
+      call VecDuplicate(Flowfield, source_whole, ierr)
+      if( char(source_term_file) /= 'none') then
+        call PetscViewerHDF5Open(PETSC_COMM_WORLD, char(source_term_file), FILE_MODE_READ, viewer, ierr)
+        call PetscObjectSetName(source_whole, "source", ierr)
+        call VecLoad(source_whole, viewer, ierr)
+        call PetscViewerDestroy(viewer, ierr)
+      else
+        call VecZeroEntries(source_whole, ierr)
+      endif
+
+   end subroutine load_source_term
+
+   subroutine finalize_receptivity()
+
+      implicit none
+
+      call DMRestoreGlobalVector(meshDA, source_whole, ierr)
+      call DMRestoreGlobalVector(coordDA, Coord, ierr)
+      call DMRestoreGlobalVector(meshDA, Flowfield, ierr)
+      call DMRestoreLocalVector(coordDA, Coord_local, ierr)
+      call DMRestoreLocalVector(meshDA, Flowfield_local, ierr)
+      call DMDestroy(meshDA, ierr)
+      call DMDestroy(coordDA, ierr)
+    !   call DMDestroy(DA, ierr)
+
+   end subroutine
 
    subroutine solve_lst_receptivity_local()
 
@@ -90,6 +126,10 @@ contains
       call alst%get_eigf(alst_eigf)
 
       call VecDuplicate(lst_eigf, vec_local, ierr)
+      call VecDuplicate(lst_eigf, source_local, ierr)
+
+      !! get_source_local_value
+      call get_source_value_local(source_whole, source_local, iloc)
 
         !! compute receptivity coefficient
         !! $C_r = i frac{<\hat phi_{\alpha_s}, \hat S> - B.C.}{Q}
@@ -118,6 +158,31 @@ contains
       call VecDestroy(source_local, ierr)
 
    end subroutine solve_lst_receptivity_local
+
+   subroutine get_source_value_local(whole, local, iloc)
+
+    Vec, intent(in) :: whole
+    Vec, intent(inout) :: local
+    integer, intent(in) :: iloc
+
+    complex(REAL64), pointer :: array_whole(:, :, :), array_local(:)
+
+    ! integer :: size_local, size_whole, in
+
+    ! call VecGetSize(whole, size_whole, ierr)
+    ! call VecGetSize(local, size_local, ierr)
+
+    ! in = size_whole/size_local
+
+    call DMDAVecGetArrayReadF90(meshDA, whole, array_whole, ierr)
+    call VecGetArrayF90(local, array_local, ierr)
+
+    array_local = pack(array_whole(:, iloc, :), mask = .true.)
+
+    call VecRestoreArrayF90(local, array_local, ierr)
+    call DMDAVecRestoreArrayReadF90(meshDA, whole, array_whole, ierr)
+    
+   end subroutine get_source_value_local
 
    function integral_bc(baseflow, grid, alst_eigf, bcwall) result(bc_force)
       implicit none

@@ -41,6 +41,7 @@ contains
          call cfg_freestream(cfg)
          call cfg_lst(cfg)
          call cfg_bc(cfg)
+         call cfg_receptivity(cfg)
          call cfg%write()
          call cfg%write(trim(cfgfn))
       end if
@@ -273,5 +274,27 @@ contains
       end if
 
    end subroutine cfg_bc
+
+   subroutine cfg_receptivity(cfg)
+
+    implicit none
+    type(cfg_t), intent(inout) :: cfg
+    character(len=256) :: chartmp
+
+    if(cfg%has_key("receptivity", "source"))then
+      call cfg%get("receptivity", "source", chartmp)
+
+      select case(trim(chartmp))
+      case ("none", "zero")
+        source_term_file = 'none'
+      case default
+        source_term_file = trim(dir)//trim(chartmp)
+      end select
+    else
+      call PetscPrintf(PETSC_COMM_WORLD, "No source term in receptivity.\n", ierr)
+      source_term_file = 'none'
+    endif
+
+   end subroutine cfg_receptivity
 
 end module mod_cfgio_adapter
