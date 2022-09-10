@@ -99,7 +99,7 @@ contains
       complex(REAL64) :: Q, force_source, bc_force
       complex(REAL64) :: alf_iloc
 
-      open(999, file='out/receptivity_coef.plt')
+      open (999, file='out/receptivity_coef.plt')
 
       call lst%set_parameter("lst_mode", LST_SPATIAL_MODE)
       call lst%initial(jn, Re=Re, Ma=Ma, Te=Te, yb_=yb, ye_=ye)
@@ -147,10 +147,10 @@ contains
       !Q
       call MatAXPY(mat_local, 2.0d0*alf, lst%L_LST(3), SUBSET_NONZERO_PATTERN, ierr)
       call MatMult(mat_local, lst_eigf, vec_local, ierr)
-      call VecDot(alst_eigf, vec_local, Q, ierr)
+      q = inner_dot(alst_eigf, vec_local, grid_profile%y)
 
       ! <\hat phi_{\alpha_s}, \hat S>
-      call VecDot(alst_eigf, source_local, force_source, ierr)
+      force_source = inner_dot(alst_eigf, source_local, grid_profile%y)
 
       ! b.c.
       bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx([0.0d0, 1.0d0, 0.0d0, 0.0d0]))
@@ -184,57 +184,58 @@ contains
          call MatCopy(lst%L_LST(2), mat_local, DIFFERENT_NONZERO_PATTERN, ierr)
          call MatAXPY(mat_local, 2.0d0*alf, lst%L_LST(3), SUBSET_NONZERO_PATTERN, ierr)
          call MatMult(mat_local, lst_eigf, vec_local, ierr)
-         call VecDot(alst_eigf, vec_local, Q, ierr)
+         q = inner_dot(alst_eigf, vec_local, grid_profile%y)
 
          ! <\hat phi_{\alpha_s}, \hat S>
-         call VecDot(alst_eigf, source_local, force_source, ierr)
+         force_source = inner_dot(alst_eigf, source_local, grid_profile%y)
 
          ! b.c.
          bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx(bc_disturb))
 
          Cr(i) = (force_source - bc_force)/Q*ZI
-         write(999, *) i, Cr(i), abs(Cr(i))
+         write (999, *) i, Cr(i), abs(Cr(i))
       end do
 
       alf = alf_iloc
 
       do i = iloc, istart, -1
-        grid_profile = assemble_lst_grid_profile(iloc)
-        baseflow_profile = assemble_lst_baseflow_profile(iloc)
+         grid_profile = assemble_lst_grid_profile(iloc)
+         baseflow_profile = assemble_lst_baseflow_profile(iloc)
 
-        call lst%set_grid(grid_profile)
-        call lst%set_baseflow(baseflow_profile)
-        call lst%setup()
+         call lst%set_grid(grid_profile)
+         call lst%set_baseflow(baseflow_profile)
+         call lst%setup()
 
-        call alst%set_grid(grid_profile)
-        call alst%set_baseflow(baseflow_profile)
-        call alst%setup()
+         call alst%set_grid(grid_profile)
+         call alst%set_baseflow(baseflow_profile)
+         call alst%setup()
 
-        call lst%solve(ome, alf, bat)
-        call alst%solve(ome, alf, bat)
+         call lst%solve(ome, alf, bat)
+         call alst%solve(ome, alf, bat)
 
-        call lst%get_eigf(lst_eigf)
-        call alst%get_eigf(alst_eigf)
+         call lst%get_eigf(lst_eigf)
+         call alst%get_eigf(alst_eigf)
 
-        call get_source_value_local(source_whole, source_local, i)
+         call get_source_value_local(source_whole, source_local, i)
 
        !! compute receptivity coefficient
        !! $C_r = i frac{<\hat phi_{\alpha_s}, \hat S> - B.C.}{Q}
 
-        !Q
-        call MatCopy(lst%L_LST(2), mat_local, DIFFERENT_NONZERO_PATTERN, ierr)
-        call MatAXPY(mat_local, 2.0d0*alf, lst%L_LST(3), SUBSET_NONZERO_PATTERN, ierr)
-        call MatMult(mat_local, lst_eigf, vec_local, ierr)
-        call VecDot(alst_eigf, vec_local, Q, ierr)
+         !Q
+         call MatCopy(lst%L_LST(2), mat_local, DIFFERENT_NONZERO_PATTERN, ierr)
+         call MatAXPY(mat_local, 2.0d0*alf, lst%L_LST(3), SUBSET_NONZERO_PATTERN, ierr)
+         call MatMult(mat_local, lst_eigf, vec_local, ierr)
+         !call VecDot(alst_eigf, vec_local, Q, ierr)
+         q = inner_dot(alst_eigf, vec_local, grid_profile%y)
 
-        ! <\hat phi_{\alpha_s}, \hat S>
-        call VecDot(alst_eigf, source_local, force_source, ierr)
+         ! <\hat phi_{\alpha_s}, \hat S>
+         force_source = inner_dot(alst_eigf, source_local, grid_profile%y)
 
-        ! b.c.
-        bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx([0.0d0, 1.0d0, 0.0d0, 0.0d0]))
+         ! b.c.
+         bc_force = integral_bc(baseflow_profile, grid_profile, alst_eigf, cmplx(bc_disturb))
 
-        Cr(i) = (force_source - bc_force)/Q*ZI
-        write(999, *) i, Cr(i), abs(Cr(i))
+         Cr(i) = (force_source - bc_force)/Q*ZI
+         if(i<iloc) write (999, *) i, Cr(i), abs(Cr(i))
       end do
 
       call lst%finalize()
@@ -247,7 +248,7 @@ contains
       call VecDestroy(vec_local, ierr)
       call VecDestroy(source_local, ierr)
 
-      close(999)
+      close (999)
 
    end subroutine solve_lst_receptivity_local
 
@@ -269,7 +270,7 @@ contains
       call DMDAVecGetArrayReadF90(meshDA, whole, array_whole, ierr)
       call VecGetArrayF90(local, array_local, ierr)
 
-      array_local = pack(array_whole(:, iloc-1, :), mask=.true.)
+      array_local = pack(array_whole(:, iloc - 1, :), mask=.true.)
 
       call VecRestoreArrayF90(local, array_local, ierr)
       call DMDAVecRestoreArrayReadF90(meshDA, whole, array_whole, ierr)
@@ -312,5 +313,33 @@ contains
                  mu0/Pr*dT_star_w*T_w
 
    end function integral_bc
+
+   function inner_dot(v1, v2, y) result(q)
+
+      use stdlib_quadrature, only: trapz_weights
+      implicit none
+      
+      Vec, intent(in) :: v1, v2
+      real(REAL64), intent(in) :: y(:)
+      complex(REAL64) :: q
+
+      Vec :: tmp
+      complex(REAL64), pointer:: array(:)
+      integer :: j
+      complex(REAL64) :: tmp_(0:jn-1)
+
+      call VecDuplicate(v1, tmp, ierr)
+      call VecCopy(v1, tmp, ierr)
+      call VecConjugate(tmp, ierr)
+      call VecPointwiseMult(tmp, tmp, v2, ierr)
+      call VecGetArrayReadF90(tmp, array, ierr)
+
+      do j=0, jn-1
+         tmp_(j)=sum(array(j*5+1:j*5+5))
+      enddo
+      q = sum(trapz_weights(y)*tmp_)
+      call VecRestoreArrayReadF90(tmp, array, ierr)
+
+   end function inner_dot
 
 end module mod_lst_receptivity

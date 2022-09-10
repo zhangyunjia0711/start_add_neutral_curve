@@ -194,26 +194,26 @@ contains
         if (present(vec)) then
             call VecCopy(vec, this%q0, ierr)
         else
-            ! call PetscRandomCreate(PETSC_COMM_WORLD, rctx, ierr)
-            ! call PetscRandomSetFromOptions(rctx, ierr)
-            ! call VecSetRandom(this%q0, rctx, ierr)
-            ! call PetscRandomDestroy(rctx, ierr)
-            ! locs=[2, 3, 4, 5, this%jn*5-4, this%jn*5-3, this%jn*5-2, this%jn*5-1, this%jn*5]-1
-            ! zeros=[0.0d0, 0.0d0, 0.0d0, 0.0d0, 0.0d0, 0.0d0, 0.0d0, 0.0d0, 0.0d0]
-            ! call VecSetValues(this%q0, 9, locs, zeros, INSERT_VALUES, ierr)
-            ! call VecNorm(this%q0, NORM_2, norm, ierr)
-            ! call VecScale(this%q0, dcmplx(1.0d0/norm), ierr)
-            grid_profile = assemble_lst_grid_profile(this%i_x0)
-            baseflow_profile = assemble_lst_baseflow_profile(this%i_x0)
+            call PetscRandomCreate(PETSC_COMM_WORLD, rctx, ierr)
+            call PetscRandomSetFromOptions(rctx, ierr)
+            call VecSetRandom(this%q0, rctx, ierr)
+            call PetscRandomDestroy(rctx, ierr)
+            locs=[2, 3, 4, 5, this%jn*5-4, this%jn*5-3, this%jn*5-2, this%jn*5-1, this%jn*5]-1
+            zeros=[0.0d0, 0.0d0, 0.0d0, 0.0d0, 0.0d0, 0.0d0, 0.0d0, 0.0d0, 0.0d0]
+            call VecSetValues(this%q0, 9, locs, zeros, INSERT_VALUES, ierr)
+            call VecNorm(this%q0, NORM_2, norm, ierr)
+            call VecScale(this%q0, dcmplx(1.0d0/norm), ierr)
+            ! grid_profile = assemble_lst_grid_profile(this%i_x0)
+            ! baseflow_profile = assemble_lst_baseflow_profile(this%i_x0)
 
-            call lst%set_grid(grid_profile)
-            call lst%set_baseflow(baseflow_profile)
-            call lst%setup()
-            alf = this%alf(this%i_x0) + (0.0d0, 1.0d-7)
-            ome = lpse%ome
-            bat = lpse%bat
-            call lst%solve(ome, alf, bat)
-            call lst%get_eigf(this%q0)
+            ! call lst%set_grid(grid_profile)
+            ! call lst%set_baseflow(baseflow_profile)
+            ! call lst%setup()
+            ! alf = this%alf(this%i_x0) + (0.0d0, 1.0d-7)
+            ! ome = lpse%ome
+            ! bat = lpse%bat
+            ! call lst%solve(ome, alf, bat)
+            ! call lst%get_eigf(this%q0)
         end if
 
     end subroutine set_ic_optimal_streak
@@ -279,7 +279,11 @@ contains
                 call DMDAVecGetArrayReadF90(this%dm, this%q1, tmp, ierr)
                 call ArrayNorm(this%jn, this%grid_x1%y, tmp, this%M_x1, Norm_x1)
                 call DMDAVecRestoreArrayReadF90(this%dm, this%q1, tmp, ierr)
-                if (abs(Norm_x1/Norm_x0 - G_factor)/G_factor <= (epsilon(1.0e0)*100.0e0)) exit
+                ! if (abs(Norm_x1/Norm_x0 - G_factor)/G_factor <= (epsilon(1.0e0)*100.0e0)) exit
+                if (abs(Norm_x1/Norm_x0 - G_factor)/G_factor <= 1d-3) then
+                    print *, 'Growth_factor:', Norm_x1/Norm_x0, 'G_rtol is:', abs(Norm_x1/Norm_x0 - G_factor)/G_factor
+                    exit
+                endif
                 ! read(*, *)
             end block
 

@@ -43,8 +43,8 @@ if ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "GNU")
   add_compile_options(-cpp -fopenmp -fbacktrace -fbounds-check -fallow-argument-mismatch)
   add_link_options(-fopenmp )
 elseif ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "Intel")
-  add_compile_options(-cpp -DCOMPLEX_PETSC -DMKL -qopenmp -traceback -CB -qmkl)
-  add_link_options(-qopenmp -qmkl)
+  add_compile_options(-cpp -DCOMPLEX_PETSC -DMKL -traceback -CB -qmkl)
+  add_link_options(-qmkl)
 endif()
 
 #  tells CMake to build the application ex1 from the source file ex1.c
