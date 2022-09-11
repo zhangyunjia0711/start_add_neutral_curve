@@ -63,6 +63,7 @@ add_subdirectory(src/lpse)
 add_subdirectory(src/npse)
 add_subdirectory(src/osg)
 add_subdirectory(src/lst_receptivity)
+add_subdirectory(src/lpse_receptivity)
 
 # #libs
 # file(GLOB  LIB_SOURCE
