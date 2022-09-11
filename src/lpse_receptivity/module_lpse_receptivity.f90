@@ -84,8 +84,55 @@ contains
    subroutine test_orth()
 
       implicit none
+      Vec :: v_tmp
+      type(type_lst_grid_profile) :: grid_profile
+      integer :: i
+      complex(REAL64) :: q
+
+      call VecDuplicate(lpse_function(1), v_tmp, ierr)
+      open(999, file='out/q.plt')
+      do i = istart, iend
+         call MatMult(MatA(i), lpse_function(i), v_tmp, ierr)
+         grid_profile = assemble_lst_grid_profile(i)
+         q = inner_dot(alpse_function(i), v_tmp, grid_profile%y)
+         if(abs(q)>1.0d2 .or. isnan(abs(q)))then
+            call VecView(v_tmp, PETSC_VIEWER_STDOUT_SELF, ierr)
+            error stop 'q is nan'
+         endif
+         write(999, '(2X, I4, 2X, 3(F20.8, 2X))') i, q, abs(q)
+         ! write(999, *) i, q, abs(q)
+      enddo
+      close(999)
 
    end subroutine test_orth
+
+   function inner_dot(v1, v2, y) result(q)
+
+      use stdlib_quadrature, only: trapz_weights
+      implicit none
+      
+      Vec, intent(in) :: v1, v2
+      real(REAL64), intent(in) :: y(:)
+      complex(REAL64) :: q
+
+      Vec :: tmp
+      complex(REAL64), pointer:: array(:)
+      integer :: j
+      complex(REAL64) :: tmp_(0:jn-1)
+
+      call VecDuplicate(v1, tmp, ierr)
+      call VecCopy(v1, tmp, ierr)
+      call VecConjugate(tmp, ierr)
+      call VecPointwiseMult(tmp, tmp, v2, ierr)
+      call VecGetArrayReadF90(tmp, array, ierr)
+
+      do j=0, jn-1
+         tmp_(j)=sum(array(j*5+1:j*5+5))
+      enddo
+      q = sum(trapz_weights(y)*tmp_)
+      call VecRestoreArrayReadF90(tmp, array, ierr)
+
+   end function inner_dot
 
    subroutine solve_lpse()
 
@@ -192,7 +239,7 @@ contains
       integer :: i, j
       type(type_lst_grid_profile) :: grid_profile
       type(type_lst_bf_profile) :: baseflow_profile
-      complex(REAL64) :: A(5, 5, jn)
+      complex(REAL64) :: A(5, 5, 0:jn-1)
       integer :: idxm(4, 1), idxn(4, 1)
 
       grid_profile = assemble_lst_grid_profile(istart)
@@ -210,9 +257,9 @@ contains
          call lpse_eqn%setup()
          call lpse_eqn%get_matrix(lpse_alpha(i), "A_0", A)
          do j=0, jn-1
-            idxm = 0; idxn = 0
+            idxm = -1; idxn = -1
             idxm(MatStencil_i, 1) = j; idxn(MatStencil_i, 1) = j
-            call MatSetValuesBlockedStencil(MatA(i), 1, idxm, 1, idxn, transpose(A(:, :, j+1)), INSERT_VALUES, ierr)
+            call MatSetValuesBlockedStencil(MatA(i), 1, idxm, 1, idxn, transpose(A(:, :, j)), INSERT_VALUES, ierr)
          enddo
          call MatAssemblyBegin(MatA(i), MAT_FINAL_ASSEMBLY, ierr)
          call MatAssemblyEnd(MatA(i), MAT_FINAL_ASSEMBLY, ierr)
