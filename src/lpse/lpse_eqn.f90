@@ -74,6 +74,7 @@ module mod_lpse_eqn
    type, extends(type_lpse_abstract) :: type_lpse_eqn
 
       integer :: iterator_times
+      logical :: solved_lpse_matrix = .FALSE.
 
    contains
 
@@ -180,6 +181,7 @@ contains
       class(type_lpse_eqn), intent(inout) :: this
 
       call this%solve_baseflow_matrix()
+      this%solved_lpse_matrix = .false.
 
    end subroutine lpse_setup
 
@@ -368,12 +370,26 @@ contains
       class(type_lpse_eqn), intent(inout) :: this
       complex(REAL64), intent(in) :: alf
       character(len=*), intent(in) :: mat_name
-      complex(REAL64) :: matrix(5, 5, this%jn)
+      complex(REAL64), intent(out) :: matrix(5, 5, this%jn)
 
       select case (trim(mat_name))
       case ('A_0')
-         call solve_lpse_matrix(this, alf)
+         if(.not. this%solved_lpse_matrix) call this%solve_lpse_matrix(alf)
          matrix = this%D_2
+         ! if(isnan(matrix(2,2,2)%re)) then
+         !    print*, 'in lpse_eqn.f90'
+         !    block
+         !       integer :: l1, l2, j
+         !       do j=2, 2
+         !       do l1 = 1, 5
+         !          do l2=1, 5
+         !             print*, l1, l2, this%D_2(l1, l2, j)
+         !          enddo
+         !       enddo
+         !    enddo
+         !    endblock
+         !    stop
+         ! endif
       case default
          stop "A wrong matrix name is given in get_matrix@lpse_eqn."
       end select
@@ -1000,6 +1016,7 @@ contains
       do j = this%jb, this%je
          call this%solve_lpse_matrix_j(j, alf)
       end do
+      this%solved_lpse_matrix = .true.
 
    end subroutine solve_lpse_matrix
 
