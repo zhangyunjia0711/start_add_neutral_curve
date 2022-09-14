@@ -27,7 +27,7 @@ module global_parameters
   Vec :: Coord_local, Flowfield_local
   PetscErrorCode :: ierr
 
-  type(string_type) :: gridfile, flowfile, curfile
+  type(string_type) :: gridfile, flowfile, curfile, source_term_file, wall_force_file
   PetscInt :: in, jn, ln
   PetscInt :: istart, iend, iloc
   Real(REAL64) :: drxz(2)

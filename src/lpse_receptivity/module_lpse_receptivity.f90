@@ -16,7 +16,7 @@ module mod_lpse_receptivity
    complex(REAL64) :: ome, bat
    Vec, allocatable :: lpse_function(:), alpse_function(:)
    ! complex(REAL64), allocatable :: A(:, :, :, :)
-   Mat, allocatable :: matA(:)
+   complex(REAL64), allocatable :: matA(:, :, :, :)
 
    DM :: DM_local
    type(type_lpse_eqn) :: lpse_eqn
@@ -25,6 +25,7 @@ module mod_lpse_receptivity
 
    Vec :: source_force
    complex(REAL64), allocatable :: wall_force(:, :)
+   complex(REAL64), allocatable :: q(:)
 
 contains
 
@@ -34,6 +35,7 @@ contains
 
       call initialize_lpse_receptivity()
       call solve_lpse_receptivity()
+      call write_lpse_receptivity()
       call finalize_lpse_receptivity()
 
    end subroutine lpse_receptivity
@@ -66,12 +68,13 @@ contains
       end do
 
       ! allocate (A(5, 5, 0:jn - 1, istart:iend))
-      allocate (MatA(istart:iend))
-      do i = istart, iend
-         call DMCreateMatrix(DM_local, MatA(i), ierr); call MatZeroEntries(MatA(i), ierr)
-      end do
+      allocate (MatA(5, 5, jn, istart:iend)); MatA = 0.0d0
+      ! do i = istart, iend
+      !    call DMCreateMatrix(DM_local, MatA(i), ierr); call MatZeroEntries(MatA(i), ierr)
+      ! end do
 
       allocate (lambda(istart:iend)); lambda = 0.0d0
+      allocate (q(istart:iend)); q = 0.0d0
 
       print *, 'initialize_lpse_receptivity.'
 
@@ -83,7 +86,6 @@ contains
 
       call solve_lpse()
       call solve_alpse()
-
       call test_orth()
       call load_force_info()
       call compute_receptivity()
@@ -95,12 +97,54 @@ contains
    subroutine load_force_info()
       implicit none
 
-      print *, 'load_source_force'
-      print *, 'load_bc_force'
+      ! print *, 'load_source_force'
+      call load_source_force()
+      ! print *, 'load_bc_force'
+      call load_bc_force()
 
    end subroutine load_force_info
 
+   subroutine load_source_force()
+
+      use stdlib_string_type, only: char
+      implicit none
+      PetscViewer :: viewer
+
+      call VecDuplicate(Flowfield, source_force, ierr)
+      if (char(source_term_file) /= 'none') then
+         call PetscViewerHDF5Open(PETSC_COMM_WORLD, char(source_term_file), FILE_MODE_READ, viewer, ierr)
+         call PetscObjectSetName(source_force, "source", ierr)
+         call VecLoad(source_force, viewer, ierr)
+         call PetscViewerDestroy(viewer, ierr)
+      else
+         call VecZeroEntries(source_force, ierr)
+      end if
+
+   end subroutine load_source_force
+
+   subroutine load_bc_force()
+
+      use stdlib_string_type, only: char
+      implicit none
+      PetscViewer :: viewer
+      integer :: i
+      complex(REAL64) :: tmp(4)
+
+      if (char(wall_force_file) /= 'none') then
+         open (333, file=char(wall_force_file))
+         do i = istart, iend
+            read (333, *) iloc, wall_force(:, i)
+         end do
+         close (333)
+      else
+         wall_force = 0.0d0
+      end if
+
+   end subroutine load_bc_force
+
    subroutine compute_receptivity()
+
+      use global_parameters, only: xx
       implicit none
       integer :: i
 
@@ -109,13 +153,51 @@ contains
       complex(REAL64) :: wall_term_part(istart:iend)
       complex(REAL64) :: freestream_term_part(istart:iend)
 
+      complex(REAL64) :: integral_source_term, integral_wall_term
+
       call compute_source_term_part(source_force_term_part, alpse_function, source_force, lnA)
       call compute_wall_term_part(wall_term_part, alpse_function, wall_force)
-      do i = istart, iend
-         lambda(i) = 0.0
+      lambda(istart) = 0.0d0
+      integral_source_term = 0.0d0
+      integral_wall_term = 0.0d0
+      do i = istart + 1, iend
+         grid_profile = assemble_lst_grid_profile(i)
+         integral_source_term = integral_source_term + &
+                             &  0.5d0*(integral_y(source_force_term_part(i, :), grid_profile%y) + &
+                             &         integral_y(source_force_term_part(i - 1, :), grid_profile%y))/grid_profile%xi_x(yb + 1)
+
+         integral_wall_term = integral_wall_term + &
+                             &  0.5d0*(wall_term_part(i) + wall_term_part(i - 1))/grid_profile%xi_x(yb + 1)
+         lambda(i) = (integral_source_term - integral_wall_term)*(norm_u(lpse_function(i)))*lnA(i)/q(i)
       end do
 
    end subroutine compute_receptivity
+
+   function norm_u(v) result(maxu)
+
+      implicit none
+      Vec, intent(in) :: v
+      Vec :: v_all
+      PetscScalar, pointer :: tmp_(:, :)
+      PetscScalar :: maxu
+      integer :: maxu_loc(1)
+      integer :: jn
+      PetscScalar, allocatable :: phi(:, :)
+      VecScatter :: ctx
+      PetscErrorCode :: ierr
+
+      call VecScatterCreateToZero(v, ctx, v_all, ierr)
+
+      call VecScatterBegin(ctx, v, v_all, INSERT_VALUES, SCATTER_FORWARD, ierr)
+      call VecScatterEnd(ctx, v, v_all, INSERT_VALUES, SCATTER_FORWARD, ierr)
+
+      call DMDAVecGetArrayReadF90(DM_local, v_all, tmp_, ierr)
+
+      maxu_loc = maxloc(abs(tmp_(1, :)))
+      maxu = tmp_(1, maxu_loc(1) - 1)
+      call DMDAVecRestoreArrayReadF90(DM_local, v_all, tmp_, ierr)
+
+   end function norm_u
 
    subroutine compute_source_term_part(source_force_term_part, alpse_function, source_force, lnA)
       implicit none
@@ -179,25 +261,57 @@ contains
    subroutine test_orth()
 
       implicit none
-      Vec :: v_tmp
+      complex(REAL64) :: v_tmp(5, jn)
       type(type_lst_grid_profile) :: grid_profile
-      integer :: i
-      complex(REAL64) :: q
-      REAL(REAL64) :: norm_inf1, norm_inf2
+      integer :: i, j, l
+      REAL(REAL64) :: norm_inf1, norm_inf2, norm_inf3
+      complex(REAL64), pointer :: tmp(:, :)
+      complex(REAL64) :: array2(5, jn), array1(5, jn)
 
-      call VecDuplicate(lpse_function(1), v_tmp, ierr)
+      ! call VecDuplicate(lpse_function(1), v_tmp, ierr)
       open (999, file='out/q.plt')
       do i = istart, iend
-         call MatMult(MatA(i), lpse_function(i), v_tmp, ierr)
+         ! call MatMult(MatA(i), lpse_function(i), v_tmp, ierr)
+         call DMDAVecGetArrayF90(DM_local, lpse_function(i), tmp, ierr)
+         array1(:, :) = tmp(:, :)
+         do j = 1, jn
+            v_tmp(:, j) = matmul(matA(:, :, j, i), array1(:, j))
+         end do
+         call DMDAVecRestoreArrayF90(DM_local, lpse_function(i), tmp, ierr)
          grid_profile = assemble_lst_grid_profile(i)
-         q = inner_dot_y(alpse_function(i), v_tmp, grid_profile%y)
-         if (abs(q) > 1.0d2 .or. isnan(abs(q))) then
-            call VecNorm(v_tmp, NORM_INFINITY, norm_inf1, ierr)
+         call DMDAVecGetArrayReadF90(DM_local, alpse_function(i), tmp, ierr)
+         array2(:, :) = tmp(:, :)
+         call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i), tmp, ierr)
+         q(i) = inner_dot_y(array2, v_tmp, grid_profile%y)
+         ! print*, i, q(i)
+         if (abs(q(i)) > 1.0d2 .or. isnan(abs(q(i)))) then
             call VecNorm(alpse_function(i), NORM_INFINITY, norm_inf2, ierr)
-            print *, norm_inf1, norm_inf2
-            error stop 'q is nan'
+            call VecNorm(lpse_function(i), NORM_INFINITY, norm_inf1, ierr)
+            print *, i, q(i), maxval(abs(array1)), maxval(abs(array2)), maxval(abs(v_tmp))
+
+            print *, i, norm_inf1, norm_inf2
+            do j = 1, jn
+               ! do l = 1, 5
+               !    if((abs(array(l, j)))> 1.0d2) print*, j, l, abs(array(:, j))
+               ! enddo
+               print *, j, maxval(abs(array1(:, j))), maxval(abs(array2(:, j))), maxval(abs(v_tmp(:, j)))
+               block
+                  integer :: l1, l2
+                  do l1 = 1, 5
+                     do l2 = 1, 5
+                        print *, l1, l2, matA(l1, l2, j, i)
+                     end do
+                  end do
+               end block
+            end do
+            ! call VecView(lpse_function(i), PETSC_VIEWER_STDOUT_SELF, ierr)
+            stop
+            ! call VecNorm(alpse_function(i), NORM_INFINITY, norm_inf2, ierr)
+            ! call VecNorm(lpse_function(i), NORM_INFINITY, norm_inf3, ierr)
+            ! print *, i, norm_inf2, norm_inf3
+            ! error stop 'q is nan'
          end if
-         write (999, '(2X, I4, 2X, 3(F20.8, 2X))') i, q, abs(q)
+         write (999, '(2X, I4, 2X, 3(F20.8, 2X))') i, q(i), abs(q(i))
          ! write(999, *) i, q, abs(q)
       end do
       close (999)
@@ -209,28 +323,40 @@ contains
       use stdlib_quadrature, only: trapz_weights
       implicit none
 
-      Vec, intent(in) :: v1, v2
+      complex(REAL64), intent(in) :: v1(:, :), v2(:, :)
       real(REAL64), intent(in) :: y(:)
       complex(REAL64) :: q
 
       Vec :: tmp
-      complex(REAL64), pointer:: array(:)
       integer :: j
-      complex(REAL64) :: tmp_(0:jn - 1)
+      complex(REAL64) :: tmp_(jn)
 
-      call VecDuplicate(v1, tmp, ierr)
-      call VecCopy(v1, tmp, ierr)
-      call VecConjugate(tmp, ierr)
-      call VecPointwiseMult(tmp, tmp, v2, ierr)
-      call VecGetArrayReadF90(tmp, array, ierr)
-
-      do j = 0, jn - 1
-         tmp_(j) = sum(array(j*5 + 1:j*5 + 5))
+      ! call VecDuplicate(v1, tmp, ierr)
+      ! call VecCopy(v1, tmp, ierr)
+      ! call VecConjugate(tmp, ierr)
+      ! call VecPointwiseMult(tmp, tmp, v2, ierr)
+      ! call VecGetArrayReadF90(tmp, array, ierr)
+      do j = 1, jn
+         tmp_(j) = dot_product(v1(:, j), v2(:, j)) !sum(array(j*5 + 1:j*5 + 5))
       end do
-      q = sum(trapz_weights(y)*tmp_)
-      call VecRestoreArrayReadF90(tmp, array, ierr)
+      q = 0.0d0
+      do j = 2, jn
+         q = q + 0.5d0*(tmp_(j) + tmp_(j - 1))*(y(j) - y(j - 1))
+      end do
 
    end function inner_dot_y
+
+   complex(REAL64) function integral_y(f, y)
+
+      use stdlib_quadrature, only: trapz_weights
+      implicit none
+      complex(REAL64), intent(in) :: f(:)
+      real(REAL64), intent(in) :: y(:)
+      integer :: j
+
+      integral_y = sum(trapz_weights(y)*f)
+
+   end function integral_y
 
    subroutine solve_lpse()
 
@@ -242,7 +368,7 @@ contains
       call lpse_eqn%set_parameter("bat", beta(1))
       call lpse_eqn%set_parameter("sigma_p", sigma_p)
       call lpse_eqn%set_parameter("sigma_control", sigma_control)
-      call lpse_eqn%set_parameter("rd_factor", rd_factor)
+      call lpse_eqn%set_parameter("rd_factor", 1.0d0)
       call lpse_eqn%set_parameter("Pr", Pr)
 
       call lpse_eqn%set_parameter("solve_alpha", SOLVE_ALPHA_BOTH)
@@ -262,7 +388,7 @@ contains
       call alpse_eqn%set_parameter("bat", beta(1))
       call alpse_eqn%set_parameter("sigma_p", sigma_p)
       call alpse_eqn%set_parameter("sigma_control", sigma_control)
-      call alpse_eqn%set_parameter("rd_factor", rd_factor)
+      call alpse_eqn%set_parameter("rd_factor", 1.0d0)
       call alpse_eqn%set_parameter("Pr", Pr)
 
       call alpse_eqn%set_parameter("solve_alpha", SOLVE_ALPHA_NONE)
@@ -353,15 +479,27 @@ contains
          call lpse_eqn%set_grid(grid_profile)
          call lpse_eqn%set_baseflow(baseflow_profile)
          call lpse_eqn%setup()
-         call lpse_eqn%get_matrix(lpse_alpha(i), "A_0", A)
-         do j = 0, jn - 1
-            idxm = -1; idxn = -1
-            idxm(MatStencil_i, 1) = j; idxn(MatStencil_i, 1) = j
-            call MatSetValuesBlockedStencil(MatA(i), 1, idxm, 1, idxn, transpose(A(:, :, j)), INSERT_VALUES, ierr)
-         end do
-         call MatAssemblyBegin(MatA(i), MAT_FINAL_ASSEMBLY, ierr)
-         call MatAssemblyEnd(MatA(i), MAT_FINAL_ASSEMBLY, ierr)
-         ! call solve_lpse_eqn(grid_profile, baseflow_profile, ome, alf, bat, i, phi(i), phi(i-1), phi(max(1,i-2)))
+         call lpse_eqn%get_matrix(lpse_alpha(i), "A_0", matA(:, :, :, i))
+         ! if(isnan(matA(2,2,2, i)%re)) then
+         !    block
+         !       integer :: l1, l2, j
+         !       do j=2, 2
+         !       do l1 = 1, 5
+         !          do l2=1, 5
+         !             print*, l1, l2, matA(l1, l2, j, i)
+         !          enddo
+         !       enddo
+         !    enddo
+         !    endblock
+         !    stop
+         ! endif
+         ! do j = 0, jn - 1
+         !    idxm = -1; idxn = -1
+         !    idxm(MatStencil_i, 1) = j; idxn(MatStencil_i, 1) = j
+         !    call MatSetValuesBlockedStencil(MatA(i), 1, idxm, 1, idxn, transpose(A(:, :, j)), INSERT_VALUES, ierr)
+         ! end do
+         ! call MatAssemblyBegin(MatA(i), MAT_FINAL_ASSEMBLY, ierr)
+         ! call MatAssemblyEnd(MatA(i), MAT_FINAL_ASSEMBLY, ierr)
          lpse_alpha(i) = lpse_alpha(i - 1)
          call VecCopy(lpse_function(i - 1), lpse_function(i), ierr)
          call lpse_eqn%solve(lpse_alpha(i), lpse_function(i), lpse_function(i - 1), lpse_function(i - 2))
@@ -372,7 +510,8 @@ contains
       end do
       call PetscPrintf(PETSC_COMM_WORLD, 'Solve LPSE done!\n', ierr)
 
-      call MatCopy(MatA(istart + 1), MatA(istart), SAME_NONZERO_PATTERN, ierr)
+      ! call MatCopy(MatA(istart + 1), MatA(istart), SAME_NONZERO_PATTERN, ierr)
+      MatA(:, :, :, istart) = MatA(:, :, :, istart + 1)
 
    end subroutine solve_lpse_native
 
@@ -403,6 +542,11 @@ contains
 
          call VecCopy(alpse_function(i + 1), alpse_function(i), ierr)
          call alpse_eqn%solve(lpse_alpha(i), alpse_function(i), alpse_function(i + 1), alpse_function(i + 2))
+         block
+            real(REAL64) :: norm_inf
+            call VecNorm(alpse_function(i), NORM_INFINITY, norm_inf, ierr)
+            write (777, *) i, norm_inf
+         end block
 
          print *, 'ix=', i, 'is done.'
          print *, 'alpha=', lpse_alpha(i), "bat=", bat
@@ -410,6 +554,18 @@ contains
       call PetscPrintf(PETSC_COMM_WORLD, 'Solve APSE done!\n', ierr)
 
    end subroutine solve_lpse_adjoint
+
+   subroutine write_lpse_receptivity()
+      implicit none
+      integer :: i
+
+      open (1000, file='out/lpse_receptivity.plt')
+      do i = istart, iend
+         write (1000, *) i, xx(i, 1), lambda(i)
+      end do
+      close (1000)
+
+   end subroutine write_lpse_receptivity
 
    subroutine finalize_lpse_receptivity()
 
@@ -423,9 +579,9 @@ contains
          call DMRestoreGlobalVector(DM_local, alpse_function(i), ierr)
       end do
 
-      do i = istart, iend
-         call MatDestroy(MatA(i), ierr)
-      end do
+      ! do i = istart, iend
+      !    call MatDestroy(MatA(i), ierr)
+      ! end do
 
       deallocate (lpse_function, alpse_function)
       deallocate (MatA)
@@ -435,6 +591,7 @@ contains
       call DMRestoreGlobalVector(meshDA, source_force, ierr)
       call DMDestroy(meshDA, ierr)
       deallocate (wall_force)
+      deallocate (q)
 
       print *, 'finalize_lpse_receptivity.'
 
