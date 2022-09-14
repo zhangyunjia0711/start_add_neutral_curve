@@ -127,7 +127,7 @@ contains
       use stdlib_string_type, only: char
       implicit none
       PetscViewer :: viewer
-      integer :: i
+      integer :: i, iloc
       complex(REAL64) :: tmp(4)
 
       if (char(wall_force_file) /= 'none') then
