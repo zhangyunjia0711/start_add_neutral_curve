@@ -561,11 +561,11 @@ contains
             D0(2, 2, 1) = 1.0d0
             D0(3, 3, 1) = 1.0d0
             D0(4, 4, 1) = 1.0d0
-            if(this%isothermal) then
+            if (this%isothermal) then
                D0(5, 5, 1) = 1.0d0
             else
                B0(5, 5, 1) = 1.0d0
-            endif
+            end if
          case (BC_POLE)
             G0(:, :, 1) = 0.0d0
             A0(:, :, 1) = 0.0d0
