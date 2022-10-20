@@ -198,12 +198,7 @@ contains
       call PetscPrintf(PETSC_COMM_WORLD, "Writing Optimal streak......\n", ierr)
 
       filename = 'optimal_streak_'//string_type(i_x0)//'_'//string_type(i_x1)//'_'//name
-      ! write(tmp, ('(F20.5)'))ome%re
-      ! fn=fn//'_ome='//trim(adjustl(tmp))
-      ! write(tmp, ('(F20.5)'))alf%re
-      ! fn=fn//'_alf='//trim(adjustl(tmp))
-      ! write(tmp, ('(F20.5)'))bat%re
-      ! fn=fn//'_bat='//trim(adjustl(tmp))//'.plt'
+      call PetscPrintf(PETSC_COMM_WORLD, "the file's prefix is "//char(filename)//"......\n", ierr)
 
       call VecScatterCreateToZero(v, ctx, v_all, ierr)
       ! call VecGetType(v, name, ierr)
@@ -245,18 +240,13 @@ contains
          close (1002)
       end if
 
-      ! call MPI_bcast(maxu, 1, MPI_DOUBLE_PRECISION, 0, MPI_COMM_WORLD, ierr)
-
-      ! call VecScale(V, 1.0d0/maxu, ierr)
-
-      call PetscViewerBinaryOpen(PETSC_COMM_WORLD, 'out/'//filename//'.petsc', FILE_MODE_WRITE, &
+      call PetscViewerBinaryOpen(PETSC_COMM_WORLD, 'out/'//char(filename)//'.petsc', FILE_MODE_WRITE, &
                                  Viewer, ierr)
       call VecView(V, Viewer, ierr)
       call PetscViewerDestroy(Viewer, ierr)
 
       call VecScatterDestroy(ctx, ierr)
       call VecDestroy(v_all, ierr)
-      ! call VecDestroy(V, ierr)
 
    end subroutine write_optimal_streak_function
 
