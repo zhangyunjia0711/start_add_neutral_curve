@@ -308,7 +308,7 @@ contains
          call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i + istart), array, ierr)
          wall_term_part(i) = qq(1, i + istart - 1, 1)*conjg(rho_star_w)*v_w + &
                              mu0*conjg(du_star_w)*u_w + &
-                             3.0d0/4.0d0*mu0*conjg(dv_star_w)*v_w + &
+                             4.0d0/3.0d0*mu0*conjg(dv_star_w)*v_w + &
                              mu0*conjg(dw_star_w)*w_w + &
                              mu0/Pr*conjg(dT_star_w)*T_w
       end do
