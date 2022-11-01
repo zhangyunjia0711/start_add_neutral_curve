@@ -86,6 +86,7 @@ contains
 
       call solve_lpse()
       call solve_alpse()
+      ! call check_lpse_alpse()
       call test_orth()
       call load_force_info()
       call compute_receptivity()
@@ -93,6 +94,57 @@ contains
       print *, 'solve_lpse_receptivity.'
 
    end subroutine solve_lpse_receptivity
+
+   subroutine check_lpse_alpse()
+      implicit none
+      complex(REAL64) :: v_tmp(5, jn)
+      type(type_lst_grid_profile) :: grid_profile
+      integer :: i, j, l
+      REAL(REAL64) :: norm_inf1, norm_inf2, norm_inf3
+      complex(REAL64), pointer :: tmp1(:, :), tmp2(:, :)
+      complex(REAL64) :: array2(5, jn), array1(5, jn)
+
+      do i = 60, 60!istart, iend
+         print*, i
+         ! call MatMult(MatA(i), lpse_function(i), v_tmp, ierr)
+         call DMDAVecGetArrayF90(DM_local, lpse_function(i), tmp1, ierr)
+         ! array1(:, :) = tmp(:, :)
+         do j = 1, jn
+            ! v_tmp(:, j) = matmul(matA(:, :, j, i), array1(:, j))
+            v_tmp(:, j) = matmul(matA(:, :, j, i), tmp1(:, j-1))
+         end do
+         call DMDAVecRestoreArrayF90(DM_local, lpse_function(i), tmp1, ierr)
+
+         grid_profile = assemble_lst_grid_profile(i)
+
+         call DMDAVecGetArrayReadF90(DM_local, alpse_function(i), tmp2, ierr)
+         ! array2(:, :) = tmp(:, :)
+         q(i) = inner_dot_y(tmp2, v_tmp, grid_profile%y)
+         call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i), tmp2, ierr)
+         
+         ! q(i) = inner_dot_y(array2, v_tmp, grid_profile%y)
+
+         block
+            integer :: l1, l2
+            do l1=1, 5
+               do l2=1, 5
+                  print*, l1, l2, matA(l1, l2, 30, i)
+               enddo
+            enddo
+
+         endblock
+
+         print*, v_tmp(:, 2)
+         print*, v_tmp(:, 30)
+         print*, q(i)/abs(norm_u(lpse_function(i)))
+         
+         ! print*, i, q(i)
+         ! write(999, *) i, q, abs(q)
+      end do
+
+      stop
+
+   end subroutine 
 
    subroutine load_force_info()
       implicit none
@@ -167,8 +219,10 @@ contains
                              &         integral_y(source_force_term_part(i - 1, :), grid_profile%y))/grid_profile%xi_x(yb + 1)
 
          integral_wall_term = integral_wall_term + &
-                             &  0.5d0*(wall_term_part(i) + wall_term_part(i - 1))/grid_profile%xi_x(yb + 1)
-         lambda(i) = (integral_source_term - integral_wall_term)*(norm_u(lpse_function(i)))*lnA(i)/q(i)
+                             &  0.5d0*(wall_term_part(i) + wall_term_part(i - 1)) !/grid_profile%xi_x(yb + 1) !! because the coordinates is \xi
+         ! lambda(i) = (integral_source_term - integral_wall_term)/q(i) !*lnA(i)*(norm_u(lpse_function(i)))
+        lambda(i) = (integral_source_term-integral_wall_term)/q(i)*exp(ZI*lnA(i))*norm_u(lpse_function(i))
+         ! print*, i, wall_term_part(i)
       end do
 
    end subroutine compute_receptivity
@@ -215,7 +269,7 @@ contains
       do i = 0, iend - istart
          call DMDAVecGetArrayReadF90(DM_local, alpse_function(i + istart), array, ierr)
          do j = 0, jn - 1
-            source_force_term_part(i + 1, j + 1) = dot_product((array(:, j)), array2D(:, i, j))/exp(lnA(i + 1))
+            source_force_term_part(i + 1, j + 1) = dot_product((array(:, j)), array2D(:, i, j))/exp(ZI*lnA(i + 1))
          end do
          call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i + istart), array, ierr)
       end do
@@ -240,7 +294,10 @@ contains
             mu0 = T*sqrt(T)*(1.0d0 + C1/Te)/(T + C1/Te)/Re
          end associate
 
-         u_w = wall_force(1, i); v_w = wall_force(2, i); w_w = wall_force(3, i); T_w = wall_force(4, i)
+         u_w = wall_force(1, i)/exp(ZI*lnA(i))
+         v_w = wall_force(2, i)/exp(ZI*lnA(i))
+         w_w = wall_force(3, i)/exp(ZI*lnA(i))
+         T_w = wall_force(4, i)/exp(ZI*lnA(i))
 
          call DMDAVecGetArrayReadF90(DM_local, alpse_function(i + istart), array, ierr)
          rho_star_w = array(0, 0)
@@ -249,11 +306,11 @@ contains
          dw_star_w = (-1.0d0*array(3, 2) + 4.0d0*array(3, 1) - 3.0d0*array(3, 0))/2.0d0*eta_y(i + istart - 1, 1)
          dT_star_w = (-1.0d0*array(4, 2) + 4.0d0*array(4, 1) - 3.0d0*array(4, 0))/2.0d0*eta_y(i + istart - 1, 1)
          call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i + istart), array, ierr)
-         wall_term_part(i) = qq(1, i + istart - 1, 1)*rho_star_w*v_w + &
-                             mu0*du_star_w*u_w + &
-                             3.0d0/4.0d0*mu0*dv_star_w*v_w + &
-                             mu0*dw_star_w*w_w + &
-                             mu0/Pr*dT_star_w*T_w
+         wall_term_part(i) = qq(1, i + istart - 1, 1)*conjg(rho_star_w)*v_w + &
+                             mu0*conjg(du_star_w)*u_w + &
+                             3.0d0/4.0d0*mu0*conjg(dv_star_w)*v_w + &
+                             mu0*conjg(dw_star_w)*w_w + &
+                             mu0/Pr*conjg(dT_star_w)*T_w
       end do
 
    end subroutine compute_wall_term_part
@@ -265,24 +322,26 @@ contains
       type(type_lst_grid_profile) :: grid_profile
       integer :: i, j, l
       REAL(REAL64) :: norm_inf1, norm_inf2, norm_inf3
-      complex(REAL64), pointer :: tmp(:, :)
+      complex(REAL64), pointer :: tmp1(:, :), tmp2(:, :)
       complex(REAL64) :: array2(5, jn), array1(5, jn)
 
       ! call VecDuplicate(lpse_function(1), v_tmp, ierr)
       open (999, file='out/q.plt')
       do i = istart, iend
          ! call MatMult(MatA(i), lpse_function(i), v_tmp, ierr)
-         call DMDAVecGetArrayF90(DM_local, lpse_function(i), tmp, ierr)
-         array1(:, :) = tmp(:, :)
+         call DMDAVecGetArrayF90(DM_local, lpse_function(i), tmp1, ierr)
+         array1(:, :) = tmp1(:, :)
          do j = 1, jn
-            v_tmp(:, j) = matmul(matA(:, :, j, i), array1(:, j))
+            v_tmp(:, j) = matmul(matA(:, :, j, i), tmp1(:, j-1))
+            ! v_tmp(:, j) = matmul(matA(:, :, j, i), array1(:, j))
          end do
-         call DMDAVecRestoreArrayF90(DM_local, lpse_function(i), tmp, ierr)
+         call DMDAVecRestoreArrayF90(DM_local, lpse_function(i), tmp1, ierr)
          grid_profile = assemble_lst_grid_profile(i)
-         call DMDAVecGetArrayReadF90(DM_local, alpse_function(i), tmp, ierr)
-         array2(:, :) = tmp(:, :)
-         call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i), tmp, ierr)
-         q(i) = inner_dot_y(array2, v_tmp, grid_profile%y)
+         call DMDAVecGetArrayReadF90(DM_local, alpse_function(i), tmp2, ierr)
+         array2(:, :) = tmp2(:, :)
+         q(i) = inner_dot_y(tmp2, v_tmp, grid_profile%y)
+         ! q(i) = inner_dot_y(array2, v_tmp, grid_profile%y)
+         call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i), tmp2, ierr)
          ! print*, i, q(i)
          if (abs(q(i)) > 1.0d2 .or. isnan(abs(q(i)))) then
             call VecNorm(alpse_function(i), NORM_INFINITY, norm_inf2, ierr)
@@ -479,7 +538,8 @@ contains
          call lpse_eqn%set_grid(grid_profile)
          call lpse_eqn%set_baseflow(baseflow_profile)
          call lpse_eqn%setup()
-         call lpse_eqn%get_matrix(lpse_alpha(i), "A_0", matA(:, :, :, i))
+         call lpse_eqn%get_matrix(lpse_alpha(i), "A_0", matA(:, :, :, i)) !! this matA contains xi_x xi_y
+      
          ! if(isnan(matA(2,2,2, i)%re)) then
          !    block
          !       integer :: l1, l2, j
@@ -545,7 +605,7 @@ contains
          block
             real(REAL64) :: norm_inf
             call VecNorm(alpse_function(i), NORM_INFINITY, norm_inf, ierr)
-            write (777, *) i, norm_inf
+            ! write (777, *) i, norm_inf
          end block
 
          print *, 'ix=', i, 'is done.'
@@ -561,7 +621,7 @@ contains
 
       open (1000, file='out/lpse_receptivity.plt')
       do i = istart, iend
-         write (1000, *) i, xx(i, 1), lambda(i)
+         write (1000, '(1X, I3, 4X, 4E20.6)') i, xx(i, 1), lambda(i), abs(lambda(i))
       end do
       close (1000)
 

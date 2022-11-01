@@ -53,7 +53,7 @@ module global_parameters
   real(REAL64), dimension(:, :, :), allocatable :: dq0dxy
 
   real(REAL64) :: sigma_p = 1.0d0, sigma_control = 0.0d0
-  real(REAL64) :: rd_factor=1.3d0
+  real(REAL64) :: rd_factor=1.0d0
 
   integer :: solve_alpha
 

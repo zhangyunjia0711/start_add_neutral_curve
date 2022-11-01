@@ -306,11 +306,11 @@ contains
       dT_star_w = (-1.0d0*tmp_(15) + 4.0d0*tmp_(10) - 3.0d0*tmp_(5))/2.0d0*grid%eta_y(1)
       call VecRestoreArrayReadF90(alst_eigf, tmp_, ierr)
 
-      bc_force = Rho0_w*rho_star_w*v_w + &
-                 mu0*du_star_w*u_w + &
-                 3.0d0/4.0d0*mu0*dv_star_w*v_w + &
-                 mu0*dw_star_w*w_w + &
-                 mu0/Pr*dT_star_w*T_w
+      bc_force = Rho0_w*conjg(rho_star_w)*v_w + &
+                 mu0*conjg(du_star_w)*u_w + &
+                 3.0d0/4.0d0*mu0*conjg(dv_star_w)*v_w + &
+                 mu0*conjg(dw_star_w)*w_w + &
+                 mu0/Pr*conjg(dT_star_w)*T_w
 
    end function integral_bc
 
