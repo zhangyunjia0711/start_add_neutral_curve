@@ -219,7 +219,7 @@ contains
                              &         integral_y(source_force_term_part(i - 1, :), grid_profile%y))/grid_profile%xi_x(yb + 1)
 
          integral_wall_term = integral_wall_term + &
-                             &  0.5d0*(wall_term_part(i) + wall_term_part(i - 1)) !/grid_profile%xi_x(yb + 1) !! because the coordinates is \xi
+                             &  0.5d0*(wall_term_part(i) + wall_term_part(i - 1))/grid_profile%xi_x(yb + 1) 
          ! lambda(i) = (integral_source_term - integral_wall_term)/q(i) !*lnA(i)*(norm_u(lpse_function(i)))
         lambda(i) = (integral_source_term-integral_wall_term)/q(i)*exp(ZI*lnA(i))*norm_u(lpse_function(i))
          ! print*, i, wall_term_part(i)

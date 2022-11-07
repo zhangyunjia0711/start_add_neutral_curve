@@ -75,6 +75,7 @@ module mod_lpse_eqn
 
       integer :: iterator_times
       logical :: solved_lpse_matrix = .FALSE.
+      complex(real64), allocatable :: A0_rec(:, :, :)
 
    contains
 
@@ -139,6 +140,7 @@ contains
          allocate (this%V_0(5, 5, jb:je)); this%V_0 = 0.0d0
          allocate (this%D_2(5, 5, jb:je)); this%D_2 = 0.0d0
          allocate (this%G_0(5, 5, jb:je)); this%G_0 = 0.0d0
+         allocate (this%A0_rec(5, 5, jb:je)); this%A0_rec = 0.0d0
          ! end associate
 
          allocate (modify_Px_A(2, jb:je)); modify_Px_A = 0.0d0
@@ -375,7 +377,8 @@ contains
       select case (trim(mat_name))
       case ('A_0')
          if(.not. this%solved_lpse_matrix) call this%solve_lpse_matrix(alf)
-         matrix = this%D_2
+         ! matrix = this%D_2
+         matrix = this%A0_rec
          ! if(isnan(matrix(2,2,2)%re)) then
          !    print*, 'in lpse_eqn.f90'
          !    block
@@ -1039,7 +1042,8 @@ contains
                     eta_x => grid_profile%eta_x(j), &
                     eta_y => grid_profile%eta_y(j), &
                     xi_yy => grid_profile%xi_yy(j), &
-                    eta_yy => grid_profile%eta_yy(j))
+                    eta_yy => grid_profile%eta_yy(j), &
+                    A0_rec => this%A0_rec)
 
             D_0(:, :, j) = D0(:, :, j) - ZI*ome*G0(:, :, j) + ZI*alf*A0(:, :, j) &
                            + ZI*bat*C0(:, :, j) + alf**2*V0xx(:, :, j) &
@@ -1052,6 +1056,8 @@ contains
             ! A_0(:, :, j)=A0(:, :, j)-ZI*bat*V0xz(:, :, j)!-2.0d0*ZI*alf*V0xx(:, :, j)
             A_0(2, 1, j) = A_0(2, 1, j) + modify_Px_A(1, j)
             A_0(2, 5, j) = A_0(2, 5, j) + modify_Px_A(2, j)
+
+            A0_rec(:, :, j)=A_0(:, :, j)
 
             ! block
             !   integer :: l1, l2
@@ -1349,6 +1355,7 @@ contains
       deallocate (this%V_0)
       deallocate (this%D_2)
       deallocate (this%G_0)
+      deallocate (this%A0_rec)
 
       deallocate (modify_Px_A)
 
