@@ -321,8 +321,6 @@ contains
          phi_ke = Trap(phi_ke_j, this%grid%y)
          dphi_ke = Trap(dphi_ke_j, this%grid%y)
 
-         ! print*, phi_ke, dphi_ke
-
          alf = alf - this%rd_factor*ZI*1.0d0/phi_ke*dphi_ke
          ! print*, phi_ke, dphi_ke
          if (this%solve_alpha == SOLVE_ALPHA_REAL) then
@@ -526,7 +524,6 @@ contains
                if(abs(hz)<= epsilon(1.0d0)) hz = epsilon(1.0d0)
                hz_y = 1.0d0
                d32 = hz_y/hz
-               print*, 'use cylindrical cs.'
             end select
 
             d132 = d12 + d32
@@ -656,7 +653,7 @@ contains
             A0(2, 4, j) = -rmz
             A0(2, 5, j) = pe*rho - rmt*p11
 
-            A0(3, 2, j) = rm*(-z2d3*(s - 1.0d0)*d132 + d12) - Z2D3*rmy*(s - 1.0d0)
+            A0(3, 2, j) = rm*(-z2d3*(s - 1.0d0)*d12*2.0 + d12) - Z2D3*rmy*(s - 1.0d0)
             A0(3, 3, j) = rho*u - rmx
             A0(3, 5, j) = -rmt*p12
             A0(4, 2, j) = -z2d3*rmz*(s - 1.0d0)
@@ -688,11 +685,11 @@ contains
             B0(2, 5, j) = -rmt*p12
             B0(3, 1, j) = pe*T
             B0(3, 2, j) = -rmx
-            B0(3, 3, j) = rho*v - Z2D3*(2*s + 1)*rm*d132 - (2.0d0 + s)*Z2d3*rmy
+            B0(3, 3, j) = rho*v - Z2D3*(s + 2.0d0)*rm*d132 - (2.0d0 + s)*Z2d3*rmy
             B0(3, 4, j) = -rmz
             B0(3, 5, j) = pe*rho - rmt*p22
             B0(4, 3, j) = z2d3*(-rmz)*(s - 1)
-            B0(4, 4, j) = rho*v - rm*d12 - rmy
+            B0(4, 4, j) = rho*v - rm*d132 - rmy
             B0(4, 5, j) = -rmt*p23
             B0(5, 1, j) = -pe*v*t
             B0(5, 2, j) = -2.0d0*rm*p12
@@ -707,7 +704,7 @@ contains
             C0(2, 5, j) = -rmt*p13
             C0(3, 3, j) = rho*w - rmz
             !C0(3, 4, j)=7.0d0/3.0d0*rm*d32+Z2D3*rmy
-            C0(3, 4, j) = (-z2d3*(s - 1.0d0)*d132 + d32)*rm - z2d3*rmy*(s - 1.0d0)
+            C0(3, 4, j) = (-z2d3*(s - 1.0d0)*d32*2.0d0 + d32)*rm - z2d3*rmy*(s - 1.0d0)
             C0(3, 5, j) = -rmt*p23
             C0(4, 1, j) = pe*t
             C0(4, 2, j) = -rmx
@@ -731,13 +728,13 @@ contains
             D0(2, 5, j) = pe*rhox - (p11x + p12y + p13z + d132*p12)*rmt - rmtx*p11 - rmty*p12 - rmtz*p13
             D0(3, 1, j) = pe*Ty + u*(vx - u*d12) + v*vy + w*(vz - w*d32)
             D0(3, 2, j) = rho*(vx - 2.0d0*u*d12) + rmx*d12
-            D0(3, 3, j) = rho*vy - z2d3*(s - 1)*d132*(d132*rm + rmy)
+            D0(3, 3, j) = rho*vy + 2.0d0*rm*d12*d12 + 2.0d0*rm*d32*d32 + Z2D3*rmy*d132
             D0(3, 4, j) = rho*(vz - 2.0d0*w*d32) + rmz*d32
             D0(3, 5, j) = pe*rhoy - rmtx*p12 - rmty*p22 - rmtz*p23 - rmt*(p12x + p22y + p23z + p22*d132)
             D0(4, 1, j) = Tz*pe + u*wx + v*wy + w*(wz + v*d32)
             D0(4, 2, j) = rho*wx
             D0(4, 3, j) = rho*(wy + w*d32) - z2d3*((s - 1)*d132 + 3*d32)*rmz
-            D0(4, 4, j) = rho*(wz + d32*v) + rm*d132*d32 + rmy*d32
+            D0(4, 4, j) = rho*(wz + d32*v) + rm*(d12 + 2.0d0*d32)*d32 + rmy*d32
             D0(4, 5, j) = pe*rhoz - (p23*d132 + p13x + p23y + p33z)*rmt - rmtx*p13 - rmty*p23 - rmtz*p33
             D0(5, 1, j) = cp*(u*tx + v*ty + w*tz) - pe*(u*tx + v*ty + w*tz)
             D0(5, 2, j) = rho*cp*tx - pe*(rho*tx + t*rhox) + 2.0d0*rm*p12*d12
@@ -1232,6 +1229,7 @@ contains
 
             tmp_mat_j0 = 0.0d0
             box1 = 0.0d0
+
             do lj = ljb, lje
                tmp_mat_j0(:, :, lj) = delta(lj)*((1.0d0 + this%lambda)*A_0(:, :, j) + D_0(:, :, j)) + &
                                       C1(lj, c_idx)*(B_0(:, :, j)) + &
@@ -1263,7 +1261,7 @@ contains
 
       complex(REAL64) :: box1(5, -2:2, 5)
       complex(REAL64) :: tmp_mat_j0(5, 5, -2:2)
-      complex(REAL64) :: tmpj0(4), tmpjn(5)
+      complex(REAL64) :: tmpj0(5), tmpjn(5)
       ! real(REAL64) :: eta_y, eta_yy
 
       integer :: i, lj
@@ -1320,7 +1318,14 @@ contains
             !!j==1
          if (j == 1) then
             tmpj0 = 0.0d0
-            call VecSetValues(this%RHS, 4, arange(1, 4), tmpj0, INSERT_VALUES, ierr)
+            select case (this%bc_y0)
+            case (BC_WALL)
+               call VecSetValues(this%RHS, 4, arange(1, 4), tmpj0(1:4), INSERT_VALUES, ierr)
+            case (BC_POLE)
+               call VecSetValues(this%RHS, 5, arange(0, 4), tmpj0(1:5), INSERT_VALUES, ierr)
+            case default
+               call VecSetValues(this%RHS, 5, arange(0, 4), tmpj0(1:5), INSERT_VALUES, ierr)
+            end select
          elseif (j == this%jn) then
             !!j==jn
             tmpjn = 0.0d0
@@ -1338,6 +1343,19 @@ contains
       !   call PetscPrintf(PETSC_COMM_WORLD, "Set spatial LPSE matrix and RHS BC done!\n", ierr)
       ! endif
       ! call VecView(RHS, PETSC_VIEWER_STDOUT_WORLD, ierr)
+
+      ! block
+      !    Vec :: tmp
+      !    REAL(8) :: norm
+      !    call VecDuplicate(this%phi, tmp, ierr)
+      !    call MatMult(this%L_LPSE, this%phi, tmp, ierr)
+      !    call VecView(this%RHS, PETSC_VIEWER_STDOUT_SELF, ierr)
+      !    call VecAXPY(tmp, (-1.0d0, 0.0d0), this%RHS, ierr)
+      !    ! call VecView(tmp, PETSC_VIEWER_STDOUT_SELF, ierr)
+      !    call VecNorm(tmp, NORM_2, norm, ierr)
+      !    print*, norm
+      !    stop
+      ! endblock
 
    end subroutine solve_lpse_bc_j
 
