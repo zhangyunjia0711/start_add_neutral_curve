@@ -258,7 +258,7 @@ contains
          call this%solve_lpse_bc()
          call this%solve_lpse_phi()
          call this%solve_alpha_local_new(alf)
-         print*, alf, alf_old, (alf-alf_old)
+         ! print*, alf, alf_old, (alf-alf_old)
          delta = abs(alf - alf_old)
          alf_old = alf
          ! call VecWAXPY(dphi, (-1.0d0, 0.0d0), phi_old, phi_new, ierr)
