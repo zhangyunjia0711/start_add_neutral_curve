@@ -335,6 +335,9 @@ module mod_cfgio_adapter
             case ('BC_FARFIELD')
                 print*, 'bc farfield is used at yn.'
                 bc_yn=BC_FARFIELD
+            case ("BC_NONREFLECTION")
+                print*, 'bc nonreflection is used at yn.'
+                bc_yn=BC_NONREFLECTION
             case default
                 print*, '[bc]y_inf keyword is wrong.'
                 print*, 'The keryword may be BC_FARFIELD.'

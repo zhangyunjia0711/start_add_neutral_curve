@@ -398,6 +398,7 @@ contains
                d12y = -d12**2
 
                hz = y
+               if(abs(hz)<= epsilon(1.0d0)) hz = epsilon(1.0d0)
                hz_y = 1.0d0
                d32 = hz_y/hz
                d32y = -d32**2
@@ -599,6 +600,7 @@ contains
             d12 = hx_y/hx
 
             hz = y
+            if( abs(hz)<= epsilon(1.0d0)) hz = epsilon(1.0d0)
             hz_y = 1.0d0
             d32 = hz_y/hz
          end select
@@ -715,6 +717,8 @@ contains
          D0(3, 3, jn) = 1.0d0
          D0(4, 4, jn) = 1.0d0
          D0(5, 5, jn) = 1.0d0
+      case (BC_NONREFLECTION)
+         
       end select
       call this%solve_alst_matrix_j(jn, ome, alf, bat)
 

@@ -9,6 +9,7 @@ enum, bind(C)
    enumerator :: BC_WALL
    enumerator :: BC_FARFIELD
    enumerator :: BC_POLE
+   enumerator :: BC_NONREFLECTION
 end enum
 
 enum, bind(C)

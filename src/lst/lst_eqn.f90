@@ -615,6 +615,15 @@ contains
       real(REAL64) :: y, drx, drz
       real(REAL64) :: hx, hz, hx_y, hz_y, d12, d32, d132
 
+      real(REAL64) :: alfr(5), alfi(5), beta(5)
+      real(REAL64) :: vl(5, 5), vr(5, 5)
+      real(REAL64) :: lambda_(5), abs_lambda_(5), diag_plus(5, 5), matrix_plus(5, 5)
+      integer :: ipiv(5), info
+      real(REAL64) :: work(100)
+      integer :: l
+
+      real(REAL64), parameter :: epsilon = 1.0d-6
+
       select case (this%bc_yn)
       case (BC_FARFIELD)
          G0(:, :, jn) = 0.0d0
@@ -633,6 +642,57 @@ contains
          D0(3, 3, jn) = 1.0d0
          D0(4, 4, jn) = 1.0d0
          D0(5, 5, jn) = 1.0d0
+      case (BC_NONREFLECTION)
+
+         ! associate(rho => this%baseflow%q0(1, jn), T=>this%baseflow%q0(5, jn), &
+         !    & pe=> 1.0d0/(this%GAMMA*this%Ma**2))
+            ! B0(1, 3, jn) = rho
+            ! B0(2, 2, jn) = 0.0d0
+            ! B0(2, 5, jn) = 0.0d0
+            ! B0(3, 1, jn) = pe*T
+            ! B0(3, 3, jn) = 0.0d0
+            ! B0(3, 5, jn) = pe*rho
+            ! B0(4, 4, jn) = 0.0d0
+            ! B0(4, 5, jn) = 0.0d0
+            ! B0(5, 2, jn) = 0.0d0
+            ! B0(5, 4, jn) = 0.0d0
+            ! B0(5, 5, jn) = 0.0d0
+         ! end associate
+
+         !!! G^(-1)B = S^(-1)\Lambda S
+         call dggev('N', 'V', 5, real(B0(:, :, jn), kind=real64), 5, &
+         &          real(G0(:, :, jn), kind=real64), 5, &
+         &          alfr, alfi, beta, vl, 5, vr, 5, work, 100, info)
+
+         lambda_ = (alfr)/beta
+         print*, lambda_
+         !!! G^(-1)B^(+) = S^(-1)\Lambda^(+) S
+         diag_plus= 0.0d0
+         do l = 1, 5
+            abs_lambda_(l) = real(sqrt(lambda_(l)**2), kind=REAL64)
+            diag_plus(l, l) = 0.5d0*(lambda_(l) + abs_lambda_(l))
+            ! diag_plus(l, l) = lambda_(l)
+         end do
+         vl = vr !! vl is inv(vr)
+         call dgetrf(5, 5, vl, 5, ipiv, info)
+         call dgetri(5, vl, 5, ipiv, work, 5, info)
+         !!!  B^(+) = G S^(-1)\Lambda^(+) S
+         B0(:, :, jn) = matmul(G0(:, :, jn), vr)
+         B0(:, :, jn) = matmul(B0(:, :, jn), diag_plus)
+         B0(:, :, jn) = matmul(B0(:, :, jn), vl) 
+         ! block
+         !    integer :: l1, l2
+         !    do l1=1, 5
+         !       do l2=1, 5
+         !          print*, l1, l2, B0(l1, l2, jn), matrix_plus(l1, l2)
+         !       enddo
+         !    enddo 
+         !    stop
+
+         ! endblock
+            !  matrix_minus = matmul(matrixG, vr)
+            !  matrix_minus = matmul(matrix_minus, diag_minus)
+            !  matrix_minus = matmul(matrix_minus, vl)
       end select
       call this%solve_lst_matrix_j(jn, ome, alf, bat)
 
