@@ -1145,7 +1145,7 @@ contains
 
         complex(REAL64) :: box1(5, -2:2, 5)
         complex(REAL64) :: tmp_mat_j0(5, 5, -2:2)
-        complex(REAL64) :: tmpj0(4), tmpjn(5)
+        complex(REAL64) :: tmpj0(5), tmpjn(5)
         ! real(REAL64) :: eta_y, eta_yy
 
         integer :: i, lj
@@ -1202,7 +1202,14 @@ contains
     !!j==1
         if (j == 1) then
             tmpj0 = 0.0d0
-            call VecSetValues(RHS, 4, arange(1, 4), tmpj0, INSERT_VALUES, ierr)
+            select case (this%bc_y0)
+            case (BC_WALL)
+                call VecSetValues(RHS, 4, arange(1, 4), tmpj0(1:4), INSERT_VALUES, ierr)            
+            case (BC_POLE)
+                call VecSetValues(RHS, 5, arange(0, 4), tmpj0(1:5), INSERT_VALUES, ierr)                        
+            case default
+                call VecSetValues(RHS, 5, arange(0, 4), tmpj0(1:5), INSERT_VALUES, ierr)                                    
+            end select
         elseif (j == jn) then
     !!j==jn
             tmpjn = 0.0d0
