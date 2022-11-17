@@ -282,6 +282,9 @@ module mod_cfgio_adapter
                 else
                   isothermal = .TRUE.
                 endif
+            case ("BC_POLE")
+              print*, 'bc pole is used at y0.'
+              bc_y0=BC_POLE
             case default
                 print*, '[bc]y_0 keyword is wrong.'
                 print*, 'The keryword may be BC_WALL.'
@@ -300,6 +303,9 @@ module mod_cfgio_adapter
             case ('BC_FARFIELD')
                 print*, 'bc farfield is used at yn.'
                 bc_yn=BC_FARFIELD
+            case ("BC_NONREFLECTION")
+                bc_yn=BC_NONREFLECTION
+                print*, 'bc nonreflection is used at yn.'
             case default
                 print*, '[bc]y_inf keyword is wrong.'
                 print*, 'The keryword may be BC_FARFIELD.'

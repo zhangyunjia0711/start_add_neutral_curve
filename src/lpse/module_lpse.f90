@@ -35,6 +35,8 @@ module mod_lpse
 
     use global_parameters, only: istart, iend
     use global_parameters, only: isothermal
+    use global_parameters, only: bc_y0, bc_yn
+    use global_parameters, only: Coordinate_System
 
     ! use global_parameters, only: phi
     ! use global_parameters, only: wave_param
@@ -100,6 +102,9 @@ contains
         call lpse_eqn%set_parameter("sigma_control", sigma_control)
         call lpse_eqn%set_parameter("rd_factor", rd_factor)
         call lpse_eqn%set_parameter("Pr", Pr)
+        call lpse_eqn%set_parameter("Coordinate_System", Coordinate_System)
+        call lpse_eqn%set_parameter("bc_y0", bc_y0)
+        call lpse_eqn%set_parameter("bc_yn", bc_yn)
 
         call initialize_lpse()
 
@@ -208,6 +213,10 @@ contains
         call lst%set_parameter("lst_mode", LST_SPATIAL_MODE)
         call lst%initial(jn, Re=Re, Ma=Ma, Te=Te, yb_=yb, ye_=ye)
         call lst%set_parameter("Pr", Pr)
+        call lst%set_parameter("Coordinate_System", Coordinate_System)
+        call lst%set_parameter("bc_y0", bc_y0)
+        call lst%set_parameter("bc_yn", bc_yn)
+
         lst%isothermal = isothermal
 
         grid_profile = assemble_lst_grid_profile(iloc)

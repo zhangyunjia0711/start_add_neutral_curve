@@ -507,6 +507,7 @@ contains
                 d12y = -d12**2
 
                 hz = y
+                if(abs(hz)<= epsilon(1.0d0)) hz=epsilon(1.0d0)
                 hz_y = 1.0d0
                 d32 = hz_y/hz
                 d32y = -d32**2
@@ -1012,6 +1013,7 @@ contains
                 d12 = 0.0d0
 
                 hz = y
+                if(abs(hz)<= epsilon(1.0d0)) hz = epsilon(1.0d0)
                 hz_y = 1.0d0
                 d32 = hz_y/hz
             end select
@@ -1031,38 +1033,6 @@ contains
 
             select case (this%bc_y0)
             case (BC_WALL)
-
-                ! G0(2:5, :, 1)=0.0d0
-                ! A0(2:5, :, 1)=0.0d0
-                ! B0(2:5, :, 1)=0.0d0
-                ! C0(2:5, :, 1)=0.0d0
-                ! D0(2:5, :, 1)=0.0d0
-                ! V0xx(2:5, :, 1)=0.0d0
-                ! V0xy(2:5, :, 1)=0.0d0
-                ! V0xz(2:5, :, 1)=0.0d0
-                ! V0yy(2:5, :, 1)=0.0d0
-                ! V0yz(2:5, :, 1)=0.0d0
-                ! V0zz(2:5, :, 1)=0.0d0
-                ! modify_Px_A(:, 1)=0.0d0
-                ! modify_Px_D(:, 1)=0.d00
-                ! Aplus(:, :, 1)=0.0d0
-                ! Aplus(1, :, 1)=A0(1, :, 1)
-                !
-                ! G0(1, 1, 1)=1.0d0
-                ! A0(1, 1, 1)=u
-                ! B0(1, 1, 1)=v
-                ! B0(1, 3, 1)=rho
-                ! C0(1, 1, 1)=w
-                ! C0(1, 4, 1)=rho
-                ! D0(1, 1, 1)= divu
-                ! D0(1, 2, 1)= rhox
-                ! D0(1, 3, 1)= rhoy+rho*d132
-                ! D0(1, 4, 1)=0.0d0
-                !
-                ! D0(2, 2, 1)=1.0d0
-                ! D0(3, 3, 1)=1.0d0
-                ! D0(4, 4, 1)=1.0d0
-                ! D0(5, 5, 1)=1.0d0
                 V0xx(2:5, :, 1) = 0.0d0
                 V0xy(2:5, :, 1) = 0.0d0
                 V0xz(2:5, :, 1) = 0.0d0
@@ -1130,7 +1100,7 @@ contains
         real(REAL64) :: hx, hz, hx_y, hz_y, d12, d32, d132
 
         select case (this%bc_yn)
-        case (BC_FARFIELD)
+        case (BC_FARFIELD, BC_NONREFLECTION)
             V0xx(:, :, jn) = 0.0d0
             V0xy(:, :, jn) = 0.0d0
             V0xz(:, :, jn) = 0.0d0

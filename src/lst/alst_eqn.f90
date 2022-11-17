@@ -694,7 +694,7 @@ contains
       real(REAL64) :: hx, hz, hx_y, hz_y, d12, d32, d132
 
       select case (this%bc_yn)
-      case (BC_FARFIELD)
+      case (BC_FARFIELD, BC_NONREFLECTION)
          G0(:, :, jn) = 0.0d0
          A0(:, :, jn) = 0.0d0
          B0(:, :, jn) = 0.0d0
@@ -717,7 +717,7 @@ contains
          D0(3, 3, jn) = 1.0d0
          D0(4, 4, jn) = 1.0d0
          D0(5, 5, jn) = 1.0d0
-      case (BC_NONREFLECTION)
+      ! case (BC_NONREFLECTION)
          
       end select
       call this%solve_alst_matrix_j(jn, ome, alf, bat)

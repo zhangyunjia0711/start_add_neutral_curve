@@ -258,7 +258,7 @@ contains
          call this%solve_lpse_bc()
          call this%solve_lpse_phi()
          call this%solve_alpha_local_new(alf)
-         ! print*, alf, alf_old, (alf-alf_old)
+         print*, alf, alf_old, (alf-alf_old)
          delta = abs(alf - alf_old)
          alf_old = alf
          ! call VecWAXPY(dphi, (-1.0d0, 0.0d0), phi_old, phi_new, ierr)
@@ -304,6 +304,7 @@ contains
          end do
 
          hx(:) = 1.0d0 + this%grid%drx*this%grid%y(:)
+
          do l = 1, 5
             dphidx(l, :) = dphidi(l, :)*this%grid%xi_x(:) + dphidj(l, :)*this%grid%eta_x(:)
          end do
@@ -319,6 +320,8 @@ contains
 
          phi_ke = Trap(phi_ke_j, this%grid%y)
          dphi_ke = Trap(dphi_ke_j, this%grid%y)
+
+         ! print*, phi_ke, dphi_ke
 
          alf = alf - this%rd_factor*ZI*1.0d0/phi_ke*dphi_ke
          ! print*, phi_ke, dphi_ke
@@ -520,8 +523,10 @@ contains
                d12 = 0.0d0
 
                hz = y
+               if(abs(hz)<= epsilon(1.0d0)) hz = epsilon(1.0d0)
                hz_y = 1.0d0
                d32 = hz_y/hz
+               print*, 'use cylindrical cs.'
             end select
 
             d132 = d12 + d32
@@ -857,6 +862,7 @@ contains
             d12 = 0.0d0
 
             hz = y
+            if(abs(hz)<= epsilon(1.0d0)) hz = epsilon(1.0d0)
             hz_y = 1.0d0
             d32 = hz_y/hz
          end select
@@ -954,7 +960,6 @@ contains
                   B_0(3, 3, 1) = 1.0d0
                   B_0(4, 4, 1) = 1.0d0
                end if
-
             end select
          end associate
 
@@ -1004,7 +1009,10 @@ contains
             end if
             D_0(4, 4, jn) = 1.0d0
             D_0(5, 5, jn) = 1.0d0
+         case (BC_NONREFLECTION)
+
          end select
+
       end associate
 
    end subroutine solve_lpse_matrix_jn
@@ -1284,6 +1292,7 @@ contains
 
          tmp_mat_j0 = 0.0d0
          box1 = 0.0d0
+
          do lj = ljb, lje
             tmp_mat_j0(:, :, lj) = delta(lj)*((1.0d0 + this%lambda)*A_0(:, :, j) + D_0(:, :, j)) + &
                                    C1(lj, c_idx)*(B_0(:, :, j)) + &
