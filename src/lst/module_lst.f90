@@ -75,8 +75,11 @@ contains
             allocate (type_lst_eqn :: lst)
         end if
         call lst%set_parameter("lst_mode", lst_mode)
+        call lst%set_parameter("Coordinate_System", Coordinate_System)
         call lst%initial(jn, Re=Re, Ma=Ma, Te=Te, yb_=yb, ye_=ye)
         call lst%set_parameter("Pr", Pr)
+        call lst%set_parameter("bc_y0", bc_y0)
+        call lst%set_parameter("bc_yn", bc_yn)
         lst%isothermal = isothermal
 
         k = 0; ki = 0; pk = 0.0d0
@@ -184,9 +187,9 @@ contains
                     write (*, "(2X,'iloc=',I4, 6(2X, A, F17.5))") iloc, 'x=', xx(iloc, ye + 1), &
                         'drx=', drx(iloc), 'drz=', drz(iloc)
                     write (*, "(6(2X, A, F17.5))") 'Re=', Re, 'Ma=', Ma, 'Te=', Te
-                    write (*, "((2X, A, F17.5,'+', F17.5, 'i'))") 'omega=', ome
-                    write (*, "((2X, A, F17.5,'+', F17.5, 'i'))") 'alpha=', alf
-                    write (*, "((2X, A, F17.5,'+', F17.5, 'i'))") 'beta =', bat
+                    write (*, "((2X, A, F17.8,'+', F17.8, 'i'))") 'omega=', ome
+                    write (*, "((2X, A, F17.8,'+', F17.8, 'i'))") 'alpha=', alf
+                    write (*, "((2X, A, F17.8,'+', F17.8, 'i'))") 'beta =', bat
                 end if
 
                 if (k < 500) then

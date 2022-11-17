@@ -238,6 +238,7 @@ Contains
       integer :: i
 
       call PEPSetProblemType(this%solver, PEP_GENERAL, ierr)
+      ! call PEPSetType(this%solver, PEPLINEAR, ierr)
       call PEPSetOperators(this%solver, nmat, mat, ierr)
       call MatGetSize(mat(1), this%m, nrow, ierr)
       target_value = target_input
@@ -245,7 +246,7 @@ Contains
       ! print*, 'The pep solver is selected!'
       ! print*, 'The target_value is', target_value
       call PEPSetTarget(this%solver, target_value, ierr)
-      call PEPSetType(this%solver, PEPTOAR, ierr)
+      call PEPSetType(this%solver, PEPLINEAR, ierr)
       if (allocated(this%xr)) then
          ! print*, 'Setting initial guess space....'
          call VecDuplicate(this%xr(size(this%xr)), this%initialguess, ierr)
@@ -456,6 +457,8 @@ Contains
       integer :: nconv, i
       integer, parameter :: SPATIAL = 1, TEMPORAL = 2, TEMPORAL_PERIODIC_EPS = 3
 
+      PetscReal :: error
+
       nconv = size(this%kr)
 
       if (allocated(this%evIndex)) deallocate (this%evIndex)
@@ -466,6 +469,8 @@ Contains
       do i = 0, nconv - 1
          this%evIndex(i + 1) = i + 1
          call PEPGetEigenPair(this%solver, i, this%kr(i + 1), ki, PETSC_NULL_VEC, PETSC_NULL_VEC, ierr)
+         call PEPComputeError(this%solver, i, EPS_ERROR_ABSOLUTE, error, ierr)
+         print *, i, this%kr(i+1), 'The error is', error
          !  eigenvalue(i+1)=this%kr(i+1)
       end do
 
@@ -493,6 +498,7 @@ Contains
       PetscScalar :: ki
       integer :: nconv, i
       integer, parameter :: SPATIAL = 1, TEMPORAL = 2, TEMPORAL_PERIODIC_EPS = 3
+      PetscReal :: error
 
       nconv = size(this%kr)
 
@@ -503,6 +509,8 @@ Contains
       do i = 0, nconv - 1
          this%evIndex(i + 1) = i + 1
          call PEPGetEigenPair(this%solver, i, this%kr(i + 1), ki, PETSC_NULL_VEC, PETSC_NULL_VEC, ierr)
+         call PEPComputeError(this%solver, i, EPS_ERROR_ABSOLUTE, error, ierr)
+         print *, i, this%kr(i+1), 'The error is', error
          !  eigenvalue(i+1)=this%kr(i+1)
       end do
 
@@ -532,6 +540,7 @@ Contains
       PetscScalar :: ki
       integer :: nconv, i
       integer, parameter :: SPATIAL = 1, TEMPORAL = 2, TEMPORAL_PERIODIC_EPS = 3
+      PetscReal :: error
 
       nconv = size(this%kr)
 
@@ -541,6 +550,8 @@ Contains
       do i = 0, nconv - 1
          this%evIndex(i + 1) = i + 1
          call EPSGetEigenPair(this%solver, i, this%kr(i + 1), ki, PETSC_NULL_VEC, PETSC_NULL_VEC, ierr)
+         call EPSComputeError(this%solver, i, EPS_ERROR_ABSOLUTE, error, ierr)
+         print *, i, this%kr(i+1), 'The error is', error
       end do
 
       select case (this%lst_mode)
@@ -566,6 +577,7 @@ Contains
       PetscScalar :: ki
       integer :: nconv, i
       integer, parameter :: SPATIAL = 1, TEMPORAL = 2, TEMPORAL_PERIODIC_EPS = 3
+      PetscReal :: error
 
       nconv = size(this%kr)
 
@@ -576,6 +588,8 @@ Contains
       do i = 0, nconv - 1
          this%evIndex(i + 1) = i + 1
          call EPSGetEigenPair(this%solver, i, this%kr(i + 1), ki, PETSC_NULL_VEC, PETSC_NULL_VEC, ierr)
+         call EPSComputeError(this%solver, i, EPS_ERROR_ABSOLUTE, error, ierr)
+         print *, i, this%kr(i+1), 'The error is', error
       end do
 
       select case (this%lst_mode)
@@ -610,8 +624,8 @@ Contains
 
       do i = 0, nconv - 1
          call PEPGetEigenPair(this%solver, i, this%kr(i + 1), ki, this%xr(i + 1), PETSC_NULL_VEC, ierr)
-         call PEPComputeError(this%solver, i, PEP_ERROR_ABSOLUTE, error, ierr)
-         print *, 'The error is', error
+         ! call PEPComputeError(this%solver, i, PEP_ERROR_ABSOLUTE, error, ierr)
+         ! print *, i, this%kr(i+1),'The error is', error
       end do
 
       select case (this%lst_mode)
@@ -654,8 +668,8 @@ Contains
 
       do i = 0, nconv - 1
          call PEPGetEigenPair(this%solver, i, this%kr(i + 1), ki, this%xr(i + 1), PETSC_NULL_VEC, ierr)
-         call PEPComputeError(this%solver, i, PEP_ERROR_ABSOLUTE, error, ierr)
-         print *, 'The error is', error
+         ! call PEPComputeError(this%solver, i, PEP_ERROR_ABSOLUTE, error, ierr)
+         ! print *, i, this%kr(i+1), 'The error is', error
       end do
 
       select case (this%lst_mode)

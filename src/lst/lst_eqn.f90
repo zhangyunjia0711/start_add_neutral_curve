@@ -332,14 +332,17 @@ contains
                hz = 1.d0 + drz*y
                hz_y = drz
                d32 = hz_y/hz
+               ! print*, 'comoving cs is used.'
             case (CYLINDRICAL_CS)
                hx = 1.d0
                hx_y = 0.0d0
                d12 = 0.0d0
 
                hz = y
+               if(abs(hz)<= epsilon(1.0d0)) hz = epsilon(1.0d0)
                hz_y = 1.0d0
                d32 = hz_y/hz
+               ! print*, 'cylinderical cs is used.', hz, d32
             end select
 
             d132 = d12 + d32
@@ -404,15 +407,6 @@ contains
             A0(5, 3, j) = -2.0d0*rm*p12
             A0(5, 5, j) = rho*cp*u - pe*u*rho
 
-            ! block
-            !   if(j==149)then
-            !     print*, 'check bf op!'
-            !     print*, A0(3, 2, j)
-            !     read(*, *)
-            !   endif
-            !
-            ! endblock
-
             B0(1, 3, j) = rho
             B0(2, 2, j) = -d132*rm - rmy
             B0(2, 5, j) = -rmt*p12
@@ -472,7 +466,7 @@ contains
             V0zz(5, 5, j) = rk
 
             V0xy(2, 3, j) = D3*rm
-            V0xy(3, 2, j) = d3*rm
+            V0xy(3, 2, j) = D3*rm
 
             V0xz(2, 4, j) = D3*rm
             V0xz(4, 2, j) = D3*rm
@@ -531,6 +525,7 @@ contains
             d12 = 0.0d0
 
             hz = y
+            if(abs(hz)<=epsilon(1.0d0)) hz = epsilon(1.0d0)
             hz_y = 1.0d0
             d32 = hz_y/hz
          end select
@@ -566,6 +561,8 @@ contains
             else
                B0(5, 5, 1) = 1.0d0
             end if
+            print*, "wall bc is used."
+
          case (BC_POLE)
             G0(:, :, 1) = 0.0d0
             A0(:, :, 1) = 0.0d0
@@ -583,16 +580,16 @@ contains
                B0(1, 1, 1) = 1.0d0
                B0(2, 2, 1) = 1.0d0
                B0(5, 5, 1) = 1.0d0
-
                D0(3, 3, 1) = 1.0d0
                D0(4, 4, 1) = 1.0d0
+               print*, "2D-POLE bc is used."
             else
                D0(1, 1, 1) = 1.0d0
                D0(2, 2, 1) = 1.0d0
                D0(5, 5, 1) = 1.0d0
-
                B0(3, 3, 1) = 1.0d0
                B0(4, 4, 1) = 1.0d0
+               print*, "3D-POLE bc is used."
             end if
          end select
 
@@ -934,6 +931,7 @@ contains
             box1(:, lj, :) = transpose(tmp_mat_j0(:, :, lj))
          end do
          box2(:, :) = transpose(tmp_mat_j1(:, :, 0))
+   
       end associate
 
       call MatSetValuesBlockedStencil(this%L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
@@ -1030,6 +1028,26 @@ contains
          call Solver%GetEigenVal(ome)
          if (rank == 0) print('(A, 2F12.7)'), 'omega------------>', ome%re, ome%im
       case (LST_SPATIAL_MODE)
+         ! block
+         !    Vec:: eigfunc, tmp
+         !    PetscViewer :: viewer
+
+         !    Mat :: L_tmp
+         !    Real(8) :: norm
+
+         !    call VecCreate(PETSC_COMM_WORLD, eigfunc, ierr)
+         !    call PetscViewerBinaryOpen(PETSC_COMM_WORLD, "out/disturbance.petsc",  FILE_MODE_READ, viewer, ierr)
+         !    call VecLoad(eigfunc, viewer, ierr)
+         !    call PetscViewerDestroy(viewer, ierr)
+
+         !    call MatDuplicate(this%L_LST(1), MAT_COPY_VALUES, L_tmp, ierr)
+         !    call MatAXPY(L_tmp, alf, this%L_LST(2), SAME_NONZERO_PATTERN, ierr)
+         !    call MatAXPY(L_tmp, alf**2, this%L_LST(3), SAME_NONZERO_PATTERN, ierr)
+         !    call VecDuplicate(eigfunc, tmp, ierr)
+         !    call MatMult(L_tmp, eigfunc, tmp, ierr)
+         !    call VecNorm(tmp, NORM_2, norm, ierr)
+         !    print*, norm
+         ! endblock
          call Solver%Solve(3, this%L_LST, alf)
          call Solver%GetEigenVal(alf)
          if (rank == 0) print('(A, 2F12.7)'), 'alpha------------>', alf%re, alf%im

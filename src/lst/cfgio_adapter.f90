@@ -63,8 +63,10 @@ module mod_cfgio_adapter
         select case (trim(cs))
         case ('comving')
           Coordinate_System=COMOVING_CS
+          call PetscPrintf(PETSC_COMM_WORLD, "comoving cs is used.\n", ierr)
         case ('cylindrical')
           Coordinate_System=CYLINDRICAL_CS
+          call PetscPrintf(PETSC_COMM_WORLD, "cylinderical cs is used.\n", ierr)
         case default
           call PetscPrintf(PETSC_COMM_WORLD, "the coordinate system is wrong, and comoving cs is used!\n", ierr)
           Coordinate_System=COMOVING_CS
@@ -312,6 +314,9 @@ module mod_cfgio_adapter
                 else
                   isothermal = .TRUE.
                 endif
+            case ('BC_POLE')
+                print*, 'bc pole is used at y0.'
+                bc_y0 = BC_POLE
             case default
                 print*, '[bc]y_0 keyword is wrong.'
                 print*, 'The keryword may be BC_WALL.'
