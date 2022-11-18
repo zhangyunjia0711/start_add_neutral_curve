@@ -255,7 +255,7 @@ contains
 
             lnA(i) = lnA(i - 1) + 0.5d0*(alf(i) + alf(i - 1))/grid_profile%xi_x(yb + 1)
             if (rank == 0) then
-                print *, 'ix=', i, 'is done.'
+                print *, 'ix=', i, 'is done.', 'x=', xx(i, 1)
                 print *, 'alpha=', alf(i), "bat=", bat
             end if
         end do

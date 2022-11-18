@@ -980,6 +980,13 @@ contains
       real(REAL64) :: y, drx, drz
       real(REAL64) :: hx, hz, hx_y, hz_y, d12, d32, d132
 
+      real(REAL64) :: alfr(5), alfi(5), beta(5)
+      real(REAL64) :: vl(5, 5), vr(5, 5)
+      real(REAL64) :: lambda_(5), abs_lambda_(5), diag_plus(5, 5), matrix_plus(5, 5)
+      integer :: ipiv(5), info
+      real(REAL64) :: work(100)
+      integer :: l
+
       associate (grid_profile => this%grid, bf_profile => this%baseflow, ome => this%ome, bat => this%bat, &
          &       D_2 => this%D_2, B_0 => this%B_0, D_0 => this%D_0, V_0 => this%V_0, jn => this%jn)
          select case (this%bc_yn)
@@ -1007,7 +1014,27 @@ contains
             D_0(4, 4, jn) = 1.0d0
             D_0(5, 5, jn) = 1.0d0
          case (BC_NONREFLECTION)
-
+         !!! G^(-1)B = S^(-1)\Lambda S
+            call dggev('N', 'V', 5, real(B0(:, :, jn), kind=real64), 5, &
+            &          real(G0(:, :, jn), kind=real64), 5, &
+            &          alfr, alfi, beta, vl, 5, vr, 5, work, 100, info)
+   
+            lambda_ = (alfr)/beta
+            ! print*, lambda_
+            !!! G^(-1)B^(+) = S^(-1)\Lambda^(+) S
+            diag_plus= 0.0d0
+            do l = 1, 5
+               abs_lambda_(l) = real(sqrt(lambda_(l)**2), kind=REAL64)
+               diag_plus(l, l) = 0.5d0*(lambda_(l) + abs_lambda_(l))
+               ! diag_plus(l, l) = lambda_(l)
+            end do
+            vl = vr !! vl is inv(vr)
+            call dgetrf(5, 5, vl, 5, ipiv, info)
+            call dgetri(5, vl, 5, ipiv, work, 5, info)
+            !!!  B^(+) = G S^(-1)\Lambda^(+) S
+            B0(:, :, jn) = matmul(G0(:, :, jn), vr)
+            B0(:, :, jn) = matmul(B0(:, :, jn), diag_plus)
+            B0(:, :, jn) = matmul(B0(:, :, jn), vl) 
          end select
 
       end associate
