@@ -335,6 +335,7 @@ contains
 
     subroutine write_lpse_result()
 
+        use global_parameters, only: GAMMA, Ma, qq
         implicit none
         PetscViewer :: Viewer
         integer :: iounit, ios
@@ -343,6 +344,8 @@ contains
         integer :: i
         Vec :: phi_domain
         PetscScalar, pointer :: tmp_domain(:, :, :), tmp_local(:, :)
+        PetscScalar, allocatable :: A_domain(:, :, :)
+        real(REAL64) :: pe
 
         REAL(REAL64), parameter :: epsilon = 1.0d-8
     !! Write Number
@@ -371,9 +374,11 @@ contains
     !! Write phi
         call DMGetGlobalVector(meshDA, phi_domain, ierr)
         call DMDAVecGetArrayF90(meshDA, phi_domain, tmp_domain, ierr)
+        allocate(A_domain, source = tmp_domain)
         do i = istart, iend
             call DMDAVecGetArrayReadF90(DM_local, phi(i), tmp_local, ierr)
             tmp_domain(:, i - 1, :) = tmp_local(:, :) ! *exp(ZI*lnA(i))
+            A_domain(:, i - 1, :) = tmp_local(:, :) *exp(ZI*lnA(i))
             call DMDAVecRestoreArrayReadF90(DM_local, phi(i), tmp_local, ierr)
         end do
         call DMDAVecRestoreArrayF90(meshDA, phi_domain, tmp_domain, ierr)
@@ -387,6 +392,27 @@ contains
         call VecView(phi_domain, Viewer, ierr)
         call VecDestroy(phi_domain, ierr)
         call PetscViewerDestroy(Viewer, ierr)
+
+        !!! Write Amp
+        astring(4) = 'Amp.plt'
+        name = astring(1)//"_"//astring(2)//"_"//astring(3)//"_"//astring(4)
+        strings = "Writing the amplitude to "//name//'\n'
+        call PetscPrintf(PETSC_COMM_WORLD, char(strings), ierr)
+
+        open (newunit=iounit, file='./out/'//char(name), iostat=ios, action="write")
+        if (ios /= 0) stop "Error opening file "
+
+        write (iounit, '(A)') '#variables=x, A_p, A_u, A_T'
+        pe = GAMMA*Ma**2
+        do i = istart, iend
+            write (iounit, ('(4(2X, F20.8))')) &
+                xx(i, yb + 1), &
+                (abs((A_domain(0, i-1, 0)*qq(5, i, 1)+A_domain(4, i-1, 0)*qq(1, i, 1))*pe)), &
+                maxval(abs(A_domain(1, i-1, :))), maxval(abs(A_domain(4, i-1, :)))
+        end do
+        close (iounit)
+        call PetscPrintf(PETSC_COMM_WORLD, 'Write amplitude done.\n', ierr)
+
 
         call PetscPrintf(PETSC_COMM_WORLD, 'Write phi done.\n', ierr)
 
