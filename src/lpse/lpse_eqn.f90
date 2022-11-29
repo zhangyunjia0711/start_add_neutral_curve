@@ -70,6 +70,7 @@ module mod_lpse_eqn
    ! public :: initialize_lpse_eqn
    ! public :: finalize_lpse_eqn
    public :: type_lpse_eqn
+   public :: A0, V0xx
 
    type, extends(type_lpse_abstract) :: type_lpse_eqn
 
@@ -1085,11 +1086,11 @@ contains
 !          D_0(2, 1, j)=D_0(2, 1, j)+modify_Px_D(1, j)
 !          D_0(2, 5, j)=D_0(2, 5, j)+modify_Px_D(2, j)
             A_0(:, :, j) = A0(:, :, j) - ZI*bat*V0xz(:, :, j) - 2.0d0*ZI*alf*V0xx(:, :, j)
+            A0_rec(:, :, j)=A_0(:, :, j)
             ! A_0(:, :, j)=A0(:, :, j)-ZI*bat*V0xz(:, :, j)!-2.0d0*ZI*alf*V0xx(:, :, j)
             A_0(2, 1, j) = A_0(2, 1, j) + modify_Px_A(1, j)
             A_0(2, 5, j) = A_0(2, 5, j) + modify_Px_A(2, j)
 
-            A0_rec(:, :, j)=A_0(:, :, j)
 
             ! block
             !   integer :: l1, l2

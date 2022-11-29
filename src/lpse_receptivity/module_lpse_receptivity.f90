@@ -332,23 +332,32 @@ contains
          call DMDAVecGetArrayF90(DM_local, lpse_function(i), tmp1, ierr)
          array1(:, :) = tmp1(:, :)
          do j = 1, jn
-            v_tmp(:, j) = matmul(matA(:, :, j, i), tmp1(:, j-1))
+            v_tmp(:, j) = matmul(matA(:, :, j, i), array1(:, j))
             ! v_tmp(:, j) = matmul(matA(:, :, j, i), array1(:, j))
          end do
-         call DMDAVecRestoreArrayF90(DM_local, lpse_function(i), tmp1, ierr)
          grid_profile = assemble_lst_grid_profile(i)
          call DMDAVecGetArrayReadF90(DM_local, alpse_function(i), tmp2, ierr)
          array2(:, :) = tmp2(:, :)
          q(i) = inner_dot_y(tmp2, v_tmp, grid_profile%y)
          ! q(i) = inner_dot_y(array2, v_tmp, grid_profile%y)
          call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i), tmp2, ierr)
+         call DMDAVecRestoreArrayF90(DM_local, lpse_function(i), tmp1, ierr)
          ! print*, i, q(i)
+
+         ! block
+         !    if(i == 206) then
+         !       print *, i, maxval(abs(v_tmp(:, 2)))
+         !       print*, matA(2, 2, 1, i)
+         !       ! stop
+         !    endif
+         ! endblock
          if (abs(q(i)) > 1.0d2 .or. isnan(abs(q(i)))) then
             call VecNorm(alpse_function(i), NORM_INFINITY, norm_inf2, ierr)
             call VecNorm(lpse_function(i), NORM_INFINITY, norm_inf1, ierr)
             print *, i, q(i), maxval(abs(array1)), maxval(abs(array2)), maxval(abs(v_tmp))
 
             print *, i, norm_inf1, norm_inf2
+            print*, array1(:, 1)
             do j = 1, jn
                ! do l = 1, 5
                !    if((abs(array(l, j)))> 1.0d2) print*, j, l, abs(array(:, j))
@@ -538,8 +547,7 @@ contains
          call lpse_eqn%set_grid(grid_profile)
          call lpse_eqn%set_baseflow(baseflow_profile)
          call lpse_eqn%setup()
-         call lpse_eqn%get_matrix(lpse_alpha(i), "A_0", matA(:, :, :, i)) !! this matA contains xi_x xi_y
-      
+
          ! if(isnan(matA(2,2,2, i)%re)) then
          !    block
          !       integer :: l1, l2, j
@@ -563,7 +571,10 @@ contains
          lpse_alpha(i) = lpse_alpha(i - 1)
          call VecCopy(lpse_function(i - 1), lpse_function(i), ierr)
          call lpse_eqn%solve(lpse_alpha(i), lpse_function(i), lpse_function(i - 1), lpse_function(i - 2))
-
+         call lpse_eqn%get_matrix(lpse_alpha(i), "A_0", matA(:, :, :, i)) !! this matA contains xi_x xi_y
+         if(i==206)then
+            print*, i, matA(2, 2, 1, i), A0(2, 2, 1), V0xx(2, 2, 1)
+         endif
          lnA(i) = lnA(i - 1) + 0.5d0*(lpse_alpha(i) + lpse_alpha(i - 1))/grid_profile%xi_x(yb + 1)
          print *, 'ix=', i, 'is done.'
          print *, 'alpha=', lpse_alpha(i), "bat=", bat
