@@ -424,7 +424,19 @@ contains
                     call cfg%get("bc", "temperature_type", isothermal)
                   else
                     isothermal = .TRUE.
-                  endif  
+                  endif
+            case ("BC_POLE")
+                print*, 'bc pole is used at y0.'
+                bc_y0=BC_POLE
+            case ("BC_POROUS")
+                print*, 'bc porous is used at y0.'
+                bc_y0 = BC_POROUS
+                block
+                    use mod_porous_parameters
+                    call cfg%get("bc", "porous_porosity", porosity)
+                    call cfg%get("bc", "porous_radius", radius)
+                    call cfg%get("bc", "porous_depth", depth)
+                endblock
             case default
                 print *, '[bc]y_0 keyword is wrong.'
                 print *, 'The keryword may be BC_WALL.'

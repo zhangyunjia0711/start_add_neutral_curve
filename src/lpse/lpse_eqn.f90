@@ -378,7 +378,7 @@ contains
 
       select case (trim(mat_name))
       case ('A_0')
-         if(.not. this%solved_lpse_matrix) call this%solve_lpse_matrix(alf)
+         if (.not. this%solved_lpse_matrix) call this%solve_lpse_matrix(alf)
          ! matrix = this%D_2
          matrix = this%A0_rec
          ! if(isnan(matrix(2,2,2)%re)) then
@@ -522,7 +522,7 @@ contains
                d12 = 0.0d0
 
                hz = y
-               if(abs(hz)<= epsilon(1.0d0)) hz = epsilon(1.0d0)
+               if (abs(hz) <= epsilon(1.0d0)) hz = epsilon(1.0d0)
                hz_y = 1.0d0
                d32 = hz_y/hz
             end select
@@ -860,7 +860,7 @@ contains
             d12 = 0.0d0
 
             hz = y
-            if(abs(hz)<= epsilon(1.0d0)) hz = epsilon(1.0d0)
+            if (abs(hz) <= epsilon(1.0d0)) hz = epsilon(1.0d0)
             hz_y = 1.0d0
             d32 = hz_y/hz
          end select
@@ -958,7 +958,45 @@ contains
                   B_0(3, 3, 1) = 1.0d0
                   B_0(4, 4, 1) = 1.0d0
                end if
+            case (BC_POROUS)
+               block
+                  use Complex_Bessel
+                  use mod_porous_parameters
+
+                  complex(REAL64) :: porous_A, porous_B
+
+!!! d, r, d is parameters
+                  
+                  associate (pe=> 1.0d0/(this%GAMMA*this%MA**2), &
+                     &       Rho0 => this%baseflow%q0(1, 1), &
+                     &       T0=>this%baseflow%q0(5, 1))
+                     ! porous_A = get_porous_A
+
+                     call get_porous_AB(Rho0, T0, ome, porous_A, porous_B)
+
+                     ! print*, 'bc_porous bc is selected'
+                     V0xx(:, :, 1) = 0.0d0
+                     V0xy(:, :, 1) = 0.0d0
+                     V0xz(:, :, 1) = 0.0d0
+                     V0yy(:, :, 1) = 0.0d0
+                     V0yz(:, :, 1) = 0.0d0
+                     V0zz(:, :, 1) = 0.0d0
+
+                     D_2(2:5, :, 1) = 0.0d0
+                     B_0(2:5, :, 1) = 0.0d0
+                     V_0(2:5, :, 1) = 0.0d0
+                     D_0(2:5, :, 1) = 0.0d0
+                     D_0(2, 2, 1) = 1.0d0
+                     D_0(3, 1, 1) = -porous_A*T0*pe
+                     D_0(3, 3, 1) = 1.0d0
+                     D_0(3, 5, 1) = -porous_A*Rho0*pe
+                     D_0(4, 4, 1) = 1.0d0
+                     D_0(5, 1, 1) = -porous_B*T0*pe
+                     D_0(5, 5, 1) = 1.0d0-porous_B*Rho0*pe
+                  end associate
+               end block
             end select
+
          end associate
 
       end associate
@@ -1019,11 +1057,11 @@ contains
             call dggev('N', 'V', 5, real(B0(:, :, jn), kind=real64), 5, &
             &          real(G0(:, :, jn), kind=real64), 5, &
             &          alfr, alfi, beta, vl, 5, vr, 5, work, 100, info)
-   
+
             lambda_ = (alfr)/beta
             ! print*, lambda_
             !!! G^(-1)B^(+) = S^(-1)\Lambda^(+) S
-            diag_plus= 0.0d0
+            diag_plus = 0.0d0
             do l = 1, 5
                abs_lambda_(l) = real(sqrt(lambda_(l)**2), kind=REAL64)
                diag_plus(l, l) = 0.5d0*(lambda_(l) + abs_lambda_(l))
@@ -1035,7 +1073,7 @@ contains
             !!!  B^(+) = G S^(-1)\Lambda^(+) S
             B0(:, :, jn) = matmul(G0(:, :, jn), vr)
             B0(:, :, jn) = matmul(B0(:, :, jn), diag_plus)
-            B0(:, :, jn) = matmul(B0(:, :, jn), vl) 
+            B0(:, :, jn) = matmul(B0(:, :, jn), vl)
          end select
 
       end associate
@@ -1086,11 +1124,10 @@ contains
 !          D_0(2, 1, j)=D_0(2, 1, j)+modify_Px_D(1, j)
 !          D_0(2, 5, j)=D_0(2, 5, j)+modify_Px_D(2, j)
             A_0(:, :, j) = A0(:, :, j) - ZI*bat*V0xz(:, :, j) - 2.0d0*ZI*alf*V0xx(:, :, j)
-            A0_rec(:, :, j)=A_0(:, :, j)
+            A0_rec(:, :, j) = A_0(:, :, j)
             ! A_0(:, :, j)=A0(:, :, j)-ZI*bat*V0xz(:, :, j)!-2.0d0*ZI*alf*V0xx(:, :, j)
             A_0(2, 1, j) = A_0(2, 1, j) + modify_Px_A(1, j)
             A_0(2, 5, j) = A_0(2, 5, j) + modify_Px_A(2, j)
-
 
             ! block
             !   integer :: l1, l2

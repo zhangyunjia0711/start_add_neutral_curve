@@ -223,6 +223,7 @@ contains
                     d12 = 0.0d0
 
                     hz = y
+                    if (abs(hz) <= epsilon(1.0d0)) hz = epsilon(1.0d0)
                     hz_y = 1.0d0
                     d32 = hz_y/hz
                 end select

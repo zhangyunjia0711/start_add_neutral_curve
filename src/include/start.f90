@@ -10,6 +10,7 @@ enum, bind(C)
    enumerator :: BC_FARFIELD
    enumerator :: BC_POLE
    enumerator :: BC_NONREFLECTION
+   enumerator :: BC_POROUS
 end enum
 
 enum, bind(C)

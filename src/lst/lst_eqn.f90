@@ -591,6 +591,44 @@ contains
                B0(4, 4, 1) = 1.0d0
                print*, "3D-POLE bc is used."
             end if
+         
+         case (BC_POROUS)
+            block
+               use Complex_Bessel
+               use mod_porous_parameters
+
+               complex(REAL64) :: porous_A, porous_B
+
+!!! d, r, d is parameters
+               
+               associate (pe=> 1.0d0/(this%GAMMA*this%MA**2), &
+                  &       Rho0 => this%baseflow%q0(1, 1), &
+                  &       T0=>this%baseflow%q0(5, 1))
+                  ! porous_A = get_porous_A
+
+                  call get_porous_AB(Rho0, T0, ome, porous_A, porous_B)
+
+                  ! print*, 'bc_porous bc is selected'
+                  V0xx(:, :, 1) = 0.0d0
+                  V0xy(:, :, 1) = 0.0d0
+                  V0xz(:, :, 1) = 0.0d0
+                  V0yy(:, :, 1) = 0.0d0
+                  V0yz(:, :, 1) = 0.0d0
+                  V0zz(:, :, 1) = 0.0d0
+
+                  D_2(2:5, :, 1) = 0.0d0
+                  B_0(2:5, :, 1) = 0.0d0
+                  V_0(2:5, :, 1) = 0.0d0
+                  D_0(2:5, :, 1) = 0.0d0
+                  D_0(2, 2, 1) = 1.0d0
+                  D_0(3, 1, 1) = -porous_A*T0*pe
+                  D_0(3, 3, 1) = 1.0d0
+                  D_0(3, 5, 1) = -porous_A*Rho0*pe
+                  D_0(4, 4, 1) = 1.0d0
+                  D_0(5, 1, 1) = -porous_B*T0*pe
+                  D_0(5, 5, 1) = 1.0d0-porous_B*Rho0*pe
+               end associate
+            end block
          end select
 
          A0(:, :, 1) = A0(:, :, 1)/hx
