@@ -37,7 +37,7 @@ contains
         Lambda = sqrt(Z_1*Y_1)
 
         porous_A = porosity/Z_0*tanh(Lambda*depth)
-        porous_B = -porosity*(GAMMA-1)*Ma**2*T0*bessel_jn(2, kt)/bessel_jn(0, kt)
+        porous_B = 0.0d0!-porosity*(GAMMA-1)*Ma**2*T0*bessel_jn(2, kt)/bessel_jn(0, kt)
 
     end
 

@@ -124,7 +124,8 @@ module mod_lst_eqn
     !! +V_{0zz} \frac{\partial^2 \phi}{h_3^2 \partial z^2}
     !! \f
 
-   real(REAL64), allocatable, dimension(:, :, :) :: G0, A0, B0, C0, D0
+   real(REAL64), allocatable, dimension(:, :, :) :: G0, A0, B0, C0
+   complex(REAL64), allocatable, dimension(:, :, :) :: D0
    real(REAL64), allocatable, dimension(:, :, :) :: V0xx, V0xy, V0xz
    real(REAL64), allocatable, dimension(:, :, :) :: V0yy, V0yz, V0zz
 
@@ -607,7 +608,8 @@ contains
                   ! porous_A = get_porous_A
 
                   call get_porous_AB(Rho0, T0, ome, porous_A, porous_B)
-                  print*, porous_A, porous_B
+                  ! print*, porous_A, porous_B
+                  ! print*, rho0, T0, pe
                   ! print*, 'bc_porous bc is selected'
                   G0(:, :, 1) = 0.0d0
                   A0(:, :, 1) = 0.0d0
@@ -628,7 +630,7 @@ contains
                   C0(1, 1, 1) = w
                   C0(1, 4, 1) = rho
                   D0(1, 3, 1) = rhoy + rho*d132
-                  
+
                   D0(2, 2, 1) = 1.0d0
                   D0(3, 1, 1) = -porous_A*T0*pe
                   D0(3, 3, 1) = 1.0d0

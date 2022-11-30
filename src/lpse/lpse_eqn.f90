@@ -967,7 +967,8 @@ contains
                      ! porous_A = get_porous_A
 
                      call get_porous_AB(Rho0, T0, ome, porous_A, porous_B)
-
+                     ! print*, porous_A, porous_B
+                     ! print*, rho0, T0, pe
                      ! print*, 'bc_porous bc is selected'
                      V0xx(:, :, 1) = 0.0d0
                      V0xy(:, :, 1) = 0.0d0
@@ -980,11 +981,13 @@ contains
                      B_0(2:5, :, 1) = 0.0d0
                      V_0(2:5, :, 1) = 0.0d0
                      D_0(2:5, :, 1) = 0.0d0
-                     
+
                      D_0(2, 2, 1) = 1.0d0
+
                      D_0(3, 1, 1) = -porous_A*T0*pe
                      D_0(3, 3, 1) = 1.0d0
                      D_0(3, 5, 1) = -porous_A*Rho0*pe
+
                      D_0(4, 4, 1) = 1.0d0
                      D_0(5, 1, 1) = -porous_B*T0*pe
                      D_0(5, 5, 1) = 1.0d0 - porous_B*Rho0*pe
@@ -1293,6 +1296,7 @@ contains
 
             do lj = ljb, lje
                tmp_mat_j0(:, :, lj) = delta(lj)*((1.0d0 + this%lambda)*A_0(:, :, j) + D_0(:, :, j)) + &
+               ! tmp_mat_j0(:, :, lj) = delta(lj)*((1.0d0 - 1.0d0)*A_0(:, :, j) + D_0(:, :, j)) + &
                                       C1(lj, c_idx)*(B_0(:, :, j)) + &
                                       D1(lj, c_idx)*(V_0(:, :, j))
 
@@ -1354,24 +1358,25 @@ contains
 
          do lj = ljb, lje
             tmp_mat_j0(:, :, lj) = delta(lj)*((1.0d0 + this%lambda)*A_0(:, :, j) + D_0(:, :, j)) + &
+            ! tmp_mat_j0(:, :, lj) = delta(lj)*((1.0d0 -1.0d0)*A_0(:, :, j) + D_0(:, :, j)) + &
                                    C1(lj, c_idx)*(B_0(:, :, j)) + &
                                    D1(lj, c_idx)*(V_0(:, :, j))
             box1(:, lj, :) = transpose(tmp_mat_j0(:, :, lj))
          end do
          ! block
          !   integer :: l1, l2
-         !
+         
          !   if(j==jn)then
          !   print*, j
          !   print*, ljb, lje
-         !   do l1=1, 5
+         !   do l1=3, 3
          !     do l2=1, 5
          !       print*, l1, l2, tmp_mat_j0(l1, l2, 0)
          !     enddo
          !   enddo
          !   stop
          !   endif
-         !
+         
          ! endblock
 
          call MatSetValuesBlockedStencil(this%L_LPSE, 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
@@ -1380,7 +1385,7 @@ contains
          if (j == 1) then
             tmpj0 = 0.0d0
             select case (this%bc_y0)
-            case (BC_WALL)
+            case (BC_WALL, BC_POROUS)
                call VecSetValues(this%RHS, 4, arange(1, 4), tmpj0(1:4), INSERT_VALUES, ierr)
             case (BC_POLE)
                call VecSetValues(this%RHS, 5, arange(0, 4), tmpj0(1:5), INSERT_VALUES, ierr)
@@ -1408,14 +1413,19 @@ contains
       ! block
       !    Vec :: tmp
       !    REAL(8) :: norm
-      !    call VecDuplicate(this%phi, tmp, ierr)
-      !    call MatMult(this%L_LPSE, this%phi, tmp, ierr)
-      !    call VecView(this%RHS, PETSC_VIEWER_STDOUT_SELF, ierr)
-      !    call VecAXPY(tmp, (-1.0d0, 0.0d0), this%RHS, ierr)
-      !    ! call VecView(tmp, PETSC_VIEWER_STDOUT_SELF, ierr)
-      !    call VecNorm(tmp, NORM_2, norm, ierr)
-      !    print*, norm
-      !    stop
+
+      !    if (j == this%jn) then
+      !       call VecDuplicate(this%phi, tmp, ierr)
+      !       call MatMult(this%L_LPSE, this%phi, tmp, ierr)
+      !       ! call VecView(this%phi, PETSC_VIEWER_STDOUT_SELF, ierr)
+      !       ! call VecView(this%RHS, PETSC_VIEWER_STDOUT_SELF, ierr)
+      !       ! call VecAXPY(tmp, (-1.0d0, 0.0d0), this%RHS, ierr)
+      !       ! call VecSetValue(tmp , 2, (0.0d0, 0.0d0), INSERT_VALUES, ierr)
+      !       ! call VecView(tmp, PETSC_VIEWER_STDOUT_SELF, ierr)
+      !       call VecNorm(tmp, NORM_2, norm, ierr)
+      !       print*, norm
+      !       stop
+      !    endif
       ! endblock
 
    end subroutine solve_lpse_bc_j
