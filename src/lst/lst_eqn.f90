@@ -607,26 +607,35 @@ contains
                   ! porous_A = get_porous_A
 
                   call get_porous_AB(Rho0, T0, ome, porous_A, porous_B)
-
+                  print*, porous_A, porous_B
                   ! print*, 'bc_porous bc is selected'
+                  G0(:, :, 1) = 0.0d0
+                  A0(:, :, 1) = 0.0d0
+                  B0(:, :, 1) = 0.0d0
+                  C0(:, :, 1) = 0.0d0
+                  D0(:, :, 1) = 0.0d0
                   V0xx(:, :, 1) = 0.0d0
                   V0xy(:, :, 1) = 0.0d0
                   V0xz(:, :, 1) = 0.0d0
                   V0yy(:, :, 1) = 0.0d0
                   V0yz(:, :, 1) = 0.0d0
                   V0zz(:, :, 1) = 0.0d0
-
-                  D_2(2:5, :, 1) = 0.0d0
-                  B_0(2:5, :, 1) = 0.0d0
-                  V_0(2:5, :, 1) = 0.0d0
-                  D_0(2:5, :, 1) = 0.0d0
-                  D_0(2, 2, 1) = 1.0d0
-                  D_0(3, 1, 1) = -porous_A*T0*pe
-                  D_0(3, 3, 1) = 1.0d0
-                  D_0(3, 5, 1) = -porous_A*Rho0*pe
-                  D_0(4, 4, 1) = 1.0d0
-                  D_0(5, 1, 1) = -porous_B*T0*pe
-                  D_0(5, 5, 1) = 1.0d0-porous_B*Rho0*pe
+      
+                  G0(1, 1, 1) = 1.0d0
+                  A0(1, 1, 1) = u
+                  A0(1, 2, 1) = rho
+                  B0(1, 3, 1) = rho
+                  C0(1, 1, 1) = w
+                  C0(1, 4, 1) = rho
+                  D0(1, 3, 1) = rhoy + rho*d132
+                  
+                  D0(2, 2, 1) = 1.0d0
+                  D0(3, 1, 1) = -porous_A*T0*pe
+                  D0(3, 3, 1) = 1.0d0
+                  D0(3, 5, 1) = -porous_A*Rho0*pe
+                  D0(4, 4, 1) = 1.0d0
+                  D0(5, 1, 1) = -porous_B*T0*pe
+                  D0(5, 5, 1) = 1.0d0-porous_B*Rho0*pe
                end associate
             end block
          end select
