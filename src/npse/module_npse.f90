@@ -468,7 +468,7 @@ contains
             do n = -n_global, n_global
                 do m = 0, m_global
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
-                        alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
+                        alf(i, m, n) = real(alf_tmp)*m !alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
                         alf(i, m, n) = alf_tmp*m
                     end if
@@ -480,7 +480,7 @@ contains
             do n = -n_global, n_global
                 do m = 0, m_global
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
-                        alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*n
+                        alf(i, m, n) = real(alf_tmp)*n !alf(i, m, n) !+ ZI*aimag(alf_tmp)*n
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
                         alf(i, m, n) = alf_tmp*n
                     end if

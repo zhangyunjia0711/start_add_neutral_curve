@@ -464,27 +464,27 @@ contains
         type(type_lst_grid_profile), intent(in) :: grid
         real(REAL64):: alf_tmp
         integer :: m, n
-
-        if (inlet_dis(1)%m /= 0) then
-            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%re/inlet_dis(1)%m
+!! 对tpse需要进行修改 修改更新波数的方法和方式以及判断标准
+        if (abs(inlet_dis(1)%m*theta1%re+inlet_dis(1)%n*theta2%re) <= epsilon(1.0d0)) then  !! 非横流
+            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%re/(inlet_dis(1)%m*theta1%re+inlet_dis(1)%n*theta2%re)
             do n = -n_global, n_global
                 do m = 0, m_global
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
-                        alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
+                        alf(i, m, n) = real(alf_tmp)*(m*theta1%re+n*theta2%re) !+ ZI*aimag(alf_tmp)*m
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
-                        alf(i, m, n) = alf_tmp*m
+                        alf(i, m, n) = alf_tmp*(m*theta1%re+n*theta2%re)
                     end if
                     if (i > istart) lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid%xi_x(yb + 1)
                 end do
             end do
-        else
-            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%re/inlet_dis(1)%n
+        else  !! 横流
+            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%re/(inlet_dis(1)%m*theta1%im+inlet_dis(1)%n*theta2%im)
             do n = -n_global, n_global
                 do m = 0, m_global
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
-                        alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*n
+                        alf(i, m, n) = real(alf_tmp)*(inlet_dis(1)%m*theta1%im+inlet_dis(1)%n*theta2%im) !+ ZI*aimag(alf_tmp)*n
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
-                        alf(i, m, n) = alf_tmp*n
+                        alf(i, m, n) = alf_tmp*(inlet_dis(1)%m*theta1%im+inlet_dis(1)%n*theta2%im)
                     end if
                     if (i > istart) lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid%xi_x(yb + 1)
                 end do
