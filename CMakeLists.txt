@@ -44,7 +44,7 @@ if ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "GNU")
   add_link_options(-fopenmp -llapack)
 elseif ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "Intel")
   add_compile_options(-cpp -DCOMPLEX_PETSC -DMKL -traceback -CB -qmkl)
-  add_link_options(-qmkl -llapack)
+  add_link_options(-qmkl)
 endif()
 
 #  tells CMake to build the application ex1 from the source file ex1.c
