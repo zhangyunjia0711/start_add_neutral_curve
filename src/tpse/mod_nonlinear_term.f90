@@ -182,6 +182,18 @@ module mod_nonlinear_term
     end type type_point_physics
 
     type(type_point_physics) :: point_physics
+
+    complex(REAL64), allocatable :: dphidi (:, :, :, :)
+    complex(REAL64), allocatable :: dphidj (:, :, :, :)
+    complex(REAL64), allocatable :: dphidij(:, :, :, :)
+    complex(REAL64), allocatable :: dphidjj(:, :, :, :)
+    complex(REAL64), allocatable :: dphidx (:, :, :, :)
+    complex(REAL64), allocatable :: dphidy (:, :, :, :)
+    complex(REAL64), allocatable :: dphidxx(:, :, :, :)
+    complex(REAL64), allocatable :: dphidxy(:, :, :, :)
+    complex(REAL64), allocatable :: dphidyy(:, :, :, :)
+
+
 contains
 
     subroutine initial_nonliner_term(this, jn_, Re, Ma, Te, yb_, ye_)
@@ -307,6 +319,16 @@ contains
 
         ! call InitialSpectralScheme(this%handle, 4*this%m, 4*this%n)
         call this%handle_new%initialize(this%msp, this%nsp)
+
+        allocate(dphidi(5, this%jn, 0:this%m, -this%n:this%n))
+        allocate(dphidj(5, this%jn, 0:this%m, -this%n:this%n))
+        allocate(dphidij(5, this%jn, 0:this%m, -this%n:this%n))
+        allocate(dphidjj(5, this%jn, 0:this%m, -this%n:this%n))
+        allocate(dphidx(5, this%jn, 0:this%m, -this%n:this%n))
+        allocate(dphidy(5, this%jn, 0:this%m, -this%n:this%n))
+        allocate(dphidxx(5, this%jn, 0:this%m, -this%n:this%n))
+        allocate(dphidxy(5, this%jn, 0:this%m, -this%n:this%n))
+        allocate(dphidyy(5, this%jn, 0:this%m, -this%n:this%n))
 
     end subroutine initial_nonliner_term
 
@@ -839,15 +861,6 @@ contains
 
             block
                 use mod_dx
-                complex(REAL64) :: dphidi(5, this%jn, 0:this%m, -this%n:this%n)
-                complex(REAL64) :: dphidj(5, this%jn, 0:this%m, -this%n:this%n)
-                complex(REAL64) :: dphidij(5, this%jn, 0:this%m, -this%n:this%n)
-                complex(REAL64) :: dphidjj(5, this%jn, 0:this%m, -this%n:this%n)
-                complex(REAL64) :: dphidx(5, this%jn, 0:this%m, -this%n:this%n)
-                complex(REAL64) :: dphidy(5, this%jn, 0:this%m, -this%n:this%n)
-                complex(REAL64) :: dphidxx(5, this%jn, 0:this%m, -this%n:this%n)
-                complex(REAL64) :: dphidxy(5, this%jn, 0:this%m, -this%n:this%n)
-                complex(REAL64) :: dphidyy(5, this%jn, 0:this%m, -this%n:this%n)
 
             !!D phi /D xi
                 do concurrent(l=1:5, m=0:this%m, n=-this%n:this%n, j=1:this%jn)
@@ -1091,6 +1104,16 @@ contains
         this%ome2 = 0
         this%bat2 = 0
         this%jn = 0
+
+        deallocate(dphidi )
+        deallocate(dphidj )
+        deallocate(dphidij)
+        deallocate(dphidjj)
+        deallocate(dphidx )
+        deallocate(dphidy )
+        deallocate(dphidxx)
+        deallocate(dphidxy)
+        deallocate(dphidyy)
 
     end subroutine finalize_nonliner_term
 
