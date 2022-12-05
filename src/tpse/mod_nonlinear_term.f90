@@ -804,8 +804,8 @@ contains
             ii = nma - i
             do j = 1, this%n
                 jj = nna - j
-                bb(i, jj) = aa(i, j) !(-m, n)
-                bb(i, j) = conjg(aa(i, j)) !(m, -n)
+                bb(ii, j) = aa(i, j) !(-m, n)
+                bb(ii, jj) = aa(i, -j) !(m, -n)
             end do
         end do
 
@@ -814,8 +814,8 @@ contains
             ii = nma - i
             do j = 1, this%n
                 jj = nna - j
-                bb(ii, jj) = aa(i, -j)  !(-m, -n)
-                bb(i, j) = conjg(aa(i, -j)) !(m, n)
+                bb(i, jj) = conjg(bb(ii, j))  !(-m, -n)
+                bb(i, j) = conjg(bb(ii, jj)) !(m, n)
             end do
         end do
 
