@@ -114,7 +114,7 @@ contains
 
         allocate (phi(istart - 1:iend, 0:m_global, -n_global:n_global))
         allocate (phi_old(0:m_global, -n_global:n_global))
-        allocate (alf(istart:iend, 0:m_global, -n_global:n_global))
+        allocate (alf(istart:iend, 0:m_global, -n_global:n_global)); alf = 0.0d0
         allocate (VecDistance(0:m_global, -n_global:n_global))
         allocate (nonlinear_term(5, jn, 0:m_global, -n_global:n_global)); nonlinear_term = 0.0d0
         allocate (nonlinear_term_old(5, jn, 0:m_global, -n_global:n_global)); nonlinear_term_old = 0.0d0
@@ -460,15 +460,15 @@ contains
         implicit none
         integer, intent(in) :: i
         type(type_lst_grid_profile), intent(in) :: grid
-        real(REAL64):: alf_tmp
+        complex(REAL64):: alf_tmp
         integer :: m, n
 
         if (inlet_dis(1)%m /= 0) then
-            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%re/inlet_dis(1)%m
+            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)/inlet_dis(1)%m
             do n = -n_global, n_global
                 do m = 0, m_global
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
-                        alf(i, m, n) = real(alf_tmp)*m !alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
+                        alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
                         alf(i, m, n) = alf_tmp*m
                     end if
@@ -476,11 +476,11 @@ contains
                 end do
             end do
         else
-            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%re/inlet_dis(1)%n
+            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)/inlet_dis(1)%n
             do n = -n_global, n_global
                 do m = 0, m_global
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
-                        alf(i, m, n) = real(alf_tmp)*n !alf(i, m, n) !+ ZI*aimag(alf_tmp)*n
+                        alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
                         alf(i, m, n) = alf_tmp*n
                     end if
