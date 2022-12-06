@@ -101,14 +101,14 @@ module mod_nonlinear_term
     type, extends(type_solver_abstract) :: type_nonlinear_term
 
         integer :: m
-        integer :: n0
-        integer :: msp, nsp0
+        integer :: n0, n1, n2
+        integer :: msp, nsp0, nsp1, nsp2
         integer :: jn
 
         DM :: dm
 
-        real(REAL64) :: ome1, ome2
-        real(REAL64) :: bat1, bat2
+        real(REAL64) :: ome1, ome2, ome3, ome4
+        real(REAL64) :: bat1, bat2, bat3, bat4
         complex(REAL64), allocatable :: alf(:, :)
         complex(REAL64), allocatable :: exp_integral_alf(:, :)
 
@@ -832,7 +832,7 @@ contains
         implicit none
         class(type_nonlinear_term), intent(inout) :: this
 
-        integer :: m, n0, j, l
+        integer :: m, n0, n1, n2, j, l
 
         associate (profile => this%dis_profile_spectrum, exp_ialf => this%exp_integral_alf, &
                    phi0 => this%phi0_array, phi1 => this%phi1_array, phi2 => this%phi2_array, &
@@ -843,7 +843,9 @@ contains
                    xi_yy => this%grid%xi_yy, eta_yy => this%grid%eta_yy, &
                    alf => this%alf, &
                    ome1 => this%ome1, bat1 => this%bat1, &
-                   ome2 => this%ome2, bat2 => this%bat2)
+                   ome2 => this%ome2, bat2 => this%bat2, &
+                   ome3 => this%ome3, bat3 => this%bat3, &
+                   ome4 => this%ome4, bat4 => this%bat4)
             !   do n = -this%n, this%n
             !       do m = 0, this%m
             !           do j = 1, this%jn
@@ -938,28 +940,29 @@ contains
                 end do
 
                 !! dphi'dt_spt, dphi'dz_spt
-                do concurrent(j=1:this%jn, m=0:this%m, n0=-this%n0:this%n0)
-                    profile(j)%rho_t(m, n0) = -ZI*(ome1*real(m, REAL64)+ome2*real(n0, REAL64))*profile(j)%rho_a0(m, n0)
-                    profile(j)%u_t(m, n0) = -ZI*(ome1*real(m, REAL64)+ome2*real(n0, REAL64))*profile(j)%u_a0(m, n0)
-                    profile(j)%v_t(m, n0) = -ZI*(ome1*real(m, REAL64)+ome2*real(n0, REAL64))*profile(j)%v_a0(m, n0)
-                    profile(j)%w_t(m, n0) = -ZI*(ome1*real(m, REAL64)+ome2*real(n0, REAL64))*profile(j)%w_a0(m, n0)
-                    profile(j)%T_t(m, n0) = -ZI*(ome1*real(m, REAL64)+ome2*real(n0, REAL64))*profile(j)%T_a0(m, n0)
-                    profile(j)%rho_z(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%rho_a0(m, n0)
-                    profile(j)%u_z(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%u_a0(m, n0)
-                    profile(j)%v_z(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%v_a0(m, n0)
-                    profile(j)%w_z(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%w_a0(m, n0)
-                    profile(j)%T_z(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%T_a0(m, n0)
+                do concurrent(j=1:this%jn, m=0:this%m, n0=-this%n0:this%n0, n1=-this%n1:this%n1, n2=-this%n2:this%n2)
+                    profile(j)%rho_t(m, n0) = -ZI*(ome1*m + ome2*n0+ ome3*n1+ ome4*n2)*profile(j)%rho_a0(m, n0)
+                    profile(j)%u_t(m, n0) = -ZI*(ome1*m + ome2*n0+ ome3*n1+ ome4*n2)*profile(j)%u_a0(m, n0)
+                    profile(j)%v_t(m, n0) = -ZI*(ome1*m + ome2*n0+ ome3*n1+ ome4*n2)*profile(j)%v_a0(m, n0)
+                    profile(j)%w_t(m, n0) = -ZI*(ome1*m + ome2*n0+ ome3*n1+ ome4*n2)*profile(j)%w_a0(m, n0)
+                    profile(j)%T_t(m, n0) = -ZI*(ome1*m + ome2*n0+ ome3*n1+ ome4*n2)*profile(j)%T_a0(m, n0)
 
-                    profile(j)%u_zz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%u_z(m, n0)
-                    profile(j)%v_zz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%v_z(m, n0)
-                    profile(j)%w_zz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%w_z(m, n0)
-                    profile(j)%T_zz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%T_z(m, n0)
+                    profile(j)%rho_z(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%rho_a0(m, n0)
+                    profile(j)%u_z(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%u_a0(m, n0)
+                    profile(j)%v_z(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%v_a0(m, n0)
+                    profile(j)%w_z(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%w_a0(m, n0)
+                    profile(j)%T_z(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%T_a0(m, n0)
+
+                    profile(j)%u_zz(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%u_z(m, n0)
+                    profile(j)%v_zz(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%v_z(m, n0)
+                    profile(j)%w_zz(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%w_z(m, n0)
+                    profile(j)%T_zz(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%T_z(m, n0)
                     !! dphi'dxz
-                    profile(j)%u_xz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%u_x(m, n0)
-                    profile(j)%w_xz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%w_x(m, n0)
+                    profile(j)%u_xz(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%u_x(m, n0)
+                    profile(j)%w_xz(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%w_x(m, n0)
                 end do
 
-                do concurrent(j=1:this%jn, m=0:this%m, n0=-this%n0:this%n0)
+                do concurrent(j=1:this%jn, m=0:this%m, n0=-this%n0:this%n0, n1=-this%n1:this%n1, n2=-this%n2:this%n2)
                    !! dphi'dy_spt, d^2phi'dyy_spt
                     profile(j)%rho_y(m, n0) = dphidy(1, j, m, n0)*exp_ialf(m, n0)
                     profile(j)%u_y(m, n0) = dphidy(2, j, m, n0)*exp_ialf(m, n0)
@@ -973,8 +976,8 @@ contains
                     !! dphi'dxy_spt, dphi'dyz_spt
                     profile(j)%u_xy(m, n0) = dphidxy(2, j, m, n0)*exp_ialf(m, n0) + ZI*alf(m, n0)*profile(j)%u_y(m, n0)
                     profile(j)%v_xy(m, n0) = dphidxy(3, j, m, n0)*exp_ialf(m, n0) + ZI*alf(m, n0)*profile(j)%v_y(m, n0)
-                    profile(j)%v_yz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%v_y(m, n0)
-                    profile(j)%w_yz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%w_y(m, n0)
+                    profile(j)%v_yz(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%v_y(m, n0)
+                    profile(j)%w_yz(m, n0) = ZI*(bat1*m+bat2*n0+bat3*n1+bat4*n2)*profile(j)%w_y(m, n0)
                 end do
                 ! block
                 !     print *, 'check dis profile'
@@ -1103,6 +1106,10 @@ contains
         this%bat1 = 0
         this%ome2 = 0
         this%bat2 = 0
+        this%ome3 = 0
+        this%bat3 = 0
+        this%ome4 = 0
+        this%bat4 = 0
         this%jn = 0
 
         deallocate(dphidi )
@@ -1142,7 +1149,15 @@ contains
         case ("ome2")
             this%ome2 = value
         case ("bat2")
-            this%bat2 = value            
+            this%bat2 = value      
+        case ("ome3")
+            this%ome3 = value
+        case ("bat3")
+            this%bat3 = value
+        case ("ome4")
+            this%ome4 = value
+        case ("bat4")
+            this%bat4 = value
         case default
             call error_stop("the value is wrong in set_parameters in nonlinear term.")
         end select
@@ -1175,6 +1190,14 @@ contains
             this%ome2 = value
         case ("bat2")
             this%bat2 = value
+        case ("ome3")
+            this%ome3 = value
+        case ("bat3")
+            this%bat3 = value
+        case ("ome4")
+            this%ome4 = value
+        case ("bat4")
+            this%bat4 = value
         case default
             call error_stop("the value is wrong in set_parameters in nonlinear term.")
         end select
@@ -1204,6 +1227,20 @@ contains
                 this%nsp0 = 1
             else
                 this%nsp0 = 4*(this%n0 + 1)
+            end if
+        case ("n1")
+            this%n1 = value
+            if (this%n1 == 0) then
+                this%nsp1 = 1
+            else
+                this%nsp1 = 4*(this%n1 + 1)
+            end if
+        case ("n2")
+            this%n2 = value
+            if (this%n2 == 0) then
+                this%nsp2 = 1
+            else
+                this%nsp2 = 4*(this%n2 + 1)
             end if
         case ("jn")
             this%jn = value

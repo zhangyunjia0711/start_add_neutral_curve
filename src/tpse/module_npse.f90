@@ -123,12 +123,16 @@ contains
 
       call nonlinear_solver%set_parameter("m", m_global)
       call nonlinear_solver%set_parameter("n0", n0_global)
-      ! call nonlinear_solver%set_parameter("n1", n1_global)
-      ! call nonlinear_solver%set_parameter("n2", n2_global)
+      call nonlinear_solver%set_parameter("n1", n1_global)
+      call nonlinear_solver%set_parameter("n2", n2_global)
       call nonlinear_solver%set_parameter("ome1", theta(1)%re)
       call nonlinear_solver%set_parameter("ome2", theta(2)%re)
+      call nonlinear_solver%set_parameter("ome3", theta(3)%re)
+      call nonlinear_solver%set_parameter("ome4", theta(4)%re)
       call nonlinear_solver%set_parameter("bat1", theta(1)%im)
       call nonlinear_solver%set_parameter("bat2", theta(2)%im)
+      call nonlinear_solver%set_parameter("bat3", theta(3)%im)
+      call nonlinear_solver%set_parameter("bat4", theta(4)%im)
       call nonlinear_solver%initial(jn, Re, Ma, Te)
 
       allocate (solve_alpha(0:m_global, -n0_global:n0_global, -n1_global:n1_global, -n2_global:n2_global))
