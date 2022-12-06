@@ -114,7 +114,7 @@ contains
 
         allocate (phi(istart - 1:iend, 0:m_global, -n_global:n_global))
         allocate (phi_old(0:m_global, -n_global:n_global))
-        allocate (alf(istart:iend, 0:m_global, -n_global:n_global))
+        allocate (alf(istart:iend, 0:m_global, -n_global:n_global)); alf= 0.0d0
         allocate (VecDistance(0:m_global, -n_global:n_global))
         allocate (nonlinear_term(5, jn, 0:m_global, -n_global:n_global)); nonlinear_term = 0.0d0
         allocate (nonlinear_term_old(5, jn, 0:m_global, -n_global:n_global)); nonlinear_term_old = 0.0d0

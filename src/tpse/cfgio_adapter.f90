@@ -221,12 +221,19 @@ contains
         character(len=256) :: cdump
         type(string_type) :: string_char
         character(len=256) :: format0
+        real(REAL64) :: ome0, bat0
         integer :: i
 
         call cfg%get('tpse', 'm_global', m_global); m_global=m_global-1
         call cfg%get('tpse', 'n_global', n_global); n_global=n_global-1
-        call cfg%get('tpse', 'theta1', theta1)
-        call cfg%get('tpse', 'theta2', theta2)
+
+        if(cfg%has_key('tpse', 'omega0') .and. cfg%has_key('tpse', 'beta0')) then
+            call cfg%get('tpse', 'omega0', ome0); theta1= cmplx(ome0, 0.0d0, kind=REAL64) 
+            call cfg%get('tpse', 'beta0', bat0); theta2 = cmplx(0.0d0, bat0, kind=REAL64)
+        elseif(cfg%has_key('tpse', 'theta1') .and. cfg%has_key('tpse', 'theta2')) then
+            call cfg%get('tpse', 'theta1', theta1)
+            call cfg%get('tpse', 'theta2', theta2)
+        endif
 
         format0 = '(A, I4, 1X, A, I4, 1X, A, 2F10.5)'
         print trim(format0), 'The computational range is', 0, 'to', m_global, 'with theta1=', theta1

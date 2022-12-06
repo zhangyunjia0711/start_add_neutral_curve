@@ -11,7 +11,7 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
-program NPSE_PROG
+program tPSE_PROG
 
    use petsc
    use slepcsys
@@ -56,4 +56,4 @@ program NPSE_PROG
 
    CHKERRA(ierr)
 
-end program NPSE_PROG
+end program tPSE_PROG
