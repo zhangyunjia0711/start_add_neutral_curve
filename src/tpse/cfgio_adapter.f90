@@ -228,7 +228,7 @@ contains
         call cfg%get('tpse', 'theta1', theta1)
         call cfg%get('tpse', 'theta2', theta2)
 
-        format0 = '(A, I4, 1X, A, I4, 1X, A, F10.5)'
+        format0 = '(A, I4, 1X, A, I4, 1X, A, 2F10.5)'
         print trim(format0), 'The computational range is', 0, 'to', m_global, 'with theta1=', theta1
         print trim(format0), 'The computational range is', -n_global, 'to', n_global, 'with theta2=', theta2
 
@@ -273,7 +273,7 @@ contains
                     cdump = 'none'
                 end if
             end if
-            print '(3I4, 4(F10.4), A10)', ndis, inlet_dis(i)%m, inlet_dis(i)%n, &
+            print '(3I4, 4(F10.4), A10)', i, inlet_dis(i)%m, inlet_dis(i)%n, &
                 inlet_dis(i)%alf%re, inlet_dis(i)%alf%im, &
                 amp, angle, trim(cdump)
         end do

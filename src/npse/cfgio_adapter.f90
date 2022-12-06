@@ -273,7 +273,7 @@ contains
                     cdump = 'none'
                 end if
             end if
-            print '(3I4, 4(F10.4), A10)', ndis, inlet_dis(i)%m, inlet_dis(i)%n, &
+            print '(3I4, 4(F10.4), A10)', i, inlet_dis(i)%m, inlet_dis(i)%n, &
                 inlet_dis(i)%alf%re, inlet_dis(i)%alf%im, &
                 amp, angle, trim(cdump)
         end do
