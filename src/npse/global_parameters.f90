@@ -45,7 +45,7 @@ module global_parameters
    type(type_inlet_dis), allocatable :: inlet_dis(:)
    integer :: ndis
    real(REAL64) :: alpha(2), beta(2), omega(2)
-   real(REAL64) :: ome0, bat0
+   complex(REAL64) :: theta1, theta2
    integer :: m_global, n_global
 
    integer :: bc_y0, bc_yn

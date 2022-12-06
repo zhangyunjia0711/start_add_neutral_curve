@@ -107,8 +107,8 @@ module mod_nonlinear_term
 
         DM :: dm
 
-        real(REAL64) :: ome0
-        real(REAL64) :: bat0
+        real(REAL64) :: ome1, ome2
+        real(REAL64) :: bat1, bat2
         complex(REAL64), allocatable :: alf(:, :)
         complex(REAL64), allocatable :: exp_integral_alf(:, :)
 
@@ -804,8 +804,8 @@ contains
             ii = nma - i
             do j = 1, this%n
                 jj = nna - j
-                bb(ii, j) = aa(i, j)   !(-m, n)  (-m, n) = (-m, n)
-                bb(ii, jj) = aa(i, -j) !(-m, -n) (-m, -n) = (-m, n)
+                bb(ii, j) = aa(i, j) !(-m, n)
+                bb(ii, jj) = aa(i, -j) !(m, -n)
             end do
         end do
 
@@ -814,8 +814,8 @@ contains
             ii = nma - i
             do j = 1, this%n
                 jj = nna - j
-                bb(i, jj) = conjg(bb(ii, j))  !(-m, -n)  (m, -n) = conjg(-m, n)
-                bb(i, j) = conjg(bb(ii, jj)) !(m, n)  (m, n) = conjg(-m, -n)
+                bb(i, jj) = conjg(bb(ii, j))  !(-m, -n)
+                bb(i, j) = conjg(bb(ii, jj)) !(m, n)
             end do
         end do
 
@@ -841,7 +841,9 @@ contains
                    xi_xx => this%grid%xi_xx, eta_xx => this%grid%eta_xx, &
                    xi_xy => this%grid%xi_xy, eta_xy => this%grid%eta_xy, &
                    xi_yy => this%grid%xi_yy, eta_yy => this%grid%eta_yy, &
-                   alf => this%alf, ome0 => this%ome0, bat0 => this%bat0)
+                   alf => this%alf, &
+                   ome1 => this%ome1, bat1 => this%bat1, &
+                   ome2 => this%ome2, bat2 => this%bat2)
             !   do n = -this%n, this%n
             !       do m = 0, this%m
             !           do j = 1, this%jn
@@ -937,24 +939,24 @@ contains
 
                 !! dphi'dt_spt, dphi'dz_spt
                 do concurrent(j=1:this%jn, m=0:this%m, n=-this%n:this%n)
-                    profile(j)%rho_t(m, n) = -ZI*ome0*real(m, REAL64)*profile(j)%rho_a0(m, n)
-                    profile(j)%u_t(m, n) = -ZI*ome0*real(m, REAL64)*profile(j)%u_a0(m, n)
-                    profile(j)%v_t(m, n) = -ZI*ome0*real(m, REAL64)*profile(j)%v_a0(m, n)
-                    profile(j)%w_t(m, n) = -ZI*ome0*real(m, REAL64)*profile(j)%w_a0(m, n)
-                    profile(j)%T_t(m, n) = -ZI*ome0*real(m, REAL64)*profile(j)%T_a0(m, n)
-                    profile(j)%rho_z(m, n) = ZI*bat0*real(n, REAL64)*profile(j)%rho_a0(m, n)
-                    profile(j)%u_z(m, n) = ZI*bat0*real(n, REAL64)*profile(j)%u_a0(m, n)
-                    profile(j)%v_z(m, n) = ZI*bat0*real(n, REAL64)*profile(j)%v_a0(m, n)
-                    profile(j)%w_z(m, n) = ZI*bat0*real(n, REAL64)*profile(j)%w_a0(m, n)
-                    profile(j)%T_z(m, n) = ZI*bat0*real(n, REAL64)*profile(j)%T_a0(m, n)
+                    profile(j)%rho_t(m, n) = -ZI*(ome1*real(m, REAL64)+ome2*real(n, REAL64))*profile(j)%rho_a0(m, n)
+                    profile(j)%u_t(m, n) = -ZI*(ome1*real(m, REAL64)+ome2*real(n, REAL64))*profile(j)%u_a0(m, n)
+                    profile(j)%v_t(m, n) = -ZI*(ome1*real(m, REAL64)+ome2*real(n, REAL64))*profile(j)%v_a0(m, n)
+                    profile(j)%w_t(m, n) = -ZI*(ome1*real(m, REAL64)+ome2*real(n, REAL64))*profile(j)%w_a0(m, n)
+                    profile(j)%T_t(m, n) = -ZI*(ome1*real(m, REAL64)+ome2*real(n, REAL64))*profile(j)%T_a0(m, n)
+                    profile(j)%rho_z(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%rho_a0(m, n)
+                    profile(j)%u_z(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%u_a0(m, n)
+                    profile(j)%v_z(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%v_a0(m, n)
+                    profile(j)%w_z(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%w_a0(m, n)
+                    profile(j)%T_z(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%T_a0(m, n)
 
-                    profile(j)%u_zz(m, n) = ZI*bat0*real(n, REAL64)*profile(j)%u_z(m, n)
-                    profile(j)%v_zz(m, n) = ZI*bat0*real(n, REAL64)*profile(j)%v_z(m, n)
-                    profile(j)%w_zz(m, n) = ZI*bat0*real(n, REAL64)*profile(j)%w_z(m, n)
-                    profile(j)%T_zz(m, n) = ZI*bat0*real(n, REAL64)*profile(j)%T_z(m, n)
+                    profile(j)%u_zz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%u_z(m, n)
+                    profile(j)%v_zz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%v_z(m, n)
+                    profile(j)%w_zz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%w_z(m, n)
+                    profile(j)%T_zz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%T_z(m, n)
                     !! dphi'dxz
-                    profile(j)%u_xz(m, n) = ZI*bat0*real(n, REAL64)*profile(j)%u_x(m, n)
-                    profile(j)%w_xz(m, n) = ZI*bat0*real(n, REAL64)*profile(j)%w_x(m, n)
+                    profile(j)%u_xz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%u_x(m, n)
+                    profile(j)%w_xz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%w_x(m, n)
                 end do
 
                 do concurrent(j=1:this%jn, m=0:this%m, n=-this%n:this%n)
@@ -971,8 +973,8 @@ contains
                     !! dphi'dxy_spt, dphi'dyz_spt
                     profile(j)%u_xy(m, n) = dphidxy(2, j, m, n)*exp_ialf(m, n) + ZI*alf(m, n)*profile(j)%u_y(m, n)
                     profile(j)%v_xy(m, n) = dphidxy(3, j, m, n)*exp_ialf(m, n) + ZI*alf(m, n)*profile(j)%v_y(m, n)
-                    profile(j)%v_yz(m, n) = ZI*bat0*real(n, real64)*profile(j)%v_y(m, n)
-                    profile(j)%w_yz(m, n) = ZI*bat0*real(n, real64)*profile(j)%w_y(m, n)
+                    profile(j)%v_yz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%v_y(m, n)
+                    profile(j)%w_yz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%w_y(m, n)
                 end do
                 ! block
                 !     print *, 'check dis profile'
@@ -1097,8 +1099,10 @@ contains
         call this%handle_new%Finalize()
         this%m = 0
         this%n = 0
-        this%ome0 = 0
-        this%bat0 = 0
+        this%ome1 = 0
+        this%bat1 = 0
+        this%ome2 = 0
+        this%bat2 = 0
         this%jn = 0
 
         deallocate(dphidi )
@@ -1131,10 +1135,14 @@ contains
             this%GAMMA = value
         case ("Pr", "pr", "PR")
             this%Pr = value
-        case ("ome0")
-            this%ome0 = value
-        case ("bat0")
-            this%bat0 = value
+        case ("ome1")
+            this%ome1 = value
+        case ("bat1")
+            this%bat1 = value
+        case ("ome2")
+            this%ome2 = value
+        case ("bat2")
+            this%bat2 = value            
         case default
             call error_stop("the value is wrong in set_parameters in nonlinear term.")
         end select
@@ -1159,10 +1167,14 @@ contains
             this%GAMMA = value
         case ("Pr", "pr", "PR")
             this%Pr = value
-        case ("ome0")
-            this%ome0 = value
-        case ("bat0")
-            this%bat0 = value
+        case ("ome1")
+            this%ome1 = value
+        case ("bat1")
+            this%bat1 = value
+        case ("ome2")
+            this%ome2 = value
+        case ("bat2")
+            this%bat2 = value
         case default
             call error_stop("the value is wrong in set_parameters in nonlinear term.")
         end select
