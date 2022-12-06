@@ -37,8 +37,8 @@ module mod_npse
     use global_parameters, only: yb, ye!, xb, xe
 
     use global_parameters, only: istart, iend
-    use global_parameters, only: m_global, n0_global
-    use global_parameters, only: theta1, theta2
+    use global_parameters, only: m_global, n0_global, n1_global
+    use global_parameters, only: theta, ntheta
     use global_parameters, only: inlet_dis
     use global_parameters, only: ndis
     use global_parameters, only: isothermal
@@ -107,7 +107,7 @@ contains
     subroutine initialize_npse()
 
         implicit none
-        integer :: i, m, n
+        integer :: i, m, n0
 
         call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER, DM_local, ierr)
         call DMSetUp(DM_local, ierr)
@@ -121,21 +121,21 @@ contains
 
         call nonlinear_solver%set_parameter("m", m_global)
         call nonlinear_solver%set_parameter("n0", n0_global)
-        call nonlinear_solver%set_parameter("ome1", theta1%re)
-        call nonlinear_solver%set_parameter("ome2", theta2%re)
-        call nonlinear_solver%set_parameter("bat1", theta1%im)
-        call nonlinear_solver%set_parameter("bat2", theta2%im)
+        call nonlinear_solver%set_parameter("ome1", theta(1)%re)
+        call nonlinear_solver%set_parameter("ome2", theta(2)%re)
+        call nonlinear_solver%set_parameter("bat1", theta(1)%im)
+        call nonlinear_solver%set_parameter("bat2", theta(2)%im)
         call nonlinear_solver%initial(jn, Re, Ma, Te)
 
         allocate (solve_alpha(0:m_global, -n0_global:n0_global))
-        do n = -n0_global, n0_global
+        do n0 = -n0_global, n0_global
             do m = 0, m_global
                 do i = istart - 1, iend
-                    call DMGetGlobalVector(DM_local, phi(i, m, n), ierr)
-                    call VecZeroEntries(phi(i, m, n), ierr)
+                    call DMGetGlobalVector(DM_local, phi(i, m, n0), ierr)
+                    call VecZeroEntries(phi(i, m, n0), ierr)
                 end do
-                call DMGetGlobalVector(DM_local, phi_old(m, n), ierr)
-                call VecZeroEntries(phi_old(m, n), ierr)
+                call DMGetGlobalVector(DM_local, phi_old(m, n0), ierr)
+                call VecZeroEntries(phi_old(m, n0), ierr)
             end do
         end do
         do i = 1, 3
@@ -156,8 +156,8 @@ contains
 
         solve_alpha = SOLVE_ALPHA_NONE
         do i = 1, ndis
-            alf(IStart, inlet_dis(i)%m, inlet_dis(i)%n) = inlet_dis(i)%alf
-            solve_alpha(inlet_dis(i)%m, inlet_dis(i)%n) = inlet_dis(i)%solve_alpha
+            alf(IStart, inlet_dis(i)%m, inlet_dis(i)%n(1)) = inlet_dis(i)%alf
+            solve_alpha(inlet_dis(i)%m, inlet_dis(i)%n(1)) = inlet_dis(i)%solve_alpha
         end do
 
         call update_alpha(istart, assemble_lst_grid_profile(istart))
@@ -172,7 +172,7 @@ contains
         use mod_lst_eqn
 
         implicit none
-        integer :: i
+        integer :: i, l
         PetscViewer :: Viewer
         type(type_lst_eqn) :: lst
         type(type_lst_grid_profile) :: grid_profile
@@ -195,14 +195,19 @@ contains
         call lst%setup()
 
         do i = 1, ndis
-            ome = theta1%re*inlet_dis(i)%m+theta2%re*inlet_dis(i)%n
-            bat = theta1%im*inlet_dis(i)%m+theta2%im*inlet_dis(i)%n
-            call lst%solve(ome, alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n), bat)
-            call lst%get_eigf(phi(iloc, inlet_dis(i)%m, inlet_dis(i)%n))
-            call VecScale(phi(iloc, inlet_dis(i)%m, inlet_dis(i)%n), inlet_dis(i)%amp, ierr)
-            print *, 'disturbance at inlet', i, inlet_dis(i)%m, inlet_dis(i)%n
+
+            ome = theta(1)%re*inlet_dis(i)%m
+            bat = theta(1)%im*inlet_dis(i)%m
+            do l=2, ntheta
+                ome = ome +theta(l)%re*inlet_dis(i)%n(l-1)
+                bat = bat +theta(2)%im*inlet_dis(i)%n(l-1)
+            enddo
+            call lst%solve(ome, alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1)), bat)
+            call lst%get_eigf(phi(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1)))
+            call VecScale(phi(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1)), inlet_dis(i)%amp, ierr)
+            print *, 'disturbance at inlet', i, inlet_dis(i)%m, inlet_dis(i)%n(1)
             print *, 'drx=', grid_profile%drx, 'drz=', grid_profile%drz
-            print *, 'alpha=', alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n)%re, alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n)%im
+            print *, 'alpha=', alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1))%re, alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1))%im
         end do
 
     end subroutine set_npse_ic
@@ -211,7 +216,7 @@ contains
 
         use omp_lib
         implicit none
-        integer :: i, m, n, l
+        integer :: i, m, n0, l
         type(type_lst_grid_profile) :: grid_profile
         type(type_lst_bf_profile) :: baseflow_profile
         PetscViewer :: Viewer
@@ -224,9 +229,9 @@ contains
         logical :: flg_mfd = .true.
 
         allocate (iterator_times(0:m_global, -n0_global:n0_global))
-        do n = -n0_global, n0_global
+        do n0 = -n0_global, n0_global
             do m = 0, m_global
-                call npse_eqn%set_ic(phi(istart, m, n))
+                call npse_eqn%set_ic(phi(istart, m, n0))
             end do
         end do
 
@@ -258,24 +263,24 @@ contains
             ! call solve_lpse_eqn(grid_profile, baseflow_profile, ome, alf, bat, i, phi(i), phi(i-1), phi(max(1,i-2)))
 
             !! initial_ilocation_value
-            do n = -n0_global, n0_global
+            do n0 = -n0_global, n0_global
                 do m = 0, m_global
                     ! if (i == istart + 1) then
-                    call VecCopy(phi(i - 1, m, n), phi(i, m, n), ierr)
-                    alf(i, m, n) = alf(i - 1, m, n)
+                    call VecCopy(phi(i - 1, m, n0), phi(i, m, n0), ierr)
+                    alf(i, m, n0) = alf(i - 1, m, n0)
                     ! elseif (i == istart + 2) then
-                    !     call VecWAXPY(phi(i, m, n), (-1.0d0, 0.0d0), phi(i - 2, m, n), phi(i - 1, m, n), ierr)
-                    !     call VecAXPY(phi(i, m, n), (1.0d0, 0.0d0), phi(i - 1, m, n), ierr)
-                    !     alf(i, m, n) = 2.0d0*alf(i - 1, m, n) - alf(i - 2, m, n)
+                    !     call VecWAXPY(phi(i, m, n0), (-1.0d0, 0.0d0), phi(i - 2, m, n0), phi(i - 1, m, n0), ierr)
+                    !     call VecAXPY(phi(i, m, n0), (1.0d0, 0.0d0), phi(i - 1, m, n0), ierr)
+                    !     alf(i, m, n0) = 2.0d0*alf(i - 1, m, n0) - alf(i - 2, m, n0)
                     ! elseif (i >= istart + 3) then
-                    !     call VecWAXPY(phi(i, m, n), (-1.0d0, 0.0d0), phi(i - 3, m, n), phi(i - 2, m, n), ierr)
-                    !     call VecScale(phi(i, m, n), (0.5d0, 0.0d0), ierr)
-                    !     call VecAXPY(phi(i, m, n), (-1.5d0, 0.0d0), phi(i - 2, m, n), ierr)
-                    !     call VecAXPY(phi(i, m, n), (2.5d0, 0.0d0), phi(i - 1, m, n), ierr)
-                    !     alf(i, m, n) = 2.5d0*alf(i - 1, m, n) - 2.0d0*alf(i - 2, m, n) + 0.5d0*(alf(i - 3, m, n))
+                    !     call VecWAXPY(phi(i, m, n0), (-1.0d0, 0.0d0), phi(i - 3, m, n0), phi(i - 2, m, n0), ierr)
+                    !     call VecScale(phi(i, m, n0), (0.5d0, 0.0d0), ierr)
+                    !     call VecAXPY(phi(i, m, n0), (-1.5d0, 0.0d0), phi(i - 2, m, n0), ierr)
+                    !     call VecAXPY(phi(i, m, n0), (2.5d0, 0.0d0), phi(i - 1, m, n0), ierr)
+                    !     alf(i, m, n0) = 2.5d0*alf(i - 1, m, n0) - 2.0d0*alf(i - 2, m, n0) + 0.5d0*(alf(i - 3, m, n0))
                     ! end if
-                    ! alf(i, m, n) = alf(i - 1, m, n)
-                    lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid_profile%xi_x(yb + 1)
+                    ! alf(i, m, n0) = alf(i - 1, m, n0)
+                    lnA0(i, m, n0) = lnA1(m, n0) + 0.5d0*(alf(i, m, n0) + alf(i - 1, m, n0))/grid_profile%xi_x(yb + 1)
                 end do
             end do
 
@@ -328,14 +333,14 @@ contains
 
                 iterator_times = 0
                 do l = 1, ndis
-                    m = inlet_dis(l)%m; n = inlet_dis(l)%n
-                    call npse_eqn%set_parameter("ome", theta1%re*m+theta2%re*n)
-                    call npse_eqn%set_parameter("bat", theta1%im*m+theta2%im*n)
-                    call npse_eqn%set_parameter("solve_alpha", solve_alpha(m, n))
+                    m = inlet_dis(l)%m; n0 = inlet_dis(l)%n(1)
+                    call npse_eqn%set_parameter("ome", theta(1)%re*m+theta(2)%re*n0)
+                    call npse_eqn%set_parameter("bat", theta(1)%im*m+theta(2)%im*n0)
+                    call npse_eqn%set_parameter("solve_alpha", solve_alpha(m, n0))
 
-                    call npse_eqn%set_force(nonlinear_term(:, :, m, n))
-                    call npse_eqn%solve(alf(i, m, n), phi(i, m, n), phi(i - 1, m, n), phi(i - 2, m, n))
-                    iterator_times(m, n) = iterator_times(m, n) + npse_eqn%iterator_times
+                    call npse_eqn%set_force(nonlinear_term(:, :, m, n0))
+                    call npse_eqn%solve(alf(i, m, n0), phi(i, m, n0), phi(i - 1, m, n0), phi(i - 2, m, n0))
+                    iterator_times(m, n0) = iterator_times(m, n0) + npse_eqn%iterator_times
                 end do
 
                 !! update streamwise wave number alpha
@@ -363,27 +368,27 @@ contains
                     end if
                     call npse_eqn%npse_setup()
 
-                    do n = -n0_global, n0_global
+                    do n0 = -n0_global, n0_global
                         do m = 0, m_global
-                            call npse_eqn%set_parameter("ome", theta1%re*m+theta2%re*n)
-                            call npse_eqn%set_parameter("bat", theta1%im*m+theta2%im*n)
+                            call npse_eqn%set_parameter("ome", theta(1)%re*m+theta(2)%re*n0)
+                            call npse_eqn%set_parameter("bat", theta(1)%im*m+theta(2)%im*n0)
                             call npse_eqn%set_parameter("solve_alpha", SOLVE_ALPHA_NONE)
 
-                            !   call VecCopy(phi(i - 1, m, n), phi(i, m, n), ierr)
-                            call npse_eqn%set_force(nonlinear_term(:, :, m, n))
+                            !   call VecCopy(phi(i - 1, m, n0), phi(i, m, n0), ierr)
+                            call npse_eqn%set_force(nonlinear_term(:, :, m, n0))
 
-                            call VecCopy(phi(i, m, n), phi_old(m, n), ierr)
+                            call VecCopy(phi(i, m, n0), phi_old(m, n0), ierr)
 
-                            call npse_eqn%solve_npse(alf(i, m, n), phi(i, m, n), phi(i - 1, m, n), phi(i - 2, m, n), lambda)
-                            VecDistance(m, n) = VecsNorm2(phi(i, m, n), phi_old(m, n))
+                            call npse_eqn%solve_npse(alf(i, m, n0), phi(i, m, n0), phi(i - 1, m, n0), phi(i - 2, m, n0), lambda)
+                            VecDistance(m, n0) = VecsNorm2(phi(i, m, n0), phi_old(m, n0))
                             !! use phi_new to store V_new-V_old
-                            call VecAXPY(phi(i, m, n), (-1.0d0, 0.0d0), phi_old(m, n), ierr)
-                            call VecAYPX(phi(i, m, n), cmplx(omega_phi, 0.0d0, REAL64), phi_old(m, n), ierr)
+                            call VecAXPY(phi(i, m, n0), (-1.0d0, 0.0d0), phi_old(m, n0), ierr)
+                            call VecAYPX(phi(i, m, n0), cmplx(omega_phi, 0.0d0, REAL64), phi_old(m, n0), ierr)
 
-                            iterator_times(m, n) = iterator_times(m, n) + npse_eqn%iterator_times
+                            iterator_times(m, n0) = iterator_times(m, n0) + npse_eqn%iterator_times
 
-                            lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid_profile%xi_x(yb + 1)
-                            norm_rhs_mn(m, n) = npse_eqn%normrhs
+                            lnA0(i, m, n0) = lnA1(m, n0) + 0.5d0*(alf(i, m, n0) + alf(i - 1, m, n0))/grid_profile%xi_x(yb + 1)
+                            norm_rhs_mn(m, n0) = npse_eqn%normrhs
                             !   print*, 'the process is', omp_get_thread_num()
                         end do
                     end do
@@ -413,9 +418,9 @@ contains
 
                 ! print *, 'ix=', i, 'is done.'
                 print *, 'The whole iteration times is', sum(iterator_times)
-                print "(A,I2,A,I2,A, F13.7,A,F14.7, A, F10.5)", 'alpha(', inlet_dis(1)%m, ', ', inlet_dis(1)%n, ')=', & !,,A, F10.5
-                    alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%re, ' ', alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%im, &
-                    "im,   bat=", theta1%im*inlet_dis(1)%m+theta2%im*inlet_dis(1)%n
+                print "(A,I2,A,I2,A, F13.7,A,F14.7, A, F10.5)", 'alpha(', inlet_dis(1)%m, ', ', inlet_dis(1)%n(1), ')=', & !,,A, F10.5
+                    alf(i, inlet_dis(1)%m, inlet_dis(1)%n(1))%re, ' ', alf(i, inlet_dis(1)%m, inlet_dis(1)%n(1))%im, &
+                    "im,   bat=", theta(1)%im*inlet_dis(1)%m+theta(2)%im*inlet_dis(1)%n(1)
 
                 itimes_alpha = itimes_alpha + 1
 
@@ -463,30 +468,30 @@ contains
         integer, intent(in) :: i
         type(type_lst_grid_profile), intent(in) :: grid
         complex(REAL64):: alf_tmp
-        integer :: m, n
+        integer :: m, n0
 !! 对tpse需要进行修改 修改更新波数的方法和方式以及判断标准
-        if (abs(inlet_dis(1)%m*theta1%re+inlet_dis(1)%n*theta2%re) >= epsilon(1.0d0)) then  !! 非横流
-            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)/(inlet_dis(1)%m*theta1%re+inlet_dis(1)%n*theta2%re)
-            do n = -n0_global, n0_global
+        if (abs(inlet_dis(1)%m*theta(1)%re+inlet_dis(1)%n(1)*theta(2)%re) >= epsilon(1.0d0)) then  !! 非横流
+            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n(1))/(inlet_dis(1)%m*theta(1)%re+inlet_dis(1)%n(1)*theta(2)%re)
+            do n0 = -n0_global, n0_global
                 do m = 0, m_global
-                    if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
-                        alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
-                    elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
-                        alf(i, m, n) = alf_tmp*(m*theta1%re+n*theta2%re)
+                    if (solve_alpha(m, n0) == SOLVE_ALPHA_REAL) then
+                        alf(i, m, n0) = alf(i, m, n0) !+ ZI*aimag(alf_tmp)*m
+                    elseif (solve_alpha(m, n0) == SOLVE_ALPHA_NONE) then
+                        alf(i, m, n0) = alf_tmp*(m*theta(1)%re+n0*theta(2)%re)
                     end if
-                    if (i > istart) lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid%xi_x(yb + 1)
+                    if (i > istart) lnA0(i, m, n0) = lnA1(m, n0) + 0.5d0*(alf(i, m, n0) + alf(i - 1, m, n0))/grid%xi_x(yb + 1)
                 end do
             end do
         else  !! 横流
-            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)/(inlet_dis(1)%m*theta1%im+inlet_dis(1)%n*theta2%im)
-            do n = -n0_global, n0_global
+            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n(1))/(inlet_dis(1)%m*theta(1)%im+inlet_dis(1)%n(1)*theta(2)%im)
+            do n0 = -n0_global, n0_global
                 do m = 0, m_global
-                    if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
-                        alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
-                    elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
-                        alf(i, m, n) = alf_tmp*(inlet_dis(1)%m*theta1%im+inlet_dis(1)%n*theta2%im)
+                    if (solve_alpha(m, n0) == SOLVE_ALPHA_REAL) then
+                        alf(i, m, n0) = alf(i, m, n0) !+ ZI*aimag(alf_tmp)*m
+                    elseif (solve_alpha(m, n0) == SOLVE_ALPHA_NONE) then
+                        alf(i, m, n0) = alf_tmp*(inlet_dis(1)%m*theta(1)%im+inlet_dis(1)%n(1)*theta(2)%im)
                     end if
-                    if (i > istart) lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid%xi_x(yb + 1)
+                    if (i > istart) lnA0(i, m, n0) = lnA1(m, n0) + 0.5d0*(alf(i, m, n0) + alf(i - 1, m, n0))/grid%xi_x(yb + 1)
                 end do
             end do
         end if
@@ -518,7 +523,7 @@ contains
     subroutine finalize_npse()
         implicit none
 
-        integer :: i, m, n
+        integer :: i, m, n0
 
         call npse_eqn%finalize_force()
         call npse_eqn%finalize()
@@ -529,12 +534,12 @@ contains
         deallocate (lnA0)
         deallocate (lnA1)
         deallocate (alf)
-        do n = -n0_global, n0_global
+        do n0 = -n0_global, n0_global
             do m = 0, m_global
                 do i = istart - 1, iend
-                    call DMRestoreGlobalVector(DM_local, phi(i, m, n), ierr)
+                    call DMRestoreGlobalVector(DM_local, phi(i, m, n0), ierr)
                 end do
-                call DMRestoreGlobalVector(DM_local, phi_old(m, n), ierr)
+                call DMRestoreGlobalVector(DM_local, phi_old(m, n0), ierr)
             end do
         end do
         do i = 1, 3
@@ -557,7 +562,7 @@ contains
         integer :: iounit, ios
         type(string_type) :: name, strings
         type(string_type) :: astring(6)
-        integer :: i, m, n
+        integer :: i, m, n0
         Vec :: phi_domain
         PetscScalar, pointer :: tmp_domain(:, :, :), tmp_local(:, :)
         integer(8) :: hdf_file_id
@@ -586,22 +591,22 @@ contains
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Ma", PETSC_DOUBLE, Ma, ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Re", PETSC_DOUBLE, Re, ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Te", PETSC_DOUBLE, Te, ierr)
-        call PetscViewerHDF5WriteAttribute(viewer, "/", "omega1", PETSC_DOUBLE, theta1%re, ierr)
-        call PetscViewerHDF5WriteAttribute(viewer, "/", "beta1", PETSC_DOUBLE, theta1%im, ierr)
-        call PetscViewerHDF5WriteAttribute(viewer, "/", "omega2", PETSC_DOUBLE, theta2%re, ierr)
-        call PetscViewerHDF5WriteAttribute(viewer, "/", "beta2", PETSC_DOUBLE, theta2%im, ierr)
+        call PetscViewerHDF5WriteAttribute(viewer, "/", "omega1", PETSC_DOUBLE, theta(1)%re, ierr)
+        call PetscViewerHDF5WriteAttribute(viewer, "/", "beta1", PETSC_DOUBLE, theta(1)%im, ierr)
+        call PetscViewerHDF5WriteAttribute(viewer, "/", "omega2", PETSC_DOUBLE, theta(2)%re, ierr)
+        call PetscViewerHDF5WriteAttribute(viewer, "/", "beta2", PETSC_DOUBLE, theta(2)%im, ierr)
 
         call PetscViewerHDF5WriteAttribute(viewer, "/", "jn", PETSC_INT, jn, ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "istart", PETSC_INT, istart, ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "iend", PETSC_INT, iend, ierr)
 
-        do n = -n0_global, n0_global
+        do n0 = -n0_global, n0_global
             do m = 0, m_global
 
                 astring(4) = string_type(m) !astring(4)=astring(4)%slice(2, max(2, ceiling(log10(m + 0.1d0) + 1)))
                 astring(4) = 'm='//astring(4)
-                astring(5) = string_type(n)!; astring(5)=astring(5)%slice(2, max(2, ceiling(log10(n + 0.1d0) + 1)))
-                astring(5) = 'n='//astring(5)
+                astring(5) = string_type(n0)!; astring(5)=astring(5)%slice(2, max(2, ceiling(log10(n + 0.1d0) + 1)))
+                astring(5) = 'n0='//astring(5)
                 !  astring(6) = 'alpha.plt'
                 name = astring(4)//"_"//astring(5)
                 !  strings = "Writing the wave numbers alpha to "//name//'\n'
@@ -610,9 +615,9 @@ contains
                !! Write phi
                 call DMDAVecGetArrayF90(meshDA, phi_domain, tmp_domain, ierr)
                 do i = istart, iend
-                    call DMDAVecGetArrayReadF90(DM_local, phi(i, m, n), tmp_local, ierr)
-                    tmp_domain(:, i - 1, :) = tmp_local(:, :)*exp(ZI*lnA0(i, m, n))
-                    call DMDAVecRestoreArrayReadF90(DM_local, phi(i, m, n), tmp_local, ierr)
+                    call DMDAVecGetArrayReadF90(DM_local, phi(i, m, n0), tmp_local, ierr)
+                    tmp_domain(:, i - 1, :) = tmp_local(:, :)*exp(ZI*lnA0(i, m, n0))
+                    call DMDAVecRestoreArrayReadF90(DM_local, phi(i, m, n0), tmp_local, ierr)
                 end do
                 call DMDAVecRestoreArrayF90(meshDA, phi_domain, tmp_domain, ierr)
 
@@ -630,7 +635,7 @@ contains
                 !     do i = istart, iend
                 !         write (iounit, ('(I0, 12(2X, F20.8))')) &
                 !             i, xx(i, yb + 1), Ma, Re, Te, ome0*m, &
-                !             alf(i, m, n), bat0*n, ome0*m/(alf(i, m, n) + epsilon)
+                !             alf(i, m, n0), bat0*n, ome0*m/(alf(i, m, n0) + epsilon)
                 !     end do
                 !     close (iounit)
                 !     call PetscPrintf(PETSC_COMM_WORLD, 'Write '//name//' done.\n', ierr)

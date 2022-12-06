@@ -222,29 +222,51 @@ contains
         type(string_type) :: string_char
         character(len=256) :: format0
         real(REAL64) :: ome0, bat0
-        integer :: i
+        integer :: i, l
 
+        call cfg%get('tpse', 'ntheta', ntheta)
         call cfg%get('tpse', 'm_global', m_global); m_global=m_global-1
         call cfg%get('tpse', 'n0_global', n0_global); n0_global=n0_global-1
 
-        call cfg%get('tpse', 'theta1', theta1)
-        call cfg%get('tpse', 'theta2', theta2)
+        if( ntheta > 2) then
+            call cfg%get('tpse', 'n1_global', n1_global); n1_global=n1_global-1
+            if( ntheta > 3) then
+                call cfg%get('tpse', 'n2_global', n2_global); n2_global=n2_global-1
+            endif
+        endif
+
+        theta = 0.0d0
+        do i=1, ntheta
+            call cfg%get('tpse', char('theta'//string_type(i)), theta(i))
+        enddo
         format0 = '(A, I4, 1X, A, I4, 1X, A, 2F10.5)'
-        print trim(format0), 'The computational range is', 0, 'to', m_global, 'with theta1=', theta1
-        print trim(format0), 'The computational range is', -n0_global, 'to', n0_global, 'with theta2=', theta2
+        print trim(format0), 'The computational range is', 0, 'to', m_global, 'with theta1=', theta(1)
+        print trim(format0), 'The computational range is', -n0_global, 'to', n0_global, &
+        &                    'with theta2=', theta(2)
+        if( ntheta > 2)then
+            print trim(format0), 'The computational range is', -n1_global, 'to', n1_global, &
+            &                    'with theta2=', theta(3)
+            if( ntheta > 3)then
+                print trim(format0), 'The computational range is', -n2_global, 'to', n2_global, &
+                &                    'with theta2=', theta(4)
+            endif
+        endif
 
 
-        npar = 2
+        npar = ntheta
 
         call cfg%get('tpse', 'ndis', ndis)
         print *, 'The inlet disturbance number is', ndis
         print '(3(A4), 4(A10), (A14))', 'no.', 'm', 'n', 'alpha_r', 'alpha_i', 'amp', 'angle', 'solve_alpha'
         allocate (inlet_dis(ndis))
         do i = 1, ndis
+            inlet_dis(i)%m = 0; inlet_dis(i)%n = 0
             string_char = string_type(i)
             call cfg%get('tpse', 'dis_'//char(string_char), integer_tmp, npar)
             inlet_dis(i)%m = integer_tmp(1)
-            inlet_dis(i)%n = integer_tmp(2)
+            do l = 1, ntheta-1
+                inlet_dis(i)%n(l) = integer_tmp(1+l)
+            enddo
             call cfg%get('tpse', 'dis_'//char(string_char)//'_alpha', real_tmp, npar)
             inlet_dis(i)%alf = real_tmp(1) + real_tmp(2)*ZI
             call cfg%get('tpse', 'dis_'//char(string_char)//'_amp', amp)
@@ -275,7 +297,7 @@ contains
                     cdump = 'none'
                 end if
             end if
-            print '(3I4, 4(F10.4), A10)', i, inlet_dis(i)%m, inlet_dis(i)%n, &
+            print char('('//string_type(ntheta+1)//'I4, 4(F10.4), A10)'), i, inlet_dis(i)%m, inlet_dis(i)%n(1:ntheta-1), &
                 inlet_dis(i)%alf%re, inlet_dis(i)%alf%im, &
                 amp, angle, trim(cdump)
         end do

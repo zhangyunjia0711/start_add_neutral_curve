@@ -23,7 +23,7 @@ module global_parameters
 
    type :: type_inlet_dis
       integer :: m
-      integer :: n
+      integer :: n(3)
       complex(REAL64) :: alf
       complex(REAL64) :: amp
       integer :: solve_alpha
@@ -45,8 +45,9 @@ module global_parameters
    type(type_inlet_dis), allocatable :: inlet_dis(:)
    integer :: ndis
    real(REAL64) :: alpha(2), beta(2), omega(2)
-   complex(REAL64) :: theta1, theta2
-   integer :: m_global, n0_global, n1_global
+   integer :: ntheta
+   complex(REAL64) :: theta(4)
+   integer :: m_global, n0_global, n1_global, n2_global
 
    integer :: bc_y0, bc_yn
 
