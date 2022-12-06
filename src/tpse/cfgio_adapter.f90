@@ -233,7 +233,11 @@ contains
             call cfg%get('tpse', 'n1_global', n1_global); n1_global=n1_global-1
             if( ntheta > 3) then
                 call cfg%get('tpse', 'n2_global', n2_global); n2_global=n2_global-1
+            else
+                n2_global = 0
             endif
+        else
+            n1_global = 0; n2_global = 0
         endif
 
         theta = 0.0d0

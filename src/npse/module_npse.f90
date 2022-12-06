@@ -484,7 +484,7 @@ contains
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
                         alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
-                        alf(i, m, n) = alf_tmp*(inlet_dis(1)%m*theta1%im+inlet_dis(1)%n*theta2%im)
+                        alf(i, m, n) = alf_tmp*(m*theta1%im+n*theta2%im)
                     end if
                     if (i > istart) lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid%xi_x(yb + 1)
                 end do
