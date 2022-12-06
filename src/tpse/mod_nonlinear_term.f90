@@ -109,15 +109,15 @@ module mod_nonlinear_term
 
         real(REAL64) :: ome1, ome2, ome3, ome4
         real(REAL64) :: bat1, bat2, bat3, bat4
-        complex(REAL64), allocatable :: alf(:, :)
-        complex(REAL64), allocatable :: exp_integral_alf(:, :)
+        complex(REAL64), allocatable :: alf(:, :, :, :)
+        complex(REAL64), allocatable :: exp_integral_alf(:, :, :, :)
 
-        complex(REAL64), allocatable :: f_spectrum(:, :, :, :)
-        real(REAL64), allocatable :: f_physics(:, :, :, :)
+        complex(REAL64), allocatable :: f_spectrum(:, :, :, :, :, :)
+        real(REAL64), allocatable :: f_physics(:, :, :, :, :, :)
 
         type(type_point_spectrum), allocatable :: dis_profile_spectrum(:)
 
-        PetscScalar, allocatable :: phi0_array(:, :, :, :), phi1_array(:, :, :, :), phi2_array(:, :, :, :)
+        PetscScalar, allocatable :: phi0_array(:, :, :, :, :, :), phi1_array(:, :, :, :, :, :), phi2_array(:, :, :, :, :, :)
 
         real(REAL64) :: lambda = 0.0d0
         ! type(DFTI_DESCRIPTOR), pointer :: handle
@@ -149,50 +149,49 @@ module mod_nonlinear_term
 
         integer :: m
         integer :: n0
-        complex(REAL64), dimension(:, :), allocatable :: rho_a0, u_a0, v_a0, w_a0, T_a0
-        complex(REAL64), dimension(:, :), allocatable :: rho_t, u_t, v_t, w_t, T_t
-        complex(REAL64), dimension(:, :), allocatable :: rho_x, u_x, v_x, w_x, T_x
-        complex(REAL64), dimension(:, :), allocatable :: rho_y, u_y, v_y, w_y, T_y
-        complex(REAL64), dimension(:, :), allocatable :: rho_z, u_z, v_z, w_z, T_z
-        complex(REAL64), dimension(:, :), allocatable :: u_xx, v_xx, w_xx, T_xx
-        complex(REAL64), dimension(:, :), allocatable :: u_yy, v_yy, w_yy, T_yy
-        complex(REAL64), dimension(:, :), allocatable :: u_zz, v_zz, w_zz, T_zz
+        complex(REAL64), dimension(:, :, :, :), allocatable :: rho_a0, u_a0, v_a0, w_a0, T_a0
+        complex(REAL64), dimension(:, :, :, :), allocatable :: rho_t, u_t, v_t, w_t, T_t
+        complex(REAL64), dimension(:, :, :, :), allocatable :: rho_x, u_x, v_x, w_x, T_x
+        complex(REAL64), dimension(:, :, :, :), allocatable :: rho_y, u_y, v_y, w_y, T_y
+        complex(REAL64), dimension(:, :, :, :), allocatable :: rho_z, u_z, v_z, w_z, T_z
+        complex(REAL64), dimension(:, :, :, :), allocatable :: u_xx, v_xx, w_xx, T_xx
+        complex(REAL64), dimension(:, :, :, :), allocatable :: u_yy, v_yy, w_yy, T_yy
+        complex(REAL64), dimension(:, :, :, :), allocatable :: u_zz, v_zz, w_zz, T_zz
 
-        complex(REAL64), dimension(:, :), allocatable :: u_xy, v_xy
-        complex(REAL64), dimension(:, :), allocatable :: u_xz, w_xz
-        complex(REAL64), dimension(:, :), allocatable :: v_yz, w_yz
+        complex(REAL64), dimension(:, :, :, :), allocatable :: u_xy, v_xy
+        complex(REAL64), dimension(:, :, :, :), allocatable :: u_xz, w_xz
+        complex(REAL64), dimension(:, :, :, :), allocatable :: v_yz, w_yz
 
     end type type_point_spectrum
 
     type :: type_point_physics
 
-        real(REAL64), dimension(:, :), allocatable :: rho_a0, u_a0, v_a0, w_a0, T_a0
-        real(REAL64), dimension(:, :), allocatable :: rho_t, u_t, v_t, w_t, T_t
-        real(REAL64), dimension(:, :), allocatable :: rho_x, u_x, v_x, w_x, T_x
-        real(REAL64), dimension(:, :), allocatable :: rho_y, u_y, v_y, w_y, T_y
-        real(REAL64), dimension(:, :), allocatable :: rho_z, u_z, v_z, w_z, T_z
-        real(REAL64), dimension(:, :), allocatable :: u_xx, v_xx, w_xx, T_xx
-        real(REAL64), dimension(:, :), allocatable :: u_yy, v_yy, w_yy, T_yy
-        real(REAL64), dimension(:, :), allocatable :: u_zz, v_zz, w_zz, T_zz
+        real(REAL64), dimension(:, :, :, :), allocatable :: rho_a0, u_a0, v_a0, w_a0, T_a0
+        real(REAL64), dimension(:, :, :, :), allocatable :: rho_t, u_t, v_t, w_t, T_t
+        real(REAL64), dimension(:, :, :, :), allocatable :: rho_x, u_x, v_x, w_x, T_x
+        real(REAL64), dimension(:, :, :, :), allocatable :: rho_y, u_y, v_y, w_y, T_y
+        real(REAL64), dimension(:, :, :, :), allocatable :: rho_z, u_z, v_z, w_z, T_z
+        real(REAL64), dimension(:, :, :, :), allocatable :: u_xx, v_xx, w_xx, T_xx
+        real(REAL64), dimension(:, :, :, :), allocatable :: u_yy, v_yy, w_yy, T_yy
+        real(REAL64), dimension(:, :, :, :), allocatable :: u_zz, v_zz, w_zz, T_zz
 
-        real(REAL64), dimension(:, :), allocatable :: u_xy, v_xy
-        real(REAL64), dimension(:, :), allocatable :: u_xz, w_xz
-        real(REAL64), dimension(:, :), allocatable :: v_yz, w_yz
+        real(REAL64), dimension(:, :, :, :), allocatable :: u_xy, v_xy
+        real(REAL64), dimension(:, :, :, :), allocatable :: u_xz, w_xz
+        real(REAL64), dimension(:, :, :, :), allocatable :: v_yz, w_yz
 
     end type type_point_physics
 
     type(type_point_physics) :: point_physics
 
-    complex(REAL64), allocatable :: dphidi (:, :, :, :)
-    complex(REAL64), allocatable :: dphidj (:, :, :, :)
-    complex(REAL64), allocatable :: dphidij(:, :, :, :)
-    complex(REAL64), allocatable :: dphidjj(:, :, :, :)
-    complex(REAL64), allocatable :: dphidx (:, :, :, :)
-    complex(REAL64), allocatable :: dphidy (:, :, :, :)
-    complex(REAL64), allocatable :: dphidxx(:, :, :, :)
-    complex(REAL64), allocatable :: dphidxy(:, :, :, :)
-    complex(REAL64), allocatable :: dphidyy(:, :, :, :)
-
+    complex(REAL64), allocatable :: dphidi (:, :, :, :, :, :)
+    complex(REAL64), allocatable :: dphidj (:, :, :, :, :, :)
+    complex(REAL64), allocatable :: dphidij(:, :, :, :, :, :)
+    complex(REAL64), allocatable :: dphidjj(:, :, :, :, :, :)
+    complex(REAL64), allocatable :: dphidx (:, :, :, :, :, :)
+    complex(REAL64), allocatable :: dphidy (:, :, :, :, :, :)
+    complex(REAL64), allocatable :: dphidxx(:, :, :, :, :, :)
+    complex(REAL64), allocatable :: dphidxy(:, :, :, :, :, :)
+    complex(REAL64), allocatable :: dphidyy(:, :, :, :, :, :)
 
 contains
 
@@ -214,61 +213,62 @@ contains
         call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn_, 5, 2, PETSC_NULL_INTEGER, this%dm, ierr)
         call DMSetUp(this%dm, ierr)
 
-        associate (m => this%m, n0 => this%n0, msp => this%msp, nsp0 => this%nsp0)
-            allocate (this%alf(0:m, -n0:n0))
-            allocate (this%exp_integral_alf(0:m, -n0:n0))
-            allocate (this%f_spectrum(5, this%jn, 0:m, -n0:n0))
+        associate (m => this%m, n0 => this%n0, n1=>this%n1, n2=>this%n2, &
+            &      msp => this%msp, nsp0 => this%nsp0, nsp1 => this%nsp1, nsp2 => this%nsp2)
+            allocate (this%alf(0:m, -n0:n0, -n1:n1, -n2:n2))
+            allocate (this%exp_integral_alf(0:m, -n0:n0, -n1:n1, -n2:n2))
+            allocate (this%f_spectrum(5, this%jn, 0:m, -n0:n0, -n1:n1, -n2:n2))
             allocate (this%f_physics(5, this%jn, 0:this%msp - 1, 0:this%nsp0 - 1))
             allocate (this%dis_profile_spectrum(jn_))
-            allocate (this%phi0_array(5, this%jn, 0:m, -n0:n0)); this%phi0_array = 0.0d0
-            allocate (this%phi1_array(5, this%jn, 0:m, -n0:n0)); this%phi1_array = 0.0d0
-            allocate (this%phi2_array(5, this%jn, 0:m, -n0:n0)); this%phi2_array = 0.0d0
+            allocate (this%phi0_array(5, this%jn, 0:m, -n0:, -n1:n1, -n2:n2)); this%phi0_array = 0.0d0
+            allocate (this%phi1_array(5, this%jn, 0:m, -n0:, -n1:n1, -n2:n2)); this%phi1_array = 0.0d0
+            allocate (this%phi2_array(5, this%jn, 0:m, -n0:, -n1:n1, -n2:n2)); this%phi2_array = 0.0d0
             do j = 1, jn_
                 this%dis_profile_spectrum(j)%m = m
                 this%dis_profile_spectrum(j)%n0 = n0
-                allocate (this%dis_profile_spectrum(j)%rho_a0(0:m, -n0:n0)); this%dis_profile_spectrum(j)%rho_a0 = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_a0(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_a0 = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_a0(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_a0 = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_a0(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_a0 = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_a0(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_a0 = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%rho_t(0:m, -n0:n0)); this%dis_profile_spectrum(j)%rho_t = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_t(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_t = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_t(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_t = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_t(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_t = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_t(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_t = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%rho_x(0:m, -n0:n0)); this%dis_profile_spectrum(j)%rho_x = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_x(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_x = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_x(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_x = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_x(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_x = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_x(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_x = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%rho_y(0:m, -n0:n0)); this%dis_profile_spectrum(j)%rho_y = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_y(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_y = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_y(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_y = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_y(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_y = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_y(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_y = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%rho_z(0:m, -n0:n0)); this%dis_profile_spectrum(j)%rho_z = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_z(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_z = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_z(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_z = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_z(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_z = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_z(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_z = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_xx(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_xx = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_xx(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_xx = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_xx(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_xx = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_xx(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_xx = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_yy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_yy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_yy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_yy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_yy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_yy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_yy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_yy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_zz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_zz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_zz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_zz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_zz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_zz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_zz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_zz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_xy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_xy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_xy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_xy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_xz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_xz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_xz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_xz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_yz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_yz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_yz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_yz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%rho_a0(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%rho_a0 = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_a0(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%u_a0 = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_a0(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%v_a0 = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_a0(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%w_a0 = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_a0(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%T_a0 = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%rho_t(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%rho_t = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_t(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%u_t = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_t(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%v_t = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_t(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%w_t = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_t(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%T_t = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%rho_x(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%rho_x = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_x(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%u_x = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_x(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%v_x = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_x(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%w_x = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_x(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%T_x = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%rho_y(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%rho_y = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_y(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%u_y = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_y(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%v_y = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_y(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%w_y = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_y(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%T_y = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%rho_z(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%rho_z = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_z(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%u_z = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_z(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%v_z = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_z(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%w_z = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_z(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%T_z = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_xx(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%u_xx = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_xx(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%v_xx = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_xx(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%w_xx = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_xx(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%T_xx = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_yy(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%u_yy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_yy(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%v_yy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_yy(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%w_yy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_yy(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%T_yy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_zz(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%u_zz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_zz(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%v_zz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_zz(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%w_zz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_zz(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%T_zz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_xy(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%u_xy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_xy(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%v_xy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_xz(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%u_xz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_xz(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%w_xz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_yz(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%v_yz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_yz(0:m, -n0:n0, -n1:n1, -n2:n2)); this%dis_profile_spectrum(j)%w_yz = 0.0d0
             end do
 
             allocate (point_physics%rho_a0(0:msp - 1, 0:nsp0 - 1)); point_physics%rho_a0 = 0.0d0
