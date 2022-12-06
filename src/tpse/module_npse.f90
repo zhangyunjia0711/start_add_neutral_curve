@@ -37,7 +37,7 @@ module mod_npse
     use global_parameters, only: yb, ye!, xb, xe
 
     use global_parameters, only: istart, iend
-    use global_parameters, only: m_global, n_global
+    use global_parameters, only: m_global, n0_global
     use global_parameters, only: theta1, theta2
     use global_parameters, only: inlet_dis
     use global_parameters, only: ndis
@@ -112,23 +112,23 @@ contains
         call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER, DM_local, ierr)
         call DMSetUp(DM_local, ierr)
 
-        allocate (phi(istart - 1:iend, 0:m_global, -n_global:n_global))
-        allocate (phi_old(0:m_global, -n_global:n_global))
-        allocate (alf(istart:iend, 0:m_global, -n_global:n_global)); alf= 0.0d0
-        allocate (VecDistance(0:m_global, -n_global:n_global))
-        allocate (nonlinear_term(5, jn, 0:m_global, -n_global:n_global)); nonlinear_term = 0.0d0
-        allocate (nonlinear_term_old(5, jn, 0:m_global, -n_global:n_global)); nonlinear_term_old = 0.0d0
+        allocate (phi(istart - 1:iend, 0:m_global, -n0_global:n0_global))
+        allocate (phi_old(0:m_global, -n0_global:n0_global))
+        allocate (alf(istart:iend, 0:m_global, -n0_global:n0_global)); alf= 0.0d0
+        allocate (VecDistance(0:m_global, -n0_global:n0_global))
+        allocate (nonlinear_term(5, jn, 0:m_global, -n0_global:n0_global)); nonlinear_term = 0.0d0
+        allocate (nonlinear_term_old(5, jn, 0:m_global, -n0_global:n0_global)); nonlinear_term_old = 0.0d0
 
         call nonlinear_solver%set_parameter("m", m_global)
-        call nonlinear_solver%set_parameter("n", n_global)
+        call nonlinear_solver%set_parameter("n0", n0_global)
         call nonlinear_solver%set_parameter("ome1", theta1%re)
         call nonlinear_solver%set_parameter("ome2", theta2%re)
         call nonlinear_solver%set_parameter("bat1", theta1%im)
         call nonlinear_solver%set_parameter("bat2", theta2%im)
         call nonlinear_solver%initial(jn, Re, Ma, Te)
 
-        allocate (solve_alpha(0:m_global, -n_global:n_global))
-        do n = -n_global, n_global
+        allocate (solve_alpha(0:m_global, -n0_global:n0_global))
+        do n = -n0_global, n0_global
             do m = 0, m_global
                 do i = istart - 1, iend
                     call DMGetGlobalVector(DM_local, phi(i, m, n), ierr)
@@ -143,8 +143,8 @@ contains
             call VecZeroEntries(delta_baseflow(i), ierr)
         end do
 
-        allocate (lnA0(istart:iend, 0:m_global, -n_global:n_global)); lnA0 = 0.0d0
-        allocate (lnA1(0:m_global, -n_global:n_global)); lnA1 = 0.0
+        allocate (lnA0(istart:iend, 0:m_global, -n0_global:n0_global)); lnA0 = 0.0d0
+        allocate (lnA1(0:m_global, -n0_global:n0_global)); lnA1 = 0.0
 
         call npse_eqn%initial(jn, Re, Ma, Te, yb, ye)
         call npse_eqn%set_parameter("sigma_p", sigma_p)
@@ -218,13 +218,13 @@ contains
         integer, allocatable :: iterator_times(:, :)
         real(REAL64) :: omega_force, omega_phi
         integer :: itimes_nonlinear, itimes_alpha
-        real(REAL64)::Norm_rhs, norm_rhs_mn(0:m_global, -n_global:n_global)
+        real(REAL64)::Norm_rhs, norm_rhs_mn(0:m_global, -n0_global:n0_global)
         real(REAL64) :: lambda
         type(type_lst_bf_profile) :: delta_baseflow_profile
         logical :: flg_mfd = .true.
 
-        allocate (iterator_times(0:m_global, -n_global:n_global))
-        do n = -n_global, n_global
+        allocate (iterator_times(0:m_global, -n0_global:n0_global))
+        do n = -n0_global, n0_global
             do m = 0, m_global
                 call npse_eqn%set_ic(phi(istart, m, n))
             end do
@@ -258,7 +258,7 @@ contains
             ! call solve_lpse_eqn(grid_profile, baseflow_profile, ome, alf, bat, i, phi(i), phi(i-1), phi(max(1,i-2)))
 
             !! initial_ilocation_value
-            do n = -n_global, n_global
+            do n = -n0_global, n0_global
                 do m = 0, m_global
                     ! if (i == istart + 1) then
                     call VecCopy(phi(i - 1, m, n), phi(i, m, n), ierr)
@@ -363,7 +363,7 @@ contains
                     end if
                     call npse_eqn%npse_setup()
 
-                    do n = -n_global, n_global
+                    do n = -n0_global, n0_global
                         do m = 0, m_global
                             call npse_eqn%set_parameter("ome", theta1%re*m+theta2%re*n)
                             call npse_eqn%set_parameter("bat", theta1%im*m+theta2%im*n)
@@ -467,7 +467,7 @@ contains
 !! 对tpse需要进行修改 修改更新波数的方法和方式以及判断标准
         if (abs(inlet_dis(1)%m*theta1%re+inlet_dis(1)%n*theta2%re) >= epsilon(1.0d0)) then  !! 非横流
             alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)/(inlet_dis(1)%m*theta1%re+inlet_dis(1)%n*theta2%re)
-            do n = -n_global, n_global
+            do n = -n0_global, n0_global
                 do m = 0, m_global
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
                         alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
@@ -479,7 +479,7 @@ contains
             end do
         else  !! 横流
             alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)/(inlet_dis(1)%m*theta1%im+inlet_dis(1)%n*theta2%im)
-            do n = -n_global, n_global
+            do n = -n0_global, n0_global
                 do m = 0, m_global
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
                         alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
@@ -529,7 +529,7 @@ contains
         deallocate (lnA0)
         deallocate (lnA1)
         deallocate (alf)
-        do n = -n_global, n_global
+        do n = -n0_global, n0_global
             do m = 0, m_global
                 do i = istart - 1, iend
                     call DMRestoreGlobalVector(DM_local, phi(i, m, n), ierr)
@@ -595,7 +595,7 @@ contains
         call PetscViewerHDF5WriteAttribute(viewer, "/", "istart", PETSC_INT, istart, ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "iend", PETSC_INT, iend, ierr)
 
-        do n = -n_global, n_global
+        do n = -n0_global, n0_global
             do m = 0, m_global
 
                 astring(4) = string_type(m) !astring(4)=astring(4)%slice(2, max(2, ceiling(log10(m + 0.1d0) + 1)))

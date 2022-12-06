@@ -578,7 +578,7 @@ contains
         strings = "Writing the shape functions phi to "//name//'.\n'
         call PetscPrintf(PETSC_COMM_WORLD, char(strings), ierr)
 
-        call PetscViewerHDF5WriteAttribute(viewer, "/", "Problem", PETSC_STRING, "tPSE", ierr)
+        call PetscViewerHDF5WriteAttribute(viewer, "/", "Problem", PETSC_STRING, "NPSE", ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Grid", PETSC_STRING, char(gridfile), ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Flow", PETSC_STRING, char(flowfile), ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Title", PETSC_STRING, char(title), ierr)

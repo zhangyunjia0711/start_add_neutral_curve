@@ -101,8 +101,8 @@ module mod_nonlinear_term
     type, extends(type_solver_abstract) :: type_nonlinear_term
 
         integer :: m
-        integer :: n
-        integer :: msp, nsp
+        integer :: n0
+        integer :: msp, nsp0
         integer :: jn
 
         DM :: dm
@@ -148,7 +148,7 @@ module mod_nonlinear_term
     type :: type_point_spectrum
 
         integer :: m
-        integer :: n
+        integer :: n0
         complex(REAL64), dimension(:, :), allocatable :: rho_a0, u_a0, v_a0, w_a0, T_a0
         complex(REAL64), dimension(:, :), allocatable :: rho_t, u_t, v_t, w_t, T_t
         complex(REAL64), dimension(:, :), allocatable :: rho_x, u_x, v_x, w_x, T_x
@@ -214,121 +214,121 @@ contains
         call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn_, 5, 2, PETSC_NULL_INTEGER, this%dm, ierr)
         call DMSetUp(this%dm, ierr)
 
-        associate (m => this%m, n => this%n, msp => this%msp, nsp => this%nsp)
-            allocate (this%alf(0:m, -n:n))
-            allocate (this%exp_integral_alf(0:m, -n:n))
-            allocate (this%f_spectrum(5, this%jn, 0:m, -n:n))
-            allocate (this%f_physics(5, this%jn, 0:this%msp - 1, 0:this%nsp - 1))
+        associate (m => this%m, n0 => this%n0, msp => this%msp, nsp0 => this%nsp0)
+            allocate (this%alf(0:m, -n0:n0))
+            allocate (this%exp_integral_alf(0:m, -n0:n0))
+            allocate (this%f_spectrum(5, this%jn, 0:m, -n0:n0))
+            allocate (this%f_physics(5, this%jn, 0:this%msp - 1, 0:this%nsp0 - 1))
             allocate (this%dis_profile_spectrum(jn_))
-            allocate (this%phi0_array(5, this%jn, 0:m, -n:n)); this%phi0_array = 0.0d0
-            allocate (this%phi1_array(5, this%jn, 0:m, -n:n)); this%phi1_array = 0.0d0
-            allocate (this%phi2_array(5, this%jn, 0:m, -n:n)); this%phi2_array = 0.0d0
+            allocate (this%phi0_array(5, this%jn, 0:m, -n0:n0)); this%phi0_array = 0.0d0
+            allocate (this%phi1_array(5, this%jn, 0:m, -n0:n0)); this%phi1_array = 0.0d0
+            allocate (this%phi2_array(5, this%jn, 0:m, -n0:n0)); this%phi2_array = 0.0d0
             do j = 1, jn_
                 this%dis_profile_spectrum(j)%m = m
-                this%dis_profile_spectrum(j)%n = n
-                allocate (this%dis_profile_spectrum(j)%rho_a0(0:m, -n:n)); this%dis_profile_spectrum(j)%rho_a0 = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_a0(0:m, -n:n)); this%dis_profile_spectrum(j)%u_a0 = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_a0(0:m, -n:n)); this%dis_profile_spectrum(j)%v_a0 = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_a0(0:m, -n:n)); this%dis_profile_spectrum(j)%w_a0 = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_a0(0:m, -n:n)); this%dis_profile_spectrum(j)%T_a0 = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%rho_t(0:m, -n:n)); this%dis_profile_spectrum(j)%rho_t = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_t(0:m, -n:n)); this%dis_profile_spectrum(j)%u_t = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_t(0:m, -n:n)); this%dis_profile_spectrum(j)%v_t = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_t(0:m, -n:n)); this%dis_profile_spectrum(j)%w_t = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_t(0:m, -n:n)); this%dis_profile_spectrum(j)%T_t = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%rho_x(0:m, -n:n)); this%dis_profile_spectrum(j)%rho_x = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_x(0:m, -n:n)); this%dis_profile_spectrum(j)%u_x = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_x(0:m, -n:n)); this%dis_profile_spectrum(j)%v_x = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_x(0:m, -n:n)); this%dis_profile_spectrum(j)%w_x = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_x(0:m, -n:n)); this%dis_profile_spectrum(j)%T_x = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%rho_y(0:m, -n:n)); this%dis_profile_spectrum(j)%rho_y = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_y(0:m, -n:n)); this%dis_profile_spectrum(j)%u_y = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_y(0:m, -n:n)); this%dis_profile_spectrum(j)%v_y = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_y(0:m, -n:n)); this%dis_profile_spectrum(j)%w_y = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_y(0:m, -n:n)); this%dis_profile_spectrum(j)%T_y = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%rho_z(0:m, -n:n)); this%dis_profile_spectrum(j)%rho_z = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_z(0:m, -n:n)); this%dis_profile_spectrum(j)%u_z = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_z(0:m, -n:n)); this%dis_profile_spectrum(j)%v_z = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_z(0:m, -n:n)); this%dis_profile_spectrum(j)%w_z = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_z(0:m, -n:n)); this%dis_profile_spectrum(j)%T_z = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_xx(0:m, -n:n)); this%dis_profile_spectrum(j)%u_xx = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_xx(0:m, -n:n)); this%dis_profile_spectrum(j)%v_xx = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_xx(0:m, -n:n)); this%dis_profile_spectrum(j)%w_xx = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_xx(0:m, -n:n)); this%dis_profile_spectrum(j)%T_xx = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_yy(0:m, -n:n)); this%dis_profile_spectrum(j)%u_yy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_yy(0:m, -n:n)); this%dis_profile_spectrum(j)%v_yy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_yy(0:m, -n:n)); this%dis_profile_spectrum(j)%w_yy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_yy(0:m, -n:n)); this%dis_profile_spectrum(j)%T_yy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_zz(0:m, -n:n)); this%dis_profile_spectrum(j)%u_zz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_zz(0:m, -n:n)); this%dis_profile_spectrum(j)%v_zz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_zz(0:m, -n:n)); this%dis_profile_spectrum(j)%w_zz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%T_zz(0:m, -n:n)); this%dis_profile_spectrum(j)%T_zz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_xy(0:m, -n:n)); this%dis_profile_spectrum(j)%u_xy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_xy(0:m, -n:n)); this%dis_profile_spectrum(j)%v_xy = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%u_xz(0:m, -n:n)); this%dis_profile_spectrum(j)%u_xz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_xz(0:m, -n:n)); this%dis_profile_spectrum(j)%w_xz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%v_yz(0:m, -n:n)); this%dis_profile_spectrum(j)%v_yz = 0.0d0
-                allocate (this%dis_profile_spectrum(j)%w_yz(0:m, -n:n)); this%dis_profile_spectrum(j)%w_yz = 0.0d0
+                this%dis_profile_spectrum(j)%n0 = n0
+                allocate (this%dis_profile_spectrum(j)%rho_a0(0:m, -n0:n0)); this%dis_profile_spectrum(j)%rho_a0 = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_a0(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_a0 = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_a0(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_a0 = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_a0(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_a0 = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_a0(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_a0 = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%rho_t(0:m, -n0:n0)); this%dis_profile_spectrum(j)%rho_t = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_t(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_t = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_t(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_t = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_t(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_t = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_t(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_t = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%rho_x(0:m, -n0:n0)); this%dis_profile_spectrum(j)%rho_x = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_x(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_x = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_x(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_x = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_x(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_x = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_x(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_x = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%rho_y(0:m, -n0:n0)); this%dis_profile_spectrum(j)%rho_y = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_y(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_y = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_y(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_y = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_y(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_y = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_y(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_y = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%rho_z(0:m, -n0:n0)); this%dis_profile_spectrum(j)%rho_z = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_z(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_z = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_z(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_z = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_z(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_z = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_z(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_z = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_xx(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_xx = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_xx(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_xx = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_xx(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_xx = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_xx(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_xx = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_yy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_yy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_yy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_yy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_yy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_yy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_yy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_yy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_zz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_zz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_zz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_zz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_zz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_zz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%T_zz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%T_zz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_xy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_xy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_xy(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_xy = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%u_xz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%u_xz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_xz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_xz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%v_yz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%v_yz = 0.0d0
+                allocate (this%dis_profile_spectrum(j)%w_yz(0:m, -n0:n0)); this%dis_profile_spectrum(j)%w_yz = 0.0d0
             end do
 
-            allocate (point_physics%rho_a0(0:msp - 1, 0:nsp - 1)); point_physics%rho_a0 = 0.0d0
-            allocate (point_physics%u_a0(0:msp - 1, 0:nsp - 1)); point_physics%u_a0 = 0.0d0
-            allocate (point_physics%v_a0(0:msp - 1, 0:nsp - 1)); point_physics%v_a0 = 0.0d0
-            allocate (point_physics%w_a0(0:msp - 1, 0:nsp - 1)); point_physics%w_a0 = 0.0d0
-            allocate (point_physics%T_a0(0:msp - 1, 0:nsp - 1)); point_physics%T_a0 = 0.0d0
-            allocate (point_physics%rho_t(0:msp - 1, 0:nsp - 1)); point_physics%rho_t = 0.0d0
-            allocate (point_physics%u_t(0:msp - 1, 0:nsp - 1)); point_physics%u_t = 0.0d0
-            allocate (point_physics%v_t(0:msp - 1, 0:nsp - 1)); point_physics%v_t = 0.0d0
-            allocate (point_physics%w_t(0:msp - 1, 0:nsp - 1)); point_physics%w_t = 0.0d0
-            allocate (point_physics%T_t(0:msp - 1, 0:nsp - 1)); point_physics%T_t = 0.0d0
-            allocate (point_physics%rho_x(0:msp - 1, 0:nsp - 1)); point_physics%rho_x = 0.0d0
-            allocate (point_physics%u_x(0:msp - 1, 0:nsp - 1)); point_physics%u_x = 0.0d0
-            allocate (point_physics%v_x(0:msp - 1, 0:nsp - 1)); point_physics%v_x = 0.0d0
-            allocate (point_physics%w_x(0:msp - 1, 0:nsp - 1)); point_physics%w_x = 0.0d0
-            allocate (point_physics%T_x(0:msp - 1, 0:nsp - 1)); point_physics%T_x = 0.0d0
-            allocate (point_physics%rho_y(0:msp - 1, 0:nsp - 1)); point_physics%rho_y = 0.0d0
-            allocate (point_physics%u_y(0:msp - 1, 0:nsp - 1)); point_physics%u_y = 0.0d0
-            allocate (point_physics%v_y(0:msp - 1, 0:nsp - 1)); point_physics%v_y = 0.0d0
-            allocate (point_physics%w_y(0:msp - 1, 0:nsp - 1)); point_physics%w_y = 0.0d0
-            allocate (point_physics%T_y(0:msp - 1, 0:nsp - 1)); point_physics%T_y = 0.0d0
-            allocate (point_physics%rho_z(0:msp - 1, 0:nsp - 1)); point_physics%rho_z = 0.0d0
-            allocate (point_physics%u_z(0:msp - 1, 0:nsp - 1)); point_physics%u_z = 0.0d0
-            allocate (point_physics%v_z(0:msp - 1, 0:nsp - 1)); point_physics%v_z = 0.0d0
-            allocate (point_physics%w_z(0:msp - 1, 0:nsp - 1)); point_physics%w_z = 0.0d0
-            allocate (point_physics%T_z(0:msp - 1, 0:nsp - 1)); point_physics%T_z = 0.0d0
-            allocate (point_physics%u_xx(0:msp - 1, 0:nsp - 1)); point_physics%u_xx = 0.0d0
-            allocate (point_physics%v_xx(0:msp - 1, 0:nsp - 1)); point_physics%v_xx = 0.0d0
-            allocate (point_physics%w_xx(0:msp - 1, 0:nsp - 1)); point_physics%w_xx = 0.0d0
-            allocate (point_physics%T_xx(0:msp - 1, 0:nsp - 1)); point_physics%T_xx = 0.0d0
-            allocate (point_physics%u_yy(0:msp - 1, 0:nsp - 1)); point_physics%u_yy = 0.0d0
-            allocate (point_physics%v_yy(0:msp - 1, 0:nsp - 1)); point_physics%v_yy = 0.0d0
-            allocate (point_physics%w_yy(0:msp - 1, 0:nsp - 1)); point_physics%w_yy = 0.0d0
-            allocate (point_physics%T_yy(0:msp - 1, 0:nsp - 1)); point_physics%T_yy = 0.0d0
-            allocate (point_physics%u_zz(0:msp - 1, 0:nsp - 1)); point_physics%u_zz = 0.0d0
-            allocate (point_physics%v_zz(0:msp - 1, 0:nsp - 1)); point_physics%v_zz = 0.0d0
-            allocate (point_physics%w_zz(0:msp - 1, 0:nsp - 1)); point_physics%w_zz = 0.0d0
-            allocate (point_physics%T_zz(0:msp - 1, 0:nsp - 1)); point_physics%T_zz = 0.0d0
-            allocate (point_physics%u_xy(0:msp - 1, 0:nsp - 1)); point_physics%u_xy = 0.0d0
-            allocate (point_physics%v_xy(0:msp - 1, 0:nsp - 1)); point_physics%v_xy = 0.0d0
-            allocate (point_physics%u_xz(0:msp - 1, 0:nsp - 1)); point_physics%u_xz = 0.0d0
-            allocate (point_physics%w_xz(0:msp - 1, 0:nsp - 1)); point_physics%w_xz = 0.0d0
-            allocate (point_physics%v_yz(0:msp - 1, 0:nsp - 1)); point_physics%v_yz = 0.0d0
-            allocate (point_physics%w_yz(0:msp - 1, 0:nsp - 1)); point_physics%w_yz = 0.0d0
+            allocate (point_physics%rho_a0(0:msp - 1, 0:nsp0 - 1)); point_physics%rho_a0 = 0.0d0
+            allocate (point_physics%u_a0(0:msp - 1, 0:nsp0 - 1)); point_physics%u_a0 = 0.0d0
+            allocate (point_physics%v_a0(0:msp - 1, 0:nsp0 - 1)); point_physics%v_a0 = 0.0d0
+            allocate (point_physics%w_a0(0:msp - 1, 0:nsp0 - 1)); point_physics%w_a0 = 0.0d0
+            allocate (point_physics%T_a0(0:msp - 1, 0:nsp0 - 1)); point_physics%T_a0 = 0.0d0
+            allocate (point_physics%rho_t(0:msp - 1, 0:nsp0 - 1)); point_physics%rho_t = 0.0d0
+            allocate (point_physics%u_t(0:msp - 1, 0:nsp0 - 1)); point_physics%u_t = 0.0d0
+            allocate (point_physics%v_t(0:msp - 1, 0:nsp0 - 1)); point_physics%v_t = 0.0d0
+            allocate (point_physics%w_t(0:msp - 1, 0:nsp0 - 1)); point_physics%w_t = 0.0d0
+            allocate (point_physics%T_t(0:msp - 1, 0:nsp0 - 1)); point_physics%T_t = 0.0d0
+            allocate (point_physics%rho_x(0:msp - 1, 0:nsp0 - 1)); point_physics%rho_x = 0.0d0
+            allocate (point_physics%u_x(0:msp - 1, 0:nsp0 - 1)); point_physics%u_x = 0.0d0
+            allocate (point_physics%v_x(0:msp - 1, 0:nsp0 - 1)); point_physics%v_x = 0.0d0
+            allocate (point_physics%w_x(0:msp - 1, 0:nsp0 - 1)); point_physics%w_x = 0.0d0
+            allocate (point_physics%T_x(0:msp - 1, 0:nsp0 - 1)); point_physics%T_x = 0.0d0
+            allocate (point_physics%rho_y(0:msp - 1, 0:nsp0 - 1)); point_physics%rho_y = 0.0d0
+            allocate (point_physics%u_y(0:msp - 1, 0:nsp0 - 1)); point_physics%u_y = 0.0d0
+            allocate (point_physics%v_y(0:msp - 1, 0:nsp0 - 1)); point_physics%v_y = 0.0d0
+            allocate (point_physics%w_y(0:msp - 1, 0:nsp0 - 1)); point_physics%w_y = 0.0d0
+            allocate (point_physics%T_y(0:msp - 1, 0:nsp0 - 1)); point_physics%T_y = 0.0d0
+            allocate (point_physics%rho_z(0:msp - 1, 0:nsp0 - 1)); point_physics%rho_z = 0.0d0
+            allocate (point_physics%u_z(0:msp - 1, 0:nsp0 - 1)); point_physics%u_z = 0.0d0
+            allocate (point_physics%v_z(0:msp - 1, 0:nsp0 - 1)); point_physics%v_z = 0.0d0
+            allocate (point_physics%w_z(0:msp - 1, 0:nsp0 - 1)); point_physics%w_z = 0.0d0
+            allocate (point_physics%T_z(0:msp - 1, 0:nsp0 - 1)); point_physics%T_z = 0.0d0
+            allocate (point_physics%u_xx(0:msp - 1, 0:nsp0 - 1)); point_physics%u_xx = 0.0d0
+            allocate (point_physics%v_xx(0:msp - 1, 0:nsp0 - 1)); point_physics%v_xx = 0.0d0
+            allocate (point_physics%w_xx(0:msp - 1, 0:nsp0 - 1)); point_physics%w_xx = 0.0d0
+            allocate (point_physics%T_xx(0:msp - 1, 0:nsp0 - 1)); point_physics%T_xx = 0.0d0
+            allocate (point_physics%u_yy(0:msp - 1, 0:nsp0 - 1)); point_physics%u_yy = 0.0d0
+            allocate (point_physics%v_yy(0:msp - 1, 0:nsp0 - 1)); point_physics%v_yy = 0.0d0
+            allocate (point_physics%w_yy(0:msp - 1, 0:nsp0 - 1)); point_physics%w_yy = 0.0d0
+            allocate (point_physics%T_yy(0:msp - 1, 0:nsp0 - 1)); point_physics%T_yy = 0.0d0
+            allocate (point_physics%u_zz(0:msp - 1, 0:nsp0 - 1)); point_physics%u_zz = 0.0d0
+            allocate (point_physics%v_zz(0:msp - 1, 0:nsp0 - 1)); point_physics%v_zz = 0.0d0
+            allocate (point_physics%w_zz(0:msp - 1, 0:nsp0 - 1)); point_physics%w_zz = 0.0d0
+            allocate (point_physics%T_zz(0:msp - 1, 0:nsp0 - 1)); point_physics%T_zz = 0.0d0
+            allocate (point_physics%u_xy(0:msp - 1, 0:nsp0 - 1)); point_physics%u_xy = 0.0d0
+            allocate (point_physics%v_xy(0:msp - 1, 0:nsp0 - 1)); point_physics%v_xy = 0.0d0
+            allocate (point_physics%u_xz(0:msp - 1, 0:nsp0 - 1)); point_physics%u_xz = 0.0d0
+            allocate (point_physics%w_xz(0:msp - 1, 0:nsp0 - 1)); point_physics%w_xz = 0.0d0
+            allocate (point_physics%v_yz(0:msp - 1, 0:nsp0 - 1)); point_physics%v_yz = 0.0d0
+            allocate (point_physics%w_yz(0:msp - 1, 0:nsp0 - 1)); point_physics%w_yz = 0.0d0
 
         end associate
 
         ! call InitialSpectralScheme(this%handle, 4*this%m, 4*this%n)
-        call this%handle_new%initialize(this%msp, this%nsp)
+        call this%handle_new%initialize(this%msp, this%nsp0)
 
-        allocate(dphidi(5, this%jn, 0:this%m, -this%n:this%n))
-        allocate(dphidj(5, this%jn, 0:this%m, -this%n:this%n))
-        allocate(dphidij(5, this%jn, 0:this%m, -this%n:this%n))
-        allocate(dphidjj(5, this%jn, 0:this%m, -this%n:this%n))
-        allocate(dphidx(5, this%jn, 0:this%m, -this%n:this%n))
-        allocate(dphidy(5, this%jn, 0:this%m, -this%n:this%n))
-        allocate(dphidxx(5, this%jn, 0:this%m, -this%n:this%n))
-        allocate(dphidxy(5, this%jn, 0:this%m, -this%n:this%n))
-        allocate(dphidyy(5, this%jn, 0:this%m, -this%n:this%n))
+        allocate(dphidi(5, this%jn, 0:this%m, -this%n0:this%n0))
+        allocate(dphidj(5, this%jn, 0:this%m, -this%n0:this%n0))
+        allocate(dphidij(5, this%jn, 0:this%m, -this%n0:this%n0))
+        allocate(dphidjj(5, this%jn, 0:this%m, -this%n0:this%n0))
+        allocate(dphidx(5, this%jn, 0:this%m, -this%n0:this%n0))
+        allocate(dphidy(5, this%jn, 0:this%m, -this%n0:this%n0))
+        allocate(dphidxx(5, this%jn, 0:this%m, -this%n0:this%n0))
+        allocate(dphidxy(5, this%jn, 0:this%m, -this%n0:this%n0))
+        allocate(dphidyy(5, this%jn, 0:this%m, -this%n0:this%n0))
 
     end subroutine initial_nonliner_term
 
@@ -337,16 +337,16 @@ contains
         use stdlib_optval, only: optval
         implicit none
         class(type_nonlinear_term), intent(inout) :: this
-        complex(REAL64), intent(in) :: alf(0:this%m, -this%n:this%n)
-        Complex(REAL64), intent(in) :: lnA0_(0:this%m, -this%n:this%n)
-        Vec, intent(inout) :: phi0(0:this%m, -this%n:this%n)
-        Vec, intent(inout) :: phi1(0:this%m, -this%n:this%n)
-        Vec, intent(inout) :: phi2(0:this%m, -this%n:this%n)
+        complex(REAL64), intent(in) :: alf(0:this%m, -this%n0:this%n0)
+        Complex(REAL64), intent(in) :: lnA0_(0:this%m, -this%n0:this%n0)
+        Vec, intent(inout) :: phi0(0:this%m, -this%n0:this%n0)
+        Vec, intent(inout) :: phi1(0:this%m, -this%n0:this%n0)
+        Vec, intent(inout) :: phi2(0:this%m, -this%n0:this%n0)
         real(REAL64), optional :: lambda
 
         integer :: m, n
 
-        do n = -this%n, this%n
+        do n = -this%n0, this%n0
             do m = 0, this%m
                 this%phi0_array(:, :, m, n) = get_array(phi0(m, n), this%dm)
                 this%phi1_array(:, :, m, n) = get_array(phi1(m, n), this%dm)
@@ -381,7 +381,7 @@ contains
 
         implicit none
         class(type_nonlinear_term), intent(inout) :: this
-        complex(real64), intent(inout) :: force(5, this%jn, 0:this%m, -this%n:this%n)
+        complex(real64), intent(inout) :: force(5, this%jn, 0:this%m, -this%n0:this%n0)
 
         force = this%f_spectrum
 
@@ -416,8 +416,8 @@ contains
 
         implicit none
         class(type_nonlinear_term), intent(inout) :: this
-        real(REAL64), intent(inout) :: f_phy(5, 0:this%msp - 1, 0:this%nsp - 1)
-        complex(REAL64), intent(inout) :: f_spt(5, 0:this%m, -this%n:this%n)
+        real(REAL64), intent(inout) :: f_phy(5, 0:this%msp - 1, 0:this%nsp0 - 1)
+        complex(REAL64), intent(inout) :: f_spt(5, 0:this%m, -this%n0:this%n0)
         integer :: l
 
         do l = 1, 5
@@ -437,22 +437,22 @@ contains
 
         implicit none
         class(type_nonlinear_term), intent(inout) :: this
-        real(real64), intent(inout) :: cc(0:this%msp - 1, 0:this%nsp - 1)
-        complex(real64), intent(inout) :: aa(0:this%m, -this%n:this%n)
+        real(real64), intent(inout) :: cc(0:this%msp - 1, 0:this%nsp0 - 1)
+        complex(real64), intent(inout) :: aa(0:this%m, -this%n0:this%n0)
 
-        integer :: msp, nsp, nma, nna
-        complex(REAL64) :: bb(0:this%msp - 1, 0:this%nsp - 1)
+        integer :: msp, nsp0, nma, nna0
+        complex(REAL64) :: bb(0:this%msp - 1, 0:this%nsp0 - 1)
         integer :: i, j, ii, jj
 
         msp = this%msp
-        nsp = this%nsp
+        nsp0 = this%nsp0
 
         nma = msp
-        nna = nsp
+        nna0 = nsp0
 
         bb = cc
 
-        call this%handle_new%fft(bb(0:msp - 1, 0:nsp - 1), bb(0:msp - 1, 0:nsp - 1))
+        call this%handle_new%fft(bb(0:msp - 1, 0:nsp0 - 1), bb(0:msp - 1, 0:nsp0 - 1))
 
         aa = 0.0d0
 
@@ -466,16 +466,16 @@ contains
             aa(i, 0) = bb(ii, 0)        !(-m,0)
         end do
 
-        do j = 1, this%n                       ! m=0,n=\0
-            jj = nna - j
+        do j = 1, this%n0                       ! m=0,n=\0
+            jj = nna0 - j
             aa(0, j) = bb(0, j)                !(0, n)
             aa(0, -j) = conjg(bb(0, j))        !(0,-n) !!may be not used in -this%n:-1
         end do
 
         do i = 1, this%m                       !m<0
             ii = nma - i
-            do j = 1, this%n
-                jj = nna - j
+            do j = 1, this%n0
+                jj = nna0 - j
                 aa(i, j) = bb(ii, j)          !(-m,n)
                 aa(i, -j) = bb(ii, jj)          !(-m,-n)
             end do
@@ -496,12 +496,12 @@ contains
         real(REAL64) :: gmf, gmf1, gm1m2, pe, paraR
         real(REAL64) :: hx, hz, hx_y, hz_y, d12, d32, d132
         real(real64), parameter :: para4b3 = 4.0d0/3.0d0
-        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp - 1) :: divu, divux, divuy, divuz
-        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp - 1) :: s11, s22, s33, s12, s13, s23
-        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp - 1) :: s11x, s12y, s13z
-        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp - 1) :: s12x, s22y, s23z
-        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp - 1) :: s13x, s23y, s33z
-        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp - 1) :: miu, miux, miuy, miuz
+        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp0 - 1) :: divu, divux, divuy, divuz
+        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp0 - 1) :: s11, s22, s33, s12, s13, s23
+        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp0 - 1) :: s11x, s12y, s13z
+        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp0 - 1) :: s12x, s22y, s23z
+        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp0 - 1) :: s13x, s23y, s33z
+        real(REAL64), dimension(0:this%msp - 1, 0:this%nsp0 - 1) :: miu, miux, miuy, miuz
         real(REAL64) :: cm, miu0, miu0T, miu0TT, miu0Tx, miu0Ty, miu0Tz
         real(REAL64) :: s110, s220, s330, s120, s130, s230
 
@@ -770,19 +770,19 @@ contains
 
         implicit none
         class(type_nonlinear_term), intent(inout) :: this
-        complex(REAL64), intent(in) :: aa(0:this%m, -this%n:this%n)
-        real(REAL64), intent(inout) :: cc(0:this%msp - 1, 0:this%nsp - 1)
-        complex(REAL64) :: bb(0:this%msp - 1, 0:this%nsp - 1)
-        integer :: nma, nna, msp, nsp
+        complex(REAL64), intent(in) :: aa(0:this%m, -this%n0:this%n0)
+        real(REAL64), intent(inout) :: cc(0:this%msp - 1, 0:this%nsp0 - 1)
+        complex(REAL64) :: bb(0:this%msp - 1, 0:this%nsp0 - 1)
+        integer :: nma, nna0, msp, nsp0
 
         integer :: shapeaa(2)
 
         integer :: i, ii, j, jj
 
         msp = this%msp
-        nsp = this%nsp
+        nsp0 = this%nsp0
         nma = msp
-        nna = nsp
+        nna0 = nsp0
 
         bb = 0.0d0
 
@@ -793,8 +793,8 @@ contains
             bb(i, 0) = conjg(aa(i, 0)) !(-m, 0)
         end do
 
-        do j = 1, this%n
-            jj = nna - j
+        do j = 1, this%n0
+            jj = nna0 - j
             bb(0, j) = aa(0, j)  !(0, n)
             bb(0, jj) = conjg(aa(0, j)) !(n, -n)  !!! @TODO this line may be not used for -n
         end do
@@ -802,8 +802,8 @@ contains
         !! m<0, n>0
         do i = 1, this%m
             ii = nma - i
-            do j = 1, this%n
-                jj = nna - j
+            do j = 1, this%n0
+                jj = nna0 - j
                 bb(ii, j) = aa(i, j) !(-m, n)
                 bb(ii, jj) = aa(i, -j) !(m, -n)
             end do
@@ -812,16 +812,16 @@ contains
         !! m<0, n<0
         do i = 1, this%m
             ii = nma - i
-            do j = 1, this%n
-                jj = nna - j
+            do j = 1, this%n0
+                jj = nna0 - j
                 bb(i, jj) = conjg(bb(ii, j))  !(-m, -n)
                 bb(i, j) = conjg(bb(ii, jj)) !(m, n)
             end do
         end do
 
-        !call SpectralBackward(this%handle, bb(0:msp - 1, 0:nsp - 1))
+        !call SpectralBackward(this%handle, bb(0:msp - 1, 0:nsp0 - 1))
         ! print*, bb(1, 0)
-        call this%handle_new%ifft(bb(0:msp - 1, 0:nsp - 1), bb(0:msp - 1, 0:nsp - 1))
+        call this%handle_new%ifft(bb(0:msp - 1, 0:nsp0 - 1), bb(0:msp - 1, 0:nsp0 - 1))
         cc = real(bb, REAL64)
         ! print*, cc(0, 0)
 
@@ -832,7 +832,7 @@ contains
         implicit none
         class(type_nonlinear_term), intent(inout) :: this
 
-        integer :: m, n, j, l
+        integer :: m, n0, j, l
 
         associate (profile => this%dis_profile_spectrum, exp_ialf => this%exp_integral_alf, &
                    phi0 => this%phi0_array, phi1 => this%phi1_array, phi2 => this%phi2_array, &
@@ -849,12 +849,12 @@ contains
             !           do j = 1, this%jn
 
             !! set profile phi_a0
-            do concurrent(j=1:this%jn, m=0:this%m, n=-this%n:this%n)
-                profile(j)%rho_a0(m, n) = phi0(1, j, m, n)*exp_ialf(m, n)
-                profile(j)%u_a0(m, n) = phi0(2, j, m, n)*exp_ialf(m, n)
-                profile(j)%v_a0(m, n) = phi0(3, j, m, n)*exp_ialf(m, n)
-                profile(j)%w_a0(m, n) = phi0(4, j, m, n)*exp_ialf(m, n)
-                profile(j)%T_a0(m, n) = phi0(5, j, m, n)*exp_ialf(m, n)
+            do concurrent(j=1:this%jn, m=0:this%m, n0=-this%n0:this%n0)
+                profile(j)%rho_a0(m, n0) = phi0(1, j, m, n0)*exp_ialf(m, n0)
+                profile(j)%u_a0(m, n0) = phi0(2, j, m, n0)*exp_ialf(m, n0)
+                profile(j)%v_a0(m, n0) = phi0(3, j, m, n0)*exp_ialf(m, n0)
+                profile(j)%w_a0(m, n0) = phi0(4, j, m, n0)*exp_ialf(m, n0)
+                profile(j)%T_a0(m, n0) = phi0(5, j, m, n0)*exp_ialf(m, n0)
             end do
             !       end do
             !   end do
@@ -863,18 +863,18 @@ contains
                 use mod_dx
 
             !!D phi /D xi
-                do concurrent(l=1:5, m=0:this%m, n=-this%n:this%n, j=1:this%jn)
-                    dphidi(l, j, m, n) = (phi0(l, j, m, n)*(1.0d0 + this%lambda) + &
-                                        & phi1(l, j, m, n)*(-1.0d0 - 2.0d0*this%lambda) + &
-                                        & phi2(l, j, m, n)*(this%lambda))
+                do concurrent(l=1:5, m=0:this%m, n0=-this%n0:this%n0, j=1:this%jn)
+                    dphidi(l, j, m, n0) = (phi0(l, j, m, n0)*(1.0d0 + this%lambda) + &
+                                        & phi1(l, j, m, n0)*(-1.0d0 - 2.0d0*this%lambda) + &
+                                        & phi2(l, j, m, n0)*(this%lambda))
                 end do
             !!D phi /D eta, D^2phi /D eta^2
                 !  do n = -this%n, this%n
                 !      do m = 0, this%m
                 !          do l = 1, 5
-                do concurrent(l=1:5, m=0:this%m, n=-this%n:this%n)
-                    call dx_fdm4nd_center(phi0(l, :, m, n), 1, this%jn, dphidj(l, :, m, n), 1, this%jn)
-                    call dxx_fdm4nd_center(phi0(l, :, m, n), 1, this%jn, dphidjj(l, :, m, n), 1, this%jn)
+                do concurrent(l=1:5, m=0:this%m, n0=-this%n0:this%n0)
+                    call dx_fdm4nd_center(phi0(l, :, m, n0), 1, this%jn, dphidj(l, :, m, n0), 1, this%jn)
+                    call dxx_fdm4nd_center(phi0(l, :, m, n0), 1, this%jn, dphidjj(l, :, m, n0), 1, this%jn)
                 end do
                 !          end do
                 !      end do
@@ -883,8 +883,8 @@ contains
                 !  do n = -this%n, this%n
                 !      do m = 0, this%m
                 !          do l = 1, 5
-                do concurrent(l=1:5, m=0:this%m, n=-this%n:this%n)
-                    call dx_fdm4nd_center(dphidi(l, :, m, n), 1, this%jn, dphidij(l, :, m, n), 1, this%jn)
+                do concurrent(l=1:5, m=0:this%m, n0=-this%n0:this%n0)
+                    call dx_fdm4nd_center(dphidi(l, :, m, n0), 1, this%jn, dphidij(l, :, m, n0), 1, this%jn)
                 end do
                 !          end do
                 !      end do
@@ -893,19 +893,19 @@ contains
                 !  do n = -this%n, this%n
                 !      do m = 0, this%m
                 !          do j = 1, this%jn
-                do concurrent(j=1:this%jn, m=0:this%m, n=-this%n:this%n)
-                    dphidx(:, j, m, n) = dphidi(:, j, m, n)*this%grid%xi_x(j) + dphidj(:, j, m, n)*eta_x(j)
-                    dphidy(:, j, m, n) = dphidi(:, j, m, n)*this%grid%xi_y(j) + dphidj(:, j, m, n)*eta_y(j)
+                do concurrent(j=1:this%jn, m=0:this%m, n0=-this%n0:this%n0)
+                    dphidx(:, j, m, n0) = dphidi(:, j, m, n0)*this%grid%xi_x(j) + dphidj(:, j, m, n0)*eta_x(j)
+                    dphidy(:, j, m, n0) = dphidi(:, j, m, n0)*this%grid%xi_y(j) + dphidj(:, j, m, n0)*eta_y(j)
 
-                    dphidxy(:, j, m, n) = dphidi(:, j, m, n)*xi_xy(j) + dphidj(:, j, m, n)*eta_xy(j) + &
-                                        & dphidjj(:, j, m, n)*(eta_y(j)*eta_x(j)) + &
-                                        & dphidij(:, j, m, n)*(xi_x(j)*eta_y(j) + xi_y(j)*eta_x(j))
-                    dphidyy(:, j, m, n) = dphidi(:, j, m, n)*xi_yy(j) + dphidj(:, j, m, n)*eta_yy(j) + &
-                                        & dphidjj(:, j, m, n)*(eta_y(j)*eta_y(j)) + &
-                                        & dphidij(:, j, m, n)*(2.0d0*xi_y(j)*eta_y(j))
-                    dphidxx(:, j, m, n) = dphidi(:, j, m, n)*xi_xx(j) + dphidj(:, j, m, n)*eta_xx(j) + &
-                                        & dphidjj(:, j, m, n)*(eta_x(j)*eta_x(j)) + &
-                                        & dphidij(:, j, m, n)*(2.0d0*xi_x(j)*eta_x(j))
+                    dphidxy(:, j, m, n0) = dphidi(:, j, m, n0)*xi_xy(j) + dphidj(:, j, m, n0)*eta_xy(j) + &
+                                        & dphidjj(:, j, m, n0)*(eta_y(j)*eta_x(j)) + &
+                                        & dphidij(:, j, m, n0)*(xi_x(j)*eta_y(j) + xi_y(j)*eta_x(j))
+                    dphidyy(:, j, m, n0) = dphidi(:, j, m, n0)*xi_yy(j) + dphidj(:, j, m, n0)*eta_yy(j) + &
+                                        & dphidjj(:, j, m, n0)*(eta_y(j)*eta_y(j)) + &
+                                        & dphidij(:, j, m, n0)*(2.0d0*xi_y(j)*eta_y(j))
+                    dphidxx(:, j, m, n0) = dphidi(:, j, m, n0)*xi_xx(j) + dphidj(:, j, m, n0)*eta_xx(j) + &
+                                        & dphidjj(:, j, m, n0)*(eta_x(j)*eta_x(j)) + &
+                                        & dphidij(:, j, m, n0)*(2.0d0*xi_x(j)*eta_x(j))
                 end do
                 !          end do
                 !      end do
@@ -919,62 +919,62 @@ contains
                 !     ! read(*, *)
                 ! end block
 
-                do concurrent(j=1:this%jn, m=0:this%m, n=-this%n:this%n)
+                do concurrent(j=1:this%jn, m=0:this%m, n0=-this%n0:this%n0)
                 !! dphi'dx_spt, dphi'dxx_spt
-                    profile(j)%rho_x(m, n) = dphidx(1, j, m, n)*exp_ialf(m, n) + ZI*alf(m, n)*profile(j)%rho_a0(m, n)
-                    profile(j)%u_x(m, n) = dphidx(2, j, m, n)*exp_ialf(m, n) + ZI*alf(m, n)*profile(j)%u_a0(m, n)
-                    profile(j)%v_x(m, n) = dphidx(3, j, m, n)*exp_ialf(m, n) + ZI*alf(m, n)*profile(j)%v_a0(m, n)
-                    profile(j)%w_x(m, n) = dphidx(4, j, m, n)*exp_ialf(m, n) + ZI*alf(m, n)*profile(j)%w_a0(m, n)
-                    profile(j)%T_x(m, n) = dphidx(5, j, m, n)*exp_ialf(m, n) + ZI*alf(m, n)*profile(j)%T_a0(m, n)
+                    profile(j)%rho_x(m, n0) = dphidx(1, j, m, n0)*exp_ialf(m, n0) + ZI*alf(m, n0)*profile(j)%rho_a0(m, n0)
+                    profile(j)%u_x(m, n0) = dphidx(2, j, m, n0)*exp_ialf(m, n0) + ZI*alf(m, n0)*profile(j)%u_a0(m, n0)
+                    profile(j)%v_x(m, n0) = dphidx(3, j, m, n0)*exp_ialf(m, n0) + ZI*alf(m, n0)*profile(j)%v_a0(m, n0)
+                    profile(j)%w_x(m, n0) = dphidx(4, j, m, n0)*exp_ialf(m, n0) + ZI*alf(m, n0)*profile(j)%w_a0(m, n0)
+                    profile(j)%T_x(m, n0) = dphidx(5, j, m, n0)*exp_ialf(m, n0) + ZI*alf(m, n0)*profile(j)%T_a0(m, n0)
                     ! auxx(j, m, n) = aua0(j, m, n)*aia*aia + 2.d0*aia*aux(j, m, n)*a0 + ai*alfx(m, n)*aua0(j, m, n)
-                    profile(j)%u_xx(m, n) = profile(j)%u_a0(m, n)*(ZI*alf(m, n))**2 + &
-                                          & 2.0d0*(ZI*alf(m, n))*dphidx(2, j, m, n)*exp_ialf(m, n)
-                    profile(j)%v_xx(m, n) = profile(j)%v_a0(m, n)*(ZI*alf(m, n))**2 + &
-                    & 2.0d0*(ZI*alf(m, n))*dphidx(3, j, m, n)*exp_ialf(m, n)
-                    profile(j)%w_xx(m, n) = profile(j)%w_a0(m, n)*(ZI*alf(m, n))**2 + &
-                    & 2.0d0*(ZI*alf(m, n))*dphidx(4, j, m, n)*exp_ialf(m, n)
-                    profile(j)%T_xx(m, n) = profile(j)%T_a0(m, n)*(ZI*alf(m, n))**2 + &
-                    & 2.0d0*(ZI*alf(m, n))*dphidx(5, j, m, n)*exp_ialf(m, n)
+                    profile(j)%u_xx(m, n0) = profile(j)%u_a0(m, n0)*(ZI*alf(m, n0))**2 + &
+                                          & 2.0d0*(ZI*alf(m, n0))*dphidx(2, j, m, n0)*exp_ialf(m, n0)
+                    profile(j)%v_xx(m, n0) = profile(j)%v_a0(m, n0)*(ZI*alf(m, n0))**2 + &
+                    & 2.0d0*(ZI*alf(m, n0))*dphidx(3, j, m, n0)*exp_ialf(m, n0)
+                    profile(j)%w_xx(m, n0) = profile(j)%w_a0(m, n0)*(ZI*alf(m, n0))**2 + &
+                    & 2.0d0*(ZI*alf(m, n0))*dphidx(4, j, m, n0)*exp_ialf(m, n0)
+                    profile(j)%T_xx(m, n0) = profile(j)%T_a0(m, n0)*(ZI*alf(m, n0))**2 + &
+                    & 2.0d0*(ZI*alf(m, n0))*dphidx(5, j, m, n0)*exp_ialf(m, n0)
                 end do
 
                 !! dphi'dt_spt, dphi'dz_spt
-                do concurrent(j=1:this%jn, m=0:this%m, n=-this%n:this%n)
-                    profile(j)%rho_t(m, n) = -ZI*(ome1*real(m, REAL64)+ome2*real(n, REAL64))*profile(j)%rho_a0(m, n)
-                    profile(j)%u_t(m, n) = -ZI*(ome1*real(m, REAL64)+ome2*real(n, REAL64))*profile(j)%u_a0(m, n)
-                    profile(j)%v_t(m, n) = -ZI*(ome1*real(m, REAL64)+ome2*real(n, REAL64))*profile(j)%v_a0(m, n)
-                    profile(j)%w_t(m, n) = -ZI*(ome1*real(m, REAL64)+ome2*real(n, REAL64))*profile(j)%w_a0(m, n)
-                    profile(j)%T_t(m, n) = -ZI*(ome1*real(m, REAL64)+ome2*real(n, REAL64))*profile(j)%T_a0(m, n)
-                    profile(j)%rho_z(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%rho_a0(m, n)
-                    profile(j)%u_z(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%u_a0(m, n)
-                    profile(j)%v_z(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%v_a0(m, n)
-                    profile(j)%w_z(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%w_a0(m, n)
-                    profile(j)%T_z(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%T_a0(m, n)
+                do concurrent(j=1:this%jn, m=0:this%m, n0=-this%n0:this%n0)
+                    profile(j)%rho_t(m, n0) = -ZI*(ome1*real(m, REAL64)+ome2*real(n0, REAL64))*profile(j)%rho_a0(m, n0)
+                    profile(j)%u_t(m, n0) = -ZI*(ome1*real(m, REAL64)+ome2*real(n0, REAL64))*profile(j)%u_a0(m, n0)
+                    profile(j)%v_t(m, n0) = -ZI*(ome1*real(m, REAL64)+ome2*real(n0, REAL64))*profile(j)%v_a0(m, n0)
+                    profile(j)%w_t(m, n0) = -ZI*(ome1*real(m, REAL64)+ome2*real(n0, REAL64))*profile(j)%w_a0(m, n0)
+                    profile(j)%T_t(m, n0) = -ZI*(ome1*real(m, REAL64)+ome2*real(n0, REAL64))*profile(j)%T_a0(m, n0)
+                    profile(j)%rho_z(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%rho_a0(m, n0)
+                    profile(j)%u_z(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%u_a0(m, n0)
+                    profile(j)%v_z(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%v_a0(m, n0)
+                    profile(j)%w_z(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%w_a0(m, n0)
+                    profile(j)%T_z(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%T_a0(m, n0)
 
-                    profile(j)%u_zz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%u_z(m, n)
-                    profile(j)%v_zz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%v_z(m, n)
-                    profile(j)%w_zz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%w_z(m, n)
-                    profile(j)%T_zz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%T_z(m, n)
+                    profile(j)%u_zz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%u_z(m, n0)
+                    profile(j)%v_zz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%v_z(m, n0)
+                    profile(j)%w_zz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%w_z(m, n0)
+                    profile(j)%T_zz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%T_z(m, n0)
                     !! dphi'dxz
-                    profile(j)%u_xz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%u_x(m, n)
-                    profile(j)%w_xz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%w_x(m, n)
+                    profile(j)%u_xz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%u_x(m, n0)
+                    profile(j)%w_xz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%w_x(m, n0)
                 end do
 
-                do concurrent(j=1:this%jn, m=0:this%m, n=-this%n:this%n)
+                do concurrent(j=1:this%jn, m=0:this%m, n0=-this%n0:this%n0)
                    !! dphi'dy_spt, d^2phi'dyy_spt
-                    profile(j)%rho_y(m, n) = dphidy(1, j, m, n)*exp_ialf(m, n)
-                    profile(j)%u_y(m, n) = dphidy(2, j, m, n)*exp_ialf(m, n)
-                    profile(j)%v_y(m, n) = dphidy(3, j, m, n)*exp_ialf(m, n)
-                    profile(j)%w_y(m, n) = dphidy(4, j, m, n)*exp_ialf(m, n)
-                    profile(j)%T_y(m, n) = dphidy(5, j, m, n)*exp_ialf(m, n)
-                    profile(j)%u_yy(m, n) = dphidyy(2, j, m, n)*exp_ialf(m, n)
-                    profile(j)%v_yy(m, n) = dphidyy(3, j, m, n)*exp_ialf(m, n)
-                    profile(j)%w_yy(m, n) = dphidyy(4, j, m, n)*exp_ialf(m, n)
-                    profile(j)%T_yy(m, n) = dphidyy(5, j, m, n)*exp_ialf(m, n)
+                    profile(j)%rho_y(m, n0) = dphidy(1, j, m, n0)*exp_ialf(m, n0)
+                    profile(j)%u_y(m, n0) = dphidy(2, j, m, n0)*exp_ialf(m, n0)
+                    profile(j)%v_y(m, n0) = dphidy(3, j, m, n0)*exp_ialf(m, n0)
+                    profile(j)%w_y(m, n0) = dphidy(4, j, m, n0)*exp_ialf(m, n0)
+                    profile(j)%T_y(m, n0) = dphidy(5, j, m, n0)*exp_ialf(m, n0)
+                    profile(j)%u_yy(m, n0) = dphidyy(2, j, m, n0)*exp_ialf(m, n0)
+                    profile(j)%v_yy(m, n0) = dphidyy(3, j, m, n0)*exp_ialf(m, n0)
+                    profile(j)%w_yy(m, n0) = dphidyy(4, j, m, n0)*exp_ialf(m, n0)
+                    profile(j)%T_yy(m, n0) = dphidyy(5, j, m, n0)*exp_ialf(m, n0)
                     !! dphi'dxy_spt, dphi'dyz_spt
-                    profile(j)%u_xy(m, n) = dphidxy(2, j, m, n)*exp_ialf(m, n) + ZI*alf(m, n)*profile(j)%u_y(m, n)
-                    profile(j)%v_xy(m, n) = dphidxy(3, j, m, n)*exp_ialf(m, n) + ZI*alf(m, n)*profile(j)%v_y(m, n)
-                    profile(j)%v_yz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%v_y(m, n)
-                    profile(j)%w_yz(m, n) = ZI*(bat1*real(m, REAL64)+bat2*real(n, REAL64))*profile(j)%w_y(m, n)
+                    profile(j)%u_xy(m, n0) = dphidxy(2, j, m, n0)*exp_ialf(m, n0) + ZI*alf(m, n0)*profile(j)%u_y(m, n0)
+                    profile(j)%v_xy(m, n0) = dphidxy(3, j, m, n0)*exp_ialf(m, n0) + ZI*alf(m, n0)*profile(j)%v_y(m, n0)
+                    profile(j)%v_yz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%v_y(m, n0)
+                    profile(j)%w_yz(m, n0) = ZI*(bat1*real(m, REAL64)+bat2*real(n0, REAL64))*profile(j)%w_y(m, n0)
                 end do
                 ! block
                 !     print *, 'check dis profile'
@@ -998,7 +998,7 @@ contains
 
         do j = 1, this%jn
             this%dis_profile_spectrum(j)%m = 0
-            this%dis_profile_spectrum(j)%n = 0
+            this%dis_profile_spectrum(j)%n0 = 0
             deallocate (this%dis_profile_spectrum(j)%rho_a0)
             deallocate (this%dis_profile_spectrum(j)%u_a0)
             deallocate (this%dis_profile_spectrum(j)%v_a0)
@@ -1098,7 +1098,7 @@ contains
         deallocate (this%phi2_array)
         call this%handle_new%Finalize()
         this%m = 0
-        this%n = 0
+        this%n0 = 0
         this%ome1 = 0
         this%bat1 = 0
         this%ome2 = 0
@@ -1198,12 +1198,12 @@ contains
             else
                 this%msp = 4*(this%m + 1)
             end if
-        case ("n")
-            this%n = value
-            if (this%n == 0) then
-                this%nsp = 1
+        case ("n0")
+            this%n0 = value
+            if (this%n0 == 0) then
+                this%nsp0 = 1
             else
-                this%nsp = 4*(this%n + 1)
+                this%nsp0 = 4*(this%n0 + 1)
             end if
         case ("jn")
             this%jn = value

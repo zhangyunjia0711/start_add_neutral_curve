@@ -46,7 +46,7 @@ module global_parameters
    integer :: ndis
    real(REAL64) :: alpha(2), beta(2), omega(2)
    complex(REAL64) :: theta1, theta2
-   integer :: m_global, n_global
+   integer :: m_global, n0_global, n1_global
 
    integer :: bc_y0, bc_yn
 
