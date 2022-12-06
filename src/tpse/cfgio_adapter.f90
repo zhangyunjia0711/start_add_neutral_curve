@@ -225,6 +225,7 @@ contains
         integer :: i, l
 
         call cfg%get('tpse', 'ntheta', ntheta)
+        m_global=1; n0_global = 1; n1_global = 1; n2_global = 1
         call cfg%get('tpse', 'm_global', m_global); m_global=m_global-1
         call cfg%get('tpse', 'n0_global', n0_global); n0_global=n0_global-1
 

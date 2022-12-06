@@ -37,7 +37,7 @@ module mod_npse
     use global_parameters, only: yb, ye!, xb, xe
 
     use global_parameters, only: istart, iend
-    use global_parameters, only: m_global, n0_global, n1_global
+    use global_parameters, only: m_global, n0_global, n1_global, n2_global
     use global_parameters, only: theta, ntheta
     use global_parameters, only: inlet_dis
     use global_parameters, only: ndis
