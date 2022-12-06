@@ -230,14 +230,19 @@ contains
         if(cfg%has_key('tpse', 'omega0') .and. cfg%has_key('tpse', 'beta0')) then
             call cfg%get('tpse', 'omega0', ome0); theta1= cmplx(ome0, 0.0d0, kind=REAL64) 
             call cfg%get('tpse', 'beta0', bat0); theta2 = cmplx(0.0d0, bat0, kind=REAL64)
+            format0 = '(A, I4, 1X, A, I4, 1X, A, 2F10.5)'
+            print trim(format0), 'The computational range is', 0, 'to', m_global, 'with omega=', ome0
+            print trim(format0), 'The computational range is', -n_global, 'to', n_global, 'with bat=', bat0
         elseif(cfg%has_key('tpse', 'theta1') .and. cfg%has_key('tpse', 'theta2')) then
             call cfg%get('tpse', 'theta1', theta1)
             call cfg%get('tpse', 'theta2', theta2)
+            format0 = '(A, I4, 1X, A, I4, 1X, A, 2F10.5)'
+            print trim(format0), 'The computational range is', 0, 'to', m_global, 'with theta1=', theta1
+            print trim(format0), 'The computational range is', -n_global, 'to', n_global, 'with theta2=', theta2
+        else
+            error stop "the config.ini should contain 'omega0, beta0' or 'theta1, theta2' keywords."
         endif
 
-        format0 = '(A, I4, 1X, A, I4, 1X, A, 2F10.5)'
-        print trim(format0), 'The computational range is', 0, 'to', m_global, 'with theta1=', theta1
-        print trim(format0), 'The computational range is', -n_global, 'to', n_global, 'with theta2=', theta2
 
         npar = 2
 
