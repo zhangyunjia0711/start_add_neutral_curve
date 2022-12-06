@@ -38,7 +38,7 @@ module mod_npse
 
     use global_parameters, only: istart, iend
     use global_parameters, only: m_global, n_global
-    use global_parameters, only: ome0, bat0
+    use global_parameters, only: theta1, theta2
     use global_parameters, only: inlet_dis
     use global_parameters, only: ndis
     use global_parameters, only: isothermal
@@ -114,15 +114,17 @@ contains
 
         allocate (phi(istart - 1:iend, 0:m_global, -n_global:n_global))
         allocate (phi_old(0:m_global, -n_global:n_global))
-        allocate (alf(istart:iend, 0:m_global, -n_global:n_global))
+        allocate (alf(istart:iend, 0:m_global, -n_global:n_global)); alf= 0.0d0
         allocate (VecDistance(0:m_global, -n_global:n_global))
         allocate (nonlinear_term(5, jn, 0:m_global, -n_global:n_global)); nonlinear_term = 0.0d0
         allocate (nonlinear_term_old(5, jn, 0:m_global, -n_global:n_global)); nonlinear_term_old = 0.0d0
 
         call nonlinear_solver%set_parameter("m", m_global)
         call nonlinear_solver%set_parameter("n", n_global)
-        call nonlinear_solver%set_parameter("ome0", ome0)
-        call nonlinear_solver%set_parameter("bat0", bat0)
+        call nonlinear_solver%set_parameter("ome1", theta1%re)
+        call nonlinear_solver%set_parameter("ome2", theta2%re)
+        call nonlinear_solver%set_parameter("bat1", theta1%im)
+        call nonlinear_solver%set_parameter("bat2", theta2%im)
         call nonlinear_solver%initial(jn, Re, Ma, Te)
 
         allocate (solve_alpha(0:m_global, -n_global:n_global))
@@ -193,8 +195,8 @@ contains
         call lst%setup()
 
         do i = 1, ndis
-            ome = ome0*inlet_dis(i)%m
-            bat = bat0*inlet_dis(i)%n
+            ome = theta1%re*inlet_dis(i)%m+theta2%re*inlet_dis(i)%n
+            bat = theta1%im*inlet_dis(i)%m+theta2%im*inlet_dis(i)%n
             call lst%solve(ome, alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n), bat)
             call lst%get_eigf(phi(iloc, inlet_dis(i)%m, inlet_dis(i)%n))
             call VecScale(phi(iloc, inlet_dis(i)%m, inlet_dis(i)%n), inlet_dis(i)%amp, ierr)
@@ -327,8 +329,8 @@ contains
                 iterator_times = 0
                 do l = 1, ndis
                     m = inlet_dis(l)%m; n = inlet_dis(l)%n
-                    call npse_eqn%set_parameter("ome", ome0*m)
-                    call npse_eqn%set_parameter("bat", bat0*n)
+                    call npse_eqn%set_parameter("ome", theta1%re*m+theta2%re*n)
+                    call npse_eqn%set_parameter("bat", theta1%im*m+theta2%im*n)
                     call npse_eqn%set_parameter("solve_alpha", solve_alpha(m, n))
 
                     call npse_eqn%set_force(nonlinear_term(:, :, m, n))
@@ -363,8 +365,8 @@ contains
 
                     do n = -n_global, n_global
                         do m = 0, m_global
-                            call npse_eqn%set_parameter("ome", ome0*m)
-                            call npse_eqn%set_parameter("bat", bat0*n)
+                            call npse_eqn%set_parameter("ome", theta1%re*m+theta2%re*n)
+                            call npse_eqn%set_parameter("bat", theta1%im*m+theta2%im*n)
                             call npse_eqn%set_parameter("solve_alpha", SOLVE_ALPHA_NONE)
 
                             !   call VecCopy(phi(i - 1, m, n), phi(i, m, n), ierr)
@@ -413,7 +415,7 @@ contains
                 print *, 'The whole iteration times is', sum(iterator_times)
                 print "(A,I2,A,I2,A, F13.7,A,F14.7, A, F10.5)", 'alpha(', inlet_dis(1)%m, ', ', inlet_dis(1)%n, ')=', & !,,A, F10.5
                     alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%re, ' ', alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%im, &
-                    "im,   bat=", bat0*inlet_dis(1)%n
+                    "im,   bat=", theta1%im*inlet_dis(1)%m+theta2%im*inlet_dis(1)%n
 
                 itimes_alpha = itimes_alpha + 1
 
@@ -460,29 +462,29 @@ contains
         implicit none
         integer, intent(in) :: i
         type(type_lst_grid_profile), intent(in) :: grid
-        real(REAL64):: alf_tmp
+        complex(REAL64):: alf_tmp
         integer :: m, n
-
-        if (inlet_dis(1)%m /= 0) then
-            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%re/inlet_dis(1)%m
+!! 对tpse需要进行修改 修改更新波数的方法和方式以及判断标准
+        if (abs(inlet_dis(1)%m*theta1%re+inlet_dis(1)%n*theta2%re) >= epsilon(1.0d0)) then  !! 非横流
+            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)/(inlet_dis(1)%m*theta1%re+inlet_dis(1)%n*theta2%re)
             do n = -n_global, n_global
                 do m = 0, m_global
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
                         alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
-                        alf(i, m, n) = alf_tmp*m
+                        alf(i, m, n) = alf_tmp*(m*theta1%re+n*theta2%re)
                     end if
                     if (i > istart) lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid%xi_x(yb + 1)
                 end do
             end do
-        else
-            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)%re/inlet_dis(1)%n
+        else  !! 横流
+            alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)/(inlet_dis(1)%m*theta1%im+inlet_dis(1)%n*theta2%im)
             do n = -n_global, n_global
                 do m = 0, m_global
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
-                        alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*n
+                        alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
-                        alf(i, m, n) = alf_tmp*n
+                        alf(i, m, n) = alf_tmp*(inlet_dis(1)%m*theta1%im+inlet_dis(1)%n*theta2%im)
                     end if
                     if (i > istart) lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid%xi_x(yb + 1)
                 end do
@@ -576,7 +578,7 @@ contains
         strings = "Writing the shape functions phi to "//name//'.\n'
         call PetscPrintf(PETSC_COMM_WORLD, char(strings), ierr)
 
-        call PetscViewerHDF5WriteAttribute(viewer, "/", "Problem", PETSC_STRING, "NPSE", ierr)
+        call PetscViewerHDF5WriteAttribute(viewer, "/", "Problem", PETSC_STRING, "tPSE", ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Grid", PETSC_STRING, char(gridfile), ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Flow", PETSC_STRING, char(flowfile), ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Title", PETSC_STRING, char(title), ierr)
@@ -584,8 +586,10 @@ contains
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Ma", PETSC_DOUBLE, Ma, ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Re", PETSC_DOUBLE, Re, ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Te", PETSC_DOUBLE, Te, ierr)
-        call PetscViewerHDF5WriteAttribute(viewer, "/", "omega0", PETSC_DOUBLE, ome0, ierr)
-        call PetscViewerHDF5WriteAttribute(viewer, "/", "beta0", PETSC_DOUBLE, bat0, ierr)
+        call PetscViewerHDF5WriteAttribute(viewer, "/", "omega1", PETSC_DOUBLE, theta1%re, ierr)
+        call PetscViewerHDF5WriteAttribute(viewer, "/", "beta1", PETSC_DOUBLE, theta1%im, ierr)
+        call PetscViewerHDF5WriteAttribute(viewer, "/", "omega2", PETSC_DOUBLE, theta2%re, ierr)
+        call PetscViewerHDF5WriteAttribute(viewer, "/", "beta2", PETSC_DOUBLE, theta2%im, ierr)
 
         call PetscViewerHDF5WriteAttribute(viewer, "/", "jn", PETSC_INT, jn, ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "istart", PETSC_INT, istart, ierr)
