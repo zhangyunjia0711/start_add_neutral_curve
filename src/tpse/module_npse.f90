@@ -333,10 +333,10 @@ contains
 
          call update_alpha(i, grid_profile)
          lnA0(i, :, :, :, :) = lnA1(:, :, :, :) + 0.5d0*(alf(i, :, :, :, :) + alf(i - 1, :, :, :, :))/grid_profile%xi_x(yb + 1)
-         call nonlinear_solver%set_dis(alf(i, :, :, 0, 0), lnA0(i, :, :, 0, 0), phi(i, :, :, 0, 0), &
-         &                             phi(i - 1, :, :, 0, 0), phi(i - 2, :, :, 0, 0))
+         call nonlinear_solver%set_dis(alf(i, :, :, :, :), lnA0(i, :, :, :, :), phi(i, :, :, :, :), &
+         &                             phi(i - 1, :, :, :, :), phi(i - 2, :, :, :, :))
          call nonlinear_solver%setup()
-         call nonlinear_solver%get_force(nonlinear_term(:, :, :, :, 0, 0))
+         call nonlinear_solver%get_force(nonlinear_term(:, :, :, :, :, :))
          nonlinear_term_old = 0.0d0
          ! call nonlinear_solver%set_dis(alf(i, :, :), lnA0(i, :, :), phi(i, :, :), phi(i - 1, :, :), phi(i - 2, :, :))
          ! call nonlinear_solver%setup()
@@ -350,10 +350,10 @@ contains
                 !!! Get wave number with nonlinear force
             lnA0(i, :, :, :, :) = lnA1(:, :, :, :) + 0.5d0*(alf(i, :, :, :, :) + alf(i - 1, :, :, :, :))/grid_profile%xi_x(yb + 1)
             nonlinear_term_old = nonlinear_term
-            call nonlinear_solver%set_dis(alf(i, :, :, 0, 0), lnA0(i, :, :, 0, 0), &
-            &                             phi(i, :, :, 0, 0), phi(i - 1, :, :, 0, 0), phi(i - 2, :, :, 0, 0))
+            call nonlinear_solver%set_dis(alf(i, :, :, :, :), lnA0(i, :, :, :, :), &
+            &                             phi(i, :, :, :, :), phi(i - 1, :, :, :, :), phi(i - 2, :, :, :, :))
             call nonlinear_solver%setup()
-            call nonlinear_solver%get_force(nonlinear_term(:, :, :, :, 0, 0))
+            call nonlinear_solver%get_force(nonlinear_term(:, :, :, :, :, :))
 
             nonlinear_term = omega_force*nonlinear_term + (1.0d0 - omega_force)*nonlinear_term_old
 
@@ -432,10 +432,10 @@ contains
                   sqrt(sum(VecDistance**2)), &
                   'The relative error is', sqrt(sum(VecDistance**2))/Norm_rhs
 
-               call nonlinear_solver%set_dis(alf(i, :, :, 0, 0), lnA0(i, :, :, 0, 0), &
-               &    phi(i, :, :, 0, 0), phi(i - 1, :, :, 0, 0), phi(i - 2, :, :, 0, 0))
+               call nonlinear_solver%set_dis(alf(i, :, :, :, :), lnA0(i, :, :, :, :), &
+               &    phi(i, :, :, :, :), phi(i - 1, :, :, :, :), phi(i - 2, :, :, :, :))
                call nonlinear_solver%setup()
-               call nonlinear_solver%get_force(nonlinear_term(:, :, :, :, 0, 0))
+               call nonlinear_solver%get_force(nonlinear_term(:, :, :, :, :, :))
                nonlinear_term = omega_force*nonlinear_term + (1.0d0 - omega_force)*nonlinear_term_old
                ! nonlinear_term_old = nonlinear_term
 

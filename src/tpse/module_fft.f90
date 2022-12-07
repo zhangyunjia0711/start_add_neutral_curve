@@ -87,7 +87,7 @@ contains
       call this%finalize()
 
       status = DftiCreateDescriptor(this%handle, DFTI_DOUBLE, DFTI_COMPLEX, 1, n)
-      status = DftiSetValue(this%handle, DFTI_BACKWARD_SCALE, 1.0_REAL64/real(n, REAL64))
+      status = DftiSetValue(this%handle, DFTI_FORWARD_SCALE, 1.0_REAL64/real(n, REAL64))
 
       status = DftiCommitDescriptor(this%handle)
 

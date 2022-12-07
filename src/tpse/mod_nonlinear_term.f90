@@ -406,7 +406,7 @@ contains
       end associate
 
       ! call InitialSpectralScheme(this%handle, 4*this%m, 4*this%n)
-      call this%handle_new%initialize(this%msp, this%nsp0)
+      call this%handle_new%initialize(this%msp, this%nsp0, this%nsp1, this%nsp2)
 
       allocate (dphidi(5, this%jn, 0:this%m, -this%n0:this%n0, -this%n1:this%n1, -this%n2:this%n2))
       allocate (dphidj(5, this%jn, 0:this%m, -this%n0:this%n0, -this%n1:this%n1, -this%n2:this%n2))
@@ -551,6 +551,8 @@ contains
 
       call this%handle_new%fft(bb(0:msp - 1, 0:nsp0 - 1, 0:nsp1 - 1, 0:nsp2 - 1), &
       &                        bb(0:msp - 1, 0:nsp0 - 1, 0:nsp1 - 1, 0:nsp2 - 1))
+    !   call this%handle_new%fft(bb(0:msp - 1, 0:nsp0 - 1, 0, 0), &
+    !   &                        bb(0:msp - 1, 0:nsp0 - 1, 0, 0))
 
       aa = 0.0d0
 
@@ -1175,6 +1177,8 @@ contains
       ! print*, bb(1, 0)
       call this%handle_new%ifft(bb(0:msp - 1, 0:nsp0 - 1, 0:nsp1 - 1, 0:nsp2 - 1), &
       &                         bb(0:msp - 1, 0:nsp0 - 1, 0:nsp1 - 1, 0:nsp2 - 1))
+    !   call this%handle_new%ifft(bb(0:msp - 1, 0:nsp0 - 1, 0, 0), &
+    !   &                         bb(0:msp - 1, 0:nsp0 - 1, 0, 0))
       cc = real(bb, REAL64)
       ! print*, cc(0, 0)
 
