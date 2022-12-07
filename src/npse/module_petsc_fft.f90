@@ -16,22 +16,28 @@ module mod_petsc_fft
       Vec :: forward_out
       Vec :: backward_out
       logical :: initialized = .FALSE.
-      integer :: shape(3) = 1
+      integer :: shape(4) = 1
 
    contains
 
-      generic :: initialize => initialize_1d, initialize_2d
-      generic :: fft => fft_1d, fft_2d
-      generic :: ifft => ifft_1d, ifft_2d
+      generic :: initialize => initialize_1d, initialize_2d, initialize_3d, initialize_4d
+      generic :: fft => fft_1d, fft_2d, fft_3d, fft_4d
+      generic :: ifft => ifft_1d, ifft_2d, ifft_3d, ifft_4d
       procedure :: finalize
 
       procedure, private :: initialize_1d
       procedure, private :: initialize_2d
+      procedure, private :: initialize_3d
+      procedure, private :: initialize_4d
 
       procedure, private :: fft_1d
       procedure, private :: fft_2d
+      procedure, private :: fft_3d
+      procedure, private :: fft_4d
       procedure, private :: ifft_1d
       procedure, private :: ifft_2d
+      procedure, private :: ifft_3d
+      procedure, private :: ifft_4d
 
    end type fft_type
 
@@ -67,6 +73,34 @@ contains
 
    end subroutine initialize_2d
 
+   subroutine initialize_3d(this, n1, n2, n3)
+
+      implicit none
+      class(fft_type), intent(inout) :: this
+      integer, intent(in) ::  n1, n2, n3
+
+      call MatCreateFFT(PETSC_COMM_SELF, 3, [n1, n2, n3], MATFFTW, this%handle, ierr)
+      call MatCreateVecsFFTW(this%handle, this%forward_in, this%forward_out, this%backward_out, ierr)
+      this%initialized = .TRUE.
+
+      this%shape(1) = n1; this%shape(2) = n2; this%shape(3) = n3
+
+   end subroutine initialize_3d
+
+   subroutine initialize_4d(this, n1, n2, n3, n4)
+
+      implicit none
+      class(fft_type), intent(inout) :: this
+      integer, intent(in) ::  n1, n2, n3, n4
+
+      call MatCreateFFT(PETSC_COMM_SELF, 4, [n1, n2, n3, n4], MATFFTW, this%handle, ierr)
+      call MatCreateVecsFFTW(this%handle, this%forward_in, this%forward_out, this%backward_out, ierr)
+      this%initialized = .TRUE.
+
+      this%shape(1) = n1; this%shape(2) = n2; this%shape(3) = n3; this%shape(4) = n4
+
+   end subroutine initialize_4d
+
    subroutine fft_1d(this, vec_in, vec_out)
 
       implicit none
@@ -82,7 +116,7 @@ contains
       call MatMult(this%handle, this%forward_in, this%forward_out, ierr)
 
       call VecGetArrayReadF90(this%forward_out, array_out, ierr)
-      vec_out(:) = array_out(:)/real(product(this%shape), kind=REAL64)
+      vec_out = reshape(array_out, shape = this%shape(1:1))
       call VecRestoreArrayReadF90(this%forward_out, array_out, ierr)
 
    end subroutine fft_1d
@@ -102,10 +136,50 @@ contains
       call MatMult(this%handle, this%forward_in, this%forward_out, ierr)
 
       call VecGetArrayReadF90(this%forward_out, array_out, ierr)
-      vec_out(:, :) = reshape(array_out(:)/real(product(this%shape), kind=REAL64), this%shape(1:2))
+      vec_out = reshape(array_out, shape = this%shape(1:2))
       call VecRestoreArrayReadF90(this%forward_out, array_out, ierr)
 
    end subroutine fft_2d
+
+   subroutine fft_3d(this, vec_in, vec_out)
+
+      implicit none
+      class(fft_type), intent(inout) :: this
+      complex(REAL64), intent(in) :: vec_in(:, :, :)
+      complex(REAL64), intent(inout) :: vec_out(:, :, :)
+      complex(REAL64), pointer :: array_in(:), array_out(:)
+
+      call VecGetArrayF90(this%forward_in, array_in, ierr)
+      array_in(:) = pack(vec_in(:, :, :), mask=.true.)
+      call VecRestoreArrayF90(this%forward_in, array_in, ierr)
+
+      call MatMult(this%handle, this%forward_in, this%forward_out, ierr)
+
+      call VecGetArrayReadF90(this%forward_out, array_out, ierr)
+      vec_out = reshape(array_out, shape = this%shape(1:3))
+      call VecRestoreArrayReadF90(this%forward_out, array_out, ierr)
+
+   end subroutine fft_3d
+
+   subroutine fft_4d(this, vec_in, vec_out)
+
+      implicit none
+      class(fft_type), intent(inout) :: this
+      complex(REAL64), intent(in) :: vec_in(:, :, :, :)
+      complex(REAL64), intent(inout) :: vec_out(:, :, :, :)
+      complex(REAL64), pointer :: array_in(:), array_out(:)
+
+      call VecGetArrayF90(this%forward_in, array_in, ierr)
+      array_in(:) = pack(vec_in(:, :, :, :), mask=.true.)
+      call VecRestoreArrayF90(this%forward_in, array_in, ierr)
+
+      call MatMult(this%handle, this%forward_in, this%forward_out, ierr)
+
+      call VecGetArrayReadF90(this%forward_out, array_out, ierr)
+      vec_out = reshape(array_out, shape = this%shape(1:4))
+      call VecRestoreArrayReadF90(this%forward_out, array_out, ierr)
+
+   end subroutine fft_4d
 
    subroutine ifft_1d(this, vec_in, vec_out)
 
@@ -122,7 +196,7 @@ contains
       call MatMultTranspose(this%handle, this%forward_out, this%backward_out, ierr)
 
       call VecGetArrayReadF90(this%backward_out, array_out, ierr)
-      vec_out(:) = array_out(:)
+      vec_out(:) = array_out(:)/real(product(this%shape), kind=REAL64)
       call VecRestoreArrayReadF90(this%backward_out, array_out, ierr)
 
    end subroutine ifft_1d
@@ -142,10 +216,50 @@ contains
       call MatMultTranspose(this%handle, this%forward_out, this%backward_out, ierr)
 
       call VecGetArrayReadF90(this%backward_out, array_out, ierr)
-      vec_out(:, :) = reshape(array_out(:), this%shape(1:2))
+      vec_out(:, :) = reshape(array_out(:), this%shape(1:2))/real(product(this%shape), kind=REAL64)
       call VecRestoreArrayReadF90(this%backward_out, array_out, ierr)
 
    end subroutine ifft_2d
+
+   subroutine ifft_3d(this, vec_in, vec_out)
+
+      implicit none
+      class(fft_type), intent(inout) :: this
+      complex(REAL64), intent(in) :: vec_in(:, :, :)
+      complex(REAL64), intent(inout) :: vec_out(:, :, :)
+      complex(REAL64), pointer :: array_in(:), array_out(:)
+
+      call VecGetArrayF90(this%forward_out, array_in, ierr)
+      array_in(:) = pack(vec_in(:, :, :), mask=.true.)
+      call VecRestoreArrayF90(this%forward_out, array_in, ierr)
+
+      call MatMultTranspose(this%handle, this%forward_out, this%backward_out, ierr)
+
+      call VecGetArrayReadF90(this%backward_out, array_out, ierr)
+      vec_out(:, :, :) = reshape(array_out(:), this%shape(1:3))/real(product(this%shape), kind=REAL64)
+      call VecRestoreArrayReadF90(this%backward_out, array_out, ierr)
+
+   end subroutine ifft_3d
+
+   subroutine ifft_4d(this, vec_in, vec_out)
+
+      implicit none
+      class(fft_type), intent(inout) :: this
+      complex(REAL64), intent(in) :: vec_in(:, :, :, :)
+      complex(REAL64), intent(inout) :: vec_out(:, :, :, :)
+      complex(REAL64), pointer :: array_in(:), array_out(:)
+
+      ! call MatView(this%handle, PETSC_VIEWER_STDOUT_SELF, ierr)
+
+      call VecGetArrayF90(this%forward_out, array_in, ierr)
+      array_in(:) = pack(vec_in(:, :, :, :), mask=.true.)
+      call VecRestoreArrayF90(this%forward_out, array_in, ierr)
+      call MatMultTranspose(this%handle, this%forward_out, this%backward_out, ierr)
+      call VecGetArrayReadF90(this%backward_out, array_out, ierr)
+      vec_out(:, :, :, :) = reshape(array_out(:), this%shape(1:4))/real(product(this%shape), kind=REAL64)
+      call VecRestoreArrayReadF90(this%backward_out, array_out, ierr)
+
+   end subroutine ifft_4d
 
    subroutine finalize(this)
 
