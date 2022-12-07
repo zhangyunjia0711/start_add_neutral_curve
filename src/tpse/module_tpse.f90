@@ -114,7 +114,7 @@ contains
       call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER, DM_local, ierr)
       call DMSetUp(DM_local, ierr)
 
-      allocate (phi(istart - 1:iend, 0:m_global, -n0_global:n0_global, -n1_global:n1_global, -n2_global:n2_global))
+      allocate (phi(istart - 1:istart + 1, 0:m_global, -n0_global:n0_global, -n1_global:n1_global, -n2_global:n2_global))
       allocate (phi_old(0:m_global, -n0_global:n0_global, -n1_global:n1_global, -n2_global:n2_global))
       allocate (alf(istart:iend, 0:m_global, -n0_global:n0_global, -n1_global:n1_global, -n2_global:n2_global)); alf = 0.0d0
       allocate (VecDistance(0:m_global, -n0_global:n0_global, -n1_global:n1_global, -n2_global:n2_global))
@@ -142,7 +142,7 @@ contains
       do n1 = -n1_global, n1_global
       do n0 = -n0_global, n0_global
          do m = 0, m_global
-            do i = istart - 1, iend
+            do i = istart - 1, istart+1
                call DMGetGlobalVector(DM_local, phi(i, m, n0, n1, n2), ierr)
                call VecZeroEntries(phi(i, m, n0, n1, n2), ierr)
             end do
@@ -335,7 +335,7 @@ contains
                do n0 = -n0_global, n0_global
                   do m = 0, m_global
                      ! if (i == istart + 1) then
-                     call VecCopy(phi(i - 1, m, n0, n1, n2), phi(i, m, n0, n1, n2), ierr)
+                     call VecCopy(phi(istart, m, n0, n1, n2), phi(istart + 1, m, n0, n1, n2), ierr)
                      alf(i, m, n0, n1, n2) = alf(i - 1, m, n0, n1, n2)
                      ! elseif (i == istart + 2) then
                      !     call VecWAXPY(phi(i, m, n0), (-1.0d0, 0.0d0), phi(i - 2, m, n0), phi(i - 1, m, n0), ierr)
@@ -381,8 +381,8 @@ contains
 
          call update_alpha(i, grid_profile)
          lnA0(i, :, :, :, :) = lnA1(:, :, :, :) + 0.5d0*(alf(i, :, :, :, :) + alf(i - 1, :, :, :, :))/grid_profile%xi_x(yb + 1)
-         call nonlinear_solver%set_dis(alf(i, :, :, :, :), lnA0(i, :, :, :, :), phi(i, :, :, :, :), &
-         &                             phi(i - 1, :, :, :, :), phi(i - 2, :, :, :, :))
+         call nonlinear_solver%set_dis(alf(i, :, :, :, :), lnA0(i, :, :, :, :), phi(istart + 1, :, :, :, :), &
+         &                             phi(istart, :, :, :, :), phi(istart - 1, :, :, :, :))
          call nonlinear_solver%setup()
          call nonlinear_solver%get_force(nonlinear_term(:, :, :, :, :, :))
          nonlinear_term_old = 0.0d0
@@ -399,7 +399,7 @@ contains
             lnA0(i, :, :, :, :) = lnA1(:, :, :, :) + 0.5d0*(alf(i, :, :, :, :) + alf(i - 1, :, :, :, :))/grid_profile%xi_x(yb + 1)
             nonlinear_term_old = nonlinear_term
             call nonlinear_solver%set_dis(alf(i, :, :, :, :), lnA0(i, :, :, :, :), &
-            &                             phi(i, :, :, :, :), phi(i - 1, :, :, :, :), phi(i - 2, :, :, :, :))
+            &                             phi(istart + 1, :, :, :, :), phi(istart, :, :, :, :), phi(istart - 1, :, :, :, :))
             call nonlinear_solver%setup()
             call nonlinear_solver%get_force(nonlinear_term(:, :, :, :, :, :))
 
@@ -414,7 +414,7 @@ contains
 
                call npse_eqn%set_force(nonlinear_term(:, :, m, n0, n1, n2))
                call npse_eqn%solve(alf(i, m, n0, n1, n2), &
-               &                   phi(i, m, n0, n1, n2), phi(i - 1, m, n0, n1, n2), phi(i - 2, m, n0, n1, n2))
+               &                   phi(istart + 1, m, n0, n1, n2), phi(istart, m, n0, n1, n2), phi(istart - 1, m, n0, n1, n2))
                iterator_times(m, n0, n1, n2) = iterator_times(m, n0, n1, n2) + npse_eqn%iterator_times
             end do
 
@@ -433,9 +433,9 @@ contains
 
                nonlinear_term_old = nonlinear_term
                if (flg_mfd) then
-                  call VecCopy(phi(i, 0, 0, 0, 0), delta_baseflow(1), ierr)
-                  call VecCopy(phi(i - 1, 0, 0, 0, 0), delta_baseflow(2), ierr)
-                  call VecCopy(phi(i - 2, 0, 0, 0, 0), delta_baseflow(3), ierr)
+                  call VecCopy(phi(istart + 1, 0, 0, 0, 0), delta_baseflow(1), ierr)
+                  call VecCopy(phi(istart, 0, 0, 0, 0), delta_baseflow(2), ierr)
+                  call VecCopy(phi(istart - 1, 0, 0, 0, 0), delta_baseflow(3), ierr)
                   delta_baseflow_profile = get_baseflow_profile(DM_Local, delta_baseflow, grid_profile, lambda)
                   call npse_eqn%set_baseflow_npse(baseflow_profile + delta_baseflow_profile)
                else
@@ -454,15 +454,15 @@ contains
                            !   call VecCopy(phi(i - 1, m, n0), phi(i, m, n0), ierr)
                            call npse_eqn%set_force(nonlinear_term(:, :, m, n0, n1, n2))
 
-                           call VecCopy(phi(i, m, n0, n1, n2), phi_old(m, n0, n1, n2), ierr)
+                           call VecCopy(phi(istart + 1, m, n0, n1, n2), phi_old(m, n0, n1, n2), ierr)
 
                            call npse_eqn%solve_npse(alf(i, m, n0, n1, n2), &
-                           &                        phi(i, m, n0, n1, n2), phi(i - 1, m, n0, n1, n2), phi(i - 2, m, n0, n1, n2), &
+              &                        phi(istart + 1, m, n0, n1, n2), phi(istart, m, n0, n1, n2), phi(istart - 1, m, n0, n1, n2), &
                            &                        lambda)
-                           VecDistance(m, n0, n1, n2) = VecsNorm2(phi(i, m, n0, n1, n2), phi_old(m, n0, n1, n2))
+                           VecDistance(m, n0, n1, n2) = VecsNorm2(phi(istart + 1, m, n0, n1, n2), phi_old(m, n0, n1, n2))
                             !! use phi_new to store V_new-V_old
-                           call VecAXPY(phi(i, m, n0, n1, n2), (-1.0d0, 0.0d0), phi_old(m, n0, n1, n2), ierr)
-                           call VecAYPX(phi(i, m, n0, n1, n2), cmplx(omega_phi, 0.0d0, REAL64), phi_old(m, n0, n1, n2), ierr)
+                           call VecAXPY(phi(istart + 1, m, n0, n1, n2), (-1.0d0, 0.0d0), phi_old(m, n0, n1, n2), ierr)
+                         call VecAYPX(phi(istart + 1, m, n0, n1, n2), cmplx(omega_phi, 0.0d0, REAL64), phi_old(m, n0, n1, n2), ierr)
 
                            iterator_times(m, n0, n1, n2) = iterator_times(m, n0, n1, n2) + npse_eqn%iterator_times
 
@@ -481,7 +481,7 @@ contains
                   'The relative error is', sqrt(sum(VecDistance**2))/Norm_rhs
 
                call nonlinear_solver%set_dis(alf(i, :, :, :, :), lnA0(i, :, :, :, :), &
-               &    phi(i, :, :, :, :), phi(i - 1, :, :, :, :), phi(i - 2, :, :, :, :))
+               &    phi(istart + 1, :, :, :, :), phi(istart, :, :, :, :), phi(istart - 1, :, :, :, :))
                call nonlinear_solver%setup()
                call nonlinear_solver%get_force(nonlinear_term(:, :, :, :, :, :))
                nonlinear_term = omega_force*nonlinear_term + (1.0d0 - omega_force)*nonlinear_term_old
@@ -497,7 +497,7 @@ contains
                if (itimes_nonlinear > maxit_nonlinear) then
                   print *, '[WARNING] the iteration for nonlinear larger than max times.'
                   goto 1000
-               endif   
+               end if
             end do
 
             ! print *, 'ix=', i, 'is done.'
@@ -518,9 +518,20 @@ contains
          print *, 'ix=', i, 'solve npse is done.'
          lnA1(:, :, :, :) = lnA0(i, :, :, :, :)
 
-         call write_tmp_file(i, phi(i, :, :, :, :))
+         call write_tmp_file(i, phi(istart + 1, :, :, :, :))
 
-         if (mod(i, 10) == 0) call write_tpse_result(i+1)
+         do n2 = -n2_global, n2_global
+            do n1 = -n1_global, n1_global
+               do n0 = -n0_global, n0_global
+                  do m = 0, m_global
+                     call VecCopy(phi(istart, m, n0, n1, n2), phi(istart - 1, m, n0, n1, n2), ierr)
+                     call VecCopy(phi(istart + 1, m, n0, n1, n2), phi(istart, m, n0, n1, n2), ierr)
+                  end do
+               end do
+            end do
+         end do
+
+         if (mod(i, 10) == 0) call write_tpse_result(i + 1)
       end do
 
 1000  continue
@@ -567,7 +578,7 @@ contains
       ome0_ = inlet_dis(1)%m*theta(1)%re + &
       &       inlet_dis(1)%n(1)*theta(2)%re + inlet_dis(1)%n(2)*theta(3)%re + inlet_dis(1)%n(3)*theta(4)%re
 
-!! 对tpse需要进行修改 修改更新波数的方法和方式以及判断标准
+!! 对tpse需要进行修�� 修改更新波数的方法和方式以及判断标准
       if (abs(ome0_) >= epsilon(1.0d0)) then  !! 非横流
          alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n(1), inlet_dis(1)%n(2), inlet_dis(1)%n(3))/ome0_
          do n2 = -n2_global, n2_global
@@ -648,7 +659,7 @@ contains
       do n1 = -n1_global, n1_global
       do n0 = -n0_global, n0_global
          do m = 0, m_global
-            do i = istart - 1, iend
+            do i = istart - 1, istart + 1
                call DMRestoreGlobalVector(DM_local, phi(i, m, n0, n1, n2), ierr)
             end do
             call DMRestoreGlobalVector(DM_local, phi_old(m, n0, n1, n2), ierr)
@@ -686,13 +697,13 @@ contains
 
       Vec, allocatable :: tmp_phi(:)
 
-      iend_ = i_in -1
+      iend_ = i_in - 1
 
-      allocate(tmp_phi(istart:iend_))
-      do i=istart, iend_
+      allocate (tmp_phi(istart:iend_))
+      do i = istart, iend_
          call DMGetGlobalVector(DM_local, tmp_phi(i), ierr)
          call VecZeroEntries(tmp_phi(i), ierr)
-      enddo
+      end do
     !! Write Number
       ! name=solname//'_i='//chars(istart)//'_i='//chars(iend)//'_alpha.plt'
       astring(1) = "NPSE"
@@ -783,10 +794,10 @@ contains
       end do
       end do
 
-      do i=istart, iend_
+      do i = istart, iend_
          call DMRestoreGlobalVector(DM_local, tmp_phi(i), ierr)
-      enddo
-      deallocate(tmp_phi)
+      end do
+      deallocate (tmp_phi)
 
       call PetscViewerDestroy(tmp_handle, ierr)
       call PetscViewerDestroy(Viewer, ierr)
