@@ -459,29 +459,43 @@ contains
         ! print*, 'bb:'
         ! print*, bb
         ! read(*, *)
-        aa(0, 0) = bb(0, 0)              ! m=0,n=0
+        ! aa(0, 0) = bb(0, 0)              ! m=0,n=0
 
+        ! do i = 1, this%m
+        !     ii = nma - i                 ! m=\0,n=0
+        !     aa(i, 0) = bb(ii, 0)        !(-m,0)
+        ! end do
+
+        ! do j = 1, this%n                       ! m=0,n=\0
+        !     jj = nna - j
+        !     aa(0, j) = bb(0, j)                !(0, n)
+        !     aa(0, -j) = conjg(bb(0, j))        !(0,-n) !!may be not used in -this%n:-1
+        ! end do
+
+        ! do i = 1, this%m                       !m<0
+        !     ii = nma - i
+        !     do j = 1, this%n
+        !         jj = nna - j
+        !         aa(i, j) = bb(ii, j)          !(-m,n)
+        !         aa(i, -j) = bb(ii, jj)          !(-m,-n)
+        !     end do
+        ! end do
+        i = 0
+        aa(0, 0) = bb(0, 0)
+        do j = 1, this%n
+            jj = nna -j
+            aa(0,  j) = bb(0, j )
+            aa(0, -j) = bb(0, jj)
+        enddo
         do i = 1, this%m
-            ii = nma - i                 ! m=\0,n=0
-            aa(i, 0) = bb(ii, 0)        !(-m,0)
-        end do
-
-        do j = 1, this%n                       ! m=0,n=\0
-            jj = nna - j
-            aa(0, j) = bb(0, j)                !(0, n)
-            aa(0, -j) = conjg(bb(0, j))        !(0,-n) !!may be not used in -this%n:-1
-        end do
-
-        do i = 1, this%m                       !m<0
             ii = nma - i
-            do j = 1, this%n
+            aa(i, 0) = bb(ii, 0)
+            do j= 1, this%n
                 jj = nna - j
-                aa(i, j) = bb(ii, j)          !(-m,n)
-                aa(i, -j) = bb(ii, jj)          !(-m,-n)
-            end do
-        end do
-
-        ! aa=0.0d0
+                aa(i, j) = bb(ii, j)
+                aa(i, -j) = bb(ii, jj)
+            enddo
+        enddo
 
     end subroutine fft_var
 
