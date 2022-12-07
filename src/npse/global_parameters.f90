@@ -84,7 +84,7 @@ module global_parameters
    real(REAL64) :: rtol_nonlinear=1.0d-3
    integer :: ix_force, ix_phi
    integer :: maxit_alpha=200
-   integer :: maxit_nonlinear=2000
+   integer :: maxit_nonlinear=5000
 
    real(REAL64) :: cfl_number=huge(1.0d0)
    integer :: ix_cfl

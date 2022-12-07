@@ -406,10 +406,13 @@ contains
                     end if
                     ! if(sum(iterator_times)==0) VecDistance = VecDistance*10d2
                     itimes_nonlinear = itimes_nonlinear + 1
+                    if (itimes_nonlinear > maxit_nonlinear) then
+                        print *, '[WARNING] the iteration for nonlinear larger than max times.'
+                        goto 1000
+                    endif
 
                 end do
 
-                if (itimes_nonlinear > maxit_nonlinear) print *, '[WARNING] the iteration for nonlinear larger than max times.'
 
                 ! print *, 'ix=', i, 'is done.'
                 print *, 'The whole iteration times is', sum(iterator_times)

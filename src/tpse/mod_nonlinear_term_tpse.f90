@@ -74,7 +74,7 @@
 
 ! end module MKL_fft
 
-module mod_nonlinear_term
+module mod_nonlinear_term_tpse
 
    use iso_fortran_env, only: REAL64, REAL32
    use stdlib_error, only: error_stop
@@ -1634,5 +1634,5 @@ contains
 
    end function get_array
 
-end module mod_nonlinear_term
+end module mod_nonlinear_term_tpse
 

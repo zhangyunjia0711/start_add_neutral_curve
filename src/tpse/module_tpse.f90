@@ -16,7 +16,7 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
-module mod_npse
+module mod_tpse
 
    ! use global_parameters
    use iso_fortran_env, only: REAL64
@@ -54,7 +54,7 @@ module mod_npse
 
    ! use mod_lpse_grid_profile, only: type_lpse_grid_domain=> type_lpse_grid_profile
    use mod_npse_eqn
-   use mod_nonlinear_term
+   use mod_nonlinear_term_tpse, only: type_nonlinear_term_tpse => type_nonlinear_term
 
    implicit none
 
@@ -79,16 +79,18 @@ module mod_npse
    complex(REAL64), allocatable :: nonlinear_term(:, :, :, :, :, :)
    complex(REAL64), allocatable :: nonlinear_term_old(:, :, :, :, :, :)
    real(REAL64), allocatable :: VecDistance(:, :, :, :)
-   type(type_nonlinear_term) :: nonlinear_solver
+   type(type_nonlinear_term_tpse) :: nonlinear_solver
+
+   PetscViewer :: tmp_file
 
    private
-   public :: npse
+   public :: tpse
 
    ! DM :: DM_LPSE
 
 contains
 
-   subroutine npse()
+   subroutine tpse()
 
       implicit none
 
@@ -96,15 +98,15 @@ contains
       !DM_local=>lpse_eqn%dm
       call PetscPrintf(PETSC_COMM_WORLD, 'Nonlinear PSE is selected!\n', ierr)
 
-      call initialize_npse()
+      call initialize_tpse()
 
-      call solve_npse_native()
+      call solve_tpse_native()
 
-      call finalize_npse()
+      call finalize_tpse()
 
-   end subroutine npse
+   end subroutine tpse
 
-   subroutine initialize_npse()
+   subroutine initialize_tpse()
 
       implicit none
       integer :: i, m, n0, n1, n2
@@ -174,11 +176,53 @@ contains
 
       call update_alpha(istart, assemble_lst_grid_profile(istart))
 
-      call set_npse_ic()
+      call set_tpse_ic()
 
-   end subroutine initialize_npse
+   end subroutine initialize_tpse
 
-   subroutine set_npse_ic()
+   subroutine initialize_tmp_file()
+
+      implicit none
+
+      call execute_command_line("mkdir -p tmp")
+      call PetscViewerHDF5Open(PETSC_COMM_WORLD, "tmp/tpse_phi.tmp", FILE_MODE_WRITE, tmp_file, ierr)
+
+   end subroutine initialize_tmp_file
+
+   subroutine finalize_tmp_file()
+
+      implicit none
+      call PetscViewerDestroy(tmp_file, ierr)
+
+   end subroutine finalize_tmp_file
+
+   subroutine write_tmp_file(iloc, phi)
+
+      use stdlib_string_type
+      implicit none
+      integer, intent(in) :: iloc
+      Vec, intent(in) :: phi(0:m_global, -n0_global:n0_global, -n1_global:n1_global, -n2_global:n2_global)
+
+      integer :: m, n0, n1, n2
+      type(string_type) :: iloc_domain_name, spectral_domain_name
+
+      iloc_domain_name = "iloc="//string_type(iloc)
+      do n2 = -n2_global, n2_global
+         do n1 = -n1_global, n1_global
+            do n0 = -n0_global, n0_global
+               do m = 0, m_global
+                  spectral_domain_name = "m="//string_type(m)//"_n0="//string_type(n0)// &
+                  &   "_n1="//string_type(n1)//"_n2="//string_type(n2)
+                  call PetscObjectSetName(phi(m, n0, n1, n2), char(iloc_domain_name//"_"//spectral_domain_name), ierr)
+                  call VecView(phi(m, n0, n1, n2), tmp_file, ierr)
+               end do
+            end do
+         end do
+      end do
+
+   end subroutine write_tmp_file
+
+   subroutine set_tpse_ic()
 
       use mod_lst_solver_abstract
       use mod_lst_eqn
@@ -223,9 +267,9 @@ contains
          &         alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1), inlet_dis(i)%n(2), inlet_dis(i)%n(3))%im
       end do
 
-   end subroutine set_npse_ic
+   end subroutine set_tpse_ic
 
-   subroutine solve_npse_native()
+   subroutine solve_tpse_native()
 
       use omp_lib
       use stdlib_string_type
@@ -242,6 +286,8 @@ contains
       type(type_lst_bf_profile) :: delta_baseflow_profile
       logical :: flg_mfd = .true.
 
+      call initialize_tmp_file()
+
       allocate (iterator_times(0:m_global, -n0_global:n0_global, -n1_global:n1_global, -n2_global:n2_global))
       do n2 = -n2_global, n2_global
          do n1 = -n1_global, n1_global
@@ -252,6 +298,8 @@ contains
             end do
          end do
       end do
+
+      call write_tmp_file(istart, phi(istart, :, :, :, :))
 
       do i = istart + 1, iend
 
@@ -446,10 +494,11 @@ contains
                end if
                ! if(sum(iterator_times)==0) VecDistance = VecDistance*10d2
                itimes_nonlinear = itimes_nonlinear + 1
-
+               if (itimes_nonlinear > maxit_nonlinear) then
+                  print *, '[WARNING] the iteration for nonlinear larger than max times.'
+                  goto 1000
+               endif   
             end do
-
-            if (itimes_nonlinear > maxit_nonlinear) print *, '[WARNING] the iteration for nonlinear larger than max times.'
 
             ! print *, 'ix=', i, 'is done.'
             print *, 'The whole iteration times is', sum(iterator_times)
@@ -469,17 +518,21 @@ contains
          print *, 'ix=', i, 'solve npse is done.'
          lnA1(:, :, :, :) = lnA0(i, :, :, :, :)
 
-         if (mod(i, 10) == 0) call write_npse_result()
+         call write_tmp_file(i, phi(i, :, :, :, :))
+
+         if (mod(i, 10) == 0) call write_tpse_result(i+1)
       end do
 
 1000  continue
       call PetscPrintf(PETSC_COMM_WORLD, 'Solve NPSE done!\n', ierr)
 
-      call write_npse_result()
+      call finalize_tmp_file()
+
+      call write_tpse_result(i)
 
       deallocate (iterator_times)
 
-   end subroutine solve_npse_native
+   end subroutine solve_tpse_native
 
    logical function isConvergence()
 
@@ -577,7 +630,7 @@ contains
 
    end function VecsNorm2
 
-   subroutine finalize_npse()
+   subroutine finalize_tpse()
       implicit none
 
       integer :: i, m, n0, n1, n2
@@ -611,15 +664,16 @@ contains
       deallocate (VecDistance)
       call DMDestroy(DM_local, ierr)
 
-   end subroutine finalize_npse
+   end subroutine finalize_tpse
 
-   subroutine write_npse_result()
+   subroutine write_tpse_result(i_in)
 
       use global_parameters, only: prefix, gridfile, flowfile, title
       use stdlib_string_type
       implicit none
-
-      PetscViewer :: Viewer
+      integer, intent(in) :: i_in
+      integer :: iend_
+      PetscViewer :: Viewer, tmp_handle
       integer :: iounit, ios
       type(string_type) :: name, strings
       type(string_type) :: astring(8)
@@ -629,6 +683,16 @@ contains
       integer(8) :: hdf_file_id
 
       REAL(REAL64), parameter :: epsilon = 1.0d-8
+
+      Vec, allocatable :: tmp_phi(:)
+
+      iend_ = i_in -1
+
+      allocate(tmp_phi(istart:iend_))
+      do i=istart, iend_
+         call DMGetGlobalVector(DM_local, tmp_phi(i), ierr)
+         call VecZeroEntries(tmp_phi(i), ierr)
+      enddo
     !! Write Number
       ! name=solname//'_i='//chars(istart)//'_i='//chars(iend)//'_alpha.plt'
       astring(1) = "NPSE"
@@ -641,6 +705,7 @@ contains
       astring(6) = 'phi.h5'
       name = astring(1)//"_"//astring(2)//"_"//astring(3)//"_"//astring(6) !name%join(astring(1:3), sep='_')//'_'//astring(6)
       call PetscViewerHDF5Open(PETSC_COMM_WORLD, char(prefix//name), FILE_MODE_WRITE, Viewer, ierr)
+      call PetscViewerHDF5Open(PETSC_COMM_WORLD, "tmp/tpse_phi.tmp", FILE_MODE_READ, tmp_handle, ierr)
       strings = "Writing the shape functions phi to "//name//'.\n'
       call PetscPrintf(PETSC_COMM_WORLD, char(strings), ierr)
 
@@ -685,13 +750,15 @@ contains
 
                !! Write phi
             call DMDAVecGetArrayF90(meshDA, phi_domain, tmp_domain, ierr)
-            do i = istart, iend
-               call DMDAVecGetArrayReadF90(DM_local, phi(i, m, n0, n1, n2), tmp_local, ierr)
+            tmp_domain = 0.0d0
+            do i = istart, iend_
+               call PetscObjectSetName(tmp_phi(i), char("iloc="//string_type(i)//"_"//name), ierr)
+               call VecLoad(tmp_phi(i), tmp_handle, ierr)
+               call DMDAVecGetArrayReadF90(DM_local, tmp_phi(i), tmp_local, ierr)
                tmp_domain(:, i - 1, :) = tmp_local(:, :)*exp(ZI*lnA0(i, m, n0, n1, n2))
-               call DMDAVecRestoreArrayReadF90(DM_local, phi(i, m, n0, n1, n2), tmp_local, ierr)
+               call DMDAVecRestoreArrayReadF90(DM_local, tmp_phi(i), tmp_local, ierr)
             end do
             call DMDAVecRestoreArrayF90(meshDA, phi_domain, tmp_domain, ierr)
-
             call PetscObjectSetName(phi_domain, char(name), ierr)
             call VecView(phi_domain, Viewer, ierr)
 
@@ -715,6 +782,13 @@ contains
       end do
       end do
       end do
+
+      do i=istart, iend_
+         call DMRestoreGlobalVector(DM_local, tmp_phi(i), ierr)
+      enddo
+      deallocate(tmp_phi)
+
+      call PetscViewerDestroy(tmp_handle, ierr)
       call PetscViewerDestroy(Viewer, ierr)
 
       call PetscPrintf(PETSC_COMM_WORLD, 'Write NPSE result file '// &
@@ -722,6 +796,6 @@ contains
                        ' done.\n', ierr)
       call VecDestroy(phi_domain, ierr)
 
-   end subroutine write_npse_result
+   end subroutine write_tpse_result
 
-end module mod_npse
+end module mod_tpse
