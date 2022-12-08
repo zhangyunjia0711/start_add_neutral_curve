@@ -349,7 +349,6 @@ contains
          call PetscPrintf(PETSC_COMM_WORLD, "No wall bc in receptivity.\n", ierr)
          wall_force_file = 'none'
       end if
-
    end subroutine cfg_receptivity
 
 end module mod_cfgio_adapter

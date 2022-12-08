@@ -70,6 +70,7 @@ module mod_lst_eqn
       procedure :: setup => lst_setup
       procedure :: solve => lst_solve
       procedure :: get_eigf => lst_get_eigenfunction
+      procedure :: get_matrix => get_matrix_lst
 
       ! procedure, private :: lst_set_parameters_real8
       ! procedure, private :: lst_set_parameters_real4
@@ -128,6 +129,7 @@ module mod_lst_eqn
    complex(REAL64), allocatable, dimension(:, :, :) :: D0
    real(REAL64), allocatable, dimension(:, :, :) :: V0xx, V0xy, V0xz
    real(REAL64), allocatable, dimension(:, :, :) :: V0yy, V0yz, V0zz
+   logical :: solved_lst_matrix = .FALSE.
 
    !> \f
     !! \phi=\hat\phi(y)
@@ -240,6 +242,7 @@ contains
 
       call this%solve_EVP_matrix()
       call this%solve_lst_matrix_bc(ome, alf, bat)
+      solved_lst_matrix =.TRUE.
       call this%solve_EVP_matrix_bc()
       call this%solve_EVP_local(ome, alf, bat)
 
@@ -257,6 +260,27 @@ contains
       call normal_u(eigf)
 
    end subroutine lst_get_eigenfunction
+
+   subroutine get_matrix_lst(this, ome, alf, bat, mat_name, matrix)
+
+      implicit none
+      class(type_lst_eqn), intent(inout) :: this
+      complex(REAL64), intent(in) :: ome, alf, bat
+      character(len=*), intent(in) :: mat_name
+      complex(REAL64), intent(out) :: matrix(5, 5, jn)
+
+      select case (trim(mat_name))
+      case ('A_0')
+         if (.not. solved_lst_matrix) then
+            call this%solve_lst_matrix(ome, alf, bat)
+            call this%solve_lst_matrix_bc(ome, alf, bat)
+         endif
+            matrix = A0 - ZI*bat*V0xz- 2.0d0*ZI*alf*V0xx
+      case default
+         stop "A wrong matrix name is given in get_matrix@lst_eqn."
+      end select
+
+   end subroutine get_matrix_lst
 
    subroutine solve_baseflow_matrix(this)
 
@@ -1204,6 +1228,7 @@ contains
 
       deallocate (this%L_LST)
       call DMDestroy(DM_LST, ierr)
+      solved_lst_matrix=.FALSE.
 
    end subroutine lst_finalize
 

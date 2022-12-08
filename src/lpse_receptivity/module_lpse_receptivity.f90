@@ -299,13 +299,13 @@ contains
          w_w = wall_force(3, i)/exp(ZI*lnA(i))
          T_w = wall_force(4, i)/exp(ZI*lnA(i))
 
-         call DMDAVecGetArrayReadF90(DM_local, alpse_function(i + istart), array, ierr)
+         call DMDAVecGetArrayReadF90(DM_local, alpse_function(i + istart - 1), array, ierr)
          rho_star_w = array(0, 0)
          du_star_w = (-1.0d0*array(1, 2) + 4.0d0*array(1, 1) - 3.0d0*array(1, 0))/2.0d0*eta_y(i + istart - 1, 1)
          dv_star_w = (-1.0d0*array(2, 2) + 4.0d0*array(2, 1) - 3.0d0*array(2, 0))/2.0d0*eta_y(i + istart - 1, 1)
          dw_star_w = (-1.0d0*array(3, 2) + 4.0d0*array(3, 1) - 3.0d0*array(3, 0))/2.0d0*eta_y(i + istart - 1, 1)
          dT_star_w = (-1.0d0*array(4, 2) + 4.0d0*array(4, 1) - 3.0d0*array(4, 0))/2.0d0*eta_y(i + istart - 1, 1)
-         call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i + istart), array, ierr)
+         call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i + istart - 1), array, ierr)
          wall_term_part(i) = qq(1, i + istart - 1, 1)*conjg(rho_star_w)*v_w + &
                              mu0*conjg(du_star_w)*u_w + &
                              4.0d0/3.0d0*mu0*conjg(dv_star_w)*v_w + &
@@ -572,9 +572,6 @@ contains
          call VecCopy(lpse_function(i - 1), lpse_function(i), ierr)
          call lpse_eqn%solve(lpse_alpha(i), lpse_function(i), lpse_function(i - 1), lpse_function(i - 2))
          call lpse_eqn%get_matrix(lpse_alpha(i), "A_0", matA(:, :, :, i)) !! this matA contains xi_x xi_y
-         if(i==206)then
-            print*, i, matA(2, 2, 1, i), A0(2, 2, 1), V0xx(2, 2, 1)
-         endif
          lnA(i) = lnA(i - 1) + 0.5d0*(lpse_alpha(i) + lpse_alpha(i - 1))/grid_profile%xi_x(yb + 1)
          print *, 'ix=', i, 'is done.'
          print *, 'alpha=', lpse_alpha(i), "bat=", bat
@@ -613,11 +610,6 @@ contains
 
          call VecCopy(alpse_function(i + 1), alpse_function(i), ierr)
          call alpse_eqn%solve(lpse_alpha(i), alpse_function(i), alpse_function(i + 1), alpse_function(i + 2))
-         block
-            real(REAL64) :: norm_inf
-            call VecNorm(alpse_function(i), NORM_INFINITY, norm_inf, ierr)
-            ! write (777, *) i, norm_inf
-         end block
 
          print *, 'ix=', i, 'is done.'
          print *, 'alpha=', lpse_alpha(i), "bat=", bat
