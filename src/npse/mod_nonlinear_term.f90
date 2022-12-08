@@ -134,10 +134,10 @@ module mod_nonlinear_term
         procedure, private :: compute_dis_profile
         procedure, private :: compute_nonlinear_term
         procedure, private :: compute_force
-        procedure, private :: ifft_spt_phy
-        procedure, private :: ifft_var
-        procedure, private :: fft_phy_spt
+        procedure, private :: fft_spt_phy
         procedure, private :: fft_var
+        procedure, private :: ifft_phy_spt
+        procedure, private :: ifft_var
 
         procedure :: set_parameters_real4 => nonliner_term_set_parameters_real4
         procedure :: set_parameters_real8 => nonliner_term_set_parameters_real8
@@ -399,10 +399,10 @@ contains
         do j = 1, this%jn
             ! print *, 'jloc=', j
             ! print *, this%dis_profile_spectrum(j)%v_a0(1, 0)
-            call this%ifft_spt_phy(this%dis_profile_spectrum(j), point_physics)
+            call this%fft_spt_phy(this%dis_profile_spectrum(j), point_physics)
             ! print *, point_physics%v_a0(0, 0)
             call this%compute_force(j, point_physics, this%f_physics(:, j, :, :))
-            call this%fft_phy_spt(this%f_physics(:, j, :, :), this%f_spectrum(:, j, :, :))
+            call this%ifft_phy_spt(this%f_physics(:, j, :, :), this%f_spectrum(:, j, :, :))
             do l = 1, 5
                 this%f_spectrum(l, j, :, :) = this%f_spectrum(l, j, :, :)/this%exp_integral_alf(:, :)
             end do
@@ -412,7 +412,7 @@ contains
 
     end subroutine compute_nonlinear_term
 
-    subroutine fft_phy_spt(this, f_phy, f_spt)
+    subroutine ifft_phy_spt(this, f_phy, f_spt)
 
         implicit none
         class(type_nonlinear_term), intent(inout) :: this
@@ -425,15 +425,15 @@ contains
             ! print*, 'f_phy:'
             ! print*, f_phy(l, :, :)
             ! read(*, *)
-            call this%fft_var(f_phy(l, :, :), f_spt(l, :, :))
+            call this%ifft_var(f_phy(l, :, :), f_spt(l, :, :))
             ! print*, 'f_spt:'
             ! print*, f_spt(l, :, :)
             ! read(*, *)
         end do
 
-    end subroutine fft_phy_spt
+    end subroutine ifft_phy_spt
 
-    subroutine fft_var(this, cc, aa)
+    subroutine ifft_var(this, cc, aa)
 
         implicit none
         class(type_nonlinear_term), intent(inout) :: this
@@ -452,38 +452,52 @@ contains
 
         bb = cc
 
-        call this%handle_new%fft(bb(0:msp - 1, 0:nsp - 1), bb(0:msp - 1, 0:nsp - 1))
+        call this%handle_new%ifft(bb(0:msp - 1, 0:nsp - 1), bb(0:msp - 1, 0:nsp - 1))
 
         aa = 0.0d0
 
         ! print*, 'bb:'
         ! print*, bb
         ! read(*, *)
-        aa(0, 0) = bb(0, 0)              ! m=0,n=0
+        ! aa(0, 0) = bb(0, 0)              ! m=0,n=0
 
+        ! do i = 1, this%m
+        !     ii = nma - i                 ! m=\0,n=0
+        !     aa(i, 0) = bb(ii, 0)        !(-m,0)
+        ! end do
+
+        ! do j = 1, this%n                       ! m=0,n=\0
+        !     jj = nna - j
+        !     aa(0, j) = bb(0, j)                !(0, n)
+        !     aa(0, -j) = conjg(bb(0, j))        !(0,-n) !!may be not used in -this%n:-1
+        ! end do
+
+        ! do i = 1, this%m                       !m<0
+        !     ii = nma - i
+        !     do j = 1, this%n
+        !         jj = nna - j
+        !         aa(i, j) = bb(ii, j)          !(-m,n)
+        !         aa(i, -j) = bb(ii, jj)          !(-m,-n)
+        !     end do
+        ! end do
+        i = 0
+        aa(0, 0) = bb(0, 0)
+        do j = 1, this%n
+            jj = nna -j
+            aa(0,  j) = bb(0, j )
+            aa(0, -j) = bb(0, jj)
+        enddo
         do i = 1, this%m
-            ii = nma - i                 ! m=\0,n=0
-            aa(i, 0) = bb(ii, 0)        !(-m,0)
-        end do
-
-        do j = 1, this%n                       ! m=0,n=\0
-            jj = nna - j
-            aa(0, j) = bb(0, j)                !(0, n)
-            aa(0, -j) = conjg(bb(0, j))        !(0,-n) !!may be not used in -this%n:-1
-        end do
-
-        do i = 1, this%m                       !m<0
             ii = nma - i
-            do j = 1, this%n
+            aa(i, 0) = bb(ii, 0)
+            do j= 1, this%n
                 jj = nna - j
-                aa(i, j) = bb(ii, j)          !(-m,n)
-                aa(i, -j) = bb(ii, jj)          !(-m,-n)
-            end do
-        end do
+                aa(i, j) = bb(ii, j)
+                aa(i, -j) = bb(ii, jj)
+            enddo
+        enddo
 
-        ! aa=0.0d0
-
-    end subroutine fft_var
+    end subroutine ifft_var
 
     subroutine compute_force(this, jloc, point_physics, force)
 
@@ -709,64 +723,64 @@ contains
 
     end subroutine
 
-    subroutine ifft_spt_phy(this, point_spt, point_phy)
+    subroutine fft_spt_phy(this, point_spt, point_phy)
 
         implicit none
         class(type_nonlinear_term), intent(inout) :: this
         type(type_point_spectrum), intent(in) :: point_spt
         type(type_point_physics), intent(inout) :: point_phy
 
-        call this%ifft_var(point_spt%rho_a0, point_phy%rho_a0)
-        call this%ifft_var(point_spt%u_a0, point_phy%u_a0)
+        call this%fft_var(point_spt%rho_a0, point_phy%rho_a0)
+        call this%fft_var(point_spt%u_a0, point_phy%u_a0)
         ! print*, 'in:', point_spt%v_a0(1, 0)
         ! print*, 'in done============'
-        call this%ifft_var(point_spt%v_a0, point_phy%v_a0)
+        call this%fft_var(point_spt%v_a0, point_phy%v_a0)
         ! print*, 'out:', point_phy%v_a0(0, 0)
         ! print*, 'out done============'
-        call this%ifft_var(point_spt%w_a0, point_phy%w_a0)
-        call this%ifft_var(point_spt%T_a0, point_phy%T_a0)
-        call this%ifft_var(point_spt%rho_t, point_phy%rho_t)
-        call this%ifft_var(point_spt%u_t, point_phy%u_t)
-        call this%ifft_var(point_spt%v_t, point_phy%v_t)
-        call this%ifft_var(point_spt%w_t, point_phy%w_t)
-        call this%ifft_var(point_spt%T_t, point_phy%T_t)
-        call this%ifft_var(point_spt%rho_x, point_phy%rho_x)
-        call this%ifft_var(point_spt%u_x, point_phy%u_x)
-        call this%ifft_var(point_spt%v_x, point_phy%v_x)
-        call this%ifft_var(point_spt%w_x, point_phy%w_x)
-        call this%ifft_var(point_spt%T_x, point_phy%T_x)
-        call this%ifft_var(point_spt%rho_y, point_phy%rho_y)
-        call this%ifft_var(point_spt%u_y, point_phy%u_y)
-        call this%ifft_var(point_spt%v_y, point_phy%v_y)
-        call this%ifft_var(point_spt%w_y, point_phy%w_y)
-        call this%ifft_var(point_spt%T_y, point_phy%T_y)
-        call this%ifft_var(point_spt%rho_z, point_phy%rho_z)
-        call this%ifft_var(point_spt%u_z, point_phy%u_z)
-        call this%ifft_var(point_spt%v_z, point_phy%v_z)
-        call this%ifft_var(point_spt%w_z, point_phy%w_z)
-        call this%ifft_var(point_spt%T_z, point_phy%T_z)
-        call this%ifft_var(point_spt%u_xx, point_phy%u_xx)
-        call this%ifft_var(point_spt%v_xx, point_phy%v_xx)
-        call this%ifft_var(point_spt%w_xx, point_phy%w_xx)
-        call this%ifft_var(point_spt%T_xx, point_phy%T_xx)
-        call this%ifft_var(point_spt%u_yy, point_phy%u_yy)
-        call this%ifft_var(point_spt%v_yy, point_phy%v_yy)
-        call this%ifft_var(point_spt%w_yy, point_phy%w_yy)
-        call this%ifft_var(point_spt%T_yy, point_phy%T_yy)
-        call this%ifft_var(point_spt%u_zz, point_phy%u_zz)
-        call this%ifft_var(point_spt%v_zz, point_phy%v_zz)
-        call this%ifft_var(point_spt%w_zz, point_phy%w_zz)
-        call this%ifft_var(point_spt%T_zz, point_phy%T_zz)
-        call this%ifft_var(point_spt%u_xy, point_phy%u_xy)
-        call this%ifft_var(point_spt%v_xy, point_phy%v_xy)
-        call this%ifft_var(point_spt%u_xz, point_phy%u_xz)
-        call this%ifft_var(point_spt%w_xz, point_phy%w_xz)
-        call this%ifft_var(point_spt%v_yz, point_phy%v_yz)
-        call this%ifft_var(point_spt%w_yz, point_phy%w_yz)
+        call this%fft_var(point_spt%w_a0, point_phy%w_a0)
+        call this%fft_var(point_spt%T_a0, point_phy%T_a0)
+        call this%fft_var(point_spt%rho_t, point_phy%rho_t)
+        call this%fft_var(point_spt%u_t, point_phy%u_t)
+        call this%fft_var(point_spt%v_t, point_phy%v_t)
+        call this%fft_var(point_spt%w_t, point_phy%w_t)
+        call this%fft_var(point_spt%T_t, point_phy%T_t)
+        call this%fft_var(point_spt%rho_x, point_phy%rho_x)
+        call this%fft_var(point_spt%u_x, point_phy%u_x)
+        call this%fft_var(point_spt%v_x, point_phy%v_x)
+        call this%fft_var(point_spt%w_x, point_phy%w_x)
+        call this%fft_var(point_spt%T_x, point_phy%T_x)
+        call this%fft_var(point_spt%rho_y, point_phy%rho_y)
+        call this%fft_var(point_spt%u_y, point_phy%u_y)
+        call this%fft_var(point_spt%v_y, point_phy%v_y)
+        call this%fft_var(point_spt%w_y, point_phy%w_y)
+        call this%fft_var(point_spt%T_y, point_phy%T_y)
+        call this%fft_var(point_spt%rho_z, point_phy%rho_z)
+        call this%fft_var(point_spt%u_z, point_phy%u_z)
+        call this%fft_var(point_spt%v_z, point_phy%v_z)
+        call this%fft_var(point_spt%w_z, point_phy%w_z)
+        call this%fft_var(point_spt%T_z, point_phy%T_z)
+        call this%fft_var(point_spt%u_xx, point_phy%u_xx)
+        call this%fft_var(point_spt%v_xx, point_phy%v_xx)
+        call this%fft_var(point_spt%w_xx, point_phy%w_xx)
+        call this%fft_var(point_spt%T_xx, point_phy%T_xx)
+        call this%fft_var(point_spt%u_yy, point_phy%u_yy)
+        call this%fft_var(point_spt%v_yy, point_phy%v_yy)
+        call this%fft_var(point_spt%w_yy, point_phy%w_yy)
+        call this%fft_var(point_spt%T_yy, point_phy%T_yy)
+        call this%fft_var(point_spt%u_zz, point_phy%u_zz)
+        call this%fft_var(point_spt%v_zz, point_phy%v_zz)
+        call this%fft_var(point_spt%w_zz, point_phy%w_zz)
+        call this%fft_var(point_spt%T_zz, point_phy%T_zz)
+        call this%fft_var(point_spt%u_xy, point_phy%u_xy)
+        call this%fft_var(point_spt%v_xy, point_phy%v_xy)
+        call this%fft_var(point_spt%u_xz, point_phy%u_xz)
+        call this%fft_var(point_spt%w_xz, point_phy%w_xz)
+        call this%fft_var(point_spt%v_yz, point_phy%v_yz)
+        call this%fft_var(point_spt%w_yz, point_phy%w_yz)
 
-    end subroutine ifft_spt_phy
+    end subroutine fft_spt_phy
 
-    subroutine ifft_var(this, aa, cc)
+    subroutine fft_var(this, aa, cc)
 
         implicit none
         class(type_nonlinear_term), intent(inout) :: this
@@ -821,11 +835,11 @@ contains
 
         !call SpectralBackward(this%handle, bb(0:msp - 1, 0:nsp - 1))
         ! print*, bb(1, 0)
-        call this%handle_new%ifft(bb(0:msp - 1, 0:nsp - 1), bb(0:msp - 1, 0:nsp - 1))
+        call this%handle_new%fft(bb(0:msp - 1, 0:nsp - 1), bb(0:msp - 1, 0:nsp - 1))
         cc = real(bb, REAL64)
         ! print*, cc(0, 0)
 
-    end subroutine ifft_var
+    end subroutine fft_var
 
     subroutine compute_dis_profile(this)
 

@@ -406,10 +406,13 @@ contains
                     end if
                     ! if(sum(iterator_times)==0) VecDistance = VecDistance*10d2
                     itimes_nonlinear = itimes_nonlinear + 1
+                    if (itimes_nonlinear > maxit_nonlinear) then
+                        print *, '[WARNING] the iteration for nonlinear larger than max times.'
+                        goto 1000
+                    endif
 
                 end do
 
-                if (itimes_nonlinear > maxit_nonlinear) print *, '[WARNING] the iteration for nonlinear larger than max times.'
 
                 ! print *, 'ix=', i, 'is done.'
                 print *, 'The whole iteration times is', sum(iterator_times)
@@ -484,7 +487,7 @@ contains
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
                         alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
-                        alf(i, m, n) = alf_tmp*(inlet_dis(1)%m*theta1%im+inlet_dis(1)%n*theta2%im)
+                        alf(i, m, n) = alf_tmp*(m*theta1%im+n*theta2%im)
                     end if
                     if (i > istart) lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid%xi_x(yb + 1)
                 end do
@@ -578,7 +581,7 @@ contains
         strings = "Writing the shape functions phi to "//name//'.\n'
         call PetscPrintf(PETSC_COMM_WORLD, char(strings), ierr)
 
-        call PetscViewerHDF5WriteAttribute(viewer, "/", "Problem", PETSC_STRING, "tPSE", ierr)
+        call PetscViewerHDF5WriteAttribute(viewer, "/", "Problem", PETSC_STRING, "NPSE", ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Grid", PETSC_STRING, char(gridfile), ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Flow", PETSC_STRING, char(flowfile), ierr)
         call PetscViewerHDF5WriteAttribute(viewer, "/", "Title", PETSC_STRING, char(title), ierr)

@@ -20,7 +20,7 @@ program tPSE_PROG
    use mod_petsc_loader
    use mod_metrics
    use mod_flow_grad
-   use mod_npse
+   use mod_tpse
 
    implicit none
 
@@ -50,7 +50,7 @@ program tPSE_PROG
 
    call flow_grad(PETSC_COMM_WORLD)
 
-   call npse()
+   call tpse()
 
    call SLEPCFinalize(ierr)
 
