@@ -105,13 +105,13 @@ contains
       complex(REAL64) :: array2(5, jn), array1(5, jn)
 
       do i = 60, 60!istart, iend
-         print*, i
+         print *, i
          ! call MatMult(MatA(i), lpse_function(i), v_tmp, ierr)
          call DMDAVecGetArrayF90(DM_local, lpse_function(i), tmp1, ierr)
          ! array1(:, :) = tmp(:, :)
          do j = 1, jn
             ! v_tmp(:, j) = matmul(matA(:, :, j, i), array1(:, j))
-            v_tmp(:, j) = matmul(matA(:, :, j, i), tmp1(:, j-1))
+            v_tmp(:, j) = matmul(matA(:, :, j, i), tmp1(:, j - 1))
          end do
          call DMDAVecRestoreArrayF90(DM_local, lpse_function(i), tmp1, ierr)
 
@@ -121,30 +121,30 @@ contains
          ! array2(:, :) = tmp(:, :)
          q(i) = inner_dot_y(tmp2, v_tmp, grid_profile%y)
          call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i), tmp2, ierr)
-         
+
          ! q(i) = inner_dot_y(array2, v_tmp, grid_profile%y)
 
          block
             integer :: l1, l2
-            do l1=1, 5
-               do l2=1, 5
-                  print*, l1, l2, matA(l1, l2, 30, i)
-               enddo
-            enddo
+            do l1 = 1, 5
+               do l2 = 1, 5
+                  print *, l1, l2, matA(l1, l2, 30, i)
+               end do
+            end do
 
-         endblock
+         end block
 
-         print*, v_tmp(:, 2)
-         print*, v_tmp(:, 30)
-         print*, q(i)/abs(norm_u(lpse_function(i)))
-         
+         print *, v_tmp(:, 2)
+         print *, v_tmp(:, 30)
+         print *, q(i)/abs(norm_u(lpse_function(i)))
+
          ! print*, i, q(i)
          ! write(999, *) i, q, abs(q)
       end do
 
       stop
 
-   end subroutine 
+   end subroutine
 
    subroutine load_force_info()
       implicit none
@@ -219,9 +219,9 @@ contains
                              &         integral_y(source_force_term_part(i - 1, :), grid_profile%y))/grid_profile%xi_x(yb + 1)
 
          integral_wall_term = integral_wall_term + &
-                             &  0.5d0*(wall_term_part(i) + wall_term_part(i - 1))/grid_profile%xi_x(yb + 1) 
+                             &  0.5d0*(wall_term_part(i) + wall_term_part(i - 1))/grid_profile%xi_x(yb + 1)
          ! lambda(i) = (integral_source_term - integral_wall_term)/q(i) !*lnA(i)*(norm_u(lpse_function(i)))
-        lambda(i) = (integral_source_term-integral_wall_term)/q(i)*exp(ZI*lnA(i))*norm_u(lpse_function(i))
+         lambda(i) = (integral_source_term - integral_wall_term)/q(i)*exp(ZI*lnA(i))*norm_u(lpse_function(i))
          ! print*, i, wall_term_part(i)
       end do
 
@@ -357,7 +357,7 @@ contains
             print *, i, q(i), maxval(abs(array1)), maxval(abs(array2)), maxval(abs(v_tmp))
 
             print *, i, norm_inf1, norm_inf2
-            print*, array1(:, 1)
+            print *, array1(:, 1)
             do j = 1, jn
                ! do l = 1, 5
                !    if((abs(array(l, j)))> 1.0d2) print*, j, l, abs(array(:, j))
