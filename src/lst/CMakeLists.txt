@@ -7,5 +7,5 @@ file(GLOB  SRC_FILES_LST
     "${PROJECT_SOURCE_DIR}/src/third_party/cfgio/*.f90"
     )
 add_executable(START_LST ${SRC_FILES_LST})
-target_link_libraries(START_LST PkgConfig::PETSC PkgConfig::SLEPC PkgConfig::fortran_stdlib) 
+target_link_libraries(START_LST PkgConfig::PETSC PkgConfig::SLEPC PkgConfig::fortran_stdlib LAPACK::LAPACK) 
 install(TARGETS START_LST DESTINATION bin)

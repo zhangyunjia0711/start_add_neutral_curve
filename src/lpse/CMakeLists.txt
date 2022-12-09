@@ -10,5 +10,5 @@ file(GLOB  SRC_FILES_LPSE
     "${PROJECT_SOURCE_DIR}/src/third_party/cfgio/*.f90"
     )
 add_executable(START_LPSE ${SRC_FILES_LPSE})
-target_link_libraries(START_LPSE PkgConfig::PETSC PkgConfig::SLEPC PkgConfig::fortran_stdlib)  
+target_link_libraries(START_LPSE PkgConfig::PETSC PkgConfig::SLEPC PkgConfig::fortran_stdlib LAPACK::LAPACK)  
 install(TARGETS START_LPSE DESTINATION bin)

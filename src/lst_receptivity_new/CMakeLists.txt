@@ -10,5 +10,5 @@ file(GLOB  SRC_FILES_LPSE_RECEPTIVITY_NEW
     "${PROJECT_SOURCE_DIR}/src/third_party/cfgio/*.f90"
     )
 add_executable(START_LST_Receptivity_new ${SRC_FILES_LPSE_RECEPTIVITY_NEW})
-target_link_libraries(START_LST_Receptivity_new PkgConfig::PETSC PkgConfig::SLEPC PkgConfig::fortran_stdlib)  
+target_link_libraries(START_LST_Receptivity_new PkgConfig::PETSC PkgConfig::SLEPC PkgConfig::fortran_stdlib LAPACK::LAPACK)  
 install(TARGETS START_LST_Receptivity_new DESTINATION bin)
