@@ -1,17 +1,13 @@
 !------------------------------------------------------------------------------
-! TJU/Department of Mechanics, Fluid Mechanics, Code FooPSE
+! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
-!
-!  module: mod_solve_lpse
-!> @breif module for solving lpse.
-!  DESCRIPTION:
-!>
-!!
-!  REVISION HISTORY:
-!  2021-01-05 - Initial Version
-!> @author
-!> Liu Jianxin
-!> \date 2021-01-05
+!> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-12-08 13:45:30
+!> @LastEditTime: 2022-12-10 13:21:51
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/tpse/module_tpse.f90
+!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
@@ -256,7 +252,7 @@ contains
          bat = theta(1)%im*inlet_dis(i)%m
          do l = 2, ntheta
             ome = ome + theta(l)%re*inlet_dis(i)%n(l - 1)
-            bat = bat + theta(2)%im*inlet_dis(i)%n(l - 1)
+            bat = bat + theta(l)%im*inlet_dis(i)%n(l - 1)
          end do
          call lst%solve(ome, alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1), inlet_dis(i)%n(2), inlet_dis(i)%n(3)), bat)
          call lst%get_eigf(phi(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1), inlet_dis(i)%n(2), inlet_dis(i)%n(3)))
