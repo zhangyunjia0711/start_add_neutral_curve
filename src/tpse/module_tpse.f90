@@ -702,7 +702,7 @@ contains
       end do
     !! Write Number
       ! name=solname//'_i='//chars(istart)//'_i='//chars(iend)//'_alpha.plt'
-      astring(1) = "NPSE"
+      astring(1) = "tPSE"
       astring(2) = string_type(istart)!; astring(2)=astring(2)%slice(2, max(2, ceiling(log10(istart + 0.1d0) + 1)))
       astring(2) = 'istart='//astring(2)
       astring(3) = string_type(iend)!; astring(3)=astring(3)%slice(2, max(2, ceiling(log10(iend + 0.1d0) + 1)))
