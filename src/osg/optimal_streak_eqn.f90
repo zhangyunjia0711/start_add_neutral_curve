@@ -13,6 +13,7 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
+!@ module optimal streak equations solver.
 module mod_optimal_streak_eqn
 
     use iso_fortran_env, only: REAL64
