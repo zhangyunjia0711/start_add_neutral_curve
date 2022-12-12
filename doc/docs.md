@@ -15,6 +15,8 @@ exclude_dir: ../bin
              ../src/include
 exclude: functional.f90
          module_sort.f90
+         module_cmd_progress.f90
+         complex_bessel.f90
 display: public
          protected
 source: true
@@ -32,7 +34,7 @@ ordered_subpage: theory
 ordered_subpage: guide
 ordered_subpage: examples
 css: ./css/style.css
-
+predocmark: @
 ---
 [TOC]
 

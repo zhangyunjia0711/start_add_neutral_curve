@@ -5,14 +5,15 @@
 !> @Date: 2022-12-10 21:17:22
 !> @LastEditTime: 2022-12-12 16:15:35
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: main program for tpse.
 !> @FilePath: /START_all/src/tpse/main.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
-program tPSE_PROG
+!@ tPSE solver
+program tPSE_prog
 
    use petsc
    use slepcsys
@@ -57,4 +58,4 @@ program tPSE_PROG
 
    CHKERRA(ierr)
 
-end program tPSE_PROG
+end program tPSE_prog

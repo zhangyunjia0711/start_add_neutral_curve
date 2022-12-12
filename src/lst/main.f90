@@ -5,7 +5,7 @@
 !> @Date: 2022-09-05 09:32:30
 !> @LastEditTime: 2022-12-12 19:33:38
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: main program for lst.
 !> @FilePath: /START_all/src/lst/main.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
@@ -13,7 +13,8 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
-program LST
+!@ LST solver.
+program LST_prog
 
   use petsc !, only: comm=>PETSC_COMM_WORLD
   use slepcsys
@@ -57,4 +58,4 @@ program LST
 
   ! CHKERRA(ierr)
 
-end program LST
+end program LST_prog

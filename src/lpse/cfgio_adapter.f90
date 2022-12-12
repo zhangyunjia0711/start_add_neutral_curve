@@ -5,11 +5,12 @@
 !> @Date: 2022-12-08 13:45:30
 !> @LastEditTime: 2022-12-12 19:34:32
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: config file adapter for linearized parabolized stability equations.
 !> @FilePath: /START_all/src/lpse/cfgio_adapter.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
+!@ config file adapter for lpse solver.
 module mod_cfgio_adapter
 
     use cfgio_mod

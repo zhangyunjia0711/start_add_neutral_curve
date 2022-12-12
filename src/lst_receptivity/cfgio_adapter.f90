@@ -10,6 +10,7 @@
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
+!@ config file adapter for lst receptivity solver for discrete force.
 module mod_cfgio_adapter
 
    use cfgio_mod

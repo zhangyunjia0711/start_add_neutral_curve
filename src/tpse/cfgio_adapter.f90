@@ -9,6 +9,8 @@
 !> @FilePath: /START_all/src/tpse/cfgio_adapter.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
+
+!@ config file adapter for tPSE solver.
 module mod_cfgio_adapter
 
     use cfgio_mod
@@ -26,12 +28,11 @@ module mod_cfgio_adapter
 
 contains
 
-    !> read infomation from cfg_file
-    !! @param[in] cfgfn filename of cfgio
     subroutine cfg_loader(cfgfn)
+    !! read infomation from cfg_file
 
         implicit none
-        character(len=*), intent(in) :: cfgfn
+        character(len=*), intent(in) :: cfgfn !! configure file name
         integer :: ierr
         logical :: set
 

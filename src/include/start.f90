@@ -5,7 +5,7 @@
 !> @Date: 2022-12-08 13:45:30
 !> @LastEditTime: 2022-12-12 19:35:33
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: public variables for the whole codes.
 !> @FilePath: /START_all/src/include/start.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------

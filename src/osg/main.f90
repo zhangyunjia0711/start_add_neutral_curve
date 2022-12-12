@@ -5,7 +5,7 @@
 !> @Date: 2022-09-05 09:32:33
 !> @LastEditTime: 2022-12-12 19:29:33
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: main program for optimal streak growth.
 !> @FilePath: /START_all/src/osg/main.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
@@ -13,7 +13,8 @@
 #include <petsc/finclude/petsc.h>
 ! #include <slepc/finclude/slepc.h>
 
-program LPSE
+!@ optimal streak growth solver
+program OSG_prog
 
   use petsc
   use slepcsys
@@ -64,4 +65,4 @@ program LPSE
 
   ! CHKERRA(ierr)
 
-end program LPSE
+end program OSG_prog

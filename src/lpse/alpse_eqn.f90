@@ -5,15 +5,14 @@
 !> @Date: 2022-09-09 10:45:42
 !> @LastEditTime: 2022-12-12 19:34:26
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: adjoint linearized parabolized stability equations solver.
 !> @FilePath: /START_all/src/lpse/alpse_eqn.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
-
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
-
+!@ apse equations solver
 module mod_alpse_eqn
 
     use petsc
@@ -58,7 +57,7 @@ module mod_alpse_eqn
     real(REAL64), allocatable, dimension(:, :, :) :: dA0, dB0, dV0yy, ddV0yy, dV0xy, dV0yz
 
     real(REAL64), allocatable, dimension(:, :) :: modify_Px_A
-    !> \f
+  !> \f
   !! \phi=\hat\phi(y)
   !!  L\hat\phi=0
   !!  L=

@@ -10,6 +10,8 @@
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
+!@ config file adapter for optimal growth streak solver.
+
 module mod_cfgio_adapter
 
     use cfgio_mod

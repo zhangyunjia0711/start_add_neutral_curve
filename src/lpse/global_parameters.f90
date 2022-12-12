@@ -5,7 +5,7 @@
 !> @Date: 2022-11-01 11:44:33
 !> @LastEditTime: 2022-12-12 19:34:38
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: global parameters for linearized parabolized stability equations.
 !> @FilePath: /START_all/src/lpse/global_parameters.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
@@ -13,6 +13,7 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
+!@ global parameters for lpse solver.
 module global_parameters
 
   use iso_fortran_env, only: REAL64

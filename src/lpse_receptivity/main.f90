@@ -5,7 +5,7 @@
 !> @Date: 2022-09-14 17:09:39
 !> @LastEditTime: 2022-12-12 19:34:09
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: main program for lpse receptivity.
 !> @FilePath: /START_all/src/lpse_receptivity/main.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
@@ -13,6 +13,7 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
+!@ LPSE receptivity solver.
 program LPSE_receptivity_prog
 
   use petsc!, only : comm=>PETSC_COMM_WORLD

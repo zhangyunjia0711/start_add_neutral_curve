@@ -5,7 +5,7 @@
 !> @Date: 2022-09-09 10:45:42
 !> @LastEditTime: 2022-12-12 19:32:37
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: main program for lst receptivity solver for discrete force.
 !> @FilePath: /START_all/src/lst_receptivity/main.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
@@ -13,7 +13,8 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
-program LST_recepvitity
+!@ LST receptivity solver for discrete force.
+program LST_recepvitity_prog
 
   use petsc !, only: comm=>PETSC_COMM_WORLD
   use slepcsys
@@ -57,4 +58,4 @@ program LST_recepvitity
 
   ! CHKERRA(ierr)
 
-end program LST_recepvitity
+end program LST_recepvitity_prog

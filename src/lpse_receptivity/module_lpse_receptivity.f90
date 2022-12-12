@@ -22,6 +22,7 @@ module mod_lpse_receptivity
    implicit none
 
    public :: lpse_receptivity
+   private
 #include "../include/start.f90"
 
    complex(REAL64), allocatable :: lpse_alpha(:), lnA(:)

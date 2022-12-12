@@ -5,7 +5,7 @@
 !> @Date: 2022-12-10 21:17:22
 !> @LastEditTime: 2022-12-12 19:32:09
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: main program for lst receptivity solver for continuous force.
 !> @FilePath: /START_all/src/lst_receptivity_new/main.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
@@ -13,7 +13,8 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
-program LST_receptivity_prog
+!@ lst receptivity solver for continuous force
+program LST_receptivity_new_prog
 
   use petsc!, only : comm=>PETSC_COMM_WORLD
   use slepcsys
@@ -58,4 +59,4 @@ program LST_receptivity_prog
 
   ! CHKERRA(ierr)
 
-end program LST_receptivity_prog
+end program LST_receptivity_new_prog

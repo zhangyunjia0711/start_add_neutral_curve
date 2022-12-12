@@ -39,7 +39,7 @@ module mod_optimal_streak_eqn
     type(type_alpse_eqn) :: alpse
     type(type_lst_eqn) :: lst
 
-    type :: type_optimal_streak_eqn
+    type :: type_optimal_streak_eqn !! optimal streak equations solver container.
 
         Vec :: q0, q1
         Vec :: q0_star, q1_star
@@ -58,12 +58,12 @@ module mod_optimal_streak_eqn
 
     contains
 
-        procedure :: initial => initial_optimal_streak_eqn
-        procedure :: setup => setup_optimal_streak_eqn
-        procedure :: set_ic => set_ic_optimal_streak
-        procedure :: solve => solve_optimal_streak
-        procedure :: get_eigf => get_eigf_optimal_streak
-        procedure :: finalize => finalize_optimal_streak_eqn
+        procedure :: initial => initial_optimal_streak_eqn !! initialize.
+        procedure :: setup => setup_optimal_streak_eqn     !! setup.
+        procedure :: set_ic => set_ic_optimal_streak       !! set initial condition.
+        procedure :: solve => solve_optimal_streak         !! solve the equations.
+        procedure :: get_eigf => get_eigf_optimal_streak   !! get eigenfunctions.
+        procedure :: finalize => finalize_optimal_streak_eqn  !! finalize.
 
         procedure, private :: get_lpse_inlet
         procedure, private :: get_alpse_inlet
@@ -73,10 +73,11 @@ module mod_optimal_streak_eqn
 contains
 
     subroutine initial_optimal_streak_eqn(this, jn, Re, Ma, Te, Pr, yb, ye, isothermal)
-        class(type_optimal_streak_eqn), intent(inout) :: this
-        integer, intent(in) :: jn, yb, ye
-        real(real64), intent(in) :: Re, Ma, Te, Pr
-        logical, intent(in) :: isothermal
+        !! initial optimal streak equations.
+        class(type_optimal_streak_eqn), intent(inout) :: this 
+        integer, intent(in) :: jn, yb, ye  !! jn, lbound and ubound.
+        real(real64), intent(in) :: Re, Ma, Te, Pr !! flow parameters.
+        logical, intent(in) :: isothermal  !! temperature wall bc.
 
         this%jn = jn
         this%Ma = Ma
@@ -110,14 +111,16 @@ contains
     end subroutine initial_optimal_streak_eqn
 
     subroutine setup_optimal_streak_eqn(this, i_x0_, grid_x0, baseflow_x0, i_x1_, grid_x1, baseflow_x1, alf_, bat_, ome_)
-
+    !! setup optimal streak equations.
         implicit none
         class(type_optimal_streak_eqn), intent(inout) :: this
-        integer, intent(in) :: i_x0_, i_x1_
-        type(type_lst_grid_profile), intent(in) :: grid_x0, grid_x1
-        type(type_lst_bf_profile), intent(in) :: baseflow_x0, baseflow_x1
-        complex(real64) :: alf_
-        real(REAL64) :: bat_, ome_
+        integer, intent(in) :: i_x0_  !! x0 index.
+        integer, intent(in) :: i_x1_  !! x1 index.
+        type(type_lst_grid_profile), intent(in) :: grid_x0, grid_x1 !! grid profile at x0 and x1.
+        type(type_lst_bf_profile), intent(in) :: baseflow_x0, baseflow_x1 !! baseflow profile at x0 and x1.
+        complex(real64), intent(in) :: alf_ !! \(\alpha\) in equations.
+        real(REAL64), intent(in) :: bat_ !! \(\beta\) in equations.
+        real(REAL64), intent(in) :: ome_ !! \(\omega\) in equations.
 
         this%i_x0 = i_x0_; this%i_x1 = i_x1_
         this%grid_x0 = grid_x0; this%grid_x1 = grid_x1

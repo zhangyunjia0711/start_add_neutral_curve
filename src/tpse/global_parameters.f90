@@ -5,13 +5,14 @@
 !> @Date: 2022-12-10 21:17:22
 !> @LastEditTime: 2022-12-12 16:15:49
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: global parameters for tpse solver.
 !> @FilePath: /START_all/src/tpse/global_parameters.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
+!@ global parameters for tpse.
 module global_parameters
 
    use iso_fortran_env, only: REAL64
@@ -22,8 +23,8 @@ module global_parameters
 
    public
 
-   type(cfg_t) :: cfg
-   logical :: mpi_ierr = .FALSE.                            !<cfg类
+   type(cfg_t) :: cfg 
+   logical :: mpi_ierr = .FALSE.    
    logical :: screen_flg = .TRUE.
    ! integer(kind(type_lst_mode)) :: lst_mode = LST_SPATIAL_MODE
    real(REAL64) :: GAMMA = 1.4D0

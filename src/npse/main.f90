@@ -13,7 +13,8 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
-program NPSE_PROG
+!@ npse solver.
+program NPSE_prog
 
    use petsc
    use slepcsys
@@ -58,4 +59,4 @@ program NPSE_PROG
 
    CHKERRA(ierr)
 
-end program NPSE_PROG
+end program NPSE_prog

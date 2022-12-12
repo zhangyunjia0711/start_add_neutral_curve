@@ -22,6 +22,7 @@ module mod_lst_receptivity
    implicit none
 
    public :: lst_receptivity
+   private
 #include "../include/start.f90"
 
    complex(REAL64), allocatable :: lst_alpha(:), lnA(:)

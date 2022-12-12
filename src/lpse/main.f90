@@ -5,7 +5,7 @@
 !> @Date: 2022-09-05 09:32:29
 !> @LastEditTime: 2022-12-12 19:35:06
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: main program for lpse.
 !> @FilePath: /START_all/src/lpse/main.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
@@ -13,6 +13,7 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
+!@ LPSE solver.
 program LPSE_prog
 
   use petsc!, only : comm=>PETSC_COMM_WORLD

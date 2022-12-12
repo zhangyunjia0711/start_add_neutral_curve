@@ -13,6 +13,29 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
+!@ module lpse equations
+!! \[
+!! \phi=\phi(x, y, z, t) \\
+!!   G_0 \frac{\partial \phi}{\partial t}+ A0 \frac{\partial \phi}{h_1\partial x}
+!! + B_0 \frac{\partial \phi}{\partial y}+ C0 \frac{\partial \phi}{h_3\partial z}
+!! + D_0 \phi= \\
+!!  V_{0xx} \frac{\partial^2 \phi}{h_1^2 \partial x^2}
+!! +V_{0xy} \frac{\partial^2 \phi}{h_1   \partial x\partial y}
+!! +V_{0xz} \frac{\partial^2 \phi}{h_1h_3\partial x\partial z}
+!! +V_{0yy} \frac{\partial^2 \phi}{      \partial y^2}
+!! +V_{0yz} \frac{\partial^2 \phi}{h_3   \partial y\partial z}
+!! +V_{0zz} \frac{\partial^2 \phi}{h_3^2 \partial z^2}
+!! \]
+
+!! \[
+!! \phi=\hat\phi(y) {\rm e}^{i(\int_{x0}^ x \alpha d\xi +\beta z - \omega t)} \\
+!!  L\hat\phi=0\\
+!!  L=
+!!  (D_0 + B_0\frac{\partial}{\partial y}+ V_0\frac{\partial^2}{\partial y^2})
+!!  +\omega*(G_0)
+!!  +alpha*(D_1+B_1\frac{\partial}{\partial y})
+!!  +alpha^2*(D_2)
+!! \]
 module mod_lpse_eqn
 
    use petsc
@@ -33,33 +56,13 @@ module mod_lpse_eqn
 
    PetscErrorCode :: ierr
 
-   !> \f
-    !! \phi=\phi(x, y, z, t)
-    !!   G0 \frac{\partial \phi}{\partial t}+ A0 \frac{\partial \phi}{h_1\partial x}
-    !! + B0 \frac{\partial \phi}{\partial y}+ C0 \frac{\partial \phi}{h_3\partial z}
-    !! + D0 phi=
-    !!  V_{0xx} \frac{\partial^2 \phi}{h_1^2 \partial x^2}
-    !! +V_{0xy} \frac{\partial^2 \phi}{h_1   \partial x\partial y}
-    !! +V_{0xz} \frac{\partial^2 \phi}{h_1h_3\partial x\partial z}
-    !! +V_{0yy} \frac{\partial^2 \phi}{      \partial y^2}
-    !! +V_{0yz} \frac{\partial^2 \phi}{h_3   \partial y\partial z}
-    !! +V_{0zz} \frac{\partial^2 \phi}{h_3^2 \partial z^2}
-    !! \f
 
    real(REAL64), allocatable, dimension(:, :, :) :: G0, A0, B0, C0, D0
    real(REAL64), allocatable, dimension(:, :, :) :: V0xx, V0xy, V0xz
    real(REAL64), allocatable, dimension(:, :, :) :: V0yy, V0yz, V0zz
    real(REAL64), allocatable, dimension(:, :, :) :: Aplus
    real(REAL64), allocatable, dimension(:, :) :: modify_Px_A
-   !> \f
-    !! \phi=\hat\phi(y)
-    !!  L\hat\phi=0
-    !!  L=
-    !!  (+D_0 + B_0\frac{\partial}{\parital y}+ V_0\frac{\partial^2}{\parital y^2})
-    !!  +\omega*(G_0)
-    !!  +alpha*(D_1+B_1\frac{\partial}{\parital y})
-    !!  +alpha^2*(D_2)
-    !! \f
+
 
    private
    ! public :: solve_lpse_eqn
