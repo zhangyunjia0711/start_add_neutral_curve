@@ -1,3 +1,14 @@
+!------------------------------------------------------------------------------
+! TJU/Department of Mechanics, Fluid Mechanics, Code START
+!------------------------------------------------------------------------------
+!> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-12-08 13:45:30
+!> @LastEditTime: 2022-12-12 16:18:37
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/public/module_porous_parameters.f90
+!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!------------------------------------------------------------------------------
 module mod_porous_parameters
 
     use iso_fortran_env

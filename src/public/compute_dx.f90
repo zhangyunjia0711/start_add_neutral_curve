@@ -1,3 +1,14 @@
+!------------------------------------------------------------------------------
+! TJU/Department of Mechanics, Fluid Mechanics, Code START
+!------------------------------------------------------------------------------
+!> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-09-05 09:32:33
+!> @LastEditTime: 2022-12-12 16:16:41
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/public/compute_dx.f90
+!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!------------------------------------------------------------------------------
 module mod_dx
 
    use iso_fortran_env, only: REAL64

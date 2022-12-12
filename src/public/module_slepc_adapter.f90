@@ -1,28 +1,13 @@
 !------------------------------------------------------------------------------
-! TJU/Department of Mechanics, Fluid Mechanics, Code FooPSE
+! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
-!
-!  File: module_slepc_adapter.f90
-!> @file
-!> @breif SLEPC接口模块文件.
-!  DESCRIPTION:
-!>
-!------------------------------------------------------------------------------
-
-!------------------------------------------------------------------------------
-! TJU/Department of Mechanics, Fluid Mechanics, Code FooPSE
-!------------------------------------------------------------------------------
-!
-!  module: mod_slepc_adapter
-!> @breif SLEPC接口模块.
-!  DESCRIPTION:
-!>
-!!
-!  REVISION HISTORY:
-!  2018-09-12 - Initial Version
-!> @author
-!> Liu Jianxin
-!> \date 2018-09-12
+!> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-09-23 11:16:39
+!> @LastEditTime: 2022-12-12 16:18:53
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/public/module_slepc_adapter.f90
+!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
 #include <slepc/finclude/slepc.h>
