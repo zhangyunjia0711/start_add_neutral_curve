@@ -1,21 +1,15 @@
-
 !------------------------------------------------------------------------------
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
-!
-!  Module: fft
-!
-!  DESCRIPTION:
-!> @breif FFT(傅里叶变换).
-!>
-!!
-!  REVISION HISTORY:
-!  yyyy-mm-dd - Initial Version
-!  TODO_yyyy-mm-dd - TODO_describe_appropriate_changes - TODO_name
-!> @author
-!> Liu Jianxin
-!> @date 2017-11-10
+!> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-09-05 09:32:32
+!> @LastEditTime: 2022-12-12 19:30:45
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/npse/module_fft.f90
+!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
+
 #ifdef MKL
 #include <mkl_dfti.f90>
 #endif

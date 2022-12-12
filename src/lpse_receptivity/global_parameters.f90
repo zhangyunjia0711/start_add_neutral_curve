@@ -1,3 +1,15 @@
+!------------------------------------------------------------------------------
+! TJU/Department of Mechanics, Fluid Mechanics, Code START
+!------------------------------------------------------------------------------
+!> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-09-14 17:09:39
+!> @LastEditTime: 2022-12-12 19:34:03
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/lpse_receptivity/global_parameters.f90
+!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!------------------------------------------------------------------------------
+
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 

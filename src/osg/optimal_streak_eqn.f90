@@ -1,17 +1,13 @@
 !------------------------------------------------------------------------------
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
-!
-!  module: mod_optimal_streak_eqn
-!> @breif module for solving optimal streak.
-!  DESCRIPTION:
-!>
-!!
-!  REVISION HISTORY:
-!  2022-06-12 - Initial Version
-!> @author
-!> Liu Jianxin
-!> \date 2021-06-12
+!> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-09-09 10:45:42
+!> @LastEditTime: 2022-12-12 19:29:51
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/osg/optimal_streak_eqn.f90
+!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
 #include <petsc/finclude/petsc.h>

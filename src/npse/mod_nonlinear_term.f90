@@ -1,79 +1,17 @@
-
-!#include <mkl_dfti.f90>
+!------------------------------------------------------------------------------
+! TJU/Department of Mechanics, Fluid Mechanics, Code START
+!------------------------------------------------------------------------------
+!> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-12-11 15:07:36
+!> @LastEditTime: 2022-12-12 19:30:58
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/npse/mod_nonlinear_term.f90
+!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!------------------------------------------------------------------------------
 
 #include <slepc/finclude/slepc.h>
 #include <petsc/finclude/petsc.h>
-
-! module MKL_fft
-
-!     use MKL_DFTI
-
-!     implicit none
-
-!     integer :: MNSpectral(2)
-!     integer :: status
-
-! contains
-
-!     subroutine SetSpectralScheme(handle)
-
-!         implicit none
-!         type(DFTI_DESCRIPTOR), pointer :: handle
-!         real*8  :: ScaleFactor
-
-!         ScaleFactor = 1.0d0/dble(MNSpectral(1)*MNSpectral(2))
-!         status = DftiCreateDescriptor(handle, DFTI_DOUBLE, DFTI_COMPLEX, 2, MNSpectral(1:2))
-
-!         ! Status = DftiSetValue (handle, DFTI_PLACEMENT, DFTI_INPLACE)
-!         Status = DftiSetValue(handle, DFTI_FORWARD_SCALE, ScaleFactor)
-!         status = DftiSetValue(handle, DFTI_NUMBER_OF_USER_THREADS, 4)
-!         Status = DftiCommitDescriptor(handle)
-
-!     end subroutine SetSpectralScheme
-
-!     !---inv=0,for forward translation,1 for backward translation
-!     subroutine InitialSpectralScheme(handle, Minput, Ninput)
-
-!         implicit none
-!         type(DFTI_DESCRIPTOR), pointer :: handle
-!         integer :: Ninput, Minput
-!         integer ::inv
-!         real*8::ScaleFactor
-
-!         MNSpectral(1) = Minput
-!         MNSpectral(2) = Ninput
-!         call SetSpectralScheme(handle)
-
-!     end subroutine InitialSpectralScheme
-
-!     subroutine SpectralForward(handle, X)
-!         implicit none
-!         type(DFTI_DESCRIPTOR), pointer :: handle
-!         complex*16::X(MNSpectral(1), MNSpectral(2))
-!         !complex*16,allocatable::XX(:) !(MNSpectral(1)*MNSpectral(2))
-!         !Equivalence(X,XX)
-!         status = DftiComputeForward(handle, X(1:MNSpectral(1), 1))
-!     end subroutine
-
-!     subroutine SpectralBackward(handle, X)
-!         implicit none
-!         type(DFTI_DESCRIPTOR), pointer :: handle
-!         complex*16::X(MNSpectral(1), MNSpectral(2))
-!         !complex*16,allocatable::XX(:) !(MNSpectral(1)*MNSpectral(2))
-!         !Equivalence(X,XX)
-!         status = DftiComputeBackward(handle, X(1:MNSpectral(1), 1))
-
-!     end subroutine
-
-!     subroutine FinalizeSpectralScheme(handle)
-!         type(DFTI_DESCRIPTOR), pointer :: handle
-
-!         Status = DftiFreeDescriptor(handle)
-
-!     end subroutine FinalizeSpectralScheme
-
-! end module MKL_fft
-
 module mod_nonlinear_term
 
     use iso_fortran_env, only: REAL64, REAL32

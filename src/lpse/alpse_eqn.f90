@@ -1,18 +1,16 @@
 !------------------------------------------------------------------------------
-! TJU/Department of Mechanics, Fluid Mechanics, Code FooPSE
+! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
-!
-!  module: module_alpse_eqn
-!> @breif alpse equations.
-!  DESCRIPTION:
-!>
-!!
-!  REVISION HISTORY:
-!  2021-01-06 - Initial Version
-!> @author
-!> Liu Jianxin
-!> \date 2021-01-06
+!> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-09-09 10:45:42
+!> @LastEditTime: 2022-12-12 19:34:26
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/lpse/alpse_eqn.f90
+!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
+
+
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 

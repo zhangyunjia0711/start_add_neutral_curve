@@ -1,18 +1,15 @@
 !------------------------------------------------------------------------------
-! TJU/Department of Mechanics, Fluid Mechanics, Code FooPSE
+! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
-!
-!  module: mod_solve_lst
-!> @breif module for solving lst.
-!  DESCRIPTION:
-!>
-!!
-!  REVISION HISTORY:
-!  2021-01-05 - Initial Version
-!> @author
-!> Liu Jianxin
-!> \date 2021-01-05
+!> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-09-09 10:45:42
+!> @LastEditTime: 2022-12-12 19:33:48
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/lst/module_lst.f90
+!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
+
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
