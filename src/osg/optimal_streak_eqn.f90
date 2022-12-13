@@ -5,7 +5,7 @@
 !> @Date: 2022-09-09 10:45:42
 !> @LastEditTime: 2022-12-12 19:29:51
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: optimal streak equations solver.
 !> @FilePath: /START_all/src/osg/optimal_streak_eqn.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------

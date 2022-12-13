@@ -5,15 +5,15 @@
 !> @Date: 2022-12-10 21:17:22
 !> @LastEditTime: 2022-12-12 16:15:35
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: main program for tpse.
-!> @FilePath: /START_all/src/tpse/main.f90
+!> @Description: main program for inpse.
+!> @FilePath: /START_all/src/inpse/main.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
-!@ tPSE solver
-program tPSE_prog
+!@ inpse solver
+program inpse_prog
 
    use petsc
    use slepcsys
@@ -22,7 +22,7 @@ program tPSE_prog
    use mod_petsc_loader
    use mod_metrics
    use mod_flow_grad
-   use mod_tpse
+   use mod_inpse
 
    implicit none
 
@@ -52,10 +52,10 @@ program tPSE_prog
 
    call flow_grad(PETSC_COMM_WORLD)
 
-   call tpse()
+   call inpse()
 
    call SLEPCFinalize(ierr)
 
    CHKERRA(ierr)
 
-end program tPSE_prog
+end program inpse_prog

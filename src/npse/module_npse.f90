@@ -464,7 +464,7 @@ contains
         type(type_lst_grid_profile), intent(in) :: grid
         complex(REAL64):: alf_tmp
         integer :: m, n
-!! 对tpse需要进行修改 修改更新波数的方法和方式以及判断标准
+!! 对inpse需要进行修改 修改更新波数的方法和方式以及判断标准
         if (abs(inlet_dis(1)%m*theta1%re+inlet_dis(1)%n*theta2%re) >= epsilon(1.0d0)) then  !! 非横流
             alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n)/(inlet_dis(1)%m*theta1%re+inlet_dis(1)%n*theta2%re)
             do n = -n_global, n_global
