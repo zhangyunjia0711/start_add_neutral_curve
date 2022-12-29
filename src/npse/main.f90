@@ -5,7 +5,7 @@
 !> @Date: 2022-09-05 09:32:31
 !> @LastEditTime: 2022-12-12 19:31:23
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: main program for npse.
 !> @FilePath: /START_all/src/npse/main.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------

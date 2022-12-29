@@ -225,6 +225,16 @@ contains
       lambda(istart) = 0.0d0
       integral_source_term = 0.0d0
       integral_wall_term = 0.0d0
+
+      open(991, file='out/lpse_normalize_receptivity_coef.plt')
+      
+      do i=istart, iend
+         grid_profile = assemble_lst_grid_profile(i)
+         write(991, '(11(E20.7, 2X))')xx(i, 1), integral_y(source_force_term_part(i, :), grid_profile%y), &
+               &      wall_term_part(i), q(i), lnA(i), norm_u(lpse_function(i))
+      enddo
+      close(991)
+      
       do i = istart + 1, iend
          grid_profile = assemble_lst_grid_profile(i)
          integral_source_term = integral_source_term + &
@@ -268,10 +278,10 @@ contains
 
    subroutine compute_source_term_part(source_force_term_part, alpse_function, source_force, lnA)
       implicit none
-      complex(REAL64), intent(inout) :: source_force_term_part(:, :)
-      Vec, intent(in) :: alpse_function(:)
+      complex(REAL64), intent(inout) :: source_force_term_part(istart:iend, 0:jn-1)
+      Vec, intent(in) :: alpse_function(istart-1:iend+1)
       Vec, intent(in) :: source_force
-      complex(REAL64), intent(in) :: lnA(:)
+      complex(REAL64), intent(in) :: lnA(istart:iend)
 
       complex(REAL64), pointer :: array(:, :)
       complex(REAL64), pointer :: array2D(:, :, :)
@@ -282,7 +292,7 @@ contains
       do i = 0, iend - istart
          call DMDAVecGetArrayReadF90(DM_local, alpse_function(i + istart), array, ierr)
          do j = 0, jn - 1
-            source_force_term_part(i + 1, j + 1) = dot_product((array(:, j)), array2D(:, i, j))/exp(ZI*lnA(i + 1))
+            source_force_term_part(i + istart, j ) = dot_product((array(:, j)), array2D(:, i, j))/exp(ZI*lnA(i + istart))
          end do
          call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i + istart), array, ierr)
       end do
@@ -293,17 +303,17 @@ contains
    subroutine compute_wall_term_part(wall_term_part, alpse_function, wall_force)
 
       implicit none
-      complex(REAL64), intent(inout) :: wall_term_part(:)
-      Vec, intent(in) :: alpse_function(:)
-      complex(REAL64), intent(in) :: wall_force(:, :)
+      complex(REAL64), intent(inout) :: wall_term_part(istart:iend)
+      Vec, intent(in) :: alpse_function(istart-1:iend+1)
+      complex(REAL64), intent(in) :: wall_force(4, istart:iend)
       integer :: i
       complex(REAL64), pointer :: array(:, :)
       complex(REAL64) :: u_w, v_w, w_w, T_w
       complex(REAL64) :: rho_star_w, du_star_w, dv_star_w, dw_star_w, dT_star_w
       real(REAL64) :: mu0
 
-      do i = 1, iend - istart + 1
-         associate (T => qq(5, i + istart - 1, 1), C1 => 110.4D0)
+      do i = istart, iend
+         associate (T => qq(5, istart, 1), C1 => 110.4D0)
             mu0 = T*sqrt(T)*(1.0d0 + C1/Te)/(T + C1/Te)/Re
          end associate
 
@@ -312,14 +322,14 @@ contains
          w_w = wall_force(3, i)/exp(ZI*lnA(i))
          T_w = wall_force(4, i)/exp(ZI*lnA(i))
 
-         call DMDAVecGetArrayReadF90(DM_local, alpse_function(i + istart - 1), array, ierr)
+         call DMDAVecGetArrayReadF90(DM_local, alpse_function(i), array, ierr)
          rho_star_w = array(0, 0)
-         du_star_w = (-1.0d0*array(1, 2) + 4.0d0*array(1, 1) - 3.0d0*array(1, 0))/2.0d0*eta_y(i + istart - 1, 1)
-         dv_star_w = (-1.0d0*array(2, 2) + 4.0d0*array(2, 1) - 3.0d0*array(2, 0))/2.0d0*eta_y(i + istart - 1, 1)
-         dw_star_w = (-1.0d0*array(3, 2) + 4.0d0*array(3, 1) - 3.0d0*array(3, 0))/2.0d0*eta_y(i + istart - 1, 1)
-         dT_star_w = (-1.0d0*array(4, 2) + 4.0d0*array(4, 1) - 3.0d0*array(4, 0))/2.0d0*eta_y(i + istart - 1, 1)
-         call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i + istart - 1), array, ierr)
-         wall_term_part(i) = qq(1, i + istart - 1, 1)*conjg(rho_star_w)*v_w + &
+         du_star_w = (-1.0d0*array(1, 2) + 4.0d0*array(1, 1) - 3.0d0*array(1, 0))/2.0d0*eta_y(i, 1)
+         dv_star_w = (-1.0d0*array(2, 2) + 4.0d0*array(2, 1) - 3.0d0*array(2, 0))/2.0d0*eta_y(i, 1)
+         dw_star_w = (-1.0d0*array(3, 2) + 4.0d0*array(3, 1) - 3.0d0*array(3, 0))/2.0d0*eta_y(i, 1)
+         dT_star_w = (-1.0d0*array(4, 2) + 4.0d0*array(4, 1) - 3.0d0*array(4, 0))/2.0d0*eta_y(i, 1)
+         call DMDAVecRestoreArrayReadF90(DM_local, alpse_function(i), array, ierr)
+         wall_term_part(i) = qq(1, istart, 1)*conjg(rho_star_w)*v_w + &
                              mu0*conjg(du_star_w)*u_w + &
                              4.0d0/3.0d0*mu0*conjg(dv_star_w)*v_w + &
                              mu0*conjg(dw_star_w)*w_w + &
