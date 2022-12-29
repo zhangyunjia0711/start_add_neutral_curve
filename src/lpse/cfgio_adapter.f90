@@ -27,12 +27,11 @@ module mod_cfgio_adapter
 
     contains
 
-    !> read infomation from cfg_file
-    !! @param[in] cfgfn filename of cfgio
     subroutine cfg_loader(cfgfn)
+    !! read infomation from cfg_file
 
         implicit none
-        character(len=*), intent(in) :: cfgfn
+        character(len=*), intent(in) :: cfgfn !!filename of cfgio
         integer :: ierr
         logical :: set
 

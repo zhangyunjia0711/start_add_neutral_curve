@@ -5,14 +5,14 @@
 !> @Date: 2022-12-10 21:17:22
 !> @LastEditTime: 2022-12-12 16:15:49
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: global parameters for inpse solver.
-!> @FilePath: /START_all/src/inpse/global_parameters.f90
+!> @Description: global parameters for atnpse solver.
+!> @FilePath: /START_all/src/atnpse/global_parameters.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
-!@ global parameters for inpse solver.
+!@ global parameters for atnpse solver.
 module global_parameters
 
    use iso_fortran_env, only: REAL64

@@ -6,7 +6,7 @@
 !> @LastEditTime: 2022-12-13 08:32:32
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
-!> @FilePath: /START_all/src/inpse/mod_nonlinear_term_inpse.f90
+!> @FilePath: /START_all/src/atnpse/mod_nonlinear_term_atnpse.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 !------------------------------------------------------------------------------
@@ -17,7 +17,7 @@
 !> @LastEditTime: 2022-12-12 16:15:20
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: nonlinear terms for improved nonlinear pse.
-!> @FilePath: /START_all/src/inpse/mod_nonlinear_term_inpse.f90
+!> @FilePath: /START_all/src/atnpse/mod_nonlinear_term_atnpse.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
@@ -25,7 +25,7 @@
 #include <petsc/finclude/petsc.h>
 
 !@ module nonlinear terms for improved npse.
-module mod_nonlinear_term_inpse
+module mod_nonlinear_term_atnpse
 
    use iso_fortran_env, only: REAL64, REAL32
    use stdlib_error, only: error_stop
@@ -1585,5 +1585,5 @@ contains
 
    end function get_array
 
-end module mod_nonlinear_term_inpse
+end module mod_nonlinear_term_atnpse
 

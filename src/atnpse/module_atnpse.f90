@@ -6,14 +6,14 @@
 !> @LastEditTime: 2022-12-13 08:34:38
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: improved nonlinear PSE solver.
-!> @FilePath: /START_all/src/inpse/module_inpse.f90
+!> @FilePath: /START_all/src/atnpse/module_atnpse.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
 !@ module for improved NPSE solver.
-module mod_inpse
+module mod_atnpse
 
    ! use global_parameters
    use iso_fortran_env, only: REAL64
@@ -51,7 +51,7 @@ module mod_inpse
 
    ! use mod_lpse_grid_profile, only: type_lpse_grid_domain=> type_lpse_grid_profile
    use mod_npse_eqn
-   use mod_nonlinear_term_inpse, only: type_nonlinear_term_inpse => type_nonlinear_term
+   use mod_nonlinear_term_atnpse, only: type_nonlinear_term_atnpse => type_nonlinear_term
 
    implicit none
 
@@ -76,18 +76,18 @@ module mod_inpse
    complex(REAL64), allocatable :: nonlinear_term(:, :, :, :, :, :)
    complex(REAL64), allocatable :: nonlinear_term_old(:, :, :, :, :, :)
    real(REAL64), allocatable :: VecDistance(:, :, :, :)
-   type(type_nonlinear_term_inpse) :: nonlinear_solver
+   type(type_nonlinear_term_atnpse) :: nonlinear_solver
 
    PetscViewer :: tmp_file
 
    private
-   public :: inpse
+   public :: atnpse
 
    ! DM :: DM_LPSE
 
 contains
 
-   subroutine inpse()
+   subroutine atnpse()
 
       implicit none
 
@@ -95,15 +95,15 @@ contains
       !DM_local=>lpse_eqn%dm
       call PetscPrintf(PETSC_COMM_WORLD, 'Nonlinear PSE is selected!\n', ierr)
 
-      call initialize_inpse()
+      call initialize_atnpse()
 
-      call solve_inpse_native()
+      call solve_atnpse_native()
 
-      call finalize_inpse()
+      call finalize_atnpse()
 
-   end subroutine inpse
+   end subroutine atnpse
 
-   subroutine initialize_inpse()
+   subroutine initialize_atnpse()
 
       implicit none
       integer :: i, m, n0, n1, n2
@@ -173,16 +173,16 @@ contains
 
       call update_alpha(istart, assemble_lst_grid_profile(istart))
 
-      call set_inpse_ic()
+      call set_atnpse_ic()
 
-   end subroutine initialize_inpse
+   end subroutine initialize_atnpse
 
    subroutine initialize_tmp_file()
 
       implicit none
 
       call execute_command_line("mkdir -p tmp")
-      call PetscViewerHDF5Open(PETSC_COMM_WORLD, "tmp/inpse_phi.tmp", FILE_MODE_WRITE, tmp_file, ierr)
+      call PetscViewerHDF5Open(PETSC_COMM_WORLD, "tmp/atnpse_phi.tmp", FILE_MODE_WRITE, tmp_file, ierr)
 
    end subroutine initialize_tmp_file
 
@@ -219,7 +219,7 @@ contains
 
    end subroutine write_tmp_file
 
-   subroutine set_inpse_ic()
+   subroutine set_atnpse_ic()
 
       use mod_lst_solver_abstract
       use mod_lst_eqn
@@ -264,9 +264,9 @@ contains
          &         alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1), inlet_dis(i)%n(2), inlet_dis(i)%n(3))%im
       end do
 
-   end subroutine set_inpse_ic
+   end subroutine set_atnpse_ic
 
-   subroutine solve_inpse_native()
+   subroutine solve_atnpse_native()
 
       use omp_lib
       use stdlib_string_type
@@ -528,7 +528,7 @@ contains
             end do
          end do
 
-         if (mod(i, 10) == 0) call write_inpse_result(i + 1)
+         if (mod(i, 10) == 0) call write_atnpse_result(i + 1)
       end do
 
 1000  continue
@@ -536,11 +536,11 @@ contains
 
       call finalize_tmp_file()
 
-      call write_inpse_result(i)
+      call write_atnpse_result(i)
 
       deallocate (iterator_times)
 
-   end subroutine solve_inpse_native
+   end subroutine solve_atnpse_native
 
    logical function isConvergence()
 
@@ -575,7 +575,7 @@ contains
       ome0_ = inlet_dis(1)%m*theta(1)%re + &
       &       inlet_dis(1)%n(1)*theta(2)%re + inlet_dis(1)%n(2)*theta(3)%re + inlet_dis(1)%n(3)*theta(4)%re
 
-!! 对inpse需要进行修�� 修改更新波数的方法和方式以及判断标准
+!! 对atnpse需要进行修正修改更新波数的方法和方式以及判断标准
       if (abs(ome0_) >= epsilon(1.0d0)) then  !! 非横流
          alf_tmp = alf(i, inlet_dis(1)%m, inlet_dis(1)%n(1), inlet_dis(1)%n(2), inlet_dis(1)%n(3))/ome0_
          do n2 = -n2_global, n2_global
@@ -638,7 +638,7 @@ contains
 
    end function VecsNorm2
 
-   subroutine finalize_inpse()
+   subroutine finalize_atnpse()
       implicit none
 
       integer :: i, m, n0, n1, n2
@@ -672,9 +672,9 @@ contains
       deallocate (VecDistance)
       call DMDestroy(DM_local, ierr)
 
-   end subroutine finalize_inpse
+   end subroutine finalize_atnpse
 
-   subroutine write_inpse_result(i_in)
+   subroutine write_atnpse_result(i_in)
 
       use global_parameters, only: prefix, gridfile, flowfile, title
       use stdlib_string_type
@@ -703,7 +703,7 @@ contains
       end do
     !! Write Number
       ! name=solname//'_i='//chars(istart)//'_i='//chars(iend)//'_alpha.plt'
-      astring(1) = "inpse"
+      astring(1) = "atnpse"
       astring(2) = string_type(istart)!; astring(2)=astring(2)%slice(2, max(2, ceiling(log10(istart + 0.1d0) + 1)))
       astring(2) = 'istart='//astring(2)
       astring(3) = string_type(iend)!; astring(3)=astring(3)%slice(2, max(2, ceiling(log10(iend + 0.1d0) + 1)))
@@ -713,11 +713,11 @@ contains
       astring(6) = 'phi.h5'
       name = astring(1)//"_"//astring(2)//"_"//astring(3)//"_"//astring(6) !name%join(astring(1:3), sep='_')//'_'//astring(6)
       call PetscViewerHDF5Open(PETSC_COMM_WORLD, char(prefix//name), FILE_MODE_WRITE, Viewer, ierr)
-      call PetscViewerHDF5Open(PETSC_COMM_WORLD, "tmp/iNPSE_phi.tmp", FILE_MODE_READ, tmp_handle, ierr)
+      call PetscViewerHDF5Open(PETSC_COMM_WORLD, "tmp/atnpse_phi.tmp", FILE_MODE_READ, tmp_handle, ierr)
       strings = "Writing the shape functions phi to "//name//'.\n'
       call PetscPrintf(PETSC_COMM_WORLD, char(strings), ierr)
 
-      call PetscViewerHDF5WriteAttribute(viewer, "/", "Problem", PETSC_STRING, "iNPSE", ierr)
+      call PetscViewerHDF5WriteAttribute(viewer, "/", "Problem", PETSC_STRING, "atnpse", ierr)
       call PetscViewerHDF5WriteAttribute(viewer, "/", "Grid", PETSC_STRING, char(gridfile), ierr)
       call PetscViewerHDF5WriteAttribute(viewer, "/", "Flow", PETSC_STRING, char(flowfile), ierr)
       call PetscViewerHDF5WriteAttribute(viewer, "/", "Title", PETSC_STRING, char(title), ierr)
@@ -799,11 +799,11 @@ contains
       call PetscViewerDestroy(tmp_handle, ierr)
       call PetscViewerDestroy(Viewer, ierr)
 
-      call PetscPrintf(PETSC_COMM_WORLD, 'Write NPSE result file '// &
+      call PetscPrintf(PETSC_COMM_WORLD, 'Write atnpse result file '// &
                        char(astring(1)//"_"//astring(2)//"_"//astring(3)//"_"//astring(6))// &
                        ' done.\n', ierr)
       call VecDestroy(phi_domain, ierr)
 
-   end subroutine write_inpse_result
+   end subroutine write_atnpse_result
 
-end module mod_inpse
+end module mod_atnpse

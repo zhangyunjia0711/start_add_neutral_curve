@@ -5,7 +5,7 @@
 !> @Date: 2022-09-09 10:45:42
 !> @LastEditTime: 2022-12-12 19:35:13
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: 
+!> @Description: linearized parabolized stability equations impliment in the domain.
 !> @FilePath: /START_all/src/lpse/module_lpse.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
@@ -13,6 +13,7 @@
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
+!@ module for lpse.
 module mod_lpse
 
     ! use global_parameters
@@ -51,6 +52,9 @@ module mod_lpse
     use mod_lpse_solver_abstract
 
     implicit none
+    
+    private
+    public :: lpse
 
 #include "../include/start.f90"
 
@@ -70,14 +74,11 @@ module mod_lpse
     complex(REAL64), allocatable :: lnA(:)
     Vec, dimension(:), allocatable :: phi
 
-    private
-    public :: lpse
-
     ! DM :: DM_LPSE
 
 contains
 
-    subroutine lpse()
+    subroutine lpse() !! call lpse in main program.
 
         implicit none
 
@@ -117,7 +118,7 @@ contains
 
     end subroutine lpse
 
-    subroutine initialize_lpse()
+    subroutine initialize_lpse() !! intialize lpse.
 
         implicit none
         integer :: i
@@ -144,7 +145,7 @@ contains
 
     end subroutine initialize_lpse
 
-    subroutine set_lpse_ic()
+    subroutine set_lpse_ic() !! set lpse initial condition.
 
         use mod_lst_solver_abstract
         use mod_lst_eqn
@@ -229,7 +230,7 @@ contains
 
     end subroutine set_lpse_ic
 
-    subroutine solve_lpse_native()
+    subroutine solve_lpse_native() !! solve native lpse.
 
         implicit none
         integer :: i
@@ -265,7 +266,7 @@ contains
 
     end subroutine solve_lpse_native
 
-    subroutine solve_lpse_adjoint()
+    subroutine solve_lpse_adjoint() !! solve adjoint lpse.
 
         implicit none
         integer :: i
@@ -316,7 +317,7 @@ contains
 
     end subroutine solve_lpse_adjoint
 
-    subroutine finalize_lpse()
+    subroutine finalize_lpse() !! finalize lpse.
         implicit none
 
         integer :: i
@@ -330,7 +331,7 @@ contains
 
     end subroutine finalize_lpse
 
-    subroutine write_lpse_result()
+    subroutine write_lpse_result() !! write lpse results into files.
 
         use global_parameters, only: GAMMA, Ma, qq
         implicit none
@@ -345,7 +346,7 @@ contains
         real(REAL64) :: pe
 
         REAL(REAL64), parameter :: epsilon = 1.0d-8
-    !! Write Number
+        ! Write Number
         ! name=solname//'_i='//chars(istart)//'_i='//chars(iend)//'_alpha.plt'
         astring(1) = solname
         astring(2) = string_type(istart); astring(2) = 'istart='//astring(2)

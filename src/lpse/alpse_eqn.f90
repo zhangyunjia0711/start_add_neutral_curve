@@ -35,6 +35,10 @@ module mod_alpse_eqn
 
     implicit none
 
+    private
+    public :: type_alpse_eqn
+
+
 #include "../include/start.f90"
     logical :: alpse_eqn_has_initialize = .FALSE.
     integer :: iloc
@@ -73,14 +77,6 @@ module mod_alpse_eqn
     complex(REAL64), allocatable, dimension(:, :) :: phi_m1, phi_m2
 
     real(REAL64) :: lambda !< control d/dx order
-
-    private
-
-    ! public :: initialize_alpse_eqn
-    ! public :: solve_alpse_eqn
-    ! public :: finalize_alpse_eqn
-    ! public :: DM_ALPSE
-    public :: type_alpse_eqn
 
     type, extends(type_lpse_abstract) :: type_alpse_eqn
 

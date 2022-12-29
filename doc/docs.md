@@ -40,7 +40,7 @@ predocmark: @
 
 介绍
 ========
-**START_ALL_IN_ONE**是**START**套件中的一个组件。该程序主要是用来进行当地和全局的稳定性分析的。其中主要集成了线性稳定性理论分析(LST)，线性抛物化稳定性方程(LPSE)，非线性抛物化稳定性方程(NPSE)以及再次接触上沟通各个功能完成的各种进阶稳定性分析工具。
+**START_ALL_IN_ONE**是**START**套件中的一个组件。该程序主要是用来进行当地和全局的稳定性分析的。其中主要集成了线性稳定性理论分析(LST)，线性抛物化稳定性方程(LPSE)，非线性抛物化稳定性方程(NPSE)以及在此基础上沟通各个功能完成的各种进阶稳定性分析工具。
 
 需求
 ========
@@ -64,20 +64,20 @@ ford doc/docs.md
 - [X] LPSE(linear parabolized stability equations)
     - [X] original/adjoint parabolized stability equations
 - [X] NPSE(nonlinear parabolized stability equations)
-- [X] iNPSE(imporved nonlinear parabolized stability equations)
+- [X] AT-NPSE(Affine Transformed nonlinear parabolized stability equations)
 - [ ] EPSE(expansion of the parabolized stability equation)
 - [ ] Bi-global instability analysis in streamwise and spanwise directions
 - [X] others
     - [X] optimal growth streak evaluation
-    - [ ] parallel/nonparallel receptivity analysis
+    - [X] parallel/nonparallel receptivity analysis
     - [ ] neutral curve generation
     - [ ] other features to be supplemented
 - [X] friendly config file
 - [X] parallel input/output (HDF5 binary files)
-- [X] 文档化
+- [X] document
 
 License
 ===
-本代码仅作为科研学习使用。或取代码请发邮件联系作者。使用本代码请引用作者相关工作。
+本代码仅作为科研学习使用。获取代码请发邮件联系作者。使用本代码请引用作者相关工作。
 
 商业应用授权相关事宜请联系作者shookware@tju.edu.cn详谈(刘建新@天津大学)

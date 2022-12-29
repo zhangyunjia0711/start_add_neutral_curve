@@ -6,11 +6,11 @@
 !> @LastEditTime: 2022-12-12 16:16:03
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
-!> @FilePath: /START_all/src/inpse/cfgio_adapter.f90
+!> @FilePath: /START_all/src/atnpse/cfgio_adapter.f90
 !> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
-!@ config file adapter for inpse solver.
+!@ config file adapter for atnpse solver.
 module mod_cfgio_adapter
 
     use cfgio_mod
@@ -226,15 +226,15 @@ contains
         real(REAL64) :: ome0, bat0
         integer :: i, l
 
-        call cfg%get('inpse', 'ntheta', ntheta)
+        call cfg%get('atnpse', 'ntheta', ntheta)
         m_global=1; n0_global = 1; n1_global = 1; n2_global = 1
-        call cfg%get('inpse', 'm_global', m_global); m_global=m_global-1
-        call cfg%get('inpse', 'n0_global', n0_global); n0_global=n0_global-1
+        call cfg%get('atnpse', 'm_global', m_global); m_global=m_global-1
+        call cfg%get('atnpse', 'n0_global', n0_global); n0_global=n0_global-1
 
         if( ntheta > 2) then
-            call cfg%get('inpse', 'n1_global', n1_global); n1_global=n1_global-1
+            call cfg%get('atnpse', 'n1_global', n1_global); n1_global=n1_global-1
             if( ntheta > 3) then
-                call cfg%get('inpse', 'n2_global', n2_global); n2_global=n2_global-1
+                call cfg%get('atnpse', 'n2_global', n2_global); n2_global=n2_global-1
             else
                 n2_global = 0
             endif
@@ -244,7 +244,7 @@ contains
 
         theta = 0.0d0
         do i=1, ntheta
-            call cfg%get('inpse', char('theta'//string_type(i)), theta(i))
+            call cfg%get('atnpse', char('theta'//string_type(i)), theta(i))
         enddo
         format0 = '(A, I4, 1X, A, I4, 1X, A, 2F10.5)'
         print trim(format0), 'The computational range is', 0, 'to', m_global, 'with theta1=', theta(1)
@@ -262,29 +262,29 @@ contains
 
         npar = ntheta
 
-        call cfg%get('inpse', 'ndis', ndis)
+        call cfg%get('atnpse', 'ndis', ndis)
         print *, 'The inlet disturbance number is', ndis
         print '(3(A4), 4(A10), (A14))', 'no.', 'm', 'n', 'alpha_r', 'alpha_i', 'amp', 'angle', 'solve_alpha'
         allocate (inlet_dis(ndis))
         do i = 1, ndis
             inlet_dis(i)%m = 0; inlet_dis(i)%n = 0
             string_char = string_type(i)
-            call cfg%get('inpse', 'dis_'//char(string_char), integer_tmp, npar)
+            call cfg%get('atnpse', 'dis_'//char(string_char), integer_tmp, npar)
             inlet_dis(i)%m = integer_tmp(1)
             do l = 1, ntheta-1
                 inlet_dis(i)%n(l) = integer_tmp(1+l)
             enddo
-            call cfg%get('inpse', 'dis_'//char(string_char)//'_alpha', real_tmp, npar)
+            call cfg%get('atnpse', 'dis_'//char(string_char)//'_alpha', real_tmp, npar)
             inlet_dis(i)%alf = real_tmp(1) + real_tmp(2)*ZI
-            call cfg%get('inpse', 'dis_'//char(string_char)//'_amp', amp)
-            if (cfg%has_key('inpse', 'dis_'//char(string_char)//'_angle')) then
-                call cfg%get('inpse', 'dis_'//char(string_char)//'_angle', angle)
+            call cfg%get('atnpse', 'dis_'//char(string_char)//'_amp', amp)
+            if (cfg%has_key('atnpse', 'dis_'//char(string_char)//'_angle')) then
+                call cfg%get('atnpse', 'dis_'//char(string_char)//'_angle', angle)
             else
                 angle = 0.0d0
             end if
             inlet_dis(i)%amp = amp*cos(angle) + amp*sin(angle)*ZI
-            if (cfg%has_key('inpse', 'dis_'//char(string_char)//'_solve_alpha')) then
-                call cfg%get('inpse', 'dis_'//char(string_char)//'_solve_alpha', cdump)
+            if (cfg%has_key('atnpse', 'dis_'//char(string_char)//'_solve_alpha')) then
+                call cfg%get('atnpse', 'dis_'//char(string_char)//'_solve_alpha', cdump)
                 select case (trim(cdump))
                 case ('real')
                     inlet_dis(i)%solve_alpha = SOLVE_ALPHA_REAL
@@ -322,38 +322,38 @@ contains
             sigma_control = 0.0d0
         end if
 
-        if(cfg%has_key("inpse", "omega_force_factor")) then
-            call cfg%get("inpse", "omega_force_factor", omega_force_factor)
+        if(cfg%has_key("atnpse", "omega_force_factor")) then
+            call cfg%get("atnpse", "omega_force_factor", omega_force_factor)
         else
             omega_force_factor = 1.0d0
         endif
 
-        if(cfg%has_key("inpse", "ix_force")) then
-            call cfg%get("inpse", "ix_force", ix_force)
+        if(cfg%has_key("atnpse", "ix_force")) then
+            call cfg%get("atnpse", "ix_force", ix_force)
         else
             ix_force = istart
         endif
 
-        if(cfg%has_key("inpse", "omega_phi_factor")) then
-            call cfg%get("inpse", "omega_phi_factor", omega_phi_factor)
+        if(cfg%has_key("atnpse", "omega_phi_factor")) then
+            call cfg%get("atnpse", "omega_phi_factor", omega_phi_factor)
         else
             omega_phi_factor = 1.0d0
         endif
 
-        if(cfg%has_key("inpse", "ix_phi")) then
-            call cfg%get("inpse", "ix_phi", ix_phi)
+        if(cfg%has_key("atnpse", "ix_phi")) then
+            call cfg%get("atnpse", "ix_phi", ix_phi)
         else
             ix_phi = istart
         endif
 
-        if(cfg%has_key("inpse", "cfl_number")) then
-            call cfg%get("inpse", "cfl_number", cfl_number)
+        if(cfg%has_key("atnpse", "cfl_number")) then
+            call cfg%get("atnpse", "cfl_number", cfl_number)
         else
             cfl_number = MAXNUM 
         endif
 
-        if(cfg%has_key("inpse", "ix_cfl")) then
-            call cfg%get("inpse", "ix_cfl", ix_cfl)
+        if(cfg%has_key("atnpse", "ix_cfl")) then
+            call cfg%get("atnpse", "ix_cfl", ix_cfl)
         else
             ix_cfl = istart
         endif
