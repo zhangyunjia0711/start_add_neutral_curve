@@ -1,6 +1,6 @@
 ---
 project: START_ALL_IN_ONE
-summary: STability Analysis & Research Toolkit For LST, LPSE, NPSE and other methods.
+summary: **START:** **ST**ability **A**nalysis & **R**esearch **T**oolkit For LST, LPSE, NPSE and other methods.
 project_github: none
 project_download: none
 author: Jianxin Liu@Tianjin University
@@ -66,7 +66,7 @@ ford doc/docs.md
 - [X] NPSE(nonlinear parabolized stability equations)
 - [X] AT-NPSE(Affine Transformed nonlinear parabolized stability equations)
 - [ ] EPSE(expansion of the parabolized stability equation)
-- [ ] Bi-global instability analysis in streamwise and spanwise directions
+- [X] Bi-global instability analysis in streamwise and spanwise directions(developing)
 - [X] others
     - [X] optimal growth streak evaluation
     - [X] parallel/nonparallel receptivity analysis
