@@ -2,14 +2,13 @@
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
-!> @Date: 2022-10-21 17:43:47
-!> @LastEditTime: 2022-12-12 19:29:42
+!> @Date: 2022-12-29 15:17:05
+!> @LastEditTime: 2023-03-07 08:31:06
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
 !> @FilePath: /START_all/src/osg/module_3dsgo.f90
-!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
-
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 
@@ -104,7 +103,8 @@ contains
       call PetscPrintf(PETSC_COMM_WORLD, "===  k= 1: Modify i_x0.\n", ierr)
       call PetscPrintf(PETSC_COMM_WORLD, "===  k= 2: Modify i_x1.\n", ierr)
       call PetscPrintf(PETSC_COMM_WORLD, "===  k= 3: Modify beta.\n", ierr)
-      call PetscPrintf(PETSC_COMM_WORLD, "===  k= 4: Modify omega (developing).\n", ierr)
+      call PetscPrintf(PETSC_COMM_WORLD, "===  k= 4: Modify omega.\n", ierr)
+      call PetscPrintf(PETSC_COMM_WORLD, "===  k= 5: Modify alpha.\n", ierr)
       call PetscPrintf(PETSC_COMM_WORLD, "===  delta_k=ki*pk.(eg. k, ki, pk=4, 20, 0.001 means delta_omega_r=20*0.001)\n", ierr)
       call PetscPrintf(PETSC_COMM_WORLD, "======================================\n", ierr)
 
@@ -112,6 +112,7 @@ contains
       do while (k /= -1)
          print *, 'i_x0=', i_x0, 'i_x1=', i_x1
          print *, 'beta=', initial_bat
+         print *, 'omega=', initial_ome
          print *, 'alpha=', initial_alf
          write (*, '("k, ki, pk=", $)')
          read (*, *) k, ki, pk
@@ -139,12 +140,15 @@ contains
                initial_bat = initial_bat + pk
             case (4) !! adjust omega
                initial_ome = initial_ome + pk
-               initial_alf = initial_ome/c_phase
+               ! initial_alf = initial_ome/c_phase
+            case (5) !! adjust alpha
+               initial_alf = initial_alf + pk
             end select
 
             print *, 'i_x0=', i_x0, 'i_x1=', i_x1
             print *, 'beta=', initial_bat
             print *, 'omega=', initial_ome
+            print *, 'alpha=', initial_alf
 
             if (k < 500) then
                grid_x0 = assemble_lst_grid_profile(i_x0)
@@ -157,6 +161,9 @@ contains
                ! call solver%set_ic()
                call solver%solve(G_factor)
                write (999, *) i_x0, i_x1, initial_alf, initial_bat, G_factor
+               if(isNAN(G_factor)) then
+                  error stop "G_factor is NaN, please recompute the problem."
+               endif
                flush (999)
             end if
             ki = ki - 1

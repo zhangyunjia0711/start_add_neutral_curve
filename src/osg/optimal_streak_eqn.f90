@@ -2,6 +2,17 @@
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-12-29 15:17:05
+!> @LastEditTime: 2023-03-07 09:26:24
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/osg/optimal_streak_eqn.f90
+!> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!------------------------------------------------------------------------------
+!------------------------------------------------------------------------------
+! TJU/Department of Mechanics, Fluid Mechanics, Code START
+!------------------------------------------------------------------------------
+!> @Author: Jianxin Liu shookware@tju.edu.cn
 !> @Date: 2022-09-09 10:45:42
 !> @LastEditTime: 2022-12-12 19:29:51
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
@@ -100,7 +111,8 @@ contains
         lst%isothermal = isothermal
         ! allocate(type_lpse_eqn :: lpse)
         call lpse%initial(jn, Re, Ma, Te, yb, ye)
-        call lpse%set_parameter("solve_alpha", SOLVE_ALPHA_NONE)
+        ! call lpse%set_parameter("solve_alpha", SOLVE_ALPHA_NONE)
+        call lpse%set_parameter("solve_alpha", SOLVE_ALPHA_REAL)
         call lpse%set_parameter("Pr", Pr)
         lpse%isothermal = isothermal
         ! allocate(type_alpse_eqn :: alpse)

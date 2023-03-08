@@ -2,12 +2,12 @@
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
-!> @Date: 2022-12-12 08:16:40
-!> @LastEditTime: 2022-12-12 19:34:49
+!> @Date: 2022-12-29 15:17:05
+!> @LastEditTime: 2023-03-07 09:30:48
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
 !> @FilePath: /START_all/src/lpse/lpse_eqn.f90
-!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
 #include <petsc/finclude/petsc.h>
@@ -260,7 +260,7 @@ contains
          this%iterator_times = this%iterator_times + 1
       end do
 
-      if (this%solve_alpha /= SOLVE_ALPHA_NONE) print *, "the iteration times is", this%iterator_times
+      if (this%solve_alpha == SOLVE_ALPHA_BOTH) print *, "the iteration times is", this%iterator_times
 
       call VecCopy(this%phi, phi0, ierr)
       call DMDAVecGetArrayReadF90(this%dm, this%phi, tmp, ierr)
