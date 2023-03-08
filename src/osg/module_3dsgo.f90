@@ -227,7 +227,7 @@ contains
          end do
 
          call execute_command_line('mkdir -p out')
-         open (1002, file='out/'//char(filename)//'.plt')
+         open (1002, file='out/'//char(filename)//'.plt', access='append')
          write (1002, ('(3(A, E20.13, 3X))')) '#omega=', real(initial_ome), 'alpha=', real(initial_alf), 'beta=', real(initial_bat)
          write (1002, *) 'variables=y, |u|, u_r, u_i, |v|, v_r, v_i, &
    &                 |w|, w_r, w_i, |T|, T_r, T_i, |p|, p_r, p_i, &
