@@ -3,7 +3,7 @@
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
 !> @Date: 2022-09-05 09:32:33
-!> @LastEditTime: 2023-03-08 11:48:29
+!> @LastEditTime: 2023-03-15 09:37:38
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
 !> @FilePath: /START_all/src/public/module_cmd_progress.f90
@@ -52,8 +52,8 @@ contains
         else
             br = char(10)
         end if
-        write (*, '(5a,f6.2,2a)', advance="no") this%Prefix//'', '[', &
-            ! write( * , '(5a,f6.2,2a\)') trim(this%Prefix) , '[' , & !// 如您的编译器不支持，请用上方语句代替
+        ! write (*, '(5a,f6.2,2a)', advance="no") this%Prefix//'', '[', &
+            write( * , '(5a,f6.2,2a)', advance="no") trim(char(this%Prefix)) , '[' , & !// 如您的编译器不支持，请用上方语句代替
             repeat(this%M, jm), repeat(this%O, this%lens - jm), '] ', this%i*100.0/this%N, "%", br
     End Subroutine Put
 
