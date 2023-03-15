@@ -96,6 +96,17 @@ contains
         lpse_eqn%isothermal = isothermal
         call lpse_eqn%set_parameter("ome", omega(1))
         call lpse_eqn%set_parameter("bat", beta(1))
+        block
+            use global_parameters, only: drz
+            if(abs(drz(istart)*drz(iend))<=epsilon(1.0d0))then
+                select type (lpse_eqn)
+                type is (type_lpse_eqn)
+                    call lpse_eqn%set_parameter("cycle_m", beta(1)/drz(istart))
+                type is (type_alpse_eqn)
+                    call lpse_eqn%set_parameter("cycle_m", beta(1)/drz(iend))
+                end select
+            endif
+        endblock
         call lpse_eqn%set_parameter("sigma_p", sigma_p)
         call lpse_eqn%set_parameter("sigma_control", sigma_control)
         call lpse_eqn%set_parameter("rd_factor", rd_factor)
@@ -150,6 +161,7 @@ contains
         use mod_lst_solver_abstract
         use mod_lst_eqn
         use mod_alst_eqn
+
         implicit none
         integer :: i
         PetscViewer :: Viewer

@@ -2,12 +2,12 @@
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
-!> @Date: 2022-09-05 09:32:29
-!> @LastEditTime: 2022-12-12 19:35:00
+!> @Date: 2023-03-15 09:49:31
+!> @LastEditTime: 2023-03-15 09:50:24
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
 !> @FilePath: /START_all/src/lpse/lpse_solver_abstract.f90
-!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
 #include <petsc/finclude/petsc.h>
@@ -17,6 +17,7 @@ module mod_lpse_solver_abstract
 
    use petsc
    use iso_fortran_env, only: REAL64, REAL32
+   use mod_lst_grid_profile, only: type_lst_grid_profile
 
    use mod_solver_abstract
 
@@ -32,6 +33,7 @@ module mod_lpse_solver_abstract
       integer :: jn
       complex(real64) :: ome
       complex(real64) :: bat
+      complex(real64) :: cycle_m = -1
       complex(real64), allocatable, dimension(:, :) :: phi0_array, phi1_array, phi2_array
       complex(REAL64), allocatable, dimension(:, :, :) :: B_0, D_0, V_0
       complex(REAL64), allocatable, dimension(:, :, :) :: D_2, G_0
@@ -116,6 +118,16 @@ module mod_lpse_solver_abstract
    end interface
 contains
 
+   subroutine set_grid(this, grid)
+      implicit none
+      class(type_lpse_abstract), intent(inout) :: this
+      type(type_lst_grid_profile), intent(in) :: grid
+
+      this%grid = grid
+      if(.not. ((this%cycle_m%re+1)<=epsilon(1.0d0))) this%bat = this%cycle_m * grid%drz
+
+   end subroutine set_grid
+
    subroutine lpse_set_parameters_real8(this, keyword, value)
 
       implicit none
@@ -138,6 +150,9 @@ contains
          this%ome = value
       case ("bat")
          this%bat = value
+         this%cycle_m = -1
+      case ("cycle_m")
+         this%cycle_m = value
       case ("sigma_control")
          this%sigma_control = value
       case ("sigma_p")
@@ -145,7 +160,7 @@ contains
       case ("rd_factor")
          this%rd_factor = value
       case default
-         stop "the value is wrong in set_parameters in lst."
+         stop "the value is wrong in set_parameters in lpse."
       end select
 
    end subroutine lpse_set_parameters_real8
@@ -172,6 +187,9 @@ contains
          this%ome = value
       case ("bat")
          this%bat = value
+         this%cycle_m = -1
+      case ("cycle_m")
+         this%cycle_m = value
       case ("sigma_control")
          this%sigma_control = value
       case ("sigma_p")
@@ -179,7 +197,7 @@ contains
       case ("rd_factor")
          this%rd_factor = value
       case default
-         stop "the value is wrong in set_parameters in lst."
+         stop "the value is wrong in set_parameters in lpse."
       end select
 
    end subroutine lpse_set_parameters_real4
@@ -201,7 +219,7 @@ contains
       case ("solve_alpha")
          this%solve_alpha = value
       case default
-         stop "the value is wrong in set_parameters in lst."
+         stop "the value is wrong in set_parameters in lpse."
       end select
 
    end subroutine lpse_set_parameters_int

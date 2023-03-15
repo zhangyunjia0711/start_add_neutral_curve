@@ -53,7 +53,7 @@ contains
             br = char(10)
         end if
         ! write (*, '(5a,f6.2,2a)', advance="no") this%Prefix//'', '[', &
-            write( * , '(5a,f6.2,2a)', advance="no") trim(char(this%Prefix)) , '[' , & !// 如您的编译器不支持，请用上方语句代替
+        write( * , '(5a,f6.2,2a)', advance="no") trim(char(this%Prefix)) , '[' , & !// 如您的编译器不支持，请用上方语句代替
             repeat(this%M, jm), repeat(this%O, this%lens - jm), '] ', this%i*100.0/this%N, "%", br
     End Subroutine Put
 

@@ -3,7 +3,7 @@
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
 !> @Date: 2022-12-29 15:17:05
-!> @LastEditTime: 2023-03-07 08:31:06
+!> @LastEditTime: 2023-03-15 11:41:36
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
 !> @FilePath: /START_all/src/osg/module_3dsgo.f90
@@ -88,13 +88,24 @@ contains
       grid_x1 = assemble_lst_grid_profile(i_x1)
       baseflow_x0 = assemble_lst_baseflow_profile(i_x0)
       baseflow_x1 = assemble_lst_baseflow_profile(i_x1)
+      if(flg_cycle)  initial_bat = initial_cycle_m*drz(i_x0)
+      print *, 'i_x0=', i_x0, 'i_x1=', i_x1
+      if(flg_cycle)  print *, 'cycle_m=', initial_cycle_m
+      print *, 'beta=', initial_bat
+      print *, 'omega=', initial_ome
+      print *, 'alpha=', initial_alf
       call solver%setup(i_x0, grid_x0, baseflow_x0, i_x1, grid_x1, baseflow_x1, dcmplx(initial_alf), initial_bat, initial_ome)
       call solver%set_ic()
       call solver%solve(G_factor)
 
       open (999, file='out/optimal_growth_streak_results.plt')
-      write (999, *) '#variables= i_x0, i_x1, alf, bat, G'
-      write (999, *) i_x0, i_x1, initial_alf, initial_bat, G_factor
+      if(.not. flg_cycle)then
+         write (999, *) '#variables= i_x0, i_x1, alf, bat, G'
+         write (999, *) i_x0, i_x1, initial_alf, initial_bat, G_factor
+      else
+         write (999, *) '#variables= i_x0, i_x1, alf, cycle_m, G'
+         write (999, *) i_x0, i_x1, initial_alf, initial_cycle_m, G_factor
+      endif
       flush (999)
 
       call PetscPrintf(PETSC_COMM_WORLD, "==========Compute 3D optimal growth streak local!==========\n", ierr)
@@ -102,7 +113,11 @@ contains
       call PetscPrintf(PETSC_COMM_WORLD, "===  k= 0: Output the optimal streak funciton at i_x0.\n", ierr)
       call PetscPrintf(PETSC_COMM_WORLD, "===  k= 1: Modify i_x0.\n", ierr)
       call PetscPrintf(PETSC_COMM_WORLD, "===  k= 2: Modify i_x1.\n", ierr)
-      call PetscPrintf(PETSC_COMM_WORLD, "===  k= 3: Modify beta.\n", ierr)
+      if(.not. flg_cycle)then
+         call PetscPrintf(PETSC_COMM_WORLD, "===  k= 3: Modify beta.\n", ierr)
+      else
+         call PetscPrintf(PETSC_COMM_WORLD, "===  k= 3: Modify cycle_m.\n", ierr)
+      endif
       call PetscPrintf(PETSC_COMM_WORLD, "===  k= 4: Modify omega.\n", ierr)
       call PetscPrintf(PETSC_COMM_WORLD, "===  k= 5: Modify alpha.\n", ierr)
       call PetscPrintf(PETSC_COMM_WORLD, "===  delta_k=ki*pk.(eg. k, ki, pk=4, 20, 0.001 means delta_omega_r=20*0.001)\n", ierr)
@@ -111,7 +126,7 @@ contains
       k = 0; ki = 0; pk = 0.0d0
       do while (k /= -1)
          print *, 'i_x0=', i_x0, 'i_x1=', i_x1
-         print *, 'beta=', initial_bat
+         print *, 'beta=', initial_cycle_m*drz(i_x0)
          print *, 'omega=', initial_ome
          print *, 'alpha=', initial_alf
          write (*, '("k, ki, pk=", $)')
@@ -137,7 +152,12 @@ contains
             case (2) !! adjust i_x1
                i_x1 = i_x1 + int(pk)
             case (3) !! adjust beta
-               initial_bat = initial_bat + pk
+               if(flg_cycle)then
+                  initial_cycle_m = initial_cycle_m + pk
+                  initial_bat = initial_cycle_m * drz(i_x0)
+               else
+                  initial_bat = initial_bat + pk
+               endif
             case (4) !! adjust omega
                initial_ome = initial_ome + pk
                ! initial_alf = initial_ome/c_phase
@@ -146,6 +166,7 @@ contains
             end select
 
             print *, 'i_x0=', i_x0, 'i_x1=', i_x1
+            if(flg_cycle)  print *, 'cycle_m=', initial_cycle_m
             print *, 'beta=', initial_bat
             print *, 'omega=', initial_ome
             print *, 'alpha=', initial_alf

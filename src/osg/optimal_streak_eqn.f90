@@ -3,23 +3,13 @@
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
 !> @Date: 2022-12-29 15:17:05
-!> @LastEditTime: 2023-03-07 09:26:24
+!> @LastEditTime: 2023-03-15 10:34:48
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
 !> @FilePath: /START_all/src/osg/optimal_streak_eqn.f90
 !> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
-!------------------------------------------------------------------------------
-! TJU/Department of Mechanics, Fluid Mechanics, Code START
-!------------------------------------------------------------------------------
-!> @Author: Jianxin Liu shookware@tju.edu.cn
-!> @Date: 2022-09-09 10:45:42
-!> @LastEditTime: 2022-12-12 19:29:51
-!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: optimal streak equations solver.
-!> @FilePath: /START_all/src/osg/optimal_streak_eqn.f90
-!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
-!------------------------------------------------------------------------------
+
 
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
@@ -36,7 +26,7 @@ module mod_optimal_streak_eqn
     use mod_solver_abstract
     use mod_lpse_solver_abstract
     use mod_lst_eqn
-    use global_parameters, only: GAMMA
+    use global_parameters, only: GAMMA, drz
 
     implicit none
 
@@ -142,8 +132,17 @@ contains
         allocate (this%alf(i_x0_:i_x1_))
         this%alf(i_x0_) = alf_
 
-        call lpse%set_parameter("bat", bat_)
-        call alpse%set_parameter("bat", bat_)
+        if(abs(drz(i_x0_))<=epsilon(1.0d0))then
+            call lpse%set_parameter("bat", bat_)
+        else
+            call lpse%set_parameter("cycle_m", bat_/drz(i_x0_))
+        endif
+        if(abs(drz(i_x1_))<=epsilon(1.0d0))then
+            call alpse%set_parameter("bat", bat_)
+        else
+            call alpse%set_parameter("cycle_m", bat_/drz(i_x0_))
+        endif
+
         call lpse%set_parameter("ome", ome_)
         call alpse%set_parameter("ome", ome_)
         call lpse%set_parameter("rd_factor", 1.0d0)

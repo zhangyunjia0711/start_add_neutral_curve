@@ -238,10 +238,19 @@ contains
          this%lambda = 0.5d0
       end if
 
+      ! this%bat = this%cycle_m*this%grid%drz
+
       alf_old = alf
       delta = 1.0d10
       ! read(*, *)
       this%iterator_times = -1
+
+      ! print*, 'lpse'
+      ! print*, alf
+      ! print*, this%bat, this%cycle_m, this%grid%drz
+      ! print*, this%ome
+
+      
       do while (abs(delta) >= (epsilon(1.0e0)*100.0d0))
 
          call this%solve_lpse_matrix(alf)

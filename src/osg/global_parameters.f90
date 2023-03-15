@@ -2,12 +2,12 @@
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
-!> @Date: 2022-09-09 10:45:42
-!> @LastEditTime: 2022-12-12 19:29:24
+!> @Date: 2022-12-29 15:17:05
+!> @LastEditTime: 2023-03-15 11:35:15
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: global parameters for optimal streak growth solver.
+!> @Description: 
 !> @FilePath: /START_all/src/osg/global_parameters.f90
-!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
 #include <petsc/finclude/petsc.h>
@@ -31,6 +31,7 @@ module global_parameters
 
   ! type(string) :: solname
   integer :: Coordinate_System
+  logical :: flg_cycle= .FALSE.
 
   real(REAL64) :: GAMMA=1.4D0
   real(REAL64) :: Pr=0.72D0
@@ -47,6 +48,7 @@ module global_parameters
   Real(REAL64) :: Ma, Re, Te
 
   real(REAL64) :: alpha(2), beta(2), omega(2)
+  integer :: cycle_m
   logical :: lpse_IsAdjoint
 
   integer :: bc_y0, bc_yn
@@ -77,6 +79,7 @@ module global_parameters
 
   integer :: i_x0, i_x1
   real(REAL64) :: initial_alf, initial_bat, initial_ome
+  real(REAL64) :: initial_cycle_m
   real(REAL64) :: c_phase=1.0d0
   logical :: initial_flg
 

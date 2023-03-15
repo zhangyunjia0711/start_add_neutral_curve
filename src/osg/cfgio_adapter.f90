@@ -2,14 +2,13 @@
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
-!> @Date: 2022-09-09 10:45:42
-!> @LastEditTime: 2022-12-12 19:29:04
+!> @Date: 2022-12-29 15:17:05
+!> @LastEditTime: 2023-03-15 11:37:24
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
 !> @FilePath: /START_all/src/osg/cfgio_adapter.f90
-!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
-
 !@ config file adapter for optimal growth streak solver.
 
 module mod_cfgio_adapter
@@ -41,6 +40,12 @@ module mod_cfgio_adapter
             cfg=parse_cfg(trim(cfgfn))
             if(cfg%has_key("general", "screen")) &
             call cfg%get("general", "screen", screen_flg)
+            if (cfg%has_key("general", "cycle")) then
+              call cfg%get("general", "cycle", flg_cycle)
+            else
+              flg_cycle = .FALSE.
+            endif
+            print*, flg_cycle
             call cfg_filename(cfg)
             call cfg_domain(cfg)
             call cfg_freestream(cfg)
@@ -215,10 +220,18 @@ module mod_cfgio_adapter
         stop '[3dsog]initial_alpha should be given.'
       endif
 
-      if(cfg%has_key('3dsog', 'initial_beta'))then
-        call cfg%get('3dsog', 'initial_beta', initial_bat)
+      if(.not. flg_cycle) then
+        if(cfg%has_key('3dsog', 'initial_beta'))then
+          call cfg%get('3dsog', 'initial_beta', initial_bat)
+        else
+          stop '[3dsog]initial_beta should be given.'
+        endif
       else
-        stop '[3dsog]initial_beta should be given.'
+        if(cfg%has_key('3dsog', 'initial_m'))then
+          call cfg%get('3dsog', 'initial_m', initial_cycle_m)
+        else
+          stop '[3dsog]initial_m should be given.'
+        endif
       endif
 
       if(cfg%has_key('3dsog', 'initial_omega'))then

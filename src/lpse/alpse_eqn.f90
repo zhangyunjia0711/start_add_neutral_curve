@@ -240,6 +240,8 @@ contains
             lambda = 0.5d0
         end if
 
+        ! this%bat = this%cycle_m*this%grid%drz
+
         alf_old = alf
         delta = 1.0d10
         ! read(*, *)
