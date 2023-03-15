@@ -196,7 +196,7 @@ module mod_cfgio_adapter
 
       implicit none
       type(cfg_t) :: cfg
-      character(len=256):: method_local, mode_local
+      character(len=256):: method_local, mode_local, cdump
       integer :: npar
       real(REAL64), allocatable, dimension(:) :: alf_in, ome_in, bat_in
 
@@ -220,6 +220,18 @@ module mod_cfgio_adapter
         stop '[3dsog]initial_alpha should be given.'
       endif
 
+      if(cfg%has_key('3dsog', 'solve_alpha')) then
+        call cfg%get('3dsog', 'solve_alpha', cdump)
+        select case (trim(cdump))
+        case ('real')
+          solve_alpha=SOLVE_ALPHA_REAL
+        case ('none')
+          solve_alpha=SOLVE_ALPHA_NONE
+        end select
+      else
+        solve_alpha=SOLVE_ALPHA_NONE
+      endif
+
       if(.not. flg_cycle) then
         if(cfg%has_key('3dsog', 'initial_beta'))then
           call cfg%get('3dsog', 'initial_beta', initial_bat)
@@ -233,7 +245,7 @@ module mod_cfgio_adapter
           stop '[3dsog]initial_m should be given.'
         endif
       endif
-
+      
       if(cfg%has_key('3dsog', 'initial_omega'))then
         call cfg%get('3dsog', 'initial_omega', initial_ome)
       else

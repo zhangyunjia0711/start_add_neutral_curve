@@ -98,7 +98,7 @@ contains
       call solver%set_ic()
       call solver%solve(G_factor)
 
-      open (999, file='out/optimal_growth_streak_results.plt')
+      open (999, file='out/optimal_growth_streak_results.plt', access='append')
       if(.not. flg_cycle)then
          write (999, *) '#variables= i_x0, i_x1, alf, bat, G'
          write (999, *) i_x0, i_x1, initial_alf, initial_bat, G_factor
@@ -181,7 +181,13 @@ contains
                call solver%set_ic(solver%q0)
                ! call solver%set_ic()
                call solver%solve(G_factor)
-               write (999, *) i_x0, i_x1, initial_alf, initial_bat, G_factor
+               if(.not. flg_cycle)then
+                  write (999, *) i_x0, i_x1, initial_alf, initial_bat, G_factor
+               else
+                  write (999, *) i_x0, i_x1, initial_alf, initial_cycle_m, G_factor
+               endif
+               flush (999)
+
                if(isNAN(G_factor)) then
                   error stop "G_factor is NaN, please recompute the problem."
                endif

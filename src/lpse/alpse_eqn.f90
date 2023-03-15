@@ -155,11 +155,11 @@ contains
         call KSPSetType(Solver, KSPPREONLY, ierr)
         call KSPGetPC(Solver, SolverPC, ierr)
         call PCSetType(SolverPC, PCLU, ierr)
-#ifdef __linux__
-        call PCFactorSetMatSolverType(SolverPC, MATSOLVERMKL_CPARDISO, ierr)
-#elif __APPLE__
+! #ifdef __linux__
+        ! call PCFactorSetMatSolverType(SolverPC, MATSOLVERMKL_CPARDISO, ierr)
+! #elif __APPLE__
         call PCFactorSetMatSolverType(SolverPC, MATSOLVERSUPERLU_DIST, ierr)
-#endif
+! #endif
 
         call KSPSetFromOptions(Solver, ierr)
         ! call KSPView(Solver, PETSC_VIEWER_STDOUT_SELF, ierr)
@@ -175,6 +175,7 @@ contains
         class(type_alpse_eqn), intent(inout) :: this
 
         call solve_baseflow_matrix(this)
+        if(.not. ((this%cycle_m%re+1)<=epsilon(1.0d0))) this%bat = this%cycle_m * this%grid%drz
 
     end subroutine alpse_setup
 

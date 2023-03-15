@@ -155,11 +155,11 @@ contains
          call KSPSetType(this%Solver, KSPPREONLY, ierr)
          ! call KSPGetPC(this%Solver, this%SolverPC, ierr)
          call PCSetType(this%SolverPC, PCLU, ierr)
-#ifdef __linux__
-         call PCFactorSetMatSolverType(this%SolverPC, MATSOLVERMKL_CPARDISO, ierr)
-#elif __APPLE__
+! #ifdef __linux__
+!          call PCFactorSetMatSolverType(this%SolverPC, MATSOLVERMKL_CPARDISO, ierr)
+! #elif __APPLE__
          call PCFactorSetMatSolverType(this%SolverPC, MATSOLVERSUPERLU_DIST, ierr)
-#endif
+! #endif
          call KSPSetFromOptions(this%Solver, ierr)
          ! call KSPView(Solver, PETSC_VIEWER_STDOUT_SELF, ierr)
          call PetscPrintf(PETSC_COMM_WORLD, 'allocate LPSE!\n', ierr)
@@ -177,6 +177,7 @@ contains
 
       call this%solve_baseflow_matrix()
       this%solved_lpse_matrix = .false.
+      if(.not. ((this%cycle_m%re+1)<=epsilon(1.0d0))) this%bat = this%cycle_m * this%grid%drz
 
    end subroutine lpse_setup
 
@@ -249,7 +250,6 @@ contains
       ! print*, alf
       ! print*, this%bat, this%cycle_m, this%grid%drz
       ! print*, this%ome
-
       
       do while (abs(delta) >= (epsilon(1.0e0)*100.0d0))
 

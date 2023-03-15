@@ -245,11 +245,11 @@ Contains
       call KSPGetPC(this%ksp, this%pc, ierr); 
       call KSPSetType(this%ksp, KSPPREONLY, ierr)
       call PCSetType(this%pc, PCLU, ierr)
-#ifdef __linux__
-      call PCFactorSetMatSolverType(this%pc, MATSOLVERMKL_CPARDISO, ierr)
-#elif __APPLE__
+! #ifdef __linux__
+!       call PCFactorSetMatSolverType(this%pc, MATSOLVERMKL_CPARDISO, ierr)
+! #elif __APPLE__
       call PCFactorSetMatSolverType(this%pc, MATSOLVERSUPERLU_DIST, ierr)
-#endif
+! #endif
       call PEPSetFromOptions(this%solver, ierr)
       call PEPSolve(this%Solver, ierr)
       call PEPGetConverged(this%Solver, nconv, ierr)
@@ -335,11 +335,11 @@ Contains
       call KSPGetPC(this%ksp, this%pc, ierr); 
       call KSPSetType(this%ksp, KSPPREONLY, ierr)
       call PCSetType(this%pc, PCLU, ierr)
-#ifdef __linux__
-      call PCFactorSetMatSolverType(this%pc, MATSOLVERMKL_CPARDISO, ierr)
-#elif __APPLE__
+! #ifdef __linux__
+!       call PCFactorSetMatSolverType(this%pc, MATSOLVERMKL_CPARDISO, ierr)
+! #elif __l__
       call PCFactorSetMatSolverType(this%pc, MATSOLVERSUPERLU_DIST, ierr)
-#endif
+! #endif
       call EPSSetFromOptions(this%solver, ierr)
       if (allocated(this%xr)) then
          ! print*, 'Setting initial guess space....'

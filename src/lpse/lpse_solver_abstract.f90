@@ -17,7 +17,6 @@ module mod_lpse_solver_abstract
 
    use petsc
    use iso_fortran_env, only: REAL64, REAL32
-   use mod_lst_grid_profile, only: type_lst_grid_profile
 
    use mod_solver_abstract
 
@@ -117,16 +116,6 @@ module mod_lpse_solver_abstract
 
    end interface
 contains
-
-   subroutine set_grid(this, grid)
-      implicit none
-      class(type_lpse_abstract), intent(inout) :: this
-      type(type_lst_grid_profile), intent(in) :: grid
-
-      this%grid = grid
-      if(.not. ((this%cycle_m%re+1)<=epsilon(1.0d0))) this%bat = this%cycle_m * grid%drz
-
-   end subroutine set_grid
 
    subroutine lpse_set_parameters_real8(this, keyword, value)
 

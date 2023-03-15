@@ -26,7 +26,7 @@ module mod_optimal_streak_eqn
     use mod_solver_abstract
     use mod_lpse_solver_abstract
     use mod_lst_eqn
-    use global_parameters, only: GAMMA, drz
+    use global_parameters, only: GAMMA, drz, solve_alpha
 
     implicit none
 
@@ -102,7 +102,7 @@ contains
         ! allocate(type_lpse_eqn :: lpse)
         call lpse%initial(jn, Re, Ma, Te, yb, ye)
         ! call lpse%set_parameter("solve_alpha", SOLVE_ALPHA_NONE)
-        call lpse%set_parameter("solve_alpha", SOLVE_ALPHA_REAL)
+        call lpse%set_parameter("solve_alpha", solve_alpha)
         call lpse%set_parameter("Pr", Pr)
         lpse%isothermal = isothermal
         ! allocate(type_alpse_eqn :: alpse)
@@ -137,6 +137,7 @@ contains
         else
             call lpse%set_parameter("cycle_m", bat_/drz(i_x0_))
         endif
+
         if(abs(drz(i_x1_))<=epsilon(1.0d0))then
             call alpse%set_parameter("bat", bat_)
         else
@@ -291,7 +292,7 @@ contains
                 call ArrayNorm(this%jn, this%grid_x1%y, tmp, this%M_x1, Norm_x1)
                 call DMDAVecRestoreArrayReadF90(this%dm, this%q1, tmp, ierr)
                 ! if (abs(Norm_x1/Norm_x0 - G_factor)/G_factor <= (epsilon(1.0e0)*100.0e0)) exit
-                if (abs(Norm_x1/Norm_x0 - G_factor)/G_factor <= 1d-3) then
+                if ((abs(Norm_x1/Norm_x0 - G_factor)/G_factor <= 1d-2) .or. abs(Norm_x1/Norm_x0 - G_factor)<=1.0d-2 .or. sum>100) then
                     print *, 'Growth_factor:', Norm_x1/Norm_x0, 'G_rtol is:', abs(Norm_x1/Norm_x0 - G_factor)/G_factor
                     exit
                 endif
