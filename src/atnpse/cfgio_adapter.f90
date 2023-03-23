@@ -202,7 +202,7 @@ contains
             print *, 'The Te is set to 300K.'
         end if
         if (cfg%has_key("freestream", "pr")) then
-            call cfg%get("freestream", "pr", Te)
+            call cfg%get("freestream", "pr", Pr)
         else
             print *, 'No freestream Prandtl number is input,'
             Pr = 0.72d0

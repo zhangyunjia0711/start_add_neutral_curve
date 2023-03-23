@@ -2,12 +2,12 @@
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
-!> @Date: 2022-12-11 15:07:49
-!> @LastEditTime: 2022-12-12 19:31:44
+!> @Date: 2022-12-29 15:17:05
+!> @LastEditTime: 2023-03-23 13:00:49
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
 !> @FilePath: /START_all/src/npse/cfgio_adapter.f90
-!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
 !@ config file adapter for nonlinear pse solver for continuous force.
@@ -203,7 +203,7 @@ contains
             print *, 'The Te is set to 300K.'
         end if
         if (cfg%has_key("freestream", "pr")) then
-            call cfg%get("freestream", "pr", Te)
+            call cfg%get("freestream", "pr", Pr)
         else
             print *, 'No freestream Prandtl number is input,'
             Pr = 0.72d0

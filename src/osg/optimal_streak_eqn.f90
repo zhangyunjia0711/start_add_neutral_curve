@@ -292,7 +292,8 @@ contains
                 call ArrayNorm(this%jn, this%grid_x1%y, tmp, this%M_x1, Norm_x1)
                 call DMDAVecRestoreArrayReadF90(this%dm, this%q1, tmp, ierr)
                 ! if (abs(Norm_x1/Norm_x0 - G_factor)/G_factor <= (epsilon(1.0e0)*100.0e0)) exit
-                if ((abs(Norm_x1/Norm_x0 - G_factor)/G_factor <= 1d-2) .or. abs(Norm_x1/Norm_x0 - G_factor)<=1.0d-2 .or. sum>100) then
+                if ((abs(Norm_x1/Norm_x0 - G_factor)/G_factor <= 1d-2) .or. &
+		&    abs(Norm_x1/Norm_x0 - G_factor)<=1.0d-2 .or. sum>100) then
                     print *, 'Growth_factor:', Norm_x1/Norm_x0, 'G_rtol is:', abs(Norm_x1/Norm_x0 - G_factor)/G_factor
                     exit
                 endif
