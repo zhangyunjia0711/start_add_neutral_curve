@@ -2,12 +2,12 @@
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
-!> @Date: 2022-12-10 21:17:22
-!> @LastEditTime: 2022-12-12 19:33:20
+!> @Date: 2023-03-23 13:01:53
+!> @LastEditTime: 2023-05-18 15:57:14
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
 !> @FilePath: /START_all/src/lst/lst_eqn.f90
-!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
 #include <petsc/finclude/petsc.h>
@@ -522,6 +522,14 @@ contains
       real(REAL64) :: y, drx, drz
       real(REAL64) :: hx, hz, hx_y, hz_y, d12, d32, d132
 
+      real(REAL64) :: alfr(5), alfi(5), beta(5)
+      real(REAL64) :: vl(5, 5), vr(5, 5)
+      real(REAL64) :: lambda_(5), abs_lambda_(5), diag_plus(5, 5),diag_minus(5, 5), matrix_plus(5, 5)
+      integer :: ipiv(5), info
+      real(REAL64) :: work(100)
+      integer :: l
+
+
       associate (bf_profile => this%baseflow, grid_profile => this%grid)
          rho = bf_profile%q0(1, 1)
          u = bf_profile%q0(2, 1)
@@ -661,6 +669,30 @@ contains
                   D0(5, 5, 1) = 1.0d0-porous_B*Rho0*pe
                end associate
             end block
+         case (BC_NONREFLECTION)
+   
+            !!! G^(-1)B = S^(-1)\Lambda S
+            call dggev('N', 'V', 5, real(B0(:, :, jn), kind=real64), 5, &
+            &          real(G0(:, :, jn), kind=real64), 5, &
+            &          alfr, alfi, beta, vl, 5, vr, 5, work, 100, info)
+   
+            lambda_ = (alfr)/beta
+            print*, lambda_
+            !!! G^(-1)B^(+) = S^(-1)\Lambda^(+) S
+            diag_plus= 0.0d0
+            diag_minus = 0.0d0
+            do l = 1, 5
+               abs_lambda_(l) = real(sqrt(lambda_(l)**2), kind=REAL64)
+               diag_plus(l, l) = 0.5d0*(lambda_(l) + abs_lambda_(l))
+               diag_minus(l, l) = 0.5d0*(lambda_(l) - abs_lambda_(l))
+            end do
+            vl = vr !! vl is inv(vr)
+            call dgetrf(5, 5, vl, 5, ipiv, info)
+            call dgetri(5, vl, 5, ipiv, work, 5, info)
+            !!!  B^(+) = G S^(-1)\Lambda^(-) S
+            B0(:, :, jn) = matmul(G0(:, :, jn), vr)
+            B0(:, :, jn) = matmul(B0(:, :, jn), diag_minus)
+            B0(:, :, jn) = matmul(B0(:, :, jn), vl)
          end select
 
          A0(:, :, 1) = A0(:, :, 1)/hx

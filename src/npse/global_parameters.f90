@@ -2,14 +2,13 @@
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
-!> @Date: 2022-12-10 21:17:22
-!> @LastEditTime: 2022-12-12 19:31:31
+!> @Date: 2022-12-29 15:17:05
+!> @LastEditTime: 2023-04-04 09:52:11
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
-!> @Description: global parameters for nonlinear parabolized stability equations.
+!> @Description: 
 !> @FilePath: /START_all/src/npse/global_parameters.f90
-!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
-
 #include <petsc/finclude/petsc.h>
 #include <slepc/finclude/slepc.h>
 

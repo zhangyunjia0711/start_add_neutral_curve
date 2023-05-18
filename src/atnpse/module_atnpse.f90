@@ -2,6 +2,17 @@
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
+!> @Date: 2022-12-29 15:17:05
+!> @LastEditTime: 2023-04-04 09:17:50
+!> @LastEditors: Jianxin Liu shookware@tju.edu.cn
+!> @Description: 
+!> @FilePath: /START_all/src/atnpse/module_atnpse.f90
+!> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!------------------------------------------------------------------------------
+!------------------------------------------------------------------------------
+! TJU/Department of Mechanics, Fluid Mechanics, Code START
+!------------------------------------------------------------------------------
+!> @Author: Jianxin Liu shookware@tju.edu.cn
 !> @Date: 2022-12-10 21:17:22
 !> @LastEditTime: 2022-12-13 08:34:38
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
@@ -258,7 +269,7 @@ contains
          call lst%solve(ome, alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1), inlet_dis(i)%n(2), inlet_dis(i)%n(3)), bat)
          call lst%get_eigf(phi(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1), inlet_dis(i)%n(2), inlet_dis(i)%n(3)))
          call VecScale(phi(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1), inlet_dis(i)%n(2), inlet_dis(i)%n(3)), inlet_dis(i)%amp, ierr)
-         print *, 'disturbance at inlet', i, inlet_dis(i)%m, inlet_dis(i)%n(1:ntheta - 1)
+         print *, 'disturbance at inlet', iloc, inlet_dis(i)%m, inlet_dis(i)%n(1:ntheta - 1)
          print *, 'drx=', grid_profile%drx, 'drz=', grid_profile%drz
          print *, 'alpha=', alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1), inlet_dis(i)%n(2), inlet_dis(i)%n(3))%re, &
          &         alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n(1), inlet_dis(i)%n(2), inlet_dis(i)%n(3))%im

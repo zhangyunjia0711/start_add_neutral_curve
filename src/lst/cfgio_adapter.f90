@@ -2,12 +2,12 @@
 ! TJU/Department of Mechanics, Fluid Mechanics, Code START
 !------------------------------------------------------------------------------
 !> @Author: Jianxin Liu shookware@tju.edu.cn
-!> @Date: 2022-12-08 13:45:30
-!> @LastEditTime: 2022-12-12 19:33:01
+!> @Date: 2022-12-29 15:17:05
+!> @LastEditTime: 2023-05-18 16:04:45
 !> @LastEditors: Jianxin Liu shookware@tju.edu.cn
 !> @Description: 
 !> @FilePath: /START_all/src/lst/cfgio_adapter.f90
-!> @Copyright (c) 2022 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
+!> @Copyright (c) 2023 by Jianxin Liu email: shookware@tju.edu.cn, All Rights Reserved.
 !------------------------------------------------------------------------------
 
 !@ config file adapter for lst solver.
@@ -329,6 +329,9 @@ contains
                call cfg%get("bc", "porous_radius", radius)
                call cfg%get("bc", "porous_depth", depth)
             end block
+         case ('BC_FARFIELD')
+            print *, 'bc farfield is used at y0.'
+            bc_y0 = BC_FARFIELD
          case default
             print *, '[bc]y_0 keyword is wrong.'
             print *, 'The keryword may be BC_WALL.'

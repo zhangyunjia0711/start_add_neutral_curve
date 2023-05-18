@@ -194,10 +194,11 @@ contains
         do i = 1, ndis
             ome = theta1%re*inlet_dis(i)%m+theta2%re*inlet_dis(i)%n
             bat = theta1%im*inlet_dis(i)%m+theta2%im*inlet_dis(i)%n
+            print*, i, ome%re, bat%re, alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n)
             call lst%solve(ome, alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n), bat)
             call lst%get_eigf(phi(iloc, inlet_dis(i)%m, inlet_dis(i)%n))
             call VecScale(phi(iloc, inlet_dis(i)%m, inlet_dis(i)%n), inlet_dis(i)%amp, ierr)
-            print *, 'disturbance at inlet', i, inlet_dis(i)%m, inlet_dis(i)%n
+            print *, 'disturbance at inlet', iloc, inlet_dis(i)%m, inlet_dis(i)%n
             print *, 'drx=', grid_profile%drx, 'drz=', grid_profile%drz
             print *, 'alpha=', alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n)%re, alf(iloc, inlet_dis(i)%m, inlet_dis(i)%n)%im
         end do
@@ -344,9 +345,10 @@ contains
                 itimes_nonlinear = 0
                 Norm_rhs = 0.0d10
 
-                do while (((sqrt(sum(VecDistance**2)) >= &
+                do while (((sqrt(sum(VecDistance**2)) >=  &
                             max(atol_nonlinear, rtol_nonlinear*Norm_rhs))) .and. &
-                          (itimes_nonlinear < maxit_nonlinear))
+                            ! .and. &
+                            (itimes_nonlinear < maxit_nonlinear))
 
                     nonlinear_term_old = nonlinear_term
                     if (flg_mfd) then
@@ -380,8 +382,10 @@ contains
                             iterator_times(m, n) = iterator_times(m, n) + npse_eqn%iterator_times
 
                             lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid_profile%xi_x(yb + 1)
-                            norm_rhs_mn(m, n) = npse_eqn%normrhs
+                            ! norm_rhs_mn(m, n) = npse_eqn%normrhs
+                            call VecNorm(phi(i, m, n), NORM_2, norm_rhs_mn(m, n), ierr)
                             !   print*, 'the process is', omp_get_thread_num()
+
                         end do
                     end do
 
@@ -396,7 +400,7 @@ contains
                     nonlinear_term = omega_force*nonlinear_term + (1.0d0 - omega_force)*nonlinear_term_old
                     ! nonlinear_term_old = nonlinear_term
 
-                    if (sqrt(sum(VecDistance**2)) >= 1.0d3) then
+                    if (sqrt(sum(VecDistance**2)) >= 1.0d20) then
                         print *, '[WARNING:] The NPSE is devergence at ix=', i
                         print *, 'You can adjust omega_force_factor or/and omega_phi_factor for a more stable impliment.'
                         goto 1000
