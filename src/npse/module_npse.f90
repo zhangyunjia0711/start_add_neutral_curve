@@ -347,7 +347,6 @@ contains
 
                 do while (((sqrt(sum(VecDistance**2)) >=  &
                             max(atol_nonlinear, rtol_nonlinear*Norm_rhs))) .and. &
-                            ! .and. &
                             (itimes_nonlinear < maxit_nonlinear))
 
                     nonlinear_term_old = nonlinear_term
@@ -382,8 +381,8 @@ contains
                             iterator_times(m, n) = iterator_times(m, n) + npse_eqn%iterator_times
 
                             lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid_profile%xi_x(yb + 1)
-                            ! norm_rhs_mn(m, n) = npse_eqn%normrhs
-                            call VecNorm(phi(i, m, n), NORM_2, norm_rhs_mn(m, n), ierr)
+                            norm_rhs_mn(m, n) = npse_eqn%normrhs
+                            !call VecNorm(phi(i, m, n), NORM_2, norm_rhs_mn(m, n), ierr)
                             !   print*, 'the process is', omp_get_thread_num()
 
                         end do
@@ -400,7 +399,7 @@ contains
                     nonlinear_term = omega_force*nonlinear_term + (1.0d0 - omega_force)*nonlinear_term_old
                     ! nonlinear_term_old = nonlinear_term
 
-                    if (sqrt(sum(VecDistance**2)) >= 1.0d20) then
+                    if (sqrt(sum(VecDistance**2)) >= 1.0d3) then
                         print *, '[WARNING:] The NPSE is devergence at ix=', i
                         print *, 'You can adjust omega_force_factor or/and omega_phi_factor for a more stable impliment.'
                         goto 1000
@@ -476,7 +475,7 @@ contains
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
                         alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
-                        alf(i, m, n) = alf_tmp*(m*theta1%re+n*theta2%re)
+                        alf(i, m, n) = alf_tmp%re*(m*theta1%re+n*theta2%re)
                     end if
                     if (i > istart) lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid%xi_x(yb + 1)
                 end do
@@ -488,7 +487,7 @@ contains
                     if (solve_alpha(m, n) == SOLVE_ALPHA_REAL) then
                         alf(i, m, n) = alf(i, m, n) !+ ZI*aimag(alf_tmp)*m
                     elseif (solve_alpha(m, n) == SOLVE_ALPHA_NONE) then
-                        alf(i, m, n) = alf_tmp*(m*theta1%im+n*theta2%im)
+                        alf(i, m, n) = alf_tmp%re*(m*theta1%im+n*theta2%im)
                     end if
                     if (i > istart) lnA0(i, m, n) = lnA1(m, n) + 0.5d0*(alf(i, m, n) + alf(i - 1, m, n))/grid%xi_x(yb + 1)
                 end do

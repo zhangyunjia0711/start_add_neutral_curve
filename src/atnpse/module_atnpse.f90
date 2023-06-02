@@ -596,7 +596,7 @@ contains
                if (solve_alpha(m, n0, n1, n2) == SOLVE_ALPHA_REAL) then
                   alf(i, m, n0, n1, n2) = alf(i, m, n0, n1, n2) !+ ZI*aimag(alf_tmp)*m
                elseif (solve_alpha(m, n0, n1, n2) == SOLVE_ALPHA_NONE) then
-                  alf(i, m, n0, n1, n2) = alf_tmp*(m*theta(1)%re + n0*theta(2)%re + n1*theta(3)%re + n2*theta(3)%re)
+                  alf(i, m, n0, n1, n2) = alf_tmp%re*(m*theta(1)%re + n0*theta(2)%re + n1*theta(3)%re + n2*theta(3)%re)
                end if
                if (i > istart) lnA0(i, m, n0, n1, n2) = lnA1(m, n0, n1, n2) + &
                &       0.5d0*(alf(i, m, n0, n1, n2) + alf(i - 1, m, n0, n1, n2))/grid%xi_x(yb + 1)
@@ -615,7 +615,7 @@ contains
                if (solve_alpha(m, n0, n1, n2) == SOLVE_ALPHA_REAL) then
                   alf(i, m, n0, n1, n2) = alf(i, m, n0, n1, n2) !+ ZI*aimag(alf_tmp)*m
                elseif (solve_alpha(m, n0, n1, n2) == SOLVE_ALPHA_NONE) then
-                  alf(i, m, n0, n1, n2) = alf_tmp*(m*theta(1)%im + n0*theta(2)%im + n1*theta(2)%im + n2*theta(3)%im)
+                  alf(i, m, n0, n1, n2) = alf_tmp%re*(m*theta(1)%im + n0*theta(2)%im + n1*theta(2)%im + n2*theta(3)%im)
                end if
                if (i > istart) lnA0(i, m, n0, n1, n2) = lnA1(m, n0, n1, n2) + &
                &   0.5d0*(alf(i, m, n0, n1, n2) + alf(i - 1, m, n0, n1, n2))/grid%xi_x(yb + 1)
