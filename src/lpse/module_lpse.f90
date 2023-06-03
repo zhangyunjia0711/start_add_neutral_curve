@@ -98,7 +98,7 @@ contains
         call lpse_eqn%set_parameter("bat", beta(1))
         block
             use global_parameters, only: drz
-            if(abs(drz(istart)*drz(iend))<=epsilon(1.0d0))then
+            if(abs(drz(istart)*drz(iend))>epsilon(1.0d0))then
                 select type (lpse_eqn)
                 type is (type_lpse_eqn)
                     call lpse_eqn%set_parameter("cycle_m", beta(1)/drz(istart))
