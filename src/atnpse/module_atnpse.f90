@@ -118,8 +118,11 @@ contains
 
       implicit none
       integer :: i, m, n0, n1, n2
-
+#if PETSC_VERSION_LT(3,22,0)
       call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER, DM_local, ierr)
+#else
+      call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER_ARRAY, DM_local, ierr)
+#endif
       call DMSetUp(DM_local, ierr)
 
       allocate (phi(istart - 1:istart + 1, 0:m_global, -n0_global:n0_global, -n1_global:n1_global, -n2_global:n2_global))

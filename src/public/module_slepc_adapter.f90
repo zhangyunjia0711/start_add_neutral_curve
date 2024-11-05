@@ -38,7 +38,7 @@ module mod_slepc_adapter
       PetscInt :: m !<问题矩阵维度
       Vec, allocatable :: xr(:)   !<特征向量
       PetscScalar, allocatable :: kr(:) !特征值
-      Vec :: initialguess !初始猜测向量
+      Vec :: initialguess(1) !初始猜测向量
       integer, allocatable :: evIndex(:) !<特征值序号
       PetscScalar :: target !< 目标值
       ST :: st
@@ -234,9 +234,9 @@ Contains
       call PEPSetType(this%solver, PEPLINEAR, ierr)
       if (allocated(this%xr)) then
          ! print*, 'Setting initial guess space....'
-         call VecDuplicate(this%xr(size(this%xr)), this%initialguess, ierr)
-         call VecCopy(this%xr(size(this%xr)), this%initialguess, ierr)
-         call PEPSetInitialSpace(this%solver, 1, this%initialguess, ierr)
+         call VecDuplicate(this%xr(size(this%xr)), this%initialguess(1), ierr)
+         call VecCopy(this%xr(size(this%xr)), this%initialguess(1), ierr)
+         call PEPSetInitialSpace(this%solver, 1, this%initialguess(1), ierr)
       end if
       !call PEPSetRefine(this%solver, PEP_REFINE_SIMPLE, 1, 1.0d-8, 2, PEP_REFINE_SCHEME_SCHUR, ierr)
       call PEPGetST(this%solver, this%st, ierr)
@@ -343,9 +343,9 @@ Contains
       call EPSSetFromOptions(this%solver, ierr)
       if (allocated(this%xr)) then
          ! print*, 'Setting initial guess space....'
-         call VecDuplicate(this%xr(size(this%xr)), this%initialguess, ierr)
-         call VecCopy(this%xr(size(this%xr)), this%initialguess, ierr)
-         call EPSSetInitialSpace(this%solver, 1, this%initialguess, ierr)
+         call VecDuplicate(this%xr(size(this%xr)), this%initialguess(1), ierr)
+         call VecCopy(this%xr(size(this%xr)), this%initialguess(1), ierr)
+         call EPSSetInitialSpace(this%solver, 1, this%initialguess(1), ierr)
       end if
       ! print*, 'problem is setting....'
       ! print*, this%target

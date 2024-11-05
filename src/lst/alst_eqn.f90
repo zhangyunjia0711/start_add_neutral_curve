@@ -177,7 +177,11 @@ contains
 
       alst_eqn_has_initialize = .TRUE.
 
-      call DMDACreate1d(PETSC_COMM_WORLD, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER, DM_ALST, ierr)
+#if PETSC_VERSION_LT(3,22,0)
+      call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER, DM_ALST, ierr)
+#else
+      call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER_ARRAY, DM_ALST, ierr)
+#endif      
       call DMSetUp(DM_ALST, ierr)
       if (this%lst_mode == LST_TEMPORAL_MODE) then
          allocate (this%L_ALST(2))

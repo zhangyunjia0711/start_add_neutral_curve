@@ -140,7 +140,12 @@ contains
 
         alpse_eqn_has_initialize = .TRUE.
 
+#if PETSC_VERSION_LT(3,22,0)
         call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER, this%dm, ierr)
+#else
+        call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn, 5, 2, PETSC_NULL_INTEGER_ARRAY, this%dm, ierr)
+#endif
+
         call DMSetUp(this%dm, ierr)
         call DMCreateMatrix(this%dm, L_ALPSE, ierr)
         call DMGetGlobalVector(this%dm, RHS, ierr); call VecZeroEntries(RHS, ierr)

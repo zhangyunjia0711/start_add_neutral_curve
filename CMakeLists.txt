@@ -24,6 +24,7 @@ endif()
 
 # set root of location to find PETSc's pkg-config
 set(PETSC $ENV{PETSC_DIR}/$ENV{PETSC_ARCH})
+message("Petsc dir is ${PETSC}")
 set(ENV{PKG_CONFIG_PATH} ${PETSC}/lib/pkgconfig:$ENV{SLEPC_DIR}/$ENV{PETSC_ARCH}/lib/pkgconfig)
 
 # Remove the lines below if you do not wish to have PETSc determine the compilers
@@ -39,10 +40,14 @@ if (FORTRAN_COMPILER)
   enable_language(Fortran)
 endif (FORTRAN_COMPILER)
 
+message("Fortran_COMPILER_ID is ${CMAKE_Fortran_COMPILER_ID}")
 if ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "GNU")
   add_compile_options(-cpp -fopenmp -fbacktrace -fbounds-check -std=legacy)
   add_link_options(-fopenmp -llapack)
 elseif ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "Intel")
+  add_compile_options(-cpp -DCOMPLEX_PETSC -traceback -CB -qmkl)
+  add_link_options(-qmkl)
+elseif ("${CMAKE_Fortran_COMPILER_ID}" STREQUAL "IntelLLVM")
   add_compile_options(-cpp -DCOMPLEX_PETSC -traceback -CB -qmkl)
   add_link_options(-qmkl)
 endif()

@@ -109,10 +109,15 @@ contains
       PetscScalar, pointer :: tmp_(:)
       real(REAL64) :: loader(5, in, jn)
       integer :: i, j, l
-
+#if PETSC_VERSION_LT(3,22,0)
       call DMDACreate2d(comm, DM_BOUNDARY_NONE, DM_BOUNDARY_NONE, &
       &                 DMDA_STENCIL_BOX, in, jn, 1, PETSC_DECIDE, &
       &                 1, 2, PETSC_NULL_INTEGER, PETSC_NULL_INTEGER, DA, ierr)
+#else
+      call DMDACreate2d(comm, DM_BOUNDARY_NONE, DM_BOUNDARY_NONE, &
+      &                 DMDA_STENCIL_BOX, in, jn, 1, PETSC_DECIDE, &
+      &                 1, 2, PETSC_NULL_INTEGER_ARRAY, PETSC_NULL_INTEGER_ARRAY, DA, ierr)
+#endif      
       call DMSetUp(DA, ierr)
 
       ! call DMDACreate2d(comm, DM_BOUNDARY_NONE, DM_BOUNDARY_NONE, &
@@ -164,10 +169,15 @@ contains
       !   if(rank==0)then
       !
       !   endif
-
+#if PETSC_VERSION_LT(3,22,0)
       call DMDACreate2d(comm, DM_BOUNDARY_NONE, DM_BOUNDARY_NONE, &
       &                 DMDA_STENCIL_BOX, in, jn, 1, PETSC_DECIDE, &
       &                 5, 2, PETSC_NULL_INTEGER, PETSC_NULL_INTEGER, meshDA, ierr)
+#else
+      call DMDACreate2d(comm, DM_BOUNDARY_NONE, DM_BOUNDARY_NONE, &
+      &                 DMDA_STENCIL_BOX, in, jn, 1, PETSC_DECIDE, &
+      &                 5, 2, PETSC_NULL_INTEGER_ARRAY, PETSC_NULL_INTEGER_ARRAY, meshDA, ierr)
+#endif
       call DMSetUp(meshDA, ierr)
       call DMGetCoordinateDM(MeshDA, CoordDA, ierr)
 

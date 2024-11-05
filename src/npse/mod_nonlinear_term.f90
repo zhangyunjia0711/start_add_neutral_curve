@@ -149,7 +149,11 @@ contains
         this%Ma = Ma
         this%Te = Te
 
+#if PETSC_VERSION_LT(3,22,0)
         call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn_, 5, 2, PETSC_NULL_INTEGER, this%dm, ierr)
+#else
+        call DMDACreate1d(PETSC_COMM_SELF, DM_BOUNDARY_NONE, jn_, 5, 2, PETSC_NULL_INTEGER_ARRAY, this%dm, ierr)
+#endif
         call DMSetUp(this%dm, ierr)
 
         associate (m => this%m, n => this%n, msp => this%msp, nsp => this%nsp)
