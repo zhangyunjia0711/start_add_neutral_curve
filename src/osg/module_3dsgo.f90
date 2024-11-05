@@ -126,7 +126,11 @@ contains
       k = 0; ki = 0; pk = 0.0d0
       do while (k /= -1)
          print *, 'i_x0=', i_x0, 'i_x1=', i_x1
-         print *, 'beta=', initial_cycle_m*drz(i_x0)
+         if(flg_cycle) then
+            print *, 'beta=', initial_cycle_m*drz(i_x0)
+         else
+            print *, 'beta=', initial_bat
+         endif
          print *, 'omega=', initial_ome
          print *, 'alpha=', initial_alf
          write (*, '("k, ki, pk=", $)')
