@@ -20,6 +20,8 @@ module mod_lst
     use mod_lst_grid_profile
     use mod_lst_solver_abstract
     use mod_lst_eqn
+    use mod_neutral_curve, only: run_neutral_curve, neutral_batch_enabled, neutral_exit_code
+    use mod_neutral_numerics, only: NC_SUCCESS, NC_CLOSED, NC_BOUNDARY
     use mod_alst_eqn
     use stdlib_string_type, only: char
 
@@ -62,7 +64,7 @@ contains
         class(type_lst_abstract), allocatable :: lst
         Vec :: eigf
 
-        integer :: k, ki
+        integer :: k, ki, input_status, curve_status
         real(REAL64) :: pk
         !integer, parameter :: comm=PETSC_COMM_WORLD
         if (lst_IsAdjoint) then
@@ -98,6 +100,12 @@ contains
         call PetscPrintf(PETSC_COMM_WORLD, "===  k= 6: Modify beta_i.\n", ierr)
         call PetscPrintf(PETSC_COMM_WORLD, "===  k= 7: Modify omega_i.\n", ierr)
         call PetscPrintf(PETSC_COMM_WORLD, "===  k= 8: Modify iloc.\n", ierr)
+        call PetscPrintf(PETSC_COMM_WORLD, "===  k=31: neutral curves across stations (safeguarded secant).\n", ierr)
+        call PetscPrintf(PETSC_COMM_WORLD, "===  k=32: neutral curves across stations (bisection).\n", ierr)
+        call PetscPrintf(PETSC_COMM_WORLD, "===  k=33: growth contours and neutral curves.\n", ierr)
+        call PetscPrintf(PETSC_COMM_WORLD, "===  k=36: arclength neutral curve at a station.\n", ierr)
+        call PetscPrintf(PETSC_COMM_WORLD, "===  k=37: neutral branches in a parameter plane.\n", ierr)
+        call PetscPrintf(PETSC_COMM_WORLD, "===  neutral settings: [neutral] in the input config file.\n", ierr)
         call PetscPrintf(PETSC_COMM_WORLD, "===  delta_k=ki*pk.(eg. k, ki, pk=4, 20, 0.001 means delta_omega_r=20*0.001)\n", ierr)
         call PetscPrintf(PETSC_COMM_WORLD, "======================================\n", ierr)
 
@@ -132,14 +140,27 @@ contains
             call flush (1001)
         end if
 
+        if (neutral_batch_enabled()) then
+            call run_neutral_curve(lst, ome, alf, bat, result_status=curve_status)
+            if (.not.any(curve_status==[NC_SUCCESS,NC_CLOSED,NC_BOUNDARY])) neutral_exit_code=1
+            k=-1
+        end if
         do while (k /= -1)
             if (rank == 0) then
                 write (*, '("k, ki, pk=", $)')
-                read (*, *) k, ki, pk
+                read (*, *, iostat=input_status) k, ki, pk
+                if (input_status/=0) then
+                    k=-1; ki=0; pk=0.0d0
+                end if
             end if
             call MPI_bcast(k, 1, MPI_INTEGER, 0, MPI_COMM_WORLD, ierr)
             call MPI_bcast(ki, 1, MPI_INTEGER, 0, MPI_COMM_WORLD, ierr)
             call MPI_bcast(pk, 1, MPI_DOUBLE_PRECISION, 0, MPI_COMM_WORLD, ierr)
+            if (k==-1) exit
+            if (any(k==[31,32,33,36,37])) then
+                call run_neutral_curve(lst, ome, alf, bat, task_override=k)
+                cycle
+            end if
             do while (ki >= 1 .or. k == 0)
                 select case (k)
                 case (0)
@@ -216,6 +237,7 @@ contains
         ! call finalize_alst_eqn()!'
         ! endif
 
+        if (rank==0) close(1001)
         call lst%finalize()
         call grid_profile%finalize()
         call baseflow_profile%finalize()

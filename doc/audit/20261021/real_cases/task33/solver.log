@@ -1,0 +1,3699 @@
+COMMAND ["/home/zaza/start/START_ALL_IN_ONE/START_ALL_IN_ONE/bin/START_LST", "-f", "config.ini"]
+Load done! 
+Compute metrics! 
+Compute flow grads done! 
+ No freestream Prandtl number is input,
+ The Pr is set to 0.72.
+ LST_LOCAL is used.
+ LST_TEMPORAL_MODE is used.
+ LST is solved.
+ bc wall is used at y0.
+ bc farfield is used at yn.
+[general]
+  title = SweptBluntPlate
+  screen = F
+
+[filenames]
+  dir = in/
+  grid = grid2.h5
+  flow = flu2.h5
+  output prefix = /out/
+
+[freestream]
+  ma = 6.00000000000000
+  re = 79100.0000000000
+  te = 226.5000000000000
+
+[domain]
+  in = 301
+  jn = 216
+  istart = 1
+  iend = 301
+  iloc = 270
+
+[lst]
+  alpha = 3.50d0, 0.0d0
+  omega = -0.038281d0, 0.019854d0
+  beta = -3.2059d0, 0.0d0
+  adjoint = F
+  method = LST_local
+  mode = LST_TEMPORAL_MODE
+
+[lpse]
+  adjoint = F
+  solve_alpha = none
+  sigma_p = 1.00d0
+
+[npse]
+  omega0 = 1.0d0
+  beta0 = 1.0d0
+  m_global = 4
+  n_global = 4
+  ndis = 3
+  dis_+1 = 1, 0
+  dis_+1_alpha = 2.0, 0.004
+  dis_+2 = 1, 1
+  dis_+2_alpha = 2.0, 0.001
+  dis_+3 = 1, -1
+  dis_+3_alpha = 2.0, 0.001
+
+[bc]
+  y_0 = BC_WALL
+  y_inf = BC_FARFIELD
+
+[3dsog]
+  i_x0 = 1
+  i_x1 = 911
+  initial_alpha = 0.0
+  initial_beta = 0.15
+
+[neutral]
+  enabled = T
+  task = 33
+  outer_parameter = iloc
+  inner_parameter = alpha
+  outer_min = 269
+  outer_max = 271
+  outer_points = 3
+  inner_min = 2.8
+  inner_max = 4.5
+  scan_points = 31
+  growth_tol = 1e-7
+  parameter_tol = 1e-9
+  eigen_error_tol = 1e-7
+  max_eigen_jump = 0.5
+  continuation_step = 0.02
+  output_prefix = out/neutral
+
+ reading curvature file!
+ reading curvature file done!
+==========Compute LST local!========== 
+===  k=-1: end LST. 
+===  k= 0: output eigen function. 
+===  k= 1: Modify local Re. 
+===  k= 2: Modify alpha_r. 
+===  k= 3: Modify beta_r. 
+===  k= 4: Modify omega_r. 
+===  k= 5: Modify alpha_i. 
+===  k= 6: Modify beta_i. 
+===  k= 7: Modify omega_i. 
+===  k= 8: Modify iloc. 
+===  k=31: neutral curves across stations (safeguarded secant). 
+===  k=32: neutral curves across stations (bisection). 
+===  k=33: growth contours and neutral curves. 
+===  k=36: arclength neutral curve at a station. 
+===  k=37: neutral branches in a parameter plane. 
+===  neutral settings: [neutral] in the input config file. 
+===  delta_k=ki*pk.(eg. k, ki, pk=4, 20, 0.001 means delta_omega_r=20*0.001) 
+====================================== 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+  iloc= 270  x=         59.58232  drx=          0.00000  drz=          0.00000
+  Re=      79100.00000  Ma=          6.00000  Te=        226.50000
+  omega=         -0.03828+          0.01985i
+  alpha=          3.50000+          0.00000i
+  beta =         -3.20590+          0.00000i
+ wall bc is used.
+           0  (-3.93347905454318469E-002,1.80279226561459102E-002) The error is   3.4826642498652118E-015
+omega------------>  -0.0393348   0.0180279
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+ wall bc is used.
+           0  (-3.90672843639228926E-002,1.83299508775690463E-002) The error is   2.6673063880286798E-015
+omega------------>  -0.0390673   0.0183300
+ wall bc is used.
+           0  (-3.95139603854281346E-002,1.83311313735499484E-002) The error is   2.1881819358790688E-015
+omega------------>  -0.0395140   0.0183311
+ wall bc is used.
+           0  (-4.81848700275335981E-002,1.83053335768849426E-002) The error is   2.3783423377317779E-015
+omega------------>  -0.0481849   0.0183053
+ wall bc is used.
+           0  (-5.68542213064132315E-002,1.81922326781200384E-002) The error is   2.5288229157834117E-015
+omega------------>  -0.0568542   0.0181922
+ wall bc is used.
+           0  (-6.55247878445003734E-002,1.79989789345032826E-002) The error is   1.9910212683904148E-015
+omega------------>  -0.0655248   0.0179990
+ wall bc is used.
+           0  (-7.41986792449608606E-002,1.77319320219379191E-002) The error is   2.4909263575389440E-015
+omega------------>  -0.0741987   0.0177319
+ wall bc is used.
+           0  (-8.28775103196974505E-002,1.73967887811550224E-002) The error is   2.2613712549092045E-015
+omega------------>  -0.0828775   0.0173968
+ wall bc is used.
+           0  (-9.15625171859077713E-002,1.69986906310026394E-002) The error is   1.9147625665083572E-015
+omega------------>  -0.0915625   0.0169987
+ wall bc is used.
+           0       (-0.10025463690768641,1.65423109167566959E-002) The error is   3.5727961516667407E-015
+omega------------>  -0.1002546   0.0165423
+ wall bc is used.
+           0       (-0.10895456264162931,1.60319240172881704E-002) The error is   4.6438967784326298E-015
+omega------------>  -0.1089546   0.0160319
+ wall bc is used.
+           0       (-0.11766278280287044,1.54714587743522494E-002) The error is   3.2577612336825207E-015
+omega------------>  -0.1176628   0.0154715
+ wall bc is used.
+           0       (-0.12637961022261024,1.48645390559298696E-002) The error is   1.9558248964057890E-015
+omega------------>  -0.1263796   0.0148645
+ wall bc is used.
+           0       (-0.13510520537406967,1.42145142164234878E-002) The error is   1.7661704201321155E-015
+omega------------>  -0.1351052   0.0142145
+ wall bc is used.
+           0       (-0.14383959633543766,1.35244819901592008E-002) The error is   2.0341982806907973E-015
+omega------------>  -0.1438396   0.0135245
+ wall bc is used.
+           0       (-0.15258269712029357,1.27973060283377901E-002) The error is   2.0531818680852058E-015
+omega------------>  -0.1525827   0.0127973
+ wall bc is used.
+           0       (-0.16133432525592811,1.20356299151575200E-002) The error is   2.2625927747699088E-015
+omega------------>  -0.1613343   0.0120356
+ wall bc is used.
+           0       (-0.17009421896814184,1.12418891114173039E-002) The error is   2.1729746376971389E-015
+omega------------>  -0.1700942   0.0112419
+ wall bc is used.
+           0       (-0.17886205398976482,1.04183219029983284E-002) The error is   2.2785857246146357E-015
+omega------------>  -0.1788621   0.0104183
+ wall bc is used.
+           0       (-0.18763745981003677,9.56698009236149963E-003) The error is   2.0776716808912134E-015
+omega------------>  -0.1876375   0.0095670
+ wall bc is used.
+           0       (-0.19642003508980471,8.68973988299188288E-003) The error is   2.4876091672418302E-015
+omega------------>  -0.1964200   0.0086897
+ wall bc is used.
+           0       (-0.20520936195275816,7.78831316937813375E-003) The error is   2.0789546126804574E-015
+omega------------>  -0.2052094   0.0077883
+ wall bc is used.
+           0       (-0.21400501890016152,6.86425926835942772E-003) The error is   2.3992321580519030E-015
+omega------------>  -0.2140050   0.0068643
+ wall bc is used.
+           0       (-0.22280659216349680,5.91899700357610692E-003) The error is   2.1504770244967402E-015
+omega------------>  -0.2228066   0.0059190
+ wall bc is used.
+           0       (-0.23161368538849869,4.95381697814936250E-003) The error is   2.2622632788633571E-015
+           1       (-0.23041252492344316,1.81778903335219405E-003) The error is   5.8584908829835241E-012
+omega------------>  -0.2316137   0.0049538
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+ wall bc is used.
+           0       (-0.24042592762326581,3.96989383575917579E-003) The error is   2.6884235534626558E-015
+           1       (-0.24328968437014278,1.89182865602545523E-003) The error is   7.9414240357175443E-012
+omega------------>  -0.2404259   0.0039699
+ wall bc is used.
+           0       (-0.24924297965229195,2.96829830512569713E-003) The error is   2.1899578694517722E-015
+omega------------>  -0.2492430   0.0029683
+ wall bc is used.
+           0       (-0.25806453877496266,1.95000883793627574E-003) The error is   2.0893391746462376E-015
+omega------------>  -0.2580645   0.0019500
+ wall bc is used.
+           0       (-0.26689034216642077,9.15922680484314734E-004) The error is   4.5664090255241051E-015
+           1       (-0.26676725246741889,1.41223195238680929E-003) The error is   4.4654064017125045E-014
+           2      (-0.26823437902874692,-6.15848535518450984E-004) The error is   1.4109585529110971E-011
+           3      (-0.26707629273444361,-2.97125583535597527E-003) The error is   1.9255921836579615E-010
+omega------------>  -0.2668903   0.0009159
+ wall bc is used.
+           0      (-0.27572016898497792,-1.33133744348250694E-004) The error is   2.8261498451779012E-015
+           1       (-0.27974185928125805,1.50557992453556654E-003) The error is   7.0222264997949615E-010
+omega------------>  -0.2757202  -0.0001331
+ wall bc is used.
+           0      (-0.28455384140068601,-1.19639523240577458E-003) The error is   3.6857706425583680E-015
+omega------------>  -0.2845538  -0.0011964
+ wall bc is used.
+           0      (-0.29339122472200319,-2.27314902115154397E-003) The error is   1.8391015343050975E-015
+           1      (-0.29216023618142756,-2.03116738778441868E-003) The error is   5.9840819794627817E-014
+           2      (-0.29329240129874423,-5.42213395411839496E-004) The error is   9.5529827357786306E-013
+           3       (-0.29170581664732337,6.61074824697897856E-004) The error is   4.4945594386969521E-011
+omega------------>  -0.2933912  -0.0022731
+ wall bc is used.
+           0      (-0.30223222678875461,-3.36272686036882427E-003) The error is   2.0311358229399565E-015
+           1      (-0.30517681166436261,-2.17901673835886166E-003) The error is   3.2685566776493949E-012
+omega------------>  -0.3022322  -0.0033627
+ wall bc is used.
+           0      (-0.31107679678708317,-4.46449792557112625E-003) The error is   2.4366039800675287E-015
+omega------------>  -0.3110768  -0.0044645
+ wall bc is used.
+           0      (-0.31992492362666397,-5.57786254742181041E-003) The error is   1.9002864209288654E-015
+omega------------>  -0.3199249  -0.0055779
+ wall bc is used.
+           0      (-0.32877663400038759,-6.70224671712078921E-003) The error is   2.4412570546701097E-015
+omega------------>  -0.3287766  -0.0067022
+ wall bc is used.
+           0      (-0.33763199023106727,-7.83709731668568409E-003) The error is   2.5557504518327882E-015
+omega------------>  -0.3376320  -0.0078371
+ wall bc is used.
+           0      (-0.34649108799038281,-8.98187801766999264E-003) The error is   2.4946106592966741E-015
+omega------------>  -0.3464911  -0.0089819
+ wall bc is used.
+           0      (-0.35535405395994513,-1.01360657883555021E-002) The error is   2.1211508071009614E-015
+omega------------>  -0.3553541  -0.0101361
+ wall bc is used.
+           0      (-0.35489749536223619,-1.00764010450807295E-002) The error is   2.0389996829867203E-015
+omega------------>  -0.3548975  -0.0100764
+ wall bc is used.
+           0      (-0.34642770462514960,-8.97365529371508576E-003) The error is   2.0139994538822311E-015
+omega------------>  -0.3464277  -0.0089737
+ wall bc is used.
+           0      (-0.33796144549103052,-7.87950403684867587E-003) The error is   2.3095069783826940E-015
+omega------------>  -0.3379614  -0.0078795
+ wall bc is used.
+           0      (-0.32949860698327604,-6.79440357745032548E-003) The error is   2.6966014829946176E-015
+omega------------>  -0.3294986  -0.0067944
+ wall bc is used.
+           0      (-0.32904262122597783,-6.73619116409844912E-003) The error is   2.0104801313291208E-015
+omega------------>  -0.3290426  -0.0067362
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+ wall bc is used.
+           0      (-0.32058329602382635,-5.66113526378098694E-003) The error is   2.0028429701262101E-015
+omega------------>  -0.3205833  -0.0056611
+ wall bc is used.
+           0      (-0.31212724645617368,-4.59610485036087736E-003) The error is   1.7554640045854043E-015
+omega------------>  -0.3121272  -0.0045961
+ wall bc is used.
+           0      (-0.30367444611852068,-3.54159892221517138E-003) The error is   1.7108887179126702E-015
+           1      (-0.30730056514998333,-2.20117017821948834E-003) The error is   1.4625721255282546E-009
+omega------------>  -0.3036744  -0.0035416
+ wall bc is used.
+           0      (-0.30321899819995118,-3.48507813906482559E-003) The error is   2.0951724247866510E-015
+           1      (-0.30662988436057159,-2.19422853968329317E-003) The error is   1.1103787432352515E-011
+omega------------>  -0.3032190  -0.0034851
+ wall bc is used.
+           0      (-0.29476962814298252,-2.44222702329306403E-003) The error is   1.5894163582764032E-015
+           1      (-0.29418927425450242,-2.05569944309216867E-003) The error is   1.4657621901479262E-013
+           2      (-0.29532777683079769,-5.41855643965222884E-004) The error is   8.9251569178703317E-012
+           3       (-0.29374671579721195,6.86429688731035430E-004) The error is   2.3692358264363940E-011
+omega------------>  -0.2947696  -0.0024422
+ wall bc is used.
+           0      (-0.28632355301320045,-1.41099553891410471E-003) The error is   2.4627104225206158E-015
+omega------------>  -0.2863236  -0.0014110
+ wall bc is used.
+           0      (-0.27788084671724578,-3.91960596655769721E-004) The error is   4.1569513533806464E-015
+omega------------>  -0.2778808  -0.0003920
+ wall bc is used.
+           0      (-0.27742594819768990,-3.37400639193316022E-004) The error is   6.4702525609629910E-015
+omega------------>  -0.2774259  -0.0003374
+ wall bc is used.
+           0       (-0.26898691119805734,6.68116461301825472E-004) The error is   3.5853443693994710E-015
+           1       (-0.26984866712758565,1.43522019702895746E-003) The error is   3.6562622543327358E-013
+           2      (-0.27131241191762856,-6.15256893209393608E-004) The error is   2.7535264678195212E-009
+           3      (-0.27015040010497837,-2.99286655319685232E-003) The error is   3.5963857629749687E-010
+omega------------>  -0.2689869   0.0006681
+ wall bc is used.
+           0       (-0.26055150624135898,1.66013278580753052E-003) The error is   1.9731572856162471E-015
+           1      (-0.25892611092629958,-6.17643277712047988E-004) The error is   9.9559202375129094E-010
+           2       (-0.25744797590639085,1.33937535354834779E-003) The error is   1.2741809378535840E-012
+omega------------>  -0.2605515   0.0016601
+ wall bc is used.
+           0       (-0.25211991638233971,2.63794179989866638E-003) The error is   3.3159541492489601E-015
+omega------------>  -0.2521199   0.0026379
+ wall bc is used.
+           0      (-0.27742594819768990,-3.37400639193325617E-004) The error is   3.6876141917587386E-015
+omega------------>  -0.2774259  -0.0003374
+ wall bc is used.
+           0       (-0.27454638843192064,7.12895788609402719E-006) The error is   4.5345259950929758E-015
+           1       (-0.27801753611296964,1.49368203671177693E-003) The error is   3.1123348708580393E-010
+omega------------>  -0.2745464   0.0000071
+ wall bc is used.
+           0      (-0.27742594819768990,-3.37400639193333424E-004) The error is   6.0410857719309979E-015
+omega------------>  -0.2774259  -0.0003374
+ wall bc is used.
+           0      (-0.27621354927232572,-1.92163529515122799E-004) The error is   3.2812334988963205E-015
+omega------------>  -0.2762135  -0.0001922
+ wall bc is used.
+           0      (-0.27500122257945026,-4.71932299021653867E-005) The error is   7.6051033996919497E-015
+omega------------>  -0.2750012  -0.0000472
+ wall bc is used.
+           0      (-0.27537995171143825,-9.24539042259736826E-005) The error is   4.9194331469614488E-015
+           1       (-0.27924208205358669,1.50214688369337650E-003) The error is   1.7546515908101339E-009
+omega------------>  -0.2753800  -0.0000925
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+ wall bc is used.
+           0      (-0.27496316577823632,-4.26465889170745351E-005) The error is   4.4642016313078162E-015
+           1       (-0.27862981101969531,1.49792396103324709E-003) The error is   3.0881187008737106E-009
+omega------------>  -0.2749632  -0.0000426
+ wall bc is used.
+           0       (-0.27460607962739064,1.95214526715131937E-009) The error is   5.0930598609431416E-015
+           1       (-0.27810522764107443,1.49429074318048146E-003) The error is   3.6881309114287896E-010
+omega------------>  -0.2746061   0.0000000
+ wall bc is used.
+           0       (-0.25166563175328510,2.69022007402466802E-003) The error is   2.5358015604947235E-015
+omega------------>  -0.2516656   0.0026902
+ wall bc is used.
+           0       (-0.24323829964833124,3.65222881259667266E-003) The error is   3.0868430496350545E-015
+           1       (-0.24739763341844978,1.91413453582235833E-003) The error is   2.6580731603340751E-010
+omega------------>  -0.2432383   0.0036522
+ wall bc is used.
+           0       (-0.23481526794021140,4.59839223601204994E-003) The error is   5.7677737922422057E-015
+           1       (-0.23509190403023864,1.84543424427921748E-003) The error is   9.5048303380869717E-013
+omega------------>  -0.2348153   0.0045984
+ wall bc is used.
+           0       (-0.22639682225502736,5.52780455568560938E-003) The error is   2.0932183050375936E-015
+           1       (-0.22278516672755749,1.77083574013108067E-003) The error is   2.1061882993158695E-009
+omega------------>  -0.2263968   0.0055278
+ wall bc is used.
+           0       (-0.22594326978239468,5.57739812438786016E-003) The error is   2.2010436358568581E-015
+omega------------>  -0.2259433   0.0055774
+ wall bc is used.
+           0       (-0.21752999727523911,6.48808457479659994E-003) The error is   2.7645141130268680E-015
+omega------------>  -0.2175300   0.0064881
+ wall bc is used.
+           0       (-0.20912198046453265,7.37988847436184432E-003) The error is   2.6907955806455437E-015
+omega------------>  -0.2091220   0.0073799
+ wall bc is used.
+           0       (-0.20071957507848898,8.25162025717218577E-003) The error is   2.7968206764722600E-015
+omega------------>  -0.2007196   0.0082516
+ wall bc is used.
+           0       (-0.20026691728169393,8.29800502801745880E-003) The error is   2.0498590986937689E-015
+omega------------>  -0.2002669   0.0082980
+ wall bc is used.
+           0       (-0.19187082188976093,9.14717126694220353E-003) The error is   1.9923119616089976E-015
+omega------------>  -0.1918708   0.0091472
+ wall bc is used.
+           0       (-0.18348109134085119,9.97345818988241116E-003) The error is   1.9578735133948848E-015
+omega------------>  -0.1834811   0.0099735
+ wall bc is used.
+           0       (-0.17509808480598812,1.07753019927397005E-002) The error is   1.8051268108597184E-015
+omega------------>  -0.1750981   0.0107753
+ wall bc is used.
+           0       (-0.17464650369044254,1.08177885088501027E-002) The error is   2.2684410979292307E-015
+omega------------>  -0.1746465   0.0108178
+ wall bc is used.
+           0       (-0.16627095084269711,1.15920233194344614E-002) The error is   2.4138410797129177E-015
+omega------------>  -0.1662710   0.0115920
+ wall bc is used.
+           0       (-0.15790278616639042,1.23381494466654491E-002) The error is   2.5086582107882629E-015
+omega------------>  -0.1579028   0.0123381
+ wall bc is used.
+           0       (-0.14954227199153008,1.30541433526139266E-002) The error is   2.4464675645717264E-015
+omega------------>  -0.1495423   0.0130541
+ wall bc is used.
+           0       (-0.14909192690404729,1.30918323356095431E-002) The error is   2.3738857983615824E-015
+omega------------>  -0.1490919   0.0130918
+ wall bc is used.
+           0       (-0.14073969582574999,1.37736948774648624E-002) The error is   2.0521650416152788E-015
+omega------------>  -0.1407397   0.0137737
+ wall bc is used.
+           0       (-0.13239545860176447,1.44207324203828764E-002) The error is   2.3078911761558685E-015
+omega------------>  -0.1323955   0.0144207
+ wall bc is used.
+           0       (-0.12405925905814162,1.50303793334354268E-002) The error is   2.5280699838337749E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>  -0.1240593   0.0150304
+ wall bc is used.
+           0       (-0.12361023046350796,1.50621199238977817E-002) The error is   2.9631193644523487E-015
+omega------------>  -0.1236102   0.0150621
+ wall bc is used.
+           0       (-0.11528243905182083,1.56293645404665393E-002) The error is   2.4649051367172474E-015
+omega------------>  -0.1152824   0.0156294
+ wall bc is used.
+           0       (-0.10696244599512622,1.61533071852506954E-002) The error is   1.9797297913124239E-015
+omega------------>  -0.1069624   0.0161533
+ wall bc is used.
+           0  (-9.86499420783771008E-002,1.66307213534477860E-002) The error is   2.2233869506122584E-015
+omega------------>  -0.0986499   0.0166307
+ wall bc is used.
+           0  (-9.82021673077809881E-002,1.66550624116832864E-002) The error is   1.7761220506563248E-015
+omega------------>  -0.0982022   0.0166551
+ wall bc is used.
+           0  (-8.98970543339339540E-002,1.70796603587837180E-002) The error is   2.0332708239111012E-015
+omega------------>  -0.0898971   0.0170797
+ wall bc is used.
+           0  (-8.15982934748338828E-002,1.74502460464778762E-002) The error is   2.1020642277602434E-015
+omega------------>  -0.0815983   0.0174502
+ wall bc is used.
+           0  (-7.33050270585364483E-002,1.77626768179603885E-002) The error is   2.1525221864988264E-015
+omega------------>  -0.0733050   0.0177627
+ wall bc is used.
+           0  (-7.28582202577902210E-002,1.77777766121973643E-002) The error is   2.4248209233024708E-015
+omega------------>  -0.0728582   0.0177778
+ wall bc is used.
+           0  (-6.45695316197062580E-002,1.80239931988467363E-002) The error is   2.5343551996109493E-015
+omega------------>  -0.0645695   0.0180240
+ wall bc is used.
+           0  (-5.62836950435620237E-002,1.82022130660112746E-002) The error is   2.1672508862955109E-015
+omega------------>  -0.0562837   0.0182022
+ wall bc is used.
+           0  (-4.79988267167957700E-002,1.83068309479190033E-002) The error is   2.4159308751841458E-015
+omega------------>  -0.0479988   0.0183068
+ wall bc is used.
+           0  (-4.75523197956789698E-002,1.83102603074312871E-002) The error is   2.2098161989696210E-015
+omega------------>  -0.0475523   0.0183103
+ wall bc is used.
+           0  (-3.92658087596364710E-002,1.83305068246697456E-002) The error is   2.1964858235801457E-015
+omega------------>  -0.0392658   0.0183305
+ wall bc is used.
+           0  (-3.09744076229607652E-002,1.82634191888732984E-002) The error is   2.1744166731706096E-015
+omega------------>  -0.0309744   0.0182634
+ wall bc is used.
+           0  (-2.26737946013444817E-002,1.81009826844575304E-002) The error is   2.4549571795647334E-015
+omega------------>  -0.0226738   0.0181010
+ wall bc is used.
+           0  (-2.22260901598692259E-002,1.80893500352690972E-002) The error is   2.2033131770359077E-015
+omega------------>  -0.0222261   0.0180894
+ wall bc is used.
+           0  (-1.39094639410470289E-002,1.78166146878239937E-002) The error is   3.3199150340436921E-015
+omega------------>  -0.0139095   0.0178166
+ wall bc is used.
+           0  (-5.56950130924034007E-003,1.74287453265361374E-002) The error is   2.8842156899136144E-015
+omega------------>  -0.0055695   0.0174287
+ wall bc is used.
+           0   (2.80468199199518766E-003,1.69144152846763887E-002) The error is   6.9211415547248856E-015
+omega------------>   0.0028047   0.0169144
+ wall bc is used.
+           0   (3.25722537156770400E-003,1.68828709456029236E-002) The error is   3.1105814449977224E-015
+omega------------>   0.0032572   0.0168829
+ wall bc is used.
+           0   (1.16837918486851280E-002,1.62220324132756472E-002) The error is   5.0214896418474787E-015
+omega------------>   0.0116838   0.0162220
+ wall bc is used.
+           0   (2.01816399062515230E-002,1.54094035664766611E-002) The error is   4.8567567558582707E-015
+omega------------>   0.0201816   0.0154094
+ wall bc is used.
+           0   (2.87801164175355319E-002,1.44340042562968590E-002) The error is   2.8097344757407404E-015
+omega------------>   0.0287801   0.0144340
+ wall bc is used.
+           0   (2.92470924088609890E-002,1.43766612975276837E-002) The error is   2.2279216916785728E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>   0.0292471   0.0143767
+ wall bc is used.
+           0   (3.79956955808967434E-002,1.32235464042271388E-002) The error is   2.4601022549819701E-015
+omega------------>   0.0379957   0.0132235
+ wall bc is used.
+           0   (4.69427904970477622E-002,1.19095015485845071E-002) The error is   2.4024661107060830E-015
+omega------------>   0.0469428   0.0119095
+ wall bc is used.
+           0   (5.61542020863806529E-002,1.04697387965442274E-002) The error is   2.3258624470838753E-015
+omega------------>   0.0561542   0.0104697
+ wall bc is used.
+           0   (5.66594014740119667E-002,1.03898971151959677E-002) The error is   2.7431313241314853E-015
+omega------------>   0.0566594   0.0103899
+ wall bc is used.
+           0   (6.62116190083430617E-002,8.90571546721631579E-003) The error is   3.1351238044827100E-015
+omega------------>   0.0662116   0.0089057
+ wall bc is used.
+           0   (7.60911063177932695E-002,7.50759449109396782E-003) The error is   2.5774369865616457E-015
+omega------------>   0.0760911   0.0075076
+ wall bc is used.
+           0   (8.62134272199824858E-002,6.30480440454106190E-003) The error is   2.9300287694198593E-015
+omega------------>   0.0862134   0.0063048
+ wall bc is used.
+           0   (8.67633211603340976E-002,6.24644124923773476E-003) The error is   2.2643130452587477E-015
+omega------------>   0.0867633   0.0062464
+ wall bc is used.
+           0   (9.70060894768231818E-002,5.27411883715299748E-003) The error is   2.7337512842806938E-015
+omega------------>   0.0970061   0.0052741
+ wall bc is used.
+           0        (0.10727579360435389,4.47037386980196540E-003) The error is   3.0918728088475383E-015
+omega------------>   0.1072758   0.0044704
+ wall bc is used.
+           0        (0.11754459598465772,3.77598423221959861E-003) The error is   3.2985921662867393E-015
+omega------------>   0.1175446   0.0037760
+ wall bc is used.
+           0        (0.11809795320392714,3.74079322429383921E-003) The error is   3.7561504284367152E-015
+omega------------>   0.1180980   0.0037408
+ wall bc is used.
+           0        (0.12836787141468392,3.11902235495594652E-003) The error is   2.7328100324728355E-015
+omega------------>   0.1283679   0.0031190
+ wall bc is used.
+           0        (0.13864799255562488,2.54532753903702856E-003) The error is   2.6512349169510055E-015
+omega------------>   0.1386480   0.0025453
+ wall bc is used.
+           0        (0.14894531820966539,2.01024370439206517E-003) The error is   2.4499884483338592E-015
+           1       (0.14806606497803068,-1.63706562718326934E-003) The error is   7.8102873406222566E-009
+omega------------>   0.1489453   0.0020102
+ wall bc is used.
+           0        (0.14950083971333084,1.98239743867064874E-003) The error is   2.9263142997867173E-015
+           1       (0.14869078667699018,-1.63703584824438251E-003) The error is   1.2100813675719750E-008
+omega------------>   0.1495008   0.0019824
+ wall bc is used.
+           0        (0.15982043257846079,1.48274288398915271E-003) The error is   2.4147348320336657E-015
+           1       (0.16028279792583319,-1.63651985673625498E-003) The error is   2.4559134683643848E-009
+omega------------>   0.1598204   0.0014827
+ wall bc is used.
+           0        (0.17016285858376728,1.01341524623724862E-003) The error is   2.3992954824768613E-015
+           1       (0.17187473031541051,-1.63607655021241836E-003) The error is   4.1219517357580087E-009
+omega------------>   0.1701629   0.0010134
+ wall bc is used.
+           0        (0.18052868550281270,5.71804516506872729E-004) The error is   2.1189737124284372E-015
+omega------------>   0.1805287   0.0005718
+ wall bc is used.
+           0        (0.18108799083799934,5.48745959868334561E-004) The error is   2.6073164888128201E-015
+omega------------>   0.1810880   0.0005487
+ wall bc is used.
+           0        (0.19147860753482412,1.33832646497816018E-004) The error is   2.4960061217456127E-015
+omega------------>   0.1914786   0.0001338
+ wall bc is used.
+           0       (0.20189271464268452,-2.57891695735174931E-004) The error is   3.1204597231458233E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+           1       (0.20035705530771675,-2.47944677759040022E-003) The error is   7.9860259860975301E-010
+omega------------>   0.2018927  -0.0002579
+ wall bc is used.
+           0       (0.21233028386957392,-6.28279370080961786E-004) The error is   2.3332454146408066E-015
+           1       (0.21191400939477992,-2.48221134096906181E-003) The error is   2.4385200753702134E-012
+omega------------>   0.2123303  -0.0006283
+ wall bc is used.
+           0        (0.18108799083799937,5.48745959868334235E-004) The error is   2.4720771574017879E-015
+omega------------>   0.1810880   0.0005487
+ wall bc is used.
+           0        (0.18836517635639410,2.55536097733338079E-004) The error is   2.1826996525338613E-015
+omega------------>   0.1883652   0.0002555
+ wall bc is used.
+           0       (0.19565389921150655,-2.60025445319877814E-005) The error is   2.7173105967149539E-015
+omega------------>   0.1956539  -0.0000260
+ wall bc is used.
+           0        (0.18108799083799934,5.48745959868336946E-004) The error is   2.8092657566501905E-015
+omega------------>   0.1810880   0.0005487
+ wall bc is used.
+           0        (0.18808507107090308,2.66593102121495098E-004) The error is   2.5640417943523588E-015
+omega------------>   0.1880851   0.0002666
+ wall bc is used.
+           0        (0.18864529870948765,2.44496351451136719E-004) The error is   2.4556443259638648E-015
+omega------------>   0.1886453   0.0002445
+ wall bc is used.
+           0        (0.19186793109599373,1.18766972030652008E-004) The error is   2.2696077025566495E-015
+omega------------>   0.1918679   0.0001188
+ wall bc is used.
+           0       (0.19509281886730567,-4.74444071761014245E-006) The error is   3.1301722599131931E-015
+omega------------>   0.1950928  -0.0000047
+ wall bc is used.
+           0       (0.19497365974067130,-2.21026270533615917E-007) The error is   2.1982705929621774E-015
+omega------------>   0.1949737  -0.0000002
+ wall bc is used.
+           0        (0.19242861935878383,9.71290289347246229E-005) The error is   2.7390435271911465E-015
+           1       (0.18985539813140945,-2.47699218342534860E-003) The error is   9.5926953744941778E-009
+omega------------>   0.1924286   0.0000971
+ wall bc is used.
+           0        (0.19342053402670661,5.90190682126471992E-005) The error is   3.0867143592986684E-015
+omega------------>   0.1934205   0.0000590
+ wall bc is used.
+           0        (0.19398141112094044,3.75652660539810621E-005) The error is   2.7939856279965436E-015
+           1       (0.19157990237309525,-2.47739101076440912E-003) The error is   5.7869063726264775E-009
+omega------------>   0.1939814   0.0000376
+ wall bc is used.
+           0        (0.19419703154617352,2.93359428558931962E-005) The error is   2.1518681637809519E-015
+omega------------>   0.1941970   0.0000293
+ wall bc is used.
+           0        (0.19458532931027547,1.45417381255828317E-005) The error is   2.9130909907660171E-015
+omega------------>   0.1945853   0.0000145
+ wall bc is used.
+           0        (0.19477949044233769,7.15643202001106426E-006) The error is   2.2619004547064462E-015
+omega------------>   0.1947795   0.0000072
+ wall bc is used.
+           0        (0.19487657407074602,3.46672267790293223E-006) The error is   2.2507454687455058E-015
+omega------------>   0.1948766   0.0000035
+ wall bc is used.
+           0        (0.19492511665051460,1.62260324422398839E-006) The error is   3.8374701693681149E-015
+omega------------>   0.1949251   0.0000016
+ wall bc is used.
+           0       (0.19496784005307224,-2.58223475050000829E-011) The error is   2.7718567906890197E-015
+omega------------>   0.1949678  -0.0000000
+ wall bc is used.
+           0       (0.21289345404376664,-6.47667565021448240E-004) The error is   3.2758271603730822E-015
+           1       (0.21253683695644923,-2.48236117175507347E-003) The error is   3.4281747272428112E-012
+omega------------>   0.2128935  -0.0006477
+ wall bc is used.
+           0       (0.22335572369706894,-9.97355239111948890E-004) The error is   5.5193233194001739E-015
+           1       (0.22409373897185317,-2.48511791038295328E-003) The error is   4.5916903694878166E-013
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>   0.2233557  -0.0009974
+ wall bc is used.
+           0       (0.23384132486825554,-1.32868548998154277E-003) The error is   4.1586536330380737E-015
+           1       (0.23565071038094132,-2.48791093303926767E-003) The error is   2.7085679285448711E-011
+omega------------>   0.2338413  -0.0013287
+ wall bc is used.
+           0       (0.24435032785727268,-1.64258130800341092E-003) The error is   1.0709854262318486E-014
+omega------------>   0.2443503  -0.0016426
+ wall bc is used.
+           0       (0.24491734622070824,-1.65901895176662033E-003) The error is   9.3973477359485957E-015
+omega------------>   0.2449173  -0.0016590
+ wall bc is used.
+           0       (0.25545099105916164,-1.95536832392141256E-003) The error is   7.3160825837188440E-015
+           1       (0.25347338975923883,-3.42164510015468106E-003) The error is   4.1411698429102254E-010
+omega------------>   0.2554510  -0.0019554
+ wall bc is used.
+           0       (0.26600789718860485,-2.23556322842843186E-003) The error is   1.6280794211697577E-014
+           1       (0.26500140981981790,-3.42694892438420717E-003) The error is   7.3226891714325260E-013
+omega------------>   0.2660079  -0.0022356
+ wall bc is used.
+           0       (0.27658820715046950,-2.49998882047636163E-003) The error is   5.8671781873328537E-015
+           1       (0.27652896235773311,-3.43244803335881945E-003) The error is   1.7536650371970647E-013
+omega------------>   0.2765882  -0.0025000
+ wall bc is used.
+           0       (0.27715907684132779,-2.51382318402486229E-003) The error is   5.0985496895602732E-015
+           1       (0.27715017819609050,-3.43272451354959852E-003) The error is   8.7951244965481135E-015
+omega------------>   0.2771591  -0.0025138
+ wall bc is used.
+           0       (0.28776307522777417,-2.76320378604982949E-003) The error is   9.9540030736883664E-015
+           1       (0.28867776167672859,-3.43718863226331059E-003) The error is   4.7985258934071698E-013
+omega------------>   0.2877631  -0.0027632
+ wall bc is used.
+           0       (0.29838830832346946,-2.99713409741201274E-003) The error is   6.2478338902277241E-015
+           1       (0.30020606264272703,-3.44211912111942568E-003) The error is   1.2469949081206314E-011
+omega------------>   0.2983883  -0.0029971
+ wall bc is used.
+           0       (0.30903497714217559,-3.21605690465892602E-003) The error is   4.6530638513037938E-015
+omega------------>   0.3090350  -0.0032161
+ wall bc is used.
+           0       (0.30960934413568064,-3.22743963825976960E-003) The error is   6.7055736617747824E-015
+omega------------>   0.3096093  -0.0032274
+ wall bc is used.
+           0       (0.32027778765517517,-3.43107204607503557E-003) The error is   5.9519078275090420E-015
+           1       (0.31874723686146378,-4.46102071244346404E-003) The error is   8.3884897515063583E-010
+omega------------>   0.3202778  -0.0034311
+ wall bc is used.
+           0       (0.33096609125642967,-3.62054485770950917E-003) The error is   4.8355134752023599E-015
+           1       (0.33025136556723816,-4.46815233054708924E-003) The error is   3.5482512494256813E-013
+omega------------>   0.3309661  -0.0036205
+ wall bc is used.
+           0       (0.34167359603968073,-3.79618983938540856E-003) The error is   7.4043150924105440E-015
+           1       (0.34175541599455056,-4.47539822712381737E-003) The error is   3.3962526622302859E-013
+omega------------>   0.3416736  -0.0037962
+ wall bc is used.
+           0       (0.34225118433820112,-3.80527713225337636E-003) The error is   7.5423310531229554E-015
+           1       (0.34237538621000341,-4.47578655509956336E-003) The error is   1.7599351969309047E-014
+omega------------>   0.3422512  -0.0038053
+ wall bc is used.
+           0       (0.35297810583798184,-3.96715570114004705E-003) The error is   9.0467865126133284E-015
+           1       (0.35387936383553825,-4.48285248131660968E-003) The error is   8.2688199503857205E-013
+omega------------>   0.3529781  -0.0039672
+ wall bc is used.
+           0       (0.36372242186004422,-4.11632456990643648E-003) The error is   7.7777389702268821E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+           1       (0.36538346995287796,-4.48996558847918146E-003) The error is   1.2920931355453268E-010
+omega------------>   0.3637224  -0.0041163
+ wall bc is used.
+           0       (0.37448316849967966,-4.25334500890468467E-003) The error is   8.0941006776237713E-015
+omega------------>   0.3744832  -0.0042533
+ wall bc is used.
+           0       (0.37506352501990475,-4.26039221144716793E-003) The error is   4.9078046783790996E-015
+           1       (0.37301673866490132,-5.54294946515893321E-003) The error is   2.3292814057547165E-010
+omega------------>   0.3750635  -0.0042604
+ wall bc is used.
+           0       (0.38583952712864783,-4.38464194141324586E-003) The error is   8.2892484426085230E-015
+           1       (0.38450810333739538,-5.55132311224243620E-003) The error is   4.1358863971084949E-011
+omega------------>   0.3858395  -0.0043846
+ wall bc is used.
+           0       (0.39662724697037927,-4.49283887915324226E-003) The error is   1.3077525200852293E-014
+           1       (0.39600496390109402,-5.56515389767295483E-003) The error is   4.5820892798245242E-013
+omega------------>   0.3966272  -0.0044928
+ wall bc is used.
+           0       (0.40743716482478476,-4.57434153159134039E-003) The error is   6.2671596629979404E-015
+           1       (0.40749642696724248,-5.59602972341585649E-003) The error is   2.9284986694299117E-013
+omega------------>   0.4074372  -0.0045743
+ wall bc is used.
+           0       (0.40802101213467373,-4.57822373615080717E-003) The error is   8.5804950160039878E-015
+           1       (0.40811491821250728,-5.59794678882462315E-003) The error is   6.8294519748646826E-014
+omega------------>   0.4080210  -0.0045782
+ wall bc is used.
+           0       (0.41887326291508375,-4.65748772583764962E-003) The error is   5.9907041460788274E-015
+           1       (0.41958122501133083,-5.62174736064279326E-003) The error is   3.5759120803288652E-013
+omega------------>   0.4188733  -0.0046575
+ wall bc is used.
+           0       (0.42973759106882942,-4.74632081379941072E-003) The error is   4.5256530023758399E-015
+           1       (0.43105138466498810,-5.62743003973933346E-003) The error is   5.2836802573880130E-012
+omega------------>   0.4297376  -0.0047463
+ wall bc is used.
+           0       (0.44060988297366355,-4.82827105220456649E-003) The error is   4.5811726851939941E-015
+           1       (0.44253016678519530,-5.63077275168107853E-003) The error is   5.5783226044230212E-010
+omega------------>   0.4406099  -0.0048283
+ wall bc is used.
+           0       (0.44119620623521061,-4.83235829330555186E-003) The error is   5.2369058691245088E-015
+omega------------>   0.4411962  -0.0048324
+ wall bc is used.
+           0       (0.45208682299007380,-4.90184707947980552E-003) The error is   2.8722505993519050E-015
+omega------------>   0.4520868  -0.0049018
+ wall bc is used.
+           0       (0.46300772108643984,-4.96371914252841800E-003) The error is   2.9363507840555701E-015
+omega------------>   0.4630077  -0.0049637
+ wall bc is used.
+           0       (0.47397023316722159,-5.03600013046995396E-003) The error is   3.6419731573235177E-015
+omega------------>   0.4739702  -0.0050360
+ wall bc is used.
+           0       (0.47456225595093299,-5.04073085759306708E-003) The error is   4.1599448758264851E-015
+omega------------>   0.4745623  -0.0050407
+ wall bc is used.
+           0       (0.48556756442917565,-5.15490967155821014E-003) The error is   3.6521902601290094E-015
+omega------------>   0.4855676  -0.0051549
+ wall bc is used.
+           0       (0.49660448835875926,-5.34188913344904592E-003) The error is   3.9043969929129855E-015
+omega------------>   0.4966045  -0.0053419
+ wall bc is used.
+           0       (0.50767967622741550,-5.65205457274373622E-003) The error is   4.0351489392851069E-015
+omega------------>   0.5076797  -0.0056521
+ wall bc is used.
+           0  (-4.82824531473559915E-002,1.79893724112357954E-002) The error is   1.8174333152009823E-015
+omega------------>  -0.0482825   0.0179894
+ wall bc is used.
+           0  (-4.87297879750021451E-002,1.79849478716649532E-002) The error is   1.9447285933183858E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>  -0.0487298   0.0179849
+ wall bc is used.
+           0  (-5.74083031352637108E-002,1.78548489802156443E-002) The error is   2.0254191557651902E-015
+omega------------>  -0.0574083   0.0178548
+ wall bc is used.
+           0  (-6.60889369216126343E-002,1.76453338184840262E-002) The error is   2.2807648956149545E-015
+omega------------>  -0.0660889   0.0176453
+ wall bc is used.
+           0  (-7.47737082345280996E-002,1.73627897870454843E-002) The error is   2.4774277839430760E-015
+omega------------>  -0.0747737   0.0173628
+ wall bc is used.
+           0  (-8.34641477570558232E-002,1.70129366104377795E-002) The error is   2.2569839586053238E-015
+omega------------>  -0.0834641   0.0170129
+ wall bc is used.
+           0  (-9.21614116731657718E-002,1.66009346643882123E-002) The error is   2.2168463757767921E-015
+omega------------>  -0.0921614   0.0166009
+ wall bc is used.
+           0       (-0.10086635950635386,1.61314723463122298E-002) The error is   1.8780391802167831E-015
+omega------------>  -0.1008664   0.0161315
+ wall bc is used.
+           0       (-0.10957960812633373,1.56088346631250256E-002) The error is   2.8703363691797293E-015
+omega------------>  -0.1095796   0.0156088
+ wall bc is used.
+           0       (-0.11830157043254780,1.50369559018774124E-002) The error is   2.1357294985054026E-015
+omega------------>  -0.1183016   0.0150370
+ wall bc is used.
+           0       (-0.12703248460741673,1.44194594364347745E-002) The error is   2.7539484705942170E-015
+omega------------>  -0.1270325   0.0144195
+ wall bc is used.
+           0       (-0.13577243789274912,1.37596876099504734E-002) The error is   2.3306746637795663E-015
+omega------------>  -0.1357724   0.0137597
+ wall bc is used.
+           0       (-0.14452138741131351,1.30607243409059104E-002) The error is   2.6507827524688021E-015
+omega------------>  -0.1445214   0.0130607
+ wall bc is used.
+           0       (-0.15327917951320202,1.23254127157518753E-002) The error is   2.2535380471939542E-015
+omega------------>  -0.1532792   0.0123254
+ wall bc is used.
+           0       (-0.16204556838843648,1.15563694037500511E-002) The error is   2.0093349586988210E-015
+omega------------>  -0.1620456   0.0115564
+ wall bc is used.
+           0       (-0.17082023418804473,1.07559973045623196E-002) The error is   2.2472466243287210E-015
+omega------------>  -0.1708202   0.0107560
+ wall bc is used.
+           0       (-0.17960280058497874,9.92649743899814974E-003) The error is   2.0515625808954085E-015
+omega------------>  -0.1796028   0.0099265
+ wall bc is used.
+           0       (-0.18839285153792407,9.06988074067995552E-003) The error is   2.1785677444359386E-015
+omega------------>  -0.1883929   0.0090699
+ wall bc is used.
+           0       (-0.19718994696075834,8.18798011422076227E-003) The error is   2.0153230472844095E-015
+omega------------>  -0.1971899   0.0081880
+ wall bc is used.
+           0       (-0.20599363701262782,7.28246289450933029E-003) The error is   1.8072475626024994E-015
+omega------------>  -0.2059936   0.0072825
+ wall bc is used.
+           0       (-0.21480347478103928,6.35484367796135003E-003) The error is   2.3799880722402658E-015
+omega------------>  -0.2148035   0.0063548
+ wall bc is used.
+           0       (-0.22361902721187191,5.40649738694777993E-003) The error is   2.1750211727916527E-015
+omega------------>  -0.2236190   0.0054065
+ wall bc is used.
+           0       (-0.23243988422627876,4.43867237115659358E-003) The error is   2.1342011107605113E-015
+           1       (-0.22845545999570116,1.71190690809717517E-003) The error is   2.2148477637209645E-009
+omega------------>  -0.2324399   0.0044387
+ wall bc is used.
+           0       (-0.24126566604467997,3.45250332986764925E-003) The error is   2.9524823380031822E-015
+           1       (-0.24133560032052484,1.79316950437572570E-003) The error is   1.8687337012523792E-013
+omega------------>  -0.2412657   0.0034525
+ wall bc is used.
+           0       (-0.25009602880507764,2.44902384658482334E-003) The error is   2.6336735589729069E-015
+           1       (-0.25421453706634900,1.86766057064778027E-003) The error is   3.0695655862291263E-011
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>  -0.2500960   0.0024490
+ wall bc is used.
+           0       (-0.25893066861289848,1.42917835543348074E-003) The error is   2.7407827766521487E-015
+omega------------>  -0.2589307   0.0014292
+ wall bc is used.
+           0       (-0.26776932419259275,3.93833394779228955E-004) The error is   2.7726037417673611E-015
+           1      (-0.26639783041591403,-6.06574520764117074E-004) The error is   1.1380576349902922E-012
+           2       (-0.26488962606192296,1.25401545150211091E-003) The error is   4.7788479925935638E-012
+           3      (-0.26523577120357700,-2.78907572515101629E-003) The error is   5.3555870723654002E-010
+omega------------>  -0.2677693   0.0003938
+ wall bc is used.
+           0      (-0.27661177832879641,-6.56211955900257355E-004) The error is   3.0856196371561402E-015
+           1       (-0.27786840369732935,1.35990371600315887E-003) The error is   4.0947340816443690E-013
+           2      (-0.27817969848353047,-2.88923874366220183E-003) The error is   3.1077303311976086E-012
+           3      (-0.27936044010074412,-6.04108763213930650E-004) The error is   1.8094343355703836E-009
+omega------------>  -0.2766118  -0.0006562
+ wall bc is used.
+           0      (-0.28545785828810055,-1.72021652034548469E-003) The error is   3.6376289649863962E-015
+omega------------>  -0.2854579  -0.0017202
+ wall bc is used.
+           0      (-0.29430743540879228,-2.79748838008709840E-003) The error is   2.1430470871674775E-015
+omega------------>  -0.2943074  -0.0027975
+ wall bc is used.
+           0      (-0.30316042403022542,-3.88737713915399477E-003) The error is   2.3222455061873925E-015
+           1      (-0.30347903672530691,-1.91911864171994632E-003) The error is   9.3133167392928077E-014
+omega------------>  -0.3031604  -0.0038874
+ wall bc is used.
+           0      (-0.31201677991928078,-4.98926707394766519E-003) The error is   1.9243866272158972E-015
+omega------------>  -0.3120168  -0.0049893
+ wall bc is used.
+           0      (-0.32087649832942694,-6.10257112734308420E-003) The error is   1.8249211610100207E-015
+omega------------>  -0.3208765  -0.0061026
+ wall bc is used.
+           0      (-0.32973961180960781,-7.22672569268136174E-003) The error is   2.0899410578997040E-015
+omega------------>  -0.3297396  -0.0072267
+ wall bc is used.
+           0      (-0.33860618785932495,-8.36118612651622593E-003) The error is   2.3895734456525687E-015
+omega------------>  -0.3386062  -0.0083612
+ wall bc is used.
+           0      (-0.34747632650983534,-9.50542292533642849E-003) The error is   2.4078739639855839E-015
+omega------------>  -0.3474763  -0.0095054
+ wall bc is used.
+           0      (-0.35635015789387386,-1.06589185003857778E-002) The error is   2.4176916856578439E-015
+omega------------>  -0.3563502  -0.0106589
+ wall bc is used.
+           0      (-0.35589265124121566,-1.05992417414483980E-002) The error is   2.0374572981122293E-015
+omega------------>  -0.3558927  -0.0105992
+ wall bc is used.
+           0      (-0.34740518833912720,-9.49621055264872858E-003) The error is   2.3839322005645073E-015
+omega------------>  -0.3474052  -0.0094962
+ wall bc is used.
+           0      (-0.33892110245381363,-8.40165334993912306E-003) The error is   2.4528488078062025E-015
+omega------------>  -0.3389211  -0.0084017
+ wall bc is used.
+           0      (-0.33044027934718850,-7.31602288157267959E-003) The error is   1.9703750492278503E-015
+omega------------>  -0.3304403  -0.0073160
+ wall bc is used.
+           0      (-0.32998331980384843,-7.25777829671000064E-003) The error is   2.0125148819646490E-015
+omega------------>  -0.3299833  -0.0072578
+ wall bc is used.
+           0      (-0.32150583938050320,-6.18205656930774505E-003) The error is   1.8671426060173479E-015
+omega------------>  -0.3215058  -0.0061821
+ wall bc is used.
+           0      (-0.31303146802884729,-5.11622527390185895E-003) The error is   2.3712860966699699E-015
+omega------------>  -0.3130315  -0.0051162
+ wall bc is used.
+           0      (-0.30456017432073845,-4.06077583949843862E-003) The error is   2.7310196329526579E-015
+           1      (-0.30553506198395297,-1.94561234758127951E-003) The error is   5.2680275371064086E-013
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>  -0.3045602  -0.0040608
+ wall bc is used.
+           0      (-0.30410372477781139,-4.00419998611166970E-003) The error is   2.0728381472752688E-015
+           1      (-0.30486457213500290,-1.93704829897243733E-003) The error is   4.6558454837913911E-014
+omega------------>  -0.3041037  -0.0040042
+ wall bc is used.
+           0      (-0.29563567473549596,-2.96024494891291255E-003) The error is   2.0699542255325853E-015
+omega------------>  -0.2956357  -0.0029602
+ wall bc is used.
+           0      (-0.28717073694929152,-1.92774571405307711E-003) The error is   3.9742041369991532E-015
+omega------------>  -0.2871707  -0.0019277
+ wall bc is used.
+           0      (-0.27870898002135586,-9.07265708707632058E-004) The error is   4.2189420631339964E-015
+           1       (-0.28094546995237019,1.38348781566381284E-003) The error is   1.2412115163408695E-011
+           2      (-0.28124923911420324,-2.91146997334924742E-003) The error is   1.3792557380316633E-011
+omega------------>  -0.2787090  -0.0009073
+ wall bc is used.
+           0      (-0.27825304938548812,-8.52622542327944959E-004) The error is   6.1310041370650032E-015
+           1      (-0.28058193717879615,-2.90668398110944344E-003) The error is   1.0102850865972086E-012
+           2       (-0.28027655344017960,1.37840787452976794E-003) The error is   1.2298599556739393E-012
+omega------------>  -0.2782530  -0.0008526
+ wall bc is used.
+           0       (-0.26979475841004308,1.54543621391927538E-004) The error is   4.1473032515880499E-015
+           1      (-0.26936750043743002,-6.06008208842174893E-004) The error is   4.8352082427323420E-013
+           2       (-0.26786324921614885,1.27923529230003106E-003) The error is   5.5974190528083491E-013
+           3      (-0.26820092060295481,-2.81298114733769932E-003) The error is   1.0852356755801449E-011
+omega------------>  -0.2697948   0.0001545
+ wall bc is used.
+           0       (-0.26133990241813132,1.14842138088271897E-003) The error is   2.0710994404099799E-015
+omega------------>  -0.2613399   0.0011484
+ wall bc is used.
+           0       (-0.25288866171801966,2.12832507941523039E-003) The error is   2.3409620045119421E-015
+omega------------>  -0.2528887   0.0021283
+ wall bc is used.
+           0      (-0.27825304938548812,-8.52622542327949838E-004) The error is   5.3812833184759649E-015
+           1      (-0.28058193717885466,-2.90668398116376110E-003) The error is   9.2247070941470264E-012
+           2       (-0.28027655344003266,1.37840787458457957E-003) The error is   1.0043790483428129E-011
+omega------------>  -0.2782530  -0.0008526
+ wall bc is used.
+           0       (-0.27098849788297563,1.31657092968131294E-005) The error is   3.4285297249457309E-015
+           1      (-0.27111761310245203,-6.05674859873717750E-004) The error is   6.9101417514322562E-014
+           2       (-0.26961561786189492,1.29382227510089847E-003) The error is   3.0691471134052618E-013
+           3      (-0.26994844043212096,-2.82679428044146919E-003) The error is   2.6190065708441636E-012
+omega------------>  -0.2709885   0.0000132
+ wall bc is used.
+           0      (-0.27825304938548806,-8.52622542327944742E-004) The error is   7.1323745197465078E-015
+           1      (-0.28058193717880986,-2.90668398112937714E-003) The error is   1.2141014090544289E-012
+           2       (-0.28027655344014885,1.37840787454269380E-003) The error is   8.8188634667017577E-013
+           3      (-0.28176587283695020,-6.03652967378299956E-004) The error is   1.8930001182202850E-009
+omega------------>  -0.2782530  -0.0008526
+ wall bc is used.
+           0      (-0.27484839087024288,-4.45706788477956948E-004) The error is   2.7830578397509975E-015
+           1       (-0.27528078370093412,1.33963637768121438E-003) The error is   8.4577967611323291E-013
+           2      (-0.27677583084058238,-6.04599127254718417E-004) The error is   2.7785375555169885E-011
+           3      (-0.27559860895246852,-2.87011042814768608E-003) The error is   5.0541830159428706E-012
+omega------------>  -0.2748484  -0.0004457
+ wall bc is used.
+           0      (-0.27439254176463845,-3.91377734368487885E-004) The error is   3.7353922127791883E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+           1      (-0.27610765508214197,-6.04726000515823153E-004) The error is   1.1165868205423421E-014
+           2       (-0.27461181357516345,1.33433070779063676E-003) The error is   9.5690065777429911E-015
+           3      (-0.27493135853841738,-2.86509942549387090E-003) The error is   7.7819048791978343E-014
+omega------------>  -0.2743925  -0.0003914
+ wall bc is used.
+           0      (-0.27291835651532070,-2.15930956081384772E-004) The error is   4.4925414781573692E-015
+           1      (-0.27394672196906839,-6.05136610903879066E-004) The error is   6.6401307796936671E-012
+           2       (-0.27244826451461074,1.31698212122366648E-003) The error is   1.5057400545990750E-011
+           3      (-0.27277346323554141,-2.84870439396642684E-003) The error is   1.0155199067414890E-011
+omega------------>  -0.2729184  -0.0002159
+ wall bc is used.
+           0      (-0.27246254875397397,-1.61761617897432451E-004) The error is   2.6829061898920120E-015
+           1      (-0.27327854621176517,-6.05263664904362344E-004) The error is   5.4375629181624994E-016
+           2       (-0.27177926500621519,1.31155843936453780E-003) The error is   3.2896473350503094E-015
+           3      (-0.27210624113486886,-2.84357573651345709E-003) The error is   4.0080985905340466E-013
+omega------------>  -0.2724625  -0.0001618
+ wall bc is used.
+           0      (-0.27195340512328553,-1.01297248490509273E-004) The error is   3.9670250343065978E-015
+           1      (-0.27253216753513498,-6.05405639713882176E-004) The error is   1.0692192727304576E-011
+           2       (-0.27103195763142485,1.30546637733714170E-003) The error is   8.4690496229914886E-011
+           3      (-0.27136093596397876,-2.83781332789832200E-003) The error is   1.0053739799053573E-010
+omega------------>  -0.2719534  -0.0001013
+ wall bc is used.
+           0       (-0.27109948077582852,8.72134410693276745E-009) The error is   5.5681483164050432E-015
+           1      (-0.27128031737637476,-6.05643884008249199E-004) The error is   4.4310344039105394E-015
+           2       (-0.26977852919594425,1.29516819544854903E-003) The error is   1.6855894158354248E-014
+           3      (-0.27011090623891082,-2.82806828682813502E-003) The error is   1.4766827814244773E-012
+omega------------>  -0.2710995   0.0000000
+ wall bc is used.
+           0       (-0.25243331235802213,2.18072330838930311E-003) The error is   2.2541476175637863E-015
+           1       (-0.25762219176162021,1.88630755663385624E-003) The error is   2.8224273160690601E-009
+omega------------>  -0.2524333   0.0021807
+ wall bc is used.
+           0       (-0.24398611775195334,3.14509794804303851E-003) The error is   4.4184809059741294E-015
+           1       (-0.24530414171817627,1.81681785463625812E-003) The error is   2.6430467119960901E-013
+omega------------>  -0.2439861   0.0031451
+ wall bc is used.
+           0       (-0.23554302400242319,4.09391131241911704E-003) The error is   2.4236368311523268E-015
+           1       (-0.23298505480769754,1.74129323093040857E-003) The error is   3.8681880441130044E-012
+omega------------>  -0.2355430   0.0040939
+ wall bc is used.
+           0       (-0.22710432081906701,5.02628597091252152E-003) The error is   2.5437490225080489E-015
+omega------------>  -0.2271043   0.0050263
+ wall bc is used.
+           0       (-0.22664967120164176,5.07604864099104811E-003) The error is   2.9955119644692505E-015
+omega------------>  -0.2266497   0.0050760
+ wall bc is used.
+           0       (-0.21821594330456232,5.99005961459642220E-003) The error is   2.1925257641922377E-015
+omega------------>  -0.2182159   0.0059901
+ wall bc is used.
+           0       (-0.20978729508475594,6.88556469677196938E-003) The error is   2.1896850151128032E-015
+omega------------>  -0.2097873   0.0068856
+ wall bc is used.
+           0       (-0.20136409820293266,7.76140759997595835E-003) The error is   2.6979389901844771E-015
+omega------------>  -0.2013641   0.0077614
+ wall bc is used.
+           0       (-0.20091031574096602,7.80802622581538465E-003) The error is   2.2231586077445850E-015
+omega------------>  -0.2009103   0.0078080
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+ wall bc is used.
+           0       (-0.19249328273878097,8.66177213830512070E-003) The error is   2.3231358491721359E-015
+omega------------>  -0.1924933   0.0086618
+ wall bc is used.
+           0       (-0.18408250282078603,9.49311764255153338E-003) The error is   2.1054329699869272E-015
+omega------------>  -0.1840825   0.0094931
+ wall bc is used.
+           0       (-0.17567836684015123,1.03005311128510565E-002) The error is   1.7558492077810328E-015
+omega------------>  -0.1756784   0.0103005
+ wall bc is used.
+           0       (-0.17522564543489338,1.03433329007051305E-002) The error is   2.1008247239610600E-015
+omega------------>  -0.1752256   0.0103433
+ wall bc is used.
+           0       (-0.16682891902879668,1.11237084234990461E-002) The error is   1.9290886368441452E-015
+omega------------>  -0.1668289   0.0111237
+ wall bc is used.
+           0       (-0.15843958266792918,1.18765445400105061E-002) The error is   1.9977523206368152E-015
+omega------------>  -0.1584396   0.0118765
+ wall bc is used.
+           0       (-0.15005794625421712,1.25998402030603734E-002) The error is   2.5918464305829051E-015
+omega------------>  -0.1500579   0.0125998
+ wall bc is used.
+           0       (-0.14960646523778620,1.26379398638694351E-002) The error is   2.0824491301377323E-015
+omega------------>  -0.1496065   0.0126379
+ wall bc is used.
+           0       (-0.14123322027953095,1.33277466037436624E-002) The error is   2.0652661015425406E-015
+omega------------>  -0.1412332   0.0133277
+ wall bc is used.
+           0       (-0.13286812910600140,1.39833496980252877E-002) The error is   2.3039392387931914E-015
+omega------------>  -0.1328681   0.0139833
+ wall bc is used.
+           0       (-0.12451129391786693,1.46021885047671329E-002) The error is   2.3895853389136927E-015
+omega------------>  -0.1245113   0.0146022
+ wall bc is used.
+           0       (-0.12406116058617632,1.46344422519620702E-002) The error is   2.5692231401716157E-015
+omega------------>  -0.1240612   0.0146344
+ wall bc is used.
+           0       (-0.11571302873893335,1.52115368850023278E-002) The error is   2.4194823850891440E-015
+omega------------>  -0.1157130   0.0152115
+ wall bc is used.
+           0       (-0.10737303810109726,1.57459450328183842E-002) The error is   2.3704563634522085E-015
+omega------------>  -0.1073730   0.0157459
+ wall bc is used.
+           0  (-9.90409406871112230E-002,1.62344246161003174E-002) The error is   3.2589270716612212E-015
+omega------------>  -0.0990409   0.0162344
+ wall bc is used.
+           0  (-9.85921226401343664E-002,1.62593786507771870E-002) The error is   2.2889607046352937E-015
+omega------------>  -0.0985921   0.0162594
+ wall bc is used.
+           0  (-9.02679078379168415E-002,1.66956502591926528E-002) The error is   1.8993932254548660E-015
+omega------------>  -0.0902679   0.0166957
+ wall bc is used.
+           0  (-8.19505734201527586E-002,1.70784574553707671E-002) The error is   2.2781667340519248E-015
+omega------------>  -0.0819506   0.0170785
+ wall bc is used.
+           0  (-7.36393212276989645E-002,1.74036227926375603E-002) The error is   1.8974820961668245E-015
+omega------------>  -0.0736393   0.0174036
+ wall bc is used.
+           0  (-7.31915629778037841E-002,1.74194226808919161E-002) The error is   1.9221287686480117E-015
+omega------------>  -0.0731916   0.0174194
+ wall bc is used.
+           0  (-6.48855721857041490E-002,1.76788698119015875E-002) The error is   1.9945964753638538E-015
+omega------------>  -0.0648856   0.0176789
+ wall bc is used.
+           0  (-5.65831433499544706E-002,1.78707407798629897E-002) The error is   1.9802964594685500E-015
+omega------------>  -0.0565831   0.0178707
+ wall bc is used.
+           0  (-4.82824531473561511E-002,1.79893724112358509E-002) The error is   2.0430152650272112E-015
+omega------------>  -0.0482825   0.0179894
+ wall bc is used.
+           0  (-4.78351166192698823E-002,1.79935660104261555E-002) The error is   2.1201745534617893E-015
+omega------------>  -0.0478351   0.0179936
+ wall bc is used.
+           0  (-3.95336621160975940E-002,1.80281327401672527E-002) The error is   2.2297476297283033E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>  -0.0395337   0.0180281
+ wall bc is used.
+           0  (-3.12282141428925838E-002,1.79755675759132039E-002) The error is   2.3752299094516700E-015
+omega------------>  -0.0312282   0.0179756
+ wall bc is used.
+           0  (-2.29145096599043391E-002,1.78277478186714619E-002) The error is   3.3628210723501984E-015
+omega------------>  -0.0229145   0.0178277
+ wall bc is used.
+           0  (-2.24661278628821501E-002,1.78169030803954007E-002) The error is   2.6443349852358000E-015
+omega------------>  -0.0224661   0.0178169
+ wall bc is used.
+           0  (-1.41374712817842908E-002,1.75587359945291246E-002) The error is   3.2796057106108789E-015
+omega------------>  -0.0141375   0.0175587
+ wall bc is used.
+           0  (-5.78651692402821181E-003,1.71852115861504083E-002) The error is   4.0984992744090232E-015
+omega------------>  -0.0057865   0.0171852
+ wall bc is used.
+           0   (2.59762523316435946E-003,1.66847876366331242E-002) The error is   5.4133873153686654E-015
+omega------------>   0.0025976   0.0166848
+ wall bc is used.
+           0   (3.05067694279564580E-003,1.66539753941856682E-002) The error is   8.1251582782794076E-015
+omega------------>   0.0030507   0.0166540
+ wall bc is used.
+           0   (1.14861909936468942E-002,1.60062970006422250E-002) The error is   7.6943763631222429E-015
+omega------------>   0.0114862   0.0160063
+ wall bc is used.
+           0   (1.99922142731327086E-002,1.52058110934605445E-002) The error is   3.8568383616146611E-015
+omega------------>   0.0199922   0.0152058
+ wall bc is used.
+           0   (2.85984564472721477E-002,1.42412311950872832E-002) The error is   4.1321283887869598E-015
+omega------------>   0.0285985   0.0142412
+ wall bc is used.
+           0   (2.90658501083549299E-002,1.41844287035585315E-002) The error is   3.1590357582394977E-015
+omega------------>   0.0290659   0.0141844
+ wall bc is used.
+           0   (3.78224794841320530E-002,1.30405167245178973E-002) The error is   2.6931893012762543E-015
+omega------------>   0.0378225   0.0130405
+ wall bc is used.
+           0   (4.67788606078579985E-002,1.17343104117252160E-002) The error is   2.9020096110300757E-015
+omega------------>   0.0467789   0.0117343
+ wall bc is used.
+           0   (5.60019490601743192E-002,1.03020863242712247E-002) The error is   2.5574392778855811E-015
+omega------------>   0.0560019   0.0103021
+ wall bc is used.
+           0   (5.65078593825366002E-002,1.02226835730945213E-002) The error is   2.8532403937050416E-015
+omega------------>   0.0565079   0.0102227
+ wall bc is used.
+           0   (6.60744571309981599E-002,8.74833547792960332E-003) The error is   3.0098554132150827E-015
+omega------------>   0.0660745   0.0087483
+ wall bc is used.
+           0   (7.59682011833845983E-002,7.36466719512820188E-003) The error is   2.2743366308706658E-015
+omega------------>   0.0759682   0.0073647
+ wall bc is used.
+           0   (8.61003688746852652E-002,6.17966303961459563E-003) The error is   2.3385291101463439E-015
+omega------------>   0.0861004   0.0061797
+ wall bc is used.
+           0   (8.66506252765310153E-002,6.12226540324509443E-003) The error is   2.6487680480830958E-015
+omega------------>   0.0866506   0.0061223
+ wall bc is used.
+           0   (9.68976008294517160E-002,5.16640696235171493E-003) The error is   2.9591427673343168E-015
+omega------------>   0.0968976   0.0051664
+ wall bc is used.
+           0        (0.10716903559352589,4.37521870369311696E-003) The error is   2.6724874519858412E-015
+omega------------>   0.1071690   0.0043752
+ wall bc is used.
+           0        (0.11743979265657976,3.68994164379381337E-003) The error is   2.5612989021436532E-015
+omega------------>   0.1174398   0.0036899
+ wall bc is used.
+           0        (0.11799328897278219,3.65517265013277437E-003) The error is   2.1101738765596051E-015
+omega------------>   0.1179933   0.0036552
+ wall bc is used.
+           0        (0.12826652719485043,3.04046043842811633E-003) The error is   2.7937011167075291E-015
+omega------------>   0.1282665   0.0030405
+ wall bc is used.
+           0        (0.13855120278166028,2.47301978817841914E-003) The error is   2.3719453597402481E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>   0.1385512   0.0024730
+ wall bc is used.
+           0        (0.14885391191775157,1.94391962551030946E-003) The error is   2.3791637199119788E-015
+           1       (0.14926219333925958,-1.54810797716149620E-003) The error is   9.5034017174611572E-009
+omega------------>   0.1488539   0.0019439
+ wall bc is used.
+           0        (0.14940973943778554,1.91639227420753499E-003) The error is   3.2045133588501633E-015
+omega------------>   0.1494097   0.0019164
+ wall bc is used.
+           0        (0.15973520223188808,1.42260472750129472E-003) The error is   2.3243803714973815E-015
+           1       (0.16148522587069483,-1.54715507961295136E-003) The error is   1.1874198443728200E-008
+omega------------>   0.1597352   0.0014226
+ wall bc is used.
+           0        (0.17008374483857155,9.59027950528982013E-004) The error is   1.9692285388734559E-015
+omega------------>   0.1700837   0.0009590
+ wall bc is used.
+           0        (0.18045584070644347,5.22995806181506483E-004) The error is   1.8926711829866304E-015
+omega------------>   0.1804558   0.0005230
+ wall bc is used.
+           0        (0.18101548733363124,5.00231917147152564E-004) The error is   2.3496120859964161E-015
+omega------------>   0.1810155   0.0005002
+ wall bc is used.
+           0        (0.19141249782737668,9.06609278979163155E-005) The error is   2.4018717813752340E-015
+           1       (0.18987587964801864,-2.38032423774591721E-003) The error is   1.7056240423748915E-009
+omega------------>   0.1914125   0.0000907
+ wall bc is used.
+           0       (0.20183312723198724,-2.95985160919663953E-004) The error is   2.3178504114272453E-015
+           1       (0.20143816980203197,-2.38275851383166299E-003) The error is   1.2009604775660445E-011
+omega------------>   0.2018331  -0.0002960
+ wall bc is used.
+           0       (0.21227733589783832,-6.61604231125446896E-004) The error is   2.8008178417731680E-015
+           1       (0.21300041698446673,-2.38521015856255937E-003) The error is   2.2128064678193058E-012
+omega------------>   0.2122773  -0.0006616
+ wall bc is used.
+           0        (0.18101548733363124,5.00231917147149962E-004) The error is   2.3871649024109733E-015
+omega------------>   0.1810155   0.0005002
+ wall bc is used.
+           0        (0.18774167233057937,2.32438410714851275E-004) The error is   2.3171853824876008E-015
+           1       (0.18579662113964973,-2.37947961236912274E-003) The error is   7.4531707290160504E-009
+omega------------>   0.1877417   0.0002324
+ wall bc is used.
+           0       (0.19447775431890318,-2.54547693767506945E-005) The error is   2.3072356712412900E-015
+           1       (0.19327968568775034,-2.38103542004043959E-003) The error is   3.3003201220836845E-010
+omega------------>   0.1944778  -0.0000255
+ wall bc is used.
+           0       (0.19391645936608012,-4.34417816266812523E-006) The error is   2.6226690579739246E-015
+           1       (0.19265656746130552,-2.38090482178389493E-003) The error is   2.0515217204785109E-009
+omega------------>   0.1939165  -0.0000043
+ wall bc is used.
+           0        (0.18746142817911104,2.43386633091270031E-004) The error is   2.4529447905282535E-015
+           1       (0.18548506117384342,-2.37941545349014622E-003) The error is   6.4291457015743317E-009
+omega------------>   0.1874614   0.0002434
+ wall bc is used.
+           0        (0.18802193363822764,2.21507344696284447E-004) The error is   2.0919860679842472E-015
+           1       (0.18610818106453908,-2.37954379807682297E-003) The error is   1.5733011233878910E-009
+omega------------>   0.1880219   0.0002215
+ wall bc is used.
+           0        (0.19096824952225896,1.07659618746411766E-004) The error is   3.0026146411737734E-015
+           1       (0.18938237626478774,-2.38022159793153465E-003) The error is   1.9423594162230212E-009
+omega------------>   0.1909682   0.0001077
+ wall bc is used.
+           0       (0.19391645936608012,-4.34417816266579080E-006) The error is   2.9573517340373147E-015
+           1       (0.19265656746079535,-2.38090482260077752E-003) The error is   2.2029446217772717E-009
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>   0.1939165  -0.0000043
+ wall bc is used.
+           0       (0.19380644257820873,-1.98460772844883773E-007) The error is   2.1300488801979400E-015
+           1       (0.19253442403966450,-2.38087923618968220E-003) The error is   6.5600003978013341E-010
+omega------------>   0.1938064  -0.0000002
+ wall bc is used.
+           0        (0.19152918409655958,8.62032503954263861E-005) The error is   2.6248640148744602E-015
+           1       (0.19000549531645272,-2.38035121278577138E-003) The error is   2.4836566530383881E-010
+omega------------>   0.1915292   0.0000862
+ wall bc is used.
+           0        (0.19238712667280233,5.35195061598791404E-005) The error is   2.5037082426923706E-015
+           1       (0.19095840064652225,-2.38054980864715058E-003) The error is   9.5941009656324357E-010
+omega------------>   0.1923871   0.0000535
+ wall bc is used.
+           0        (0.19324522964562740,2.09900854909058015E-005) The error is   2.4067781027318079E-015
+           1       (0.19191130561442654,-2.38074885689755879E-003) The error is   2.7700705368239867E-009
+omega------------>   0.1932452   0.0000210
+ wall bc is used.
+           0        (0.19309672978472744,2.66080681763294298E-005) The error is   2.1548950555566057E-015
+           1       (0.19174641247078369,-2.38071437391707908E-003) The error is   7.2469853307445369E-010
+omega------------>   0.1930967   0.0000266
+ wall bc is used.
+           0        (0.19345157247168004,1.31917290433016342E-005) The error is   3.1630144493871952E-015
+           1       (0.19214041828883943,-2.38079677035969153E-003) The error is   1.5400752931417480E-009
+omega------------>   0.1934516   0.0000132
+ wall bc is used.
+           0        (0.19362900409754819,6.49337033370377195E-006) The error is   2.8958049742908106E-015
+           1       (0.19233742117224067,-2.38083799301454235E-003) The error is   2.6779977404451832E-010
+omega------------>   0.1936290   0.0000065
+ wall bc is used.
+           0        (0.19371772248103572,3.14663942729663142E-006) The error is   3.5219226114770132E-015
+           1       (0.19243592260776918,-2.38085861244183511E-003) The error is   6.3055823821084107E-010
+omega------------>   0.1937177   0.0000031
+ wall bc is used.
+           0        (0.19376208231541675,1.47388556456045896E-006) The error is   4.5222908296673825E-015
+           1       (0.19248517332433865,-2.38086892375432950E-003) The error is   3.9313553929731512E-010
+omega------------>   0.1937621   0.0000015
+ wall bc is used.
+           0       (0.19380117823235865,-2.13036081065898560E-011) The error is   2.6576704375156100E-015
+           1       (0.19252857935621243,-2.38087801234221873E-003) The error is   4.5658057995810975E-010
+omega------------>   0.1938012  -0.0000000
+ wall bc is used.
+           0       (0.21284086521873055,-6.80743346676371784E-004) The error is   2.7921175334730348E-015
+           1       (0.21362353272158927,-2.38534240711020008E-003) The error is   3.4862151864635115E-011
+omega------------>   0.2128409  -0.0006807
+ wall bc is used.
+           0       (0.22330985502495374,-1.02586692230136837E-003) The error is   3.3061741365051023E-015
+           1       (0.22518581423610773,-2.38783939975180208E-003) The error is   8.1477199676572767E-011
+omega------------>   0.2233099  -0.0010259
+ wall bc is used.
+           0       (0.23380243072694035,-1.35277530865878415E-003) The error is   4.1045706978184693E-015
+omega------------>   0.2338024  -0.0013528
+ wall bc is used.
+           0       (0.24431863714557600,-1.66243929347627576E-003) The error is   4.5538881116491467E-015
+           1       (0.24230993031852299,-3.31116074864761401E-003) The error is   6.1952121008663482E-010
+omega------------>   0.2443186  -0.0016624
+ wall bc is used.
+           0       (0.24488604956704019,-1.67865250783585961E-003) The error is   3.0159570807502891E-015
+           1       (0.24293145518816572,-3.31142591540019814E-003) The error is   2.1002261403688781E-011
+omega------------>   0.2448860  -0.0016787
+ wall bc is used.
+           0       (0.25542714237678926,-1.97086699955357873E-003) The error is   8.2532016066429541E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+           1       (0.25446415188620003,-3.31643824770905347E-003) The error is   9.3946936311233223E-013
+omega------------>   0.2554271  -0.0019709
+ wall bc is used.
+           0       (0.26599197005127856,-2.24710678701419732E-003) The error is   4.8969314734828077E-015
+           1       (0.26599649801321790,-3.32154004611405268E-003) The error is   2.3401842649387657E-013
+omega------------>   0.2659920  -0.0022471
+ wall bc is used.
+           0       (0.27657983030760763,-2.50846524516380211E-003) The error is   8.2710928233965995E-015
+           1       (0.27752888299705381,-3.32600430136390911E-003) The error is   3.0713477396304429E-013
+omega------------>   0.2765798  -0.0025085
+ wall bc is used.
+           0       (0.27715105615722357,-2.52211382976385602E-003) The error is   6.2370148270088208E-015
+           1       (0.27815041324836659,-3.32624651836467208E-003) The error is   3.1639292525895824E-012
+omega------------>   0.2771511  -0.0025221
+ wall bc is used.
+           0       (0.28776222720907302,-2.76713762833849476E-003) The error is   3.9659485003654516E-015
+           1       (0.28968331540218334,-3.33099523553582848E-003) The error is   3.7233819614438391E-011
+omega------------>   0.2877622  -0.0027671
+ wall bc is used.
+           0       (0.29839548536906318,-2.99695166728358069E-003) The error is   6.2102504873174700E-015
+omega------------>   0.2983955  -0.0029970
+ wall bc is used.
+           0       (0.30905016841561234,-3.21193469781837692E-003) The error is   6.0322692866943658E-015
+           1       (0.30754402197660752,-4.34217267175098474E-003) The error is   1.8883226573068306E-010
+omega------------>   0.3090502  -0.0032119
+ wall bc is used.
+           0       (0.30962496770435011,-3.22310442476984437E-003) The error is   5.8870661357445572E-015
+           1       (0.30816422800570370,-4.34255172846098776E-003) The error is   2.8005868751185842E-012
+omega------------>   0.3096250  -0.0032231
+ wall bc is used.
+           0       (0.32030153184537236,-3.42272691564563100E-003) The error is   8.4552804991939170E-015
+           1       (0.31967239037670836,-4.34968643375124170E-003) The error is   2.7758783457251506E-013
+omega------------>   0.3203015  -0.0034227
+ wall bc is used.
+           0       (0.33099849483492871,-3.60856128822324316E-003) The error is   6.4212671739362290E-015
+           1       (0.33118000563201577,-4.35655713825606333E-003) The error is   1.3606925299596512E-013
+omega------------>   0.3309985  -0.0036086
+ wall bc is used.
+           0       (0.34171378267654473,-3.78135350024989738E-003) The error is   5.7009134358443825E-015
+           1       (0.34268836853674917,-4.36283776619174422E-003) The error is   3.3400662548910192E-013
+omega------------>   0.3417138  -0.0037814
+ wall bc is used.
+           0       (0.34229176482485923,-3.79026588449542625E-003) The error is   7.1793298948493661E-015
+           1       (0.34330859416734161,-4.36319825923060182E-003) The error is   2.4874691837372632E-011
+omega------------>   0.3422918  -0.0037903
+ wall bc is used.
+           0       (0.35302607905073219,-3.94864430408351039E-003) The error is   6.3076518084640029E-015
+           1       (0.35481713008454985,-4.37006992060652057E-003) The error is   1.2009959197503497E-010
+omega------------>   0.3530261  -0.0039486
+ wall bc is used.
+           0       (0.36377765342482471,-4.09433946347369238E-003) The error is   8.2477570063585418E-015
+omega------------>   0.3637777  -0.0040943
+ wall bc is used.
+           0       (0.37454467494513283,-4.22753674791403848E-003) The error is   8.1314962899911848E-015
+           1       (0.37327030902032993,-5.43015417996100744E-003) The error is   3.0022187629249946E-011
+omega------------>   0.3745447  -0.0042275
+ wall bc is used.
+           0       (0.37512532058262743,-4.23433365432610443E-003) The error is   7.8993771678885995E-015
+           1       (0.37388982261701170,-5.43063295064576037E-003) The error is   8.8610785013975598E-013
+omega------------>   0.3751253  -0.0042343
+ wall bc is used.
+           0       (0.38590614591257572,-4.35094256925224604E-003) The error is   5.9474034825193138E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+           1       (0.38538771880576034,-5.44319935018266338E-003) The error is   5.0295418768195821E-013
+omega------------>   0.3859061  -0.0043509
+ wall bc is used.
+           0       (0.39670943009348614,-4.44419359671508179E-003) The error is   1.5546982451766379E-014
+           1       (0.39688007582434354,-5.46862113102956036E-003) The error is   3.8192754726878752E-013
+omega------------>   0.3967094  -0.0044442
+ wall bc is used.
+           0       (0.40754601360581083,-4.53415732773446330E-003) The error is   8.5372836640307265E-015
+           1       (0.40835548975302316,-5.48748737985423497E-003) The error is   3.3926313458197262E-013
+omega------------>   0.4075460  -0.0045342
+ wall bc is used.
+           0       (0.40813049226132880,-4.53921033655723359E-003) The error is   4.4491815261968968E-015
+           1       (0.40897390789811983,-5.48802638507996446E-003) The error is   6.1397555057355035E-012
+omega------------>   0.4081305  -0.0045392
+ wall bc is used.
+           0       (0.41898017935233700,-4.63130657146981588E-003) The error is   6.5069820941505738E-015
+           1       (0.42045297479942612,-5.49451431639719993E-003) The error is   1.4777462903147347E-011
+omega------------>   0.4189802  -0.0046313
+ wall bc is used.
+           0       (0.42984098627075062,-4.71386219806397763E-003) The error is   3.3549789766486350E-015
+omega------------>   0.4298410  -0.0047139
+ wall bc is used.
+           0       (0.44072022192331695,-4.78338411228422435E-003) The error is   4.6085267084796731E-015
+omega------------>   0.4407202  -0.0047834
+ wall bc is used.
+           0       (0.44130725977619506,-4.78677618854552768E-003) The error is   2.8612599170408205E-015
+           1       (0.44013906201405245,-6.69652078537996253E-003) The error is   2.2066599426839273E-009
+omega------------>   0.4413073  -0.0047868
+ wall bc is used.
+           0       (0.45221863295511477,-4.84669517331873419E-003) The error is   4.7445529143876582E-015
+           1       (0.45160714902045107,-6.76942484573153126E-003) The error is   2.4052428550140239E-009
+omega------------>   0.4522186  -0.0048467
+ wall bc is used.
+           0       (0.46317055899671938,-4.91620534094756347E-003) The error is   3.0591160579942728E-015
+           1       (0.46304691406270754,-6.84618934867259159E-003) The error is   2.0686031297382413E-009
+omega------------>   0.4631706  -0.0049162
+ wall bc is used.
+           0       (0.47415723601327153,-5.02240617601949161E-003) The error is   6.0273671270146613E-015
+           1       (0.47446020372390529,-6.90777706282599477E-003) The error is   2.6965208728397525E-009
+omega------------>   0.4741572  -0.0050224
+ wall bc is used.
+           0       (0.47474998090110276,-5.02966305905860715E-003) The error is   4.0122385792168561E-015
+omega------------>   0.4747500  -0.0050297
+ wall bc is used.
+           0       (0.48575224601650135,-5.20132921040044119E-003) The error is   3.4566260976778734E-015
+omega------------>   0.4857522  -0.0052013
+ wall bc is used.
+           0       (0.49674111232159462,-5.46426483927534012E-003) The error is   6.1790409437115008E-015
+omega------------>   0.4967411  -0.0054643
+ wall bc is used.
+           0       (0.50767781602767359,-5.87542740191208685E-003) The error is   4.0674121930607527E-015
+           1       (0.50748256011875692,-7.22703994339880026E-003) The error is   1.1650420949470003E-009
+omega------------>   0.5076778  -0.0058754
+ wall bc is used.
+           0  (-4.85656116682482361E-002,1.76713607771124166E-002) The error is   2.4249181436185065E-015
+omega------------>  -0.0485656   0.0176714
+ wall bc is used.
+           0  (-4.90137847245361372E-002,1.76661686413053694E-002) The error is   2.6870337907558103E-015
+omega------------>  -0.0490138   0.0176662
+ wall bc is used.
+           0  (-5.77090294445416832E-002,1.75213776563755141E-002) The error is   2.1295348671650402E-015
+omega------------>  -0.0577090   0.0175214
+ wall bc is used.
+           0  (-6.64072323498976630E-002,1.72975997937980901E-002) The error is   2.2714281556145312E-015
+omega------------>  -0.0664072   0.0172976
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+ wall bc is used.
+           0  (-7.51103397535067552E-002,1.70012861877889311E-002) The error is   2.1607348925439047E-015
+omega------------>  -0.0751103   0.0170013
+ wall bc is used.
+           0  (-8.38198108609219533E-002,1.66382096950515070E-002) The error is   1.7865409723730418E-015
+omega------------>  -0.0838198   0.0166382
+ wall bc is used.
+           0  (-9.25367307715941889E-002,1.62135750843142717E-002) The error is   2.1793460525797106E-015
+omega------------>  -0.0925367   0.0162136
+ wall bc is used.
+           0       (-0.10126188767387513,1.57321072366847226E-002) The error is   2.6080711448476386E-015
+omega------------>  -0.1012619   0.0157321
+ wall bc is used.
+           0       (-0.10999582653718032,1.51981198911930425E-002) The error is   2.4166370028386595E-015
+omega------------>  -0.1099958   0.0151981
+ wall bc is used.
+           0       (-0.11873888790883536,1.46155681252853747E-002) The error is   2.5115961649378188E-015
+omega------------>  -0.1187389   0.0146156
+ wall bc is used.
+           0       (-0.12749123769829868,1.39880878882660317E-002) The error is   2.4832180031292847E-015
+omega------------>  -0.1274912   0.0139881
+ wall bc is used.
+           0       (-0.13625289182060840,1.33190257220851954E-002) The error is   1.8946164810415475E-015
+omega------------>  -0.1362529   0.0133190
+ wall bc is used.
+           0       (-0.14502373810052466,1.26114614427487570E-002) The error is   1.7902612676662526E-015
+omega------------>  -0.1450237   0.0126115
+ wall bc is used.
+           0       (-0.15380355678398105,1.18682261032936401E-002) The error is   2.1104614314127104E-015
+omega------------>  -0.1538036   0.0118682
+ wall bc is used.
+           0       (-0.16259204027264892,1.10919170797176437E-002) The error is   1.9468313586057939E-015
+omega------------>  -0.1625920   0.0110919
+ wall bc is used.
+           0       (-0.17138881221983748,1.02849116501648845E-002) The error is   2.1382357336844374E-015
+omega------------>  -0.1713888   0.0102849
+ wall bc is used.
+           0       (-0.18019344584400163,9.44938001357556283E-003) The error is   2.0152348338593353E-015
+omega------------>  -0.1801934   0.0094494
+ wall bc is used.
+           0       (-0.18900548118126806,8.58729832429265885E-003) The error is   2.0891157907483453E-015
+omega------------>  -0.1890055   0.0085873
+ wall bc is used.
+           0       (-0.19782444096788762,7.70046202702236431E-003) The error is   1.9975436740357274E-015
+omega------------>  -0.1978244   0.0077005
+ wall bc is used.
+           0       (-0.20664984488160029,6.79049955309140880E-003) The error is   2.0275303959745512E-015
+omega------------>  -0.2066498   0.0067905
+ wall bc is used.
+           0       (-0.21548122194759980,5.85888628803032680E-003) The error is   2.3305875650767336E-015
+           1       (-0.21681699869842164,2.01294063391671248E-003) The error is   1.5398638021167033E-010
+omega------------>  -0.2154812   0.0058589
+ wall bc is used.
+           0       (-0.22431812100767684,4.90695862936218596E-003) The error is   1.9556687812578579E-015
+omega------------>  -0.2243181   0.0049070
+ wall bc is used.
+           0       (-0.23316011924233343,3.93592791223733827E-003) The error is   1.9426331570001564E-015
+omega------------>  -0.2331601   0.0039359
+ wall bc is used.
+           0       (-0.24200682881527552,2.94689397663023493E-003) The error is   2.3847428891494435E-015
+           1       (-0.23924852451731354,1.68253502829145358E-003) The error is   2.2777645649043749E-012
+omega------------>  -0.2420068   0.0029469
+ wall bc is used.
+           0       (-0.25085790177269390,1.94085817069949095E-003) The error is   5.2395687874246337E-015
+           1       (-0.25214150216916564,1.76469068759833631E-003) The error is   4.3535158366864906E-013
+omega------------>  -0.2508579   0.0019409
+ wall bc is used.
+           0       (-0.25971303337187146,9.18735622188182979E-004) The error is   1.9915533713796668E-015
+           1       (-0.26503324337151518,1.83992115611363201E-003) The error is   2.0400583625150061E-009
+omega------------>  -0.2597130   0.0009187
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+ wall bc is used.
+           0      (-0.26857196403979955,-1.18633348307269705E-004) The error is   1.9389506290788948E-015
+omega------------>  -0.2685720  -0.0001186
+ wall bc is used.
+           0      (-0.27743448017068911,-1.17047275330603808E-003) The error is   4.0280811726324189E-015
+           1      (-0.27743849217938793,-5.95096517260949496E-004) The error is   1.3800809791593936E-014
+           2      (-0.27625854322599291,-2.70086087580776943E-003) The error is   1.2438192753966632E-013
+           3       (-0.27590757902802793,1.19483699898975324E-003) The error is   1.6931886884786405E-012
+omega------------>  -0.2774345  -0.0011705
+ wall bc is used.
+           0      (-0.28630041396831368,-2.23606144571119464E-003) The error is   3.7002082340320185E-015
+           1      (-0.28921407192921877,-2.80462356507887390E-003) The error is   1.2053375155979061E-012
+           2       (-0.28889952556152043,1.30423577471593501E-003) The error is   5.2238346505822063E-010
+omega------------>  -0.2863004  -0.0022361
+ wall bc is used.
+           0      (-0.29516964252795858,-3.31472461323547738E-003) The error is   3.7120739482449956E-015
+omega------------>  -0.2951696  -0.0033147
+ wall bc is used.
+           0      (-0.30404208633248037,-4.40582624000526550E-003) The error is   2.6654913212642632E-015
+           1      (-0.30177372138997322,-1.60380580943700422E-003) The error is   2.0249677757933364E-010
+omega------------>  -0.3040421  -0.0044058
+ wall bc is used.
+           0      (-0.31291770731946711,-5.50876249137426804E-003) The error is   1.8094701325263560E-015
+           1      (-0.31476560503801071,-1.80300959120166786E-003) The error is   7.5332458464679915E-010
+omega------------>  -0.3129177  -0.0055088
+ wall bc is used.
+           0      (-0.32179650664962273,-6.62295596715947298E-003) The error is   1.9921043464586750E-015
+omega------------>  -0.3217965  -0.0066230
+ wall bc is used.
+           0      (-0.33067852228975175,-7.74785075486117501E-003) The error is   2.0902557427076989E-015
+omega------------>  -0.3306785  -0.0077479
+ wall bc is used.
+           0      (-0.33956382649935385,-8.88290821346528030E-003) The error is   2.1120938228589093E-015
+omega------------>  -0.3395638  -0.0088829
+ wall bc is used.
+           0      (-0.34845252329302578,-1.00276034146003449E-002) The error is   2.0782999697525748E-015
+omega------------>  -0.3484525  -0.0100276
+ wall bc is used.
+           0      (-0.35734474593562909,-1.11814221703278247E-002) The error is   2.3979408590933147E-015
+omega------------>  -0.3573447  -0.0111814
+ wall bc is used.
+           0      (-0.35688629532005173,-1.11217320155750175E-002) The error is   2.0788421888554635E-015
+omega------------>  -0.3568863  -0.0111217
+ wall bc is used.
+           0      (-0.34838123698438334,-1.00183879079310100E-002) The error is   2.0452400507786243E-015
+omega------------>  -0.3483812  -0.0100184
+ wall bc is used.
+           0      (-0.33987940297899338,-8.92339406519765052E-003) The error is   1.9374989684080272E-015
+omega------------>  -0.3398794  -0.0089234
+ wall bc is used.
+           0      (-0.33138067633548118,-7.83720027480275944E-003) The error is   2.3218718710245261E-015
+omega------------>  -0.3313807  -0.0078372
+ wall bc is used.
+           0      (-0.33092274745344485,-7.77892166223375682E-003) The error is   2.2887536325933598E-015
+omega------------>  -0.3309227  -0.0077789
+ wall bc is used.
+           0      (-0.32242719595889363,-6.70249882146215382E-003) The error is   1.8736444971390080E-015
+omega------------>  -0.3224272  -0.0067025
+ wall bc is used.
+           0      (-0.31393459033456056,-5.63583036768263660E-003) The error is   2.3013382442717780E-015
+omega------------>  -0.3139346  -0.0056358
+ wall bc is used.
+           0      (-0.30544489445778816,-4.57940114726678848E-003) The error is   2.3180029893365183E-015
+           1      (-0.30382470517673127,-1.63766020901427549E-003) The error is   4.3726259305758395E-011
+omega------------>  -0.3054449  -0.0045794
+ wall bc is used.
+           0      (-0.30498744831518532,-4.52276828932586094E-003) The error is   2.0876102386352237E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+           1      (-0.30315576488113360,-1.62671963953302939E-003) The error is   1.7510787763098538E-010
+omega------------>  -0.3049874  -0.0045228
+ wall bc is used.
+           0      (-0.29650081360952280,-3.47767424321873426E-003) The error is   2.0832070041085346E-015
+omega------------>  -0.2965008  -0.0034777
+ wall bc is used.
+           0      (-0.28801711247042688,-2.44387454332173782E-003) The error is   6.1811909166705546E-015
+           1      (-0.29172239064864858,-2.82343682071033338E-003) The error is   2.8945957889850245E-010
+omega------------>  -0.2880171  -0.0024439
+ wall bc is used.
+           0      (-0.27953640809644648,-1.42192042616611988E-003) The error is   4.3392285234842381E-015
+           1      (-0.28051507274180415,-5.94518226601389171E-004) The error is   2.2231895173422061E-013
+           2      (-0.27933019756572935,-2.72651007948570070E-003) The error is   2.0408353164139042E-013
+           3       (-0.27898842809897045,1.22182539966120924E-003) The error is   1.5611530750907413E-012
+omega------------>  -0.2795364  -0.0014219
+ wall bc is used.
+           0      (-0.27907945101075043,-1.36719261545547037E-003) The error is   3.7897257599626752E-015
+           1      (-0.27984625087983733,-5.94643865583825921E-004) The error is   5.4737376699676394E-015
+           2      (-0.27866243077265312,-2.72099180438969013E-003) The error is   5.8254643360781786E-015
+           3       (-0.27831869465072623,1.21601614235306021E-003) The error is   9.3242309214270037E-013
+omega------------>  -0.2790795  -0.0013672
+ wall bc is used.
+           0      (-0.27060201301745507,-3.58353664079636715E-004) The error is   2.4173271388217127E-015
+           1      (-0.26743588972440885,-5.96982868032366063E-004) The error is   2.3585427957528780E-009
+           2      (-0.26627339628161661,-2.61253307620382472E-003) The error is   1.5210455190827671E-009
+omega------------>  -0.2706020  -0.0003584
+ wall bc is used.
+           0       (-0.26212781599915780,6.37402793923061103E-004) The error is   2.2655003813103029E-015
+omega------------>  -0.2621278   0.0006374
+ wall bc is used.
+           0       (-0.25365703676371548,1.61941062645315059E-003) The error is   4.4687621673238360E-015
+           1       (-0.25621736388211414,1.78919500361535014E-003) The error is   3.5359827130903164E-013
+omega------------>  -0.2536570   0.0016194
+ wall bc is used.
+           0      (-0.27907945101075043,-1.36719261545547601E-003) The error is   6.8136098885743973E-015
+           1      (-0.27984625087983733,-5.94643865583825270E-004) The error is   2.1905507139448259E-015
+           2      (-0.27866243077265312,-2.72099180438969534E-003) The error is   2.9192871313456084E-015
+           3       (-0.27831869465078340,1.21601614233247859E-003) The error is   4.9767549263661722E-012
+omega------------>  -0.2790795  -0.0013672
+ wall bc is used.
+           0      (-0.27325552970326394,-6.72793604663306927E-004) The error is   5.9371547222367115E-015
+           1      (-0.27132094731595152,-5.96249072505559909E-004) The error is   1.6145980551155540E-012
+           2      (-0.27015139052955234,-2.64777282899851226E-003) The error is   2.4030850092615316E-011
+           3       (-0.26978093204132181,1.13908092862396049E-003) The error is   1.1217680215857168E-010
+omega------------>  -0.2732555  -0.0006728
+ wall bc is used.
+           0       (-0.26743311462619712,1.55266026417299555E-005) The error is   2.3053441106092978E-015
+omega------------>  -0.2674331   0.0000155
+ wall bc is used.
+           0      (-0.27907945101075049,-1.36719261545546040E-003) The error is   5.7234132959009823E-015
+           1      (-0.27984625087983733,-5.94643865583824619E-004) The error is   6.6945091321511536E-015
+           2      (-0.27866243077265312,-2.72099180438969187E-003) The error is   5.9429961731652409E-015
+           3       (-0.27831869465075976,1.21601614234402708E-003) The error is   2.3163899294257765E-012
+omega------------>  -0.2790795  -0.0013672
+ wall bc is used.
+           0      (-0.27348394897025791,-6.99918670563097240E-004) The error is   6.3301682933698588E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+           1      (-0.27165535824474574,-5.96185977162575300E-004) The error is   7.7532282403386404E-013
+           2      (-0.27048521119831737,-2.65074933951005157E-003) The error is   1.7179153039349070E-011
+           3       (-0.27011586333141024,1.14220346030878810E-003) The error is   8.1489013861783646E-011
+omega------------>  -0.2734839  -0.0006999
+ wall bc is used.
+           0      (-0.27302711275279828,-6.45677890706665642E-004) The error is   4.7108583562149883E-015
+           1      (-0.27098653638724796,-5.96312178463652052E-004) The error is   1.1199774979157660E-010
+           2      (-0.26981757257851652,-2.64478745891247227E-003) The error is   3.7404089407952886E-010
+           3       (-0.26944599795956958,1.13594951553849539E-003) The error is   1.0666987109705146E-009
+omega------------>  -0.2730271  -0.0006457
+ wall bc is used.
+           0      (-0.27045832533544650,-3.41362110151021444E-004) The error is   2.4172181868154133E-015
+omega------------>  -0.2704583  -0.0003414
+ wall bc is used.
+           0      (-0.26788983555853280,-3.82485591241477484E-005) The error is   2.0172788736007336E-015
+omega------------>  -0.2678898  -0.0000382
+ wall bc is used.
+           0      (-0.26894566791056906,-1.62707439235330507E-004) The error is   2.1580385286621342E-015
+omega------------>  -0.2689457  -0.0001627
+ wall bc is used.
+           0      (-0.26788983555853280,-3.82485591241401860E-005) The error is   2.1330536712807835E-015
+omega------------>  -0.2678898  -0.0000382
+ wall bc is used.
+           0      (-0.26818937819187083,-7.35376079839675440E-005) The error is   1.9747445908058859E-015
+omega------------>  -0.2681894  -0.0000735
+ wall bc is used.
+           0       (-0.26756495249557682,7.62190103627193461E-009) The error is   1.8588556890845518E-015
+omega------------>  -0.2675650   0.0000000
+ wall bc is used.
+           0       (-0.25320062877204880,1.67192907213241501E-003) The error is   2.7170657193138446E-015
+           1       (-0.25555282929181422,1.78524610901346697E-003) The error is   5.0523142261668636E-015
+omega------------>  -0.2532006   0.0016719
+ wall bc is used.
+           0       (-0.24473368530207101,2.63866943771753210E-003) The error is   6.4749960018058734E-015
+           1       (-0.24322142210737843,1.70862599960486857E-003) The error is   1.2195621762117961E-012
+omega------------>  -0.2447337   0.0026387
+ wall bc is used.
+           0       (-0.23627064311376117,3.59012224576455959E-003) The error is   1.9048332225894336E-015
+           1       (-0.23088871219584417,1.62525735012355923E-003) The error is   4.4489441216987526E-009
+omega------------>  -0.2362706   0.0035901
+ wall bc is used.
+           0       (-0.22781179448514627,4.52543745182496567E-003) The error is   1.8267029423299896E-015
+omega------------>  -0.2278118   0.0045254
+ wall bc is used.
+           0       (-0.22735605368478309,4.57536771280398456E-003) The error is   2.3642709774924860E-015
+omega------------>  -0.2273561   0.0045754
+ wall bc is used.
+           0       (-0.21890197892777977,5.49266873731406573E-003) The error is   1.9264710343485434E-015
+           1       (-0.22177047990374216,2.03879398663518426E-003) The error is   9.5197192874825021E-010
+omega------------>  -0.2189020   0.0054927
+ wall bc is used.
+           0       (-0.21045280249243506,6.39182808466997026E-003) The error is   2.5279427467608568E-015
+           1       (-0.20953307359151693,1.97338102840436021E-003) The error is   5.8336055109041793E-010
+omega------------>  -0.2104528   0.0063918
+ wall bc is used.
+           0       (-0.20200890988770209,7.27172272216576338E-003) The error is   1.9030594469659880E-015
+omega------------>  -0.2020089   0.0072717
+ wall bc is used.
+           0       (-0.20155400766943410,7.31857165410033841E-003) The error is   2.0977242199811460E-015
+omega------------>  -0.2015540   0.0073186
+ wall bc is used.
+           0       (-0.19311612267552550,8.17682515340256363E-003) The error is   1.8158792776375505E-015
+omega------------>  -0.1931161   0.0081768
+ wall bc is used.
+           0       (-0.18468436717170766,9.01314599855381447E-003) The error is   1.9410706167488925E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>  -0.1846844   0.0090131
+ wall bc is used.
+           0       (-0.17625916166290789,9.82603610033818547E-003) The error is   2.1180804374603560E-015
+omega------------>  -0.1762592   0.0098260
+ wall bc is used.
+           0       (-0.17580530276666997,9.86914790130490223E-003) The error is   1.9942912487985551E-015
+omega------------>  -0.1758053   0.0098691
+ wall bc is used.
+           0       (-0.16738744614710319,1.06555627622458588E-002) The error is   2.1552722319883985E-015
+omega------------>  -0.1673874   0.0106556
+ wall bc is used.
+           0       (-0.15897696419611612,1.14150019174743371E-002) The error is   1.9324534842026125E-015
+omega------------>  -0.1589770   0.0114150
+ wall bc is used.
+           0       (-0.15057421332603033,1.21454894598261708E-002) The error is   2.0833971752267841E-015
+omega------------>  -0.1505742   0.0121455
+ wall bc is used.
+           0       (-0.15012159626659027,1.21839938496927213E-002) The error is   2.3663240638203708E-015
+omega------------>  -0.1501216   0.0121840
+ wall bc is used.
+           0       (-0.14172732530996909,1.28816349970715689E-002) The error is   2.3587500189895949E-015
+omega------------>  -0.1417273   0.0128816
+ wall bc is used.
+           0       (-0.13334134918856716,1.35456971182934885E-002) The error is   1.9563916727383629E-015
+omega------------>  -0.1333413   0.0135457
+ wall bc is used.
+           0       (-0.12496382906165659,1.41736277037904940E-002) The error is   2.0105761481151639E-015
+omega------------>  -0.1249638   0.0141736
+ wall bc is used.
+           0       (-0.12451258783650318,1.42063894545795613E-002) The error is   2.3473430006501135E-015
+omega------------>  -0.1245126   0.0142064
+ wall bc is used.
+           0       (-0.11614404822224425,1.47932440544982363E-002) The error is   2.0343120389925329E-015
+omega------------>  -0.1161440   0.0147932
+ wall bc is used.
+           0       (-0.10778397726751579,1.53380401436812100E-002) The error is   2.9682530026111453E-015
+omega------------>  -0.1077840   0.0153380
+ wall bc is used.
+           0  (-9.94321903182113498E-002,1.58375226400721859E-002) The error is   2.0587949713941763E-015
+omega------------>  -0.0994322   0.0158375
+ wall bc is used.
+           0  (-9.89823234874816077E-002,1.58630867555580833E-002) The error is   2.3597646790567490E-015
+omega------------>  -0.0989823   0.0158631
+ wall bc is used.
+           0  (-9.06388994396994246E-002,1.63109878060228655E-002) The error is   2.0473442095723663E-015
+omega------------>  -0.0906389   0.0163110
+ wall bc is used.
+           0  (-8.23028759971352608E-002,1.67059915595091785E-002) The error is   2.1793793363829217E-015
+omega------------>  -0.0823029   0.0167060
+ wall bc is used.
+           0  (-7.39735173407134322E-002,1.70438873170459908E-002) The error is   2.0057125451998034E-015
+omega------------>  -0.0739735   0.0170439
+ wall bc is used.
+           0  (-7.35248010457080214E-002,1.70603876924567688E-002) The error is   1.7927168345441120E-015
+omega------------>  -0.0735248   0.0170604
+ wall bc is used.
+           0  (-6.52013850747218821E-002,1.73330845167215773E-002) The error is   2.1749916352786738E-015
+omega------------>  -0.0652014   0.0173331
+ wall bc is used.
+           0  (-5.68822418377506536E-002,1.75386489293343113E-002) The error is   2.1230123991244990E-015
+omega------------>  -0.0568822   0.0175386
+ wall bc is used.
+           0  (-4.85656116682388339E-002,1.76713607771183251E-002) The error is   2.0141292507570296E-015
+omega------------>  -0.0485656   0.0176714
+ wall bc is used.
+           0  (-4.81174393489758254E-002,1.76763228996002289E-002) The error is   1.8875796712888313E-015
+omega------------>  -0.0481174   0.0176763
+ wall bc is used.
+           0  (-3.98009312659980963E-002,1.77253026210356102E-002) The error is   2.1358188417711188E-015
+omega------------>  -0.0398009   0.0177253
+ wall bc is used.
+           0  (-3.14813378585849235E-002,1.76873783654537403E-002) The error is   2.8352369201075344E-015
+omega------------>  -0.0314813   0.0176874
+ wall bc is used.
+           0  (-2.31544592524042352E-002,1.75543198381947138E-002) The error is   2.6078512421065672E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>  -0.0231545   0.0175543
+ wall bc is used.
+           0  (-2.27053961936704018E-002,1.75442715376380731E-002) The error is   2.9663541485296613E-015
+omega------------>  -0.0227054   0.0175443
+ wall bc is used.
+           0  (-1.43646489418787875E-002,1.73008444829136111E-002) The error is   3.6109774902949494E-015
+omega------------>  -0.0143646   0.0173008
+ wall bc is used.
+           0  (-6.00266981820248881E-003,1.69418616145905442E-002) The error is   3.8078031924941379E-015
+omega------------>  -0.0060027   0.0169419
+ wall bc is used.
+           0   (2.39143039685147003E-003,1.64555627799098693E-002) The error is   5.8457339192181265E-015
+omega------------>   0.0023914   0.0164556
+ wall bc is used.
+           0   (2.84498929806966663E-003,1.64254950032607372E-002) The error is   6.6979545297200750E-015
+omega------------>   0.0028450   0.0164255
+ wall bc is used.
+           0   (1.12894069482856619E-002,1.57912148564457455E-002) The error is   2.6003413915770301E-015
+omega------------>   0.0112894   0.0157912
+ wall bc is used.
+           0   (1.98035135925812879E-002,1.50031214170198938E-002) The error is   2.9171187425841740E-015
+omega------------>   0.0198035   0.0150031
+ wall bc is used.
+           0   (2.84173762386227720E-002,1.40496127942448014E-002) The error is   3.9099610738505957E-015
+omega------------>   0.0284174   0.0140496
+ wall bc is used.
+           0   (2.88851781631632824E-002,1.39933641997702449E-002) The error is   3.3648859496138219E-015
+omega------------>   0.0288852   0.0139934
+ wall bc is used.
+           0   (3.76496298212589189E-002,1.28588976460056511E-002) The error is   2.2191509162029123E-015
+omega------------>   0.0376496   0.0128589
+ wall bc is used.
+           0   (4.66150398010858544E-002,1.15607546935210543E-002) The error is   3.2627346546476312E-015
+omega------------>   0.0466150   0.0115608
+ wall bc is used.
+           0   (5.58494935489001823E-002,1.01362796064800031E-002) The error is   3.1415395607169391E-015
+omega------------>   0.0558495   0.0101363
+ wall bc is used.
+           0   (5.63560960487274748E-002,1.00573269777410167E-002) The error is   2.8656495175686009E-015
+omega------------>   0.0563561   0.0100573
+ wall bc is used.
+           0   (6.59366633531648094E-002,8.59301323816403367E-003) The error is   2.3247537901449574E-015
+omega------------>   0.0659367   0.0085930
+ wall bc is used.
+           0   (7.58440831870534765E-002,7.22389888486730473E-003) The error is   3.1640561933475516E-015
+omega------------>   0.0758441   0.0072239
+ wall bc is used.
+           0   (8.59854388064452968E-002,6.05648628838951174E-003) The error is   2.6104666953458834E-015
+omega------------>   0.0859854   0.0060565
+ wall bc is used.
+           0   (8.65360256285486878E-002,6.00003392259399089E-003) The error is   3.2232544293550159E-015
+omega------------>   0.0865360   0.0060000
+ wall bc is used.
+           0   (9.67867675845878045E-002,5.06015395354089941E-003) The error is   2.3331983584274141E-015
+omega------------>   0.0967868   0.0050602
+ wall bc is used.
+           0        (0.10705979620797665,4.28101267080058592E-003) The error is   3.1165757744442722E-015
+omega------------>   0.1070598   0.0042810
+ wall bc is used.
+           0        (0.11733255596514829,3.60447633445613175E-003) The error is   2.8785306621140969E-015
+omega------------>   0.1173326   0.0036045
+ wall bc is used.
+           0        (0.11788619628483193,3.57011396544709226E-003) The error is   2.5842695340650466E-015
+omega------------>   0.1178862   0.0035701
+ wall bc is used.
+           0        (0.12816285010972389,2.96224758106091671E-003) The error is   2.2426377083817281E-015
+omega------------>   0.1281629   0.0029622
+ wall bc is used.
+           0        (0.13845214783099027,2.40094584956615726E-003) The error is   3.0839202818668009E-015
+omega------------>   0.1384521   0.0024009
+ wall bc is used.
+           0        (0.14876026519866481,1.87776210340811394E-003) The error is   2.9176533959460960E-015
+omega------------>   0.1487603   0.0018778
+ wall bc is used.
+           0        (0.14931639907847585,1.85055077868984726E-003) The error is   2.5958121222809017E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>   0.1493164   0.0018506
+ wall bc is used.
+           0        (0.15964772778231354,1.36258159296751176E-003) The error is   2.1953044394179603E-015
+omega------------>   0.1596477   0.0013626
+ wall bc is used.
+           0        (0.17000236986925407,9.04704028590385800E-004) The error is   1.8692050149897744E-015
+omega------------>   0.1700024   0.0009047
+ wall bc is used.
+           0        (0.18038070887936253,4.74192882616750807E-004) The error is   2.1496709596986574E-015
+           1       (0.17876946421955517,-2.28253902283894611E-003) The error is   3.9408526879408256E-009
+omega------------>   0.1803807   0.0004742
+ wall bc is used.
+           0        (0.18094069535731716,4.51720401228899733E-004) The error is   2.1985201559296616E-015
+           1       (0.17939287348949556,-2.28265035754866927E-003) The error is   6.7863378669726519E-010
+omega------------>   0.1809407   0.0004517
+ wall bc is used.
+           0        (0.19134407370021128,4.74234616018374386E-005) The error is   2.4062485141406349E-015
+           1       (0.19096055129026801,-2.28474658586795814E-003) The error is   5.5611939081746179E-011
+omega------------>   0.1913441   0.0000474
+ wall bc is used.
+           0       (0.20177117259164021,-3.34231513249933485E-004) The error is   2.7003011778533197E-015
+           1       (0.20252818889665999,-2.28687619864758815E-003) The error is   1.2123981173015842E-011
+omega------------>   0.2017712  -0.0003342
+ wall bc is used.
+           0       (0.21222193631386244,-6.95084650296891207E-004) The error is   2.5092517954294085E-015
+           1       (0.21409583497065204,-2.28905428118936910E-003) The error is   2.1764534530194456E-010
+omega------------>   0.2122219  -0.0006951
+ wall bc is used.
+           0        (0.18094069535731716,4.51720401228893770E-004) The error is   2.0950665647822284E-015
+           1       (0.17939287348460201,-2.28265035792455089E-003) The error is   6.3541680217496790E-010
+omega------------>   0.1809407   0.0004517
+ wall bc is used.
+           0        (0.18709971695255806,2.09405608202999891E-004) The error is   2.0157805153829297E-015
+           1       (0.18624438011150832,-2.28388581877049133E-003) The error is   1.7517926576342101E-010
+omega------------>   0.1870997   0.0002094
+ wall bc is used.
+           0       (0.19326706914682684,-2.46716457039072956E-005) The error is   3.0499717802317940E-015
+           1       (0.19309586797921613,-2.28513816804548891E-003) The error is   3.0563027752889937E-011
+omega------------>   0.1932671  -0.0000247
+ wall bc is used.
+           0        (0.18094069535731716,4.51720401228906129E-004) The error is   2.0230086722001338E-015
+           1       (0.17939287348774563,-2.28265035811348700E-003) The error is   5.1170772899636088E-010
+omega------------>   0.1809407   0.0004517
+ wall bc is used.
+           0        (0.18681933591315011,2.20247291981092455E-004) The error is   2.3476249361295573E-015
+           1       (0.18593267633123284,-2.28382918501306110E-003) The error is   1.9170288325899551E-010
+omega------------>   0.1868193   0.0002202
+ wall bc is used.
+           0       (0.19270556672024530,-3.70236107620470855E-006) The error is   2.1370897820708784E-015
+           1       (0.19247246201439616,-2.28502375623934866E-003) The error is   4.5733352474774119E-011
+omega------------>   0.1927056  -0.0000037
+ wall bc is used.
+           0       (0.19261715155477155,-3.94358272837468857E-007) The error is   2.4742418563658971E-015
+           1       (0.19237429242764353,-2.28500574583002198E-003) The error is   6.2906807891122777E-010
+omega------------>   0.1926172  -0.0000004
+ wall bc is used.
+           0        (0.18738011523514517,1.98580968957446085E-004) The error is   2.4133145937992209E-015
+           1       (0.18655608385110017,-2.28394248924695519E-003) The error is   1.2365571893198159E-010
+omega------------>   0.1873801   0.0001986
+ wall bc is used.
+           0        (0.18971732368950264,1.09037221935809242E-004) The error is   2.1557253015407196E-015
+           1       (0.18915348641430293,-2.28441599516008686E-003) The error is   7.7470509320306494E-011
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+omega------------>   0.1897173   0.0001090
+ wall bc is used.
+           0        (0.19027845926275228,8.77186785338634442E-005) The error is   2.4348575800645765E-015
+           1       (0.18977689311789564,-2.28452994820572356E-003) The error is   7.4642178873675237E-011
+omega------------>   0.1902785   0.0000877
+ wall bc is used.
+           0        (0.19116700769039799,5.41019348716966332E-005) The error is   2.1975225943310572E-015
+           1       (0.19076388989747864,-2.28471056875076883E-003) The error is   5.2822892832522319E-011
+omega------------>   0.1911670   0.0000541
+ wall bc is used.
+           0        (0.19172832130381007,3.29539902147636546E-005) The error is   2.1899489601202636E-015
+           1       (0.19138729622086184,-2.28482477098015729E-003) The error is   5.8105610891678980E-011
+omega------------>   0.1917283   0.0000330
+ wall bc is used.
+           0        (0.19189202215130688,2.67992600659956268E-005) The error is   2.3620104539381138E-015
+           1       (0.19156909127530641,-2.28485809009026670E-003) The error is   2.7758116357305301E-010
+omega------------>   0.1918920   0.0000268
+ wall bc is used.
+           0        (0.19225457248679892,1.31888616949441192E-005) The error is   2.2517655635834451E-015
+           1       (0.19197169187879387,-2.28493190214304302E-003) The error is   4.3316229841449710E-011
+omega------------>   0.1922546   0.0000132
+ wall bc is used.
+           0        (0.19243585842942632,6.39385973076632948E-006) The error is   2.3897839808964975E-015
+           1       (0.19217299215990277,-2.28496882017410101E-003) The error is   3.6790612816354499E-011
+omega------------>   0.1924359   0.0000064
+ wall bc is used.
+           0        (0.19252650409428571,2.99890340772265925E-006) The error is   2.5768540804001246E-015
+           1       (0.19227364229537580,-2.28498728202033074E-003) The error is   3.3815035028026109E-011
+omega------------>   0.1925265   0.0000030
+ wall bc is used.
+           0       (0.19260661659099268,-8.69805317242969956E-011) The error is   3.0073557873283285E-015
+           1       (0.19236259506519954,-2.28500359990586096E-003) The error is   3.3208416061173713E-011
+omega------------>   0.1926066  -0.0000000
+ wall bc is used.
+           0       (0.21278582386299605,-7.13971472778692699E-004) The error is   4.2471193260802492E-015
+           1       (0.21471924115999513,-2.28917422111004970E-003) The error is   3.2567081817832548E-009
+omega------------>   0.2127858  -0.0007140
+ wall bc is used.
+           0       (0.22326158877489280,-1.05452588400835280E-003) The error is   3.0003335046324198E-015
+omega------------>   0.2232616  -0.0010545
+ wall bc is used.
+           0       (0.23376116011575657,-1.37707714546056264E-003) The error is   2.8563061883974164E-015
+           1       (0.23176424944579743,-3.20219614488032739E-003) The error is   2.3346794589312319E-009
+omega------------>   0.2337612  -0.0013771
+ wall bc is used.
+           0       (0.24428459827483348,-1.68252740255701578E-003) The error is   4.2150529537721719E-015
+           1       (0.24330167790234311,-3.20690697828314789E-003) The error is   4.9236263382217345E-012
+omega------------>   0.2442846  -0.0016825
+ wall bc is used.
+           0       (0.24485240931019145,-1.69851666612360263E-003) The error is   4.3690406086926157E-015
+           1       (0.24392345145616970,-3.20716490709317464E-003) The error is   3.5110981228662991E-013
+omega------------>   0.2448524  -0.0016985
+ wall bc is used.
+           0       (0.25540113043106660,-1.98675114758904529E-003) The error is   5.4409100667481665E-015
+           1       (0.25546062320232843,-3.21192191659031619E-003) The error is   4.0732081080927977E-013
+omega------------>   0.2554011  -0.0019868
+ wall bc is used.
+           0       (0.26597333992624178,-2.25957339917159331E-003) The error is   3.7583892970703324E-015
+           1       (0.26699785007865035,-3.21628163337409501E-003) The error is   1.2614678481956044E-013
+omega------------>   0.2659733  -0.0022596
+ wall bc is used.
+           0       (0.27656840737764699,-2.51674142177833954E-003) The error is   5.4582717360301994E-015
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+           1       (0.27853542081947852,-3.22081763468807809E-003) The error is   8.0719352824351171E-011
+omega------------>   0.2765684  -0.0025167
+ wall bc is used.
+           0       (0.27714004913344992,-2.53015908310572080E-003) The error is   4.2812645371500574E-015
+omega------------>   0.2771400  -0.0025302
+ wall bc is used.
+           0       (0.28775907673876361,-2.77108256492450194E-003) The error is   4.2076723449124904E-015
+omega------------>   0.2877591  -0.0027711
+ wall bc is used.
+           0       (0.29840025976399576,-2.99690883085334484E-003) The error is   7.0742050170846631E-015
+           1       (0.29695592372225971,-4.22436021223465685E-003) The error is   9.0944864864042781E-011
+omega------------>   0.2984003  -0.0029969
+ wall bc is used.
+           0       (0.30906306661137628,-3.20784123321585278E-003) The error is   4.5252628138545045E-015
+           1       (0.30846821444351408,-4.23137109936450994E-003) The error is   1.4498305360160247E-013
+omega------------>   0.3090631  -0.0032078
+ wall bc is used.
+           0       (0.30963831991959845,-3.21879368603873554E-003) The error is   3.7606316228472651E-015
+           1       (0.30908861982159769,-4.23175270902532725E-003) The error is   7.2239987811118119E-015
+omega------------>   0.3096383  -0.0032188
+ wall bc is used.
+           0       (0.32032355414105218,-3.41509699376620676E-003) The error is   3.5374483424383089E-015
+           1       (0.32060022921267617,-4.23824737119404479E-003) The error is   1.9200316853194850E-013
+omega------------>   0.3203236  -0.0034151
+ wall bc is used.
+           0       (0.33102756378124720,-3.59800277389386728E-003) The error is   4.4705105615842576E-015
+           1       (0.33211288171380049,-4.24415022686906382E-003) The error is   3.0768053680446330E-013
+omega------------>   0.3310276  -0.0035980
+ wall bc is used.
+           0       (0.34175035482104832,-3.76667170816682561E-003) The error is   3.8880828043467003E-015
+           1       (0.34362572506816447,-4.25074935121042517E-003) The error is   1.7433401900281570E-010
+omega------------>   0.3417504  -0.0037667
+ wall bc is used.
+           0       (0.34232875584644185,-3.77537984151990556E-003) The error is   5.0333357600302187E-015
+omega------------>   0.3423288  -0.0037754
+ wall bc is used.
+           0       (0.35307059815677616,-3.93013796176166705E-003) The error is   5.4952511422680864E-015
+omega------------>   0.3530706  -0.0039301
+ wall bc is used.
+           0       (0.36382880971162823,-4.07197332020281955E-003) The error is   6.0906334415850490E-015
+           1       (0.36264747367095296,-5.30970951128295100E-003) The error is   1.8217741910042914E-011
+omega------------>   0.3638288  -0.0040720
+ wall bc is used.
+           0       (0.37460144313318267,-4.19842068463697950E-003) The error is   7.8936875549623377E-015
+           1       (0.37414663025839234,-5.32084256905150307E-003) The error is   3.5163449346788381E-013
+omega------------>   0.3746014  -0.0041984
+ wall bc is used.
+           0       (0.37518245381142790,-4.20465256459240030E-003) The error is   6.1256542882268131E-015
+           1       (0.37476638911259502,-5.32169873292971142E-003) The error is   2.9545069844959842E-014
+omega------------>   0.3751825  -0.0042047
+ wall bc is used.
+           0       (0.38597816468697138,-4.30969978059247798E-003) The error is   1.2175511201963156E-014
+           1       (0.38626056318555740,-5.34237182882807936E-003) The error is   5.5021102360428541E-013
+omega------------>   0.3859782  -0.0043097
+ wall bc is used.
+           0       (0.39680139805691766,-4.40999159771414406E-003) The error is   4.6269511747628761E-015
+           1       (0.39774373167611138,-5.35714455409627005E-003) The error is   5.5914829242672066E-013
+omega------------>   0.3968014  -0.0044100
+ wall bc is used.
+           0       (0.40763782075425198,-4.50711428702871893E-003) The error is   5.1325536040210988E-015
+           1       (0.40922966524988447,-5.36448437223040545E-003) The error is   4.3955948897766470E-011
+omega------------>   0.4076378  -0.0045071
+ wall bc is used.
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+LST_LOCAL is done. 
+[WARNING] yaksa: 4 leaked handle pool objects
+           0       (0.40822215058625283,-4.51208135169586366E-003) The error is   3.5916287245680424E-015
+omega------------>   0.4082222  -0.0045121
+ wall bc is used.
+           0       (0.41907227044984530,-4.59766447599749360E-003) The error is   3.3549320781556230E-015
+omega------------>   0.4190723  -0.0045977
+ wall bc is used.
+           0       (0.42994131260691199,-4.66924741064622846E-003) The error is   3.6434254524517483E-015
+           1       (0.42883811347036083,-6.52635625891731519E-003) The error is   1.3019867325344079E-009
+omega------------>   0.4299413  -0.0046692
+ wall bc is used.
+           0       (0.44084034114724030,-4.73006021867058372E-003) The error is   3.2800186045264825E-015
+           1       (0.44030929339370922,-6.58707019696506101E-003) The error is   5.8259553686094762E-010
+omega------------>   0.4408403  -0.0047301
+ wall bc is used.
+           0       (0.44142880254509159,-4.73330611568233053E-003) The error is   5.4944961336187522E-015
+           1       (0.44092679278104308,-6.59053816504218300E-003) The error is   4.0586243528229066E-010
+omega------------>   0.4414288  -0.0047333
+ wall bc is used.
+           0       (0.45236875248316566,-4.80205915628731470E-003) The error is   4.1212797289102279E-015
+           1       (0.45237008034870613,-6.65109265540000678E-003) The error is   5.1717182423742648E-010
+omega------------>   0.4523688  -0.0048021
+ wall bc is used.
+           0       (0.46333808417333733,-4.90340135510845387E-003) The error is   4.7453246199271758E-015
+           1       (0.46379236154358272,-6.69158299949633092E-003) The error is   1.7953335441351564E-009
+omega------------>   0.4633381  -0.0049034
+ wall bc is used.
+           0       (0.47431327035765303,-5.05222982073667577E-003) The error is   4.6144140402213552E-015
+           1       (0.47521133632632584,-6.70309719793469715E-003) The error is   3.1362711088075515E-009
+omega------------>   0.4743133  -0.0050522
+ wall bc is used.
+           0       (0.47490438750603065,-5.06170625856704973E-003) The error is   2.4738224385329554E-015
+omega------------>   0.4749044  -0.0050617
+ wall bc is used.
+           0       (0.48585730659303522,-5.26391155746706342E-003) The error is   3.2583046457952665E-015
+omega------------>   0.4858573  -0.0052639
+ wall bc is used.
+           0       (0.49677220553375850,-5.51590904885734205E-003) The error is   3.6647735505551884E-015
+omega------------>   0.4967722  -0.0055159
+ wall bc is used.
+           0       (0.50768009559594385,-5.84752237741159586E-003) The error is   5.4922056331865825E-015
+           1       (0.50612758249451750,-5.79434001601379211E-003) The error is   6.0269000854889396E-010
+omega------------>   0.5076801  -0.0058475
+ wall bc is used.
+           0  (-3.93347905454321176E-002,1.80279226561509236E-002) The error is   1.9341876409051682E-015
+omega------------>  -0.0393348   0.0180279
+ Neutral task=          33  result=converged prefix=out/neutral

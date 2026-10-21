@@ -5,3 +5,8 @@ dash
 *mod
 html
 .VSCodeCounter
+
+# Local neutral-curve builds and Python test caches
+build-neutral/
+__pycache__/
+*.pyc

@@ -1,0 +1,226 @@
+COMMAND ["/home/zaza/start/START_ALL_IN_ONE/START_ALL_IN_ONE/bin/START_LST", "-f", "config.ini"]
+Load done! 
+Compute metrics! 
+Compute flow grads done! 
+ No freestream Prandtl number is input,
+ The Pr is set to 0.72.
+ LST_LOCAL is used.
+ LST_TEMPORAL_MODE is used.
+ LST is solved.
+ bc wall is used at y0.
+ bc farfield is used at yn.
+[general]
+  title = SweptBluntPlate
+  screen = F
+
+[filenames]
+  dir = in/
+  grid = grid2.h5
+  flow = flu2.h5
+  output prefix = /out/
+
+[freestream]
+  ma = 6.00000000000000
+  re = 79100.0000000000
+  te = 226.5000000000000
+
+[domain]
+  in = 301
+  jn = 216
+  istart = 1
+  iend = 301
+  iloc = 270
+
+[lst]
+  alpha = 3.50d0, 0.0d0
+  omega = -0.038281d0, 0.019854d0
+  beta = -3.2059d0, 0.0d0
+  adjoint = F
+  method = LST_local
+  mode = LST_TEMPORAL_MODE
+
+[lpse]
+  adjoint = F
+  solve_alpha = none
+  sigma_p = 1.00d0
+
+[npse]
+  omega0 = 1.0d0
+  beta0 = 1.0d0
+  m_global = 4
+  n_global = 4
+  ndis = 3
+  dis_+1 = 1, 0
+  dis_+1_alpha = 2.0, 0.004
+  dis_+2 = 1, 1
+  dis_+2_alpha = 2.0, 0.001
+  dis_+3 = 1, -1
+  dis_+3_alpha = 2.0, 0.001
+
+[bc]
+  y_0 = BC_WALL
+  y_inf = BC_FARFIELD
+
+[3dsog]
+  i_x0 = 1
+  i_x1 = 911
+  initial_alpha = 0.0
+  initial_beta = 0.15
+
+[neutral]
+  enabled = T
+  task = 37
+  outer_parameter = beta
+  inner_parameter = alpha
+  outer_min = -3.2059
+  outer_max = -3.2059
+  outer_points = 1
+  inner_min = 3.45
+  inner_max = 3.55
+  scan_points = 5
+  growth_tol = 1e-7
+  parameter_tol = 1e-9
+  eigen_error_tol = 1e-7
+  max_eigen_jump = 0.5
+  continuation_step = 0.02
+  output_prefix = out/neutral
+
+ reading curvature file!
+ reading curvature file done!
+==========Compute LST local!========== 
+===  k=-1: end LST. 
+===  k= 0: output eigen function. 
+===  k= 1: Modify local Re. 
+===  k= 2: Modify alpha_r. 
+===  k= 3: Modify beta_r. 
+===  k= 4: Modify omega_r. 
+===  k= 5: Modify alpha_i. 
+===  k= 6: Modify beta_i. 
+===  k= 7: Modify omega_i. 
+===  k= 8: Modify iloc. 
+===  k=31: neutral curves across stations (safeguarded secant). 
+===  k=32: neutral curves across stations (bisection). 
+===  k=33: growth contours and neutral curves. 
+===  k=36: arclength neutral curve at a station. 
+===  k=37: neutral branches in a parameter plane. 
+===  neutral settings: [neutral] in the input config file. 
+===  delta_k=ki*pk.(eg. k, ki, pk=4, 20, 0.001 means delta_omega_r=20*0.001) 
+====================================== 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+  iloc= 270  x=         59.58232  drx=          0.00000  drz=          0.00000
+  Re=      79100.00000  Ma=          6.00000  Te=        226.50000
+  omega=         -0.03828+          0.01985i
+  alpha=          3.50000+          0.00000i
+  beta =         -3.20590+          0.00000i
+ wall bc is used.
+           0  (-3.93347905454318469E-002,1.80279226561459102E-002) The error is   3.4826642498652118E-015
+omega------------>  -0.0393348   0.0180279
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix done! 
+Set temporal LST EVP matrix BC done! 
+Set temporal LST EVP matrix BC done! 
+LST_LOCAL is done. 
+[WARNING] yaksa: 4 leaked handle pool objects
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+STOP 1
+ wall bc is used.
+           0  (-3.97822484340034921E-002,1.80283251249435811E-002) The error is   2.0826254176193883E-015
+omega------------>  -0.0397822   0.0180283
+ wall bc is used.
+           0  (-4.70895507971372113E-002,1.80000392769043664E-002) The error is   1.9929594966483040E-015
+omega------------>  -0.0470896   0.0180000
+ wall bc is used.
+           0  (-5.43960526455431262E-002,1.79093494366829031E-002) The error is   2.2356192097399551E-015
+omega------------>  -0.0543961   0.0179093
+ wall bc is used.
+           0  (-6.17034708699316786E-002,1.77606824863487181E-002) The error is   2.4624418656182128E-015
+omega------------>  -0.0617035   0.0177607
+ wall bc is used.
+           0  (-6.12560249280806948E-002,1.77713744567826459E-002) The error is   1.9484093532190323E-015
+omega------------>  -0.0612560   0.0177714
+ wall bc is used.
+           0  (-5.58872392468585943E-002,1.78835816589914959E-002) The error is   2.0968611770985109E-015
+omega------------>  -0.0558872   0.0178836
+ wall bc is used.
+           0  (-5.05191186066008616E-002,1.79649611469711312E-002) The error is   1.8878816052156362E-015
+omega------------>  -0.0505191   0.0179650
+ wall bc is used.
+           0  (-5.00717864333484475E-002,1.79702990459299945E-002) The error is   2.1090401341569925E-015
+omega------------>  -0.0500718   0.0179703
+ wall bc is used.
+           0  (-4.47036766017783332E-002,1.80163655112332358E-002) The error is   1.9055898399483303E-015
+omega------------>  -0.0447037   0.0180164
+ wall bc is used.
+           0  (-3.93347905454330612E-002,1.80279226561474021E-002) The error is   2.1220625606143841E-015
+omega------------>  -0.0393348   0.0180279
+ wall bc is used.
+           0  (-3.88873210572166922E-002,1.80272668187678765E-002) The error is   2.1515064061539587E-015
+omega------------>  -0.0388873   0.0180273
+ wall bc is used.
+           0  (-3.35165623176372079E-002,1.79991889057088857E-002) The error is   2.1776483147306242E-015
+omega------------>  -0.0335166   0.0179992
+ wall bc is used.
+           0  (-2.81429218177207847E-002,1.79322714530704419E-002) The error is   2.4045095401485439E-015
+omega------------>  -0.0281429   0.0179323
+ wall bc is used.
+           0  (-2.76949480774772785E-002,1.79248695828723784E-002) The error is   3.9533430667546616E-015
+omega------------>  -0.0276949   0.0179249
+ wall bc is used.
+           0  (-2.23166581588500335E-002,1.78132205610245162E-002) The error is   3.0144830386400676E-015
+omega------------>  -0.0223167   0.0178132
+ wall bc is used.
+           0  (-1.69323538917418616E-002,1.76576227076334358E-002) The error is   2.6549283367221002E-015
+omega------------>  -0.0169324   0.0176576
+ wall bc is used.
+           0  (-3.93347905454321176E-002,1.80279226561509236E-002) The error is   2.1554781872471780E-015
+omega------------>  -0.0393348   0.0180279
+ Neutral task=          37  result=no bracketed root prefix=out/neutral

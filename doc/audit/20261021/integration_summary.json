@@ -1,0 +1,101 @@
+[
+  {
+    "case": "task31",
+    "exit": 0,
+    "expected": 0,
+    "roots": 6,
+    "max_abs_growth": 8.721360538485948e-09,
+    "seconds": 11.645,
+    "passed": true,
+    "termination": "evaluations=         285  solves=         722  rejected=           0  result=converged"
+  },
+  {
+    "case": "task32",
+    "exit": 0,
+    "expected": 0,
+    "roots": 6,
+    "max_abs_growth": 8.525879150464155e-08,
+    "seconds": 11.797,
+    "passed": true,
+    "termination": "evaluations=         310  solves=         749  rejected=           0  result=converged"
+  },
+  {
+    "case": "task33",
+    "exit": 0,
+    "expected": 0,
+    "roots": 6,
+    "max_abs_growth": 8.721344106932767e-09,
+    "seconds": 8.688,
+    "passed": true,
+    "termination": "evaluations=         141  solves=         554  rejected=           0  result=converged"
+  },
+  {
+    "case": "task37",
+    "exit": 0,
+    "expected": 0,
+    "roots": 6,
+    "max_abs_growth": 6.430903722484831e-09,
+    "seconds": 8.537,
+    "passed": true,
+    "termination": "evaluations=         140  solves=         545  rejected=           0  result=converged"
+  },
+  {
+    "case": "task36",
+    "exit": 0,
+    "expected": 0,
+    "roots": 13,
+    "max_abs_growth": 7.663621980368463e-08,
+    "seconds": 4.627,
+    "passed": true,
+    "termination": "evaluations=         146  solves=         292  rejected=           0  result=parameter boundary"
+  },
+  {
+    "case": "spatial37",
+    "exit": 0,
+    "expected": 0,
+    "roots": 2,
+    "max_abs_growth": 2.620995380867999e-08,
+    "seconds": 2.471,
+    "passed": true,
+    "termination": "evaluations=          41  solves=         123  rejected=           0  result=converged"
+  },
+  {
+    "case": "interactive",
+    "exit": 0,
+    "expected": 0,
+    "roots": 2,
+    "max_abs_growth": 8.721372315052676e-09,
+    "seconds": 3.023,
+    "passed": true,
+    "termination": "evaluations=          47  solves=         184  rejected=           0  result=converged"
+  },
+  {
+    "case": "invalid_axes",
+    "exit": 1,
+    "expected": 1,
+    "roots": 0,
+    "max_abs_growth": null,
+    "seconds": 0.114,
+    "passed": true
+  },
+  {
+    "case": "strict_jump",
+    "exit": 1,
+    "expected": 1,
+    "roots": 0,
+    "max_abs_growth": null,
+    "seconds": 0.165,
+    "passed": true,
+    "termination": "evaluations=           3  solves=           3  rejected=           2  result=evaluation failed"
+  },
+  {
+    "case": "no_roots",
+    "exit": 1,
+    "expected": 1,
+    "roots": 0,
+    "max_abs_growth": null,
+    "seconds": 0.365,
+    "passed": true,
+    "termination": "evaluations=           5  solves=          16  rejected=           0  result=no bracketed root"
+  }
+]

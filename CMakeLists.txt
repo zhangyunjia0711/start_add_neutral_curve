@@ -55,6 +55,7 @@ endif()
 #  tells CMake to build the application ex1 from the source file ex1.c
 #  this must appear AFTER the compilers are set
 project(START)
+include(CTest)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 set(CMAKE_INSTALL_PREFIX $ENV{HOME})
 find_package(PkgConfig REQUIRED)

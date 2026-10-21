@@ -1,0 +1,1177 @@
+COMMAND ["/home/zaza/start/START_ALL_IN_ONE/START_ALL_IN_ONE/bin/START_LST", "-f", "config.ini"]
+Load done! 
+Compute metrics! 
+Compute flow grads done! 
+ No freestream Prandtl number is input,
+ The Pr is set to 0.72.
+ LST_LOCAL is used.
+ LST_SPATIAL_MODE is used.
+ LST is solved.
+ bc wall is used at y0.
+ bc farfield is used at yn.
+[general]
+  title = SweptBluntPlate
+  screen = F
+
+[filenames]
+  dir = in/
+  grid = grid2.h5
+  flow = flu2.h5
+  output prefix = /out/
+
+[freestream]
+  ma = 6.00000000000000
+  re = 79100.0000000000
+  te = 226.5000000000000
+
+[domain]
+  in = 301
+  jn = 216
+  istart = 1
+  iend = 301
+  iloc = 270
+
+[lst]
+  alpha = 3.5d0, -0.04d0
+  omega = -0.03933479054543d0, 0.0d0
+  beta = -3.2059d0, 0.0d0
+  adjoint = F
+  method = LST_local
+  mode = LST_SPATIAL_MODE
+
+[lpse]
+  adjoint = F
+  solve_alpha = 3.5d0, -0.04d0
+  sigma_p = 1.00d0
+
+[npse]
+  omega0 = 1.0d0
+  beta0 = 1.0d0
+  m_global = 4
+  n_global = 4
+  ndis = 3
+  dis_+1 = 1, 0
+  dis_+1_alpha = 3.5d0, -0.04d0
+  dis_+2 = 1, 1
+  dis_+2_alpha = 3.5d0, -0.04d0
+  dis_+3 = 1, -1
+  dis_+3_alpha = 3.5d0, -0.04d0
+
+[bc]
+  y_0 = BC_WALL
+  y_inf = BC_FARFIELD
+
+[3dsog]
+  i_x0 = 1
+  i_x1 = 911
+  initial_alpha = 3.5d0, -0.04d0
+  initial_beta = 0.15
+
+[neutral]
+  enabled = T
+  task = 37
+  outer_parameter = beta
+  inner_parameter = omega
+  outer_min = -3.2059
+  outer_max = -3.2059
+  outer_points = 1
+  inner_min = -0.35
+  inner_max = 0.3
+  scan_points = 31
+  growth_tol = 1e-7
+  parameter_tol = 1e-9
+  eigen_error_tol = 1e-7
+  max_eigen_jump = 0.5
+  continuation_step = 0.02
+  output_prefix = out/neutral
+
+ reading curvature file!
+ reading curvature file done!
+==========Compute LST local!========== 
+===  k=-1: end LST. 
+===  k= 0: output eigen function. 
+===  k= 1: Modify local Re. 
+===  k= 2: Modify alpha_r. 
+===  k= 3: Modify beta_r. 
+===  k= 4: Modify omega_r. 
+===  k= 5: Modify alpha_i. 
+===  k= 6: Modify beta_i. 
+===  k= 7: Modify omega_i. 
+===  k= 8: Modify iloc. 
+===  k=31: neutral curves across stations (safeguarded secant). 
+===  k=32: neutral curves across stations (bisection). 
+===  k=33: growth contours and neutral curves. 
+===  k=36: arclength neutral curve at a station. 
+===  k=37: neutral branches in a parameter plane. 
+===  neutral settings: [neutral] in the input config file. 
+===  delta_k=ki*pk.(eg. k, ki, pk=4, 20, 0.001 means delta_omega_r=20*0.001) 
+====================================== 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+  iloc= 270  x=         59.58232  drx=          0.00000  drz=          0.00000
+  Re=      79100.00000  Ma=          6.00000  Te=        226.50000
+  omega=         -0.03933+          0.00000i
+  alpha=          3.50000+         -0.04000i
+  beta =         -3.20590+          0.00000i
+ wall bc is used.
+ ncov=           1
+           0        (3.5000383336164265,-4.07719251593793020E-002) The error is   9.6063074384629441E-015
+ pep_get_eigenvalue...
+alpha------------>   3.5000383  -0.0407719
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+ wall bc is used.
+ ncov=           1
+           0        (3.4977490175970356,-4.07699381938347941E-002) The error is   3.1522514876546743E-015
+ pep_get_eigenvalue...
+alpha------------>   3.4977490  -0.0407699
+ wall bc is used.
+ ncov=           1
+           0        (3.4535630299631404,-4.01542926477955128E-002) The error is   1.3897043699717832E-014
+ pep_get_eigenvalue...
+alpha------------>   3.4535630  -0.0401543
+ wall bc is used.
+ ncov=           1
+           0        (3.4096473517195398,-3.86129004630153191E-002) The error is   4.3948109062582378E-015
+ pep_get_eigenvalue...
+alpha------------>   3.4096474  -0.0386129
+ wall bc is used.
+ ncov=           1
+           0        (3.3660248231918932,-3.63451984930598174E-002) The error is   1.5441530203783488E-014
+ pep_get_eigenvalue...
+alpha------------>   3.3660248  -0.0363452
+ wall bc is used.
+ ncov=           1
+           0        (3.3226920579608854,-3.35020227082533442E-002) The error is   1.2291910686570238E-014
+ pep_get_eigenvalue...
+alpha------------>   3.3226921  -0.0335020
+ wall bc is used.
+ ncov=           1
+           0        (3.2796308051197407,-3.01999550327734824E-002) The error is   4.7121703012299455E-015
+ pep_get_eigenvalue...
+alpha------------>   3.2796308  -0.0302000
+ wall bc is used.
+ ncov=           1
+           0        (3.2368144006606676,-2.65290332373197581E-002) The error is   2.5713604037551810E-015
+ pep_get_eigenvalue...
+alpha------------>   3.2368144  -0.0265290
+ wall bc is used.
+ ncov=           1
+           0        (3.1942126312379631,-2.25578956084729366E-002) The error is   4.2155993532910348E-015
+ pep_get_eigenvalue...
+alpha------------>   3.1942126  -0.0225579
+ wall bc is used.
+ ncov=           1
+           0        (3.1517954224247782,-1.83381492981134313E-002) The error is   1.0939505143566111E-014
+ pep_get_eigenvalue...
+alpha------------>   3.1517954  -0.0183381
+ wall bc is used.
+ ncov=           1
+           0        (3.1095352749081169,-1.39083706906766198E-002) The error is   1.3499719661350349E-014
+ pep_get_eigenvalue...
+alpha------------>   3.1095353  -0.0139084
+ wall bc is used.
+ ncov=           2
+           0        (3.0674085407424703,-9.29763607519164953E-003) The error is   2.7666675318818818E-015
+           1        (3.0634532682131907,-2.63124324658453937E-003) The error is   8.2420749715150126E-009
+ pep_get_eigenvalue...
+alpha------------>   3.0674085  -0.0092976
+ wall bc is used.
+ ncov=           1
+           0        (3.0253958098132756,-4.52843415891630418E-003) The error is   6.1990602736596955E-015
+ pep_get_eigenvalue...
+alpha------------>   3.0253958  -0.0045284
+ wall bc is used.
+ ncov=           4
+           0         (2.9834817241083438,3.81085359764406987E-004) The error is   9.1498510636582517E-015
+           1         (2.9847419831606676,9.06042744548445165E-004) The error is   1.0586954812949551E-014
+           2        (2.9825157298891347,-1.97018826112784796E-003) The error is   1.2071212781693102E-014
+           3         (2.9830193180509084,4.26744109845019794E-003) The error is   3.9983286789858728E-012
+ pep_get_eigenvalue...
+alpha------------>   2.9834817   0.0003811
+ wall bc is used.
+ ncov=           1
+           0         (2.9416544906454511,5.41547374666149529E-003) The error is   5.1472320780850017E-015
+ pep_get_eigenvalue...
+alpha------------>   2.9416545   0.0054155
+ wall bc is used.
+ ncov=           1
+           0         (2.8999052838695558,1.05608497123756417E-002) The error is   1.4193016369342355E-014
+ pep_get_eigenvalue...
+alpha------------>   2.8999053   0.0105608
+ wall bc is used.
+ ncov=           1
+           0         (2.8582276532562441,1.58041526674408128E-002) The error is   7.3098729351059244E-015
+ pep_get_eigenvalue...
+alpha------------>   2.8582277   0.0158042
+ wall bc is used.
+ ncov=           1
+           0         (2.8166169960274368,2.11326765978689830E-002) The error is   5.0142943171434618E-015
+ pep_get_eigenvalue...
+alpha------------>   2.8166170   0.0211327
+ wall bc is used.
+ ncov=           1
+           0         (2.8187653797126879,2.08554715549254428E-002) The error is   9.0082291359680588E-015
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+ pep_get_eigenvalue...
+alpha------------>   2.8187654   0.0208555
+ wall bc is used.
+ ncov=           1
+           0         (2.8409753922514756,1.80027881953619649E-002) The error is   1.4248720986269872E-014
+ pep_get_eigenvalue...
+alpha------------>   2.8409754   0.0180028
+ wall bc is used.
+ ncov=           1
+           0         (2.8632040553196405,1.51729068456003448E-002) The error is   1.1434718218529929E-014
+ pep_get_eigenvalue...
+alpha------------>   2.8632041   0.0151729
+ wall bc is used.
+ ncov=           1
+           0         (2.8653562255042426,1.49003286360882437E-002) The error is   3.3066312741302008E-015
+ pep_get_eigenvalue...
+alpha------------>   2.8653562   0.0149003
+ wall bc is used.
+ ncov=           1
+           0         (2.8876059803636780,1.20976637690589639E-002) The error is   1.3190591425540534E-014
+ pep_get_eigenvalue...
+alpha------------>   2.8876060   0.0120977
+ wall bc is used.
+ ncov=           1
+           0         (2.9098756742689802,9.32183553579385080E-003) The error is   2.7298787300457026E-015
+ pep_get_eigenvalue...
+alpha------------>   2.9098757   0.0093218
+ wall bc is used.
+ ncov=           1
+           0         (2.9120318931594404,9.05470322996930824E-003) The error is   1.7466579534757133E-014
+ pep_get_eigenvalue...
+alpha------------>   2.9120319   0.0090547
+ wall bc is used.
+ ncov=           1
+           0         (2.9343244014235270,6.31054964128176504E-003) The error is   2.2250058358322275E-014
+ pep_get_eigenvalue...
+alpha------------>   2.9343244   0.0063105
+ wall bc is used.
+ ncov=           1
+           0         (2.9566387464390216,3.59735698616046309E-003) The error is   6.0202726143609988E-015
+ pep_get_eigenvalue...
+alpha------------>   2.9566387   0.0035974
+ wall bc is used.
+ ncov=           1
+           0         (2.9587994000487705,3.33650820536818011E-003) The error is   5.7874356910048187E-015
+ pep_get_eigenvalue...
+alpha------------>   2.9587994   0.0033365
+ wall bc is used.
+ ncov=           4
+           0         (2.9811390562601008,6.59623979505702049E-004) The error is   4.5221503407526406E-015
+           1         (2.9831211986336381,9.05734475330753543E-004) The error is   6.0753188617942477E-014
+           2        (2.9808968861954361,-1.98324444042229748E-003) The error is   8.2747694818548644E-014
+           3         (2.9813960382448967,4.27977747653591166E-003) The error is   2.1253796876497049E-012
+ pep_get_eigenvalue...
+alpha------------>   2.9811391   0.0006596
+ wall bc is used.
+ ncov=           3
+           0        (3.0035032592807829,-1.98192091042629715E-003) The error is   3.7164315333475203E-015
+           1         (2.9985861901120927,9.08682720676198905E-004) The error is   6.0274050556420873E-010
+           2        (2.9963421054846546,-1.85402693218244467E-003) The error is   1.9523826329214441E-009
+ pep_get_eigenvalue...
+alpha------------>   3.0035033  -0.0019819
+ wall bc is used.
+ ncov=           1
+           0        (3.0013378650453792,-1.72789343210793481E-003) The error is   1.5640109070524202E-014
+ pep_get_eigenvalue...
+alpha------------>   3.0013379  -0.0017279
+ wall bc is used.
+ ncov=           4
+           0        (2.9868432277157351,-1.78516803231486488E-005) The error is   7.3684602342920776E-015
+           1         (2.9870673254854312,9.06485312102991514E-004) The error is   1.0702753517876079E-013
+           2        (2.9848382371059379,-1.95126330491041848E-003) The error is   2.3398475809066291E-013
+           3         (2.9853482895793486,4.24954945646433425E-003) The error is   2.7131900817420737E-011
+ pep_get_eigenvalue...
+alpha------------>   2.9868432  -0.0000179
+ wall bc is used.
+ ncov=           4
+           0         (2.9855707134096128,9.06200431854583470E-004) The error is   4.9611676427947052E-015
+           1         (2.9846796682566898,2.38815340112966460E-004) The error is   7.3401941369137173E-015
+           2        (2.9833434566541048,-1.96346985661679380E-003) The error is   4.2117742844475860E-012
+           3         (2.9838493349776178,4.26109087463853904E-003) The error is   1.8847433719389151E-010
+ pep_get_eigenvalue...
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+alpha------------>   2.9855707   0.0009062
+ wall bc is used.
+ ncov=           3
+           0         (2.9748785502158039,4.32822710061764836E-003) The error is   7.6930854376186666E-014
+           1         (2.9766134603130312,9.04498409402047961E-004) The error is   1.8030262015513487E-013
+           2         (2.9717355229346181,1.78188786537346235E-003) The error is   9.8392649065544407E-010
+ pep_get_eigenvalue...
+alpha------------>   2.9748786   0.0043282
+ wall bc is used.
+ ncov=           4
+           0         (2.9763773675343401,4.31723611679748522E-003) The error is   1.8010586794589893E-014
+           1         (2.9738977144526753,1.52325061635262852E-003) The error is   1.0806753891618767E-014
+           2         (2.9781100723839447,9.04782433151433800E-004) The error is   7.6283877181880434E-010
+           3        (2.9758915852743097,-2.02292632591080830E-003) The error is   8.3212389152264024E-010
+ pep_get_eigenvalue...
+alpha------------>   2.9763774   0.0043172
+ wall bc is used.
+ ncov=           4
+           0         (2.9801132800541548,4.28944911609474219E-003) The error is   9.2113040166055281E-015
+           1         (2.9792879814402586,8.80010434039044803E-004) The error is   4.9857345461373075E-012
+           2         (2.9818403928942208,9.05490987948905091E-004) The error is   9.0485427119013369E-011
+           3        (2.9796175942129843,-1.99348464534548561E-003) The error is   4.1907947870821047E-010
+ pep_get_eigenvalue...
+alpha------------>   2.9801133   0.0042894
+ wall bc is used.
+ ncov=           4
+           0         (2.9855707134096128,9.06200431854586939E-004) The error is   2.6482224791784233E-015
+           1         (2.9846796682566898,2.38815340112990475E-004) The error is   6.2843827193933353E-015
+           2        (2.9833434566540906,-1.96346985661712947E-003) The error is   4.4289042297717370E-014
+           3         (2.9838493349776454,4.26109087448631185E-003) The error is   1.2152856414881085E-014
+ pep_get_eigenvalue...
+alpha------------>   2.9855707   0.0009062
+ wall bc is used.
+ ncov=           4
+           0         (2.9844538591885423,9.05987931812328277E-004) The error is   1.7071586591274591E-014
+           1         (2.9830652524601509,4.30572201118026038E-004) The error is   8.0855818161235553E-015
+           2         (2.9827307484651295,4.26964212364448759E-003) The error is   1.9148384176553601E-013
+           3        (2.9822279530249380,-1.97251726980937755E-003) The error is   1.5728115113133816E-011
+ pep_get_eigenvalue...
+alpha------------>   2.9844539   0.0009060
+ wall bc is used.
+ ncov=           4
+           0         (2.9849541515921540,2.06232803542061435E-004) The error is   4.1786293918277591E-015
+           1         (2.9857605923366606,9.06236567397968929E-004) The error is   6.4698607229510719E-016
+           2        (2.9835331045902271,-1.96192644966364498E-003) The error is   5.7139223190502744E-014
+           3         (2.9840395097521690,4.25963183811604862E-003) The error is   2.9363557326580400E-013
+ pep_get_eigenvalue...
+alpha------------>   2.9849542   0.0002062
+ wall bc is used.
+ ncov=           4
+           0         (2.9858986674709191,9.41586142718413890E-005) The error is   1.0385329247263535E-014
+           1         (2.9864139589109637,9.06360926110080811E-004) The error is   1.0767905618940376E-014
+           2        (2.9841856732527496,-1.95660396085054009E-003) The error is   5.4190557040995343E-015
+           3         (2.9846938973249197,4.25459970231485338E-003) The error is   9.7922302141422866E-012
+ pep_get_eigenvalue...
+alpha------------>   2.9858987   0.0000942
+ wall bc is used.
+ ncov=           4
+           0        (2.9866926851157971,-4.28700778255265962E-009) The error is   1.0662673318874771E-014
+           1         (2.9869631949564952,9.06465486213863837E-004) The error is   5.2840471724716330E-015
+           2        (2.9847342348351202,-1.95211569437322985E-003) The error is   3.5805519127500287E-014
+           3         (2.9852439952667629,4.25035555789313613E-003) The error is   3.3327096892097560E-011
+ pep_get_eigenvalue...
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+alpha------------>   2.9866927  -0.0000000
+ wall bc is used.
+ ncov=           3
+           0        (3.0056688986167406,-2.23559644281879927E-003) The error is   2.6010587347885805E-015
+           1         (3.0000828021959758,9.08968846262651550E-004) The error is   4.2533021206088799E-011
+           2        (2.9978366431448698,-1.84095020559227524E-003) The error is   1.7096217251866508E-010
+ pep_get_eigenvalue...
+alpha------------>   3.0056689  -0.0022356
+ wall bc is used.
+ ncov=           2
+           0        (3.0280619266121351,-4.83578470275564543E-003) The error is   2.7693199780461400E-015
+           1        (3.0361516721633253,-2.79480557470446721E-003) The error is   1.4982075179667109E-008
+ pep_get_eigenvalue...
+alpha------------>   3.0280619  -0.0048358
+ wall bc is used.
+ ncov=           2
+           0        (3.0504832592128990,-7.39571865395978641E-003) The error is   3.3971858506366654E-015
+           1        (3.0517176357151450,-2.70401194844722276E-003) The error is   4.7167318973188098E-011
+ pep_get_eigenvalue...
+alpha------------>   3.0504833  -0.0073957
+ wall bc is used.
+ ncov=           2
+           0        (3.0526546479166647,-7.64122155254773599E-003) The error is   7.9859556369846377E-015
+           1        (3.0532239586158973,-2.69488455520031176E-003) The error is   1.5292661015078769E-010
+ pep_get_eigenvalue...
+alpha------------>   3.0526546  -0.0076412
+ wall bc is used.
+ ncov=           1
+           0        (3.0751096024559770,-1.01539408464918213E-002) The error is   1.0513469529651709E-014
+ pep_get_eigenvalue...
+alpha------------>   3.0751096  -0.0101539
+ wall bc is used.
+ ncov=           1
+           0        (3.0975979073487352,-1.26205016131819749E-002) The error is   5.1458535523485343E-015
+ pep_get_eigenvalue...
+alpha------------>   3.0975979  -0.0126205
+ wall bc is used.
+ ncov=           1
+           0        (3.0997760701760804,-1.28566306982555029E-002) The error is   4.7498736473833714E-015
+ pep_get_eigenvalue...
+alpha------------>   3.0997761  -0.0128566
+ wall bc is used.
+ ncov=           1
+           0        (3.1223043218922588,-1.52686947032245370E-002) The error is   5.8853315148998867E-015
+ pep_get_eigenvalue...
+alpha------------>   3.1223043  -0.0152687
+ wall bc is used.
+ ncov=           1
+           0        (3.1448724446350727,-1.76270247320046876E-002) The error is   7.8393055716930659E-015
+ pep_get_eigenvalue...
+alpha------------>   3.1448724  -0.0176270
+ wall bc is used.
+ ncov=           1
+           0        (3.1470587049307848,-1.78522383964223562E-002) The error is   4.6980904404329857E-015
+ pep_get_eigenvalue...
+alpha------------>   3.1470587  -0.0178522
+ wall bc is used.
+ ncov=           1
+           0        (3.1696747647238532,-2.01464690106486384E-002) The error is   1.4212387932184486E-014
+ pep_get_eigenvalue...
+alpha------------>   3.1696748  -0.0201465
+ wall bc is used.
+ ncov=           1
+           0        (3.1923387241753085,-2.23767563729070015E-002) The error is   1.2811411706622356E-014
+ pep_get_eigenvalue...
+alpha------------>   3.1923387  -0.0223768
+ wall bc is used.
+ ncov=           1
+           0        (3.1945347098985115,-2.25889771683137307E-002) The error is   4.8755285786517594E-015
+ pep_get_eigenvalue...
+alpha------------>   3.1945347  -0.0225890
+ wall bc is used.
+ ncov=           1
+           0        (3.2172561564122404,-2.47420216713915599E-002) The error is   4.6157769028439288E-015
+ pep_get_eigenvalue...
+alpha------------>   3.2172562  -0.0247420
+ wall bc is used.
+ ncov=           1
+           0        (3.2400347741006019,-2.68170198300255735E-002) The error is   4.9035472380629168E-015
+ pep_get_eigenvalue...
+alpha------------>   3.2400348  -0.0268170
+ wall bc is used.
+ ncov=           1
+           0        (3.2422423632759245,-2.70133790046052612E-002) The error is   1.2508644763473714E-014
+ pep_get_eigenvalue...
+alpha------------>   3.2422424  -0.0270134
+ wall bc is used.
+ ncov=           1
+           0        (3.2650890566143937,-2.89929188805912591E-002) The error is   8.7651849282745601E-015
+ pep_get_eigenvalue...
+alpha------------>   3.2650891  -0.0289929
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+ wall bc is used.
+ ncov=           1
+           0        (3.2880027142348069,-3.08749021007895703E-002) The error is   7.6161217971947878E-015
+ pep_get_eigenvalue...
+alpha------------>   3.2880027  -0.0308749
+ wall bc is used.
+ ncov=           1
+           0        (3.2902238880933994,-3.10514329470114835E-002) The error is   3.7077352153150204E-015
+ pep_get_eigenvalue...
+alpha------------>   3.2902239  -0.0310514
+ wall bc is used.
+ ncov=           1
+           0        (3.3132161581900217,-3.28129072404757943E-002) The error is   8.4239677691780818E-015
+ pep_get_eigenvalue...
+alpha------------>   3.3132162  -0.0328129
+ wall bc is used.
+ ncov=           1
+           0        (3.3362844296479435,-3.44502216569270436E-002) The error is   8.2782482907703119E-015
+ pep_get_eigenvalue...
+alpha------------>   3.3362844  -0.0344502
+ wall bc is used.
+ ncov=           1
+           0        (3.3385210135134762,-3.46015173656405439E-002) The error is   2.0633970504380899E-014
+ pep_get_eigenvalue...
+alpha------------>   3.3385210  -0.0346015
+ wall bc is used.
+ ncov=           1
+           0        (3.3616766775769729,-3.60844937157247803E-002) The error is   2.6151443878346688E-015
+ pep_get_eigenvalue...
+alpha------------>   3.3616767  -0.0360845
+ wall bc is used.
+ ncov=           1
+           0        (3.3849148086004979,-3.74076968984335817E-002) The error is   3.6462892014626669E-015
+ pep_get_eigenvalue...
+alpha------------>   3.3849148  -0.0374077
+ wall bc is used.
+ ncov=           1
+           0        (3.3871681035930647,-3.75265188337268948E-002) The error is   1.0088710333634037E-014
+ pep_get_eigenvalue...
+alpha------------>   3.3871681  -0.0375265
+ wall bc is used.
+ ncov=           1
+           0        (3.4104983721117614,-3.86503462572648018E-002) The error is   4.6784523339884229E-015
+ pep_get_eigenvalue...
+alpha------------>   3.4104984  -0.0386503
+ wall bc is used.
+ ncov=           1
+           0        (3.4339125857799244,-3.95669817649736202E-002) The error is   3.0916877344787589E-015
+ pep_get_eigenvalue...
+alpha------------>   3.4339126  -0.0395670
+ wall bc is used.
+ ncov=           1
+           0        (3.4361828739593059,-3.96436837489480623E-002) The error is   7.3151079950441559E-015
+ pep_get_eigenvalue...
+alpha------------>   3.4361829  -0.0396437
+ wall bc is used.
+ ncov=           1
+           0        (3.4596866140503222,-4.03004828377011085E-002) The error is   1.9160274369050615E-014
+ pep_get_eigenvalue...
+alpha------------>   3.4596866  -0.0403005
+ wall bc is used.
+ ncov=           1
+           0        (3.4832665040052215,-4.06853443071810983E-002) The error is   1.4013440351506077E-014
+ pep_get_eigenvalue...
+alpha------------>   3.4832665  -0.0406853
+ wall bc is used.
+ ncov=           1
+           0        (3.4855521542519186,-4.07067381391301372E-002) The error is   1.0064080822054799E-014
+ pep_get_eigenvalue...
+alpha------------>   3.4855522  -0.0407067
+ wall bc is used.
+ ncov=           1
+           0        (3.5092040013341554,-4.07471645898047352E-002) The error is   1.1110358197681252E-014
+ pep_get_eigenvalue...
+alpha------------>   3.5092040  -0.0407472
+ wall bc is used.
+ ncov=           1
+           0        (3.5329028473042592,-4.04226985541463607E-002) The error is   1.7826712580962811E-014
+ pep_get_eigenvalue...
+alpha------------>   3.5329028  -0.0404227
+ wall bc is used.
+ ncov=           1
+           0        (3.5351977845469555,-4.03698519564576058E-002) The error is   4.2784887481115420E-015
+ pep_get_eigenvalue...
+alpha------------>   3.5351978  -0.0403699
+ wall bc is used.
+ ncov=           1
+           0        (3.5589123298772196,-3.95776017849739509E-002) The error is   8.3274384724255956E-015
+ pep_get_eigenvalue...
+alpha------------>   3.5589123  -0.0395776
+ wall bc is used.
+ ncov=           1
+           0        (3.5825856193068719,-3.82866633825577410E-002) The error is   5.5419079082895513E-015
+ pep_get_eigenvalue...
+alpha------------>   3.5825856  -0.0382867
+ wall bc is used.
+ ncov=           1
+           0        (3.5848714991795743,-3.81324968798267341E-002) The error is   1.0687520625304810E-014
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+ pep_get_eigenvalue...
+alpha------------>   3.5848715  -0.0381325
+ wall bc is used.
+ ncov=           1
+           0        (3.6083967588106147,-3.62088142253594938E-002) The error is   8.8497348599944956E-015
+ pep_get_eigenvalue...
+alpha------------>   3.6083968  -0.0362088
+ wall bc is used.
+ ncov=           1
+           0        (3.6316379912863970,-3.36395962930036846E-002) The error is   1.1434584759413280E-014
+ pep_get_eigenvalue...
+alpha------------>   3.6316380  -0.0336396
+ wall bc is used.
+ ncov=           1
+           0        (3.6338648557646498,-3.33552450723106006E-002) The error is   1.2518882371557365E-014
+ pep_get_eigenvalue...
+alpha------------>   3.6338649  -0.0333552
+ wall bc is used.
+ ncov=           1
+           0        (3.6565500310911161,-3.00547196355712490E-002) The error is   6.2463653107492907E-015
+ pep_get_eigenvalue...
+alpha------------>   3.6565500  -0.0300547
+ wall bc is used.
+ ncov=           1
+           0        (3.6784403195009450,-2.61786917741284667E-002) The error is   8.0308801128446348E-015
+ pep_get_eigenvalue...
+alpha------------>   3.6784403  -0.0261787
+ wall bc is used.
+ ncov=           1
+           0        (3.6805058989137494,-2.57813578894657489E-002) The error is   7.5943361393042998E-015
+ pep_get_eigenvalue...
+alpha------------>   3.6805059  -0.0257814
+ wall bc is used.
+ ncov=           1
+           0        (3.7012240819188076,-2.15957209449597308E-002) The error is   1.4129533657900768E-014
+ pep_get_eigenvalue...
+alpha------------>   3.7012241  -0.0215957
+ wall bc is used.
+ ncov=           1
+           0        (3.7208017117925789,-1.76195900691802528E-002) The error is   3.3448932628866724E-015
+ pep_get_eigenvalue...
+alpha------------>   3.7208017  -0.0176196
+ wall bc is used.
+ ncov=           1
+           0        (3.7226433977483659,-1.72644488641055111E-002) The error is   7.0866542842973940E-015
+ pep_get_eigenvalue...
+alpha------------>   3.7226434  -0.0172644
+ wall bc is used.
+ ncov=           1
+           0        (3.7412989347351564,-1.40211648012635807E-002) The error is   7.0618476403526261E-015
+ pep_get_eigenvalue...
+alpha------------>   3.7412989  -0.0140212
+ wall bc is used.
+ ncov=           1
+           0        (3.7596096427842567,-1.15679975813661982E-002) The error is   1.9708498716913668E-014
+ pep_get_eigenvalue...
+alpha------------>   3.7596096  -0.0115680
+ wall bc is used.
+ ncov=           1
+           0        (3.7613779720096319,-1.13669851681582109E-002) The error is   1.4511098626216404E-014
+ pep_get_eigenvalue...
+alpha------------>   3.7613780  -0.0113670
+ wall bc is used.
+ ncov=           1
+           0        (3.7796914543147140,-9.56916013510970831E-003) The error is   3.5600572140209954E-015
+ pep_get_eigenvalue...
+alpha------------>   3.7796915  -0.0095692
+ wall bc is used.
+ ncov=           1
+           0        (3.7981171512868368,-8.12297195832362498E-003) The error is   3.0367221026804182E-015
+ pep_get_eigenvalue...
+alpha------------>   3.7981172  -0.0081230
+ wall bc is used.
+ ncov=           1
+           0        (3.7999059177860510,-7.99512391138699000E-003) The error is   4.0826959440014699E-015
+ pep_get_eigenvalue...
+alpha------------>   3.7999059  -0.0079951
+ wall bc is used.
+ ncov=           1
+           0        (3.8184300657129056,-6.75800509773236222E-003) The error is   1.5195825942169356E-014
+ pep_get_eigenvalue...
+alpha------------>   3.8184301  -0.0067580
+ wall bc is used.
+ ncov=           1
+           0        (3.8369941336967273,-5.63388528163580315E-003) The error is   6.1637065923099716E-015
+ pep_get_eigenvalue...
+alpha------------>   3.8369941  -0.0056339
+ wall bc is used.
+ ncov=           1
+           0        (3.8387912891923808,-5.52980610094866432E-003) The error is   5.1092008322180711E-015
+ pep_get_eigenvalue...
+alpha------------>   3.8387913  -0.0055298
+ wall bc is used.
+ ncov=           1
+           0        (3.8573580933616030,-4.49666648556127421E-003) The error is   7.2239281412930102E-015
+ pep_get_eigenvalue...
+alpha------------>   3.8573581  -0.0044967
+ wall bc is used.
+ ncov=           1
+           0        (3.8759065326736621,-3.53451745116167837E-003) The error is   7.6359417868675655E-015
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+ pep_get_eigenvalue...
+alpha------------>   3.8759065  -0.0035345
+ wall bc is used.
+ ncov=           1
+           0        (3.8777001604446251,-3.44492510391649883E-003) The error is   5.5806138984776450E-015
+ pep_get_eigenvalue...
+alpha------------>   3.8777002  -0.0034449
+ wall bc is used.
+ ncov=           1
+           0        (3.8962177142489383,-2.55339342809553704E-003) The error is   7.2731893719051877E-015
+ pep_get_eigenvalue...
+alpha------------>   3.8962177  -0.0025534
+ wall bc is used.
+ ncov=           1
+           0        (3.9147026250085206,-1.72070953753969240E-003) The error is   1.0936527522780166E-014
+ pep_get_eigenvalue...
+alpha------------>   3.9147026  -0.0017207
+ wall bc is used.
+ ncov=           2
+           0        (3.9164896697235454,-1.64306296265850633E-003) The error is   4.1200554463274235E-015
+           1         (3.9114451274813797,2.47422266746295198E-003) The error is   1.9429997594637582E-008
+ pep_get_eigenvalue...
+alpha------------>   3.9164897  -0.0016431
+ wall bc is used.
+ ncov=           1
+           0        (3.9349364913167784,-8.69197816617523758E-004) The error is   4.1511672889384082E-015
+ pep_get_eigenvalue...
+alpha------------>   3.9349365  -0.0008692
+ wall bc is used.
+ ncov=           2
+           0        (3.9533474767051864,-1.44097201843127051E-004) The error is   1.2235634591355344E-014
+           1         (3.9557619979362171,3.82061501857889349E-003) The error is   1.9693537048670393E-009
+ pep_get_eigenvalue...
+alpha------------>   3.9533475  -0.0001441
+ wall bc is used.
+ ncov=           1
+           0        (3.9551272566604783,-7.63544846941932771E-005) The error is   3.5432234883901098E-015
+ pep_get_eigenvalue...
+alpha------------>   3.9551273  -0.0000764
+ wall bc is used.
+ ncov=           2
+           0         (3.9734981726097161,6.00079807712900252E-004) The error is   2.8475979508862343E-015
+           1         (3.9739501163847804,3.82447642701986461E-003) The error is   8.8820464742155189E-011
+ pep_get_eigenvalue...
+alpha------------>   3.9734982   0.0006001
+ wall bc is used.
+ ncov=           2
+           0         (3.9918320841925787,1.23606053041734479E-003) The error is   4.9841225446698031E-015
+           1         (3.9905334668938806,3.82798850237518187E-003) The error is   6.1962213777777796E-011
+ pep_get_eigenvalue...
+alpha------------>   3.9918321   0.0012361
+ wall bc is used.
+ ncov=           1
+           0        (3.9551272566604783,-7.63544846942059081E-005) The error is   6.4037135301812158E-015
+ pep_get_eigenvalue...
+alpha------------>   3.9551273  -0.0000764
+ wall bc is used.
+ ncov=           2
+           0         (3.9573730939805061,8.55638309803499880E-006) The error is   3.7190103204889687E-015
+           1         (3.9593923432178388,3.82137958138112962E-003) The error is   6.2554535450896849E-009
+ pep_get_eigenvalue...
+alpha------------>   3.9573731   0.0000086
+ wall bc is used.
+ ncov=           1
+           0        (3.9551272566604783,-7.63544846941896044E-005) The error is   9.2724427211702057E-015
+ pep_get_eigenvalue...
+alpha------------>   3.9551273  -0.0000764
+ wall bc is used.
+ ncov=           2
+           0        (3.9553605044800419,-6.75062645403386776E-005) The error is   2.5296165532946351E-015
+           1         (3.9575771701084337,3.82099676605760332E-003) The error is   1.3039254217916065E-008
+ pep_get_eigenvalue...
+alpha------------>   3.9553605  -0.0000675
+ wall bc is used.
+ ncov=           2
+           0         (3.9571467171520327,2.62099538086799929E-008) The error is   1.4804551328479048E-014
+           1         (3.9591881520666568,3.82133648130953112E-003) The error is   5.0541712181584054E-009
+ pep_get_eigenvalue...
+alpha------------>   3.9571467   0.0000000
+ wall bc is used.
+ ncov=           2
+           0         (3.9936043625166939,1.29557988971537412E-003) The error is   1.1567756980724786E-014
+           1         (3.9921383034538231,3.82832712801230027E-003) The error is   1.0337985357537105E-011
+ pep_get_eigenvalue...
+alpha------------>   3.9936044   0.0012956
+ wall bc is used.
+ ncov=           2
+           0         (4.0118974233517530,1.89064678742131929E-003) The error is   1.4091205164356928E-014
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+LST_LOCAL is done. 
+[WARNING] yaksa: 4 leaked handle pool objects
+           1         (4.0087215661696334,3.83189810636790128E-003) The error is   8.0046640988705331E-010
+ pep_get_eigenvalue...
+alpha------------>   4.0118974   0.0018906
+ wall bc is used.
+ ncov=           1
+           0         (4.0301528867334859,2.45093246532040576E-003) The error is   4.7355705013516631E-015
+ pep_get_eigenvalue...
+alpha------------>   4.0301529   0.0024509
+ wall bc is used.
+ ncov=           2
+           0         (4.0319175419347877,2.50338644130784944E-003) The error is   6.7757893312261941E-015
+           1         (4.0269096681734071,3.83598896511990308E-003) The error is   7.0752779582392983E-010
+ pep_get_eigenvalue...
+alpha------------>   4.0319175   0.0025034
+ wall bc is used.
+ ncov=           2
+           0         (4.0501316199191937,3.02780856920933320E-003) The error is   7.8886500050470801E-015
+           1         (4.0531378076666655,5.33024690692837123E-003) The error is   4.1997592385910028E-009
+ pep_get_eigenvalue...
+alpha------------>   4.0501316   0.0030278
+ wall bc is used.
+ ncov=           2
+           0         (4.0683080223333956,3.52103710071318896E-003) The error is   1.2216289701596009E-014
+           1         (4.0697635829170782,5.33762246924388180E-003) The error is   3.5814827664282955E-012
+ pep_get_eigenvalue...
+alpha------------>   4.0683080   0.0035210
+ wall bc is used.
+ ncov=           2
+           0         (4.0700650259054729,3.56714988685645539E-003) The error is   1.3869949412793830E-014
+           1         (4.0713725475059199,5.33836415063500529E-003) The error is   4.1862891983037377E-009
+ pep_get_eigenvalue...
+alpha------------>   4.0700650   0.0035671
+ wall bc is used.
+ ncov=           2
+           0         (4.0881995441677397,4.02773471233593052E-003) The error is   5.8858852122913419E-015
+           1         (4.0879993833753518,5.34592784264457683E-003) The error is   2.7320909498037758E-013
+ pep_get_eigenvalue...
+alpha------------>   4.0881995   0.0040277
+ wall bc is used.
+ ncov=           2
+           0         (4.1062981375084036,4.46153633394685226E-003) The error is   9.5376305617988823E-015
+           1         (4.1046255646055219,5.35175861294863355E-003) The error is   6.5519955149130569E-013
+ pep_get_eigenvalue...
+alpha------------>   4.1062981   0.0044615
+ wall bc is used.
+ ncov=           2
+           0         (4.1062344580292391,5.35238363728955408E-003) The error is   1.3090342638095022E-014
+           1         (4.1080477939894084,4.50197699396252642E-003) The error is   9.0399656378655239E-015
+ pep_get_eigenvalue...
+alpha------------>   4.1062345   0.0053524
+ wall bc is used.
+ ncov=           2
+           0         (4.1111361141492990,1.46039094195186039E-002) The error is   6.0219276878983842E-013
+           1         (4.0992221972251404,1.31667647551476051E-002) The error is   1.1644336688782632E-011
+ pep_get_eigenvalue...
+alpha------------>   4.1111361   0.0146039
+ wall bc is used.
+ ncov=           2
+           0         (4.1171062237611249,2.15606005549069009E-002) The error is   9.7860354912184943E-015
+           1         (4.1172137494785517,2.61377560764126868E-002) The error is   8.0713510223955831E-015
+ pep_get_eigenvalue...
+alpha------------>   4.1171062   0.0215606
+ wall bc is used.
+ ncov=           1
+           0        (3.5000383336164287,-4.07719251593885237E-002) The error is   5.1021090091930968E-015
+ pep_get_eigenvalue...
+alpha------------>   3.5000383  -0.0407719
+ Neutral task=          37  result=converged prefix=out/neutral

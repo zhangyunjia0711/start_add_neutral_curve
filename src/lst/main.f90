@@ -24,11 +24,14 @@ program LST_prog
   use mod_metrics
   use mod_flow_grad
   use mod_lst
+  use mod_neutral_curve, only: neutral_exit_code, neutral_batch_enabled
 
   implicit none
 
   character(len=256) :: cfg_file
 
+  logical :: neutral_requested
+  integer :: comm_size
   PetscBool :: set
 
   call SLEPCInitialize(PETSC_NULL_CHARACTER, ierr)
@@ -45,6 +48,15 @@ program LST_prog
   endif
 
   call cfg_loader(trim(cfg_file))
+  neutral_requested=.false.
+  if (rank==0) neutral_requested=neutral_batch_enabled()
+  call MPI_Bcast(neutral_requested,1,MPI_LOGICAL,0,PETSC_COMM_WORLD,ierr)
+  call MPI_Comm_size(PETSC_COMM_WORLD,comm_size,ierr)
+  if (neutral_requested .and. comm_size/=1) then
+    call PetscPrintf(PETSC_COMM_WORLD,"Neutral curves require a single MPI process.\n",ierr)
+    call SLEPCFinalize(ierr)
+    stop 1
+  end if
 
   call load_info(PETSC_COMM_WORLD)
 
@@ -55,6 +67,7 @@ program LST_prog
   call solve_lst()
 
   call SLEPCFinalize(ierr)
+  if (neutral_exit_code/=0) stop 1
 
   ! CHKERRA(ierr)
 

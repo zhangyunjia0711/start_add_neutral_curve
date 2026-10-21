@@ -1,0 +1,604 @@
+{
+  "baseline_commit": "7b12c3c37a47ee9caa664c6e08815c5dd976a335",
+  "baseline_branch": "backup/original-before-neutral-20261021",
+  "original_head": "60445c4b49a88cecd2bfa98755d0de87990cb75f",
+  "remote": "https://gitee.com/ltlx_at_tju/START_ALL_IN_ONE.git",
+  "full_archive_sha256": "84f9d2f50c734f9b7cd9da83fcda57eb7db72f28c719d0900b5f8829b56517ff",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 46,
+      "sha256": "c2a503be90f8d791b38bc2f159fcb3f4430153f701a7340891334d84efe8efaf"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 2950,
+      "sha256": "ac6fc47b26ecb61c148e80e0763a2a598f45641bdc8d92219649cdbbfe98f809"
+    },
+    {
+      "path": "doc/css/style.css",
+      "bytes": 19174,
+      "sha256": "ebc60cf3cb60c8dee8612259d5b5c3515508417c8f83dd95dec2be66e6d0e5b4"
+    },
+    {
+      "path": "doc/docs.md",
+      "bytes": 3054,
+      "sha256": "1556353539e38a56c65489ef570b91a7943a85ffdc103db7661a5f0747540d9d"
+    },
+    {
+      "path": "doc/pages/1.theory/1.1.formular.md",
+      "bytes": 20,
+      "sha256": "44e3fbd9bda0f308e536e8a8722a2b07cb122b78e12e37417426ea0385f4c456"
+    },
+    {
+      "path": "doc/pages/1.theory/1.2.schemes.md",
+      "bytes": 22,
+      "sha256": "708044619833a8e99fb0dca54a9cc7774c26abe2f0376e62370f1f86235d928d"
+    },
+    {
+      "path": "doc/pages/1.theory/index.md",
+      "bytes": 49,
+      "sha256": "20a8da1ea489783dbc9d12edff71bd35ccaf6901fc2599d88918329aa440fbd5"
+    },
+    {
+      "path": "doc/pages/2.guide/2.1.install.md",
+      "bytes": 1670,
+      "sha256": "4956ee0c0b240b89eac69a3bc730cc6c5c9664130ef5a2454a82a54c93a8f1a8"
+    },
+    {
+      "path": "doc/pages/2.guide/2.2.run.md",
+      "bytes": 1142,
+      "sha256": "e601b1b2e63a583a75aeb9edd891c0ff57a9580b8a235ae1fa80c27d96b8743d"
+    },
+    {
+      "path": "doc/pages/2.guide/2.3.config_file.md",
+      "bytes": 1448,
+      "sha256": "a6d75d05788c2c67774554c5ae951ffcac2e50e7c13190059f59ce015651ae32"
+    },
+    {
+      "path": "doc/pages/2.guide/2.4.pre-process.md",
+      "bytes": 2334,
+      "sha256": "a0ceb29ff229a74812a829ba7209b4452140b7fb71f6759563998a105d915a74"
+    },
+    {
+      "path": "doc/pages/2.guide/2.5.post-process.md",
+      "bytes": 146,
+      "sha256": "adff4bc5f2fca89cfde3fbd20a41ec12bfb3a029bd9dcfcaa27472009d904a9b"
+    },
+    {
+      "path": "doc/pages/2.guide/index.md",
+      "bytes": 181,
+      "sha256": "75758f0c279b32f1479b17748d2b223a37f0607ef83cb198fe78c2ac59f241fe"
+    },
+    {
+      "path": "doc/pages/3.examples/ex1.md",
+      "bytes": 17,
+      "sha256": "6190336123ded7fbdfad158da5541048941273bfde83fa4b4d9559e19495ef6c"
+    },
+    {
+      "path": "doc/pages/3.examples/ex2.md",
+      "bytes": 17,
+      "sha256": "6c45438655d0e7ec396661e9bd6660dbed8ecbccca412b09a01504c9d4e16678"
+    },
+    {
+      "path": "doc/pages/3.examples/index.md",
+      "bytes": 37,
+      "sha256": "8171b17be918c5867b18c10887271748d06e4a2870d8808d72d792d4978b28af"
+    },
+    {
+      "path": "doc/pages/index.md",
+      "bytes": 363,
+      "sha256": "6ec73f0ce63e1864ae229977bdcea8f31a48b2abd70240cab24d6d49866aa516"
+    },
+    {
+      "path": "doc/script/plot3d_to_hdf5.m",
+      "bytes": 2641,
+      "sha256": "aa1278b766d7cca05e11ee484a28d994652cce7a0a308fa538c9f79fac22c297"
+    },
+    {
+      "path": "doc/template/LPSE.config.ini",
+      "bytes": 483,
+      "sha256": "b327a6c2dd26451938a53f0b7bf6cc96a09c8610fb197a40d1969a8698b3fcd3"
+    },
+    {
+      "path": "doc/template/LST.config.ini",
+      "bytes": 510,
+      "sha256": "de9f08c7f200d27c03f464baa7268f80c454221feda36765cd91e268ffbcd91f"
+    },
+    {
+      "path": "doc/template/NPSE.config.ini",
+      "bytes": 717,
+      "sha256": "1284edf1144e7e1cc03408bee39fc093426cceca62fbfc77b1c73c7636417613"
+    },
+    {
+      "path": "doc/template/OSG.config.ini",
+      "bytes": 423,
+      "sha256": "ce27608c974c5147ef74ecbf5b9a9d474e48dbab940e3cc4e074c7a73e4a4664"
+    },
+    {
+      "path": "lst_test/lst_test/config.ini",
+      "bytes": 843,
+      "sha256": "3db34c4e0877439806cffd89ac8547ba3258ebaf4ba94a86dddad8efb3d02900"
+    },
+    {
+      "path": "lst_test/lst_test/in/flow.h5",
+      "bytes": 8082048,
+      "sha256": "9fa698a82262359d215cf7fc426fa683d145f3356ef5fa20af07a31388ff9eed"
+    },
+    {
+      "path": "lst_test/lst_test/in/flu2.h5",
+      "bytes": 5203328,
+      "sha256": "46fb131d24f3232387ba2dbdb9d3f75010287ea7e9691584d2e94bdb8b9b3005"
+    },
+    {
+      "path": "lst_test/lst_test/in/grid.h5",
+      "bytes": 3234048,
+      "sha256": "73147e605b8ce316b29df85a25708e6e5f751f19f21089a25b6713e3cf9feaf1"
+    },
+    {
+      "path": "lst_test/lst_test/in/grid2.h5",
+      "bytes": 2082560,
+      "sha256": "9c00cf07919987dd1069381e46e0a873b716735a785e1ca483302912e072d59b"
+    },
+    {
+      "path": "lst_test/lst_test/out/360973fa6a123e73ef11d684c34c358.png",
+      "bytes": 73519,
+      "sha256": "9b401e588d9b2ec6ccb17ab26fc34e1aca27e932024edebdfb67c649059f3f51"
+    },
+    {
+      "path": "lst_test/lst_test/out/LST_LOCAL_eigenvalues.plt",
+      "bytes": 7987,
+      "sha256": "947285a8ff77a78025a5c5610a8d65b17c9a54d0d9c5283a530ace7426d6f478"
+    },
+    {
+      "path": "lst_test/lst_test/out/LST_eigenfunction_i=480.plt",
+      "bytes": 41301,
+      "sha256": "14e081354d63ff8cfcdcb27b169f1228da016c33eadc256e05004440007cf027"
+    },
+    {
+      "path": "lst_test/lst_test/out/N-START-w=0, b=4.plt",
+      "bytes": 38334,
+      "sha256": "e6c4ee3ab025957fc66f1a5a3a438ba4dd70f0dafcf93808627aad06c47b2c30"
+    },
+    {
+      "path": "lst_test/lst_test/out/START-w=0, b=4.dat",
+      "bytes": 180083,
+      "sha256": "3ec9f2be2fb747b03ec9fc7cf73073a9df33aa479831492e620fb755744c2819"
+    },
+    {
+      "path": "lst_test/lst_test/out/START.plt",
+      "bytes": 180174,
+      "sha256": "459d0010eb0f2ee4e9ef398e356e3cabf08f4a7744759fb861553c739d3a53d9"
+    },
+    {
+      "path": "lst_test/lst_test/out/disturbance.petsc",
+      "bytes": 8088,
+      "sha256": "402be0469194354823ebef95cae5141000a11cc99f9ddeae1c7ca481bd726335"
+    },
+    {
+      "path": "lst_test/lst_test/out/disturbance.petsc.info",
+      "bytes": 22,
+      "sha256": "8c9d1486a1e851b680d9577017baa9e2d9221aad1660b70bea7657b83a8c9765"
+    },
+    {
+      "path": "lst_test/lst_test/out/integrate_N.ipynb",
+      "bytes": 32385,
+      "sha256": "baaa98da635374be59f887b79c940325e67148b51da9853db0632e3887d34e42"
+    },
+    {
+      "path": "lst_test/lst_test/out/untitled.lay",
+      "bytes": 3652,
+      "sha256": "94b9ff89dd1bbace70daa8069b64e0a6faddfb804183c0b2aa6d054773dcc201"
+    },
+    {
+      "path": "lst_test/lst_test/微信图片_20250414192407.png",
+      "bytes": 58218,
+      "sha256": "710094538ae025a18efe1d965750e880a83538b3b16a17877647933583f2b575"
+    },
+    {
+      "path": "src/atnpse/CMakeLists.txt",
+      "bytes": 867,
+      "sha256": "79a6c9fe386d2e80be6df269c9862efc4b12811d1cae6cb94210ab5a6056176a"
+    },
+    {
+      "path": "src/atnpse/cfgio_adapter.f90",
+      "bytes": 18909,
+      "sha256": "141241d80dc9d79a23ab5cd4b72e5340d74bd49a120dfe66fc6c91208e0e76d1"
+    },
+    {
+      "path": "src/atnpse/global_parameters.f90",
+      "bytes": 3388,
+      "sha256": "1fc7c88227e5e88367c4a4ecb36a7e06ba5348da2d4856e7b947756a13d46da6"
+    },
+    {
+      "path": "src/atnpse/main.f90",
+      "bytes": 1636,
+      "sha256": "30beae38715f37ba4cecca9ba8315e3729718c8e691a216418a513c20cc45c77"
+    },
+    {
+      "path": "src/atnpse/mod_nonlinear_term_atnpse.f90",
+      "bytes": 72662,
+      "sha256": "386c3854823e7caf1f62e6e6bb6528713adf12a320a53956a5319661d13118f7"
+    },
+    {
+      "path": "src/atnpse/module_atnpse.f90",
+      "bytes": 36536,
+      "sha256": "df2d956e27ba93c42a8e80f1dc31e73b502ee11993db8e3263dbc6655d88d52f"
+    },
+    {
+      "path": "src/include/start.f90",
+      "bytes": 2481,
+      "sha256": "a15b4cb03fc7a479fd4567b1d72c28b5c2fc5b4ed249c269611c70f0b80039fd"
+    },
+    {
+      "path": "src/lpse/CMakeLists.txt",
+      "bytes": 628,
+      "sha256": "c92905dfee42ff50cefa4550bdd76da19e1215303783b6cae62cd9c3d512ad1c"
+    },
+    {
+      "path": "src/lpse/alpse_eqn.f90",
+      "bytes": 60706,
+      "sha256": "40ed6a70dc17246b27e4b8cb4fe31de7c3231771f383f946f33dfbf95a1802f3"
+    },
+    {
+      "path": "src/lpse/cfgio_adapter.f90",
+      "bytes": 12243,
+      "sha256": "131dbf7fbc0465873c834d39fcc45392cf647fe157444bc487321e170b14cc84"
+    },
+    {
+      "path": "src/lpse/global_parameters.f90",
+      "bytes": 2595,
+      "sha256": "5aa341d9b484e3279461fc05c44b4c373da50cf8c5a0bcb819155b1476725a02"
+    },
+    {
+      "path": "src/lpse/lpse_eqn.f90",
+      "bytes": 51198,
+      "sha256": "61904f72719cff53e133deffc06c725f88ea994bc8f2251f1f8481594d9dc225"
+    },
+    {
+      "path": "src/lpse/lpse_solver_abstract.f90",
+      "bytes": 6961,
+      "sha256": "c1747d7e2af3382d3b202251d7b9d77bfea73a79c2c00df1d8ea3a31c53d6562"
+    },
+    {
+      "path": "src/lpse/main.f90",
+      "bytes": 1617,
+      "sha256": "ef3e31244802e2f5c06ea80bcbaddbfcec4b1eddc8f7afd785f6d7335e119673"
+    },
+    {
+      "path": "src/lpse/module_lpse.f90",
+      "bytes": 16058,
+      "sha256": "170257d0f3e25d0cad60f0e637b325ad0438db065d25892744db6bfdff2171b4"
+    },
+    {
+      "path": "src/lpse_receptivity/CMakeLists.txt",
+      "bytes": 875,
+      "sha256": "3ecc8f54e23c451e076c84a087fed5dd97e4d7366c52c1dee4d4094ea9b6bb6c"
+    },
+    {
+      "path": "src/lpse_receptivity/cfgio_adapter.f90",
+      "bytes": 10850,
+      "sha256": "9ecf256010a68c65b3248b0979a5fe836648234dcb715541451442dfcec800ae"
+    },
+    {
+      "path": "src/lpse_receptivity/global_parameters.f90",
+      "bytes": 2653,
+      "sha256": "24b2cdd0a13c6edcb8446b97f27d5273411ed0aefcc7ae4f3ef463d82af43668"
+    },
+    {
+      "path": "src/lpse_receptivity/main.f90",
+      "bytes": 1701,
+      "sha256": "e6d9cdb465e1fbbc3300563bf27554975da5dfda993f820ece173aea0bf1ce68"
+    },
+    {
+      "path": "src/lpse_receptivity/module_lpse_receptivity.f90",
+      "bytes": 23647,
+      "sha256": "489ccb60d1c25826ecba54014a9182dcc237442593dd34440fdf81d10a82b1ae"
+    },
+    {
+      "path": "src/lst/CMakeLists.txt",
+      "bytes": 462,
+      "sha256": "61b918c7ea707134204663bb1f215fa9d66f6100d23d0e64e49d0e4105667725"
+    },
+    {
+      "path": "src/lst/alst_eqn.f90",
+      "bytes": 51120,
+      "sha256": "7441f7b38969b861ea9b2e76bc789bc751e28b5ba2cab9be0784a346db5d0954"
+    },
+    {
+      "path": "src/lst/build/CMakeCache.txt",
+      "bytes": 14428,
+      "sha256": "04381255d3316932b8e2825b655960249dfe680b2ae39a3d2638a219a5366341"
+    },
+    {
+      "path": "src/lst/build/CMakeFiles/3.25.2/CMakeCCompiler.cmake",
+      "bytes": 2412,
+      "sha256": "7290c40d91de847b706d03044ba55e9b3b454b13670d0a55fdf011c16ef44054"
+    },
+    {
+      "path": "src/lst/build/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake",
+      "bytes": 5386,
+      "sha256": "8cfb9b239d1295bb813901eee168368428f69e2eafcdd68a1ca52ca4a0383c77"
+    },
+    {
+      "path": "src/lst/build/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin",
+      "bytes": 16656,
+      "sha256": "3be1f453159bc8a0d583e4326dfd47e040d2af3035b240867b6b80ef7d199c59"
+    },
+    {
+      "path": "src/lst/build/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin",
+      "bytes": 16680,
+      "sha256": "f933b13b31986a32c54b9c7c0c976185dfa523b2fdb46bc72c539ca62f86ffb0"
+    },
+    {
+      "path": "src/lst/build/CMakeFiles/3.25.2/CMakeSystem.cmake",
+      "bytes": 470,
+      "sha256": "a796343f60707ba5585e063bd3ddcf4179fc81bcfc03e5679ae65394438679b5"
+    },
+    {
+      "path": "src/lst/build/CMakeFiles/3.25.2/CompilerIdC/CMakeCCompilerId.c",
+      "bytes": 26520,
+      "sha256": "d935d5133e8d5b88e5c4873925a8233b6aeb73d3963575f3e9b1e8cc91b7fd87"
+    },
+    {
+      "path": "src/lst/build/CMakeFiles/3.25.2/CompilerIdC/a.out",
+      "bytes": 16776,
+      "sha256": "d6cb5cfa45da5e10183cb50dc61d04c8226331eb2f55be4d08d48dcce33aa11c"
+    },
+    {
+      "path": "src/lst/build/CMakeFiles/3.25.2/CompilerIdCXX/CMakeCXXCompilerId.cpp",
+      "bytes": 26294,
+      "sha256": "04001e87fc8cef78e4674853ace8963fd70b0abf302be451e2971f9899ad664e"
+    },
+    {
+      "path": "src/lst/build/CMakeFiles/3.25.2/CompilerIdCXX/a.out",
+      "bytes": 16784,
+      "sha256": "fcf634c110c50c99122cfd5e6b7c697997fc5892133653c911f664ce6d3dc80a"
+    },
+    {
+      "path": "src/lst/build/CMakeFiles/CMakeOutput.log",
+      "bytes": 44998,
+      "sha256": "ad5a3b7b729fb4b777bc5b94769ae0fc795c05b4b29a795e4512f591d447412d"
+    },
+    {
+      "path": "src/lst/build/CMakeFiles/cmake.check_cache",
+      "bytes": 85,
+      "sha256": "a26189e394421da57f45706a07713c5720acd200a41711b0c0c590c3c63371c4"
+    },
+    {
+      "path": "src/lst/cfgio_adapter.f90",
+      "bytes": 13410,
+      "sha256": "ea2f8d9219d8dc571dd28eb6fa8054e850c3111d396668fe830782a03b49388c"
+    },
+    {
+      "path": "src/lst/global_parameters.f90",
+      "bytes": 2435,
+      "sha256": "ed419a1f68614d7afb35a334373921f1ecab217f1b6d434d0fe63a2fb0b9cda1"
+    },
+    {
+      "path": "src/lst/lst_eqn.f90",
+      "bytes": 47367,
+      "sha256": "6e22a5229f74ca7f07173be9dffed0b87b79a54f3f1b7c77d5b897fc4a8dc570"
+    },
+    {
+      "path": "src/lst/lst_solver_abstract.f90",
+      "bytes": 6609,
+      "sha256": "b0afce39f38b06915477b9bfbac8037843b588052ee11216383e8846e63d82b2"
+    },
+    {
+      "path": "src/lst/main.f90",
+      "bytes": 1565,
+      "sha256": "6e4df2c96c6cd9bbb785202c0da9d8e491f48981d196621833d5eaa1217ca3dc"
+    },
+    {
+      "path": "src/lst/module_lst.f90",
+      "bytes": 21179,
+      "sha256": "f9c7273fd78378eb0c5c101a8036f56110a2d4d0e225c84835411adec7ac9ea7"
+    },
+    {
+      "path": "src/lst_receptivity/CMakeLists.txt",
+      "bytes": 703,
+      "sha256": "4a9dd293091c1367dfe95e4721c204bf4f0ae8849518d27e98e132583f8d3de1"
+    },
+    {
+      "path": "src/lst_receptivity/cfgio_adapter.f90",
+      "bytes": 9426,
+      "sha256": "b6a81a16a079984f06d1cbdb74ef9201c1404461bcad4e7659b18b33573d70d6"
+    },
+    {
+      "path": "src/lst_receptivity/global_parameters.f90",
+      "bytes": 2554,
+      "sha256": "b4eee293cef091c321a644df6232d937055e894fb7991532b88ed8f11a00631e"
+    },
+    {
+      "path": "src/lst_receptivity/main.f90",
+      "bytes": 1694,
+      "sha256": "d91a7057985e40f6d076c325a861488aea83f7c88d663f8d154581a2611dee98"
+    },
+    {
+      "path": "src/lst_receptivity/module_lst_recptivity.f90",
+      "bytes": 11134,
+      "sha256": "8fd54ee82f523e49eff4428501d4b77f1a3e143237e5dec6f6c3e34e2a13f061"
+    },
+    {
+      "path": "src/lst_receptivity_new/CMakeLists.txt",
+      "bytes": 735,
+      "sha256": "d8421782b006860b605652bbea2e4c1a66942311b62bae763850845b61e9c7dd"
+    },
+    {
+      "path": "src/lst_receptivity_new/cfgio_adapter.f90",
+      "bytes": 9597,
+      "sha256": "0125eb9e750163086f3e985c72ac649faba178773acef50bfcda5325b1c93e03"
+    },
+    {
+      "path": "src/lst_receptivity_new/global_parameters.f90",
+      "bytes": 2666,
+      "sha256": "17df8962fd2782d631624f09d2e03faca4b9fddf5b3600ed9f637c8694011ea6"
+    },
+    {
+      "path": "src/lst_receptivity_new/main.f90",
+      "bytes": 1754,
+      "sha256": "0513e89aaf45ab500a9f5cca9b7c08ba48db47eaf666356407680b995ccd7e76"
+    },
+    {
+      "path": "src/lst_receptivity_new/module_lst_receptivity.f90",
+      "bytes": 19630,
+      "sha256": "5198830481ece066687810a6962aaa6d477a44f1b40a16a67f337e6e6d609de8"
+    },
+    {
+      "path": "src/npse/CMakeLists.txt",
+      "bytes": 691,
+      "sha256": "27b86eb0b8d80bf8f0112c52491baf1d024b5a392196cb61a779228e287a909f"
+    },
+    {
+      "path": "src/npse/cfgio_adapter.f90",
+      "bytes": 19061,
+      "sha256": "6be8364da79f4900c6c3ce9b6c5eb24c4d8422785c912031e76891171ee27ea9"
+    },
+    {
+      "path": "src/npse/global_parameters.f90",
+      "bytes": 3338,
+      "sha256": "f978495865c9e98a2548ce09aecff98cd2d4d0ad17e506cdc9b4799e0f5d8df0"
+    },
+    {
+      "path": "src/npse/main.f90",
+      "bytes": 1624,
+      "sha256": "028be754ebd411764ff1ce7dea003e0d24f90c63f2bf622042b6b241ef5916f2"
+    },
+    {
+      "path": "src/npse/mod_nonlinear_term.f90",
+      "bytes": 56876,
+      "sha256": "778bca5fd237726e72f9f6aa94f17f77c0006defb46b32c4b1a733380d18d32e"
+    },
+    {
+      "path": "src/npse/module_fft.f90",
+      "bytes": 7892,
+      "sha256": "0e92f25b00f80c54220eaf3110b6302ee766c2f83a82349dc7485fff4eb25dbc"
+    },
+    {
+      "path": "src/npse/module_npse.f90",
+      "bytes": 28983,
+      "sha256": "ff6a4fc9f627a30b6f069b2e067356ba98502ba4a93662793a050e5dcfc56e9f"
+    },
+    {
+      "path": "src/npse/module_petsc_fft.f90",
+      "bytes": 10172,
+      "sha256": "483047fc3459a69487b2596cc5251b538efd87abc916133c9091757d3f68d072"
+    },
+    {
+      "path": "src/npse/npse_eqn.f90",
+      "bytes": 37941,
+      "sha256": "c7a29bc11335f2c99655a7564c58c262a9907c81113fe47a45c9df84b004bbc0"
+    },
+    {
+      "path": "src/osg/CMakeLists.txt",
+      "bytes": 734,
+      "sha256": "20b54faba16b6cfec3de88f6432e2d8a985188608323559d205cca97fe5daa10"
+    },
+    {
+      "path": "src/osg/cfgio_adapter.f90",
+      "bytes": 11007,
+      "sha256": "14cfb431ee4df0a83a6afab8ff8abc80ec7e13222c35464e46909955c6cf1ea6"
+    },
+    {
+      "path": "src/osg/global_parameters.f90",
+      "bytes": 2750,
+      "sha256": "f645ef20a8d1ceae3d6b41802055e53ef61ea347f87c912ac775bc96a2672bd8"
+    },
+    {
+      "path": "src/osg/main.f90",
+      "bytes": 1706,
+      "sha256": "384b87ab8b5b5a940f5c171adcc2f564bae037f22df14b4f0049905b9353bd09"
+    },
+    {
+      "path": "src/osg/module_3dsgo.f90",
+      "bytes": 10588,
+      "sha256": "ab818c8916157a4e6ccd0904e108e878a75ea06ee0ff34b2c5d17776665f1e7c"
+    },
+    {
+      "path": "src/osg/optimal_streak_eqn.f90",
+      "bytes": 18349,
+      "sha256": "374467857fdfd859787600bbfb7f0c186e53e71b94a8356cb12dda88d93cf729"
+    },
+    {
+      "path": "src/public/complex_bessel.f90",
+      "bytes": 235434,
+      "sha256": "dad1f2633b802a19cd6e6a23d4ed93538b0a85a447092a9d56bced544c722e51"
+    },
+    {
+      "path": "src/public/compute_dx.f90",
+      "bytes": 14229,
+      "sha256": "8edbaad320719a4af6eadb223cbcac3b2b2367c3461207d983f4c7f61ce0f540"
+    },
+    {
+      "path": "src/public/compute_flow_grad.f90",
+      "bytes": 14001,
+      "sha256": "c1546656ceec2c0fbcda784e9e22e152f142f5ba090288f8210b61be618d0943"
+    },
+    {
+      "path": "src/public/compute_metrics.f90",
+      "bytes": 9357,
+      "sha256": "87dd47988875922fc207fb1eacdfd355593e84fdad305aad7df0354fb1dd274c"
+    },
+    {
+      "path": "src/public/functional.f90",
+      "bytes": 156774,
+      "sha256": "0013022aeba86f24105cde1e2bfb4666b7fe21607227d48ec08c91c9d6945768"
+    },
+    {
+      "path": "src/public/lst_baseflow_profile.f90",
+      "bytes": 8148,
+      "sha256": "2d04b8b581d4bf6bf8eb217432f08ea0b153014071c3691f1f72db8d4385f694"
+    },
+    {
+      "path": "src/public/lst_grid_profile.f90",
+      "bytes": 4157,
+      "sha256": "235df760e709fc04bbd46c7fe09c3e5a342452b4b6af766fd9f716f0686a6e60"
+    },
+    {
+      "path": "src/public/mod_dx.mod",
+      "bytes": 5292,
+      "sha256": "66cfa1883f02e9a117a7d7b88d6c1cb73f2231afb5e815744dc2cdcf45b57a76"
+    },
+    {
+      "path": "src/public/module_cmd_progress.f90",
+      "bytes": 2139,
+      "sha256": "20f3e3f09b75658310083e229148bff2ef65b13c3d9b29d33db8f22f2ee18eb1"
+    },
+    {
+      "path": "src/public/module_porous_parameters.f90",
+      "bytes": 1866,
+      "sha256": "ec2df37122d6e307c9611afda5a05703135ddf2252c8f51442a68d3bf446db54"
+    },
+    {
+      "path": "src/public/module_slepc_adapter.f90",
+      "bytes": 25257,
+      "sha256": "82186d401e6d65c05b290084c3e7ce4c2568ad00348a9073dbb56f39b8509996"
+    },
+    {
+      "path": "src/public/module_sort.f90",
+      "bytes": 38744,
+      "sha256": "d9a4f17696c48dd074b46393eeac4265b2915828b685ad1550cdbd5f66bf9e0c"
+    },
+    {
+      "path": "src/public/petsc_loader.f90",
+      "bytes": 9006,
+      "sha256": "2949e4835802baadf0be87fda3884c2530fa4a5bfac3bafa1f575ce6cbf23333"
+    },
+    {
+      "path": "src/public/solver_abstract.f90",
+      "bytes": 4789,
+      "sha256": "19fe8b914f30f07d476514da8376308ede507bd44d4bb7cdf98bf4829d16059c"
+    },
+    {
+      "path": "src/third_party/cfgio/cfgio_mod.f90",
+      "bytes": 26614,
+      "sha256": "7a11ded840e99114b39b63f1147c52ae4bfe91db3c2ec3c82661f2fcc07a3ebd"
+    },
+    {
+      "path": "src/third_party/cfgio/string_conv_mod.f90",
+      "bytes": 9418,
+      "sha256": "b876c5f855a4965f3504afb3d511e77a4202f7f5417da92796476ea268cd0f5a"
+    }
+  ]
+}

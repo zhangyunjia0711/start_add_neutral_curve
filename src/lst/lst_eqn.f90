@@ -145,9 +145,25 @@ module mod_lst_eqn
 
    private
 
-   public :: type_lst_eqn
+   public :: type_lst_eqn, lst_eigen_error, lst_track_target, lst_is_tracking
 
 contains
+
+   subroutine lst_track_target(enabled)
+      logical, intent(in) :: enabled
+      if (allocated(Solver)) Solver%track_target=enabled
+   end subroutine lst_track_target
+
+   logical function lst_is_tracking()
+      lst_is_tracking=.false.
+      if (allocated(Solver)) lst_is_tracking=Solver%track_target
+   end function lst_is_tracking
+
+   function lst_eigen_error() result(error)
+      real(REAL64) :: error
+      error=huge(1.0d0)
+      if (allocated(Solver)) error=Solver%last_error
+   end function lst_eigen_error
 
    subroutine lst_setup(this)
       implicit none

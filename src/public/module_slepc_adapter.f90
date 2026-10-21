@@ -16,6 +16,7 @@
 module mod_slepc_adapter
 
    use iso_fortran_env, only: REAL64
+   use, intrinsic :: ieee_arithmetic, only: ieee_value, ieee_quiet_nan
    ! use global_parameters, only: lst_mode
    use slepcpep
    use slepceps
@@ -45,6 +46,8 @@ module mod_slepc_adapter
       PC :: pc
       KSP :: ksp
       integer :: lst_mode
+      real(REAL64) :: last_error = huge(1.0_REAL64) !< Absolute residual of the selected eigenpair
+      logical :: track_target = .false. !< Select the eigenpair nearest the complex target for continuation
 
    contains
 
@@ -219,9 +222,13 @@ Contains
       Mat, intent(in) :: mat(nmat)
       complex(REAL64), intent(in) :: target_input
       PetscScalar :: target_value
-      PetscInt :: nconv, nrow
-      integer :: i
+      PetscInt :: nconv, nrow, guess_size
+      integer :: i, guess_index
+      logical :: has_initialguess
+      PetscScalar :: ki
 
+      this%last_error = huge(1.0_REAL64)
+      has_initialguess = .false.
       call PEPSetProblemType(this%solver, PEP_GENERAL, ierr)
       ! call PEPSetType(this%solver, PEPLINEAR, ierr)
       call PEPSetOperators(this%solver, nmat, mat, ierr)
@@ -233,10 +240,16 @@ Contains
       call PEPSetTarget(this%solver, target_value, ierr)
       call PEPSetType(this%solver, PEPLINEAR, ierr)
       if (allocated(this%xr)) then
-         ! print*, 'Setting initial guess space....'
-         call VecDuplicate(this%xr(size(this%xr)), this%initialguess(1), ierr)
-         call VecCopy(this%xr(size(this%xr)), this%initialguess(1), ierr)
-         call PEPSetInitialSpace(this%solver, 1, this%initialguess(1), ierr)
+         if (size(this%xr) > 0) then
+            guess_index = SelectedGuessIndex(this)
+            call VecGetSize(this%xr(guess_index), guess_size, ierr)
+            if (guess_size == this%m) then
+               call VecDuplicate(this%xr(guess_index), this%initialguess(1), ierr)
+               call VecCopy(this%xr(guess_index), this%initialguess(1), ierr)
+               call PEPSetInitialSpace(this%solver, 1, this%initialguess(1), ierr)
+               has_initialguess = .true.
+            end if
+         end if
       end if
       !call PEPSetRefine(this%solver, PEP_REFINE_SIMPLE, 1, 1.0d-8, 2, PEP_REFINE_SCHEME_SCHUR, ierr)
       call PEPGetST(this%solver, this%st, ierr)
@@ -252,26 +265,17 @@ Contains
 ! #endif
       call PEPSetFromOptions(this%solver, ierr)
       call PEPSolve(this%Solver, ierr)
-      call PEPGetConverged(this%Solver, nconv, ierr)
-      ! write(*, *)'ncov=:', nconv
-      if (allocated(this%xr)) then
-         if (size(this%xr) /= nconv) then
-            deallocate (this%xr)
-            allocate (this%xr(nconv))
-         end if
-      else
-         allocate (this%xr(nconv))
-      end if
-      if (allocated(this%kr)) then
-         if (size(this%kr) /= nconv) then
-            deallocate (this%kr)
-            allocate (this%kr(nconv))
-         end if
-      else
-         allocate (this%kr(nconv))
-      end if
+      nconv = 0
+      if (ierr == 0) call PEPGetConverged(this%Solver, nconv, ierr)
+      if (ierr /= 0) nconv = 0
+      if (has_initialguess) call VecDestroy(this%initialguess(1), ierr)
+      ! Destroy PETSc objects before replacing their Fortran handles.
+      call ReleaseEigenpairs(this)
+      allocate (this%xr(nconv), this%kr(nconv))
       do i = 0, nconv - 1
          call MatCreateVecs(mat(1), this%xr(i + 1), PETSC_NULL_VEC, ierr)
+         ! GetEigenVal alone must also leave a valid vector for the next Solve.
+         call PEPGetEigenPair(this%solver, i, this%kr(i + 1), ki, this%xr(i + 1), PETSC_NULL_VEC, ierr)
       end do
 
       ! block
@@ -317,13 +321,17 @@ Contains
       Mat, intent(in) :: mat(nmat)
       complex(REAL64), intent(in) :: target_input
       PetscScalar :: target_value
-      PetscInt :: nconv, nrow
-      integer :: i
+      PetscInt :: nconv, nrow, guess_size
+      integer :: i, guess_index
+      logical :: has_initialguess
+      PetscScalar :: ki
 
+      this%last_error = huge(1.0_REAL64)
+      has_initialguess = .false.
       call EPSSetProblemType(this%solver, EPS_GNHEP, ierr)
       call EPSSetType(this%solver, EPSARNOLDI, ierr)
       call EPSSetOperators(this%solver, mat(1), mat(2), ierr)
-      ! call MatGetSize(mat(1), this%m, nrow, ierr)
+      call MatGetSize(mat(1), this%m, nrow, ierr)
       target_value = target_input
       this%target = target_input
       ! print*, 'The eps solver is selected!'
@@ -342,10 +350,16 @@ Contains
 ! #endif
       call EPSSetFromOptions(this%solver, ierr)
       if (allocated(this%xr)) then
-         ! print*, 'Setting initial guess space....'
-         call VecDuplicate(this%xr(size(this%xr)), this%initialguess(1), ierr)
-         call VecCopy(this%xr(size(this%xr)), this%initialguess(1), ierr)
-         call EPSSetInitialSpace(this%solver, 1, this%initialguess(1), ierr)
+         if (size(this%xr) > 0) then
+            guess_index = SelectedGuessIndex(this)
+            call VecGetSize(this%xr(guess_index), guess_size, ierr)
+            if (guess_size == this%m) then
+               call VecDuplicate(this%xr(guess_index), this%initialguess(1), ierr)
+               call VecCopy(this%xr(guess_index), this%initialguess(1), ierr)
+               call EPSSetInitialSpace(this%solver, 1, this%initialguess(1), ierr)
+               has_initialguess = .true.
+            end if
+         end if
       end if
       ! print*, 'problem is setting....'
       ! print*, this%target
@@ -371,29 +385,17 @@ Contains
       ! endblock
 
       call EPSSolve(this%Solver, ierr)
-
-      call EPSGetConverged(this%Solver, nconv, ierr)
-      ! write(*, *)'ncov=:', nconv
-      !print*, size(this%xr)
-      !print*, size(this%kr)
-      if (allocated(this%xr)) then
-         if (size(this%xr) /= nconv) then
-            deallocate (this%xr)
-            allocate (this%xr(nconv))
-         end if
-      else
-         allocate (this%xr(nconv))
-      end if
-      if (allocated(this%kr)) then
-         if (size(this%kr) /= nconv) then
-            deallocate (this%kr)
-            allocate (this%kr(nconv))
-         end if
-      else
-         allocate (this%kr(nconv))
-      end if
+      nconv = 0
+      if (ierr == 0) call EPSGetConverged(this%Solver, nconv, ierr)
+      if (ierr /= 0) nconv = 0
+      if (has_initialguess) call VecDestroy(this%initialguess(1), ierr)
+      ! Destroy PETSc objects before replacing their Fortran handles.
+      call ReleaseEigenpairs(this)
+      allocate (this%xr(nconv), this%kr(nconv))
       do i = 0, nconv - 1
          call MatCreateVecs(mat(1), this%xr(i + 1), PETSC_NULL_VEC, ierr)
+         ! GetEigenVal alone must also leave a valid vector for the next Solve.
+         call EPSGetEigenPair(this%solver, i, this%kr(i + 1), ki, this%xr(i + 1), PETSC_NULL_VEC, ierr)
       end do
 
 !     block
@@ -444,7 +446,12 @@ Contains
 
       PetscReal :: error
 
-      nconv = size(this%kr)
+      this%last_error = huge(1.0_REAL64)
+      nconv = ConvergedCount(this)
+      if (nconv == 0) then
+         eigenvalue = InvalidEigenvalue()
+         return
+      end if
 
       if (allocated(this%evIndex)) deallocate (this%evIndex)
       allocate (this%evIndex(nconv))
@@ -466,7 +473,12 @@ Contains
          this%evIndex = .sort.aimag(-this%kr)
       end select
 
+      ! Keep the default growth-rate ordering unless continuation explicitly requests a target branch.
+      if (this%track_target) this%evIndex = .sort.(-abs(this%kr - this%target))
+
       eigenvalue = this%kr(this%evIndex(nconv))
+      call PEPComputeError(this%solver, this%evIndex(nconv) - 1, PEP_ERROR_ABSOLUTE, error, ierr)
+      if (ierr == 0) this%last_error = error
       print *, 'pep_get_eigenvalue...'
 
     !!!Undo_set_initial_space
@@ -485,11 +497,13 @@ Contains
       integer, parameter :: SPATIAL = 1, TEMPORAL = 2, TEMPORAL_PERIODIC_EPS = 3
       PetscReal :: error
 
-      nconv = size(this%kr)
+      this%last_error = huge(1.0_REAL64)
+      nconv = ConvergedCount(this)
 
       allocate (eigenvalue(nconv))
       if (allocated(this%evIndex)) deallocate (this%evIndex)
       allocate (this%evIndex(nconv))
+      if (nconv == 0) return
 
       do i = 0, nconv - 1
          this%evIndex(i + 1) = i + 1
@@ -527,7 +541,12 @@ Contains
       integer, parameter :: SPATIAL = 1, TEMPORAL = 2, TEMPORAL_PERIODIC_EPS = 3
       PetscReal :: error
 
-      nconv = size(this%kr)
+      this%last_error = huge(1.0_REAL64)
+      nconv = ConvergedCount(this)
+      if (nconv == 0) then
+         eigenvalue = InvalidEigenvalue()
+         return
+      end if
 
       if (allocated(this%evIndex)) deallocate (this%evIndex)
       allocate (this%evIndex(nconv))
@@ -546,7 +565,12 @@ Contains
          this%evIndex = .sort.aimag(-this%kr)
       end select
 
+      ! Keep the default growth-rate ordering unless continuation explicitly requests a target branch.
+      if (this%track_target) this%evIndex = .sort.(-abs(this%kr - this%target))
+
       eigenvalue = this%kr(this%evIndex(nconv))
+      call EPSComputeError(this%solver, this%evIndex(nconv) - 1, EPS_ERROR_ABSOLUTE, error, ierr)
+      if (ierr == 0) this%last_error = error
 
     !!!Undo_set_initial_space
 
@@ -564,11 +588,13 @@ Contains
       integer, parameter :: SPATIAL = 1, TEMPORAL = 2, TEMPORAL_PERIODIC_EPS = 3
       PetscReal :: error
 
-      nconv = size(this%kr)
+      this%last_error = huge(1.0_REAL64)
+      nconv = ConvergedCount(this)
 
       allocate (eigenvalue(nconv))
       if (allocated(this%evIndex)) deallocate (this%evIndex)
       allocate (this%evIndex(nconv))
+      if (nconv == 0) return
 
       do i = 0, nconv - 1
          this%evIndex(i + 1) = i + 1
@@ -603,7 +629,13 @@ Contains
       PetscScalar :: ki
       PetscReal :: error
 
-      nconv = size(this%kr)
+      this%last_error = huge(1.0_REAL64)
+      nconv = ConvergedCount(this)
+      if (nconv == 0) then
+         eigenvalue = InvalidEigenvalue()
+         eigenVector = PETSC_NULL_VEC
+         return
+      end if
       if (allocated(this%evIndex)) deallocate (this%evIndex)
       allocate (this%evIndex(nconv))
 
@@ -620,7 +652,12 @@ Contains
          this%evIndex = .sort.aimag(-this%kr)
       end select
 
+      ! Keep the default growth-rate ordering unless continuation explicitly requests a target branch.
+      if (this%track_target) this%evIndex = .sort.(-abs(this%kr - this%target))
+
       eigenvalue = this%kr(this%evIndex(nconv))
+      call PEPComputeError(this%solver, this%evIndex(nconv) - 1, PEP_ERROR_ABSOLUTE, error, ierr)
+      if (ierr == 0) this%last_error = error
       eigenVector = this%xr(this%evIndex(nconv))
 
       print *, 'pep_get_eigenvector...'
@@ -645,11 +682,13 @@ Contains
       PetscScalar :: ki
       PetscReal :: error
 
-      nconv = size(this%kr)
+      this%last_error = huge(1.0_REAL64)
+      nconv = ConvergedCount(this)
       allocate (eigenVector(nconv))
       allocate (eigenvalue(nconv))
       if (allocated(this%evIndex)) deallocate (this%evIndex)
       allocate (this%evIndex(nconv))
+      if (nconv == 0) return
 
       do i = 0, nconv - 1
          call PEPGetEigenPair(this%solver, i, this%kr(i + 1), ki, this%xr(i + 1), PETSC_NULL_VEC, ierr)
@@ -688,8 +727,15 @@ Contains
       Vec, intent(out) :: eigenVector
       PetscScalar, intent(out) :: eigenvalue
       integer :: i, nconv
+      PetscReal :: error
 
-      nconv = size(this%kr)
+      this%last_error = huge(1.0_REAL64)
+      nconv = ConvergedCount(this)
+      if (nconv == 0) then
+         eigenvalue = InvalidEigenvalue()
+         eigenVector = PETSC_NULL_VEC
+         return
+      end if
       if (allocated(this%evIndex)) deallocate (this%evIndex)
       allocate (this%evIndex(nconv))
 
@@ -704,7 +750,12 @@ Contains
          this%evIndex = .sort.aimag(-this%kr)
       end select
 
+      ! Keep the default growth-rate ordering unless continuation explicitly requests a target branch.
+      if (this%track_target) this%evIndex = .sort.(-abs(this%kr - this%target))
+
       eigenvalue = this%kr(this%evIndex(nconv))
+      call EPSComputeError(this%solver, this%evIndex(nconv) - 1, EPS_ERROR_ABSOLUTE, error, ierr)
+      if (ierr == 0) this%last_error = error
       eigenVector = this%xr(this%evIndex(nconv))
 
    end subroutine EPSSolverGetEigenVector
@@ -719,11 +770,13 @@ Contains
       Vec, intent(out), allocatable :: eigenVector(:)
       integer :: i, nconv
 
-      nconv = size(this%kr)
+      this%last_error = huge(1.0_REAL64)
+      nconv = ConvergedCount(this)
       allocate (eigenVector(nconv))
       allocate (eigenvalue(nconv))
       if (allocated(this%evIndex)) deallocate (this%evIndex)
       allocate (this%evIndex(nconv))
+      if (nconv == 0) return
 
       do i = 0, nconv - 1
          call EPSGetEigenVector(this%solver, i, this%xr(i + 1), PETSC_NULL_VEC, ierr)
@@ -749,10 +802,54 @@ Contains
 
    end subroutine EPSSolverGetEigenVectors
 
+   !> Reuse the last selected eigenvector; fall back safely before any query.
+   integer function SelectedGuessIndex(this) result(index)
+      class(slepc_type), intent(in) :: this
+      integer :: candidate
+      index = 1
+      if (.not. allocated(this%xr)) return
+      if (size(this%xr) == 0) return
+      if (.not. allocated(this%evIndex)) return
+      if (size(this%evIndex) /= size(this%xr)) return
+      candidate = this%evIndex(size(this%evIndex))
+      if (candidate >= 1 .and. candidate <= size(this%xr)) index = candidate
+   end function SelectedGuessIndex
+
+   !> Number of converged eigenpairs; safe before the first solve as well.
+   integer function ConvergedCount(this) result(nconv)
+      class(slepc_type), intent(in) :: this
+      nconv = 0
+      if (allocated(this%kr)) nconv = size(this%kr)
+   end function ConvergedCount
+
+   !> A failed scalar query must not index an empty eigenvalue array.
+   function InvalidEigenvalue() result(value)
+      PetscScalar :: value
+      real(REAL64) :: nan_value
+      nan_value = ieee_value(0.0_REAL64, ieee_quiet_nan)
+      value = cmplx(nan_value, nan_value, kind=REAL64)
+   end function InvalidEigenvalue
+
+   !> Vec handles own PETSc objects and must be destroyed, not only deallocated.
+   subroutine ReleaseEigenpairs(this)
+      class(slepc_type), intent(inout) :: this
+      integer :: i
+      if (allocated(this%xr)) then
+         do i = 1, size(this%xr)
+            call VecDestroy(this%xr(i), ierr)
+         end do
+         deallocate (this%xr)
+      end if
+      if (allocated(this%kr)) deallocate (this%kr)
+      if (allocated(this%evIndex)) deallocate (this%evIndex)
+      this%last_error = huge(1.0_REAL64)
+   end subroutine ReleaseEigenpairs
+
    subroutine EPSFinalize(this)
       implicit none
       class(slepceps_type), intent(inout) :: this
 
+      call ReleaseEigenpairs(this)
       call EPSDestroy(this%solver, ierr)
 
    end subroutine EPSFinalize
@@ -761,6 +858,7 @@ Contains
       implicit none
       class(slepcpep_type), intent(inout) :: this
 
+      call ReleaseEigenpairs(this)
       call PEPDestroy(this%solver, ierr)
 
    end subroutine PEPFinalize
