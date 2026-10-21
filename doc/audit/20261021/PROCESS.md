@@ -106,3 +106,13 @@ alpha=3.502: omega=-0.03843983939042378+0.01802635641223358i，绝对残差9.602
 新增功能在feature/neutral-curves上提交并同步到用户仓库main；原作者Gitee origin未被推送或更改。最终远程提交及推送核验结果将附于外部日志。
 
 最终只读复核发现弧长零宽outer区间会被单行扫描padding意外扩大；现强制任务36要求outer_min<outer_max。新增zero_width_arc实际回归验证退出1、提示清晰且不生成越界曲线。累计14个实际场景通过。
+
+## 最终发布核验
+
+实现提交：887e0a3531067320e0117badf72795895c930b89（feat(lst): add bounded neutral-curve tracing and plotting）。
+远程 main 与 feature/neutral-curves 已分别核验指向该实现提交；原版备份分支仍指向 7b12c3c37a47ee9caa664c6e08815c5dd976a335。
+最后推送曾发生连接重置及443端口超时；读取已有Windows系统代理配置127.0.0.1:7888后，仅对此次Git命令指定http.proxy，未修改全局代理或Git配置。经已有代理推送成功，并重新ls-remote核实三个分支。
+证据：final_push.log、final_push_retry.log、final_push_proxy.log、final_remote_verification.log。
+最终可执行文件 bin/START_LST SHA256：807169bb401e558d9509c11f75304e5694d1d8af6925660fca251e8bc29f469a。
+最终本地Git恢复包 final_with_neutral.bundle 已生成并通过 git bundle verify；工作区仅保留任务开始时已有的未跟踪 stdlib/，其余修改均已提交。
+本段及推送核验证据另作仅含文档的提交同步到仓库，不改动已经验证的实现。
