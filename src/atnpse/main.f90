@@ -31,13 +31,13 @@ program atnpse_prog
    PetscBool :: set
 
    call SlepcInitialize(PETSC_NULL_CHARACTER, ierr)
-   CHKERRA(ierr)
+   ! CHKERRA(ierr)
 
    call MPI_Comm_rank(PETSC_COMM_WORLD, rank, ierr)
    call MPI_Comm_size(PETSC_COMM_WORLD, size, ierr)
 
    call PetscOptionsGetString(PETSC_NULL_OPTIONS, PETSC_NULL_CHARACTER, '-f', cfg_file, set, ierr)
-   CHKERRA(ierr)
+   ! CHKERRA(ierr)
 
    if (.not. set) then
       print *, 'should use -f option to determin the config file.'
@@ -56,6 +56,6 @@ program atnpse_prog
 
    call SLEPCFinalize(ierr)
 
-   CHKERRA(ierr)
+   ! CHKERRA(ierr)
 
 end program atnpse_prog

@@ -916,6 +916,7 @@ contains
 
       integer :: i, j, lj
       integer :: ljb, lje, c_idx
+      integer :: single_idx(1) 
       MatStencil :: idxm(4, 1), idxn(4, -2:2)
       PetscViewer :: Viewer
 
@@ -961,8 +962,10 @@ contains
             box2(:, :) = transpose(tmp_mat_j1(:, :, 0))
          end associate
 
+         single_idx(1) = j - 1
+
          call MatSetValuesBlockedStencil(this%L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
-         call MatSetValuesBlocked(this%L_LST(2), 1, j - 1, 1, j - 1, box2, INSERT_VALUES, ierr)
+         call MatSetValuesBlocked(this%L_LST(2), 1, single_idx, 1, single_idx, box2, INSERT_VALUES, ierr)
       end do
 
       do i = 1, 2
@@ -986,6 +989,7 @@ contains
 
       integer :: i, j, lj
       integer :: ljb, lje, c_idx
+      integer :: single_idx(1) 
       MatStencil :: idxm(4, 1), idxn(4, -2:2)
       PetscViewer :: Viewer
 
@@ -1036,9 +1040,11 @@ contains
             box3(:, :) = transpose(tmp_mat_j2(:, :, 0))
          end associate
 
+         single_idx(1) = j - 1
+
          call MatSetValuesBlockedStencil(this%L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
          call MatSetValuesBlockedStencil(this%L_LST(2), 1, idxm, 5, idxn, box2, INSERT_VALUES, ierr)
-         call MatSetValuesBlocked(this%L_LST(3), 1, j - 1, 1, j - 1, box3, INSERT_VALUES, ierr)
+         call MatSetValuesBlocked(this%L_LST(3), 1, single_idx, 1, single_idx, box3, INSERT_VALUES, ierr)
       end do
 
       do i = 1, 3
@@ -1062,6 +1068,7 @@ contains
 
       integer :: i, lj
       integer :: ljb, lje, c_idx
+      integer :: single_idx(1) 
       MatStencil :: idxm(4, 1), idxn(4, -2:2)
       PetscViewer :: Viewer
 
@@ -1100,8 +1107,10 @@ contains
    
       end associate
 
+      single_idx(1) = j - 1 
+
       call MatSetValuesBlockedStencil(this%L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
-      call MatSetValuesBlocked(this%L_LST(2), 1, j - 1, 1, j - 1, box2, INSERT_VALUES, ierr)
+      call MatSetValuesBlocked(this%L_LST(2), 1, single_idx, 1, single_idx, box2, INSERT_VALUES, ierr)
 
       do i = 1, 2
          call MatAssemblyBegin(this%L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
@@ -1125,6 +1134,7 @@ contains
 
       integer :: i, lj
       integer :: ljb, lje, c_idx
+      integer :: single_idx(1)
       MatStencil :: idxm(4, 1), idxn(4, -2:2)
       PetscViewer :: Viewer
 
@@ -1167,9 +1177,11 @@ contains
          box3(:, :) = transpose(tmp_mat_j2(:, :, 0))
       end associate
 
+      single_idx(1) = j - 1 
+
       call MatSetValuesBlockedStencil(this%L_LST(1), 1, idxm, 5, idxn, box1, INSERT_VALUES, ierr)
       call MatSetValuesBlockedStencil(this%L_LST(2), 1, idxm, 5, idxn, box2, INSERT_VALUES, ierr)
-      call MatSetValuesBlocked(this%L_LST(3), 1, j - 1, 1, j - 1, box3, INSERT_VALUES, ierr)
+      call MatSetValuesBlocked(this%L_LST(3), 1, single_idx, 1, single_idx, box3, INSERT_VALUES, ierr)
 
       do i = 1, 3
          call MatAssemblyBegin(this%L_LST(i), MAT_FINAL_ASSEMBLY, ierr)
