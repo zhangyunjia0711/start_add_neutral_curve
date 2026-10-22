@@ -203,15 +203,20 @@ contains
       PetscErrorCode :: ierr
 
       call VecScatterCreateToZero(v, ctx, v_all, ierr)
+      call CheckNormalizationError(ierr)
 
       call VecScatterBegin(ctx, v, v_all, INSERT_VALUES, SCATTER_FORWARD, ierr)
+      call CheckNormalizationError(ierr)
       call VecScatterEnd(ctx, v, v_all, INSERT_VALUES, SCATTER_FORWARD, ierr)
+      call CheckNormalizationError(ierr)
 
       call VecGetArrayReadF90(v_all, tmp_, ierr)
+      call CheckNormalizationError(ierr)
       jn = size(tmp_)/5
       allocate (phi(5, jn))
       phi(1:5, 1:jn) = reshape(tmp_, [5, jn])
       call VecRestoreArrayReadF90(v_all, tmp_, ierr)
+      call CheckNormalizationError(ierr)
 
       maxu_loc = maxloc(abs(phi(2, :)))
       maxu = phi(2, maxu_loc(1))
@@ -219,7 +224,25 @@ contains
 
       ! call MPI_bcast(maxu, 1, MPI_DOUBLE_PRECISION, 0, MPI_COMM_WORLD, ierr)
       call VecScale(v, 1.0d0/maxu, ierr)
+      call CheckNormalizationError(ierr)
+
+      call VecScatterDestroy(ctx, ierr)
+      call CheckNormalizationError(ierr)
+      call VecDestroy(v_all, ierr)
+      call CheckNormalizationError(ierr)
 
    end subroutine normal_u
+
+
+   !> PETSc failures must not be hidden by subsequent temporary-object calls.
+   subroutine CheckNormalizationError(error)
+      PetscErrorCode, intent(in) :: error
+      PetscErrorCode :: report_error
+      if (error /= 0) then
+         report_error = error
+         call PetscErrorF(report_error, __LINE__, "lst_solver_abstract.f90")
+         call MPIU_Abort(PETSC_COMM_WORLD, error)
+      end if
+   end subroutine CheckNormalizationError
 
 end module

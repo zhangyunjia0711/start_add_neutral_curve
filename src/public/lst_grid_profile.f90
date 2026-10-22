@@ -12,6 +12,7 @@
 module mod_lst_grid_profile
 
    use global_parameters
+   use mod_wall_local_coordinates, only: wall_local_enabled, wall_local_grid
    implicit none
 
    type :: type_lst_grid_profile
@@ -85,6 +86,16 @@ contains
       profile%eta_xx = eta_xx(ix, :)
       profile%eta_xy = eta_xy(ix, :)
       profile%eta_yy = eta_yy(ix, :)
+
+       if (wall_local_enabled()) then
+          call wall_local_grid(ix,profile%y,profile%eta_y,profile%eta_yy)
+          profile%drx=0.0_real64; profile%drz=0.0_real64
+          ! Frozen local profiles do not provide nonparallel coordinate data.
+          profile%xi_x=0.0_real64; profile%xi_y=0.0_real64
+          profile%eta_x=0.0_real64
+          profile%xi_xx=0.0_real64; profile%xi_xy=0.0_real64; profile%xi_yy=0.0_real64
+          profile%eta_xx=0.0_real64; profile%eta_xy=0.0_real64
+       endif
 
    end function assemble_lst_grid_profile
 

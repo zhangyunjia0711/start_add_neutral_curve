@@ -145,7 +145,8 @@ module mod_lst_eqn
 
    private
 
-   public :: type_lst_eqn, lst_eigen_error, lst_track_target, lst_is_tracking
+   public :: type_lst_eqn, lst_eigen_error, lst_track_target, lst_is_tracking, lst_copy_selected_eigenvector
+   public :: lst_select_eigenvector_by_overlap, lst_prepare_candidate_retry
 
 contains
 
@@ -164,6 +165,50 @@ contains
       error=huge(1.0d0)
       if (allocated(Solver)) error=Solver%last_error
    end function lst_eigen_error
+
+   !> Owned raw eigenvector copy, eigenvalue and residual of the already selected
+   !> pair. This avoids export normalization/scatter and never reselects a mode.
+   !> On valid=.true. the caller must call VecDestroy(eigenvector).
+   subroutine lst_copy_selected_eigenvector(eigenvalue, eigenvector, error, valid)
+      complex(REAL64), intent(out) :: eigenvalue
+      Vec, intent(out) :: eigenvector
+      real(REAL64), intent(out) :: error
+      logical, intent(out) :: valid
+      valid = .false.
+      eigenvalue = cmplx(0.0_REAL64, 0.0_REAL64, REAL64)
+      eigenvector = PETSC_NULL_VEC
+      error = huge(1.0_REAL64)
+      if (.not. allocated(Solver)) return
+      call Solver%CopySelectedEigenVector(eigenvalue, eigenvector, error, valid)
+   end subroutine lst_copy_selected_eigenvector
+
+   !> Explicit multi-candidate overlap selection. owned_vector belongs to the
+   !> caller only when valid=.true.; the caller must then VecDestroy it.
+   subroutine lst_select_eigenvector_by_overlap(reference, reference_eigen, jump_tol, error_tol, min_overlap, &
+                                              selected_eigen, owned_vector, error, overlap, valid)
+      Vec, intent(in) :: reference
+      complex(REAL64), intent(in) :: reference_eigen
+      real(REAL64), intent(in) :: jump_tol, error_tol, min_overlap
+      complex(REAL64), intent(out) :: selected_eigen
+      Vec, intent(out) :: owned_vector
+      real(REAL64), intent(out) :: error, overlap
+      logical, intent(out) :: valid
+      selected_eigen = cmplx(0.0_REAL64, 0.0_REAL64, REAL64)
+      owned_vector = PETSC_NULL_VEC
+      error = huge(1.0_REAL64); overlap = 0.0_REAL64; valid = .false.
+      if (.not. allocated(Solver)) return
+      call Solver%SelectEigenVectorByOverlap(reference, reference_eigen, jump_tol, error_tol, min_overlap, &
+                                            selected_eigen, owned_vector, error, overlap, valid)
+   end subroutine lst_select_eigenvector_by_overlap
+
+   !> One-shot spatial PEP candidate expansion. The solver copies reference;
+   !> the caller keeps ownership and may destroy or reuse its own vector.
+   subroutine lst_prepare_candidate_retry(count, reference_vector)
+      integer, intent(in) :: count
+      Vec, intent(in) :: reference_vector
+      if (.not. allocated(Solver)) error stop 'Candidate retry requires an allocated LST solver.'
+      call Solver%PrepareCandidateRetry(count, reference_vector)
+   end subroutine lst_prepare_candidate_retry
 
    subroutine lst_setup(this)
       implicit none

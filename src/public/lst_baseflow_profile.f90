@@ -15,6 +15,7 @@
 module mod_lst_baseflow_profile
 
     use global_parameters
+    use mod_wall_local_coordinates, only: wall_local_enabled, wall_local_flow
     implicit none
 
     public :: type_lst_bf_profile
@@ -77,6 +78,15 @@ contains
         profile%dq0xx = dq0dxx(:, ix, jb:je)
         profile%dq0yy = dq0dyy(:, ix, jb:je)
         profile%dq0xy = dq0dxy(:, ix, jb:je)
+
+        if (wall_local_enabled()) then
+            call wall_local_flow(ix,profile%q0,profile%dq0y,profile%dq0yy)
+            ! The direct local operator does not use these derivatives. Do not
+            ! expose old global derivatives as if they were local/nonparallel.
+            profile%dq0x=0.0_real64
+            profile%dq0xx=0.0_real64
+            profile%dq0xy=0.0_real64
+        endif
 
     end function assemble_lst_baseflow_profile
 

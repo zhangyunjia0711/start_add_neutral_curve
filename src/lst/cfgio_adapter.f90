@@ -16,6 +16,7 @@ module mod_cfgio_adapter
    use cfgio_mod
    use global_parameters
    use stdlib_string_type
+   use mod_wall_local_coordinates, only: configure_wall_local_coordinates
 
    implicit none
 
@@ -195,7 +196,7 @@ contains
 
       implicit none
       type(cfg_t) :: cfg
-      character(len=256):: method_local, mode_local
+      character(len=256):: method_local, mode_local,profile_coordinates
       type(string_type) :: method_str, mode_str
       integer :: npar
       real(REAL64), allocatable, dimension(:) :: alf_in, ome_in, bat_in
@@ -295,6 +296,12 @@ contains
          call cfg%set('lst', 'adjoint', .FALSE.)
          lst_IsAdjoint = .False.
       end if
+
+      profile_coordinates='global'
+      if (cfg%has_key('lst','profile_coordinates')) &
+         call cfg%get('lst','profile_coordinates',profile_coordinates)
+      call configure_wall_local_coordinates(trim(profile_coordinates), &
+         lst_method==LST_LOCAL,lst_mode==LST_SPATIAL_MODE,lst_IsAdjoint,Coordinate_System==COMOVING_CS)
 
    end subroutine cfg_lst
 

@@ -1,0 +1,36 @@
+# Capture the diagnostic stream so a nonzero expected rejection cannot hide a
+# segfault, and a numerically successful test cannot hide a PETSc resource leak.
+if(NOT DEFINED PROGRAM OR NOT DEFINED MODE)
+  message(FATAL_ERROR "PROGRAM and MODE are required")
+endif()
+set(arguments -st_pc_factor_mat_solver_type superlu -malloc_debug -malloc_dump -options_left)
+if(MODE STREQUAL "retry")
+  list(APPEND arguments -pep_tol 1e-12 -memory_cycles 10)
+elseif(MODE STREQUAL "reject_eps")
+  list(APPEND arguments -pep_tol 1e-12 -reject_eps)
+elseif(NOT MODE STREQUAL "raw")
+  message(FATAL_ERROR "Unknown vector regression mode: ${MODE}")
+endif()
+execute_process(COMMAND "${PROGRAM}" ${arguments}
+  RESULT_VARIABLE result OUTPUT_VARIABLE output ERROR_VARIABLE errors TIMEOUT 30)
+set(diagnostic "${output}\n${errors}")
+if(MODE STREQUAL "reject_eps")
+  if("${result}" STREQUAL "0" OR
+     NOT diagnostic MATCHES "Candidate retry rejected: EPS is unsupported" OR
+     diagnostic MATCHES "Caught signal|Segmentation|SEGV")
+    message(FATAL_ERROR "EPS rejection failed (${result}):\n${diagnostic}")
+  endif()
+  message(STATUS "EPS retry rejected explicitly without a signal")
+else()
+  if(NOT "${result}" STREQUAL "0" OR
+     diagnostic MATCHES "PETSC ERROR|SLEPC ERROR|Option left:|\\[ 0\\] [0-9]+ bytes")
+    message(FATAL_ERROR "Vector regression failed (${result}):\n${diagnostic}")
+  endif()
+  if(MODE STREQUAL "retry" AND NOT diagnostic MATCHES "CANDIDATE RETRY PASS:")
+    message(FATAL_ERROR "Missing candidate retry success marker:\n${diagnostic}")
+  endif()
+  if(MODE STREQUAL "raw" AND NOT diagnostic MATCHES "RAW COPY AND NORMALIZATION MEMORY PASS")
+    message(FATAL_ERROR "Missing raw vector success marker:\n${diagnostic}")
+  endif()
+  message(STATUS "${MODE}: assertions passed; no unused options or PETSc allocation dump")
+endif()

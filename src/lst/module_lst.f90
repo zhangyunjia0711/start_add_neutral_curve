@@ -65,6 +65,7 @@ contains
         Vec :: eigf
 
         integer :: k, ki, input_status, curve_status
+        logical :: track_initial_target
         real(REAL64) :: pk
         !integer, parameter :: comm=PETSC_COMM_WORLD
         if (lst_IsAdjoint) then
@@ -132,6 +133,14 @@ contains
         ! if(lst_IsAdjoint)then
         !   call solve_alst_eqn(grid_profile, baseflow_profile, ome, alf, bat, iloc)
         ! else
+        ! Opt-in target selection for the first eigenpair of a neutral batch.
+        ! Traditional interactive/default selection keeps its original behavior.
+        track_initial_target = .false.
+        if (neutral_batch_enabled()) then
+            if (cfg%has_key('neutral','track_initial_target')) &
+                call cfg%get('neutral','track_initial_target',track_initial_target)
+            if (track_initial_target) call lst_track_target(.true.)
+        end if
         call lst%solve(ome, alf, bat)
         ! endif
         if (rank == 0) then
