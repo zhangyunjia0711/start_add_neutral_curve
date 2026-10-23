@@ -1,0 +1,1829 @@
+{
+  "results": [
+    {
+      "station": 1,
+      "x_mm": -35.0,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": "No actual positive-frequency root with verified negative g_omega"
+    },
+    {
+      "station": 2,
+      "x_mm": -34.999250358244524,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": "No actual positive-frequency root with verified negative g_omega"
+    },
+    {
+      "station": 21,
+      "x_mm": -34.700570148083365,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 53,
+      "x_mm": -32.99245218822624,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 2,
+      "remaining_failures": [
+        {
+          "round": 0,
+          "root_id": "r00067",
+          "side": "right",
+          "from_beta": 18.80844235012768,
+          "remaining_endpoint": 40,
+          "reason": "incomplete/MAC/runtime/scalar-join failure"
+        },
+        {
+          "round": 0,
+          "root_id": "r00025",
+          "side": "both",
+          "reason": "center transport failed; both beta directions uncomputed"
+        }
+      ],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i053_r00025_both.json",
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i053_r00067_right.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 61,
+      "x_mm": -32.335783637895034,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 2,
+      "remaining_failures": [
+        {
+          "round": 0,
+          "root_id": "r00066",
+          "side": "right",
+          "from_beta": 19.72503278370177,
+          "remaining_endpoint": 40,
+          "reason": "incomplete/MAC/runtime/scalar-join failure"
+        },
+        {
+          "round": 0,
+          "root_id": "r00024",
+          "side": "both",
+          "reason": "center transport failed; both beta directions uncomputed"
+        }
+      ],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i061_r00024_both.json",
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i061_r00066_right.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 75,
+      "x_mm": -30.974567311206467,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 3,
+      "remaining_failures": [
+        {
+          "round": 0,
+          "root_id": "r00065",
+          "side": "left",
+          "from_beta": 16.0322722970972,
+          "remaining_endpoint": -40,
+          "reason": "incomplete/MAC/runtime/scalar-join failure"
+        },
+        {
+          "round": 0,
+          "root_id": "r00065",
+          "side": "right",
+          "from_beta": 21.0322722970972,
+          "remaining_endpoint": 40,
+          "reason": "incomplete/MAC/runtime/scalar-join failure"
+        },
+        {
+          "round": 0,
+          "root_id": "r00023",
+          "side": "both",
+          "reason": "center transport failed; both beta directions uncomputed"
+        }
+      ],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i075_r00065_right.json",
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i075_r00065_left.json",
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i075_r00023_both.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 92,
+      "x_mm": -28.97354708134257,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 1,
+      "remaining_failures": [
+        {
+          "round": 0,
+          "root_id": "r00064",
+          "side": "right",
+          "from_beta": 22.05120580318254,
+          "remaining_endpoint": 40,
+          "reason": "incomplete/MAC/runtime/scalar-join failure"
+        }
+      ],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i092_r00064_right.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 106,
+      "x_mm": -27.05536586769579,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 1,
+      "remaining_failures": [
+        {
+          "round": 0,
+          "root_id": "r00063",
+          "side": "right",
+          "from_beta": 32.41331128207001,
+          "remaining_endpoint": 40,
+          "reason": "incomplete/MAC/runtime/scalar-join failure"
+        }
+      ],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i106_r00063_right.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 119,
+      "x_mm": -25.07056801986289,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 131,
+      "x_mm": -23.077103528502406,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 1,
+      "remaining_failures": [
+        {
+          "round": 0,
+          "root_id": "r00035",
+          "side": "both",
+          "reason": "center transport failed; both beta directions uncomputed"
+        }
+      ],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i131_r00035_both.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 143,
+      "x_mm": -20.941361019973062,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 1,
+      "remaining_failures": [
+        {
+          "round": 0,
+          "root_id": "r00036",
+          "side": "both",
+          "reason": "center transport failed; both beta directions uncomputed"
+        }
+      ],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i143_r00036_both.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 153,
+      "x_mm": -19.062366225525945,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 164,
+      "x_mm": -16.901512033001307,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 173,
+      "x_mm": -15.067888388290331,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 183,
+      "x_mm": -12.96951031284426,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 192,
+      "x_mm": -11.033224357671939,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 201,
+      "x_mm": -9.058666578588227,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 210,
+      "x_mm": -7.0526862813966025,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 219,
+      "x_mm": -5.022241769691275,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 228,
+      "x_mm": -2.9743762080354608,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 237,
+      "x_mm": -0.9161931907755598,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 240,
+      "x_mm": -0.22907282885731847,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 241,
+      "x_mm": -2.1431318985078682e-15,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 250,
+      "x_mm": 2.0661533690558755,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 258,
+      "x_mm": 3.9236694527300675,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 267,
+      "x_mm": 6.060753800371224,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 275,
+      "x_mm": 8.023321398871573,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 283,
+      "x_mm": 10.065350153807957,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 290,
+      "x_mm": 11.933183765313354,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 297,
+      "x_mm": 13.891484171028482,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 304,
+      "x_mm": 15.955097464276719,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 311,
+      "x_mm": 18.13966812709897,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 312,
+      "x_mm": 18.46257697945528,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 313,
+      "x_mm": 18.78834053216083,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 317,
+      "x_mm": 20.120955928559233,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 321,
+      "x_mm": 21.503358872865466,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 322,
+      "x_mm": 21.85713694252321,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 328,
+      "x_mm": 24.052727947460024,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 331,
+      "x_mm": 25.199960835777837,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 333,
+      "x_mm": 25.98416643142269,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 338,
+      "x_mm": 28.0160783625307,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 341,
+      "x_mm": 29.28670415676573,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 343,
+      "x_mm": 30.156320571462214,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 347,
+      "x_mm": 31.952058535090757,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 351,
+      "x_mm": 33.826859076594964,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 355,
+      "x_mm": 35.78536122615427,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 359,
+      "x_mm": 37.83241112626639,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 361,
+      "x_mm": 38.89071547459706,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 363,
+      "x_mm": 39.97307402309926,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 367,
+      "x_mm": 42.21264680000724,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 370,
+      "x_mm": 43.960560041843515,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 371,
+      "x_mm": 44.556671084206315,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 373,
+      "x_mm": 45.76965458373367,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 377,
+      "x_mm": 48.281315958788355,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 380,
+      "x_mm": 50.24311195662218,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 381,
+      "x_mm": 50.912445232875086,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 383,
+      "x_mm": 52.274832880466846,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 385,
+      "x_mm": 53.669552905558426,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 388,
+      "x_mm": 55.82414878577942,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 391,
+      "x_mm": 58.05643689726115,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 394,
+      "x_mm": 60.369523985884406,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 396,
+      "x_mm": 61.95805533048131,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 399,
+      "x_mm": 64.41301870504923,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 401,
+      "x_mm": 66.09924809885675,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 403,
+      "x_mm": 67.82636037500512,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 405,
+      "x_mm": 69.5954237654358,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 408,
+      "x_mm": 72.3300779680798,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 410,
+      "x_mm": 74.20886460616492,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 412,
+      "x_mm": 76.1335499854243,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 414,
+      "x_mm": 78.10532453825334,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 416,
+      "x_mm": 80.12540782204687,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 418,
+      "x_mm": 82.19504927351701,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 419,
+      "x_mm": 83.2488531210202,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 420,
+      "x_mm": 84.3155289814768,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 422,
+      "x_mm": 86.48815847858238,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 423,
+      "x_mm": 87.59444804916818,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 425,
+      "x_mm": 89.8478321383235,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 427,
+      "x_mm": 92.1567877877577,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 429,
+      "x_mm": 94.52274310391242,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 430,
+      "x_mm": 95.72755153563952,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 432,
+      "x_mm": 98.18176141804781,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 433,
+      "x_mm": 99.4315423408785,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 435,
+      "x_mm": 101.97742239095459,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 437,
+      "x_mm": 104.58637624415502,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 438,
+      "x_mm": 105.91500856391015,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 440,
+      "x_mm": 108.62161119314516,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 441,
+      "x_mm": 109.999999999971,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 1,
+      "remaining_failures": [
+        {
+          "round": 0,
+          "root_id": "r00272",
+          "side": "left",
+          "from_beta": 8.96129455320648,
+          "remaining_endpoint": -40,
+          "reason": "incomplete/MAC/runtime/scalar-join failure"
+        }
+      ],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i441_r00272_left.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 442,
+      "x_mm": 111.37840000003506,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 444,
+      "x_mm": 114.13434667588261,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 445,
+      "x_mm": 115.51262012767437,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 447,
+      "x_mm": 118.26960689913332,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 448,
+      "x_mm": 119.6483879063379,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 450,
+      "x_mm": 122.40669441899844,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 451,
+      "x_mm": 123.78628764452058,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 453,
+      "x_mm": 126.5465233887255,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 454,
+      "x_mm": 127.92723367472546,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 456,
+      "x_mm": 130.69000856677346,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 457,
+      "x_mm": 132.07214100260953,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 458,
+      "x_mm": 133.45481533823997,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 1,
+      "remaining_failures": [
+        {
+          "round": 0,
+          "root_id": "r00284",
+          "side": "left",
+          "from_beta": 7.9865169580574,
+          "remaining_endpoint": -40,
+          "reason": "incomplete/MAC/runtime/scalar-join failure"
+        }
+      ],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i458_r00284_left.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 460,
+      "x_mm": 136.22192550911902,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 461,
+      "x_mm": 137.60642928059494,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 463,
+      "x_mm": 140.37750415292294,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 464,
+      "x_mm": 141.7641432873893,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 466,
+      "x_mm": 144.53979517284665,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 467,
+      "x_mm": 145.92887606966087,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 468,
+      "x_mm": 147.3188390672675,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 470,
+      "x_mm": 150.1015478889797,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 471,
+      "x_mm": 151.4943620321958,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 473,
+      "x_mm": 154.2830807612745,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 474,
+      "x_mm": 155.67905381396932,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 476,
+      "x_mm": 158.47439866065827,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 477,
+      "x_mm": 159.87383908422714,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 481,
+      "x_mm": 165.48418949369645,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 505,
+      "x_mm": 199.6817940037374,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 532,
+      "x_mm": 239.69659208343327,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 558,
+      "x_mm": 280.4178529005128,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 582,
+      "x_mm": 320.50442318963235,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 599,
+      "x_mm": 350.6673206773882,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 604,
+      "x_mm": 359.85404406349625,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 625,
+      "x_mm": 400.1804226726903,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 644,
+      "x_mm": 439.3632590718681,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 662,
+      "x_mm": 479.1726369319491,
+      "before_state": "unknown",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": true,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i662_r00083_right.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 679,
+      "x_mm": 519.462932940229,
+      "before_state": "unknown",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": true,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i679_r00082_right.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 695,
+      "x_mm": 560.0333385553142,
+      "before_state": "unknown",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": true,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i695_r00081_right.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 710,
+      "x_mm": 600.6332354027535,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 711,
+      "x_mm": 603.4337400260057,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 724,
+      "x_mm": 640.9681526848487,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 737,
+      "x_mm": 680.706400100533,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 749,
+      "x_mm": 719.486405123149,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 761,
+      "x_mm": 760.4218115100707,
+      "before_state": "unknown",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": true,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i761_r00075_right.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 772,
+      "x_mm": 799.9628909450108,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 783,
+      "x_mm": 841.554151862411,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 793,
+      "x_mm": 881.2473443023237,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 802,
+      "x_mm": 918.5876260313249,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 812,
+      "x_mm": 961.9663986842396,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 820,
+      "x_mm": 998.1704542191068,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    },
+    {
+      "station": 829,
+      "x_mm": 1040.571289428527,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 1,
+      "remaining_failures": [
+        {
+          "round": 0,
+          "root_id": "r00091",
+          "side": "right",
+          "from_beta": 3.97011554216563,
+          "remaining_endpoint": 40,
+          "reason": "incomplete/MAC/runtime/scalar-join failure"
+        }
+      ],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i829_r00091_right.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 837,
+      "x_mm": 1079.81204930681,
+      "before_state": "unknown",
+      "after_state": "unknown",
+      "qualified_after_vector_compensation": false,
+      "improved": false,
+      "remaining_failure_count": 1,
+      "remaining_failures": [
+        {
+          "round": 0,
+          "root_id": "r00092",
+          "side": "right",
+          "from_beta": 3.907360007464586,
+          "remaining_endpoint": 40,
+          "reason": "incomplete/MAC/runtime/scalar-join failure"
+        }
+      ],
+      "evidence": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/verified_results/i837_r00092_right.json"
+      ],
+      "no_seed_reason": null
+    },
+    {
+      "station": 841,
+      "x_mm": 1100.0000000000084,
+      "before_state": "sampled_nonpositive_known_seeds",
+      "after_state": "sampled_nonpositive_known_seeds",
+      "qualified_after_vector_compensation": true,
+      "improved": false,
+      "remaining_failure_count": 0,
+      "remaining_failures": [],
+      "evidence": [],
+      "no_seed_reason": null
+    }
+  ],
+  "report": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/compensation_report.json",
+  "qualification": "Finite B40 sampled paths for explicit known actual roots. Unknown remains unknown; these are not full-spectrum or continuous-beta guarantees. Original audit files remain unchanged."
+}

@@ -1,0 +1,711 @@
+{
+  "created": "2026-10-22T21:38:57.028563+08:00",
+  "scope": "i119 omega=0 beta=-7 near-wall seed only; fixed original CFD data",
+  "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+  "solver_sha256": "528d6d6a1b7aab34c73a70b09721295089ba293b2ef2c9bec173aba8e589c266",
+  "source_hashes": {
+    "grid_vertical2d_N.h5": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+    "flow_vertical2d_N.h5": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+  },
+  "variants": [
+    {
+      "name": "crop340",
+      "method": "crop",
+      "jn": 340,
+      "in_": 841,
+      "eta_min": 0.0,
+      "eta_max": 339.0,
+      "created": "2026-10-22T21:34:23.803353+08:00",
+      "source_hashes": {
+        "grid_vertical2d_N.h5": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+        "flow_vertical2d_N.h5": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+      },
+      "scipy_version": "1.10.1",
+      "numpy_version": "1.24.4",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop340/grid_vertical2d_N.h5",
+          "dataset": "grid",
+          "sha256": "d048309410d1dbb528daa3dcf6d2819aa38fb94a2d6609eb62d1793cbc0e6119",
+          "shape": [
+            340,
+            841,
+            2,
+            2
+          ],
+          "bytes": 2722812
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop340/flow_vertical2d_N.h5",
+          "dataset": "baseflow",
+          "sha256": "b68e2f5741110efa784daf2fb5de0f83fbf8cc459ef7a60d5f44db39f8eafc42",
+          "shape": [
+            340,
+            841,
+            6,
+            2
+          ],
+          "bytes": 12213691
+        }
+      ],
+      "nmax_N": 0.4410353011178366,
+      "nmax_mm": 15.436235539124281,
+      "min_delta_n_N": 6.216909972364696e-05,
+      "minimum_density": 0.10981838248377525,
+      "minimum_temperature": 0.9524350508461871
+    },
+    {
+      "name": "crop360",
+      "method": "crop",
+      "jn": 360,
+      "in_": 841,
+      "eta_min": 0.0,
+      "eta_max": 359.0,
+      "created": "2026-10-22T21:34:24.085576+08:00",
+      "source_hashes": {
+        "grid_vertical2d_N.h5": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+        "flow_vertical2d_N.h5": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+      },
+      "scipy_version": "1.10.1",
+      "numpy_version": "1.24.4",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop360/grid_vertical2d_N.h5",
+          "dataset": "grid",
+          "sha256": "b21a6126fa42c7f9705888bff918b5c13b3dc9dc3839af9d4f971c1daab23410",
+          "shape": [
+            360,
+            841,
+            2,
+            2
+          ],
+          "bytes": 2886407
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop360/flow_vertical2d_N.h5",
+          "dataset": "baseflow",
+          "sha256": "6ef33af08632b38d17388599a5ea43d567197810ac26dd63afaf07e17b4afeee",
+          "shape": [
+            360,
+            841,
+            6,
+            2
+          ],
+          "bytes": 12889047
+        }
+      ],
+      "nmax_N": 1.204950928379969,
+      "nmax_mm": 42.17328249329892,
+      "min_delta_n_N": 6.216909972364696e-05,
+      "minimum_density": 0.10981838248377525,
+      "minimum_temperature": 0.9524350508461871
+    },
+    {
+      "name": "pchip799",
+      "method": "PCHIP",
+      "jn": 799,
+      "in_": 841,
+      "eta_min": 0.0,
+      "eta_max": 399.0,
+      "created": "2026-10-22T21:34:24.372223+08:00",
+      "source_hashes": {
+        "grid_vertical2d_N.h5": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+        "flow_vertical2d_N.h5": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+      },
+      "scipy_version": "1.10.1",
+      "numpy_version": "1.24.4",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip799/grid_vertical2d_N.h5",
+          "dataset": "grid",
+          "sha256": "3d2f85d8ab53eb3ba478c951f47ea4492faf56702c4b6274191f9396bade2292",
+          "shape": [
+            799,
+            841,
+            2,
+            2
+          ],
+          "bytes": 6357043
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip799/flow_vertical2d_N.h5",
+          "dataset": "baseflow",
+          "sha256": "f7a0cdca2d202cf0461810301ef68e8d242d6872ba8d0906d01a724c1025f4ea",
+          "shape": [
+            799,
+            841,
+            6,
+            2
+          ],
+          "bytes": 28055056
+        }
+      ],
+      "nmax_N": 7.6991725505117,
+      "nmax_mm": 269.47103926790953,
+      "min_delta_n_N": 3.106190084562702e-05,
+      "grid_source_node_max_difference": 1.4210854715202004e-14,
+      "minimum_density": 0.10981838248377525,
+      "minimum_temperature": 0.9524350508461871,
+      "baseflow_source_node_max_difference": 2.220446049250313e-16
+    },
+    {
+      "name": "pchip1597",
+      "method": "PCHIP",
+      "jn": 1597,
+      "in_": 841,
+      "eta_min": 0.0,
+      "eta_max": 399.0,
+      "created": "2026-10-22T21:34:25.355330+08:00",
+      "source_hashes": {
+        "grid_vertical2d_N.h5": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+        "flow_vertical2d_N.h5": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+      },
+      "scipy_version": "1.10.1",
+      "numpy_version": "1.24.4",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip1597/grid_vertical2d_N.h5",
+          "dataset": "grid",
+          "sha256": "9be04021e552b0aa85f22feaabbfb8971665b62493f7b4d81d93be652a942f48",
+          "shape": [
+            1597,
+            841,
+            2,
+            2
+          ],
+          "bytes": 12301948
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip1597/flow_vertical2d_N.h5",
+          "dataset": "baseflow",
+          "sha256": "644f4ac118e93050c4bf776a8eafd268cd7ad5d56bb9e9ac61a3958f47bc5355",
+          "shape": [
+            1597,
+            841,
+            6,
+            2
+          ],
+          "bytes": 55855141
+        }
+      ],
+      "nmax_N": 7.6991725505117,
+      "nmax_mm": 269.47103926790953,
+      "min_delta_n_N": 1.5525281980185923e-05,
+      "grid_source_node_max_difference": 1.4210854715202004e-14,
+      "minimum_density": 0.10981838248377525,
+      "minimum_temperature": 0.9524350508461871,
+      "baseflow_source_node_max_difference": 2.220446049250313e-16
+    },
+    {
+      "name": "cubic799",
+      "method": "CubicSpline",
+      "jn": 799,
+      "in_": 841,
+      "eta_min": 0.0,
+      "eta_max": 399.0,
+      "created": "2026-10-22T21:34:27.061698+08:00",
+      "source_hashes": {
+        "grid_vertical2d_N.h5": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+        "flow_vertical2d_N.h5": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+      },
+      "scipy_version": "1.10.1",
+      "numpy_version": "1.24.4",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/cubic799/grid_vertical2d_N.h5",
+          "dataset": "grid",
+          "sha256": "10f69f6af103efd54bc0ba2d7c12f52c5bfb4bbd8f0354084879f0dd0a1a2961",
+          "shape": [
+            799,
+            841,
+            2,
+            2
+          ],
+          "bytes": 6357134
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/cubic799/flow_vertical2d_N.h5",
+          "dataset": "baseflow",
+          "sha256": "234eadb7b7ac1809447c660226d35ed6f477a6ff15f7aebe55c6436bdbb7aeb5",
+          "shape": [
+            799,
+            841,
+            6,
+            2
+          ],
+          "bytes": 28065877
+        }
+      ],
+      "nmax_N": 7.6991725505117,
+      "nmax_mm": 269.47103926790953,
+      "min_delta_n_N": 3.1061917376191335e-05,
+      "grid_source_node_max_difference": 1.4210854715202004e-14,
+      "minimum_density": 0.10981820284977677,
+      "minimum_temperature": 0.9524320390124662,
+      "baseflow_source_node_max_difference": 2.220446049250313e-16
+    }
+  ],
+  "results": [
+    {
+      "name": "original400",
+      "method": "original",
+      "jn": 400,
+      "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in",
+      "started": "2026-10-22T21:34:28.213332+08:00",
+      "seconds": 0.622,
+      "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+      "solver_sha256": "528d6d6a1b7aab34c73a70b09721295089ba293b2ef2c9bec173aba8e589c266",
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-13",
+        "-pep_max_it",
+        "1000",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_vectors",
+        "binary:out/all_vectors.petsc",
+        "-pep_view_values",
+        "ascii:out/all_values.txt",
+        "-options_left"
+      ],
+      "exit": 1,
+      "petsc_errors": 0,
+      "unused_options": 0,
+      "terminal": "no bracketed root",
+      "rejected": 0,
+      "field_records": 2,
+      "failed_field_records": 0,
+      "minimum_tiny_beta_MAC": 1.0,
+      "pairs": [
+        {
+          "index": 0,
+          "alpha_r": 35.93408168168608,
+          "alpha_i": -4.023207897823367,
+          "absolute_polynomial_residual": 9.934415557468033e-13
+        }
+      ],
+      "passed": true,
+      "raw_vector_count": 1,
+      "raw_vector_index_association_verified": true,
+      "alpha_r": 35.93408168168608,
+      "alpha_i": -4.023207897823367,
+      "growth": 4.023207897823367,
+      "delta_alpha_to_original": 7.34202901170027e-13,
+      "absolute_polynomial_residual": 9.934415557468033e-13,
+      "raw_index": 0,
+      "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/runs/original400/out/all_vectors.petsc",
+      "vector_sha256": "91492f3596b1d96057cd2a4156fe3bff7b91ccfbd397d9ccb5813d72bd41d79e",
+      "nmax_N": 7.6991725505117,
+      "peak_j": 281,
+      "peak_n_N": 0.03903696383150349,
+      "W99_n_N": 0.047758922318709214,
+      "interpretation": "Unweighted primitive vector and descriptive W99 only; no physical identity certificate."
+    },
+    {
+      "name": "crop340",
+      "method": "crop",
+      "jn": 340,
+      "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop340",
+      "started": "2026-10-22T21:34:28.216869+08:00",
+      "seconds": 0.619,
+      "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+      "solver_sha256": "528d6d6a1b7aab34c73a70b09721295089ba293b2ef2c9bec173aba8e589c266",
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-13",
+        "-pep_max_it",
+        "1000",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_vectors",
+        "binary:out/all_vectors.petsc",
+        "-pep_view_values",
+        "ascii:out/all_values.txt",
+        "-options_left"
+      ],
+      "exit": 1,
+      "petsc_errors": 0,
+      "unused_options": 0,
+      "terminal": "no bracketed root",
+      "rejected": 0,
+      "field_records": 2,
+      "failed_field_records": 0,
+      "minimum_tiny_beta_MAC": 1.0000000000000013,
+      "pairs": [
+        {
+          "index": 0,
+          "alpha_r": 35.934081681686756,
+          "alpha_i": -4.0232078978243,
+          "absolute_polynomial_residual": 1.6326170874802835e-12
+        }
+      ],
+      "passed": true,
+      "raw_vector_count": 1,
+      "raw_vector_index_association_verified": true,
+      "alpha_r": 35.934081681686756,
+      "alpha_i": -4.0232078978243,
+      "growth": 4.0232078978243,
+      "delta_alpha_to_original": 9.325793047505217e-13,
+      "absolute_polynomial_residual": 1.6326170874802835e-12,
+      "raw_index": 0,
+      "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/runs/crop340/out/all_vectors.petsc",
+      "vector_sha256": "5c712633a2e5b4aa093c130a53c5a45c07ccd5066c910dd58abb0f01b681c08a",
+      "nmax_N": 0.4410353011178366,
+      "peak_j": 281,
+      "peak_n_N": 0.03903696383150349,
+      "W99_n_N": 0.047758922318709214,
+      "interpretation": "Unweighted primitive vector and descriptive W99 only; no physical identity certificate."
+    },
+    {
+      "name": "crop360",
+      "method": "crop",
+      "jn": 360,
+      "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop360",
+      "started": "2026-10-22T21:34:28.216783+08:00",
+      "seconds": 0.72,
+      "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+      "solver_sha256": "528d6d6a1b7aab34c73a70b09721295089ba293b2ef2c9bec173aba8e589c266",
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-13",
+        "-pep_max_it",
+        "1000",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_vectors",
+        "binary:out/all_vectors.petsc",
+        "-pep_view_values",
+        "ascii:out/all_values.txt",
+        "-options_left"
+      ],
+      "exit": 1,
+      "petsc_errors": 0,
+      "unused_options": 0,
+      "terminal": "no bracketed root",
+      "rejected": 0,
+      "field_records": 2,
+      "failed_field_records": 0,
+      "minimum_tiny_beta_MAC": 0.9999999999999982,
+      "pairs": [
+        {
+          "index": 0,
+          "alpha_r": 35.93408168168671,
+          "alpha_i": -4.023207897823496,
+          "absolute_polynomial_residual": 3.3455641023325133e-12
+        }
+      ],
+      "passed": true,
+      "raw_vector_count": 1,
+      "raw_vector_index_association_verified": true,
+      "alpha_r": 35.93408168168671,
+      "alpha_i": -4.023207897823496,
+      "growth": 4.023207897823496,
+      "delta_alpha_to_original": 1.0311690251612138e-12,
+      "absolute_polynomial_residual": 3.3455641023325133e-12,
+      "raw_index": 0,
+      "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/runs/crop360/out/all_vectors.petsc",
+      "vector_sha256": "56b348fdb7ef61556a3088e83bf165b02c7839882b65af96e64d7ea38bfb21dc",
+      "nmax_N": 1.204950928379969,
+      "peak_j": 281,
+      "peak_n_N": 0.03903696383150349,
+      "W99_n_N": 0.047758922318709214,
+      "interpretation": "Unweighted primitive vector and descriptive W99 only; no physical identity certificate."
+    },
+    {
+      "name": "pchip799",
+      "method": "PCHIP",
+      "jn": 799,
+      "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip799",
+      "started": "2026-10-22T21:34:28.875083+08:00",
+      "seconds": 1.424,
+      "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+      "solver_sha256": "528d6d6a1b7aab34c73a70b09721295089ba293b2ef2c9bec173aba8e589c266",
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-13",
+        "-pep_max_it",
+        "1000",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_vectors",
+        "binary:out/all_vectors.petsc",
+        "-pep_view_values",
+        "ascii:out/all_values.txt",
+        "-options_left"
+      ],
+      "exit": 1,
+      "petsc_errors": 0,
+      "unused_options": 0,
+      "terminal": "no bracketed root",
+      "rejected": 0,
+      "field_records": 2,
+      "failed_field_records": 0,
+      "minimum_tiny_beta_MAC": 0.9999999999999973,
+      "pairs": [
+        {
+          "index": 0,
+          "alpha_r": 35.93314662899609,
+          "alpha_i": -4.025694328706411,
+          "absolute_polynomial_residual": 1.039952204547127e-11
+        }
+      ],
+      "passed": true,
+      "raw_vector_count": 1,
+      "raw_vector_index_association_verified": true,
+      "alpha_r": 35.93314662899609,
+      "alpha_i": -4.025694328706411,
+      "growth": 4.025694328706411,
+      "delta_alpha_to_original": 0.002656437852710874,
+      "absolute_polynomial_residual": 1.039952204547127e-11,
+      "raw_index": 0,
+      "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/runs/pchip799/out/all_vectors.petsc",
+      "vector_sha256": "5bfaeb4c493116cc7ef2d614c2be5776177a62bd20f6562093ba7b9bf7d7a161",
+      "nmax_N": 7.6991725505117,
+      "peak_j": 561,
+      "peak_n_N": 0.03903696383150349,
+      "W99_n_N": 0.04702599380573878,
+      "interpretation": "Unweighted primitive vector and descriptive W99 only; no physical identity certificate."
+    },
+    {
+      "name": "cubic799",
+      "method": "CubicSpline",
+      "jn": 799,
+      "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/cubic799",
+      "started": "2026-10-22T21:34:28.970545+08:00",
+      "seconds": 1.522,
+      "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+      "solver_sha256": "528d6d6a1b7aab34c73a70b09721295089ba293b2ef2c9bec173aba8e589c266",
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-13",
+        "-pep_max_it",
+        "1000",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_vectors",
+        "binary:out/all_vectors.petsc",
+        "-pep_view_values",
+        "ascii:out/all_values.txt",
+        "-options_left"
+      ],
+      "exit": 1,
+      "petsc_errors": 0,
+      "unused_options": 0,
+      "terminal": "no bracketed root",
+      "rejected": 0,
+      "field_records": 2,
+      "failed_field_records": 0,
+      "minimum_tiny_beta_MAC": 0.999999999999998,
+      "pairs": [
+        {
+          "index": 0,
+          "alpha_r": 35.9332102511781,
+          "alpha_i": -4.02570869902674,
+          "absolute_polynomial_residual": 1.438607787575392e-11
+        }
+      ],
+      "passed": true,
+      "raw_vector_count": 1,
+      "raw_vector_index_association_verified": true,
+      "alpha_r": 35.9332102511781,
+      "alpha_i": -4.02570869902674,
+      "growth": 4.02570869902674,
+      "delta_alpha_to_original": 0.002648282044107116,
+      "absolute_polynomial_residual": 1.438607787575392e-11,
+      "raw_index": 0,
+      "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/runs/cubic799/out/all_vectors.petsc",
+      "vector_sha256": "9ade265976ba383d724409f8733fae0abff7ee83dc7c25753e74ecf592ed431f",
+      "nmax_N": 7.6991725505117,
+      "peak_j": 561,
+      "peak_n_N": 0.03903696383150349,
+      "W99_n_N": 0.047025991711168336,
+      "interpretation": "Unweighted primitive vector and descriptive W99 only; no physical identity certificate."
+    },
+    {
+      "name": "pchip1597",
+      "method": "PCHIP",
+      "jn": 1597,
+      "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip1597",
+      "started": "2026-10-22T21:34:28.878446+08:00",
+      "seconds": 2.875,
+      "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+      "solver_sha256": "528d6d6a1b7aab34c73a70b09721295089ba293b2ef2c9bec173aba8e589c266",
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v5",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-13",
+        "-pep_max_it",
+        "1000",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_vectors",
+        "binary:out/all_vectors.petsc",
+        "-pep_view_values",
+        "ascii:out/all_values.txt",
+        "-options_left"
+      ],
+      "exit": 1,
+      "petsc_errors": 0,
+      "unused_options": 0,
+      "terminal": "no bracketed root",
+      "rejected": 0,
+      "field_records": 2,
+      "failed_field_records": 0,
+      "minimum_tiny_beta_MAC": 0.9999999999999984,
+      "pairs": [
+        {
+          "index": 0,
+          "alpha_r": 35.933087606075134,
+          "alpha_i": -4.0258530598509195,
+          "absolute_polynomial_residual": 1.0558280844309309e-11
+        }
+      ],
+      "passed": true,
+      "raw_vector_count": 1,
+      "raw_vector_index_association_verified": true,
+      "alpha_r": 35.933087606075134,
+      "alpha_i": -4.0258530598509195,
+      "growth": 4.0258530598509195,
+      "delta_alpha_to_original": 0.0028257863450976686,
+      "absolute_polynomial_residual": 1.0558280844309309e-11,
+      "raw_index": 0,
+      "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/runs/pchip1597/out/all_vectors.petsc",
+      "vector_sha256": "b09eb08605477398404ae993d5ecf3e2aaf27d54f5fed5d20772f222fe164b42",
+      "nmax_N": 7.6991725505117,
+      "peak_j": 1122,
+      "peak_n_N": 0.03929712093014079,
+      "W99_n_N": 0.046666537629386315,
+      "interpretation": "Unweighted primitive vector and descriptive W99 only; no physical identity certificate."
+    }
+  ],
+  "comparisons": [
+    {
+      "reference": "original400",
+      "other": "crop340",
+      "delta_alpha": 1.1519646711699501e-12,
+      "relative_complex_alpha_difference": 3.1858662628265123e-14,
+      "growth_difference": 9.334755191048316e-13,
+      "relative_growth_difference": 2.320226900553312e-13,
+      "mapped_to_original_grid_points": 340,
+      "normal_integral_primitive_MAC": 0.9999999999999992,
+      "mapped_Euclidean_MAC": 0.9999999999999996,
+      "mapping": "CubicSpline of complex vector on physical normal distance, no extrapolation; integral uses trapezoid weights and equal primitive-component weights, not physical energy."
+    },
+    {
+      "reference": "original400",
+      "other": "crop360",
+      "delta_alpha": 6.453635434920633e-13,
+      "relative_complex_alpha_difference": 1.7848133644423247e-14,
+      "growth_difference": 1.2878587085651816e-13,
+      "relative_growth_difference": 3.201074220554046e-14,
+      "mapped_to_original_grid_points": 360,
+      "normal_integral_primitive_MAC": 0.9999999999999998,
+      "mapped_Euclidean_MAC": 0.9999999999999991,
+      "mapping": "CubicSpline of complex vector on physical normal distance, no extrapolation; integral uses trapezoid weights and equal primitive-component weights, not physical energy."
+    },
+    {
+      "reference": "original400",
+      "other": "pchip799",
+      "delta_alpha": 0.002656437853444339,
+      "relative_complex_alpha_difference": 7.346627850998598e-05,
+      "growth_difference": 0.0024864308830441217,
+      "relative_growth_difference": 0.0006180219730601863,
+      "mapped_to_original_grid_points": 400,
+      "normal_integral_primitive_MAC": 0.999999959890745,
+      "mapped_Euclidean_MAC": 0.999999978050821,
+      "mapping": "CubicSpline of complex vector on physical normal distance, no extrapolation; integral uses trapezoid weights and equal primitive-component weights, not physical energy."
+    },
+    {
+      "reference": "original400",
+      "other": "cubic799",
+      "delta_alpha": 0.0026482820448411656,
+      "relative_complex_alpha_difference": 7.324072197925895e-05,
+      "growth_difference": 0.0025008012033733706,
+      "relative_growth_difference": 0.0006215938293236978,
+      "mapped_to_original_grid_points": 400,
+      "normal_integral_primitive_MAC": 0.9999999613040359,
+      "mapped_Euclidean_MAC": 0.9999999783042681,
+      "mapping": "CubicSpline of complex vector on physical normal distance, no extrapolation; integral uses trapezoid weights and equal primitive-component weights, not physical energy."
+    },
+    {
+      "reference": "original400",
+      "other": "pchip1597",
+      "delta_alpha": 0.0028257863458311413,
+      "relative_complex_alpha_difference": 7.814976978413852e-05,
+      "growth_difference": 0.0026451620275524945,
+      "relative_growth_difference": 0.0006574758488080067,
+      "mapped_to_original_grid_points": 400,
+      "normal_integral_primitive_MAC": 0.9999999551839001,
+      "mapped_Euclidean_MAC": 0.9999999755961575,
+      "mapping": "CubicSpline of complex vector on physical normal distance, no extrapolation; integral uses trapezoid weights and equal primitive-component weights, not physical energy."
+    },
+    {
+      "reference": "pchip799",
+      "other": "pchip1597",
+      "delta_alpha": 0.00016934958351094972,
+      "relative_complex_alpha_difference": 4.68360596832345e-06,
+      "growth_difference": 0.00015873114450837278,
+      "relative_growth_difference": 3.942950744583192e-05,
+      "mapped_to_original_grid_points": 799,
+      "normal_integral_primitive_MAC": 0.9999999996641821,
+      "mapped_Euclidean_MAC": 0.9999999998402175,
+      "mapping": "CubicSpline of complex vector on physical normal distance, no extrapolation; integral uses trapezoid weights and equal primitive-component weights, not physical energy."
+    },
+    {
+      "reference": "pchip799",
+      "other": "cubic799",
+      "delta_alpha": 6.522490437159788e-05,
+      "relative_complex_alpha_difference": 1.803888412742332e-06,
+      "growth_difference": 1.4370320329248898e-05,
+      "relative_growth_difference": 3.5696501412879397e-06,
+      "mapped_to_original_grid_points": 799,
+      "normal_integral_primitive_MAC": 0.9999999997732519,
+      "mapped_Euclidean_MAC": 0.9999999998911273,
+      "mapping": "CubicSpline of complex vector on physical normal distance, no extrapolation; integral uses trapezoid weights and equal primitive-component weights, not physical energy."
+    }
+  ],
+  "source_unchanged": true,
+  "solver_unchanged": true,
+  "completed": "2026-10-22T21:38:57.568147+08:00"
+}

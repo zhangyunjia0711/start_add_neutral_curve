@@ -1,0 +1,613 @@
+{
+  "created": "2026-10-23T10:17:57.060793+08:00",
+  "family": "M3near",
+  "station": 119,
+  "point": {
+    "outer": 20.20338039780368,
+    "inner": 7.72941870279368,
+    "iloc": 119.0,
+    "x": -0.716301943424654,
+    "Re": 79100.0,
+    "alpha_r": 80.21155527987496,
+    "alpha_i": 4.664378181554196e-12,
+    "beta_r": 7.72941870279368,
+    "beta_i": 0.0,
+    "omega_r": 20.20338039780368,
+    "omega_i": 0.0,
+    "growth": -4.664378181554196e-12,
+    "branch": 0.0,
+    "status": 0.0,
+    "row": 2
+  },
+  "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v7",
+  "solver_sha256": "7aa6016570f406587156f229107c0e5e4f76c8a85ba89dda267039ff1d688d79",
+  "original_candidate_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/local_mode_audit_M3near_candidate.json",
+  "original_candidate_sha256": "e90e7c16057198a03ce4237cdbaed86d077e91cf0c0ed5984e04e419feda2be6",
+  "reused_input_provenance": [
+    {
+      "name": "pchip799",
+      "method": "PCHIP",
+      "jn": 799,
+      "in_": 841,
+      "eta_min": 0.0,
+      "eta_max": 399.0,
+      "created": "2026-10-22T21:34:24.372223+08:00",
+      "source_hashes": {
+        "grid_vertical2d_N.h5": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+        "flow_vertical2d_N.h5": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+      },
+      "scipy_version": "1.10.1",
+      "numpy_version": "1.24.4",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip799/grid_vertical2d_N.h5",
+          "dataset": "grid",
+          "sha256": "3d2f85d8ab53eb3ba478c951f47ea4492faf56702c4b6274191f9396bade2292",
+          "shape": [
+            799,
+            841,
+            2,
+            2
+          ],
+          "bytes": 6357043
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip799/flow_vertical2d_N.h5",
+          "dataset": "baseflow",
+          "sha256": "f7a0cdca2d202cf0461810301ef68e8d242d6872ba8d0906d01a724c1025f4ea",
+          "shape": [
+            799,
+            841,
+            6,
+            2
+          ],
+          "bytes": 28055056
+        }
+      ],
+      "nmax_N": 7.6991725505117,
+      "nmax_mm": 269.47103926790953,
+      "min_delta_n_N": 3.106190084562702e-05,
+      "grid_source_node_max_difference": 1.4210854715202004e-14,
+      "minimum_density": 0.10981838248377525,
+      "minimum_temperature": 0.9524350508461871,
+      "baseflow_source_node_max_difference": 2.220446049250313e-16
+    },
+    {
+      "name": "pchip1597",
+      "method": "PCHIP",
+      "jn": 1597,
+      "in_": 841,
+      "eta_min": 0.0,
+      "eta_max": 399.0,
+      "created": "2026-10-22T21:34:25.355330+08:00",
+      "source_hashes": {
+        "grid_vertical2d_N.h5": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+        "flow_vertical2d_N.h5": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+      },
+      "scipy_version": "1.10.1",
+      "numpy_version": "1.24.4",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip1597/grid_vertical2d_N.h5",
+          "dataset": "grid",
+          "sha256": "9be04021e552b0aa85f22feaabbfb8971665b62493f7b4d81d93be652a942f48",
+          "shape": [
+            1597,
+            841,
+            2,
+            2
+          ],
+          "bytes": 12301948
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip1597/flow_vertical2d_N.h5",
+          "dataset": "baseflow",
+          "sha256": "644f4ac118e93050c4bf776a8eafd268cd7ad5d56bb9e9ac61a3958f47bc5355",
+          "shape": [
+            1597,
+            841,
+            6,
+            2
+          ],
+          "bytes": 55855141
+        }
+      ],
+      "nmax_N": 7.6991725505117,
+      "nmax_mm": 269.47103926790953,
+      "min_delta_n_N": 1.5525281980185923e-05,
+      "grid_source_node_max_difference": 1.4210854715202004e-14,
+      "minimum_density": 0.10981838248377525,
+      "minimum_temperature": 0.9524350508461871,
+      "baseflow_source_node_max_difference": 2.220446049250313e-16
+    },
+    {
+      "name": "crop340",
+      "method": "crop",
+      "jn": 340,
+      "in_": 841,
+      "eta_min": 0.0,
+      "eta_max": 339.0,
+      "created": "2026-10-22T21:34:23.803353+08:00",
+      "source_hashes": {
+        "grid_vertical2d_N.h5": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+        "flow_vertical2d_N.h5": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+      },
+      "scipy_version": "1.10.1",
+      "numpy_version": "1.24.4",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop340/grid_vertical2d_N.h5",
+          "dataset": "grid",
+          "sha256": "d048309410d1dbb528daa3dcf6d2819aa38fb94a2d6609eb62d1793cbc0e6119",
+          "shape": [
+            340,
+            841,
+            2,
+            2
+          ],
+          "bytes": 2722812
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop340/flow_vertical2d_N.h5",
+          "dataset": "baseflow",
+          "sha256": "b68e2f5741110efa784daf2fb5de0f83fbf8cc459ef7a60d5f44db39f8eafc42",
+          "shape": [
+            340,
+            841,
+            6,
+            2
+          ],
+          "bytes": 12213691
+        }
+      ],
+      "nmax_N": 0.4410353011178366,
+      "nmax_mm": 15.436235539124281,
+      "min_delta_n_N": 6.216909972364696e-05,
+      "minimum_density": 0.10981838248377525,
+      "minimum_temperature": 0.9524350508461871
+    },
+    {
+      "name": "crop360",
+      "method": "crop",
+      "jn": 360,
+      "in_": 841,
+      "eta_min": 0.0,
+      "eta_max": 359.0,
+      "created": "2026-10-22T21:34:24.085576+08:00",
+      "source_hashes": {
+        "grid_vertical2d_N.h5": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+        "flow_vertical2d_N.h5": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+      },
+      "scipy_version": "1.10.1",
+      "numpy_version": "1.24.4",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop360/grid_vertical2d_N.h5",
+          "dataset": "grid",
+          "sha256": "b21a6126fa42c7f9705888bff918b5c13b3dc9dc3839af9d4f971c1daab23410",
+          "shape": [
+            360,
+            841,
+            2,
+            2
+          ],
+          "bytes": 2886407
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop360/flow_vertical2d_N.h5",
+          "dataset": "baseflow",
+          "sha256": "6ef33af08632b38d17388599a5ea43d567197810ac26dd63afaf07e17b4afeee",
+          "shape": [
+            360,
+            841,
+            6,
+            2
+          ],
+          "bytes": 12889047
+        }
+      ],
+      "nmax_N": 1.204950928379969,
+      "nmax_mm": 42.17328249329892,
+      "min_delta_n_N": 6.216909972364696e-05,
+      "minimum_density": 0.10981838248377525,
+      "minimum_temperature": 0.9524350508461871
+    }
+  ],
+  "original_g_omega": -0.1058468632997054,
+  "results": [
+    {
+      "name": "original400",
+      "jn": 400,
+      "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in",
+      "started": "2026-10-23T10:17:57.063028+08:00",
+      "seconds": 1.019,
+      "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v7",
+      "solver_sha256": "7aa6016570f406587156f229107c0e5e4f76c8a85ba89dda267039ff1d688d79",
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v7",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-13",
+        "-pep_max_it",
+        "1000",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_vectors",
+        "binary:out/all_vectors.petsc",
+        "-pep_view_values",
+        "ascii:out/all_values.txt",
+        "-options_left"
+      ],
+      "exit": 1,
+      "fixed_parameters": {
+        "omega_r": 20.20338039780368,
+        "beta_r": 7.72941870279368
+      },
+      "petsc_errors": 0,
+      "unused_options": 0,
+      "terminal": "no bracketed root",
+      "rejected": 0,
+      "field_records": 2,
+      "failed_field_records": 0,
+      "minimum_tiny_beta_MAC": 1.0,
+      "pairs": [
+        {
+          "index": 0,
+          "alpha_r": 80.21155527987457,
+          "alpha_i": 5.220295506916568e-12,
+          "absolute_polynomial_residual": 2.397364626948231e-12
+        }
+      ],
+      "passed": true,
+      "alpha_r": 80.21155527987457,
+      "alpha_i": 5.220295506916568e-12,
+      "growth": -5.220295506916568e-12,
+      "delta_alpha_to_original_candidate": 6.754735007489332e-13,
+      "absolute_polynomial_residual": 2.397364626948231e-12,
+      "raw_index": 0,
+      "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_neutral_normal_validation_20261023/runs/original400/out/all_vectors.petsc",
+      "vector_sha256": "3e5a8267cb7d11aa0bcb1533d909fc5289b519f456576e35b04c69582e66ab2a",
+      "nmax_N": 7.6991725505117,
+      "peak_j": 286,
+      "peak_n_N": 0.0449374573360328,
+      "raw_vector_index_association_verified": true,
+      "accepted_solve": true,
+      "neutral_at_original_fixed_parameters": true,
+      "neutral_point_reconverged_on_this_grid": false
+    },
+    {
+      "name": "pchip799",
+      "jn": 799,
+      "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip799",
+      "started": "2026-10-23T10:17:58.087010+08:00",
+      "seconds": 1.32,
+      "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v7",
+      "solver_sha256": "7aa6016570f406587156f229107c0e5e4f76c8a85ba89dda267039ff1d688d79",
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v7",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-13",
+        "-pep_max_it",
+        "1000",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_vectors",
+        "binary:out/all_vectors.petsc",
+        "-pep_view_values",
+        "ascii:out/all_values.txt",
+        "-options_left"
+      ],
+      "exit": 1,
+      "fixed_parameters": {
+        "omega_r": 20.20338039780368,
+        "beta_r": 7.72941870279368
+      },
+      "petsc_errors": 0,
+      "unused_options": 0,
+      "terminal": "no bracketed root",
+      "rejected": 0,
+      "field_records": 2,
+      "failed_field_records": 0,
+      "minimum_tiny_beta_MAC": 1.0000000000000004,
+      "pairs": [
+        {
+          "index": 0,
+          "alpha_r": 80.19512466054408,
+          "alpha_i": 0.0006154827436279259,
+          "absolute_polynomial_residual": 8.018105527513635e-12
+        }
+      ],
+      "passed": true,
+      "alpha_r": 80.19512466054408,
+      "alpha_i": 0.0006154827436279259,
+      "growth": -0.0006154827436279259,
+      "delta_alpha_to_original_candidate": 0.016442143126676672,
+      "absolute_polynomial_residual": 8.018105527513635e-12,
+      "raw_index": 0,
+      "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_neutral_normal_validation_20261023/runs/pchip799/out/all_vectors.petsc",
+      "vector_sha256": "0e73df2268741f0f6b831aa0b996195f3624546d871a9dc5b06a32cfd871f159",
+      "nmax_N": 7.6991725505117,
+      "peak_j": 570,
+      "peak_n_N": 0.044276484312574874,
+      "raw_vector_index_association_verified": true,
+      "accepted_solve": true,
+      "neutral_at_original_fixed_parameters": false,
+      "neutral_point_reconverged_on_this_grid": false
+    },
+    {
+      "name": "pchip1597",
+      "jn": 1597,
+      "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/pchip1597",
+      "started": "2026-10-23T10:17:59.416368+08:00",
+      "seconds": 2.673,
+      "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v7",
+      "solver_sha256": "7aa6016570f406587156f229107c0e5e4f76c8a85ba89dda267039ff1d688d79",
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v7",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-13",
+        "-pep_max_it",
+        "1000",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_vectors",
+        "binary:out/all_vectors.petsc",
+        "-pep_view_values",
+        "ascii:out/all_values.txt",
+        "-options_left"
+      ],
+      "exit": 1,
+      "fixed_parameters": {
+        "omega_r": 20.20338039780368,
+        "beta_r": 7.72941870279368
+      },
+      "petsc_errors": 0,
+      "unused_options": 0,
+      "terminal": "no bracketed root",
+      "rejected": 0,
+      "field_records": 2,
+      "failed_field_records": 0,
+      "minimum_tiny_beta_MAC": 0.9999999999999987,
+      "pairs": [
+        {
+          "index": 0,
+          "alpha_r": 80.19406119693335,
+          "alpha_i": 0.0006575550615595654,
+          "absolute_polynomial_residual": 1.7249139025483395e-11
+        }
+      ],
+      "passed": true,
+      "alpha_r": 80.19406119693335,
+      "alpha_i": 0.0006575550615595654,
+      "growth": -0.0006575550615595654,
+      "delta_alpha_to_original_candidate": 0.017506436434088564,
+      "absolute_polynomial_residual": 1.7249139025483395e-11,
+      "raw_index": 0,
+      "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_neutral_normal_validation_20261023/runs/pchip1597/out/all_vectors.petsc",
+      "vector_sha256": "f9348571016be0b20ed0b80c246f630b6d422e2f00c24aff14755ec9bfe1af9c",
+      "nmax_N": 7.6991725505117,
+      "peak_j": 1139,
+      "peak_n_N": 0.044276484312574874,
+      "raw_vector_index_association_verified": true,
+      "accepted_solve": true,
+      "neutral_at_original_fixed_parameters": false,
+      "neutral_point_reconverged_on_this_grid": false
+    },
+    {
+      "name": "crop340",
+      "jn": 340,
+      "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop340",
+      "started": "2026-10-23T10:18:02.097887+08:00",
+      "seconds": 0.517,
+      "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v7",
+      "solver_sha256": "7aa6016570f406587156f229107c0e5e4f76c8a85ba89dda267039ff1d688d79",
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v7",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-13",
+        "-pep_max_it",
+        "1000",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_vectors",
+        "binary:out/all_vectors.petsc",
+        "-pep_view_values",
+        "ascii:out/all_values.txt",
+        "-options_left"
+      ],
+      "exit": 1,
+      "fixed_parameters": {
+        "omega_r": 20.20338039780368,
+        "beta_r": 7.72941870279368
+      },
+      "petsc_errors": 0,
+      "unused_options": 0,
+      "terminal": "no bracketed root",
+      "rejected": 0,
+      "field_records": 2,
+      "failed_field_records": 0,
+      "minimum_tiny_beta_MAC": 1.0,
+      "pairs": [
+        {
+          "index": 0,
+          "alpha_r": 80.21155527987433,
+          "alpha_i": 4.71530548355451e-12,
+          "absolute_polynomial_residual": 1.2270403136190812e-12
+        }
+      ],
+      "passed": true,
+      "alpha_r": 80.21155527987433,
+      "alpha_i": 4.71530548355451e-12,
+      "growth": -4.71530548355451e-12,
+      "delta_alpha_to_original_candidate": 6.27348130220413e-13,
+      "absolute_polynomial_residual": 1.2270403136190812e-12,
+      "raw_index": 0,
+      "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_neutral_normal_validation_20261023/runs/crop340/out/all_vectors.petsc",
+      "vector_sha256": "af287327d04e1fa13cd6c0ccd35440d393119260ce2c7497228f3f9e2f0c4bc4",
+      "nmax_N": 0.4410353011178366,
+      "peak_j": 286,
+      "peak_n_N": 0.0449374573360328,
+      "raw_vector_index_association_verified": true,
+      "accepted_solve": true,
+      "neutral_at_original_fixed_parameters": true,
+      "neutral_point_reconverged_on_this_grid": false
+    },
+    {
+      "name": "crop360",
+      "jn": 360,
+      "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_normal_validation_20261022/inputs/crop360",
+      "started": "2026-10-23T10:18:02.620313+08:00",
+      "seconds": 0.567,
+      "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v7",
+      "solver_sha256": "7aa6016570f406587156f229107c0e5e4f76c8a85ba89dda267039ff1d688d79",
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v7",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-13",
+        "-pep_max_it",
+        "1000",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_vectors",
+        "binary:out/all_vectors.petsc",
+        "-pep_view_values",
+        "ascii:out/all_values.txt",
+        "-options_left"
+      ],
+      "exit": 1,
+      "fixed_parameters": {
+        "omega_r": 20.20338039780368,
+        "beta_r": 7.72941870279368
+      },
+      "petsc_errors": 0,
+      "unused_options": 0,
+      "terminal": "no bracketed root",
+      "rejected": 0,
+      "field_records": 2,
+      "failed_field_records": 0,
+      "minimum_tiny_beta_MAC": 1.0000000000000018,
+      "pairs": [
+        {
+          "index": 0,
+          "alpha_r": 80.21155527987449,
+          "alpha_i": 4.806294392862358e-12,
+          "absolute_polynomial_residual": 1.7391557676734858e-12
+        }
+      ],
+      "passed": true,
+      "alpha_r": 80.21155527987449,
+      "alpha_i": 4.806294392862358e-12,
+      "growth": -4.806294392862358e-12,
+      "delta_alpha_to_original_candidate": 4.89961232786021e-13,
+      "absolute_polynomial_residual": 1.7391557676734858e-12,
+      "raw_index": 0,
+      "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/local_mode_neutral_normal_validation_20261023/runs/crop360/out/all_vectors.petsc",
+      "vector_sha256": "8853b51c25e4236fee5e80cfb6da95fe645c9baf90d3ab482a60fa464768ef1d",
+      "nmax_N": 1.204950928379969,
+      "peak_j": 286,
+      "peak_n_N": 0.0449374573360328,
+      "raw_vector_index_association_verified": true,
+      "accepted_solve": true,
+      "neutral_at_original_fixed_parameters": true,
+      "neutral_point_reconverged_on_this_grid": false
+    }
+  ],
+  "comparisons": [
+    {
+      "reference": "original400",
+      "other": "pchip799",
+      "delta_alpha": 0.016442143126272436,
+      "growth_difference": -0.0006154827384076304,
+      "normal_integral_equal_primitive_MAC": 0.9999972648457253,
+      "mapped_points": 400,
+      "original_g_omega": -0.1058468632997054,
+      "linear_frequency_shift_estimate": -0.005814841547688484,
+      "estimate_qualification": "First-order estimate using original400 fixed-beta g_omega; no new-grid neutral root or beta optimum was re-converged. Near neutrality a relative percentage in g is undefined/unhelpful.",
+      "linear_estimated_omega_at_same_beta": 20.19756555625599
+    },
+    {
+      "reference": "original400",
+      "other": "pchip1597",
+      "delta_alpha": 0.017506436433684262,
+      "growth_difference": -0.0006575550563392698,
+      "normal_integral_equal_primitive_MAC": 0.9999968885190825,
+      "mapped_points": 400,
+      "original_g_omega": -0.1058468632997054,
+      "linear_frequency_shift_estimate": -0.006212324445339515,
+      "estimate_qualification": "First-order estimate using original400 fixed-beta g_omega; no new-grid neutral root or beta optimum was re-converged. Near neutrality a relative percentage in g is undefined/unhelpful.",
+      "linear_estimated_omega_at_same_beta": 20.19716807335834
+    },
+    {
+      "reference": "original400",
+      "other": "crop340",
+      "delta_alpha": 5.598017585780551e-13,
+      "growth_difference": 5.049900233620579e-13,
+      "normal_integral_equal_primitive_MAC": 1.0,
+      "mapped_points": 340,
+      "original_g_omega": -0.1058468632997054,
+      "linear_frequency_shift_estimate": 4.770949347192071e-12,
+      "estimate_qualification": "First-order estimate using original400 fixed-beta g_omega; no new-grid neutral root or beta optimum was re-converged. Near neutrality a relative percentage in g is undefined/unhelpful.",
+      "linear_estimated_omega_at_same_beta": 20.203380397808452
+    },
+    {
+      "reference": "original400",
+      "other": "crop360",
+      "delta_alpha": 4.2269027022235074e-13,
+      "growth_difference": 4.1400111405421006e-13,
+      "normal_integral_equal_primitive_MAC": 1.0000000000000002,
+      "mapped_points": 360,
+      "original_g_omega": -0.1058468632997054,
+      "linear_frequency_shift_estimate": 3.91132151816314e-12,
+      "estimate_qualification": "First-order estimate using original400 fixed-beta g_omega; no new-grid neutral root or beta optimum was re-converged. Near neutrality a relative percentage in g is undefined/unhelpful.",
+      "linear_estimated_omega_at_same_beta": 20.203380397807592
+    },
+    {
+      "reference": "pchip799",
+      "other": "pchip1597",
+      "delta_alpha": 0.0010642955093824588,
+      "growth_difference": -4.207231793163944e-05,
+      "normal_integral_equal_primitive_MAC": 0.9999999885722787,
+      "mapped_points": 799,
+      "original_g_omega": -0.1058468632997054,
+      "linear_frequency_shift_estimate": -0.00039748289765103076,
+      "estimate_qualification": "First-order estimate using original400 fixed-beta g_omega; no new-grid neutral root or beta optimum was re-converged. Near neutrality a relative percentage in g is undefined/unhelpful.",
+      "linear_estimated_omega_at_same_beta": 20.20298291490603
+    }
+  ],
+  "qualification": "Fixed original neutral omega/beta grid/domain diagnostic. This is not a re-converged neutral point on each new grid and does not establish global modal competition.",
+  "solver_unchanged": true,
+  "original_trace_unchanged": true,
+  "source_and_derived_input_hashes_unchanged": true,
+  "completed": "2026-10-23T10:18:03.375329+08:00",
+  "status": "fixed_parameter_sensitivity_complete",
+  "not_a_new_grid_neutral_convergence_certificate": true
+}
