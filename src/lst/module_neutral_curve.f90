@@ -43,6 +43,7 @@ contains
     integer :: retry_eigenpairs
     logical :: ok,best_valid,have_outputs,has_tangent,saved_tracking,adaptive_steps,vector_tracking,sample_only,sample_valid
     logical :: reverse_outer,reverse_inner,anchor_row_seed,have_row_anchor
+    logical :: station_predictor
     character(32) :: outer_name,inner_name
     character(256) :: prefix
 
@@ -118,6 +119,7 @@ contains
     vector_tracking=.false.; minimum_overlap=.95_real64
     sample_only=.false.
     reverse_outer=.false.;reverse_inner=.false.;anchor_row_seed=.false.;retry_eigenpairs=0
+    station_predictor=.false.
     if (cfg%has_key('neutral','adaptive_steps')) call cfg%get('neutral','adaptive_steps',adaptive_steps)
     if (cfg%has_key('neutral','vector_tracking')) call cfg%get('neutral','vector_tracking',vector_tracking)
     if (cfg%has_key('neutral','sample_only')) call cfg%get('neutral','sample_only',sample_only)
@@ -125,6 +127,7 @@ contains
     if (cfg%has_key('neutral','reverse_inner')) call cfg%get('neutral','reverse_inner',reverse_inner)
     if (cfg%has_key('neutral','anchor_row_seed')) call cfg%get('neutral','anchor_row_seed',anchor_row_seed)
     call read_int('retry_eigenpairs',retry_eigenpairs)
+    if (cfg%has_key('neutral','station_predictor')) call cfg%get('neutral','station_predictor',station_predictor)
     call read_real('minimum_step',minimum_step)
     call read_real('minimum_overlap',minimum_overlap)
     if (sample_only .and. task/=33) then
@@ -138,6 +141,10 @@ contains
     if (retry_eigenpairs<0 .or. (retry_eigenpairs>1 .and. &
         (.not.vector_tracking .or. lst_mode/=LST_SPATIAL_MODE))) then
       print *, 'Candidate retries require spatial PEP and vector_tracking.'
+      return
+    end if
+    if (station_predictor .and. (outer_id/=5 .or. .not.vector_tracking .or. lst_mode/=LST_SPATIAL_MODE)) then
+      print *, 'station_predictor requires outer=iloc, spatial PEP and vector_tracking.'
       return
     end if
     call read_real('ds',opt%ds); call read_real('ds_min',opt%ds_min); call read_real('ds_max',opt%ds_max)
@@ -200,6 +207,7 @@ contains
     write(log_unit,*) 'sample_only=',sample_only
     write(log_unit,*) 'reverse_outer=',reverse_outer,' reverse_inner=',reverse_inner,' anchor_row_seed=',anchor_row_seed
     write(log_unit,*) 'retry_eigenpairs=',retry_eigenpairs
+    write(log_unit,*) 'station_predictor=',station_predictor
     call open_table(roots_unit,trim(prefix)//'_roots.plt',ios)
     if (ios==0) call open_table(field_unit,trim(prefix)//'_field.plt',ios)
     if (ios==0) call open_table(ridge_unit,trim(prefix)//'_ridge.plt',ios)
@@ -413,13 +421,14 @@ contains
       complex(real64),intent(out) :: eigen
       real(real64),intent(out) :: g
       logical,intent(out) :: valid
-      complex(real64) :: path_seed,previous_eigen,predictor
+      complex(real64) :: path_seed,previous_eigen,predictor,station_previous_eigen
       real(real64) :: origin(2),trial(2),unit_step(2),distance,score,best_score
       real(real64) :: fraction,first_fraction,last_fraction,previous_fraction,increment,max_increment,trial_increment
-      integer :: k,axis,id,nsteps,origin_index,attempts
+      real(real64) :: station_previous_point(2)
+      integer :: k,axis,id,nsteps,origin_index,attempts,station_rescue_remaining
       type(neutral_sample) :: sample
       Vec :: path_vector
-      logical :: has_path_vector
+      logical :: has_path_vector,has_station_previous,used_station_prediction
       ! Recover a known point belonging to the requested eigenmode seed, then
       ! approach the requested point in small parameter steps. In particular the
       ! first scan endpoint must not jump directly from the configured seed.
@@ -447,10 +456,29 @@ contains
       ! Change a discrete station at fixed inner parameter before differentiating
       ! the continuous eigenvalue branch in the inner direction.
       if (outer_id==5 .and. valid) then
+        has_station_previous=.false.
+        if (station_predictor .and. nint(point(1))/=nint(origin(1))) &
+          call find_station_history(origin,path_seed,path_vector,station_previous_point, &
+                                    station_previous_eigen,has_station_previous)
         do while (nint(point(1))/=nint(origin(1)))
           trial=[origin(1)+sign(1._real64,point(1)-origin(1)),origin(2)]
-          call advance(trial,path_seed,path_seed,eigen,g,valid,path_vector,has_path_vector)
+          predictor=path_seed;used_station_prediction=.false.
+          station_rescue_remaining=6
+          if (station_predictor) call station_step_guess(origin,path_seed,trial,path_vector, &
+            has_path_vector,station_previous_point,station_previous_eigen,has_station_previous, &
+            predictor,used_station_prediction,station_rescue_remaining)
+          if (station_predictor) then
+            call advance_station(trial,predictor,path_seed,eigen,g,valid,path_vector,has_path_vector, &
+                                 station_rescue_remaining,'target')
+          else
+            call advance(trial,predictor,path_seed,eigen,g,valid,path_vector,has_path_vector)
+          end if
+          if (.not.valid .and. used_station_prediction) then
+            write(log_unit,*) 'station_predictor_fallback_old_shift point=',trial,' shift=',path_seed
+            call advance(trial,path_seed,path_seed,eigen,g,valid,path_vector,has_path_vector)
+          end if
           if (.not.valid) exit
+          station_previous_point=origin;station_previous_eigen=path_seed;has_station_previous=.true.
           origin=trial; path_seed=eigen
         end do
       end if
@@ -559,6 +587,136 @@ contains
         call PetscErrorF(report_error,__LINE__,"module_neutral_curve.f90")
         call MPIU_Abort(PETSC_COMM_WORLD,error)
       end if
+    end subroutine
+    ! Only already accepted adjacent stations at the same continuous parameter
+    ! can supply a secant. Check their saved vectors before reusing the slope.
+    subroutine find_station_history(current,current_eigen,reference,previous,previous_eigen,found)
+      real(real64), intent(in) :: current(2)
+      complex(real64), intent(in) :: current_eigen
+      Vec, intent(in) :: reference
+      real(real64), intent(out) :: previous(2)
+      complex(real64), intent(out) :: previous_eigen
+      logical, intent(out) :: found
+      PetscReal :: reference_norm,candidate_norm
+      PetscScalar :: product
+      real(real64) :: overlap,best_overlap,inner_tolerance
+      integer :: k
+      found=.false.;best_overlap=-1._real64
+      previous=current;previous_eigen=current_eigen
+      inner_tolerance=64._real64*epsilon(1._real64)*max(1._real64,abs(current(2)))
+      call VecNorm(reference,NORM_2,reference_norm,ierr)
+      call check_vector_error(ierr)
+      if (.not.ieee_is_finite(reference_norm) .or. reference_norm<=0._real64) return
+      do k=1,nhistory
+        if (.not.history_has_vector(k)) cycle
+        if (history(k)%status/=NC_SUCCESS) cycle
+        if (abs(nint(history(k)%point(1))-nint(current(1)))/=1) cycle
+        if (abs(history(k)%point(2)-current(2))>inner_tolerance) cycle
+        if (abs(history(k)%eigen-current_eigen)>jump_tol) cycle
+        call VecNorm(history_vectors(k),NORM_2,candidate_norm,ierr)
+        call check_vector_error(ierr)
+        if (.not.ieee_is_finite(candidate_norm) .or. candidate_norm<=0._real64) cycle
+        call VecDot(reference,history_vectors(k),product,ierr)
+        call check_vector_error(ierr)
+        overlap=(abs(product)/reference_norm/candidate_norm)**2
+        if (.not.ieee_is_finite(overlap) .or. overlap<minimum_overlap .or. overlap<=best_overlap) cycle
+        previous=history(k)%point;previous_eigen=history(k)%eigen
+        best_overlap=overlap;found=.true.
+      end do
+      if (found) write(log_unit,*) 'station_predictor_history current=',current,' previous=',previous, &
+        ' eigen=',previous_eigen,' overlap=',best_overlap
+    end subroutine
+    ! A reverse-neighbor probe owns its reference copy; it can never replace
+    ! the accepted origin vector. Only its validated eigenvalue informs shift.
+    subroutine station_step_guess(current,current_eigen,target,reference,has_reference, &
+                                  previous,previous_eigen,has_previous,prediction,used_prediction,rescue_remaining)
+      real(real64), intent(in) :: current(2),target(2)
+      complex(real64), intent(in) :: current_eigen
+      Vec, intent(in) :: reference
+      logical, intent(in) :: has_reference
+      real(real64), intent(inout) :: previous(2)
+      complex(real64), intent(inout) :: previous_eigen
+      logical, intent(inout) :: has_previous
+      complex(real64), intent(out) :: prediction
+      logical, intent(out) :: used_prediction
+      integer, intent(inout) :: rescue_remaining
+      real(real64) :: probe_point(2),probe_growth,station_delta
+      complex(real64) :: probe_eigen
+      Vec :: probe_reference
+      logical :: has_probe_reference,probe_valid
+      integer :: probe_station
+      prediction=current_eigen;used_prediction=.false.
+      if (.not.has_reference) return
+      if (.not.has_previous) then
+        probe_station=nint(current(1))-nint(target(1)-current(1))
+        if (probe_station>=1 .and. probe_station<=in) then
+          probe_point=[real(probe_station,real64),current(2)]
+          call VecDuplicate(reference,probe_reference,ierr)
+          call check_vector_error(ierr)
+          call VecCopy(reference,probe_reference,ierr)
+          call check_vector_error(ierr)
+          has_probe_reference=.true.
+          call advance_station(probe_point,current_eigen,current_eigen,probe_eigen,probe_growth,probe_valid, &
+                               probe_reference,has_probe_reference,rescue_remaining,'bootstrap')
+          write(log_unit,*) 'station_predictor_probe current=',current,' probe=',probe_point, &
+            ' accepted=',probe_valid,' eigen=',probe_eigen
+          if (probe_valid) then
+            previous=probe_point;previous_eigen=probe_eigen;has_previous=.true.
+          end if
+          if (has_probe_reference) then
+            call VecDestroy(probe_reference,ierr)
+            call check_vector_error(ierr)
+          end if
+        else
+          write(log_unit,*) 'station_predictor_probe_unavailable current=',current,' opposite=',probe_station
+        end if
+      end if
+      if (.not.has_previous) return
+      station_delta=current(1)-previous(1)
+      if (abs(station_delta)<.5_real64) return
+      prediction=current_eigen+(current_eigen-previous_eigen)*(target(1)-current(1))/station_delta
+      used_prediction=ieee_is_finite(real(prediction,real64)) .and. ieee_is_finite(aimag(prediction))
+      if (.not.used_prediction) prediction=current_eigen
+      write(log_unit,*) 'station_predictor_target current=',current,' target=',target,' used=',used_prediction, &
+        ' shift=',prediction,' reference_eigen=',current_eigen
+    end subroutine
+    ! At most six extra real shifts per discrete hop, shared by bootstrap and
+    ! target attempts. A failed advance leaves the actual reference unchanged;
+    ! only a candidate passing the original gates can replace it. This bounded
+    ! heuristic is not a completeness guarantee for a clustered spectrum.
+    subroutine advance_station(point,guess,reference_eigen,eigen,g,valid,reference,has_reference, &
+                               rescue_remaining,stage)
+      real(real64), intent(in) :: point(2)
+      complex(real64), intent(in) :: guess,reference_eigen
+      complex(real64), intent(out) :: eigen
+      real(real64), intent(out) :: g
+      logical, intent(out) :: valid
+      Vec, intent(inout) :: reference
+      logical, intent(inout) :: has_reference
+      integer, intent(inout) :: rescue_remaining
+      character(*), intent(in) :: stage
+      real(real64), parameter :: offsets(6)=[-.5_real64,.5_real64,-1._real64,1._real64,-2._real64,2._real64]
+      real(real64) :: offset,used_offsets(6)
+      complex(real64) :: shifted_guess
+      integer :: k,nused
+      call advance(point,guess,reference_eigen,eigen,g,valid,reference,has_reference)
+      if (valid .or. .not.has_reference .or. rescue_remaining<=0) return
+      nused=0
+      do k=1,size(offsets)
+        if (rescue_remaining<=0) exit
+        offset=sign(min(abs(offsets(k)),jump_tol),offsets(k))
+        if (nused>0) then
+          if (any(abs(used_offsets(1:nused)-offset)<=epsilon(1._real64)*max(1._real64,abs(offset)))) cycle
+        end if
+        nused=nused+1;used_offsets(nused)=offset
+        shifted_guess=guess+cmplx(offset,0._real64,real64)
+        rescue_remaining=rescue_remaining-1
+        write(log_unit,*) 'station_shift_rescue stage=',stage,' point=',point,' shift=',shifted_guess, &
+          ' reference_eigen=',reference_eigen,' remaining=',rescue_remaining
+        call advance(point,shifted_guess,reference_eigen,eigen,g,valid,reference,has_reference)
+        write(log_unit,*) 'station_shift_rescue_result stage=',stage,' accepted=',valid,' eigen=',eigen
+        if (valid) exit
+      end do
     end subroutine
     subroutine update_reference(reference,has_reference,valid,enforce,expected,reference_eigen)
       Vec, intent(inout) :: reference

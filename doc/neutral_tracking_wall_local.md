@@ -21,6 +21,7 @@
 | `vector_tracking` | `F` | 用独立保存的原始右特征向量跟踪谱支，在本次已收敛候选中选择满足门槛且重叠最大的根。 |
 | `minimum_overlap` | `0.95` | 归一化欧氏平方重叠下限，范围 `(0,1]`。这是跟踪参数，不是通用物理判据。 |
 | `retry_eigenpairs` | `0` | `0` 或 `1` 不扩充；大于 1 时，在有参考向量但本步未通过向量选择后，同一点只重算一次。只支持空间 PEP 且须 `vector_tracking=T`。 |
+| `station_predictor` | `F` | 仅允许空间模式、outer=`iloc` 且启用向量跟踪。用已接受相邻站的 secant 预测下一站求解 shift；缺少邻站历史时，复制参考向量向反方向邻站作真实 MAC 探针。预测失败可用原 shift 再试一次。预测只改 shift，原残差、跳跃及 MAC 门槛均保留。 |
 | `sample_only` | `F` | 只允许 `task=33`；输出指定采样点，不求中性根，也不细化峰值。 |
 | `reverse_outer` | `F` | 逐行扫描任务按 outer 从大到小执行；上下界仍按 `min ≤ max` 填写。 |
 | `reverse_inner` | `F` | `sample_only` 时，inner 从大到小采样。 |
@@ -38,6 +39,8 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 ```
 
 示例使用的串行 SuperLU 须由 PETSc 启用；也可使用原默认 SuperLU_DIST。INI 中 `retry_eigenpairs=8` 会在下一次重试中、读取命令行选项之后覆盖 `nev=8`、`ncv=max(24,2*8+8)=24`，并使用参考向量的独立副本作为初始空间。求解返回即清理一次性引用；再下一次求解恢复原维数。扩充不保证全谱覆盖，`eigen_error_tol`、`max_eigen_jump` 和 `minimum_overlap` 始终保留。候选序号只属于本次求解，不是持久谱支编号。[SLEPc PEP 说明](https://slepc.upv.es/release/documentation/manual/pep.html)
+
+`station_predictor=T` 时，若邻站探针或目标预测仍被谱簇遮挡，可额外尝试实部 shift 偏移 `−0.5,+0.5,−1,+1,−2,+2`，每个偏移幅度截到 `max_eigen_jump`；重复偏移跳过。每一离散站位步最多共享 6 次额外尝试，命中即停，邻站探针与目标共用此预算。参考特征值与向量在失败尝试间保持不变，原残差、特征值跳跃和 MAC 门槛仍决定是否接受；请求的候选数 `nev` 仍使用 `retry_eigenpairs`，不额外增大（SLEPc 实际收敛数可能更多）。这是有限的启发式恢复，不保证找到密集谱中的目标支；预算耗尽仍失败时保留 unknown。
 
 ## 扫描片段与结果解释
 
