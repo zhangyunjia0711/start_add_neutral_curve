@@ -1,0 +1,411 @@
+{
+  "created": "2026-10-24T12:58:08.536578+08:00",
+  "input_files": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/neutral_variable_beta_candidates.json",
+      "sha256": "8fe90ff641c9b8dff2e4b01443a4fb19ffe4b1266b84ae7cd9ec6b1344e78937"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/case_stage_status.json",
+      "sha256": "46348955f8a6b8683ccb28eafd6b2cb95a5f601a0a8020751ccb2789749f8fdb"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/neutral_conjugate_derived.csv",
+      "sha256": "1794928c6729dff0eba2a2b7504bb9f5cf64f42dc17bb42c091926d393957993"
+    }
+  ],
+  "format_guide": "https://tecplot.azureedge.net/products/360/2024r1m1/360-data-format.html",
+  "datasets": [
+    {
+      "file": "neutral_variable_beta_stage.dat",
+      "binary_file": "neutral_variable_beta_stage.plt",
+      "variables": [
+        "X_mm",
+        "Omega",
+        "Beta",
+        "Alpha_r",
+        "Alpha_i",
+        "Growth",
+        "Station",
+        "Evidence",
+        "Boundary",
+        "X_plus_35_mm"
+      ],
+      "zones": [
+        {
+          "name": "Highest_verified_positive_upper",
+          "points": 831,
+          "role": "neutral_curve",
+          "style": "line"
+        },
+        {
+          "name": "High_frequency_lobe_local_lower",
+          "points": 334,
+          "role": "neutral_curve",
+          "style": "line"
+        },
+        {
+          "name": "Low_frequency_lobe_local_upper",
+          "points": 281,
+          "role": "neutral_curve",
+          "style": "line"
+        },
+        {
+          "name": "Conjugate_derived_lower_candidates",
+          "points": 9,
+          "role": "conjugate_derived_not_an_extra_solve",
+          "style": "scatter"
+        },
+        {
+          "name": "Positive_growth_test_i10_NOT_NEUTRAL",
+          "points": 1,
+          "role": "not_neutral_positive_growth_test",
+          "style": "scatter"
+        },
+        {
+          "name": "Other_candidates_M1c_upper_local",
+          "points": 89,
+          "role": "actual_local_neutral_candidates",
+          "style": "scatter"
+        },
+        {
+          "name": "Other_candidates_M1high_competition_upper_local",
+          "points": 23,
+          "role": "actual_local_neutral_candidates",
+          "style": "scatter"
+        },
+        {
+          "name": "Other_candidates_M1p_upper_local",
+          "points": 305,
+          "role": "actual_local_neutral_candidates",
+          "style": "scatter"
+        },
+        {
+          "name": "Other_candidates_M2p_upper_local",
+          "points": 483,
+          "role": "actual_local_neutral_candidates",
+          "style": "scatter"
+        },
+        {
+          "name": "Other_candidates_M3near_upper_local",
+          "points": 55,
+          "role": "actual_local_neutral_candidates",
+          "style": "scatter"
+        },
+        {
+          "name": "Other_candidates_M3nearc_upper_local",
+          "points": 37,
+          "role": "actual_local_neutral_candidates",
+          "style": "scatter"
+        },
+        {
+          "name": "Other_candidates_tail841_lobe_lower_lower_local",
+          "points": 334,
+          "role": "actual_local_neutral_candidates",
+          "style": "scatter"
+        },
+        {
+          "name": "Other_candidates_tail841_low_lobe_upper_upper_local",
+          "points": 281,
+          "role": "actual_local_neutral_candidates",
+          "style": "scatter"
+        },
+        {
+          "name": "Other_candidates_tail_beta4_upper_local",
+          "points": 48,
+          "role": "actual_local_neutral_candidates",
+          "style": "scatter"
+        },
+        {
+          "name": "Other_candidates_tail_beta6_upper_local",
+          "points": 6,
+          "role": "actual_local_neutral_candidates",
+          "style": "scatter"
+        }
+      ],
+      "total_points": 3117,
+      "ascii_sha256": "167e7e43a34d5ea9f737dee28ba2c4a63edbc78b1142fa02f5c10d761dd387be",
+      "numeric_roundtrip_exact": true,
+      "binary_sha256": "d490fc5c86ea64bfff72d090f0541e76e650509d97d328350fbf015d3102b208",
+      "binary_bytes": 261848,
+      "binary_magic": "#!TDV112",
+      "native_roundtrip_sha256": "ce6877dd803887747b68ca83ae3c9a09ffd49543f4a9872cb2977374d5bb7867",
+      "native_roundtrip_exact": true
+    },
+    {
+      "file": "neutral_variable_beta_nose.dat",
+      "binary_file": "neutral_variable_beta_nose.plt",
+      "variables": [
+        "X_plus_35_mm",
+        "Omega",
+        "X_mm",
+        "Beta",
+        "Alpha_r",
+        "Alpha_i",
+        "Growth",
+        "Station",
+        "Evidence",
+        "Boundary"
+      ],
+      "zones": [
+        {
+          "name": "Nose_highest_verified_upper",
+          "points": 73,
+          "role": "neutral_curve",
+          "style": "line"
+        },
+        {
+          "name": "Nose_conjugate_derived_lower",
+          "points": 9,
+          "role": "conjugate_derived_not_an_extra_solve",
+          "style": "scatter"
+        }
+      ],
+      "total_points": 82,
+      "ascii_sha256": "95863de12fb79628d80ac03dcda5821621e10559cab1be8b6d1bbc250f180cdb",
+      "numeric_roundtrip_exact": true,
+      "binary_sha256": "78dfe196e7547690c274c0732b1ed7d3fa963473f1d2dad6643f1e9e0ce66dc5",
+      "binary_bytes": 10204,
+      "binary_magic": "#!TDV112",
+      "native_roundtrip_sha256": "e01f38c4707d438bacda5d4afb6b8096adc791c3547ade032aa971de1380562c",
+      "native_roundtrip_exact": true
+    },
+    {
+      "file": "neutral_variable_beta_tail.dat",
+      "binary_file": "neutral_variable_beta_tail.plt",
+      "variables": [
+        "X_mm",
+        "Omega",
+        "Beta",
+        "Alpha_r",
+        "Alpha_i",
+        "Growth",
+        "Station",
+        "Evidence",
+        "Boundary",
+        "X_plus_35_mm"
+      ],
+      "zones": [
+        {
+          "name": "Highest_verified_positive_upper",
+          "points": 336,
+          "role": "neutral_curve",
+          "style": "line"
+        },
+        {
+          "name": "High_frequency_lobe_local_lower",
+          "points": 334,
+          "role": "neutral_curve",
+          "style": "line"
+        },
+        {
+          "name": "Low_frequency_lobe_local_upper",
+          "points": 281,
+          "role": "neutral_curve",
+          "style": "line"
+        }
+      ],
+      "total_points": 951,
+      "ascii_sha256": "652db9e6d6753aff8a1ef9f5788195847f51a4e7c28c6f5f9fe9ca5962e491fb",
+      "numeric_roundtrip_exact": true,
+      "binary_sha256": "c88bfc931bf132517580aa6ba773e6117160446f9645c5481198eaa065e430ad",
+      "binary_bytes": 80224,
+      "binary_magic": "#!TDV112",
+      "native_roundtrip_sha256": "7ec0e8432aa9ac17826c724d0831773ceda98e08e4197fc41ecf75931228f861",
+      "native_roundtrip_exact": true
+    },
+    {
+      "file": "neutral_variable_beta_beta.dat",
+      "binary_file": "neutral_variable_beta_beta.plt",
+      "variables": [
+        "X_mm",
+        "Beta",
+        "Omega",
+        "Alpha_r",
+        "Alpha_i",
+        "Growth",
+        "Station",
+        "Evidence",
+        "Boundary",
+        "X_plus_35_mm"
+      ],
+      "zones": [
+        {
+          "name": "Beta_winner_segment_1",
+          "points": 83,
+          "role": "neutral_curve",
+          "style": "line"
+        },
+        {
+          "name": "Beta_winner_segment_2",
+          "points": 279,
+          "role": "neutral_curve",
+          "style": "line"
+        },
+        {
+          "name": "Beta_winner_segment_3",
+          "points": 400,
+          "role": "neutral_curve",
+          "style": "line"
+        },
+        {
+          "name": "Beta_winner_segment_4",
+          "points": 69,
+          "role": "neutral_curve",
+          "style": "line"
+        }
+      ],
+      "total_points": 831,
+      "ascii_sha256": "478384c5f90c8a05b1125887ff1060a8494c3ba5942fc33ae89a31c2fc86ce26",
+      "numeric_roundtrip_exact": true,
+      "binary_sha256": "132cf79c179ca6fb377c25edc33b665dfedae8c5ff690774c694a192f1c47e18",
+      "binary_bytes": 71048,
+      "binary_magic": "#!TDV112",
+      "native_roundtrip_sha256": "c3985093fc36a8b16336a0560fc246202c281086adec998b78f752170d990211",
+      "native_roundtrip_exact": true
+    },
+    {
+      "file": "neutral_variable_beta_all_candidates.dat",
+      "binary_file": "neutral_variable_beta_all_candidates.plt",
+      "variables": [
+        "X_mm",
+        "Omega",
+        "Beta",
+        "Alpha_r",
+        "Alpha_i",
+        "Growth",
+        "Station",
+        "Evidence",
+        "Boundary",
+        "X_plus_35_mm"
+      ],
+      "zones": [
+        {
+          "name": "M1c_upper_local",
+          "points": 89,
+          "role": "neutral_curve",
+          "style": "scatter"
+        },
+        {
+          "name": "M1high_competition_upper_local",
+          "points": 23,
+          "role": "neutral_curve",
+          "style": "scatter"
+        },
+        {
+          "name": "M1p_upper_local",
+          "points": 311,
+          "role": "neutral_curve",
+          "style": "scatter"
+        },
+        {
+          "name": "M1p_signed_upper_local",
+          "points": 2,
+          "role": "neutral_curve",
+          "style": "scatter"
+        },
+        {
+          "name": "M2p_upper_local",
+          "points": 483,
+          "role": "neutral_curve",
+          "style": "scatter"
+        },
+        {
+          "name": "M3near_upper_local",
+          "points": 56,
+          "role": "neutral_curve",
+          "style": "scatter"
+        },
+        {
+          "name": "M3nearc_upper_local",
+          "points": 37,
+          "role": "neutral_curve",
+          "style": "scatter"
+        },
+        {
+          "name": "tail841_lobe_lower_lower_local",
+          "points": 334,
+          "role": "neutral_curve",
+          "style": "scatter"
+        },
+        {
+          "name": "tail841_low_lobe_upper_upper_local",
+          "points": 281,
+          "role": "neutral_curve",
+          "style": "scatter"
+        },
+        {
+          "name": "tail_beta4_upper_local",
+          "points": 48,
+          "role": "neutral_curve",
+          "style": "scatter"
+        },
+        {
+          "name": "tail_beta6_upper_local",
+          "points": 6,
+          "role": "neutral_curve",
+          "style": "scatter"
+        }
+      ],
+      "total_points": 1670,
+      "ascii_sha256": "09237517673819dfd64694ba84820db5372b825321ccb8dd3520195a68b31669",
+      "numeric_roundtrip_exact": true,
+      "binary_sha256": "0d234c9ae5609c3cc4c4f9c697e180716d6bee5384cf7d264d17f9a7d3c14076",
+      "binary_bytes": 142124,
+      "binary_magic": "#!TDV112",
+      "native_roundtrip_sha256": "c9b31f25193ad2b28dfe3b58c5adc2c2738bd5b8ed0bfec9910e5654e1dce97d",
+      "native_roundtrip_exact": true
+    }
+  ],
+  "source_unique_candidate_count": 1670,
+  "upper_native_count": 831,
+  "additional_lower_count": 334,
+  "additional_low_upper_count": 281,
+  "qualification": "Format conversion only. Unknowns and finite-family qualifications remain unchanged.",
+  "native_validation": {
+    "created": "2026-10-24T13:01:48.618592+08:00",
+    "tool": "Tecplot 360 EX 2024 R1 and Preplot 2024.1.0.52134",
+    "results": [
+      {
+        "file": "neutral_variable_beta_stage.plt",
+        "zones": 15,
+        "points": 3117,
+        "values": 31170,
+        "exact": true
+      },
+      {
+        "file": "neutral_variable_beta_nose.plt",
+        "zones": 2,
+        "points": 82,
+        "values": 820,
+        "exact": true
+      },
+      {
+        "file": "neutral_variable_beta_tail.plt",
+        "zones": 3,
+        "points": 951,
+        "values": 9510,
+        "exact": true
+      },
+      {
+        "file": "neutral_variable_beta_beta.plt",
+        "zones": 4,
+        "points": 831,
+        "values": 8310,
+        "exact": true
+      },
+      {
+        "file": "neutral_variable_beta_all_candidates.plt",
+        "zones": 11,
+        "points": 1670,
+        "values": 16700,
+        "exact": true
+      }
+    ],
+    "all_values_exact": true,
+    "source_inputs_unchanged": true
+  },
+  "native_views_validated": true,
+  "native_view_batch_log_sha256": "1cbcf1e8f1a67bd64a75f512906a1a10d3c7e70683948266b26de80257903a03",
+  "native_preview_visually_inspected": true
+}
