@@ -1,0 +1,97 @@
+{
+  "created": "2026-10-24T22:33:42.703492+08:00",
+  "finished": true,
+  "station": 24,
+  "point": {
+    "outer": 24.0,
+    "inner": 0.0,
+    "iloc": 24.0,
+    "x": -0.7150574487165734,
+    "Re": 79100.0,
+    "alpha_r": 35.19769295538867,
+    "alpha_i": -4.024773222955343,
+    "beta_r": -7.0,
+    "beta_i": 0.0,
+    "omega_r": 0.0,
+    "omega_i": 0.0,
+    "growth": 4.024773222955343,
+    "branch": 0.0,
+    "status": 0.0,
+    "row": 1,
+    "xi": 24.0,
+    "x_mm": -25.027010705080073
+  },
+  "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/work/rough_physical_M3_seed.npy",
+  "vector_sha256": "e088c681d8b6a2945520cf36df335bd351ca063ad684fd5210ab149db93a89c1",
+  "physical_normal_projection_source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/outputs/physical_seed_probe_interleaved.json",
+  "source_sha256": "e0739b1d360076effe7f0ba55d3d95140ec61321382e5b53358303c8c73338f7",
+  "physical_shape_MAC": 0.9998806117658362,
+  "independent_spatial_run": "rough_physical_M3_omega0_independent_85a2db254ff2",
+  "independent_raw_MAC": 1.0000000000000007,
+  "superseded_survey_stopped_pids": [
+    32
+  ],
+  "qualification": "M3 correspondence is supported by matching actual wall-normal eigenfunction positions and nearby eigenvalues, not by matching j-index on different normal grids. The index-homotopy acoustic-like branch is excluded from the delivered M3 curve.",
+  "original_inputs": [
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/plot3dx.unf",
+      "sha256": "f79a4c06f7c6e975c60a8f52742bb00b10122794774190278bd6da858f8650c6"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/R.plot3dq.unf",
+      "sha256": "a8f5acf9bc2b29499802208313c9a7127778c0d6d41142c79aff895aefcbf325"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/U.plot3dq.unf",
+      "sha256": "d4f458cb5775369c441290117da9fba6ec274dbb2905865ed79bc066347061f8"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/V.plot3dq.unf",
+      "sha256": "68e7651b21cc6f30aeafc2f8e8b808af79c180c7ce4199aff3ec160f7f95a735"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/W.plot3dq.unf",
+      "sha256": "55d4ebc949906884b8950ee7820aa6ab1acdc86b220e01ed4bcf3f8bd4f12921"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/T.plot3dq.unf",
+      "sha256": "a446616e9be9dc9f10a12652cd09ddcd7e1c1fe18efd110c328cb789a0e09e0b"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/P.plot3dq.unf",
+      "sha256": "ec259b2e4edf9e3972d4123d21b84265855efad7cc45ea98cf83fdc3544e224c"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/grid_vertical2d.grd",
+      "sha256": "555671ece2d9bad3efa9d2307cf2d2ba68d15293fe96c051b06aba78addae6e4"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/flow_vertical2d.dat",
+      "sha256": "7fa4a503f74203da68e47311af3cf34a4bc01fc6854fb91c61f78fdabf63f224"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/flow_vertical2d.variables.json",
+      "sha256": "7c0e07ec63f9cb11ef8aae20ce663a89fb4c0d4872cd50804ecdb3e243b30725"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/summary.json",
+      "sha256": "eeb1c87b46806600464b3dc1469330e4292a89b03a2d2a7e90562d0b1a90350e"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/fpp_ui_config.yaml",
+      "sha256": "fd6f6cdf3c66e83d968212197c37665bd1aae26adcd7524a0efc68f2102661b4"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/M3/config.ini",
+      "sha256": "e8f3f0eab44b1e5209e83f6fdffe90b306cfe171da6925ef79c6295bbb923ac7"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/M3/in/flow_vertical2d_N.h5",
+      "sha256": "bd6f8b8de9beb95b38959c222eee29865dc7c9aa1bc077fd05f329b6e8688edd"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/M3/in/grid_vertical2d_N.h5",
+      "sha256": "d6c649ec3eab1a236c55d09a7b7eceec5d925b3ec6c3cf14522f3d17d862ad7b"
+    }
+  ]
+}

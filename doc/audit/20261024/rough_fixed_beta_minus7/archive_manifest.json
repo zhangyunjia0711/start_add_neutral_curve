@@ -1,0 +1,467 @@
+{
+  "created": "2026-10-24T22:52:10.694548+08:00",
+  "source_head_before_task": "aae96dfb8c39ff4643fb25c0d4efe9cc69865102",
+  "original_task_root": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024",
+  "archive_relative_path": "doc/audit/20261024/rough_fixed_beta_minus7",
+  "native_point_records": 644,
+  "original_inputs": [
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/plot3dx.unf",
+      "sha256": "f79a4c06f7c6e975c60a8f52742bb00b10122794774190278bd6da858f8650c6"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/R.plot3dq.unf",
+      "sha256": "a8f5acf9bc2b29499802208313c9a7127778c0d6d41142c79aff895aefcbf325"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/U.plot3dq.unf",
+      "sha256": "d4f458cb5775369c441290117da9fba6ec274dbb2905865ed79bc066347061f8"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/V.plot3dq.unf",
+      "sha256": "68e7651b21cc6f30aeafc2f8e8b808af79c180c7ce4199aff3ec160f7f95a735"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/W.plot3dq.unf",
+      "sha256": "55d4ebc949906884b8950ee7820aa6ab1acdc86b220e01ed4bcf3f8bd4f12921"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/T.plot3dq.unf",
+      "sha256": "a446616e9be9dc9f10a12652cd09ddcd7e1c1fe18efd110c328cb789a0e09e0b"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/P.plot3dq.unf",
+      "sha256": "ec259b2e4edf9e3972d4123d21b84265855efad7cc45ea98cf83fdc3544e224c"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/grid_vertical2d.grd",
+      "sha256": "555671ece2d9bad3efa9d2307cf2d2ba68d15293fe96c051b06aba78addae6e4"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/flow_vertical2d.dat",
+      "sha256": "7fa4a503f74203da68e47311af3cf34a4bc01fc6854fb91c61f78fdabf63f224"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/flow_vertical2d.variables.json",
+      "sha256": "7c0e07ec63f9cb11ef8aae20ce663a89fb4c0d4872cd50804ecdb3e243b30725"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/summary.json",
+      "sha256": "eeb1c87b46806600464b3dc1469330e4292a89b03a2d2a7e90562d0b1a90350e"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/fpp_ui_config.yaml",
+      "sha256": "fd6f6cdf3c66e83d968212197c37665bd1aae26adcd7524a0efc68f2102661b4"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/M3/config.ini",
+      "sha256": "e8f3f0eab44b1e5209e83f6fdffe90b306cfe171da6925ef79c6295bbb923ac7"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/M3/in/flow_vertical2d_N.h5",
+      "sha256": "bd6f8b8de9beb95b38959c222eee29865dc7c9aa1bc077fd05f329b6e8688edd"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/M3/in/grid_vertical2d_N.h5",
+      "sha256": "d6c649ec3eab1a236c55d09a7b7eceec5d925b3ec6c3cf14522f3d17d862ad7b"
+    }
+  ],
+  "large_evidence": "Original CFD inputs, full solver runs, needed raw vectors and PETSc matrices remain at preserved local paths. Superseded j-index seed experiments are excluded from the final M3 result and their discarded files are listed in cleanup_receipt.json.",
+  "files": [
+    {
+      "file": "outputs/M3b7_closed_arc_v2.json",
+      "bytes": 729098,
+      "sha256": "a89148ce958b34ca54fa35f318e338349b09ed38346b175468db3a77185c90c6"
+    },
+    {
+      "file": "outputs/M3b7_closed_arc_v3.json",
+      "bytes": 783224,
+      "sha256": "1fe70f33c9cc06a34d8d85aebd498757d391695f893e216636355e8615d86103"
+    },
+    {
+      "file": "outputs/assemble_rough_curve.log",
+      "bytes": 322,
+      "sha256": "71e8af0dfdcdeadf141967e909ebcbcc599e56b44fe19dd14cb249f3586c1657"
+    },
+    {
+      "file": "outputs/batch.log",
+      "bytes": 1179,
+      "sha256": "bdbf2de4303deb0b7fe5e135a9167b937e461a2cc84e97fff634754b3f7a821f"
+    },
+    {
+      "file": "outputs/cleanup_receipt.json",
+      "bytes": 1268208,
+      "sha256": "7ae00493da708616240576874c3a56b6e944e947edaa65e8c8f5a2e097b199ad"
+    },
+    {
+      "file": "outputs/closed_contour_validation.json",
+      "bytes": 44759,
+      "sha256": "97f66fae92ef28d0dc653b87e430312bb2b6c62167f6d8246e1264c8fdd34490"
+    },
+    {
+      "file": "outputs/closed_contour_validation.log",
+      "bytes": 430,
+      "sha256": "53a86b2392d044f0d7bbe0ea941e0bb2b768f0ab0f9e6465b2c2f92ad9770301"
+    },
+    {
+      "file": "outputs/final_audit.log",
+      "bytes": 4758,
+      "sha256": "483f282cb63842b467be3ab522e483d9ff14e8f6d8e7e25d04b56ef3e1a38b61"
+    },
+    {
+      "file": "outputs/input_conversion.json",
+      "bytes": 1385,
+      "sha256": "64ed660f73b486d23a41d79b88bcb2327bd18f67c01c362b04b627564329e22b"
+    },
+    {
+      "file": "outputs/input_inspection.json",
+      "bytes": 2591,
+      "sha256": "e40d5b72c0a6c2a263fb78c13e75796ffce398e89dc34891d000cd5ef1179cf7"
+    },
+    {
+      "file": "outputs/input_manifest.json",
+      "bytes": 3793,
+      "sha256": "ee999e1f2e2a771cc5f2656f7f76bd13cb9854049c8917a54bd4fba2a47eb28f"
+    },
+    {
+      "file": "outputs/native_matrix_preparation.log",
+      "bytes": 319,
+      "sha256": "83eb2119e7386bef1d86a060a70663fdefed602f5ff29fdf02f392941b3ad251"
+    },
+    {
+      "file": "outputs/native_neutral_points.json",
+      "bytes": 511290,
+      "sha256": "900d294dcfc85a4b65c2ef4c856b330bc2d7f4b473f708d05c2bbc40b306229e"
+    },
+    {
+      "file": "outputs/native_neutral_points.log",
+      "bytes": 455,
+      "sha256": "0c23653dc60c0db0dbebffc1e043e9cec33d806d2e459175fdfa923d6f835c59"
+    },
+    {
+      "file": "outputs/native_pencil_preparation.json",
+      "bytes": 1583830,
+      "sha256": "cc0375fb066d990d97db5625a31fdc69045ba7ca86ea821b6dd10b4c32807476"
+    },
+    {
+      "file": "outputs/native_point_evidence.jsonl.gz",
+      "bytes": 340562,
+      "sha256": "c323b7a7fcb170b9774a1198c138480c670b9d21422df824a465fe457193929f"
+    },
+    {
+      "file": "outputs/native_spatial_verification.json",
+      "bytes": 135310,
+      "sha256": "bd2d43747648f3bc158b8ae01d2169a903f2906e458e2794f81f6ba61fe75dd8"
+    },
+    {
+      "file": "outputs/native_spatial_verification.log",
+      "bytes": 17170,
+      "sha256": "ec4a6212f52abde2770626b31adbf656d9615c58332688bbd9b654f99505b28b"
+    },
+    {
+      "file": "outputs/physical_M3_frequency.log",
+      "bytes": 1221,
+      "sha256": "a770142223006ebee63faaa0da72c50631ab5cf0b49e98ffae3de1861240e289"
+    },
+    {
+      "file": "outputs/physical_M3_frequency_negative.json",
+      "bytes": 129003,
+      "sha256": "ebe41235d8fee2000401122d2021809be0996b3428bf81aa01ab4445ae993ffb"
+    },
+    {
+      "file": "outputs/physical_M3_frequency_positive.json",
+      "bytes": 121831,
+      "sha256": "d900ec51fa912d0be9fd329bc0fb07a13d36519e42da53b896cbb2d1888f0930"
+    },
+    {
+      "file": "outputs/physical_fold_0.json",
+      "bytes": 3884,
+      "sha256": "4819758eea6ca1e1043176085fa335fa6b11df33c63fe640c05d951e642506e9"
+    },
+    {
+      "file": "outputs/physical_fold_1.json",
+      "bytes": 4684,
+      "sha256": "1b13de461d254f8df3218ef59c17c963e938541a3d42038461268a6d8b662bd0"
+    },
+    {
+      "file": "outputs/physical_fold_2.json",
+      "bytes": 3937,
+      "sha256": "1148ac0f9481e0708fb0175897aa3b698d07b3b0e8e088798a189bfbdd454a06"
+    },
+    {
+      "file": "outputs/physical_fold_3.json",
+      "bytes": 3899,
+      "sha256": "5427b4a27e319c693db2896dfe816cb8c816b64fe87f1097fe3c25e4f7b86e66"
+    },
+    {
+      "file": "outputs/physical_fold_4.json",
+      "bytes": 4681,
+      "sha256": "8655a39277861c31b37c5ece262d71deec9b3b9de58a91f36052c3966fe9dae5"
+    },
+    {
+      "file": "outputs/physical_fold_5.json",
+      "bytes": 3882,
+      "sha256": "2c3d90a1090ce85814d30ad7ddb19e3ca5ce3f66edd7c9cd9c63c1a52f65008e"
+    },
+    {
+      "file": "outputs/physical_seed_probe_interleaved.json",
+      "bytes": 20938,
+      "sha256": "e0739b1d360076effe7f0ba55d3d95140ec61321382e5b53358303c8c73338f7"
+    },
+    {
+      "file": "outputs/physical_turning_points.json",
+      "bytes": 28445,
+      "sha256": "315e532ba45b22a2814aab02400661d8873627fb175391957049ff9f8f02191f"
+    },
+    {
+      "file": "outputs/physical_turning_points.log",
+      "bytes": 526,
+      "sha256": "259893537aba972cc021d663579031f5fd91c0f481f9e276b0ef99093435c00f"
+    },
+    {
+      "file": "outputs/prior_axis_seeds.json",
+      "bytes": 53090,
+      "sha256": "49e1ba27a88612fbc63a11eb390775d00ee52c81f8407169c0b65d792d268083"
+    },
+    {
+      "file": "outputs/rough_M3_closed_beta_minus7.dat",
+      "bytes": 142605,
+      "sha256": "6942498d2d355294d8ca45725ab6c63e5cd6724a30f2114a095e317a9ba5ca39"
+    },
+    {
+      "file": "outputs/rough_M3_closed_beta_minus7.lay",
+      "bytes": 2338,
+      "sha256": "0d22f6a81cdcd7b2a8d01c8158aa1b32c4e06ac6219bd845e28f65a2d1796c73"
+    },
+    {
+      "file": "outputs/rough_M3_closed_beta_minus7.mcr",
+      "bytes": 392,
+      "sha256": "d66493875be39790215ba7ff80adeda517bd2241873f88a37c58cfd1ba60da27"
+    },
+    {
+      "file": "outputs/rough_M3_closed_beta_minus7.plt",
+      "bytes": 48708,
+      "sha256": "9af5e469f4dfef1fd8385e48732034692645a8f53acfb9f7dc598c9744dadd04"
+    },
+    {
+      "file": "outputs/rough_M3_closed_beta_minus7.png",
+      "bytes": 146435,
+      "sha256": "63d67ac84139b0160b8b9fdb3f1783cbf4bc8259d233feaf6abb26755860aa5e"
+    },
+    {
+      "file": "outputs/rough_M3_closed_beta_minus7.svg",
+      "bytes": 49180,
+      "sha256": "9a5bf9e9b826a421f212765c492e4b22a5a71edcd8ac87afa6fc6a2be2744abe"
+    },
+    {
+      "file": "outputs/rough_M3_closed_beta_minus7_audit.json",
+      "bytes": 5274,
+      "sha256": "99088f4b5961e5c5c0e2fbd942df6a7b7cb1d1431654e9315d079ee6f88efd27"
+    },
+    {
+      "file": "outputs/rough_M3_closed_beta_minus7_curve.csv",
+      "bytes": 190348,
+      "sha256": "0039cce8c68e33dcbe6c34a42461c96397b1906ef4dafc14d0d7ed775e0575fe"
+    },
+    {
+      "file": "outputs/rough_M3_closed_beta_minus7_native_points.csv",
+      "bytes": 185797,
+      "sha256": "f865312ead6e9e8dae617af9242578c07238f08c535b3fe2fc544aa0cc614438"
+    },
+    {
+      "file": "outputs/rough_M3_closed_beta_minus7_nose.png",
+      "bytes": 66807,
+      "sha256": "f1179d1ae41369be1f13818c579d2f0b1bce931bd32d36a2066ca9592db8d44a"
+    },
+    {
+      "file": "outputs/rough_M3_closed_beta_minus7_summary.json",
+      "bytes": 16082,
+      "sha256": "fdfe0fa7db8951e6e25fcc094f4f0b691c3c9732b4d2f02a5e1f6837773e30bb"
+    },
+    {
+      "file": "outputs/rough_M3_seed.json",
+      "bytes": 490602,
+      "sha256": "75e56f3d1804df401b7490b963a99cdca5e31467f178763436283c7a5bfd89fd"
+    },
+    {
+      "file": "outputs/rough_M3_spatial_seed.json",
+      "bytes": 236229,
+      "sha256": "728136ce7505089ee0fc2839c09ac9ff2b21616ada31b8ba5bfc98dec30b2623"
+    },
+    {
+      "file": "outputs/rough_M3_spatial_seed_v2.json",
+      "bytes": 20763,
+      "sha256": "40ad6d714b812ab802a07c8895a5e66f9c06388a198a04afff58adad5b3ec8ba"
+    },
+    {
+      "file": "outputs/rough_closed_arc.log",
+      "bytes": 5201,
+      "sha256": "06ec702f743f6f1bacdcdd699a87c03ea79225932c9eae744eaf7cca0970cd9c"
+    },
+    {
+      "file": "outputs/rough_closed_arc_v3.log",
+      "bytes": 347,
+      "sha256": "d6569f119f2a38e1a4330126fcdf5e48a4a3ba839c733622060c49ca7c79cc7e"
+    },
+    {
+      "file": "outputs/rough_frequency_negative.json",
+      "bytes": 1228765,
+      "sha256": "2caf10f546b5aa2620674adc54b9fd2da8459914882837b7d3d3feb7565cc522"
+    },
+    {
+      "file": "outputs/rough_frequency_positive.json",
+      "bytes": 861987,
+      "sha256": "1669400b83f85405a8df7597ada50d2daae41a8e58122c2cb4f9e3678664e4f1"
+    },
+    {
+      "file": "outputs/rough_frequency_survey.log",
+      "bytes": 5175,
+      "sha256": "29703420d375c57bbccdddc67727f8cf2b0952537598745d66386640c94227e5"
+    },
+    {
+      "file": "outputs/rough_physical_M3_seed.json",
+      "bytes": 5497,
+      "sha256": "b473d27afb5fc89f16f74dc3e590699e665bb6f0dc46577b9339c01aee27c6d7"
+    },
+    {
+      "file": "outputs/seed_transfer.log",
+      "bytes": 14077,
+      "sha256": "cce08a35714b1d553b77cb40659e17f322119b119a138e8f9b3177ddcf51e8c8"
+    },
+    {
+      "file": "outputs/spatial_seed_transfer.log",
+      "bytes": 7666,
+      "sha256": "767946a4b05cab7ec56b96105734dd8bae311cfe2b691a80137e0732fa31c5d5"
+    },
+    {
+      "file": "outputs/spatial_seed_v2.log",
+      "bytes": 2252,
+      "sha256": "8a18c331095c6ece7f4bc708fad155df790ee9f4c69ccc1b8e1908ec7351e39b"
+    },
+    {
+      "file": "outputs/tecplot_roundtrip.mcr",
+      "bytes": 223,
+      "sha256": "800faa933c76eb947006d9643a5ac2e58ee8ce85cbdea5a54542ebba2813daf5"
+    },
+    {
+      "file": "outputs/tecplot_validation.json",
+      "bytes": 991,
+      "sha256": "2d85bb5cf7fdc5e56c5b80d6dd1ad72ca8bbb874b9450628435f72738a4db3e6"
+    },
+    {
+      "file": "outputs/工作日志_2026-10-24_rough固定β负7中性曲线.md",
+      "bytes": 9605,
+      "sha256": "834c0833d444f18cfab9aa482abacf4f74eb5f40eb0e80b282d5b6c4a03d413c"
+    },
+    {
+      "file": "outputs/结果说明.md",
+      "bytes": 7930,
+      "sha256": "ead6e2f7cbb9729151d9a682fca47bb6d4e7fb00086df25f63fc74715f3ae258"
+    },
+    {
+      "file": "scripts/assemble_rough_curve.py",
+      "bytes": 9214,
+      "sha256": "4b24a1e3babf111c35db88c767216c58cb7453fca3a2657182dc3166965938c7"
+    },
+    {
+      "file": "scripts/audit_rough_delivery.py",
+      "bytes": 3904,
+      "sha256": "4178d5fc4a31fc219f445be939e351f0d7ed76687b53d83189c42d39d2b88287"
+    },
+    {
+      "file": "scripts/bootstrap_case.py",
+      "bytes": 7387,
+      "sha256": "f5be7c99ca63a9a38c1bf255f2d54448d239f0484293d2fa59d55f76e30316de"
+    },
+    {
+      "file": "scripts/cleanup_superseded.py",
+      "bytes": 2290,
+      "sha256": "6e97e2ac978e92d3b1096497ee9c9ef11dfb1a40e199d31e865f46981090b78f"
+    },
+    {
+      "file": "scripts/common.py",
+      "bytes": 877,
+      "sha256": "fe299116d9f6b593e99de631749982e11ac4aa52dd90db8a8fa2b11d3ed39b53"
+    },
+    {
+      "file": "scripts/continue_rough_neutral.py",
+      "bytes": 7892,
+      "sha256": "2001c50849a58ead7e0341e4060086114f0a0d3013bbbb22620d9be04f30b30c"
+    },
+    {
+      "file": "scripts/fixed_beta_pencil.py",
+      "bytes": 8661,
+      "sha256": "95a3822aae258b66c278183012a7a0bf883f398e7b449d629d6cc0b301b783bf"
+    },
+    {
+      "file": "scripts/inspect_plot3d.py",
+      "bytes": 2806,
+      "sha256": "ae64fa05f44d83fa475907f42aaa78328c340da1666b27e99e1f34219630bf38"
+    },
+    {
+      "file": "scripts/native_neutral_points.py",
+      "bytes": 4837,
+      "sha256": "0b4c11576d10764beacec66cc06b33b636a1f7e7239794dcee42b9b4fb343cb1"
+    },
+    {
+      "file": "scripts/package_rough_archive.py",
+      "bytes": 3061,
+      "sha256": "2f4788e6e078e190f63c11968e001c744540a3f78867e4929be7bef886e2c93e"
+    },
+    {
+      "file": "scripts/physical_turning_points.py",
+      "bytes": 4228,
+      "sha256": "57b97ed04c112c2937d1d81da81885a19e663b01b15f44e8e86690e6cf1e3ce9"
+    },
+    {
+      "file": "scripts/prepare_native_pencils.py",
+      "bytes": 1457,
+      "sha256": "2e337bbdc6b2ce9385246e729d8cfa149ff3d38fccc7aff6aba472ca865ff411"
+    },
+    {
+      "file": "scripts/probe_physical_seed.py",
+      "bytes": 2644,
+      "sha256": "c575b49893a8e320336903a9c45e5361a4dac3982e46af44ae4c31fa13c66c5f"
+    },
+    {
+      "file": "scripts/profile_interpolation.py",
+      "bytes": 8039,
+      "sha256": "85b4492f4857fb5c531ac2776d7ca3c1e4b7df130416851e6c32a87e83135511"
+    },
+    {
+      "file": "scripts/run_adapter.py",
+      "bytes": 6217,
+      "sha256": "8c2c9e6f2cc7256f030511959df9ffad4d7a3414fa6dd48160e31fbffeb35abb"
+    },
+    {
+      "file": "scripts/select_physical_seed.py",
+      "bytes": 2257,
+      "sha256": "b5664e2847c21dbb878547c75fa7b15e9cd51abfc70ecc994ba6434a169f1d83"
+    },
+    {
+      "file": "scripts/spatial_pencil.py",
+      "bytes": 1605,
+      "sha256": "45afe837b307b1593367504d4945536f84d7b7c2e10155ee5514d4ce3f4eccac"
+    },
+    {
+      "file": "scripts/survey_rough_seed.py",
+      "bytes": 3819,
+      "sha256": "8cd6aefe45be9d894193bd584010a3c9bb41348468069bfc2ab79e71981797e0"
+    },
+    {
+      "file": "scripts/validate_closed_contour.py",
+      "bytes": 4052,
+      "sha256": "bb75b7045ff9ba944753fc29388b4a58698fe7374d05de9702eb6c461c78d469"
+    },
+    {
+      "file": "scripts/verify_native_spatial.py",
+      "bytes": 2393,
+      "sha256": "1ea8257ab1624ac6acb91d0b6d72132223fc432111e09f42e2f358af7da96d87"
+    },
+    {
+      "file": "scripts/verify_tecplot_format.py",
+      "bytes": 2654,
+      "sha256": "0f7e7f56b016ec6a9d2bb83a653d3d27c2b1f6bcbdc7cf16216a4551464ed98c"
+    }
+  ]
+}

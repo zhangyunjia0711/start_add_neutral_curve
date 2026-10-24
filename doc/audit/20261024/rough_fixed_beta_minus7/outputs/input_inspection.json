@@ -1,0 +1,96 @@
+{
+  "grid_shape": [
+    400,
+    361,
+    2
+  ],
+  "flow_shape": [
+    400,
+    361,
+    6
+  ],
+  "x_wall_range_m": [
+    -0.035,
+    1.1
+  ],
+  "x_monotone": true,
+  "minimum_normal_increment_m": 7.010602553012035e-06,
+  "primitive_min": [
+    0.00220605699348494,
+    0.0,
+    -0.001537590660798431,
+    0.0,
+    220.27170188357937,
+    955.7835797149341
+  ],
+  "primitive_max": [
+    0.04482799437349404,
+    702.0223183481423,
+    281.1724874704213,
+    1748.9350000000195,
+    1570.0332504776225,
+    4324.167410964914
+  ],
+  "farfield_first_middle_last": [
+    [
+      0.018410817069110276,
+      468.6257,
+      -3.380932191546332e-26,
+      1748.935,
+      226.49999999999977,
+      1197.574999999999
+    ],
+    [
+      0.018410817069110283,
+      468.62570000000096,
+      -6.014609127253851e-13,
+      1748.9349999999959,
+      226.4999999999984,
+      1197.5749999999935
+    ],
+    [
+      0.018410817069110266,
+      468.6257000000001,
+      -8.527983798321363e-14,
+      1748.9350000000002,
+      226.4999999999997,
+      1197.5749999999985
+    ]
+  ],
+  "wall_first_middle_last": [
+    [
+      -0.035,
+      0.0
+    ],
+    [
+      0.2263924311225524,
+      0.035
+    ],
+    [
+      1.1,
+      0.035
+    ]
+  ],
+  "source_files": [
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/grid_vertical2d.grd",
+      "sha256": "555671ece2d9bad3efa9d2307cf2d2ba68d15293fe96c051b06aba78addae6e4"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/flow_vertical2d.dat",
+      "sha256": "7fa4a503f74203da68e47311af3cf34a4bc01fc6854fb91c61f78fdabf63f224"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/flow_vertical2d.variables.json",
+      "sha256": "7c0e07ec63f9cb11ef8aae20ce663a89fb4c0d4872cd50804ecdb3e243b30725"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/summary.json",
+      "sha256": "eeb1c87b46806600464b3dc1469330e4292a89b03a2d2a7e90562d0b1a90350e"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/fpp_output/fpp_ui_config.yaml",
+      "sha256": "fd6f6cdf3c66e83d968212197c37665bd1aae26adcd7524a0efc68f2102661b4"
+    }
+  ]
+}

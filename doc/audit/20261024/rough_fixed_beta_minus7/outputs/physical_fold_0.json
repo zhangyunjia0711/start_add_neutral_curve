@@ -1,0 +1,128 @@
+{
+  "index": 0,
+  "point": {
+    "alpha_r": 5.797754734880239,
+    "alpha_i": 0.0,
+    "omega_r": -4.9100058319462665,
+    "omega_i": 9.276087363507823e-11,
+    "beta_r": -7.0,
+    "raw_MAC": 0.9999999991204489,
+    "right_residual": 8.902102312680717e-16,
+    "nev": 1,
+    "seconds": 0.004782804999990731,
+    "left_residual": 4.056470647526915e-15,
+    "adjoint_nev": 1,
+    "omega_alpha_r": 0.22733136659114497,
+    "omega_alpha_i": -2.6570051430520482e-12,
+    "original_real_frequency_polynomial_residual": 2.529690052526661e-11,
+    "theta": 0.39225018517341825,
+    "xi": 242.39225018517342,
+    "x_mm": 398.57291738539504
+  },
+  "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/work/M3b7_physical_fold_q0.npy",
+  "vector_sha256": "1a07df395be5945cb2f26c0589e72592b25e4ad3a6abcb3163158501498b3246",
+  "trace": [
+    {
+      "point": {
+        "alpha_r": 5.797671258307061,
+        "alpha_i": 0.0,
+        "omega_r": -4.910031876931226,
+        "omega_i": -5.1713243779190246e-06,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999982792191,
+        "right_residual": 8.806819603361983e-16,
+        "nev": 1,
+        "seconds": 0.005603126000011116,
+        "left_residual": 4.469729936311533e-15,
+        "adjoint_nev": 1,
+        "omega_alpha_r": 0.22733145681985478,
+        "omega_alpha_i": -7.762722158175638e-08,
+        "original_real_frequency_polynomial_residual": 1.410279767689935e-06,
+        "theta": 0.3970613784495356,
+        "xi": 242.39706137844954,
+        "x_mm": 398.5894765786361
+      },
+      "F": [
+        -5.1713243779190246e-06,
+        -7.762722158175638e-08
+      ]
+    },
+    {
+      "point": {
+        "alpha_r": 5.797754734880239,
+        "alpha_i": 0.0,
+        "omega_r": -4.9100058319462665,
+        "omega_i": 9.276087363507823e-11,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999991204489,
+        "right_residual": 8.902102312680717e-16,
+        "nev": 1,
+        "seconds": 0.004782804999990731,
+        "left_residual": 4.056470647526915e-15,
+        "adjoint_nev": 1,
+        "omega_alpha_r": 0.22733136659114497,
+        "omega_alpha_i": -2.6570051430520482e-12,
+        "original_real_frequency_polynomial_residual": 2.529690052526661e-11,
+        "theta": 0.39225018517341825,
+        "xi": 242.39225018517342,
+        "x_mm": 398.57291738539504
+      },
+      "F": [
+        9.276087363507823e-11,
+        -2.6570051430520482e-12
+      ]
+    }
+  ],
+  "operator_predictor": {
+    "alpha_r": 5.797671258307061,
+    "alpha_i": 0.0,
+    "omega_r": -4.910022125199968,
+    "omega_i": -2.8832445870922985e-14,
+    "beta_r": -7.0,
+    "raw_MAC": 0.9999999999999678,
+    "right_residual": 9.88505741906311e-16,
+    "nev": 1,
+    "seconds": 0.005329759000005652,
+    "left_residual": 9.412329304717618e-15,
+    "adjoint_nev": 1,
+    "omega_alpha_r": 0.2273332778528872,
+    "omega_alpha_i": -1.7567452838411798e-15,
+    "original_real_frequency_polynomial_residual": 7.921803175710076e-15,
+    "omega_xi_r": -0.0014606572056161378,
+    "omega_xi_i": -0.0010703385262683003,
+    "xi": 242.39706137844954,
+    "x_mm": 398.5894765786361,
+    "native_bracket": [
+      242,
+      243
+    ],
+    "theta": 0.3970613784495356
+  },
+  "delta_x_mm": -0.016559193241050707,
+  "delta_omega": 1.6293253701782362e-05,
+  "MAC_to_predictor": 0.9999999971932589,
+  "endpoint_coefficient_checks": [
+    {
+      "station": 242,
+      "relative_coefficient_errors": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "station": 243,
+      "relative_coefficient_errors": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passed": true
+    }
+  ],
+  "model": "Linear interpolation of adjacent native frozen-local n and primitive profiles; actual new LST matrices",
+  "passed": true
+}
