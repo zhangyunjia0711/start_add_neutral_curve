@@ -1,0 +1,1552 @@
+{
+  "created": "2026-10-24T21:29:18.718545+08:00",
+  "beta": -7.0,
+  "source_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/outputs/frequency_pilot_fields_roots.json",
+  "source_sha256": "c0e9f2c8e66edc38827b5fa58349c5b0cc3c1121671b79edba37ff146fc4aca2",
+  "model": "Piecewise linear interpolation of original native fixed-beta discrete pencils; no extra CFD grid stations",
+  "seed_spatial_point": {
+    "outer": 119.0,
+    "inner": 7.296886943487475,
+    "iloc": 119.0,
+    "x": -0.716301943424654,
+    "Re": 79100.0,
+    "alpha_r": 80.00434970329206,
+    "alpha_i": -5.00883160394329e-11,
+    "beta_r": -7.0,
+    "beta_i": 0.0,
+    "omega_r": 7.296886943487475,
+    "omega_i": 0.0,
+    "growth": 5.00883160394329e-11,
+    "branch": 1.0,
+    "status": 0.0,
+    "row": 1
+  },
+  "records": [
+    {
+      "index": 0,
+      "z": [
+        1.19,
+        4.000217485164603
+      ],
+      "point": {
+        "alpha_r": 80.00434970329206,
+        "omega_r": 7.296886943488886,
+        "omega_i": 8.578236076117393e-12,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999996,
+        "right_residual": 1.8853879967751587e-13,
+        "nev": 2,
+        "seconds": 0.20496314400000415,
+        "left_residual": 1.5168646167135658e-13,
+        "omega_alpha_r": 0.16750438263071954,
+        "omega_alpha_i": -0.02777306591713053,
+        "original_real_frequency_polynomial_residual": 3.6321174076096123e-12,
+        "omega_xi_r": 0.10775617676427601,
+        "omega_xi_i": -0.005833966544320232,
+        "xi": 119.0,
+        "x_mm": -25.07056801986289,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          119,
+          120
+        ],
+        "theta": 0.0,
+        "model": "native"
+      },
+      "tangent": [
+        0.6895545637135465,
+        -0.72423373551763
+      ],
+      "step": 0.06,
+      "iterations": 0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0000.npy",
+      "vector_sha256": "48404f81da0dd992c1aabe903924bb824d73702feda5c5dff0339ce9ff7cdc53"
+    },
+    {
+      "index": 1,
+      "z": [
+        1.230496328559736,
+        3.955928507373385
+      ],
+      "point": {
+        "alpha_r": 79.11857014746771,
+        "omega_r": 7.583086362728703,
+        "omega_i": -2.1421240703565353e-12,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999990925,
+        "right_residual": 2.3147237065203606e-13,
+        "nev": 2,
+        "seconds": 0.10931251899998529,
+        "left_residual": 1.1673372820401514e-13,
+        "omega_alpha_r": 0.1728452907872999,
+        "omega_alpha_i": -0.02879323414846787,
+        "original_real_frequency_polynomial_residual": 9.237003034887723e-13,
+        "omega_xi_r": 0.10595260941438131,
+        "omega_xi_i": -0.006657841147948015,
+        "xi": 123.04963285597358,
+        "x_mm": -24.414496109183442,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          123,
+          124
+        ],
+        "theta": 0.049632855973584356,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9998203151021058
+      },
+      "tangent": [
+        0.6541853331605794,
+        -0.756334284478485
+      ],
+      "step": 0.06,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0001.npy",
+      "vector_sha256": "5fc00f956399bfddc0efb0cdce08b334460e9789d39fd088a8c7d9577b1cf83d"
+    },
+    {
+      "index": 2,
+      "z": [
+        1.274666892805821,
+        3.902903984307586
+      ],
+      "point": {
+        "alpha_r": 78.05807968615171,
+        "omega_r": 7.864486638471135,
+        "omega_i": -2.5219065252985243e-12,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999988416,
+        "right_residual": 2.2132904210024873e-13,
+        "nev": 2,
+        "seconds": 0.18886672100001078,
+        "left_residual": 1.1930689273603214e-13,
+        "omega_alpha_r": 0.17859065318700987,
+        "omega_alpha_i": -0.029902615949327128,
+        "original_real_frequency_polynomial_residual": 1.0639044166909946e-12,
+        "omega_xi_r": 0.10481603142237907,
+        "omega_xi_i": -0.007494938874024545,
+        "xi": 127.46668928058209,
+        "x_mm": -23.679285255291063,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          127,
+          128
+        ],
+        "theta": 0.4666892805820879,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9997883397211283
+      },
+      "tangent": [
+        0.6237134637669299,
+        -0.7816530656984968
+      ],
+      "step": 0.06899999999999999,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0002.npy",
+      "vector_sha256": "931bf504b7c87c952c291ee2a95fcb45971650bf0f974ad09ef78f0e185a21bf"
+    },
+    {
+      "index": 3,
+      "z": [
+        1.322937030955443,
+        3.8399051078249786
+      ],
+      "point": {
+        "alpha_r": 76.79810215649957,
+        "omega_r": 8.136012023863863,
+        "omega_i": -1.0635449172822359e-11,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999956339,
+        "right_residual": 2.2353681700699906e-13,
+        "nev": 2,
+        "seconds": 0.30614791499999683,
+        "left_residual": 9.627410493517251e-14,
+        "omega_alpha_r": 0.18478305594617386,
+        "omega_alpha_i": -0.031108742886100483,
+        "original_real_frequency_polynomial_residual": 4.333466260185298e-12,
+        "omega_xi_r": 0.10191418765186794,
+        "omega_xi_i": -0.00846535604063023,
+        "xi": 132.2937030955443,
+        "x_mm": -22.853366517828356,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          132,
+          133
+        ],
+        "theta": 0.29370309554428786,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9997578934530357
+      },
+      "tangent": [
+        0.5922188107133564,
+        -0.8057771901941986
+      ],
+      "step": 0.07934999999999999,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0003.npy",
+      "vector_sha256": "517f55b40c2487dbec1aeca8dd1ce2b9787bce994fb006b5c6d70899907bf3df"
+    },
+    {
+      "index": 4,
+      "z": [
+        1.3756127946865069,
+        3.765372194036122
+      ],
+      "point": {
+        "alpha_r": 75.30744388072245,
+        "omega_r": 8.38626208650122,
+        "omega_i": -1.9565612476533933e-11,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999920114,
+        "right_residual": 2.0705642081536107e-13,
+        "nev": 2,
+        "seconds": 0.04608303899999555,
+        "left_residual": 1.0694145036721415e-13,
+        "omega_alpha_r": 0.19141428752848325,
+        "omega_alpha_i": -0.03241383184863345,
+        "original_real_frequency_polynomial_residual": 7.839053845281746e-12,
+        "omega_xi_r": 0.09917401719964489,
+        "omega_xi_i": -0.009515565893455856,
+        "xi": 137.5612794686507,
+        "x_mm": -21.926028226603428,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          137,
+          138
+        ],
+        "theta": 0.5612794686506959,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9997151318397673
+      },
+      "tangent": [
+        0.5630332594878992,
+        -0.8264342373779248
+      ],
+      "step": 0.09125249999999999,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0004.npy",
+      "vector_sha256": "501dc33431f68fd0d0dbcd5dc61c4ecd979259f9ffa23d60c71618a6cd7c5dae"
+    },
+    {
+      "index": 5,
+      "z": [
+        1.3829767592164648,
+        3.7545166540340422
+      ],
+      "point": {
+        "alpha_r": 75.09033308068085,
+        "omega_r": 8.417407784177332,
+        "omega_i": 4.8813763361271745e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 1.8638436512899418e-13,
+        "nev": 2,
+        "seconds": 0.08682062300002258,
+        "left_residual": 1.0605181703612606e-13,
+        "omega_alpha_r": 0.1923303060267608,
+        "omega_alpha_i": -0.03259508003179982,
+        "original_real_frequency_polynomial_residual": 1.8740379428664055e-13,
+        "omega_xi_r": 0.09814105214382927,
+        "omega_xi_i": -0.009654035079861125,
+        "xi": 138.2976759216465,
+        "x_mm": -21.794306707347477,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          138,
+          139
+        ],
+        "theta": 0.29767592164648704,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999945897598455
+      },
+      "tangent": [
+        0.5596227781868592,
+        -0.8287474561857919
+      ],
+      "step": 0.013117546874999997,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0005.npy",
+      "vector_sha256": "cd2a946eb6714d3877c5156b0822a0603dbed552ea6bb29b697373f7f2d402f8"
+    },
+    {
+      "index": 6,
+      "z": [
+        1.3914010715542062,
+        3.742002899989813
+      ],
+      "point": {
+        "alpha_r": 74.84005799979626,
+        "omega_r": 8.452148734880554,
+        "omega_i": -9.957922615828896e-15,
+        "beta_r": -7.0,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 1.9616116130680313e-13,
+        "nev": 2,
+        "seconds": 2.4655199510000045,
+        "left_residual": 1.1056797482072156e-13,
+        "omega_alpha_r": 0.19337704695304422,
+        "omega_alpha_i": -0.03280202480181324,
+        "original_real_frequency_polynomial_residual": 1.9620400973883298e-13,
+        "omega_xi_r": 0.09740306282943657,
+        "omega_xi_i": -0.009795024335359045,
+        "xi": 139.14010715542062,
+        "x_mm": -21.643018657672265,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          139,
+          140
+        ],
+        "theta": 0.14010715542062258,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999927976587577
+      },
+      "tangent": [
+        0.5564834897774381,
+        -0.8308586676475873
+      ],
+      "step": 0.015085178906249995,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0006.npy",
+      "vector_sha256": "79ec315efe9eb3da9e811f4830281ac46453742d787e33e65ba4b3e8061b2b7f"
+    },
+    {
+      "index": 7,
+      "z": [
+        1.4010330014844516,
+        3.7275745185717626
+      ],
+      "point": {
+        "alpha_r": 74.55149037143525,
+        "omega_r": 8.49060796687229,
+        "omega_i": 1.0518644874384087e-13,
+        "beta_r": -7.0,
+        "raw_MAC": 1.0,
+        "right_residual": 1.9714948882999208e-13,
+        "nev": 2,
+        "seconds": 0.015000047000000905,
+        "left_residual": 9.510338581592245e-14,
+        "omega_alpha_r": 0.194569695356113,
+        "omega_alpha_i": -0.03303740726480593,
+        "original_real_frequency_polynomial_residual": 2.014504334234636e-13,
+        "omega_xi_r": 0.09695871278564121,
+        "omega_xi_i": -0.009953852908137786,
+        "xi": 140.10330014844516,
+        "x_mm": -21.469203173431858,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          140,
+          141
+        ],
+        "theta": 0.10330014844515745,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999906848563136
+      },
+      "tangent": [
+        0.5530522338541942,
+        -0.8331465817182987
+      ],
+      "step": 0.017347955742187494,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0007.npy",
+      "vector_sha256": "f55e6337cdd85955c861e086083be563c781f6a1bf1dfbda75975f631c0a934e"
+    },
+    {
+      "index": 8,
+      "z": [
+        1.4120289789054306,
+        3.710928229033096
+      ],
+      "point": {
+        "alpha_r": 74.21856458066192,
+        "omega_r": 8.532802366630966,
+        "omega_i": -5.806317340990852e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 1.939305098551839e-13,
+        "nev": 2,
+        "seconds": 0.016472601000003806,
+        "left_residual": 1.0613548266485612e-13,
+        "omega_alpha_r": 0.19592591362515455,
+        "omega_alpha_i": -0.03330429250069057,
+        "original_real_frequency_polynomial_residual": 1.953145381210928e-13,
+        "omega_xi_r": 0.09661365604742111,
+        "omega_xi_i": -0.010161778952830897,
+        "xi": 141.20289789054306,
+        "x_mm": -21.269683633309356,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          141,
+          142
+        ],
+        "theta": 0.2028978905430563,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.999988095577814
+      },
+      "tangent": [
+        0.5482071322726257,
+        -0.8363425973400038
+      ],
+      "step": 0.019950149103515617,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0008.npy",
+      "vector_sha256": "79cf105f57ab0db5f19b1ca890365ccbbb668a131522eda22ed8eca96ea1044a"
+    },
+    {
+      "index": 9,
+      "z": [
+        1.4245563939560635,
+        3.691707573239079
+      ],
+      "point": {
+        "alpha_r": 73.83415146478158,
+        "omega_r": 8.578560607560938,
+        "omega_i": 4.6420861403960456e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999991,
+        "right_residual": 1.884632093404814e-13,
+        "nev": 2,
+        "seconds": 0.013101183000003402,
+        "left_residual": 1.0555624437751002e-13,
+        "omega_alpha_r": 0.19746653815721954,
+        "omega_alpha_i": -0.03360639167543742,
+        "original_real_frequency_polynomial_residual": 1.892290329432393e-13,
+        "omega_xi_r": 0.09648518033070945,
+        "omega_xi_i": -0.010389205931394212,
+        "xi": 142.45563939560634,
+        "x_mm": -21.04103178546778,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          142,
+          143
+        ],
+        "theta": 0.45563939560634026,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.999984199013845
+      },
+      "tangent": [
+        0.5431858215160412,
+        -0.8396125078296197
+      ],
+      "step": 0.02294267146904296,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0009.npy",
+      "vector_sha256": "3d1e9f10add29af5cb505d48dfd96565fcc71d317195479afd3185d4fe698a9a"
+    },
+    {
+      "index": 10,
+      "z": [
+        1.4388168758522883,
+        3.6695092609919655
+      ],
+      "point": {
+        "alpha_r": 73.39018521983931,
+        "omega_r": 8.627747169079893,
+        "omega_i": 4.2241641499789206e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 1.0000000000000013,
+        "right_residual": 1.9350085274377485e-13,
+        "nev": 2,
+        "seconds": 0.012676454999990483,
+        "left_residual": 7.40595919574199e-14,
+        "omega_alpha_r": 0.19921661049849523,
+        "omega_alpha_i": -0.0339494183211546,
+        "original_real_frequency_polynomial_residual": 1.9422795309029343e-13,
+        "omega_xi_r": 0.09656475091683954,
+        "omega_xi_i": -0.010636190988677205,
+        "xi": 143.88168758522883,
+        "x_mm": -20.77913578858871,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          143,
+          144
+        ],
+        "theta": 0.881687585228832,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999800688322995
+      },
+      "tangent": [
+        0.5380819382537302,
+        -0.8428925362850883
+      ],
+      "step": 0.0263840721893994,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0010.npy",
+      "vector_sha256": "b146353c62e8cb3bf2148e54d1c671e39ae6f28f7b69e9c10f47ff76e31e3293"
+    },
+    {
+      "index": 11,
+      "z": [
+        1.4550450461323317,
+        3.6438718318192587
+      ],
+      "point": {
+        "alpha_r": 72.87743663638517,
+        "omega_r": 8.679236948408636,
+        "omega_i": -3.1165906444127756e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 1.814364214688797e-13,
+        "nev": 2,
+        "seconds": 0.014022222999983569,
+        "left_residual": 9.185660994354344e-14,
+        "omega_alpha_r": 0.20118912415355641,
+        "omega_alpha_i": -0.034336935200981133,
+        "original_real_frequency_polynomial_residual": 1.8183887243652143e-13,
+        "omega_xi_r": 0.0946024039814257,
+        "omega_xi_i": -0.010930135194520752,
+        "xi": 145.50450461323317,
+        "x_mm": -20.47876481335075,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          145,
+          146
+        ],
+        "theta": 0.5045046132331663,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999739322052466
+      },
+      "tangent": [
+        0.5320058560912114,
+        -0.8467406740464621
+      ],
+      "step": 0.030341683017809307,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0011.npy",
+      "vector_sha256": "b9d75a99b8c48becec434570e6ed54fc4da4fbca45da752f848267305f5261e9"
+    },
+    {
+      "index": 12,
+      "z": [
+        1.473477772753637,
+        3.614244558991638
+      ],
+      "point": {
+        "alpha_r": 72.28489117983275,
+        "omega_r": 8.73270604805699,
+        "omega_i": -2.5471432688745077e-15,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 1.8845612988469566e-13,
+        "nev": 2,
+        "seconds": 0.024626930000010816,
+        "left_residual": 1.1170911147243097e-13,
+        "omega_alpha_r": 0.2034207215099918,
+        "omega_alpha_i": -0.034775750739721764,
+        "original_real_frequency_polynomial_residual": 1.884565198470791e-13,
+        "omega_xi_r": 0.0930635387076108,
+        "omega_xi_i": -0.01130068421889955,
+        "xi": 147.3477772753637,
+        "x_mm": -20.134872353769115,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          147,
+          148
+        ],
+        "theta": 0.34777727536371117,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999669716182744
+      },
+      "tangent": [
+        0.524145686862129,
+        -0.8516286156205808
+      ],
+      "step": 0.0348929354704807,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0012.npy",
+      "vector_sha256": "c85a429f2629816823123b2d233f34cc7b45188014cfe4f9c7e05e25379184d0"
+    },
+    {
+      "index": 13,
+      "z": [
+        1.4943688221535751,
+        3.579984411059913
+      ],
+      "point": {
+        "alpha_r": 71.59968822119825,
+        "omega_r": 8.786153010286773,
+        "omega_i": 6.228910887518674e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999991,
+        "right_residual": 1.9632029271526959e-13,
+        "nev": 2,
+        "seconds": 0.015704242999987628,
+        "left_residual": 8.286055299426504e-14,
+        "omega_alpha_r": 0.20592859548273004,
+        "omega_alpha_i": -0.03526865049181825,
+        "original_real_frequency_polynomial_residual": 1.9764199050220207e-13,
+        "omega_xi_r": 0.09186712928839534,
+        "omega_xi_i": -0.011665124214324064,
+        "xi": 149.4368822153575,
+        "x_mm": -19.74155601848542,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          149,
+          150
+        ],
+        "theta": 0.4368822153575138,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999572118852215
+      },
+      "tangent": [
+        0.5174407816716322,
+        -0.8557190178224686
+      ],
+      "step": 0.040126875791052806,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0013.npy",
+      "vector_sha256": "5cee0b2427506357ffed38b428c55fc9486b16c8c78a658e0efe4749a6e12a43"
+    },
+    {
+      "index": 14,
+      "z": [
+        1.518081953671753,
+        3.5403969236422954
+      ],
+      "point": {
+        "alpha_r": 70.8079384728459,
+        "omega_r": 8.83841841449875,
+        "omega_i": 9.372308430646153e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999989,
+        "right_residual": 1.882543120738949e-13,
+        "nev": 2,
+        "seconds": 0.017903528000005053,
+        "left_residual": 6.908162790715331e-14,
+        "omega_alpha_r": 0.2087499341774769,
+        "omega_alpha_i": -0.03582105640638628,
+        "original_real_frequency_polynomial_residual": 1.9156079585893536e-13,
+        "omega_xi_r": 0.09116017778816252,
+        "omega_xi_i": -0.012077052302787897,
+        "xi": 151.8081953671753,
+        "x_mm": -19.29068693482745,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          151,
+          152
+        ],
+        "theta": 0.8081953671753013,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999458951621826
+      },
+      "tangent": [
+        0.5101944447938775,
+        -0.8600590843084369
+      ],
+      "step": 0.046145907159710724,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0014.npy",
+      "vector_sha256": "941c8f78ca6a22db9649578cba6c6f322a934d3fdc7c1fdd19ad1361c81c40d3"
+    },
+    {
+      "index": 15,
+      "z": [
+        1.5449487863656624,
+        3.4946320626436145
+      ],
+      "point": {
+        "alpha_r": 69.8926412528723,
+        "omega_r": 8.886460803958066,
+        "omega_i": -1.0089924230329006e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999942,
+        "right_residual": 1.9413633443443944e-13,
+        "nev": 2,
+        "seconds": 0.032362153999997645,
+        "left_residual": 8.788958942989264e-14,
+        "omega_alpha_r": 0.21191522123477005,
+        "omega_alpha_i": -0.03643752876202304,
+        "original_real_frequency_polynomial_residual": 1.9412482269568983e-13,
+        "omega_xi_r": 0.08867178132771644,
+        "omega_xi_i": -0.012529744269475744,
+        "xi": 154.49487863656623,
+        "x_mm": -18.774164809276346,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          154,
+          155
+        ],
+        "theta": 0.4948786365662272,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999303656327296
+      },
+      "tangent": [
+        0.5027633113752403,
+        -0.8644241162386685
+      ],
+      "step": 0.05306779323366733,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0015.npy",
+      "vector_sha256": "3ef229582291b01849edd22aee917b28dfd94dcb44b7e3da1121ec9c8de4c1e2"
+    },
+    {
+      "index": 16,
+      "z": [
+        1.5753977113968838,
+        3.441742099275701
+      ],
+      "point": {
+        "alpha_r": 68.83484198551402,
+        "omega_r": 8.927212422252934,
+        "omega_i": -5.38002802030757e-15,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999929,
+        "right_residual": 1.79425201292113e-13,
+        "nev": 2,
+        "seconds": 0.03783537399999659,
+        "left_residual": 7.716177124706024e-14,
+        "omega_alpha_r": 0.21546254222894826,
+        "omega_alpha_i": -0.037124553144206,
+        "original_real_frequency_polynomial_residual": 1.7942692772140126e-13,
+        "omega_xi_r": 0.0866617420759317,
+        "omega_xi_i": -0.01304368513124419,
+        "xi": 157.53977113968838,
+        "x_mm": -18.181812029098197,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          157,
+          158
+        ],
+        "theta": 0.5397711396883835,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999110715597744
+      },
+      "tangent": [
+        0.49470058501393455,
+        -0.8690634793770079
+      ],
+      "step": 0.061027962218717424,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0016.npy",
+      "vector_sha256": "4c7c6cd05943a97d79c1ec77fc847e9c037f3b111c3334e131d993ba3f710a33"
+    },
+    {
+      "index": 17,
+      "z": [
+        1.6097038403958188,
+        3.3805142422446672
+      ],
+      "point": {
+        "alpha_r": 67.61028484489334,
+        "omega_r": 8.952673544938227,
+        "omega_i": -3.9090971264013966e-12,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999982049,
+        "right_residual": 1.866402532739389e-13,
+        "nev": 2,
+        "seconds": 0.030695745000002717,
+        "left_residual": 7.53695949385395e-14,
+        "omega_alpha_r": 0.21939943886955535,
+        "omega_alpha_i": -0.0378863986387607,
+        "original_real_frequency_polynomial_residual": 1.4559442641640228e-12,
+        "omega_xi_r": 0.08433203831400066,
+        "omega_xi_i": -0.013754963588171078,
+        "xi": 160.9703840395819,
+        "x_mm": -17.505864199111148,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          160,
+          161
+        ],
+        "theta": 0.9703840395818872,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9998879339302161
+      },
+      "tangent": [
+        0.482507744112675,
+        -0.8758917038488818
+      ],
+      "step": 0.07018215655152503,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0017.npy",
+      "vector_sha256": "809194d809e503647e79e40924fb12af3de81195912b2380c0c13ae0d7bd7a9b"
+    },
+    {
+      "index": 18,
+      "z": [
+        1.6485757310128377,
+        3.3097823338237946
+      ],
+      "point": {
+        "alpha_r": 66.19564667647589,
+        "omega_r": 8.95713998169818,
+        "omega_i": 9.719033574901587e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 1.5808793009816902e-13,
+        "nev": 2,
+        "seconds": 0.21454921299999796,
+        "left_residual": 6.896169384406017e-14,
+        "omega_alpha_r": 0.22373697213468904,
+        "omega_alpha_i": -0.03873476059235832,
+        "original_real_frequency_polynomial_residual": 1.621096454547777e-13,
+        "omega_xi_r": 0.08222220949468476,
+        "omega_xi_i": -0.013916099511323441,
+        "xi": 164.85757310128378,
+        "x_mm": -16.72917806689471,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          164,
+          165
+        ],
+        "theta": 0.8575731012837764,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9998528893619283
+      },
+      "tangent": [
+        0.4864001160098291,
+        -0.8737361885292522
+      ],
+      "step": 0.08070948003425378,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0018.npy",
+      "vector_sha256": "8a20cbbeecc2c15033b096041242677bfe4ea2ca87479a4f457d6c6874b24d44"
+    },
+    {
+      "index": 19,
+      "z": [
+        1.6929752749152083,
+        3.228270362968634
+      ],
+      "point": {
+        "alpha_r": 64.56540725937268,
+        "omega_r": 8.947371318139847,
+        "omega_i": -1.9004475998538745e-12,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999989855,
+        "right_residual": 1.6711267224094496e-13,
+        "nev": 2,
+        "seconds": 0.2536426190000043,
+        "left_residual": 5.368589427821742e-14,
+        "omega_alpha_r": 0.22876123782558583,
+        "omega_alpha_i": -0.039638343710981135,
+        "original_real_frequency_polynomial_residual": 6.998688791649018e-13,
+        "omega_xi_r": 0.07812573957237656,
+        "omega_xi_i": -0.014657117872376193,
+        "xi": 169.29752749152084,
+        "x_mm": -15.828839270070244,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          169,
+          170
+        ],
+        "theta": 0.2975274915208388,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9998145398348739
+      },
+      "tangent": [
+        0.47574468861564395,
+        -0.8795834191559115
+      ],
+      "step": 0.09281590203939184,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0019.npy",
+      "vector_sha256": "0169b098afb55428c8482b30d63f06b155500ffaaccf1920dceb44a11d18ac55"
+    },
+    {
+      "index": 20,
+      "z": [
+        1.7429516502571143,
+        3.1339503810165623
+      ],
+      "point": {
+        "alpha_r": 62.67900762033125,
+        "omega_r": 8.892847782842164,
+        "omega_i": -2.038703759846619e-12,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999987623,
+        "right_residual": 1.6661602625016566e-13,
+        "nev": 2,
+        "seconds": 0.11034946200001627,
+        "left_residual": 5.6598688359171926e-14,
+        "omega_alpha_r": 0.23421705458184386,
+        "omega_alpha_i": -0.04062998484275806,
+        "original_real_frequency_polynomial_residual": 7.340879677816444e-13,
+        "omega_xi_r": 0.07394748867022073,
+        "omega_xi_i": -0.015471919309732332,
+        "xi": 174.29516502571144,
+        "x_mm": -14.799497077266473,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          174,
+          175
+        ],
+        "theta": 0.2951650257114409,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9997560075281207
+      },
+      "tangent": [
+        0.4649792006104363,
+        -0.8853216042770444
+      ],
+      "step": 0.10673828734530061,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0020.npy",
+      "vector_sha256": "ba2367152cb8a2fa27d231ceb4d549912b451de3d890e89ee09380dd58b24c72"
+    },
+    {
+      "index": 21,
+      "z": [
+        1.7996296996111731,
+        3.0250691384256254
+      ],
+      "point": {
+        "alpha_r": 60.50138276851251,
+        "omega_r": 8.78653135037074,
+        "omega_i": -1.6900921160083356e-11,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999899496,
+        "right_residual": 1.5820117457218038e-13,
+        "nev": 2,
+        "seconds": 0.12633786199998553,
+        "left_residual": 6.478440560547259e-14,
+        "omega_alpha_r": 0.24025324674289944,
+        "omega_alpha_i": -0.04169040201697754,
+        "original_real_frequency_polynomial_residual": 5.789606389155898e-12,
+        "omega_xi_r": 0.07143778274787803,
+        "omega_xi_i": -0.016193008380415746,
+        "xi": 179.96296996111732,
+        "x_mm": -13.613073629179793,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          179,
+          180
+        ],
+        "theta": 0.9629699611173237,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9996818358287908
+      },
+      "tangent": [
+        0.4577929005548827,
+        -0.889058862056696
+      ],
+      "step": 0.12274903044709569,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0021.npy",
+      "vector_sha256": "4bb3c93b5b5a024a5498bed9ecf5e4b1fbc5203cfbcb1b9d1f270415dcd21a97"
+    },
+    {
+      "index": 22,
+      "z": [
+        1.8640766421628354,
+        2.8994778676820467
+      ],
+      "point": {
+        "alpha_r": 57.98955735364093,
+        "omega_r": 8.612809431656355,
+        "omega_i": 3.642702459116798e-15,
+        "beta_r": -7.0,
+        "raw_MAC": 0.999999999999996,
+        "right_residual": 1.4505761300757429e-13,
+        "nev": 2,
+        "seconds": 0.2083568729999854,
+        "left_residual": 5.5043043351265536e-14,
+        "omega_alpha_r": 0.2469489336370325,
+        "omega_alpha_i": -0.04279239197749207,
+        "original_real_frequency_polynomial_residual": 1.450610407268555e-13,
+        "omega_xi_r": 0.06534018112937189,
+        "omega_xi_i": -0.016780011050396604,
+        "xi": 186.40766421628354,
+        "x_mm": -12.241244645540608,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          186,
+          187
+        ],
+        "theta": 0.40766421628353555,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9995939869541159
+      },
+      "tangent": [
+        0.45435442604940957,
+        -0.8908210008353595
+      ],
+      "step": 0.14116138501416003,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0022.npy",
+      "vector_sha256": "0357ce5e1b18585bebff83d9f9c9d0b83adcac64b6140a1e8b444e7b98f060eb"
+    },
+    {
+      "index": 23,
+      "z": [
+        1.9320394333397195,
+        2.7657576198315734
+      ],
+      "point": {
+        "alpha_r": 55.31515239663147,
+        "omega_r": 8.370994946503906,
+        "omega_i": -1.3879752924252087e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999942,
+        "right_residual": 1.169207021454604e-13,
+        "nev": 2,
+        "seconds": 0.21047248600001467,
+        "left_residual": 4.7173309251126706e-14,
+        "omega_alpha_r": 0.25377362314701274,
+        "omega_alpha_i": -0.043833291122365566,
+        "original_real_frequency_polynomial_residual": 1.1699732270935602e-13,
+        "omega_xi_r": 0.059785060409325214,
+        "omega_xi_i": -0.017256557581113354,
+        "xi": 193.20394333397195,
+        "x_mm": -10.771116218418065,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          193,
+          194
+        ],
+        "theta": 0.20394333397194941,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9995601962137554
+      },
+      "tangent": [
+        0.45292388127007543,
+        -0.8915491897675926
+      ],
+      "step": 0.15,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0023.npy",
+      "vector_sha256": "a90cdb6f1b7ea0ca0a873eb6098b1eca6e46c59506e9f7a9e6033e1e69382ef5"
+    },
+    {
+      "index": 24,
+      "z": [
+        1.9997098858335443,
+        2.631889026400058
+      ],
+      "point": {
+        "alpha_r": 52.63778052800116,
+        "omega_r": 8.074624438802106,
+        "omega_i": -5.696669264781962e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999747,
+        "right_residual": 1.2030808785879658e-13,
+        "nev": 2,
+        "seconds": 0.3905664639999884,
+        "left_residual": 4.294292203786172e-14,
+        "omega_alpha_r": 0.26036431077357763,
+        "omega_alpha_i": -0.04472734887157842,
+        "original_real_frequency_polynomial_residual": 1.216425459159147e-13,
+        "omega_xi_r": 0.056193349909787645,
+        "omega_xi_i": -0.017785041950344214,
+        "xi": 199.97098858335443,
+        "x_mm": -9.28614203687296,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          199,
+          200
+        ],
+        "theta": 0.9709885833544263,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9995654058788891
+      },
+      "tangent": [
+        0.4493400678236162,
+        -0.8933607913090141
+      ],
+      "step": 0.15,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0024.npy",
+      "vector_sha256": "435e59f420face164125c5e8b6394a59887b565dc067d229f7984e669560cdff"
+    },
+    {
+      "index": 25,
+      "z": [
+        2.0674706693480225,
+        2.4980658654746195
+      ],
+      "point": {
+        "alpha_r": 49.96131730949239,
+        "omega_r": 7.726355814982274,
+        "omega_i": -1.0448169022667098e-13,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999173,
+        "right_residual": 1.133471530033432e-13,
+        "nev": 2,
+        "seconds": 0.47235166300001197,
+        "left_residual": 3.1592088405083764e-14,
+        "omega_alpha_r": 0.2667289727351098,
+        "omega_alpha_i": -0.04546037395152305,
+        "original_real_frequency_polynomial_residual": 1.1767086718472804e-13,
+        "omega_xi_r": 0.0505094227431094,
+        "omega_xi_i": -0.017882021629595277,
+        "xi": 206.74706693480226,
+        "x_mm": -7.780879804010809,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          206,
+          207
+        ],
+        "theta": 0.7470669348022625,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9995427053927065
+      },
+      "tangent": [
+        0.4532277205927463,
+        -0.8913947684871745
+      ],
+      "step": 0.15,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0025.npy",
+      "vector_sha256": "5aedc941db571b6435421d3f4109eddcfdb7f63b38673b2ea394af317e4c0375"
+    },
+    {
+      "index": 26,
+      "z": [
+        2.084475918221526,
+        2.4646432441308663
+      ],
+      "point": {
+        "alpha_r": 49.29286488261732,
+        "omega_r": 7.6315260353774494,
+        "omega_i": 1.730935544636686e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 1.0,
+        "right_residual": 1.0457964646672434e-13,
+        "nev": 2,
+        "seconds": 0.4864699029999997,
+        "left_residual": 3.150837246896814e-14,
+        "omega_alpha_r": 0.2682725921282983,
+        "omega_alpha_i": -0.045620172808293086,
+        "original_real_frequency_polynomial_residual": 1.0469606609151357e-13,
+        "omega_xi_r": 0.04867575580718463,
+        "omega_xi_i": -0.018001813918142207,
+        "xi": 208.4475918221526,
+        "x_mm": -7.40059954482216,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          208,
+          209
+        ],
+        "theta": 0.44759182215258875,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999672474718765
+      },
+      "tangent": [
+        0.4520876259498657,
+        -0.8919735301358522
+      ],
+      "step": 0.0375,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0026.npy",
+      "vector_sha256": "6f92e380ff0475f848d976ac161436e627a2c82a0fc5a5bec4b34b73ba5386d5"
+    },
+    {
+      "index": 27,
+      "z": [
+        2.0942247341085953,
+        2.4454104077403294
+      ],
+      "point": {
+        "alpha_r": 48.90820815480659,
+        "omega_r": 7.57538263394087,
+        "omega_i": -1.5148840027453397e-12,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999988443,
+        "right_residual": 1.1930652467830413e-13,
+        "nev": 2,
+        "seconds": 0.8608370090000221,
+        "left_residual": 3.266629893977316e-14,
+        "omega_alpha_r": 0.269162357389688,
+        "omega_alpha_i": -0.04571087265083827,
+        "original_real_frequency_polynomial_residual": 4.671677302636922e-13,
+        "omega_xi_r": 0.04800344780370965,
+        "omega_xi_i": -0.01797732597079337,
+        "xi": 209.42247341085954,
+        "x_mm": -7.1821809664381355,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          209,
+          210
+        ],
+        "theta": 0.4224734108595385,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999882384447075
+      },
+      "tangent": [
+        0.453292428126802,
+        -0.8913618651271257
+      ],
+      "step": 0.0215625,
+      "iterations": 2,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0027.npy",
+      "vector_sha256": "2ad278fb6a2ce8af0c70ce08ae8c98829667a71eee8d746aedafe023e65bf427"
+    },
+    {
+      "index": 28,
+      "z": [
+        2.1054505877380834,
+        2.423300105155551
+      ],
+      "point": {
+        "alpha_r": 48.46600210311102,
+        "omega_r": 7.509620734382887,
+        "omega_i": 5.198749417067994e-16,
+        "beta_r": -7.0,
+        "raw_MAC": 1.0000000000000009,
+        "right_residual": 1.0483528385162649e-13,
+        "nev": 2,
+        "seconds": 1.988213724000019,
+        "left_residual": 2.663969141372796e-14,
+        "omega_alpha_r": 0.2701870196570092,
+        "omega_alpha_i": -0.04581395051263255,
+        "original_real_frequency_polynomial_residual": 1.0483725404107156e-13,
+        "omega_xi_r": 0.047246753625933766,
+        "omega_xi_i": -0.01806462943574592,
+        "xi": 210.54505877380834,
+        "x_mm": -6.930306954303148,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          210,
+          211
+        ],
+        "theta": 0.5450587738083357,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.999984905308491
+      },
+      "tangent": [
+        0.4523593422037766,
+        -0.8918357615172013
+      ],
+      "step": 0.024796874999999996,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0028.npy",
+      "vector_sha256": "9527315cf8f75fbd541edb51db2af865fe6617fd2fb563712626cf9b13374e94"
+    },
+    {
+      "index": 29,
+      "z": [
+        2.1184108044925716,
+        2.397898868625652
+      ],
+      "point": {
+        "alpha_r": 47.95797737251304,
+        "omega_r": 7.432703881263653,
+        "omega_i": -4.862076182204217e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999993,
+        "right_residual": 9.966719287801545e-14,
+        "nev": 2,
+        "seconds": 2.1556065700000033,
+        "left_residual": 3.577672787914489e-14,
+        "omega_alpha_r": 0.27136704664742,
+        "omega_alpha_i": -0.045922544416496625,
+        "original_real_frequency_polynomial_residual": 1.0066139359416802e-13,
+        "omega_xi_r": 0.04676768777053584,
+        "omega_xi_i": -0.018058419364251357,
+        "xi": 211.84108044925716,
+        "x_mm": -6.63907166116711,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          211,
+          212
+        ],
+        "theta": 0.8410804492571629,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999780724458661
+      },
+      "tangent": [
+        0.45333537724031747,
+        -0.8913400225179947
+      ],
+      "step": 0.028516406249999994,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0029.npy",
+      "vector_sha256": "987ef1640025d0f1b3364bd78971bbcc32d7c4ecba10d420e176e077c6476b8a"
+    },
+    {
+      "index": 30,
+      "z": [
+        2.133499729751817,
+        2.368781446646067
+      ],
+      "point": {
+        "alpha_r": 47.375628932921344,
+        "omega_r": 7.343033347494486,
+        "omega_i": -3.377746487457506e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999853,
+        "right_residual": 1.0318663281790037e-13,
+        "nev": 2,
+        "seconds": 2.0275495340000305,
+        "left_residual": 2.448784524511729e-14,
+        "omega_alpha_r": 0.27271158116074073,
+        "omega_alpha_i": -0.04602575494834307,
+        "original_real_frequency_polynomial_residual": 1.0365869918741103e-13,
+        "omega_xi_r": 0.04488000950988259,
+        "omega_xi_i": -0.017498218417695142,
+        "xi": 213.3499729751817,
+        "x_mm": -6.29936872482264,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          213,
+          214
+        ],
+        "theta": 0.3499729751816858,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999665992175174
+      },
+      "tangent": [
+        0.46557066603760516,
+        -0.8850107089325535
+      ],
+      "step": 0.03279386718749999,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0030.npy",
+      "vector_sha256": "6d0d39f8c696a1397e9c9bee9a85388b6063204989536edfee188b7e84a953b0"
+    },
+    {
+      "index": 31,
+      "z": [
+        2.1422609219265123,
+        2.3520838864836824
+      ],
+      "point": {
+        "alpha_r": 47.04167772967365,
+        "omega_r": 7.2910327784593285,
+        "omega_i": 3.140483749788925e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 1.0,
+        "right_residual": 9.637731005484499e-14,
+        "nev": 2,
+        "seconds": 2.071500816999958,
+        "left_residual": 2.7618178239567092e-14,
+        "omega_alpha_r": 0.27347518118840747,
+        "omega_alpha_i": -0.0460808294565279,
+        "original_real_frequency_polynomial_residual": 9.681406366186913e-14,
+        "omega_xi_r": 0.04379790169533235,
+        "omega_xi_i": -0.0173670520029306,
+        "xi": 214.22609219265124,
+        "x_mm": -6.101854996779175,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          214,
+          215
+        ],
+        "theta": 0.2260921926512367,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999873572322587
+      },
+      "tangent": [
+        0.468755313608523,
+        -0.8833280568190819
+      ],
+      "step": 0.018856473632812495,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0031.npy",
+      "vector_sha256": "55fa9e2539ae8ad8974c8ad330fdebbc53f2a72c236a188531c7d3232864b15b"
+    },
+    {
+      "index": 32,
+      "z": [
+        2.1523658950518723,
+        2.3328971475360007
+      ],
+      "point": {
+        "alpha_r": 46.65794295072001,
+        "omega_r": 7.230190583036396,
+        "omega_i": 2.5883022938474887e-15,
+        "beta_r": -7.0,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 9.934092077996106e-14,
+        "nev": 2,
+        "seconds": 2.2435454129999925,
+        "left_residual": 4.439664678780507e-14,
+        "omega_alpha_r": 0.27433875057813323,
+        "omega_alpha_i": -0.0461443371779534,
+        "original_real_frequency_polynomial_residual": 9.934046777960247e-14,
+        "omega_xi_r": 0.04312973066388084,
+        "omega_xi_i": -0.017489011591707272,
+        "xi": 215.23658950518723,
+        "x_mm": -5.873789179207126,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          215,
+          216
+        ],
+        "theta": 0.23658950518722577,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999824762205457
+      },
+      "tangent": [
+        0.4667014954554668,
+        -0.8844148993202404
+      ],
+      "step": 0.02168494467773437,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0032.npy",
+      "vector_sha256": "04ff9eef287d4e4b869f4bbaf439ffbeacb5a6c5c7cd29372b080cb6df533f53"
+    },
+    {
+      "index": 33,
+      "z": [
+        2.163937297932019,
+        2.310806502788011
+      ],
+      "point": {
+        "alpha_r": 46.216130055760225,
+        "omega_r": 7.158484270150673,
+        "omega_i": 1.3586991232626688e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999993,
+        "right_residual": 9.197934184736253e-14,
+        "nev": 2,
+        "seconds": 2.4394073070000104,
+        "left_residual": 2.1642063841674566e-14,
+        "omega_alpha_r": 0.27533973073983814,
+        "omega_alpha_i": -0.04621464475964203,
+        "original_real_frequency_polynomial_residual": 9.205156108856442e-14,
+        "omega_xi_r": 0.04231683162148156,
+        "omega_xi_i": -0.017671521007959434,
+        "xi": 216.39372979320189,
+        "x_mm": -5.6123053668973135,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          216,
+          217
+        ],
+        "theta": 0.39372979320188506,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999741642308426
+      },
+      "tangent": [
+        0.4634724910716883,
+        -0.8861113079178055
+      ],
+      "step": 0.024937686379394523,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0033.npy",
+      "vector_sha256": "2c37690e9ec4389964d5ae4b9497e516da49c7f606d5c2f6b4f2886b52b21013"
+    },
+    {
+      "index": 34,
+      "z": [
+        2.167249733408915,
+        2.3044479764248567
+      ],
+      "point": {
+        "alpha_r": 46.088959528497135,
+        "omega_r": 7.137493072989342,
+        "omega_i": -1.6409698036165543e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 0.9999999999999991,
+        "right_residual": 9.690366271693548e-14,
+        "nev": 2,
+        "seconds": 1.9282504100000324,
+        "left_residual": 2.6168894494376407e-14,
+        "omega_alpha_r": 0.27562641620777956,
+        "omega_alpha_i": -0.04623538861640436,
+        "original_real_frequency_polynomial_residual": 9.702630444076246e-14,
+        "omega_xi_r": 0.04246763191961404,
+        "omega_xi_i": -0.017821943997200478,
+        "xi": 216.7249733408915,
+        "x_mm": -5.537399510384073,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          216,
+          217
+        ],
+        "theta": 0.7249733408914949,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999975400340274
+      },
+      "tangent": [
+        0.4605553974668682,
+        -0.8876309626551651
+      ],
+      "step": 0.007169584834075925,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0034.npy",
+      "vector_sha256": "21860b935f2110d633bc500c9ce154ca20704e802679643ca24ea4217720d1b6"
+    },
+    {
+      "index": 35,
+      "z": [
+        2.171055206884786,
+        2.297133685370231
+      ],
+      "point": {
+        "alpha_r": 45.942673707404616,
+        "omega_r": 7.1132270435870755,
+        "omega_i": 5.252563791899312e-14,
+        "beta_r": -7.0,
+        "raw_MAC": 1.0000000000000007,
+        "right_residual": 9.009577725334456e-14,
+        "nev": 2,
+        "seconds": 1.8467141849999962,
+        "left_residual": 2.3055609616236957e-14,
+        "omega_alpha_r": 0.27595688350426995,
+        "omega_alpha_i": -0.04625952123446143,
+        "original_real_frequency_polynomial_residual": 9.133797105440698e-14,
+        "omega_xi_r": 0.04154170775999161,
+        "omega_xi_i": -0.0175235420680248,
+        "xi": 217.1055206884786,
+        "x_mm": -5.451319575882913,
+        "alpha_i": 0.0,
+        "native_bracket": [
+          217,
+          218
+        ],
+        "theta": 0.10552068847860596,
+        "model": "linear_native_operator_interpolation",
+        "adjacent_raw_MAC": 0.9999966225670247
+      },
+      "tangent": [
+        0.4668915554581158,
+        -0.8843145794579558
+      ],
+      "step": 0.008245022559187314,
+      "iterations": 3,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/work/M3b7_closed_arc_v1/q0035.npy",
+      "vector_sha256": "602c92694cc84430e22e290ad5da09f38615746b1227cac30f2b3128ee935131"
+    }
+  ],
+  "failures": [
+    {
+      "previous_index": 4,
+      "step": 0.10494037499999997,
+      "reason": "AssertionError(('Temporal eigenvector continuity unresolved', 3.6224507031534116e-26))"
+    },
+    {
+      "previous_index": 4,
+      "step": 0.05247018749999999,
+      "reason": "AssertionError(('Temporal eigenvector continuity unresolved', 1.555123670295481e-26))"
+    },
+    {
+      "previous_index": 4,
+      "step": 0.026235093749999994,
+      "reason": "ArpackNoConvergence('ARPACK error -1: No convergence (1001 iterations, 1/2 eigenvectors converged)')"
+    },
+    {
+      "previous_index": 25,
+      "step": 0.15,
+      "reason": "ArpackNoConvergence('ARPACK error -1: No convergence (1001 iterations, 1/2 eigenvectors converged)')"
+    },
+    {
+      "previous_index": 25,
+      "step": 0.075,
+      "reason": "ArpackNoConvergence('ARPACK error -1: No convergence (1001 iterations, 1/2 eigenvectors converged)')"
+    },
+    {
+      "previous_index": 26,
+      "step": 0.043125,
+      "reason": "ArpackNoConvergence('ARPACK error -1: No convergence (1001 iterations, 1/2 eigenvectors converged)')"
+    },
+    {
+      "previous_index": 30,
+      "step": 0.03771294726562499,
+      "reason": "ArpackNoConvergence('ARPACK error -1: No convergence (1001 iterations, 1/2 eigenvectors converged)')"
+    },
+    {
+      "previous_index": 33,
+      "step": 0.0286783393363037,
+      "reason": "ArpackNoConvergence('ARPACK error -1: No convergence (1001 iterations, 1/2 eigenvectors converged)')"
+    },
+    {
+      "previous_index": 33,
+      "step": 0.01433916966815185,
+      "reason": "ArpackNoConvergence('ARPACK error -1: No convergence (1001 iterations, 1/2 eigenvectors converged)')"
+    }
+  ],
+  "finished": true,
+  "status": "interrupted_for_eigensolver_efficiency",
+  "closure": null,
+  "updated": "2026-10-24T21:32:07.184903+08:00"
+}

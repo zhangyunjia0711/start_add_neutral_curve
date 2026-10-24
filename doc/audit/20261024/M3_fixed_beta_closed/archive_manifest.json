@@ -1,0 +1,355 @@
+{
+  "created": "2026-10-24T22:08:28.787356+08:00",
+  "source_head_before_task": "32229ab293f3b875947884aa154866d4d10eedea",
+  "original_task_root": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024",
+  "archive_relative_path": "doc/audit/20261024/M3_fixed_beta_closed",
+  "output_files": [
+    {
+      "file": "outputs/M3_closed_beta_minus7.dat",
+      "bytes": 343371,
+      "sha256": "e377f410ff97cae0eb8d9caed258159524276e8c1c07179493594bc7db57a993"
+    },
+    {
+      "file": "outputs/M3_closed_beta_minus7.lay",
+      "bytes": 2290,
+      "sha256": "4b1665afd7d21e53c3986cd9a40886f3b227c6acd48c458166d2df6ed72fa919"
+    },
+    {
+      "file": "outputs/M3_closed_beta_minus7.mcr",
+      "bytes": 374,
+      "sha256": "e5671cb36f8db153a3b9e89e7036c034c5c8d5c5eac6773732a678e58c6b4dea"
+    },
+    {
+      "file": "outputs/M3_closed_beta_minus7.plt",
+      "bytes": 114940,
+      "sha256": "5901744d7973816001b75d1fc3894ea760fb5988462ed3f73ee89a89ab764c4c"
+    },
+    {
+      "file": "outputs/M3_closed_beta_minus7.png",
+      "bytes": 147778,
+      "sha256": "c5072749160603ef776dea9c602004b139c8dd73e1a9f5ea60fd3d3ea845909a"
+    },
+    {
+      "file": "outputs/M3_closed_beta_minus7.svg",
+      "bytes": 48835,
+      "sha256": "33e4d69b91d2a6d5bc65e6a3562c0ffd7f07d7e69e4659c9f3c7152166f1831e"
+    },
+    {
+      "file": "outputs/M3_closed_beta_minus7_audit.json",
+      "bytes": 30969,
+      "sha256": "96edd0e446d26c91eb3c45b2e4da64d13cf11a41f5f38b98f52f31c6fbbdeb4d"
+    },
+    {
+      "file": "outputs/M3_closed_beta_minus7_curve.csv",
+      "bytes": 421032,
+      "sha256": "f087a6ed04684546e4497189f9f1ed824ee228b2e47d3da54e0d707d4d87f918"
+    },
+    {
+      "file": "outputs/M3_closed_beta_minus7_native_points.csv",
+      "bytes": 412420,
+      "sha256": "5784b6068c21f8e39800233cdbf3702adc1384993e444c4367e6aaec9c7d8acb"
+    },
+    {
+      "file": "outputs/M3_closed_beta_minus7_nose.png",
+      "bytes": 67330,
+      "sha256": "7d9c2cee40fcb39e4b415fe998fee902df2ea785e5431f59205df3526964a59b"
+    },
+    {
+      "file": "outputs/M3_closed_beta_minus7_summary.json",
+      "bytes": 9462,
+      "sha256": "97d8f6afc37e126c1717e66b4dc8efde05124d60eabeeb64b3251d9735c5ff7d"
+    },
+    {
+      "file": "outputs/M3b7_closed_arc_v1.json",
+      "bytes": 54086,
+      "sha256": "d5ec5ff6e817d4f1b1cea76c211dfd4a1fb36dec3538aaf2b829341224c3c150"
+    },
+    {
+      "file": "outputs/M3b7_closed_arc_v2.json",
+      "bytes": 688347,
+      "sha256": "3cabd57d3ebed97024852f25b508e49a2465080cf00fd474da277727b2ce87bb"
+    },
+    {
+      "file": "outputs/M3b7_primary_lower0_down.json",
+      "bytes": 360758,
+      "sha256": "3ecda73cfc9e33f751ae773de5240f05fecfa82d30fba9405d7af9ef3e4d75ee"
+    },
+    {
+      "file": "outputs/M3b7_primary_lower0_up.json",
+      "bytes": 333310,
+      "sha256": "c143697445c17faf7f71fe0f7277f628d6c166ab72357c45314e44aa98446420"
+    },
+    {
+      "file": "outputs/M3b7_primary_upper1_down.json",
+      "bytes": 440268,
+      "sha256": "0ce1b71937e2ffa98b82926460bc4658d52a838c5173f93bf42f539f07504514"
+    },
+    {
+      "file": "outputs/M3b7_primary_upper1_up.json",
+      "bytes": 238484,
+      "sha256": "558a518e50074a1757c181ba07e4ecfb049bf4974fe64f27065146947794c83e"
+    },
+    {
+      "file": "outputs/batch.log",
+      "bytes": 1164,
+      "sha256": "13ff93fcdd5d55cc72dfa161cee419c639fba90fd930a756f43cef5fda937485"
+    },
+    {
+      "file": "outputs/cleanup_receipt.json",
+      "bytes": 2684,
+      "sha256": "e8ce2384e258240bce5cb4c51c6f6ba0580397df525834da7f02f754270a1980"
+    },
+    {
+      "file": "outputs/closed_contour_validation.json",
+      "bytes": 42368,
+      "sha256": "c363bcdae352925fd471db24d5e909f608175abe1c1868f3f434928fb96ea378"
+    },
+    {
+      "file": "outputs/frequency_coarse.json",
+      "bytes": 255545,
+      "sha256": "9db75fd7c78cb1d6b51009026a1f898198e1111855d0810d51d60837224e3a7c"
+    },
+    {
+      "file": "outputs/frequency_nose_extended.json",
+      "bytes": 69333,
+      "sha256": "8f41b4c891f2598ef4b0f00e6a2a4be478d41d5792e510eb11fa6b4539924b4b"
+    },
+    {
+      "file": "outputs/frequency_pilot_fields.json",
+      "bytes": 64361,
+      "sha256": "e4e80e43ee29ba7e3e5cbc79d31c2ad6eba43835da6a331dd29eae78fecb5b5b"
+    },
+    {
+      "file": "outputs/frequency_pilot_fields_roots.json",
+      "bytes": 39492,
+      "sha256": "c0e9f2c8e66edc38827b5fa58349c5b0cc3c1121671b79edba37ff146fc4aca2"
+    },
+    {
+      "file": "outputs/frequency_pilot_initial_flag_rejection.json",
+      "bytes": 41199,
+      "sha256": "0f2c7f6c680cb77e6c09704618864796f4c37454c4cfbc7e7d093448cfebef99"
+    },
+    {
+      "file": "outputs/interpolation_endpoint_validation600.json",
+      "bytes": 614,
+      "sha256": "b9500624c0f11e578e351ec45774c6846ebb3722c1eaa5f6ba7ed8db86bdf646"
+    },
+    {
+      "file": "outputs/native_neutral_points.json",
+      "bytes": 1163140,
+      "sha256": "d7e9f4ec052ab646a136b39c7c53e4f49b3023fc180b67abae04975197e756e1"
+    },
+    {
+      "file": "outputs/native_pencil_preparation.json",
+      "bytes": 3110168,
+      "sha256": "a4711b09c951c975927445aa20681f48937802f61968b3eb5ee4bcea68594139"
+    },
+    {
+      "file": "outputs/native_spatial_verification.json",
+      "bytes": 56732,
+      "sha256": "e7e4825b812c13676eb047b6e5e56de10f72a43657a5ceffccb1a231fe11814e"
+    },
+    {
+      "file": "outputs/physical_fold_0.json",
+      "bytes": 3833,
+      "sha256": "ecc535b4759fd1c07ac22b9945abf4225f0624d849aac545961d320e67e1cc17"
+    },
+    {
+      "file": "outputs/physical_fold_1.json",
+      "bytes": 3836,
+      "sha256": "ee48dfdb131c6c1ee1250a6318da65c0b39c945db8e8d62714ee3b43a5e5370e"
+    },
+    {
+      "file": "outputs/physical_fold_2.json",
+      "bytes": 3832,
+      "sha256": "68bfaf1325d1e3bb841d410173ce3634670ef638c60a41b960c6611bd1ba20b4"
+    },
+    {
+      "file": "outputs/physical_fold_3.json",
+      "bytes": 3822,
+      "sha256": "fbb626d84f322da8f58b34247b1cc4d4d57695e5331acc55777e3daf806b1b84"
+    },
+    {
+      "file": "outputs/physical_fold_4.json",
+      "bytes": 4589,
+      "sha256": "9e91f09a7599f10f0e1ae27ca15639a381baec3e9b71a7f95b4f71d30053b6fc"
+    },
+    {
+      "file": "outputs/physical_fold_5.json",
+      "bytes": 3749,
+      "sha256": "16643f2e0919c71b57a10c88fffc8349834cb038d2d68909699363a3158e51f7"
+    },
+    {
+      "file": "outputs/physical_turning_points.json",
+      "bytes": 26939,
+      "sha256": "c6ea9f719388661af15408cfee37d0e39e9d5872f1922756299dba3dc8d0b323"
+    },
+    {
+      "file": "outputs/prior_axis_seeds.json",
+      "bytes": 864761,
+      "sha256": "203ce3207118590fdf7433a6b983ae9ec4a96173ecc7f80295131ecb403002ef"
+    },
+    {
+      "file": "outputs/tecplot_roundtrip.mcr",
+      "bytes": 213,
+      "sha256": "85d0afe88a396c5d1b46b8d469bf49f4de59c3a15db5d9c86b7b0ebe25a752a0"
+    },
+    {
+      "file": "outputs/tecplot_validation.json",
+      "bytes": 988,
+      "sha256": "bc568d4796307b9edcce0895c2aaa29c30ab9fab96943b73c53efdbcb8ee9979"
+    },
+    {
+      "file": "outputs/temporal119_validation.json",
+      "bytes": 6390,
+      "sha256": "88ea2e036637d021565afe161217badb6e4985c887f77f813f00e3bd0537ca8b"
+    },
+    {
+      "file": "outputs/\u5de5\u4f5c\u65e5\u5fd7_2026-10-24_M3\u56fa\u5b9a\u03b2\u95ed\u5408\u4e2d\u6027\u66f2\u7ebf.md",
+      "bytes": 10551,
+      "sha256": "76a04e68da22b2e4ccd718670d372b42e2363aac5b40a2078165524470921e62"
+    },
+    {
+      "file": "outputs/\u7ed3\u679c\u8bf4\u660e.md",
+      "bytes": 6554,
+      "sha256": "8df1e09167721da05bc7ffffbbf667b81911bddc5733d5d1b807047bbb8289c0"
+    },
+    {
+      "file": "outputs/native_point_evidence.jsonl.gz",
+      "bytes": 811731,
+      "sha256": "838158665089ea8a487b6dee10a0a3866654f3e5982276be778cb538b420517b"
+    }
+  ],
+  "native_point_evidence_records": 1565,
+  "raw_large_evidence": "Raw CFD inputs, PETSc matrices, necessary raw vectors, and full solver runs remain at the original task paths; they are not bundled into this Git audit archive.",
+  "original_inputs": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/config.ini",
+      "sha256": "054b3a25f58b5a8cb85df99315a5697e416f828281b98fe01e07957da5c6f41f"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in/grid_vertical2d_N.h5",
+      "sha256": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in/flow_vertical2d_N.h5",
+      "sha256": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M2/config.ini",
+      "sha256": "394f278eec398f94acc0bc564b77e1b3285279d205221fb555c3b3debc99b0a1"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M2/in/grid_vertical2d_N_uniform.h5",
+      "sha256": "cab6ccbced735d4ea746893e95a2b41b098389c9715aa64df2b73b1934e218de"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M2/in/flow_vertical2d_N_uniform.h5",
+      "sha256": "d66770ad1a04dfa58eefe3012aeca81cdb351e7d1ffb475882aaf24ce1a9154c"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/config.ini",
+      "sha256": "03b525f6300a306831d802c5b0753d48632dbda10872835cba5b3f54cac2ff6a"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/in/grid_vertical2d_N.h5",
+      "sha256": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/in/flow_vertical2d_N.h5",
+      "sha256": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+    },
+    {
+      "path": "/home/zaza/start/START_ALL_IN_ONE/START_ALL_IN_ONE/bin/START_LST",
+      "sha256": "807169bb401e558d9509c11f75304e5694d1d8af6925660fca251e8bc29f469a"
+    }
+  ],
+  "adapter_sha256": "8c2c9e6f2cc7256f030511959df9ffad4d7a3414fa6dd48160e31fbffeb35abb",
+  "script_files": [
+    {
+      "file": "scripts/assemble_closed_curve.py",
+      "bytes": 9965,
+      "sha256": "d75803333c70e90f14294801097275762f91f1f64dcfde57d5e92aeb8b23944c"
+    },
+    {
+      "file": "scripts/audit_delivery.py",
+      "bytes": 3059,
+      "sha256": "8ec1c40050124708b88b27cb6c20fa5716f270d53a42c793c0d3edbe1e86831a"
+    },
+    {
+      "file": "scripts/common.py",
+      "bytes": 653,
+      "sha256": "46219982260c4933c5fbeb30dd42eac2f71f7a8e640bf429221be4567074298c"
+    },
+    {
+      "file": "scripts/continue_temporal_neutral.py",
+      "bytes": 7072,
+      "sha256": "340bd174f8a489c20236b6e3141ead03805669a884828c926927e84bff5d8669"
+    },
+    {
+      "file": "scripts/fixed_beta_pencil.py",
+      "bytes": 8439,
+      "sha256": "7ad08f9a6e7f4e7ada7349a666c9d819af190cd2a7c02708fbe4bdfe8e7c6581"
+    },
+    {
+      "file": "scripts/frequency_survey.py",
+      "bytes": 4068,
+      "sha256": "66489575402953ac5d5fbe5b0fa3a628cc718b7dc99fda7713832895f0710812"
+    },
+    {
+      "file": "scripts/full_driver_dependency_snapshot.py",
+      "bytes": 6217,
+      "sha256": "8c2c9e6f2cc7256f030511959df9ffad4d7a3414fa6dd48160e31fbffeb35abb"
+    },
+    {
+      "file": "scripts/native_neutral_points.py",
+      "bytes": 4861,
+      "sha256": "7e5fde50779a82d7798afb1a208aa986c34313d98c34f5101d5a415324bb8221"
+    },
+    {
+      "file": "scripts/package_audit_archive.py",
+      "bytes": 3386,
+      "sha256": "9e1803db3716086c6a1d43b69912b47fe60a82d68f2cb4d07a61c406f6bda39d"
+    },
+    {
+      "file": "scripts/physical_turning_points.py",
+      "bytes": 4228,
+      "sha256": "57b97ed04c112c2937d1d81da81885a19e663b01b15f44e8e86690e6cf1e3ce9"
+    },
+    {
+      "file": "scripts/prepare_native_pencils.py",
+      "bytes": 1457,
+      "sha256": "0b49a635cbb6f2b21d217e0f6d5eb2b4abf3bb74620eaef4ce795f9d2773e9cb"
+    },
+    {
+      "file": "scripts/profile_interpolation.py",
+      "bytes": 7984,
+      "sha256": "8ed6a847d9d3e0affe9ff27158e97e95345d8877197830affb299f7974a58761"
+    },
+    {
+      "file": "scripts/refine_survey_roots.py",
+      "bytes": 2795,
+      "sha256": "cd1424ffe055188a97a9b00135d9187d52e29adc46d839984fd55a7dc7407e09"
+    },
+    {
+      "file": "scripts/trace_fixed_neutral.py",
+      "bytes": 7276,
+      "sha256": "d27bc8a36d2773b8f42b8b86be644c9cd91d6984080922a9b8f30dfe04c440d0"
+    },
+    {
+      "file": "scripts/validate_closed_contour.py",
+      "bytes": 3834,
+      "sha256": "a924d1d89983e358cb0fa313b65d706822a5435d2ae20c4189571e2155fcea88"
+    },
+    {
+      "file": "scripts/verify_native_spatial.py",
+      "bytes": 2159,
+      "sha256": "b6e5e644e50cfe288fa9c2ca2c3870c99910d53dfcf170b7399818b913b65f50"
+    },
+    {
+      "file": "scripts/verify_tecplot_format.py",
+      "bytes": 2633,
+      "sha256": "da5ae53d7f4538c24c1c5f2b91f7beea3159718102363e95217f05f44b7117fb"
+    }
+  ]
+}

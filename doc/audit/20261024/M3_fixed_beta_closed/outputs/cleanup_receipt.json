@@ -1,0 +1,43 @@
+{
+  "Created": "2026-10-24T22:06:07+08:00",
+  "Retained": "最终脚本、原生与派生输入、矩阵缓存、v1/v2所需向量、逐点证据、日志和全部用户原文件",
+  "CodeCleanup": "删除fixed_beta_pencil.py中不再调用的old_survey_export_retained_for_diagnostics失败尝试函数；保留失败原始运行记录。",
+  "Removed": [
+    {
+      "Path": "\\\\wsl.localhost\\Ubuntu\\home\\zaza\\attachment_line\\Han2019_SweptBluntPlate\\75°\\bluntplate\\neutral_M3_beta_minus7_closed_20261024\\outputs\\M3_closed_preview.png",
+      "Bytes": 67969,
+      "SHA256": "5ce4a26416866f65eb338ccde80082b4413e8ce2f2f18f927fa91b573f326469",
+      "Reason": "已由最终原生点及物理转折点图替代的算子插值预览"
+    },
+    {
+      "Path": "\\\\wsl.localhost\\Ubuntu\\home\\zaza\\attachment_line\\Han2019_SweptBluntPlate\\75°\\bluntplate\\neutral_M3_beta_minus7_closed_20261024\\inputs\\pair600_601_9ebe86bf8c41\\in\\grid_vertical2d_N.h5",
+      "Bytes": 18710,
+      "SHA256": "67d3297964290cb1d7e1d6f5482199d168e9e96c93573aa6c4e859471344df6e",
+      "Reason": "失败三列辅助网格，compute_dx需要至少四列；保留生成元数据与失败日志"
+    },
+    {
+      "Path": "\\\\wsl.localhost\\Ubuntu\\home\\zaza\\attachment_line\\Han2019_SweptBluntPlate\\75°\\bluntplate\\neutral_M3_beta_minus7_closed_20261024\\inputs\\pair600_601_9ebe86bf8c41\\in\\flow_vertical2d_N.h5",
+      "Bytes": 50860,
+      "SHA256": "84c85d8d454803919344429dba59bc85501abcea04397067539b00069409a8fc",
+      "Reason": "失败三列辅助基流，已由通过验证的九列局部副本替代"
+    },
+    {
+      "Path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_beta_minus7_closed_20261024\\M3_roundtrip.dat",
+      "Bytes": 346597,
+      "SHA256": "1a2a87bb2115a60f2277f3fc2040a5492fe6e9a34f5550f6041db53ddfd6f76c",
+      "Reason": "已完成原生回读逐值比较，哈希保留于tecplot_validation.json"
+    },
+    {
+      "Path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_beta_minus7_closed_20261024\\tecplot_stdout.log",
+      "Bytes": 0,
+      "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "Reason": "空的原生批处理标准输出"
+    },
+    {
+      "Path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_beta_minus7_closed_20261024\\tecplot_stderr.log",
+      "Bytes": 0,
+      "SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "Reason": "空的原生批处理标准错误"
+    }
+  ]
+}

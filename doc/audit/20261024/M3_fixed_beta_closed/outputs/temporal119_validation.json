@@ -1,0 +1,170 @@
+{
+  "alpha_r": 80.00434970329206,
+  "omega_r": 7.296886943488933,
+  "omega_i": 8.552465051263336e-12,
+  "beta_r": -7.0,
+  "raw_MAC": 1.0000000000000004,
+  "right_residual": 2.0829706909062588e-13,
+  "nev": 2,
+  "seconds": 0.2127005160000004,
+  "left_residual": 1.1704136903799523e-13,
+  "omega_alpha_r": 0.16750438263072334,
+  "omega_alpha_i": -0.027773065917132994,
+  "original_real_frequency_polynomial_residual": 3.6219664928486772e-12,
+  "independent_omega_matrix_errors": [
+    7.368627417506777e-20,
+    0.0,
+    0.0
+  ],
+  "native_frequency_difference": 1.4583889651476056e-12,
+  "native_raw_MAC": 0.9999999999999998,
+  "exports": [
+    {
+      "descriptor": {
+        "mode": "M3",
+        "station": 119,
+        "omega": 7.296886943487475,
+        "beta": -7,
+        "alpha_target": [
+          80.00444970329207,
+          -5.00883160394329e-11
+        ],
+        "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c"
+      },
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-12",
+        "-pep_max_it",
+        "1",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_mat0",
+        "binary:out/P0.petsc",
+        "-pep_view_mat1",
+        "binary:out/P1.petsc",
+        "-pep_view_mat2",
+        "binary:out/P2.petsc"
+      ],
+      "matrix_only_export": true,
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/matrix_exports/M3b7_temporal119_validation_wa_c03263eb9a01/out/P0.petsc",
+          "sha256": "d7791f9eb8809c3f01e995885fd4d2374ad1e65a1df90b69f7ec5213d22cf769"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/matrix_exports/M3b7_temporal119_validation_wa_c03263eb9a01/out/P1.petsc",
+          "sha256": "8b602723fe438a9ae242972c47c66280ce1527e85077ff9a1f89294ee2640790"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/matrix_exports/M3b7_temporal119_validation_wa_c03263eb9a01/out/P2.petsc",
+          "sha256": "393464a1a3d55c4ce20531b87b4723b7b0361bac9eaeb6fdbf10c454d1c324c8"
+        }
+      ]
+    },
+    {
+      "descriptor": {
+        "mode": "M3",
+        "station": 119,
+        "omega": 8.296886943487475,
+        "beta": -7,
+        "alpha_target": [
+          80.00444970329207,
+          -5.00883160394329e-11
+        ],
+        "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c"
+      },
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-12",
+        "-pep_max_it",
+        "1",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_mat0",
+        "binary:out/P0.petsc",
+        "-pep_view_mat1",
+        "binary:out/P1.petsc",
+        "-pep_view_mat2",
+        "binary:out/P2.petsc"
+      ],
+      "matrix_only_export": true,
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/matrix_exports/M3b7_temporal119_validation_wb_91e119029180/out/P0.petsc",
+          "sha256": "60ea1fa2f5897e7c1d6a0adad770603ad3a1733f9d5256ffff2befa7e8856ae2"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/matrix_exports/M3b7_temporal119_validation_wb_91e119029180/out/P1.petsc",
+          "sha256": "8b602723fe438a9ae242972c47c66280ce1527e85077ff9a1f89294ee2640790"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/matrix_exports/M3b7_temporal119_validation_wb_91e119029180/out/P2.petsc",
+          "sha256": "393464a1a3d55c4ce20531b87b4723b7b0361bac9eaeb6fdbf10c454d1c324c8"
+        }
+      ]
+    },
+    {
+      "descriptor": {
+        "mode": "M3",
+        "station": 119,
+        "omega": 7.666886943487475,
+        "beta": -7,
+        "alpha_target": [
+          80.00444970329207,
+          -5.00883160394329e-11
+        ],
+        "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c"
+      },
+      "command": [
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+        "-f",
+        "config.ini",
+        "-pep_tol",
+        "1e-12",
+        "-pep_max_it",
+        "1",
+        "-pep_nev",
+        "1",
+        "-pep_ncv",
+        "8",
+        "-st_pc_factor_mat_solver_type",
+        "superlu",
+        "-pep_view_mat0",
+        "binary:out/P0.petsc",
+        "-pep_view_mat1",
+        "binary:out/P1.petsc",
+        "-pep_view_mat2",
+        "binary:out/P2.petsc"
+      ],
+      "matrix_only_export": true,
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/matrix_exports/M3b7_temporal119_validation_independent_505b1f9db778/out/P0.petsc",
+          "sha256": "5582afb8afdc7e8b4e730d64e8f5e055218502f1878a962b58de6124ea20cf99"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/matrix_exports/M3b7_temporal119_validation_independent_505b1f9db778/out/P1.petsc",
+          "sha256": "8b602723fe438a9ae242972c47c66280ce1527e85077ff9a1f89294ee2640790"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/matrix_exports/M3b7_temporal119_validation_independent_505b1f9db778/out/P2.petsc",
+          "sha256": "393464a1a3d55c4ce20531b87b4723b7b0361bac9eaeb6fdbf10c454d1c324c8"
+        }
+      ]
+    }
+  ]
+}

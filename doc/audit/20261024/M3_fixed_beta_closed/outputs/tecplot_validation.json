@@ -1,0 +1,30 @@
+{
+  "created": "2026-10-24T22:04:58.310748+08:00",
+  "tools": "Tecplot 360 EX 2024 R1; Preplot 2024.1.0.52134",
+  "binary_file": "M3_closed_beta_minus7.plt",
+  "binary_magic": "#!TDV112",
+  "binary_bytes": 114940,
+  "binary_sha256": "5901744d7973816001b75d1fc3894ea760fb5988462ed3f73ee89a89ab764c4c",
+  "source_sha256": "e377f410ff97cae0eb8d9caed258159524276e8c1c07179493594bc7db57a993",
+  "roundtrip_sha256": "1a2a87bb2115a60f2277f3fc2040a5492fe6e9a34f5550f6041db53ddfd6f76c",
+  "native_batch_log_sha256": "13ff93fcdd5d55cc72dfa161cee419c639fba90fd930a756f43cef5fda937485",
+  "variables": [
+    "X_mm",
+    "Omega",
+    "Beta",
+    "Alpha_r",
+    "Alpha_i",
+    "NativeStation",
+    "Kind",
+    "GammaResidual",
+    "PolynomialResidual"
+  ],
+  "zones": 1,
+  "points": 1571,
+  "double_values_exactly_preserved": 14139,
+  "all_numeric_values_exact": true,
+  "closed_coordinates_exact": true,
+  "all_beta_strictly_minus7": true,
+  "macro_log_error_free": true,
+  "layout_generated": true
+}
