@@ -9,11 +9,28 @@ O=ROOT/"outputs"
 
 def main():
     source=O/"neutral_variable_beta_candidates.json";d=json.loads(source.read_text())
+    grid=json.loads((O/'seed_catalog.json').read_text())['grids']['main_841']['x_nondim']
     rows=d["unique_candidates_data"];by={}
     for r in rows:
         if r["omega_r"]>=0 and r["frequency_boundary"]=="upper_local":
             if r["station"] not in by or r["omega_r"]>by[r["station"]]["omega_r"]:by[r["station"]]=r
     upper=[by[i] for i in sorted(by)]
+    families={name:sorted([r for r in rows if r['source']==name and r['omega_r']>=0],key=lambda r:r['station'])
+        for name in ['tail841_lobe_lower','tail841_low_lobe_upper']}
+    band_rows=[dict(r,family=name) for name,points in families.items() for r in points]
+    dumpcsv(O/'neutral_variable_beta_additional_bands.csv',band_rows,FIELDS+['family'])
+    lookup={name:{r['station']:r for r in points} for name,points in families.items()}
+    comparisons=[]
+    for i in range(1,842):
+        lo=lookup['tail841_lobe_lower'].get(i);up=lookup['tail841_low_lobe_upper'].get(i)
+        gap=lo['omega_r']-up['omega_r'] if lo and up else None
+        comparisons.append(dict(station=i,x_mm=35*grid[i-1],
+            lower_of_high_lobe=lo['omega_r'] if lo else None,
+            upper_of_low_lobe=up['omega_r'] if up else None,
+            difference=gap,status='candidate_gap_between_two_followed_peaks' if gap is not None and gap>0
+                else 'overlap_of_two_local_neutral_intervals' if gap is not None else 'unknown_missing_family',
+            qualification='No all-beta or full-spectrum stability assertion'))
+    dumpcsv(O/'neutral_variable_beta_two_family_comparison.csv',comparisons,list(comparisons[0]))
     mirrored=[dict(r,omega_r=-r["omega_r"],beta_r=-r["beta_r"],alpha_r=-r["alpha_r"],
         g_omega=-r["g_omega"],g_beta=-r["g_beta"],
         frequency_boundary="lower_local" if r["g_omega"]<0 else "upper_local",
@@ -38,12 +55,22 @@ def main():
     audit=json.loads(audit_path.read_text());amap={int(r["station"]):r for r in audit["results"]}
     passed=[i for i,r in amap.items() if r["after_state"]=="sampled_nonpositive_known_seeds"]
     unknown=[i for i,r in amap.items() if r["after_state"]=="unknown"]
-    fig,axs=plt.subplots(3,1,figsize=(10.5,9),constrained_layout=True)
+    cut_path=O/"native10_beta_cuts_v10_20261023_2233/cut_progress.json"
+    cap=None
+    if cut_path.exists():
+        cuts=json.loads(cut_path.read_text())
+        centers=[r for r in cuts.get('results',[]) if r.get('tag')=='w40' and r.get('kind')=='center' and r.get('complete')]
+        if centers:
+            cap=centers[0].get('peak')
+    fig,axs=plt.subplots(4,1,figsize=(10.5,12),constrained_layout=True)
     positive=[r for r in rows if r["omega_r"]>=0]
     axs[0].scatter([r["x_mm"] for r in positive],[r["omega_r"] for r in positive],s=3,c=".72",alpha=.6,
         label="Other verified local neutral candidates")
     axs[0].plot([r["x_mm"] for r in upper],[r["omega_r"] for r in upper],c="#172b4d",lw=1.4,
         label="Highest verified upper candidate")
+    if cap:
+        axs[0].scatter([35*cap['x']],[cap['omega_r']],s=37,marker='^',facecolors='none',
+            edgecolors='#b32a2a',lw=1,label='Positive-g test: upper root unresolved')
     for stations,color,marker,label in [(passed,"#237443","o","Cap slice: known sampled paths nonpositive"),
                                        (unknown,"#b32a2a","x","Cap slice: unresolved path")]:
         q=[by[i] for i in stations if i in by]
@@ -62,11 +89,22 @@ def main():
     axs[1].set(xscale="log",xlim=(.01,5),ylim=(0,None),ylabel=r"$\omega$",
         xlabel="Global wall x + 35 mm (mm; logarithmic scale)",title="First 5 mm of the nose")
     axs[1].legend(fontsize=7.5,frameon=False)
-    axs[2].plot([r["x_mm"] for r in upper],[r["beta_r"] for r in upper],c="#216444",lw=1.1)
-    axs[2].set(xlim=(-35,1100),xlabel="Global wall x (mm)",ylabel=r"$\beta_*$",
+    axs[2].plot([r['x_mm'] for r in upper],[r['omega_r'] for r in upper],c='#172b4d',lw=1,
+        label='Highest known upper candidate')
+    for name,color,marker,label in [
+        ('tail841_lobe_lower','#b66b14','x','High-frequency lobe: local lower candidates'),
+        ('tail841_low_lobe_upper','#6c4d95','o','Low-frequency lobe: local upper candidates')]:
+        points=families[name]
+        axs[2].scatter([r['x_mm'] for r in points],[r['omega_r'] for r in points],
+            s=5,c=color,marker=marker,label=label)
+    axs[2].set(xlim=(200,1100),ylim=(0,10),ylabel=r'$\omega$',
+        title='Additional frequency boundaries; gaps are not certified stable')
+    axs[2].legend(fontsize=7.5,frameon=False)
+    axs[3].plot([r["x_mm"] for r in upper],[r["beta_r"] for r in upper],c="#216444",lw=1.1)
+    axs[3].set(xlim=(-35,1100),xlabel="Global wall x (mm)",ylabel=r"$\beta_*$",
         title="Beta belonging to the highest verified upper candidate")
     for ax in axs:ax.grid(alpha=.2)
-    for ax in (axs[0],axs[2]):ax.axvline(0,c=".6",lw=.7)
+    for ax in (axs[0],axs[3]):ax.axvline(0,c=".6",lw=.7)
     fig.suptitle("Stage result: local parallel / zero curvature. Finite paths do not certify the full spectrum.",
         fontsize=9.3,color="#94352d")
     fig.savefig(O/"neutral_variable_beta_stage.png",dpi=200);fig.savefig(O/"neutral_variable_beta_stage.svg");plt.close(fig)
@@ -83,6 +121,23 @@ def main():
         zero_frequency_unknown_32_841=[i for i in range(32,842) if i not in zero],
         largest_observed_upper_candidate={k:maximum[k] for k in ["station","x_mm","omega_r","beta_r"]},
         candidate_winner_switches=switches)
+    status['native10_positive_cap_test']=dict(point=cap,source_path=str(cut_path),
+        qualification='Actual numerical spatial growth; no neutral point or causal mode-direction assertion.') if cap else None
+    status['additional_frequency_families']={name:dict(native_count=len(points),
+        station_range=[points[0]['station'],points[-1]['station']] if points else None,
+        x_mm_range=[points[0]['x_mm'],points[-1]['x_mm']] if points else None)
+        for name,points in families.items()}
+    status['two_family_gap_candidate_count']=sum(r['status']=='candidate_gap_between_two_followed_peaks' for r in comparisons)
+    status['two_family_interval_crossings']=[dict(stations=[a['station'],b['station']],x_mm=[a['x_mm'],b['x_mm']],
+        differences=[a['difference'],b['difference']]) for a,b in zip(comparisons,comparisons[1:])
+        if a['difference'] is not None and b['difference'] is not None and a['difference']*b['difference']<0]
+    gap_path=O/'tail841_gap_midfrequency_v10_20261024/gap_audit_report.json'
+    gap=json.loads(gap_path.read_text()) if gap_path.exists() else None
+    if gap and gap.get('finished'):
+        status['tail841_midfrequency_audit']={k:gap[k] for k in ['target_omega','beta_domain',
+            'known_seed_count','state_counts','total_output_points','vector_bound_points']}
+        status['tail841_midfrequency_audit']['path']=str(gap_path)
+        status['tail841_midfrequency_audit']['sha256']=sha(gap_path)
     (O/"case_stage_status.json").write_text(json.dumps(status,indent=2,allow_nan=False)+"\n")
     text=f"""# 本工况可变实β中性边界：阶段结果
 
@@ -101,6 +156,10 @@ def main():
 [841站覆盖](neutral_variable_beta_candidates_coverage_841.csv)；
 [零频正增长见证](zero_frequency_witness_merged.csv)；
 [共同共轭派生下根](neutral_conjugate_derived.csv)。
+
+新增实际频带边界见[附加上下中性候选](neutral_variable_beta_additional_bands.csv)、[两条谱支的频率间隙比较](neutral_variable_beta_two_family_comparison.csv)。第841站已验证低频上根ω≈2.095632566476、β≈2.868800748341，以及高频下根ω≈3.476081395914、β≈3.624489572181。它们满足负β曲率，gω分别为负、正；均以减半步长与原生PEP回代核对。两条已追峰之间的负增长段只是候选间隙，其他β或谱支可能填补，图不涂成全谱稳定区。
+
+附加高频下边界已有{len(families['tail841_lobe_lower'])}个原生站（i508～841，x≈204.035676～1100mm），低频上边界已有{len(families['tail841_low_lobe_upper'])}个原生站（i561～841，x≈285.285445～1100mm）；各自区间无缺站。{len(band_rows)}个点均逐一重新读取h/2实际9点field，核对α、g、导数、曲率、原始运行摘要、冻结v10与原输入SHA；见additional_boundaries_field_audit_20261024.json。两条局部区间交叠/分离的转变括在i620/621，即x≈390.310559～392.270575mm。更上游相邻i507/i560的有限局部峰校正未通过；正曲率/无下降失败均保留，不能将其当作谱支不存在的证明。
 
 实ω、实β、复α，g=−Imα。目标有限域G_B=max g；实际候选满足g=0、gβ=0、gββ<0，上根还要求gω<0。[Nomura 2006 §2.3](https://www.jstage.jst.go.jp/article/tjsass/48/162/48_162_193/_pdf/-char/en)，[Mack 1984 §6.6](https://transition.arizona.edu/sites/default/files/2021-08/mack-bllst.pdf)。
 
@@ -128,9 +187,30 @@ python3 work/export_neutral_results.py
 python3 work/write_case_report.py
 ~~~
 
+矩阵换元已在原生i10/i16取得并用原空间PEP验证中性驻点，但实际β曲率为正，均是局部最小值，禁止并入最大增长包络；详细代数、原始证据与分类见[矩阵换元诊断](矩阵换元验证与鼻尖驻点分类.md)。
+
 剩余：鼻尖原生中性根、有限域未知及未排除的频率孔洞/其他谱支，均不能用连线代替。
+
+复α换元实际求得第10/11站局部鞍点，Imω分别约−1.02548e−5、−4.63671e−5，原空间PEP邻根呈局部平方根收拢。未建立固定β全部实α相关时间奇点的严格高Imω上界，也未把邻支追溯到相反α半平面的因果线，不能据此将鼻部根定为物理下游/绝对/对流不稳定。原文pinch条件见[Huerre与Monkewitz 1990，pp480–484](https://www.annualreviews.org/content/journals/10.1146/annurev.fl.22.010190.002353)，实际验证与局限见[空间根方向核验](spatial_root_causality_saddle_review_20261024.md)。
 """
     (O/"本工况可变β计算说明.md").write_text(text)
+    if cap:
+        with (O/"本工况可变β计算说明.md").open('a') as f:
+            f.write('\n\n## 第10站未闭合的实际证据\n\n'
+                'x=−34.939296356mm，ω=40、β≈12.137901的连续源空间根g≈+3.101228；'
+                '同ω在β=+40和−40的实际g约+83.602745/+7.158498。'
+                'Ωmin+.05切片的两个β端也为正。该测试框不能作为稳定闭合边界；'
+                '图中红色三角是正增长试验点，不是中性根。'
+                '数值空间根的因果/方向分类仍在核验，不能仅按大正g或Reωα符号宣称物理下游不稳定。\n')
+    if gap and gap.get('finished'):
+        with (O/'本工况可变β计算说明.md').open('a') as f:
+            f.write('\n\n## 尾端中间频率有限多路径检查\n\n'
+                f"i841，ω={gap['target_omega']:.12g}，β∈[−40,40]，从6个独立实际来源检查。"
+                f"5条完整已知路径未采到正增长，1条M2上峰源到中频的输运120s超时，保留unknown。"
+                f"{gap['vector_bound_points']}/{gap['total_output_points']}个输出点已绑定原生Vec/α/残差。"
+                '此结果仍不能证明整段频率、连续β域或全谱稳定。'
+                '[审计报告](tail841_gap_midfrequency_v10_20261024/gap_audit_report.json)；'
+                '[逐源摘要](tail841_gap_midfrequency_v10_20261024/gap_source_summary.csv)。\n')
     print(json.dumps({k:status[k] for k in ["created","native_upper_count","unknown_native_upper",
         "zero_frequency_positive_count_32_841"]}),flush=True)
 

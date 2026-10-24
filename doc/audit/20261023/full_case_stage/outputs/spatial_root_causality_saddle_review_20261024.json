@@ -1,0 +1,994 @@
+{
+  "created": "2026-10-24T12:05:08.877072+08:00",
+  "status": "bounded_local_saddle_and_native_neighbor_validation_complete",
+  "source_paths": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/complex_alpha_saddle_native10_20261024.json",
+      "sha256": "022399bdf6cb74230519107e6874e19ea90c19497a62d350193311693f21090f"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/complex_alpha_saddle_native10_neighbors_20261024.json",
+      "sha256": "48778f2221f7a7d6259303e12e5be21690943f415aaa77ba56aaa188e22f24c3"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/complex_alpha_saddle_native11_20261024.json",
+      "sha256": "85bae74bfd762b1170f4ba7c95c4fb627730bd79e9e7156239fe54e40ee29d16"
+    }
+  ],
+  "bibliography": [
+    {
+      "authors": "P. Huerre and P. A. Monkewitz",
+      "year": 1990,
+      "title": "Local and Global Instabilities in Spatially Developing Flows",
+      "correct_doi": "10.1146/annurev.fl.22.010190.002353",
+      "previously_supplied_doi": "10.1146/annurev.fl.22.010190.002151",
+      "publisher": "https://www.annualreviews.org/content/journals/10.1146/annurev.fl.22.010190.002353",
+      "original_text_scan": "https://indico.ictp.it/event/a02272/contribution/25/material/0/0.pdf",
+      "actual_read": "Original article pp477\u2013485, especially pp480\u2013484 Eq9\u201317 and Fig2, as scanned reproduction after ICTP March1994 workshop cover; visually inspected PDF pages4\u20138",
+      "local_pdf": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/references/Huerre_Monkewitz_1990_ICTP.pdf",
+      "local_sha256": "cb4b3a142eb02ea59bf0d405a00460387c48708923c583b6125c40bff79bd444",
+      "limit": "Publisher metadata currently prints pp473\u2013537; the scan first article page prints473\u2013517. No claim made that this pagination discrepancy or erratum has been resolved."
+    },
+    {
+      "authors": "A. K. Ram and A. Bers",
+      "year": 1991,
+      "title": "Absolute versus convective analysis of instabilities in space plasmas",
+      "report": "MIT PFC/JA-91-4",
+      "original_author_text_mirror": "https://studylib.net/doc/11312294/pfc-ja-91-4-absolute--versus-space--plasmas",
+      "actual_read": "Original-author report text mirrored online, SectionII pp2\u20135 Eq4\u20136: Fourier/Laplace contour deformation and opposite-side branch origin; p5 distinguishes propagation from generic modal group velocity",
+      "limit": "Mirror original text was read; no institutional PDF of this 1991 report or full Bers1983 chapter obtained in this session."
+    },
+    {
+      "authors": "R. J. Briggs",
+      "year": 1964,
+      "title": "Electron-Stream Interaction with Plasmas",
+      "publisher": "https://mitpress.mit.edu/9780262523509/electron-stream-interaction-with-plasmas/",
+      "actual_read": "Publisher metadata and description only",
+      "limit": "Full book not retrieved or read; its technical criterion is not presented as independently checked from that book."
+    },
+    {
+      "authors": "A. K. Ram and A. Bers",
+      "year": 1992,
+      "title": "Comments on absolute and convective instabilities",
+      "doi": "10.1029/91GL02953",
+      "publisher": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/91GL02953",
+      "institutional_record": "https://dspace.mit.edu/entities/publication/d9a8e3c2-7761-4a14-935f-ca4b3552ff0e",
+      "actual_read": "Metadata/abstract only; attempted original PDF failed with429/403/timeout",
+      "limit": "Not used for unverified full-text technical claims."
+    },
+    {
+      "authors": "A. Bers",
+      "year": 1983,
+      "title": "Space-time evolution of plasma instabilities\u2014absolute and convective",
+      "citation_source": "Ram/Bers1991 and Huerre/Monkewitz1990 references",
+      "actual_read": "Full original chapter not obtained",
+      "limit": "Bers2016 publisher abstract was accessible but is a later book chapter, not substituted for the unread1983 original."
+    }
+  ],
+  "model": "Frozen v10 local parallel wall-coordinate spatial PEP, original CFD H5 and boundary conditions; fixed real beta for each station",
+  "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+  "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c",
+  "cases": [
+    {
+      "station": 10,
+      "point": {
+        "alpha": {
+          "real": -22.055166411716655,
+          "imag": 0.06120268031775814
+        },
+        "beta": 12.137900983290656,
+        "omega": {
+          "real": 8.902789246227368,
+          "imag": -1.0254787604742278e-05
+        },
+        "omega_alpha": {
+          "real": -2.577103503817647e-10,
+          "imag": 1.24983082340775e-10
+        },
+        "raw_MAC_to_reference": 1.0000000000000002,
+        "right_absolute_pencil_residual": 3.57198607667529e-13,
+        "left_absolute_pencil_residual": 3.662191785646183e-13,
+        "pH_M_q": {
+          "real": 0.0015212121477562034,
+          "imag": 0.0022674169402243033
+        },
+        "temporal_condition_indicator": 366.2422377334866,
+        "seconds": 0.035164594650268555,
+        "shift": {
+          "real": 8.903789246227579,
+          "imag": -1.0254786827461284e-05
+        },
+        "other_temporal_values": [
+          {
+            "real": 8.453111356712181,
+            "imag": -1.2305135151006914
+          }
+        ]
+      },
+      "iterations": 3,
+      "h_h2": [
+        {
+          "h": 0.001,
+          "omega_alphalpha_real_direction": {
+            "real": 0.0023062139045528047,
+            "imag": -0.0012242147367583069
+          },
+          "omega_alphalpha_imag_direction": {
+            "real": 0.0023062139124973503,
+            "imag": -0.0012242147573418487
+          },
+          "second_derivative_direction_relative_difference": 8.450208315708317e-09,
+          "omega_alpha_FD_real": {
+            "real": -2.504663143554353e-10,
+            "imag": 1.2141116156058965e-13
+          },
+          "omega_alpha_FD_imag": {
+            "real": -4.351600002783446e-10,
+            "imag": 2.2293278334473143e-10
+          },
+          "samples": [
+            {
+              "alpha": {
+                "real": -22.056166411716656,
+                "imag": 0.06120268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.902789247380378,
+                "imag": -1.0255399805464022e-05
+              },
+              "omega_alpha": {
+                "real": -2.306295044401169e-06,
+                "imag": 1.2243304348813297e-06
+              },
+              "raw_MAC_to_reference": 0.9999999998926856,
+              "right_absolute_pencil_residual": 4.719077497380331e-13,
+              "left_absolute_pencil_residual": 3.7196630230443064e-13,
+              "pH_M_q": {
+                "real": 0.0012842943313987356,
+                "imag": 0.0024094914615170855
+              },
+              "temporal_condition_indicator": 366.2472718675089,
+              "seconds": 0.044843435287475586,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453082495249959,
+                  "imag": -1.2305328009544956
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.054166411716654,
+                "imag": 0.06120268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.902789247379877,
+                "imag": -1.02553998052212e-05
+              },
+              "omega_alpha": {
+                "real": 2.306132764704441e-06,
+                "imag": -1.224099038635284e-06
+              },
+              "raw_MAC_to_reference": 0.999999999892673,
+              "right_absolute_pencil_residual": 4.592623562000898e-13,
+              "left_absolute_pencil_residual": 3.64390023821928e-13,
+              "pH_M_q": {
+                "real": -0.0025981935219613053,
+                "imag": -0.0008395602419328928
+              },
+              "temporal_condition_indicator": 366.2372025399478,
+              "seconds": 0.0253753662109375,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453140218909224,
+                  "imag": -1.2304942281555968
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.055166411716655,
+                "imag": 0.06020268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.90278924507434,
+                "imag": -1.0254174839948023e-05
+              },
+              "omega_alpha": {
+                "real": -1.2246489884132283e-06,
+                "imag": -2.3060795886506415e-06
+              },
+              "raw_MAC_to_reference": 0.9999999998926772,
+              "right_absolute_pencil_residual": 4.411077805817947e-13,
+              "left_absolute_pencil_residual": 3.848949449379901e-13,
+              "pH_M_q": {
+                "real": -0.0023879681038924405,
+                "imag": 0.0013239586571809191
+              },
+              "temporal_condition_indicator": 366.2424290316443,
+              "seconds": 0.0262601375579834,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.45313064275977,
+                  "imag": -1.2305423774707613
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.055166411716655,
+                "imag": 0.06220268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.902789245073894,
+                "imag": -1.0254175710268023e-05
+              },
+              "omega_alpha": {
+                "real": 1.2237805262704688e-06,
+                "imag": 2.306348236344059e-06
+              },
+              "raw_MAC_to_reference": 0.9999999998926792,
+              "right_absolute_pencil_residual": 4.231828572716653e-13,
+              "left_absolute_pencil_residual": 3.6830839620126897e-13,
+              "pH_M_q": {
+                "real": 0.002648551926700228,
+                "imag": -0.0006636613636963938
+              },
+              "temporal_condition_indicator": 366.24204774657375,
+              "seconds": 0.0629112720489502,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453092069937972,
+                  "imag": -1.2304846538100693
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "h": 0.0005,
+          "omega_alphalpha_real_direction": {
+            "real": 0.0023062139797760768,
+            "imag": -0.001224214650693117
+          },
+          "omega_alphalpha_imag_direction": {
+            "real": 0.0023062139807557324,
+            "imag": -0.0012242146896447735
+          },
+          "second_derivative_direction_relative_difference": 1.492300431065995e-08,
+          "omega_alpha_FD_real": {
+            "real": -1.326938559031987e-09,
+            "imag": -3.8311916336077837e-10
+          },
+          "omega_alpha_FD_imag": {
+            "real": -9.754696728240262e-10,
+            "imag": -1.580957587066223e-10
+          },
+          "samples": [
+            {
+              "alpha": {
+                "real": -22.055666411716654,
+                "imag": 0.06120268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.902789246516477,
+                "imag": -1.0254940022941891e-05
+              },
+              "omega_alpha": {
+                "real": -1.1533205527458327e-06,
+                "imag": 6.122299781806474e-07
+              },
+              "raw_MAC_to_reference": 0.9999999999731695,
+              "right_absolute_pencil_residual": 4.1971343538396415e-13,
+              "left_absolute_pencil_residual": 3.628496017659917e-13,
+              "pH_M_q": {
+                "real": 0.000611118793022526,
+                "imag": 0.0026611458660549857
+              },
+              "temporal_condition_indicator": 366.24475493261525,
+              "seconds": 0.058455705642700195,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453096925903871,
+                  "imag": -1.2305231581934408
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.054666411716656,
+                "imag": 0.06120268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.90278924651515,
+                "imag": -1.0254940406061054e-05
+              },
+              "omega_alpha": {
+                "real": 1.1528934270302444e-06,
+                "imag": -6.119846725124697e-07
+              },
+              "raw_MAC_to_reference": 0.9999999999731686,
+              "right_absolute_pencil_residual": 4.4681345711486193e-13,
+              "left_absolute_pencil_residual": 3.3774622977433326e-13,
+              "pH_M_q": {
+                "real": 0.002686221037395909,
+                "imag": 0.0004894742180448057
+              },
+              "temporal_condition_indicator": 366.23972026961866,
+              "seconds": 0.027820348739624023,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453125787702202,
+                  "imag": -1.2305038717484826
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.055166411716655,
+                "imag": 0.06070268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.902789245939108,
+                "imag": -1.0254633775334261e-05
+              },
+              "omega_alpha": {
+                "real": -6.124091797234278e-07,
+                "imag": -1.1529796867528071e-06
+              },
+              "raw_MAC_to_reference": 0.9999999999731712,
+              "right_absolute_pencil_residual": 4.23148592653159e-13,
+              "left_absolute_pencil_residual": 3.3428997436681017e-13,
+              "pH_M_q": {
+                "real": 5.9805648639978874e-05,
+                "imag": -0.0027297775323747156
+              },
+              "temporal_condition_indicator": 366.24233321912556,
+              "seconds": 0.05155372619628906,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453120999818648,
+                  "imag": -1.2305279461728222
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.055166411716655,
+                "imag": 0.06170268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.902789245939266,
+                "imag": -1.0254634750803934e-05
+              },
+              "omega_alpha": {
+                "real": 6.11805509921346e-07,
+                "imag": 1.1532342940029254e-06
+              },
+              "raw_MAC_to_reference": 0.9999999999731701,
+              "right_absolute_pencil_residual": 4.664271825107024e-13,
+              "left_absolute_pencil_residual": 3.726318869792783e-13,
+              "pH_M_q": {
+                "real": -0.0019438483933721714,
+                "imag": 0.0019174783641462126
+              },
+              "temporal_condition_indicator": 366.2421425756596,
+              "seconds": 0.03851628303527832,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453101713447346,
+                  "imag": -1.2304990843389356
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "h": 0.0001,
+          "omega_alphalpha_real_direction": {
+            "real": 0.002306213411666227,
+            "imag": -0.0012242146515852382
+          },
+          "omega_alphalpha_imag_direction": {
+            "real": 0.0023062136339815405,
+            "imag": -0.0012242149075750073
+          },
+          "second_derivative_direction_relative_difference": 1.2985443048057774e-07,
+          "omega_alpha_FD_real": {
+            "real": 4.8405723873656825e-09,
+            "imag": 8.800247111432659e-11
+          },
+          "omega_alpha_FD_imag": {
+            "real": 4.252857179308923e-09,
+            "imag": 9.14823772291129e-10
+          },
+          "samples": [
+            {
+              "alpha": {
+                "real": -22.055266411716655,
+                "imag": 0.06120268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.90278924623834,
+                "imag": -1.0254793435805022e-05
+              },
+              "omega_alpha": {
+                "real": -2.308772588861014e-07,
+                "imag": 1.2254636529609153e-07
+              },
+              "raw_MAC_to_reference": 0.9999999999989275,
+              "right_absolute_pencil_residual": 4.350019512453027e-13,
+              "left_absolute_pencil_residual": 3.7190454089558147e-13,
+              "pH_M_q": {
+                "real": 0.0011745126110871834,
+                "imag": -0.0024649068154156133
+              },
+              "temporal_condition_indicator": 366.24274119553917,
+              "seconds": 0.05920839309692383,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453108470519629,
+                  "imag": -1.2305154437321824
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.055066411716655,
+                "imag": 0.06120268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.902789246239308,
+                "imag": -1.0254793418204528e-05
+              },
+              "omega_alpha": {
+                "real": 2.3036542344714402e-07,
+                "imag": -1.222965650209561e-07
+              },
+              "raw_MAC_to_reference": 0.9999999999989249,
+              "right_absolute_pencil_residual": 4.2330663328941826e-13,
+              "left_absolute_pencil_residual": 3.4571577662878476e-13,
+              "pH_M_q": {
+                "real": -0.002546603166709214,
+                "imag": 0.000984935930969241
+              },
+              "temporal_condition_indicator": 366.24173426126714,
+              "seconds": 0.03541111946105957,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453114242912724,
+                  "imag": -1.230511586467101
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.055166411716655,
+                "imag": 0.06110268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.90278924621617,
+                "imag": -1.0254781635811897e-05
+              },
+              "omega_alpha": {
+                "real": -1.226809723853271e-07,
+                "imag": -2.3049627324781644e-07
+              },
+              "raw_MAC_to_reference": 0.9999999999989273,
+              "right_absolute_pencil_residual": 4.081926124709828e-13,
+              "left_absolute_pencil_residual": 3.5917170266906e-13,
+              "pH_M_q": {
+                "real": -1.9784576628622576e-05,
+                "imag": -0.0027303614730326267
+              },
+              "temporal_condition_indicator": 366.24225680402884,
+              "seconds": 0.033194780349731445,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453113285339581,
+                  "imag": -1.230516401310041
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.055166411716655,
+                "imag": 0.061302680317758144
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.902789246215987,
+                "imag": -1.0254780785240461e-05
+              },
+              "omega_alpha": {
+                "real": 1.2216200912967432e-07,
+                "imag": 2.3074645354849168e-07
+              },
+              "raw_MAC_to_reference": 0.9999999999989255,
+              "right_absolute_pencil_residual": 4.4830399940266287e-13,
+              "left_absolute_pencil_residual": 3.7517087899335063e-13,
+              "pH_M_q": {
+                "real": -0.00133904267452813,
+                "imag": -0.002379544383061849
+              },
+              "temporal_condition_indicator": 366.24221867602586,
+              "seconds": 0.05800223350524902,
+              "shift": {
+                "real": 8.903789246227367,
+                "imag": -1.0254787604742278e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453109428057006,
+                  "imag": -1.2305106289112322
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": 11,
+      "point": {
+        "alpha": {
+          "real": -22.811316916796155,
+          "imag": -0.13839233297358722
+        },
+        "beta": 12.34948078116693,
+        "omega": {
+          "real": 9.045241670115805,
+          "imag": -4.636714729501132e-05
+        },
+        "omega_alpha": {
+          "real": 5.778253325760103e-14,
+          "imag": 7.218108822242267e-15
+        },
+        "raw_MAC_to_reference": 0.9999999999999997,
+        "right_absolute_pencil_residual": 3.646080628121411e-13,
+        "left_absolute_pencil_residual": 3.348267184711122e-13,
+        "pH_M_q": {
+          "real": -0.0027072014009575573,
+          "imag": 0.00043856429460545116
+        },
+        "temporal_condition_indicator": 364.63149448532323,
+        "seconds": 0.03341484069824219,
+        "shift": {
+          "real": 9.046241670115954,
+          "imag": -4.636714715221159e-05
+        },
+        "other_temporal_values": [
+          {
+            "real": 8.565426853324855,
+            "imag": -1.2624789916398147
+          }
+        ]
+      },
+      "iterations": 4,
+      "h_h2": [
+        {
+          "h": 0.001,
+          "omega_alphalpha": {
+            "real": 0.0021076946924104474,
+            "imag": -0.0012796473555077323
+          },
+          "imag_direction_omega_alphalpha": {
+            "real": 0.002107694665439992,
+            "imag": -0.0012796473920368596
+          },
+          "direction_relative_difference": 1.8415102352119265e-08,
+          "samples": [
+            {
+              "alpha": {
+                "real": -22.812316916796156,
+                "imag": -0.13839233297358722
+              },
+              "beta": 12.34948078116693,
+              "omega": {
+                "real": 9.04524167117003,
+                "imag": -4.6367787155069464e-05
+              },
+              "omega_alpha": {
+                "real": -2.1075287690694573e-06,
+                "imag": 1.2796322482624952e-06
+              },
+              "raw_MAC_to_reference": 0.9999999999002962,
+              "right_absolute_pencil_residual": 4.1803361663093256e-13,
+              "left_absolute_pencil_residual": 3.4077596032634013e-13,
+              "pH_M_q": {
+                "real": 0.0017423166267797384,
+                "imag": 0.0021178844436606043
+              },
+              "temporal_condition_indicator": 364.63576858550243,
+              "seconds": 0.03190469741821289,
+              "shift": {
+                "real": 9.046241670115805,
+                "imag": -4.636714729501132e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.565396158673796,
+                  "imag": -1.2624975859807874
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.810316916796154,
+                "imag": -0.13839233297358722
+              },
+              "beta": 12.34948078116693,
+              "omega": {
+                "real": 9.04524167117045,
+                "imag": -4.636778745829489e-05
+              },
+              "omega_alpha": {
+                "real": 2.1078606157514382e-06,
+                "imag": -1.279662462752969e-06
+              },
+              "raw_MAC_to_reference": 0.9999999999002844,
+              "right_absolute_pencil_residual": 4.2961362787956586e-13,
+              "left_absolute_pencil_residual": 3.761182800290078e-13,
+              "pH_M_q": {
+                "real": 0.0026187046644025585,
+                "imag": -0.0008147639620772329
+              },
+              "temporal_condition_indicator": 364.6272194151642,
+              "seconds": 0.028750896453857422,
+              "shift": {
+                "real": 9.046241670115805,
+                "imag": -4.636714729501132e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.56545754858769,
+                  "imag": -1.262460396274886
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.811316916796155,
+                "imag": -0.13939233297358722
+              },
+              "beta": 12.34948078116693,
+              "omega": {
+                "real": 9.045241669062483,
+                "imag": -4.6366508377360496e-05
+              },
+              "omega_alpha": {
+                "real": -1.2798133103121484e-06,
+                "imag": -2.107679506775062e-06
+              },
+              "raw_MAC_to_reference": 0.9999999999002886,
+              "right_absolute_pencil_residual": 4.564340494427653e-13,
+              "left_absolute_pencil_residual": 3.831184479979559e-13,
+              "pH_M_q": {
+                "real": -0.0012303506892636508,
+                "imag": -0.0024510212077390563
+              },
+              "temporal_condition_indicator": 364.63174383007987,
+              "seconds": 0.037329912185668945,
+              "shift": {
+                "real": 9.046241670115805,
+                "imag": -4.636714729501132e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.565445447817995,
+                  "imag": -1.2625096870279797
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.811316916796155,
+                "imag": -0.13739233297358722
+              },
+              "beta": 12.34948078116693,
+              "omega": {
+                "real": 9.045241669062452,
+                "imag": -4.6366507347313625e-05
+              },
+              "omega_alpha": {
+                "real": 1.279481473761571e-06,
+                "imag": 2.1077098241049218e-06
+              },
+              "raw_MAC_to_reference": 0.9999999999002929,
+              "right_absolute_pencil_residual": 4.518075808977267e-13,
+              "left_absolute_pencil_residual": 3.843375373125361e-13,
+              "pH_M_q": {
+                "real": -0.0008564096380576265,
+                "imag": 0.0026053504246104377
+              },
+              "temporal_condition_indicator": 364.63124633282854,
+              "seconds": 0.07861971855163574,
+              "shift": {
+                "real": 9.046241670115805,
+                "imag": -4.636714729501132e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.56540825808802,
+                  "imag": -1.262448297112363
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "h": 0.0005,
+          "omega_alphalpha": {
+            "real": 0.002107694679704381,
+            "imag": -0.0012796473502177865
+          },
+          "imag_direction_omega_alphalpha": {
+            "real": 0.0021076946710062647,
+            "imag": -0.0012796474008661093
+          },
+          "direction_relative_difference": 2.0841524812831404e-08,
+          "samples": [
+            {
+              "alpha": {
+                "real": -22.811816916796154,
+                "imag": -0.13839233297358722
+              },
+              "beta": 12.34948078116693,
+              "omega": {
+                "real": 9.045241670380125,
+                "imag": -4.636730688455898e-05
+              },
+              "omega_alpha": {
+                "real": -1.0538058551479186e-06,
+                "imag": 6.398198828134124e-07
+              },
+              "raw_MAC_to_reference": 0.9999999999750742,
+              "right_absolute_pencil_residual": 4.422587872431244e-13,
+              "left_absolute_pencil_residual": 3.4454996459935255e-13,
+              "pH_M_q": {
+                "real": -3.030095438522274e-05,
+                "imag": -0.002742311388531962
+              },
+              "temporal_condition_indicator": 364.6336316558207,
+              "seconds": 0.026601552963256836,
+              "shift": {
+                "real": 9.046241670115805,
+                "imag": -4.636714729501132e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.56541150591254,
+                  "imag": -1.262488288938007
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.810816916796156,
+                "imag": -0.13839233297358722
+              },
+              "beta": 12.34948078116693,
+              "omega": {
+                "real": 9.045241670379985,
+                "imag": -4.6367307095014286e-05
+              },
+              "omega_alpha": {
+                "real": 1.0538888245564626e-06,
+                "imag": -6.398274674043742e-07
+              },
+              "raw_MAC_to_reference": 0.9999999999750727,
+              "right_absolute_pencil_residual": 4.1461824975135483e-13,
+              "left_absolute_pencil_residual": 3.5728703214858773e-13,
+              "pH_M_q": {
+                "real": -0.0018500369081246096,
+                "imag": 0.0020245319662519803
+              },
+              "temporal_condition_indicator": 364.629357070996,
+              "seconds": 0.04219174385070801,
+              "shift": {
+                "real": 9.046241670115805,
+                "imag": -4.636714729501132e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.565442200859502,
+                  "imag": -1.2624696940761628
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.811316916796155,
+                "imag": -0.13889233297358722
+              },
+              "beta": 12.34948078116693,
+              "omega": {
+                "real": 9.045241669853,
+                "imag": -4.636698780243121e-05
+              },
+              "omega_alpha": {
+                "real": -6.398651963177287e-07,
+                "imag": -1.0538435471664704e-06
+              },
+              "raw_MAC_to_reference": 0.9999999999750727,
+              "right_absolute_pencil_residual": 4.3216217551006993e-13,
+              "left_absolute_pencil_residual": 3.5622834255812164e-13,
+              "pH_M_q": {
+                "real": -0.0012357863665235314,
+                "imag": -0.0024482861321962505
+              },
+              "temporal_condition_indicator": 364.631619007685,
+              "seconds": 0.047917842864990234,
+              "shift": {
+                "real": 9.046241670115805,
+                "imag": -4.636714729501132e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.565436150649584,
+                  "imag": -1.2624943392152894
+                }
+              ]
+            },
+            {
+              "alpha": {
+                "real": -22.811316916796155,
+                "imag": -0.13789233297358722
+              },
+              "beta": 12.34948078116693,
+              "omega": {
+                "real": 9.045241669853041,
+                "imag": -4.636698712995234e-05
+              },
+              "omega_alpha": {
+                "real": 6.397822045483806e-07,
+                "imag": 1.0538511238397944e-06
+              },
+              "raw_MAC_to_reference": 0.9999999999750735,
+              "right_absolute_pencil_residual": 4.2886150051626547e-13,
+              "left_absolute_pencil_residual": 3.6573770389661724e-13,
+              "pH_M_q": {
+                "real": -0.0022797262791746536,
+                "imag": -0.0015245101779728036
+              },
+              "temporal_condition_indicator": 364.63137025897635,
+              "seconds": 0.03412270545959473,
+              "shift": {
+                "real": 9.046241670115805,
+                "imag": -4.636714729501132e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.565417555750637,
+                  "imag": -1.262463644236484
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "local_neighbor_result": {
+    "actual_native_calls": 8,
+    "actual_native_seconds": 4.156859636306763,
+    "largest_reported_original_PEP_residual": 2.2447267167939262e-08,
+    "largest_same_matrix_residual": 2.244726789467761e-08,
+    "minimum_MAC_to_saddle": 0.9999917369602273,
+    "original_residual_gate": 1e-07,
+    "original_MAC_gate": 0.95,
+    "native10_separation_over_sqrt_epsilon": [
+      55.35007047215051,
+      55.35274453718881,
+      55.35300600345634
+    ],
+    "qualification": "All eight pairs pass the original1e-7 PEP gate; worst2.24e-8 is explicitly retained, not presented as machine precision. Spatial root conditioning worsens near coalescence."
+  },
+  "causal_pinch_origin_verified": false,
+  "absolute_or_convective_classification": "unknown",
+  "required_causal_validation": [
+    "At fixed real beta, establish the relevant temporal dispersion branches and all singularities of the initial-value resolvent, including constraints and any continuous spectrum/truncation issues.",
+    "Choose a causal Laplace line Imomega=gamma above ALL relevant temporal singularities for real alpha, with a proved finite bound or a justified limiting argument; a few k=2 target eigenvalues do not establish this.",
+    "Track the two spatial branches from that causal line while lowering/deforming the omega contour; verify origins on opposite sides of the real-alpha Fourier contour and preserve admissible deformation without unaccounted singularities.",
+    "Demonstrate that those particular branches pinch the Fourier contour at the candidate saddle; same-half-plane coalescence or a local square-root pair is insufficient.",
+    "For classification of the local operator, identify the controlling admissible pinch frequency, not merely one finite candidate; global/physical flow conclusions require additional model and boundary-condition justification."
+  ],
+  "proved_high_Imomega_upper_bound": null,
+  "upper_bound_qualification": "No rigorous gamma above all temporal singularities is available. Omega40 and beta\u00b140 are sampled real parameters, not an Imomega spectral bound. A singular non-Hermitian M cannot be treated as positive definite to invent an energy or Rayleigh-quotient bound.",
+  "physical_downstream_instability_inferred": false,
+  "local_observation": "Two finite simple-temporal-branch saddles with negative Imomega0 and genuinely residual-qualified nearby spatial roots. This does not establish causal branch selection, leading pinch, physical convective/absolute instability, or an infinite neutral envelope.",
+  "integrity": {
+    "original_inputs_and_binary_unchanged": true,
+    "read_only_core_manifest": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/temporal_frozen_global_source_hashes_20261023.json",
+    "read_only_core_hashes_unchanged": true
+  },
+  "retained_reproduction": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/compare_native11.py",
+      "sha256": "7e4e21c867d2a53a0478cd1ffdba17b62ac7f08be305a461ec127df698411b15"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/saddle_probe.py",
+      "sha256": "83edbe7d751765c18ecec87637864c033f6ff5c62d12503e8e70b5775bbe98a6"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/verify_neighbors.py",
+      "sha256": "b9d93a18c0e01627bb94a1209b9243870a8df5a802fbc140feed4a50f9d41860"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/finalize.py",
+      "sha256": "4d3c9d19cdc088f381c63a87dcdc15dc3653e0373bde8a5535b14c97c85e56cf"
+    }
+  ],
+  "cleanup": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/vendor",
+      "reason": "Temporary pypdf5.5.0/typing_extensions4.13.2 installed only to extract scanned PDF page images; bundled Windows pypdf is available and numeric reproduction does not import these packages"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/references/Huerre_Monkewitz_1990_ICTP.txt",
+      "reason": "pypdf extraction contained page labels only: PDF is scanned; no usable text"
+    }
+  ],
+  "failures": [
+    "Supplied Huerre-Monkewitz DOI002151 could not be verified; corrected against publisher002353.",
+    "WSL pdftotext absent; bundled fitz absent. Temporary pypdf extraction found no text; visual page-image inspection used instead.",
+    "Briggs full book and Bers1983 full chapter not obtained; MIT1991 comments PDF attempts returned429/403/timeouts.",
+    "No high-Imomega branch-origin continuation or all-spectrum bound attempted under the bounded task; no causal classification inferred."
+  ]
+}

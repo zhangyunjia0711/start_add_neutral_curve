@@ -1,0 +1,109 @@
+{
+  "created": "2026-10-24T11:57:25.747981+08:00",
+  "files": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/probe_complex_omega.py",
+      "sha256": "04d872b9a000e23f6b1fac665883d5042545f281591d2faef0f95a6554c2f4b2"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/finalize_metadata.py",
+      "sha256": "d35b4a03fa123bb23b46799af43a556023ed4ec746e0d088cd15ef2a0a89ba4b"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/complex_omega_probe.json",
+      "sha256": "cc5f1ec5c45f347634b7f3442a3a80f9455caf95dc1eaae7ca2ec8b9239c25c9"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/complex_omega_points.csv",
+      "sha256": "4c7408d2d16f431017decee62c11a78ca2418faedf5bc6a905533b620a6c8926"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/complex_omega_integrity.json",
+      "sha256": "b2ec2e6bfe42c5afa486c84f6935b283620464c5357d32a02002efc78a74d56f"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/final_source_integrity.json",
+      "sha256": "a783899209bc57de4bca470f978ea399276d7513b149a1db9372dd300bd1c9c7"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/source_interface_snippets.json",
+      "sha256": "2cd53a110203cc7004489ed3ee27ff972fb909174e2bc3a3f45ce5fd17b6775e"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/source_original_snippets.json",
+      "sha256": "435c5e4cdd58a8936707619989577b9c4fd0d3cb224428b7e421dc548581e86d"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/README.md",
+      "sha256": "b63bfb3993bc3f7f19fc7583dbffd862b537ce075c51287695f10fbb6a5800c2"
+    }
+  ],
+  "raw_bindings": [
+    {
+      "station": 10,
+      "omega_r": 40.0,
+      "omega_i": 0.0,
+      "beta_r": 12.13790098329066,
+      "beta_i": 0.0,
+      "alpha_r": -123.00648242733793,
+      "alpha_i": -3.101228311485055,
+      "growth": 3.101228311485055,
+      "polynomial_residual": 2.1870869499947756e-12,
+      "raw_vector_index": 0,
+      "solve_group": 0,
+      "raw_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/runs/interactive_omega_i_three_points/out/eigenvectors.petsc",
+      "raw_vector_file_sha256": "750709eb0e39c39e7bb26c0f24018c1580d98ee37d5a2fc6f9d5c612945b2254",
+      "raw_vector_component_sha256": "debdf15ccca0d149b4b2fd438b081dd763bf6f83b0bf6ad7f153c54c019d10cc",
+      "scalar_output_delta": 3.048284827134308e-09,
+      "MAC_to_previous_actual": 1.0000000000000004,
+      "MAC_to_real_reference": 1.0000000000000004,
+      "vector_norm": 1.0,
+      "passed": true,
+      "printed_beta_r": 12.13790098
+    },
+    {
+      "station": 10,
+      "omega_r": 40.0,
+      "omega_i": 0.005,
+      "beta_r": 12.13790098329066,
+      "beta_i": 0.0,
+      "alpha_r": -123.00664400070723,
+      "alpha_i": -3.1322212420293805,
+      "growth": 3.1322212420293805,
+      "polynomial_residual": 4.208017642471485e-12,
+      "raw_vector_index": 1,
+      "solve_group": 1,
+      "raw_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/runs/interactive_omega_i_three_points/out/eigenvectors.petsc",
+      "raw_vector_file_sha256": "750709eb0e39c39e7bb26c0f24018c1580d98ee37d5a2fc6f9d5c612945b2254",
+      "raw_vector_component_sha256": "c84341fd9a1a3481113bae43683ad91dfff7b15295d8aebf9d884ef598bd9da0",
+      "scalar_output_delta": 2.1490840892900557e-09,
+      "MAC_to_previous_actual": 0.9999999827908904,
+      "MAC_to_real_reference": 0.9999999827908905,
+      "vector_norm": 1.0,
+      "passed": true,
+      "printed_beta_r": 12.13790098
+    },
+    {
+      "station": 10,
+      "omega_r": 40.0,
+      "omega_i": 0.01,
+      "beta_r": 12.13790098329066,
+      "beta_i": 0.0,
+      "alpha_r": -123.0068078316953,
+      "alpha_i": -3.1632138207112948,
+      "growth": 3.1632138207112948,
+      "polynomial_residual": 2.8546341696265463e-13,
+      "raw_vector_index": 2,
+      "solve_group": 2,
+      "raw_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/runs/interactive_omega_i_three_points/out/eigenvectors.petsc",
+      "raw_vector_file_sha256": "750709eb0e39c39e7bb26c0f24018c1580d98ee37d5a2fc6f9d5c612945b2254",
+      "raw_vector_component_sha256": "e3325a295dd88d81438a4ed8b21abfe3f709b05736fb80876c144c0c750bc775",
+      "scalar_output_delta": 1.8384710243603157e-09,
+      "MAC_to_previous_actual": 0.999999982794145,
+      "MAC_to_real_reference": 0.999999931170093,
+      "vector_norm": 1.0,
+      "passed": true,
+      "printed_beta_r": 12.13790098
+    }
+  ]
+}

@@ -1,0 +1,567 @@
+{
+  "created": "2026-10-24T12:04:09.526411+08:00",
+  "source_paths": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail_lower_beta4_841_fine_20261024.json",
+      "sha256": "eaa8c915257d51348c907b338f7781e5448e01de6c4378803e2466315876cba9"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail_lower_beta6_841_fine_20261024.json",
+      "sha256": "445a96b5b911e2b78f10891e779d9e685a330de7b97a852d1faebde24989a8fb"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail841_all_boundaries_20261024.json",
+      "sha256": "1fa3e57e664418e88d0193a017dff35c5c46b413ba79d543ab4332e230101a73"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail841_zero_peak_audit_20261024.json",
+      "sha256": "ab207a9a1099d06a8f165b2739f940b2019e9681317c36b6e3dbbee1f7110f8a"
+    }
+  ],
+  "finite_paths": [
+    {
+      "source": "beta4",
+      "accepted_frequency_rows": 44,
+      "reached_zero": false,
+      "stop_reason": "Unknown peak after the one bounded recovery",
+      "last_actual_peak": {
+        "outer": 0.08106021666687789,
+        "inner": 0.2704529766594564,
+        "iloc": 841.0,
+        "x": 31.42857142857167,
+        "Re": 79100.0,
+        "alpha_r": -0.5832910411957052,
+        "alpha_i": -0.06539640776575689,
+        "beta_r": 0.2704529766594564,
+        "beta_i": 0.0,
+        "omega_r": 0.08106021666687789,
+        "omega_i": 0.0,
+        "growth": 0.06539640776575689,
+        "branch": 0.0,
+        "status": 0.0,
+        "row": 2
+      }
+    },
+    {
+      "source": "beta6",
+      "accepted_frequency_rows": 45,
+      "reached_zero": true,
+      "stop_reason": "Reached actual omega zero on this locally verified peak path",
+      "last_actual_peak": {
+        "outer": 0.0,
+        "inner": 1.120061464196494,
+        "iloc": 841.0,
+        "x": 31.42857142857167,
+        "Re": 79100.0,
+        "alpha_r": -4.276199160527687,
+        "alpha_i": -0.03147519616317158,
+        "beta_r": 1.120061464196494,
+        "beta_i": 0.0,
+        "omega_r": 0.0,
+        "omega_i": 0.0,
+        "growth": 0.03147519616317158,
+        "branch": 0.0,
+        "status": 0.0,
+        "row": 2
+      }
+    }
+  ],
+  "unique_neutral_boundaries": [
+    {
+      "direction": "lower",
+      "point": {
+        "outer": 3.47608139601545,
+        "inner": 3.624489572246314,
+        "iloc": 841.0,
+        "x": 31.42857142857167,
+        "Re": 79100.0,
+        "alpha_r": 0.7746151237534642,
+        "alpha_i": -1.591504881653731e-10,
+        "beta_r": 3.624489572246314,
+        "beta_i": 0.0,
+        "omega_r": 3.47608139601545,
+        "omega_i": 0.0,
+        "growth": 1.591504881653731e-10,
+        "branch": 0.0,
+        "status": 0.0,
+        "row": 2
+      },
+      "h2_J": [
+        [
+          1.4597011013611192,
+          -2.165565379757057e-06
+        ],
+        [
+          1.827449955868962,
+          -3.2368969031948227
+        ]
+      ],
+      "h2_correction": [
+        -1.1002214096797004e-10,
+        -6.690872475969494e-07
+      ],
+      "actual_native_fresh": {
+        "name": "tail841_lower_native_20261024",
+        "station": 841,
+        "jn": 400,
+        "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in",
+        "started": "2026-10-24T11:58:46.504789+08:00",
+        "seconds": 0.619,
+        "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+        "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c",
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-13",
+          "-pep_max_it",
+          "1000",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_vectors",
+          "binary:out/all_vectors.petsc",
+          "-pep_view_values",
+          "ascii:out/all_values.txt",
+          "-options_left"
+        ],
+        "config_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/tail841_boundary_native_20261024/runs/tail841_lower_native_20261024/config.ini",
+        "exit": 1,
+        "fixed_parameters": {
+          "omega_r": 3.476081395913897,
+          "beta_r": 3.624489572181445
+        },
+        "petsc_errors": 0,
+        "unused_options": 0,
+        "terminal": "no bracketed root",
+        "solves": 2,
+        "rejected": 0,
+        "field_records": 2,
+        "failed_field_records": 0,
+        "minimum_tiny_beta_MAC": 0.9999999999999991,
+        "pairs": [
+          {
+            "index": 0,
+            "alpha_r": 0.7746151236509677,
+            "alpha_i": -1.0904515116071505e-11,
+            "absolute_polynomial_residual": 2.843698453012196e-15
+          }
+        ],
+        "passed": true,
+        "alpha_r": 0.7746151236509677,
+        "alpha_i": -1.0904515116071505e-11,
+        "growth": 1.0904515116071505e-11,
+        "delta_alpha_to_original_candidate": 2.956311212308445e-14,
+        "absolute_polynomial_residual": 2.843698453012196e-15,
+        "raw_index": 0,
+        "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/tail841_boundary_native_20261024/runs/tail841_lower_native_20261024/out/all_vectors.petsc",
+        "vector_sha256": "6ae6b75db4eee5e4c652d46a8d26822343a5687fc118ef2e0fccc70a8611e3cd",
+        "nmax_N": 67.0100597061984,
+        "metadata": {
+          "iloc": "841",
+          "x_global_N": "  3.1428571428571669E+001",
+          "y_global_N": "  1.0000000000000000E+000",
+          "s_polyline_N": "  3.2999364951704450E+001",
+          "t_x": "  1.0000000000000000E+000",
+          "t_y": "  0.0000000000000000E+000",
+          "n_x": " -0.0000000000000000E+000",
+          "n_y": "  1.0000000000000000E+000",
+          "n_min": "  0.0000000000000000E+000",
+          "n_max": "  6.7010059706198405E+001",
+          "max_tangential_drift": "  0.0000000000000000E+000",
+          "max_abs_Vn": "  2.8165597560924162E-002",
+          "max_abs_Qn": "  1.3282848685489952E+001",
+          "max_abs_Qnn": "  1.0227408617170761E+002",
+          "min_delta_n": "  1.7585137757907265E-003",
+          "identity_flat": "T",
+          "normal_derivatives_finite": "T"
+        },
+        "peak_j": 233,
+        "peak_n_N": 0.5820385418647289,
+        "raw_vector_index_association_verified": true
+      }
+    },
+    {
+      "direction": "low_lobe_upper",
+      "point": {
+        "outer": 2.095632566476361,
+        "inner": 2.868800748179096,
+        "iloc": 841.0,
+        "x": 31.42857142857167,
+        "Re": 79100.0,
+        "alpha_r": -1.755951806855553,
+        "alpha_i": -5.458576508940454e-16,
+        "beta_r": 2.868800748179096,
+        "beta_i": 0.0,
+        "omega_r": 2.095632566476361,
+        "omega_i": 0.0,
+        "growth": 5.458576508940454e-16,
+        "branch": 0.0,
+        "status": 0.0,
+        "row": 2
+      },
+      "h2_J": [
+        [
+          -0.09206934556362285,
+          2.5795818841680655e-07
+        ],
+        [
+          0.3542517886429442,
+          -0.4013430161133438
+        ]
+      ],
+      "h2_correction": [
+        1.8067431381709449e-12,
+        6.427390488986219e-07
+      ],
+      "actual_native_fresh": {
+        "name": "tail841_low_lobe_upper_native_20261024",
+        "station": 841,
+        "jn": 400,
+        "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in",
+        "started": "2026-10-24T11:58:47.127958+08:00",
+        "seconds": 0.517,
+        "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+        "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c",
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-13",
+          "-pep_max_it",
+          "1000",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_vectors",
+          "binary:out/all_vectors.petsc",
+          "-pep_view_values",
+          "ascii:out/all_values.txt",
+          "-options_left"
+        ],
+        "config_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/tail841_boundary_native_20261024/runs/tail841_low_lobe_upper_native_20261024/config.ini",
+        "exit": 1,
+        "fixed_parameters": {
+          "omega_r": 2.095632566476448,
+          "beta_r": 2.868800748340544
+        },
+        "petsc_errors": 0,
+        "unused_options": 0,
+        "terminal": "no bracketed root",
+        "solves": 2,
+        "rejected": 0,
+        "field_records": 2,
+        "failed_field_records": 0,
+        "minimum_tiny_beta_MAC": 1.0000000000000013,
+        "pairs": [
+          {
+            "index": 0,
+            "alpha_r": -1.7559518074968792,
+            "alpha_i": 2.6235525702206385e-14,
+            "absolute_polynomial_residual": 1.5210901876345006e-15
+          }
+        ],
+        "passed": true,
+        "alpha_r": -1.7559518074968792,
+        "alpha_i": 2.6235525702206385e-14,
+        "growth": -2.6235525702206385e-14,
+        "delta_alpha_to_original_candidate": 1.9100803812990828e-14,
+        "absolute_polynomial_residual": 1.5210901876345006e-15,
+        "raw_index": 0,
+        "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/tail841_boundary_native_20261024/runs/tail841_low_lobe_upper_native_20261024/out/all_vectors.petsc",
+        "vector_sha256": "4aa2a2578f75d94d97e93705efe819ecfbc9be8c7f3bfd9634e60d392ddc27b9",
+        "nmax_N": 67.0100597061984,
+        "metadata": {
+          "iloc": "841",
+          "x_global_N": "  3.1428571428571669E+001",
+          "y_global_N": "  1.0000000000000000E+000",
+          "s_polyline_N": "  3.2999364951704450E+001",
+          "t_x": "  1.0000000000000000E+000",
+          "t_y": "  0.0000000000000000E+000",
+          "n_x": " -0.0000000000000000E+000",
+          "n_y": "  1.0000000000000000E+000",
+          "n_min": "  0.0000000000000000E+000",
+          "n_max": "  6.7010059706198405E+001",
+          "max_tangential_drift": "  0.0000000000000000E+000",
+          "max_abs_Vn": "  2.8165597560924162E-002",
+          "max_abs_Qn": "  1.3282848685489952E+001",
+          "max_abs_Qnn": "  1.0227408617170761E+002",
+          "min_delta_n": "  1.7585137757907265E-003",
+          "identity_flat": "T",
+          "normal_derivatives_finite": "T"
+        },
+        "peak_j": 222,
+        "peak_n_N": 0.5446783678077676,
+        "raw_vector_index_association_verified": true
+      }
+    }
+  ],
+  "actual_zero_positive_witness": {
+    "name": "tail841_zero_positive_native_20261024",
+    "station": 841,
+    "jn": 400,
+    "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in",
+    "started": "2026-10-24T12:04:07.310580+08:00",
+    "seconds": 0.569,
+    "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+    "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c",
+    "command": [
+      "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+      "-f",
+      "config.ini",
+      "-pep_tol",
+      "1e-13",
+      "-pep_max_it",
+      "1000",
+      "-pep_nev",
+      "1",
+      "-pep_ncv",
+      "8",
+      "-st_pc_factor_mat_solver_type",
+      "superlu",
+      "-pep_view_vectors",
+      "binary:out/all_vectors.petsc",
+      "-pep_view_values",
+      "ascii:out/all_values.txt",
+      "-options_left"
+    ],
+    "config_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/tail841_boundary_native_20261024/runs/tail841_zero_positive_native_20261024/config.ini",
+    "exit": 1,
+    "fixed_parameters": {
+      "omega_r": 0.0,
+      "beta_r": 1.120061464196494
+    },
+    "petsc_errors": 0,
+    "unused_options": 0,
+    "terminal": "no bracketed root",
+    "solves": 2,
+    "rejected": 0,
+    "field_records": 2,
+    "failed_field_records": 0,
+    "minimum_tiny_beta_MAC": 0.9999999999999993,
+    "pairs": [
+      {
+        "index": 0,
+        "alpha_r": -4.27619916052762,
+        "alpha_i": -0.03147519616326512,
+        "absolute_polynomial_residual": 8.525140682485373e-15
+      }
+    ],
+    "passed": true,
+    "alpha_r": -4.27619916052762,
+    "alpha_i": -0.03147519616326512,
+    "growth": 0.03147519616326512,
+    "delta_alpha_to_original_candidate": 1.1535508756726723e-13,
+    "absolute_polynomial_residual": 8.525140682485373e-15,
+    "raw_index": 0,
+    "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/tail841_boundary_native_20261024/runs/tail841_zero_positive_native_20261024/out/all_vectors.petsc",
+    "vector_sha256": "10e434239b8531c14f2b20050a5b3fa811ff30d995f452ed856d3b8e1b6ac36f",
+    "nmax_N": 67.0100597061984,
+    "metadata": {
+      "iloc": "841",
+      "x_global_N": "  3.1428571428571669E+001",
+      "y_global_N": "  1.0000000000000000E+000",
+      "s_polyline_N": "  3.2999364951704450E+001",
+      "t_x": "  1.0000000000000000E+000",
+      "t_y": "  0.0000000000000000E+000",
+      "n_x": " -0.0000000000000000E+000",
+      "n_y": "  1.0000000000000000E+000",
+      "n_min": "  0.0000000000000000E+000",
+      "n_max": "  6.7010059706198405E+001",
+      "max_tangential_drift": "  0.0000000000000000E+000",
+      "max_abs_Vn": "  2.8165597560924162E-002",
+      "max_abs_Qn": "  1.3282848685489952E+001",
+      "max_abs_Qnn": "  1.0227408617170761E+002",
+      "min_delta_n": "  1.7585137757907265E-003",
+      "identity_flat": "T",
+      "normal_derivatives_finite": "T"
+    },
+    "peak_j": 239,
+    "peak_n_N": 0.6029269565739195,
+    "raw_vector_index_association_verified": true
+  },
+  "extra_low_frequency_peaks": [
+    {
+      "omega": 0.04,
+      "peaks": [
+        {
+          "outer": 0.04,
+          "inner": 0.01721886548272005,
+          "iloc": 841.0,
+          "x": 31.42857142857167,
+          "Re": 79100.0,
+          "alpha_r": 0.1996377532424152,
+          "alpha_i": -0.002008480966959077,
+          "beta_r": 0.01721886548272005,
+          "beta_i": 0.0,
+          "omega_r": 0.04,
+          "omega_i": 0.0,
+          "growth": 0.002008480966959077,
+          "branch": 0.0,
+          "status": 0.0,
+          "row": 2
+        },
+        {
+          "outer": 0.04,
+          "inner": 0.8875445624531915,
+          "iloc": 841.0,
+          "x": 31.42857142857167,
+          "Re": 79100.0,
+          "alpha_r": -3.218770736779929,
+          "alpha_i": -0.03720563970888108,
+          "beta_r": 0.8875445624531915,
+          "beta_i": 0.0,
+          "omega_r": 0.04,
+          "omega_i": 0.0,
+          "growth": 0.03720563970888108,
+          "branch": 0.0,
+          "status": 0.0,
+          "row": 2
+        }
+      ]
+    },
+    {
+      "omega": 0.03,
+      "peaks": [
+        {
+          "outer": 0.03,
+          "inner": 0.9654635662550464,
+          "iloc": 841.0,
+          "x": 31.42857142857167,
+          "Re": 79100.0,
+          "alpha_r": -3.559281017897336,
+          "alpha_i": -0.03553020484220672,
+          "beta_r": 0.9654635662550464,
+          "beta_i": 0.0,
+          "omega_r": 0.03,
+          "omega_i": 0.0,
+          "growth": 0.03553020484220672,
+          "branch": 0.0,
+          "status": 0.0,
+          "row": 2
+        }
+      ]
+    },
+    {
+      "omega": 0.02,
+      "peaks": [
+        {
+          "outer": 0.02,
+          "inner": 0.04096525031492392,
+          "iloc": 841.0,
+          "x": 31.42857142857167,
+          "Re": 79100.0,
+          "alpha_r": -0.02714066583348655,
+          "alpha_i": 0.001781470882200405,
+          "beta_r": 0.04096525031492392,
+          "beta_i": 0.0,
+          "omega_r": 0.02,
+          "omega_i": 0.0,
+          "growth": -0.001781470882200405,
+          "branch": 0.0,
+          "status": 0.0,
+          "row": 2
+        },
+        {
+          "outer": 0.02,
+          "inner": 1.025441254768086,
+          "iloc": 841.0,
+          "x": 31.42857142857167,
+          "Re": 79100.0,
+          "alpha_r": -3.830757611259271,
+          "alpha_i": -0.0340510060182807,
+          "beta_r": 1.025441254768086,
+          "beta_i": 0.0,
+          "omega_r": 0.02,
+          "omega_i": 0.0,
+          "growth": 0.0340510060182807,
+          "branch": 0.0,
+          "status": 0.0,
+          "row": 2
+        }
+      ]
+    },
+    {
+      "omega": 0.01,
+      "peaks": [
+        {
+          "outer": 0.01,
+          "inner": 1.075802142318098,
+          "iloc": 841.0,
+          "x": 31.42857142857167,
+          "Re": 79100.0,
+          "alpha_r": -4.065222998157099,
+          "alpha_i": -0.03271007233975007,
+          "beta_r": 1.075802142318098,
+          "beta_i": 0.0,
+          "omega_r": 0.01,
+          "omega_i": 0.0,
+          "growth": 0.03271007233975007,
+          "branch": 0.0,
+          "status": 0.0,
+          "row": 2
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    "Negative growth between the two newly verified boundaries was sampled on these finite paths; no all-beta/all-mode stable-hole proof.",
+    "Two source origins recover the same lower/low-lobe-upper roots; provenance is not two physical modes or a proved peak-merger position.",
+    "Near zero, two local beta maxima occur at some inserted frequencies. Large last beta displacement does not certify persistence of an old beta stationary-point identity.",
+    "Beta4 old-identity continuation remains unknown below its last verified omega. Beta6 reaches an actual positive-growth zero-frequency peak; finite insertions supply other positive-growth witnesses."
+  ],
+  "cost": {
+    "unique_cached_run_directories": 833,
+    "solver_wall_seconds_serial_sum": 617.201000000001,
+    "solves": 8669,
+    "rejected": 0,
+    "failed_requested_field_records": 0,
+    "petsc_errors": 0,
+    "minimum_recorded_vector_overlap": 0.9532250360953214,
+    "scope": "Cached ROOT/runs calls in this phase only. Independent raw-native fresh solves under work are separate evidence and excluded from these cached counters."
+  },
+  "original_inputs_unchanged": true,
+  "table": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail841_finite_peak_paths_20261024.csv",
+  "figure": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail841_finite_peak_paths_20261024.png",
+  "sources": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail841_finite_ridge_sources_20261024/tail_lower_ridge_841.py",
+      "sha256": "6c502a5ddbfda1c76fd3a6378d720f50af4a91a2bdc94177fd5fc36fe60c0653"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail841_finite_ridge_sources_20261024/tail_lower_ridge_841_fine.py",
+      "sha256": "f1e5d35bc7dbd27c1f5f596cbbbe50e9f2e3a4fd86d065f2a2eb2874c5bfff0e"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail841_finite_ridge_sources_20261024/tail_lower_postprocess_20261024.py",
+      "sha256": "d3b477068aec43492986ff8635b9a959ee93dd3032a9dcffadf5c6718ea6cd38"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail841_finite_ridge_sources_20261024/tail_zero_peak_audit_20261024.py",
+      "sha256": "f138e57b041771683695009f1df17c3d45a83788fb140a61e724fb90ac11dfcb"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail841_finite_ridge_sources_20261024/tail841_final_audit_20261024.py",
+      "sha256": "6184ac16ff5583c4cd79c2417995cb98f2b82614a0e033e33833cedabd6d1375"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/tail841_finite_ridge_sources_20261024/tail841_plot_20261024.py",
+      "sha256": "46b3fd7f979569f2c4be0bc111525a7a8b623eb5fa688e19fc09b460df049000"
+    }
+  ],
+  "cleanup_removed": [
+    "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/__pycache__/tail_lower_ridge_841.cpython-38.pyc",
+    "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/__pycache__/tail_lower_ridge_841_fine.cpython-38.pyc"
+  ],
+  "finished": true,
+  "figure_plot_policy": "Actual solved scatter points only. Do not connect unknown stationary-point identity or uncomputed frequency intervals.",
+  "figure_visual_review": "2026-10-24T12:05:53.464341+08:00"
+}

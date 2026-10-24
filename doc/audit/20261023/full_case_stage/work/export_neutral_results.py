@@ -22,6 +22,9 @@ TRACE_PATTERNS = [
     "neutral_tail_beta4_v10_*_progress.json",
     "local_peak_tail_*_hsmall_progress.json",
     "local_peak_nose_*_progress.json",
+    "tail841_lower_x_v10_20261024_*_progress.json",
+    "tail841_low_lobe_upper_x_v10_20261024_*_progress.json",
+    "local_peak_tail841_*_progress.json",
 ]
 EXTRA_PATTERNS = [
     "fd_short_v7_actual_origin_progress.json",
@@ -30,6 +33,8 @@ EXTRA_PATTERNS = [
     "local_mode_audit_M3near_seed_results.json",
     "M3nearc_i119_seed_results_20261023.json",
     "tail_beta_roots_20261023.json",
+    "tail841_all_boundaries_20261024.json",
+    "dense_tail841_*_20261024/stations/i*.json",
     "tail_crossover_native_i773.json",
     "primary_crossover_native_i372.json",
     "dense_native_upper_v10_20261023/stations/i*.json",
@@ -91,7 +96,10 @@ def collect():
             source=d.get("source",d.get("spec",{}).get("seed_provenance",{}).get("source"))
             if not source: continue
             for i,r in enumerate(d["records"]):
-                row=valid_result(r.get("result",{}),source,path,i)
+                result=dict(r.get("result",{}))
+                if not result.get("solver_sha256"):
+                    result["solver_sha256"]=d.get("solver_sha256",d.get("spec",{}).get("solver_sha256"))
+                row=valid_result(result,source,path,i)
                 if row:rows.append(row)
             failures.extend(dict(source=source,result_file=str(path),
                 station=r.get("station"),reason=r.get("reason",r.get("status","unknown")))

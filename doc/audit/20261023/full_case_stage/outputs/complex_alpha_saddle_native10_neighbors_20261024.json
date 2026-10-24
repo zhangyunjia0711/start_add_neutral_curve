@@ -1,0 +1,489 @@
+{
+  "created": "2026-10-24T11:59:18.560522+08:00",
+  "source_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/complex_alpha_saddle_native10_20261024.json",
+  "source_sha256": "022399bdf6cb74230519107e6874e19ea90c19497a62d350193311693f21090f",
+  "saddle": {
+    "alpha": {
+      "real": -22.055166411716655,
+      "imag": 0.06120268031775814
+    },
+    "beta": 12.137900983290656,
+    "omega": {
+      "real": 8.902789246227368,
+      "imag": -1.0254787604742278e-05
+    },
+    "omega_alpha": {
+      "real": -2.577103503817647e-10,
+      "imag": 1.24983082340775e-10
+    },
+    "raw_MAC_to_reference": 1.0000000000000002,
+    "right_absolute_pencil_residual": 3.57198607667529e-13,
+    "left_absolute_pencil_residual": 3.662191785646183e-13,
+    "pH_M_q": {
+      "real": 0.0015212121477562034,
+      "imag": 0.0022674169402243033
+    },
+    "temporal_condition_indicator": 366.2422377334866,
+    "seconds": 0.035164594650268555,
+    "shift": {
+      "real": 8.903789246227579,
+      "imag": -1.0254786827461284e-05
+    },
+    "other_temporal_values": [
+      {
+        "real": 8.453111356712181,
+        "imag": -1.2305135151006914
+      }
+    ]
+  },
+  "omega_alphalpha": {
+    "real": 0.0023062139797760768,
+    "imag": -0.001224214650693117
+  },
+  "records": [
+    {
+      "epsilon": 0.0001,
+      "omega": {
+        "real": 8.902789246227368,
+        "imag": 8.974521239525773e-05
+      },
+      "pairs": [
+        {
+          "created": "2026-10-24T11:59:19.123347+08:00",
+          "directory": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-04_s-1",
+          "command": [
+            "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+            "-f",
+            "config.ini",
+            "-pep_tol",
+            "1e-13",
+            "-pep_max_it",
+            "1000",
+            "-pep_nev",
+            "1",
+            "-pep_ncv",
+            "8",
+            "-st_pc_factor_mat_solver_type",
+            "superlu",
+            "-options_left",
+            "-pep_view_vectors",
+            "binary:out/eigenvectors.petsc:default:append"
+          ],
+          "stdin": "-1 0 0\n",
+          "seconds": 0.520838737487793,
+          "exit": 0,
+          "omega": {
+            "real": 8.902789246227368,
+            "imag": 8.974521239525773e-05
+          },
+          "beta": 12.137900983290656,
+          "alpha_target": {
+            "real": -22.197792097035236,
+            "imag": -0.17598268774353784
+          },
+          "actual_alpha": {
+            "real": -22.196401440669295,
+            "imag": -0.17701516181359456
+          },
+          "pairs": [
+            {
+              "index": 0,
+              "alpha_r": -22.196401440669295,
+              "alpha_i": -0.17701516181359456,
+              "residual": 1.116043120501048e-09
+            },
+            {
+              "index": 1,
+              "alpha_r": -21.911173055857446,
+              "alpha_i": 0.2973351662735362,
+              "residual": 3.6269459411669273e-07
+            }
+          ],
+          "raw_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-04_s-1/out/eigenvectors.petsc",
+          "raw_vector_sha256": "a03892e0681a9b6baa0ac14fd6476b4eae254538a757d3b1e2515da1474a0919",
+          "raw_index": 0,
+          "source_MAC": 0.9999918199967265,
+          "reported_polynomial_residual": 1.116043120501048e-09,
+          "exported_same_PEP_matrix_residual": 1.1160466103342834e-09,
+          "actual_pep_solves": 1,
+          "petsc_errors": 0,
+          "unused_options": 0,
+          "passed": true
+        },
+        {
+          "created": "2026-10-24T11:59:19.643311+08:00",
+          "directory": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-04_s+1",
+          "command": [
+            "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+            "-f",
+            "config.ini",
+            "-pep_tol",
+            "1e-13",
+            "-pep_max_it",
+            "1000",
+            "-pep_nev",
+            "1",
+            "-pep_ncv",
+            "8",
+            "-st_pc_factor_mat_solver_type",
+            "superlu",
+            "-options_left",
+            "-pep_view_vectors",
+            "binary:out/eigenvectors.petsc:default:append"
+          ],
+          "stdin": "-1 0 0\n",
+          "seconds": 0.5191290378570557,
+          "exit": 0,
+          "omega": {
+            "real": 8.902789246227368,
+            "imag": 8.974521239525773e-05
+          },
+          "beta": 12.137900983290656,
+          "alpha_target": {
+            "real": -21.912540726398074,
+            "imag": 0.29838804837905414
+          },
+          "actual_alpha": {
+            "real": -21.91117361279846,
+            "imag": 0.2973350425030988
+          },
+          "pairs": [
+            {
+              "index": 0,
+              "alpha_r": -21.91117361279846,
+              "alpha_i": 0.2973350425030988,
+              "residual": 2.1797679212180446e-09
+            },
+            {
+              "index": 1,
+              "alpha_r": -22.19640131038429,
+              "alpha_i": -0.17701433090135066,
+              "residual": 7.787758603614393e-07
+            }
+          ],
+          "raw_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-04_s+1/out/eigenvectors.petsc",
+          "raw_vector_sha256": "a6dffbecb97301f634eafca570dd70a292344c0f7599cb17d972246c1cfd4078",
+          "raw_index": 0,
+          "source_MAC": 0.9999917369602273,
+          "reported_polynomial_residual": 2.1797679212180446e-09,
+          "exported_same_PEP_matrix_residual": 2.179768217698924e-09,
+          "actual_pep_solves": 1,
+          "petsc_errors": 0,
+          "unused_options": 0,
+          "passed": true
+        }
+      ],
+      "root_separation": 0.5535007047215051,
+      "separation_over_sqrt_epsilon": 55.35007047215051,
+      "midpoint": {
+        "real": -22.053787526733878,
+        "imag": 0.06015994034475211
+      },
+      "midpoint_difference_to_saddle": 0.001728765584755266,
+      "mutual_raw_MAC": 0.9999671178137325,
+      "individual_square_law_relative_errors": [
+        0.01252010363208935,
+        0.012465639570758705
+      ]
+    },
+    {
+      "epsilon": 1e-05,
+      "omega": {
+        "real": 8.902789246227368,
+        "imag": -2.54787604742277e-07
+      },
+      "pairs": [
+        {
+          "created": "2026-10-24T11:59:20.163972+08:00",
+          "directory": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-05_s-1",
+          "command": [
+            "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+            "-f",
+            "config.ini",
+            "-pep_tol",
+            "1e-13",
+            "-pep_max_it",
+            "1000",
+            "-pep_nev",
+            "1",
+            "-pep_ncv",
+            "8",
+            "-st_pc_factor_mat_solver_type",
+            "superlu",
+            "-options_left",
+            "-pep_view_vectors",
+            "binary:out/eigenvectors.petsc:default:append"
+          ],
+          "stdin": "-1 0 0\n",
+          "seconds": 0.5194365978240967,
+          "exit": 0,
+          "omega": {
+            "real": 8.902789246227368,
+            "imag": -2.54787604742277e-07
+          },
+          "beta": 12.137900983290656,
+          "alpha_target": {
+            "real": -22.10026861356157,
+            "imag": -0.013801918756146954
+          },
+          "actual_alpha": {
+            "real": -22.10013023971405,
+            "imag": -0.013905869633531937
+          },
+          "pairs": [
+            {
+              "index": 0,
+              "alpha_r": -22.10013023971405,
+              "alpha_i": -0.013905869633531937,
+              "residual": 6.551397360388688e-09
+            },
+            {
+              "index": 1,
+              "alpha_r": -22.009937662958087,
+              "alpha_i": 0.13609599589365146,
+              "residual": 6.7074902174939e-06
+            }
+          ],
+          "raw_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-05_s-1/out/eigenvectors.petsc",
+          "raw_vector_sha256": "5c4fe52c1035f867304dc8b6b699f83de2647e583cbef1f4822d56b5ad39e627",
+          "raw_index": 0,
+          "source_MAC": 0.9999991792392814,
+          "reported_polynomial_residual": 6.551397360388688e-09,
+          "exported_same_PEP_matrix_residual": 6.5514029346045075e-09,
+          "actual_pep_solves": 1,
+          "petsc_errors": 0,
+          "unused_options": 0,
+          "passed": true
+        },
+        {
+          "created": "2026-10-24T11:59:20.684550+08:00",
+          "directory": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-05_s+1",
+          "command": [
+            "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+            "-f",
+            "config.ini",
+            "-pep_tol",
+            "1e-13",
+            "-pep_max_it",
+            "1000",
+            "-pep_nev",
+            "1",
+            "-pep_ncv",
+            "8",
+            "-st_pc_factor_mat_solver_type",
+            "superlu",
+            "-options_left",
+            "-pep_view_vectors",
+            "binary:out/eigenvectors.petsc:default:append"
+          ],
+          "stdin": "-1 0 0\n",
+          "seconds": 0.5197198390960693,
+          "exit": 0,
+          "omega": {
+            "real": 8.902789246227368,
+            "imag": -2.54787604742277e-07
+          },
+          "beta": 12.137900983290656,
+          "alpha_target": {
+            "real": -22.01006420987174,
+            "imag": 0.13620727939166324
+          },
+          "actual_alpha": {
+            "real": -22.00992658417862,
+            "imag": 0.13610267614315985
+          },
+          "pairs": [
+            {
+              "index": 0,
+              "alpha_r": -22.00992658417862,
+              "alpha_i": 0.13610267614315985,
+              "residual": 4.323839195478377e-09
+            },
+            {
+              "index": 1,
+              "alpha_r": -22.10013779882571,
+              "alpha_i": -0.013901032662630042,
+              "residual": 4.472906263282799e-06
+            }
+          ],
+          "raw_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-05_s+1/out/eigenvectors.petsc",
+          "raw_vector_sha256": "32105dfad5a9e453e220b21f304038b9b19d96f12f5c4d7f6a74613d45018fd8",
+          "raw_index": 0,
+          "source_MAC": 0.9999991766115588,
+          "reported_polynomial_residual": 4.323839195478377e-09,
+          "exported_same_PEP_matrix_residual": 4.323840801147851e-09,
+          "actual_pep_solves": 1,
+          "petsc_errors": 0,
+          "unused_options": 0,
+          "passed": true
+        }
+      ],
+      "root_separation": 0.17504074747895948,
+      "separation_over_sqrt_epsilon": 55.35274453718881,
+      "midpoint": {
+        "real": -22.055028411946335,
+        "imag": 0.06109840325481396
+      },
+      "midpoint_difference_to_saddle": 0.00017296717163883525,
+      "mutual_raw_MAC": 0.9999967117406837,
+      "individual_square_law_relative_errors": [
+        0.003955339238277004,
+        0.003949862274724885
+      ]
+    },
+    {
+      "epsilon": 1e-06,
+      "omega": {
+        "real": 8.902789246227368,
+        "imag": -9.254787604742277e-06
+      },
+      "pairs": [
+        {
+          "created": "2026-10-24T11:59:21.205285+08:00",
+          "directory": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-06_s-1",
+          "command": [
+            "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+            "-f",
+            "config.ini",
+            "-pep_tol",
+            "1e-13",
+            "-pep_max_it",
+            "1000",
+            "-pep_nev",
+            "1",
+            "-pep_ncv",
+            "8",
+            "-st_pc_factor_mat_solver_type",
+            "superlu",
+            "-options_left",
+            "-pep_view_vectors",
+            "binary:out/eigenvectors.petsc:default:append"
+          ],
+          "stdin": "-1 0 0\n",
+          "seconds": 0.5194108486175537,
+          "exit": 0,
+          "omega": {
+            "real": 8.902789246227368,
+            "imag": -9.254787604742277e-06
+          },
+          "beta": 12.137900983290656,
+          "alpha_target": {
+            "real": -22.069428980248514,
+            "imag": 0.03748414351162854
+          },
+          "actual_alpha": {
+            "real": -22.06941506695313,
+            "imag": 0.03747373189582817
+          },
+          "pairs": [
+            {
+              "index": 0,
+              "alpha_r": -22.06941506695313,
+              "alpha_i": 0.03747373189582817,
+              "residual": 2.2447267167939262e-08
+            },
+            {
+              "index": 1,
+              "alpha_r": -22.04075950644586,
+              "alpha_i": 0.0849871933310547,
+              "residual": 7.527393543714377e-05
+            }
+          ],
+          "raw_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-06_s-1/out/eigenvectors.petsc",
+          "raw_vector_sha256": "e6cd228b11e4a49322e057e1d2c7a64385c2539e0dffa1031356e50a1eae69f6",
+          "raw_index": 0,
+          "source_MAC": 0.9999999178352083,
+          "reported_polynomial_residual": 2.2447267167939262e-08,
+          "exported_same_PEP_matrix_residual": 2.244726789467761e-08,
+          "actual_pep_solves": 1,
+          "petsc_errors": 0,
+          "unused_options": 0,
+          "passed": true
+        },
+        {
+          "created": "2026-10-24T11:59:21.725353+08:00",
+          "directory": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-06_s+1",
+          "command": [
+            "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+            "-f",
+            "config.ini",
+            "-pep_tol",
+            "1e-13",
+            "-pep_max_it",
+            "1000",
+            "-pep_nev",
+            "1",
+            "-pep_ncv",
+            "8",
+            "-st_pc_factor_mat_solver_type",
+            "superlu",
+            "-options_left",
+            "-pep_view_vectors",
+            "binary:out/eigenvectors.petsc:default:append"
+          ],
+          "stdin": "-1 0 0\n",
+          "seconds": 0.5192854404449463,
+          "exit": 0,
+          "omega": {
+            "real": 8.902789246227368,
+            "imag": -9.254787604742277e-06
+          },
+          "beta": 12.137900983290656,
+          "alpha_target": {
+            "real": -22.040903843184797,
+            "imag": 0.08492121712388774
+          },
+          "actual_alpha": {
+            "real": -22.04088995847427,
+            "imag": 0.08491077923109087
+          },
+          "pairs": [
+            {
+              "index": 0,
+              "alpha_r": -22.04088995847427,
+              "alpha_i": 0.08491077923109087,
+              "residual": 2.1440045035083817e-08
+            },
+            {
+              "index": 1,
+              "alpha_r": -22.069329339831032,
+              "alpha_i": 0.03758184154401327,
+              "residual": 7.147813925124978e-05
+            }
+          ],
+          "raw_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/runs/neighbor_eps1e-06_s+1/out/eigenvectors.petsc",
+          "raw_vector_sha256": "728d80db70419e2baf1b665f44ea6a041885e27343299d77951ba8001e002b05",
+          "raw_index": 0,
+          "source_MAC": 0.9999999177514725,
+          "reported_polynomial_residual": 2.1440045035083817e-08,
+          "exported_same_PEP_matrix_residual": 2.1440044023692282e-08,
+          "actual_pep_solves": 1,
+          "petsc_errors": 0,
+          "unused_options": 0,
+          "passed": true
+        }
+      ],
+      "root_separation": 0.05535300600345634,
+      "separation_over_sqrt_epsilon": 55.35300600345634,
+      "midpoint": {
+        "real": -22.0551525127137,
+        "imag": 0.06119225556345952
+      },
+      "midpoint_difference_to_saddle": 1.7374054947643708e-05,
+      "mutual_raw_MAC": 0.9999996711737542,
+      "individual_square_law_relative_errors": [
+        0.0012558057087071358,
+        0.0012552122263250753
+      ]
+    }
+  ],
+  "complex_frequency_interface_source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/complex_omega_interface_v10_20261024/complex_omega_probe.json",
+  "pinch_origin_verified": false,
+  "physical_absolute_instability_claim": false,
+  "qualification": "Two local spatial branches near a finite saddle, not their high-Imomega half-plane origin, not a proven pinch",
+  "status": "six_fresh_complex_frequency_PEP_roots_verified",
+  "completed": "2026-10-24T11:59:21.759445+08:00",
+  "original_files_unchanged": true,
+  "total_native_calls": 6,
+  "total_native_seconds": 3.1178205013275146
+}

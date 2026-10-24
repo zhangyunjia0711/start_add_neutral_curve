@@ -1,0 +1,1117 @@
+{
+  "created": "2026-10-24T11:53:43.479034+08:00",
+  "status": "complex_alpha_saddle_candidate",
+  "station": 10,
+  "fixed_beta": 12.137900983290656,
+  "source_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/matrix_temporal_M1c_native10_secant_20261023.json",
+  "source_sha256": "63c7408b703c323e1c5f8e90f2cf2c718d0daed198a30051943aaa3a0c6d4a45",
+  "source_actual": {
+    "name": "M1c_i10_secant_matrix_candidate_native",
+    "station": 10,
+    "jn": 400,
+    "input_dir": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in",
+    "started": "2026-10-23T22:29:39.385165+08:00",
+    "seconds": 1.07,
+    "solver": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+    "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c",
+    "command": [
+      "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+      "-f",
+      "config.ini",
+      "-pep_tol",
+      "1e-13",
+      "-pep_max_it",
+      "1000",
+      "-pep_nev",
+      "1",
+      "-pep_ncv",
+      "8",
+      "-st_pc_factor_mat_solver_type",
+      "superlu",
+      "-pep_view_vectors",
+      "binary:out/all_vectors.petsc",
+      "-pep_view_values",
+      "ascii:out/all_values.txt",
+      "-options_left"
+    ],
+    "config_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/pep_matrix_temporal_probe_20261023/M1c_native/runs/M1c_i10_secant_matrix_candidate_native/config.ini",
+    "exit": 1,
+    "fixed_parameters": {
+      "omega_r": 8.902811251576882,
+      "beta_r": 12.137900983290656
+    },
+    "petsc_errors": 0,
+    "unused_options": 0,
+    "terminal": "no bracketed root",
+    "solves": 2,
+    "rejected": 0,
+    "field_records": 2,
+    "failed_field_records": 0,
+    "minimum_tiny_beta_MAC": 0.999999999999782,
+    "pairs": [
+      {
+        "index": 0,
+        "alpha_r": -22.17732211147169,
+        "alpha_i": -7.608643419531953e-10,
+        "absolute_polynomial_residual": 3.766721318413794e-12
+      },
+      {
+        "index": 1,
+        "alpha_r": -21.933068851333235,
+        "alpha_i": 0.12115432768330446,
+        "absolute_polynomial_residual": 0.0007442362161377549
+      }
+    ],
+    "passed": true,
+    "alpha_r": -22.17732211147169,
+    "alpha_i": -7.608643419531953e-10,
+    "growth": 7.608643419531953e-10,
+    "delta_alpha_to_original_candidate": 1.0766723147086573e-09,
+    "absolute_polynomial_residual": 3.766721318413794e-12,
+    "raw_index": 0,
+    "native_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/pep_matrix_temporal_probe_20261023/M1c_native/runs/M1c_i10_secant_matrix_candidate_native/out/all_vectors.petsc",
+    "vector_sha256": "eb688c0309cf555fdffcf00adc5774c1acb004eaa273e1f54d4b6ad8ddcd9e02",
+    "nmax_N": 5.86590678716436,
+    "metadata": {
+      "iloc": "10",
+      "x_global_N": " -9.9826561018471593E-001",
+      "y_global_N": "  5.8870803651189019E-002",
+      "s_polyline_N": "  5.8904757117479237E-002",
+      "t_x": "  5.8870803651179450E-002",
+      "t_y": "  9.9826561018471649E-001",
+      "n_x": " -9.9826561018471649E-001",
+      "n_y": "  5.8870803651179450E-002",
+      "n_min": "  0.0000000000000000E+000",
+      "n_max": "  5.8659067871643602E+000",
+      "max_tangential_drift": "  3.8025138593411612E-014",
+      "max_abs_Vn": "  2.5953971880600307E-001",
+      "max_abs_Qn": "  2.1695946190030560E+002",
+      "max_abs_Qnn": "  1.8032848871800375E+004",
+      "min_delta_n": "  4.9837386349672256E-005",
+      "identity_flat": "F",
+      "normal_derivatives_finite": "T"
+    },
+    "peak_j": 277,
+    "peak_n_N": 0.02820311532876485,
+    "raw_vector_index_association_verified": true
+  },
+  "matrix_provenance_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/matrix_temporal_M1c_native_20261023.json",
+  "matrix_provenance_sha256": "d14e67b2825535b35f23e25a6f866e87f369a89b3af2309c394f710ea211fa12",
+  "matrix_checks": {
+    "independent_beta": 12.719480784513184,
+    "independent_matrix_absolute_errors": [
+      7.684891539795386e-11,
+      3.377272364323391e-19,
+      0.0
+    ],
+    "independent_matrix_relative_errors": [
+      7.61830447960942e-17,
+      1.2854647124818476e-20,
+      0.0
+    ],
+    "G_beta_independence_absolute_error": 1.3094918169325961e-14,
+    "G_beta_independence_relative_error": 2.675301733941725e-16,
+    "omega1_P1_P2_errors": [
+      0.0,
+      0.0
+    ],
+    "passed": true
+  },
+  "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c",
+  "limits": {
+    "max_iterations": 15,
+    "max_backtracks": 4,
+    "minimum_MAC": 0.95
+  },
+  "physical_absolute_instability_claim": false,
+  "pinch_origin_verified": false,
+  "qualification": "Finite fixed-real-beta complex-alpha saddle search on one temporal simple branch. Neither Re omega_alpha nor saddle sign alone determines causal direction or absolute/convective class.",
+  "source_complex_alpha_parity": {
+    "point": {
+      "alpha": {
+        "real": -22.17732211147169,
+        "imag": -7.608643419531953e-10
+      },
+      "beta": 12.137900983290656,
+      "omega": {
+        "real": 8.90281125157696,
+        "imag": -6.317291151335344e-14
+      },
+      "omega_alpha": {
+        "real": -0.0003545254778365512,
+        "imag": 1.0920351698925505e-05
+      },
+      "raw_MAC_to_reference": 1.0000000000000004,
+      "right_absolute_pencil_residual": 3.894812784368698e-13,
+      "left_absolute_pencil_residual": 3.85445530894738e-13,
+      "pH_M_q": {
+        "real": 0.0004015973357523635,
+        "imag": -0.0026960977615555913
+      },
+      "temporal_condition_indicator": 366.858899988947,
+      "seconds": 0.0766134262084961,
+      "shift": {
+        "real": 8.903811251576881,
+        "imag": 0.0
+      },
+      "other_temporal_values": [
+        {
+          "real": 8.450762289258748,
+          "imag": -1.2346244164979296
+        }
+      ]
+    },
+    "frequency_error": 1.004975402639562e-13,
+    "raw_MAC": 1.0000000000000004
+  },
+  "result": {
+    "status": "complex_alpha_saddle_candidate",
+    "point": {
+      "alpha": {
+        "real": -22.055166411716655,
+        "imag": 0.06120268031775814
+      },
+      "beta": 12.137900983290656,
+      "omega": {
+        "real": 8.902789246227368,
+        "imag": -1.0254787604742278e-05
+      },
+      "omega_alpha": {
+        "real": -2.577103503817647e-10,
+        "imag": 1.24983082340775e-10
+      },
+      "raw_MAC_to_reference": 1.0000000000000002,
+      "right_absolute_pencil_residual": 3.57198607667529e-13,
+      "left_absolute_pencil_residual": 3.662191785646183e-13,
+      "pH_M_q": {
+        "real": 0.0015212121477562034,
+        "imag": 0.0022674169402243033
+      },
+      "temporal_condition_indicator": 366.2422377334866,
+      "seconds": 0.035164594650268555,
+      "shift": {
+        "real": 8.903789246227579,
+        "imag": -1.0254786827461284e-05
+      },
+      "other_temporal_values": [
+        {
+          "real": 8.453111356712181,
+          "imag": -1.2305135151006914
+        }
+      ]
+    },
+    "trace": [
+      {
+        "iteration": 0,
+        "center": {
+          "alpha": {
+            "real": -22.17732211147169,
+            "imag": -7.608643419531953e-10
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.90281125157696,
+            "imag": -6.348583400675137e-14
+          },
+          "omega_alpha": {
+            "real": -0.00035452547784777053,
+            "imag": 1.0920351689889895e-05
+          },
+          "raw_MAC_to_reference": 0.9999999999999997,
+          "right_absolute_pencil_residual": 3.340566765027794e-13,
+          "left_absolute_pencil_residual": 3.6870564671920243e-13,
+          "pH_M_q": {
+            "real": -0.00028191092173443185,
+            "imag": 0.0027112266213202324
+          },
+          "temporal_condition_indicator": 366.8588999889417,
+          "seconds": 0.036432743072509766,
+          "shift": {
+            "real": 8.903811251576881,
+            "imag": 0.0
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.450762289240576,
+              "imag": -1.2346244164845224
+            }
+          ]
+        },
+        "omega_alphalpha_FD": {
+          "real": 0.0022619839699822186,
+          "imag": -0.0012432311323823228
+        },
+        "h": 0.001,
+        "samples": [
+          {
+            "alpha": {
+              "real": -22.17832211147169,
+              "imag": -7.608643419531953e-10
+            },
+            "beta": 12.137900983290656,
+            "omega": {
+              "real": 8.902811607233351,
+              "imag": -1.1542193330076302e-08
+            },
+            "omega_alpha": {
+              "real": -0.0003567872865634065,
+              "imag": 1.2163571575446028e-05
+            },
+            "raw_MAC_to_reference": 0.9999999998941171,
+            "right_absolute_pencil_residual": 4.3999263855857407e-13,
+            "left_absolute_pencil_residual": 3.5503985639020887e-13,
+            "pH_M_q": {
+              "real": -0.002582362212635464,
+              "imag": -0.0008726005857355845
+            },
+            "temporal_condition_indicator": 366.863767867504,
+            "seconds": 0.04025149345397949,
+            "shift": {
+              "real": 8.90381125157696,
+              "imag": -6.348583400675137e-14
+            },
+            "other_temporal_values": [
+              {
+                "real": 8.450733453171187,
+                "imag": -1.2346435279553887
+              }
+            ]
+          },
+          {
+            "alpha": {
+              "real": -22.176322111471688,
+              "imag": -7.608643419531953e-10
+            },
+            "beta": 12.137900983290656,
+            "omega": {
+              "real": 8.902810898181981,
+              "imag": 1.0298795936943833e-08
+            },
+            "omega_alpha": {
+              "real": -0.00035226331862344204,
+              "imag": 9.677109310681382e-06
+            },
+            "raw_MAC_to_reference": 0.9999999998941053,
+            "right_absolute_pencil_residual": 4.4227547157309344e-13,
+            "left_absolute_pencil_residual": 3.82278757500704e-13,
+            "pH_M_q": {
+              "real": 0.0027132063102170414,
+              "imag": 0.0002625496311578941
+            },
+            "temporal_condition_indicator": 366.854031064939,
+            "seconds": 0.04169487953186035,
+            "shift": {
+              "real": 8.90381125157696,
+              "imag": -6.348583400675137e-14
+            },
+            "other_temporal_values": [
+              {
+                "real": 8.45079112605774,
+                "imag": -1.2346053039477505
+              }
+            ]
+          }
+        ],
+        "Newton_delta": {
+          "real": 0.12240822330343445,
+          "imag": 0.062450204888789565
+        },
+        "trials": [
+          {
+            "factor": 1.0,
+            "point": {
+              "alpha": {
+                "real": -22.054913888168254,
+                "imag": 0.06245020412792522
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.902789244891432,
+                "imag": -1.025314817452379e-05
+              },
+              "omega_alpha": {
+                "real": 2.109095018447902e-06,
+                "imag": 2.5681639027991506e-06
+              },
+              "raw_MAC_to_reference": 0.9999979869682535,
+              "right_absolute_pencil_residual": 4.384294267547694e-13,
+              "left_absolute_pencil_residual": 3.6838255521806265e-13,
+              "pH_M_q": {
+                "real": -0.0020717248908109316,
+                "imag": 0.0017785621628479105
+              },
+              "temporal_condition_indicator": 366.2407293251039,
+              "seconds": 0.04733705520629883,
+              "shift": {
+                "real": 8.90381125157696,
+                "imag": -6.348583400675137e-14
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.45309458385911,
+                  "imag": -1.2304726395743313
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "iteration": 1,
+        "center": {
+          "alpha": {
+            "real": -22.054913888168254,
+            "imag": 0.06245020412792522
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.902789244891235,
+            "imag": -1.0253147772537515e-05
+          },
+          "omega_alpha": {
+            "real": 2.1090950761564357e-06,
+            "imag": 2.568163877130442e-06
+          },
+          "raw_MAC_to_reference": 0.9999999999999996,
+          "right_absolute_pencil_residual": 3.7516641950479505e-13,
+          "left_absolute_pencil_residual": 3.7039632949150774e-13,
+          "pH_M_q": {
+            "real": 0.0019447288755116718,
+            "imag": 0.001916600373331616
+          },
+          "temporal_condition_indicator": 366.24072932549745,
+          "seconds": 0.0394291877746582,
+          "shift": {
+            "real": 8.903789244891431,
+            "imag": -1.025314817452379e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.45309458384721,
+              "imag": -1.2304726395790704
+            }
+          ]
+        },
+        "omega_alphalpha_FD": {
+          "real": 0.0023063262276856672,
+          "imag": -0.0012237789619180801
+        },
+        "h": 0.001,
+        "samples": [
+          {
+            "alpha": {
+              "real": -22.055913888168256,
+              "imag": 0.06245020412792522
+            },
+            "beta": 12.137900983290656,
+            "omega": {
+              "real": 8.9027892439351,
+              "imag": -1.0256327332326346e-05
+            },
+            "omega_alpha": {
+              "real": -1.9705466921911665e-07,
+              "imag": 3.7919335087532732e-06
+            },
+            "raw_MAC_to_reference": 0.9999999998926865,
+            "right_absolute_pencil_residual": 4.450142010057222e-13,
+            "left_absolute_pencil_residual": 3.8879381804275067e-13,
+            "pH_M_q": {
+              "real": 0.0009834418478107928,
+              "imag": -0.0025471483135627903
+            },
+            "temporal_condition_indicator": 366.2457644899456,
+            "seconds": 0.045641183853149414,
+            "shift": {
+              "real": 8.903789244891234,
+              "imag": -1.0253147772537515e-05
+            },
+            "other_temporal_values": [
+              {
+                "real": 8.45306572352498,
+                "imag": -1.2304919266435665
+              }
+            ]
+          },
+          {
+            "alpha": {
+              "real": -22.053913888168253,
+              "imag": 0.06245020412792522
+            },
+            "beta": 12.137900983290656,
+            "omega": {
+              "real": 8.902789248154313,
+              "imag": -1.0251191481590848e-05
+            },
+            "omega_alpha": {
+              "real": 4.4155977861522185e-06,
+              "imag": 1.3443755849171128e-06
+            },
+            "raw_MAC_to_reference": 0.9999999998926714,
+            "right_absolute_pencil_residual": 4.355466970591963e-13,
+            "left_absolute_pencil_residual": 3.3732610312735963e-13,
+            "pH_M_q": {
+              "real": -0.000913961772281314,
+              "imag": -0.0025729761584089013
+            },
+            "temporal_condition_indicator": 366.2356931004669,
+            "seconds": 0.04696536064147949,
+            "shift": {
+              "real": 8.903789244891234,
+              "imag": -1.0253147772537515e-05
+            },
+            "other_temporal_values": [
+              {
+                "real": 8.453123444902124,
+                "imag": -1.2304533514338776
+              }
+            ]
+          }
+        ],
+        "Newton_delta": {
+          "real": -0.0002525235483995276,
+          "imag": -0.0012475238101670777
+        },
+        "trials": [
+          {
+            "factor": 1.0,
+            "point": {
+              "alpha": {
+                "real": -22.055166411716655,
+                "imag": 0.06120268031775814
+              },
+              "beta": 12.137900983290656,
+              "omega": {
+                "real": 8.902789246227579,
+                "imag": -1.0254786827461284e-05
+              },
+              "omega_alpha": {
+                "real": -2.576826406115673e-10,
+                "imag": 1.2494646518974516e-10
+              },
+              "raw_MAC_to_reference": 0.9999999998261299,
+              "right_absolute_pencil_residual": 4.086251938768102e-13,
+              "left_absolute_pencil_residual": 3.2980480731853496e-13,
+              "pH_M_q": {
+                "real": -0.00018055853245859213,
+                "imag": -0.002724456752392016
+              },
+              "temporal_condition_indicator": 366.24223773346534,
+              "seconds": 0.1145789623260498,
+              "shift": {
+                "real": 8.903789244891234,
+                "imag": -1.0253147772537515e-05
+              },
+              "other_temporal_values": [
+                {
+                  "real": 8.453111356712046,
+                  "imag": -1.2305135150923754
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "iteration": 2,
+        "center": {
+          "alpha": {
+            "real": -22.055166411716655,
+            "imag": 0.06120268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.902789246227368,
+            "imag": -1.0254787604742278e-05
+          },
+          "omega_alpha": {
+            "real": -2.577103503817647e-10,
+            "imag": 1.24983082340775e-10
+          },
+          "raw_MAC_to_reference": 1.0000000000000002,
+          "right_absolute_pencil_residual": 3.57198607667529e-13,
+          "left_absolute_pencil_residual": 3.662191785646183e-13,
+          "pH_M_q": {
+            "real": 0.0015212121477562034,
+            "imag": 0.0022674169402243033
+          },
+          "temporal_condition_indicator": 366.2422377334866,
+          "seconds": 0.035164594650268555,
+          "shift": {
+            "real": 8.903789246227579,
+            "imag": -1.0254786827461284e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453111356712181,
+              "imag": -1.2305135151006914
+            }
+          ]
+        },
+        "omega_alphalpha_FD": {
+          "real": 0.002306213904491625,
+          "imag": -0.0012242147365867113
+        },
+        "h": 0.001,
+        "samples": [
+          {
+            "alpha": {
+              "real": -22.056166411716656,
+              "imag": 0.06120268031775814
+            },
+            "beta": 12.137900983290656,
+            "omega": {
+              "real": 8.902789247380378,
+              "imag": -1.0255399805464022e-05
+            },
+            "omega_alpha": {
+              "real": -2.306295044298891e-06,
+              "imag": 1.2243304347862841e-06
+            },
+            "raw_MAC_to_reference": 0.9999999998926856,
+            "right_absolute_pencil_residual": 4.719077497380331e-13,
+            "left_absolute_pencil_residual": 4.010940395842329e-13,
+            "pH_M_q": {
+              "real": -0.0025859826700398683,
+              "imag": -0.0008762161052161451
+            },
+            "temporal_condition_indicator": 366.24727186750863,
+            "seconds": 0.14713740348815918,
+            "shift": {
+              "real": 8.903789246227367,
+              "imag": -1.0254787604742278e-05
+            },
+            "other_temporal_values": [
+              {
+                "real": 8.453082495249959,
+                "imag": -1.2305328009544956
+              }
+            ]
+          },
+          {
+            "alpha": {
+              "real": -22.054166411716654,
+              "imag": 0.06120268031775814
+            },
+            "beta": 12.137900983290656,
+            "omega": {
+              "real": 8.902789247379877,
+              "imag": -1.02553998052212e-05
+            },
+            "omega_alpha": {
+              "real": 2.3061327646843587e-06,
+              "imag": -1.2240990383871385e-06
+            },
+            "raw_MAC_to_reference": 0.999999999892673,
+            "right_absolute_pencil_residual": 4.592623562000898e-13,
+            "left_absolute_pencil_residual": 3.767169925350554e-13,
+            "pH_M_q": {
+              "real": -0.0027296550480525434,
+              "imag": -6.674051271439809e-05
+            },
+            "temporal_condition_indicator": 366.2372025399477,
+            "seconds": 0.056835174560546875,
+            "shift": {
+              "real": 8.903789246227367,
+              "imag": -1.0254787604742278e-05
+            },
+            "other_temporal_values": [
+              {
+                "real": 8.453140218909224,
+                "imag": -1.2304942281555968
+              }
+            ]
+          }
+        ],
+        "Newton_delta": {
+          "real": 1.0962384834842997e-07,
+          "imag": 3.9979154885688065e-09
+        },
+        "trials": []
+      }
+    ],
+    "iterations": 3,
+    "absolute_omega_alpha_tolerance": 1e-09,
+    "alpha_correction_tolerance": 1e-06
+  },
+  "saddle_h_h2_verification": [
+    {
+      "h": 0.001,
+      "omega_alphalpha_real_direction": {
+        "real": 0.0023062139045528047,
+        "imag": -0.0012242147367583069
+      },
+      "omega_alphalpha_imag_direction": {
+        "real": 0.0023062139124973503,
+        "imag": -0.0012242147573418487
+      },
+      "second_derivative_direction_relative_difference": 8.450208315708317e-09,
+      "omega_alpha_FD_real": {
+        "real": -2.504663143554353e-10,
+        "imag": 1.2141116156058965e-13
+      },
+      "omega_alpha_FD_imag": {
+        "real": -4.351600002783446e-10,
+        "imag": 2.2293278334473143e-10
+      },
+      "samples": [
+        {
+          "alpha": {
+            "real": -22.056166411716656,
+            "imag": 0.06120268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.902789247380378,
+            "imag": -1.0255399805464022e-05
+          },
+          "omega_alpha": {
+            "real": -2.306295044401169e-06,
+            "imag": 1.2243304348813297e-06
+          },
+          "raw_MAC_to_reference": 0.9999999998926856,
+          "right_absolute_pencil_residual": 4.719077497380331e-13,
+          "left_absolute_pencil_residual": 3.7196630230443064e-13,
+          "pH_M_q": {
+            "real": 0.0012842943313987356,
+            "imag": 0.0024094914615170855
+          },
+          "temporal_condition_indicator": 366.2472718675089,
+          "seconds": 0.044843435287475586,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453082495249959,
+              "imag": -1.2305328009544956
+            }
+          ]
+        },
+        {
+          "alpha": {
+            "real": -22.054166411716654,
+            "imag": 0.06120268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.902789247379877,
+            "imag": -1.02553998052212e-05
+          },
+          "omega_alpha": {
+            "real": 2.306132764704441e-06,
+            "imag": -1.224099038635284e-06
+          },
+          "raw_MAC_to_reference": 0.999999999892673,
+          "right_absolute_pencil_residual": 4.592623562000898e-13,
+          "left_absolute_pencil_residual": 3.64390023821928e-13,
+          "pH_M_q": {
+            "real": -0.0025981935219613053,
+            "imag": -0.0008395602419328928
+          },
+          "temporal_condition_indicator": 366.2372025399478,
+          "seconds": 0.0253753662109375,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453140218909224,
+              "imag": -1.2304942281555968
+            }
+          ]
+        },
+        {
+          "alpha": {
+            "real": -22.055166411716655,
+            "imag": 0.06020268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.90278924507434,
+            "imag": -1.0254174839948023e-05
+          },
+          "omega_alpha": {
+            "real": -1.2246489884132283e-06,
+            "imag": -2.3060795886506415e-06
+          },
+          "raw_MAC_to_reference": 0.9999999998926772,
+          "right_absolute_pencil_residual": 4.411077805817947e-13,
+          "left_absolute_pencil_residual": 3.848949449379901e-13,
+          "pH_M_q": {
+            "real": -0.0023879681038924405,
+            "imag": 0.0013239586571809191
+          },
+          "temporal_condition_indicator": 366.2424290316443,
+          "seconds": 0.0262601375579834,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.45313064275977,
+              "imag": -1.2305423774707613
+            }
+          ]
+        },
+        {
+          "alpha": {
+            "real": -22.055166411716655,
+            "imag": 0.06220268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.902789245073894,
+            "imag": -1.0254175710268023e-05
+          },
+          "omega_alpha": {
+            "real": 1.2237805262704688e-06,
+            "imag": 2.306348236344059e-06
+          },
+          "raw_MAC_to_reference": 0.9999999998926792,
+          "right_absolute_pencil_residual": 4.231828572716653e-13,
+          "left_absolute_pencil_residual": 3.6830839620126897e-13,
+          "pH_M_q": {
+            "real": 0.002648551926700228,
+            "imag": -0.0006636613636963938
+          },
+          "temporal_condition_indicator": 366.24204774657375,
+          "seconds": 0.0629112720489502,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453092069937972,
+              "imag": -1.2304846538100693
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "h": 0.0005,
+      "omega_alphalpha_real_direction": {
+        "real": 0.0023062139797760768,
+        "imag": -0.001224214650693117
+      },
+      "omega_alphalpha_imag_direction": {
+        "real": 0.0023062139807557324,
+        "imag": -0.0012242146896447735
+      },
+      "second_derivative_direction_relative_difference": 1.492300431065995e-08,
+      "omega_alpha_FD_real": {
+        "real": -1.326938559031987e-09,
+        "imag": -3.8311916336077837e-10
+      },
+      "omega_alpha_FD_imag": {
+        "real": -9.754696728240262e-10,
+        "imag": -1.580957587066223e-10
+      },
+      "samples": [
+        {
+          "alpha": {
+            "real": -22.055666411716654,
+            "imag": 0.06120268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.902789246516477,
+            "imag": -1.0254940022941891e-05
+          },
+          "omega_alpha": {
+            "real": -1.1533205527458327e-06,
+            "imag": 6.122299781806474e-07
+          },
+          "raw_MAC_to_reference": 0.9999999999731695,
+          "right_absolute_pencil_residual": 4.1971343538396415e-13,
+          "left_absolute_pencil_residual": 3.628496017659917e-13,
+          "pH_M_q": {
+            "real": 0.000611118793022526,
+            "imag": 0.0026611458660549857
+          },
+          "temporal_condition_indicator": 366.24475493261525,
+          "seconds": 0.058455705642700195,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453096925903871,
+              "imag": -1.2305231581934408
+            }
+          ]
+        },
+        {
+          "alpha": {
+            "real": -22.054666411716656,
+            "imag": 0.06120268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.90278924651515,
+            "imag": -1.0254940406061054e-05
+          },
+          "omega_alpha": {
+            "real": 1.1528934270302444e-06,
+            "imag": -6.119846725124697e-07
+          },
+          "raw_MAC_to_reference": 0.9999999999731686,
+          "right_absolute_pencil_residual": 4.4681345711486193e-13,
+          "left_absolute_pencil_residual": 3.3774622977433326e-13,
+          "pH_M_q": {
+            "real": 0.002686221037395909,
+            "imag": 0.0004894742180448057
+          },
+          "temporal_condition_indicator": 366.23972026961866,
+          "seconds": 0.027820348739624023,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453125787702202,
+              "imag": -1.2305038717484826
+            }
+          ]
+        },
+        {
+          "alpha": {
+            "real": -22.055166411716655,
+            "imag": 0.06070268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.902789245939108,
+            "imag": -1.0254633775334261e-05
+          },
+          "omega_alpha": {
+            "real": -6.124091797234278e-07,
+            "imag": -1.1529796867528071e-06
+          },
+          "raw_MAC_to_reference": 0.9999999999731712,
+          "right_absolute_pencil_residual": 4.23148592653159e-13,
+          "left_absolute_pencil_residual": 3.3428997436681017e-13,
+          "pH_M_q": {
+            "real": 5.9805648639978874e-05,
+            "imag": -0.0027297775323747156
+          },
+          "temporal_condition_indicator": 366.24233321912556,
+          "seconds": 0.05155372619628906,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453120999818648,
+              "imag": -1.2305279461728222
+            }
+          ]
+        },
+        {
+          "alpha": {
+            "real": -22.055166411716655,
+            "imag": 0.06170268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.902789245939266,
+            "imag": -1.0254634750803934e-05
+          },
+          "omega_alpha": {
+            "real": 6.11805509921346e-07,
+            "imag": 1.1532342940029254e-06
+          },
+          "raw_MAC_to_reference": 0.9999999999731701,
+          "right_absolute_pencil_residual": 4.664271825107024e-13,
+          "left_absolute_pencil_residual": 3.726318869792783e-13,
+          "pH_M_q": {
+            "real": -0.0019438483933721714,
+            "imag": 0.0019174783641462126
+          },
+          "temporal_condition_indicator": 366.2421425756596,
+          "seconds": 0.03851628303527832,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453101713447346,
+              "imag": -1.2304990843389356
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "h": 0.0001,
+      "omega_alphalpha_real_direction": {
+        "real": 0.002306213411666227,
+        "imag": -0.0012242146515852382
+      },
+      "omega_alphalpha_imag_direction": {
+        "real": 0.0023062136339815405,
+        "imag": -0.0012242149075750073
+      },
+      "second_derivative_direction_relative_difference": 1.2985443048057774e-07,
+      "omega_alpha_FD_real": {
+        "real": 4.8405723873656825e-09,
+        "imag": 8.800247111432659e-11
+      },
+      "omega_alpha_FD_imag": {
+        "real": 4.252857179308923e-09,
+        "imag": 9.14823772291129e-10
+      },
+      "samples": [
+        {
+          "alpha": {
+            "real": -22.055266411716655,
+            "imag": 0.06120268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.90278924623834,
+            "imag": -1.0254793435805022e-05
+          },
+          "omega_alpha": {
+            "real": -2.308772588861014e-07,
+            "imag": 1.2254636529609153e-07
+          },
+          "raw_MAC_to_reference": 0.9999999999989275,
+          "right_absolute_pencil_residual": 4.350019512453027e-13,
+          "left_absolute_pencil_residual": 3.7190454089558147e-13,
+          "pH_M_q": {
+            "real": 0.0011745126110871834,
+            "imag": -0.0024649068154156133
+          },
+          "temporal_condition_indicator": 366.24274119553917,
+          "seconds": 0.05920839309692383,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453108470519629,
+              "imag": -1.2305154437321824
+            }
+          ]
+        },
+        {
+          "alpha": {
+            "real": -22.055066411716655,
+            "imag": 0.06120268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.902789246239308,
+            "imag": -1.0254793418204528e-05
+          },
+          "omega_alpha": {
+            "real": 2.3036542344714402e-07,
+            "imag": -1.222965650209561e-07
+          },
+          "raw_MAC_to_reference": 0.9999999999989249,
+          "right_absolute_pencil_residual": 4.2330663328941826e-13,
+          "left_absolute_pencil_residual": 3.4571577662878476e-13,
+          "pH_M_q": {
+            "real": -0.002546603166709214,
+            "imag": 0.000984935930969241
+          },
+          "temporal_condition_indicator": 366.24173426126714,
+          "seconds": 0.03541111946105957,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453114242912724,
+              "imag": -1.230511586467101
+            }
+          ]
+        },
+        {
+          "alpha": {
+            "real": -22.055166411716655,
+            "imag": 0.06110268031775814
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.90278924621617,
+            "imag": -1.0254781635811897e-05
+          },
+          "omega_alpha": {
+            "real": -1.226809723853271e-07,
+            "imag": -2.3049627324781644e-07
+          },
+          "raw_MAC_to_reference": 0.9999999999989273,
+          "right_absolute_pencil_residual": 4.081926124709828e-13,
+          "left_absolute_pencil_residual": 3.5917170266906e-13,
+          "pH_M_q": {
+            "real": -1.9784576628622576e-05,
+            "imag": -0.0027303614730326267
+          },
+          "temporal_condition_indicator": 366.24225680402884,
+          "seconds": 0.033194780349731445,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453113285339581,
+              "imag": -1.230516401310041
+            }
+          ]
+        },
+        {
+          "alpha": {
+            "real": -22.055166411716655,
+            "imag": 0.061302680317758144
+          },
+          "beta": 12.137900983290656,
+          "omega": {
+            "real": 8.902789246215987,
+            "imag": -1.0254780785240461e-05
+          },
+          "omega_alpha": {
+            "real": 1.2216200912967432e-07,
+            "imag": 2.3074645354849168e-07
+          },
+          "raw_MAC_to_reference": 0.9999999999989255,
+          "right_absolute_pencil_residual": 4.4830399940266287e-13,
+          "left_absolute_pencil_residual": 3.7517087899335063e-13,
+          "pH_M_q": {
+            "real": -0.00133904267452813,
+            "imag": -0.002379544383061849
+          },
+          "temporal_condition_indicator": 366.24221867602586,
+          "seconds": 0.05800223350524902,
+          "shift": {
+            "real": 8.903789246227367,
+            "imag": -1.0254787604742278e-05
+          },
+          "other_temporal_values": [
+            {
+              "real": 8.453109428057006,
+              "imag": -1.2305106289112322
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "saddle_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/work/complex_alpha_saddle_20261024/native10_saddle_q.npy",
+  "saddle_vector_sha256": "6da9303d7ed20aafd9c4cf47a0875f2e6124f59850416f98d2e7e89ad4bbae7a",
+  "local_second_derivative_verification_passed": true,
+  "completed": "2026-10-24T11:53:44.805889+08:00",
+  "original_files_unchanged": true
+}

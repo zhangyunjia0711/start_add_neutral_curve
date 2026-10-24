@@ -8,7 +8,20 @@ OUTPUTS=["neutral_variable_beta_stage.png","neutral_variable_beta_stage.svg",
     "neutral_variable_beta_candidates.csv","neutral_variable_beta_candidates_highest_known_upper.csv",
     "neutral_variable_beta_candidates_coverage_841.csv","neutral_variable_beta_candidates_coverage_139.csv",
     "neutral_conjugate_derived.csv","zero_frequency_witness_merged.csv",
+    "neutral_variable_beta_additional_bands.csv","neutral_variable_beta_two_family_comparison.csv",
     "case_stage_status.json","本工况可变β计算说明.md",
+    "矩阵换元验证与鼻尖驻点分类.md","owned_legacy_attempt_cleanup_20261024.json",
+    "additional_boundaries_field_audit_20261024.json",
+    "tail841_all_boundaries_20261024.json","tail841_finite_ridge_audit_20261024.json",
+    "tail841_finite_peak_paths_20261024.csv","tail841_finite_peak_paths_20261024.png",
+    "spatial_root_causality_saddle_review_20261024.md","spatial_root_causality_saddle_review_20261024.json",
+    "complex_alpha_saddle_native10_20261024.json","complex_alpha_saddle_native11_20261024.json",
+    "complex_alpha_saddle_native10_neighbors_20261024.json",
+    "工作日志_2026-10-24_鼻部谱支核验与完整边界收尾.md",
+    "工作日志_2026-10-24_native10切片归约与复频率接口.md",
+    "工作日志_2026-10-24_空间根方向与复alpha鞍点核验.md",
+    "工作日志_2026-10-24_尾端双峰低频连通性核验.md",
+    "工作日志_2026-10-24_尾端中频孔洞检查.md",
     "original_checkout_integration.json","installed_v10_smoke.json",
     "flat_neutral_normal_validation_20261023.json","local_mode_audit_M3near_neutral_normal_validation.json",
     "local_mode_audit_normal_validation.json","outer_grid_audit_20261023.json",
@@ -20,6 +33,18 @@ EXTRA=["outputs/upper_boundary_139_v10_20261023/boundary_audit_report.json",
     "outputs/upper_boundary_139_v10_20261023/compensation_20261023_2148/boundary_audit_after_compensation.json",
     "outputs/pep_matrix_temporal_probe_20261023.json",
     "outputs/narrow_ridge_second_pair_recovery_20261023.json"]
+for folder,names in {
+    "native10_beta_cuts_v10_20261023_2233":["native10_cut_report.json","native10_cut_samples.csv",
+        "native10_cut_summary.csv","native10_cut_witnesses.csv","native10_beta_cuts.png",
+        "reduction_manifest.json","final_source_integrity.json","README.md"],
+    "complex_omega_interface_v10_20261024":["complex_omega_probe.json","complex_omega_points.csv",
+        "manifest.json","final_source_integrity.json","README.md"],
+    "dense_tail841_lower_20261024":["progress.json"],
+    "dense_tail841_low_upper_20261024":["progress.json"],
+    "tail841_gap_midfrequency_v10_20261024":["gap_audit_report.json","gap_source_summary.csv",
+        "gap_samples.csv","gap_positive_witnesses.csv","gap_beta_cuts.png","README.md","manifest.json"],
+}.items():
+    EXTRA.extend('outputs/'+folder+'/'+name for name in names)
 def main():
     snapshot()
     assert SOURCE.resolve() in TARGET.resolve().parents
@@ -27,9 +52,12 @@ def main():
     selected=[ROOT/"outputs"/n for n in OUTPUTS]+[ROOT/p for p in EXTRA]
     selected+=list((ROOT/"work").glob("*.py"))
     for folder in ["local_mode_normal_validation_20261022","flat_neutral_normal_validation_20261023",
-        "pep_matrix_temporal_probe_20261023"]:
+        "pep_matrix_temporal_probe_20261023","complex_alpha_saddle_20261024",
+        "tail841_boundary_native_20261024"]:
         selected+=list((ROOT/"work"/folder).glob("*.py"))
-    for folder in ["upper_boundary_139_v10_20261023","upper_boundary_139_v10_20261023/compensation_20261023_2148"]:
+    for folder in ["upper_boundary_139_v10_20261023","upper_boundary_139_v10_20261023/compensation_20261023_2148",
+        "native10_beta_cuts_v10_20261023_2233","complex_omega_interface_v10_20261024",
+        "tail841_gap_midfrequency_v10_20261024"]:
         selected+=list((ROOT/"outputs"/folder).glob("*.py"))
     copied=[]
     for source in sorted(set(selected)):
