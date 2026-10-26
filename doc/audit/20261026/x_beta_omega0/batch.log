@@ -1,0 +1,68 @@
+Tecplot 2024.1.0.52134 Batch Log
+ACTION: PageControl: CREATE
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: ReadDataSet: "M3_omega0_xbeta_comparison.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: M3_omega0_xbeta_comparison.lay
+ACTION: WriteDataSet: M3_omega0_xbeta_comparison_roundtrip.dat
+ACTION: ReadDataSet: "bluntplate_M3_omega0_xbeta.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: bluntplate_M3_omega0_xbeta.lay
+ACTION: WriteDataSet: bluntplate_M3_omega0_xbeta_roundtrip.dat
+ACTION: ReadDataSet: "rough_M3_omega0_xbeta.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: rough_M3_omega0_xbeta.lay
+ACTION: WriteDataSet: rough_M3_omega0_xbeta_roundtrip.dat
+ACTION: Quit
+ACTION: PageControl: CREATE

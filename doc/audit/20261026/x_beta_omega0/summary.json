@@ -1,0 +1,38 @@
+[
+  {
+    "case": "bluntplate",
+    "station_count": 810,
+    "native_points": 1620,
+    "profile_tips": 1,
+    "x_min_mm": -34.320169779708735,
+    "beta_at_xmin": -2.2339789058256527,
+    "x_max_mm": 1100.0000000000084,
+    "tail_abs_beta_band": [
+      0.13193328627824238,
+      2.2552732893679095
+    ],
+    "maximum_abs_beta": 14.654059200437773,
+    "x_at_maximum_abs_beta_mm": -18.287449765058206,
+    "maximum_growth_error": 9.991491484897668e-12,
+    "maximum_right_residual": 2.597860993070587e-13,
+    "status": "open_at_domain_boundaries"
+  },
+  {
+    "case": "rough",
+    "station_count": 354,
+    "native_points": 708,
+    "profile_tips": 1,
+    "x_min_mm": -34.30194109244239,
+    "beta_at_xmin": -2.342565323538495,
+    "x_max_mm": 1100.0,
+    "tail_abs_beta_band": [
+      0.15306074433645836,
+      2.3287868993409084
+    ],
+    "maximum_abs_beta": 14.686625419717089,
+    "x_at_maximum_abs_beta_mm": -20.571322552001888,
+    "maximum_growth_error": 9.902371094397961e-12,
+    "maximum_right_residual": 8.343030389897825e-13,
+    "status": "open_at_domain_boundaries"
+  }
+]

@@ -1,0 +1,152 @@
+#!MC 1410
+$!VarSet |LFBD| = 'E:\work\calc\Instability of attachment line\Han2019_SweptBluntPlate\75°\outputs\M3_omega0_xbeta_20261026'
+$!VarSet |LFDSFN1| = '"|LFBD|\M3_omega0_xbeta_comparison.plt"'
+$!SetStyleBase Factory
+$!GlobalPaper
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    }
+$!Page
+  Name = ''
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  VarPositionList =  [1-13]
+$!RemoveVar |LFDSFN1|
+$!FrameLayout
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 9
+  Height = 8
+$!ThreeDAxis
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime
+  SolutionTime = 0
+$!DeleteLineMaps
+$!ActiveLineMaps  =  [1-2]
+$!GlobalLinePlot
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    XYPos
+      {
+      X = 95
+      }
+    }
+$!LineMap  [1]
+  Name = 'bluntplate'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Blue
+    }
+  Symbols
+    {
+    Show = No
+    Color = Red
+    FillColor = Red
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = 'rough'
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Red
+    }
+  Symbols
+    {
+    Show = No
+    Color = Green
+    FillColor = Green
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!XYLineAxis
+  DepXToYRatio = 1
+$!XYLineAxis
+  XDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -34.320169779708734836
+    RangeMax = 1100.1134320169862804
+    GRSpacing = 200
+    }
+$!XYLineAxis
+  YDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -14.686625419717088903
+    RangeMax = -0.13047781706489849918
+    GRSpacing = 2
+    }
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!RemoveVar |LFBD|
+$!SetStyleBase Config

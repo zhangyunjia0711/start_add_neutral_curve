@@ -1,0 +1,47 @@
+{
+  "created": "2026-10-26T11:38:33.273696+08:00",
+  "tools": "Preplot and Tecplot 360 EX 2024 R1",
+  "batch_log_sha256": "5d1cc885cae9e4fdea16db3695f4adde7db91312012f20888bbb7029a43652ba",
+  "macro_log_error_free": true,
+  "files": [
+    {
+      "file": "M3_omega0_xbeta_comparison.plt",
+      "binary_magic": "#!TDV112",
+      "sha256": "ef52ecb3cfad8f6bd19fa25cb1cffb91f39a2883322a4c60dfbc5424740308c8",
+      "source_sha256": "6f891c2639218f1162124dd191908001d69f647187326a6ac98f36ec89b84300",
+      "roundtrip_sha256": "553d8ce09c786e0a3e6786466f8783318a7b207e35c1264c4a1bb712d3ccbd1d",
+      "zones": 4,
+      "points": 4660,
+      "double_values": 60580,
+      "all_values_exact": true,
+      "all_omega_zero": true,
+      "all_boundaries_open": true
+    },
+    {
+      "file": "bluntplate_M3_omega0_xbeta.plt",
+      "binary_magic": "#!TDV112",
+      "sha256": "c0ad7aca5a93d5a5c8a71b1d161470e97cfbcdadeabcaab360acfdbc31ac0d57",
+      "source_sha256": "d1bbe2a2916abb11f4372f6d917c58272061cea2d825e6fc3a65b3cb3d10b700",
+      "roundtrip_sha256": "1bc99e63522dd94515e5128ef3f8bcac4bec92e55e9831be68d1c8a7b71b8673",
+      "zones": 2,
+      "points": 3242,
+      "double_values": 42146,
+      "all_values_exact": true,
+      "all_omega_zero": true,
+      "all_boundaries_open": true
+    },
+    {
+      "file": "rough_M3_omega0_xbeta.plt",
+      "binary_magic": "#!TDV112",
+      "sha256": "77a2a7e1251185f924e7e80a477d078617b24b6cc807fa7df4609718705e79a0",
+      "source_sha256": "64f876940c076e7ea3e7b558c579a2aeb77fc0c824425dd3a0f9d11b355ba15a",
+      "roundtrip_sha256": "7d9ed84f5bd7273921fa1a89b7324ef1ec2a6e6365175ee72c300454801a3df0",
+      "zones": 2,
+      "points": 1418,
+      "double_values": 18434,
+      "all_values_exact": true,
+      "all_omega_zero": true,
+      "all_boundaries_open": true
+    }
+  ]
+}

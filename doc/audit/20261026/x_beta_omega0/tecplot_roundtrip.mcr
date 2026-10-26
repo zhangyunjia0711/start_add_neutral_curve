@@ -1,0 +1,26 @@
+#!MC 1410
+$!INCLUDEMACRO "M3_omega0_xbeta_comparison.mcr"
+$!WRITEDATASET "M3_omega0_xbeta_comparison_roundtrip.dat"
+  BINARY = NO
+  USEPOINTFORMAT = YES
+  PRECISION = 17
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  INCLUDECUSTOMLABELS = NO
+$!INCLUDEMACRO "bluntplate_M3_omega0_xbeta.mcr"
+$!WRITEDATASET "bluntplate_M3_omega0_xbeta_roundtrip.dat"
+  BINARY = NO
+  USEPOINTFORMAT = YES
+  PRECISION = 17
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  INCLUDECUSTOMLABELS = NO
+$!INCLUDEMACRO "rough_M3_omega0_xbeta.mcr"
+$!WRITEDATASET "rough_M3_omega0_xbeta_roundtrip.dat"
+  BINARY = NO
+  USEPOINTFORMAT = YES
+  PRECISION = 17
+  INCLUDETEXT = NO
+  INCLUDEGEOM = NO
+  INCLUDECUSTOMLABELS = NO
+$!QUIT
