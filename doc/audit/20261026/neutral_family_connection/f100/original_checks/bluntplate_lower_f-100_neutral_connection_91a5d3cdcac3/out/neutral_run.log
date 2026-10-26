@@ -1,0 +1,14 @@
+ task=          33  mode=           2  axes=iloc / beta
+ bounds=   119.00000000000000        119.00000000000000       -22.912841494446418       -22.912839494446416     
+ growth_tol=   1.0000000000000000E-008  eigen_error_tol=   9.9999999999999995E-008  max_eigen_jump=   4.0000000000000000     
+ adaptive_steps= T  minimum_step=   9.9999999999999995E-008
+ vector_tracking= T  minimum_euclidean_overlap=  0.94999999999999996     
+ sample_only= T
+ reverse_outer= F  reverse_inner= F  anchor_row_seed= T
+ retry_eigenpairs=           8
+ station_predictor= F
+ vector_overlap=  0.99999999999999800       accepted= T
+ vector_overlap=  0.99999999999999556       accepted= T
+ vector_overlap=  0.99999999999999445       accepted= T
+ row=           1  outer=   119.00000000000000       roots=           0  status=no bracketed root       
+ evaluations=           3  solves=           3  rejected=           0  result=no bracketed root       
