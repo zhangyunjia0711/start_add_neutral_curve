@@ -1,0 +1,19 @@
+# 复现说明
+
+实际计算目录：`/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xbeta_four_omega_20261026`。大体积输入副本、原生矩阵、原始向量和所有引导日志保留在该目录，原文件SHA见input_manifest.json。
+
+本目录Python脚本是实际工作脚本的快照。common.py把ROOT设为脚本父目录的父目录，因此直接复核应在上述计算目录执行，而不是在交付目录reproduction内执行。
+
+环境与版本见execution_provenance.json。每个数值进程设OPENBLAS_NUM_THREADS=OMP_NUM_THREADS=MKL_NUM_THREADS=1；原程序运行环境由run_adapter.py设置，使用/usr/local/mpich-4.1.2/lib。
+
+现有计算复核：`python3 work/audit_physical.py`。它检查所有受保护文件、站位完整性/重复根、负频率原程序抽验及导数/边界变号。`python3 work/publish_physical.py`重生成图件和点表。
+
+完整重算应使用新ROOT，并同步修改bootstrap.py中的ROOT；禁止删除既有数据。bootstrap.py从前一ω0任务复制并核验输入。把这里除bootstrap.py外的脚本复制到新ROOT/work，覆盖bootstrap复制的common/run_adapter/core，并复制frequency_conversion.json到新ROOT/outputs。PREVIOUS应指向保留的neutral_xbeta_omega0_20261026，以读取已独立检验的原生β系数。publish_physical.py、tecplot_physical.py、report_physical.py、archive_physical.py的DEST需设为新交付目录。
+
+顺序：prepare.py准备所有ω系数；physical_pilot.py从ω0种子作物理目标频率延拓；physical_survey.py取得每个种子站的β中性根对；run_contours.py以contour3d.py计算8条正频率分量；run_finalize.py在原生站位与实际插值剖面复算；audit_physical.py作独立检查；publish_physical.py出图；tecplot_physical.py生成宏。physical_pilot.py需要目标frequency_conversion.json，原始ω0种子和系数保留在PREVIOUS。
+
+contour.py为contour3d.py提供Family及seed_root；其旧二维main未被用于最终图。run_contours.py只复用已通过closed_verified的结果，完整重算要新建输出目录。
+
+Windows在新结果目录运行native_tecplot.ps1，调用Preplot和隐藏的Tecplot批处理完成转换及回读。随后运行tecplot_physical.py --verify、report_physical.py。若回读中间.dat已被清理，先重跑tecplot_roundtrip.mcr生成。宏使用相对ASCII文件名；修改路径后保存的.lay应重新生成。
+
+数值断言失败时须保留日志并诊断，不能强制闭合或把失收敛当成稳定。本轮未枚举全谱，也未新增CFD网格收敛验证。

@@ -1,0 +1,35 @@
+{
+  "source_case": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough",
+  "reference": {
+    "length": 1.0,
+    "density": 0.01841081706911027,
+    "velocity": 1810.6307411853716,
+    "pressure": 60357.72223187553,
+    "temperature": 226.5,
+    "viscosity": 1.4751587574666155e-05
+  },
+  "Lref_m": 0.035,
+  "primitive_scales": [
+    0.01841081706911027,
+    1810.6307411853716,
+    1810.6307411853716,
+    1810.6307411853716,
+    226.5,
+    60357.72223187553
+  ],
+  "nominal_Ma": 6.0,
+  "nominal_Re": 79100.0,
+  "dimensional_reference_Re": 79091.94122619065,
+  "nominal_Re_note": "Use the same nominal Ma=6/Re=79100/Te=226.5 solver configuration as the previous case; dimensional FPP auto-reference gives Re=79091.941226, a 0.0102 percent rounding/model difference.",
+  "shape": [
+    361,
+    400
+  ],
+  "start_station": 24,
+  "start_x_mm": -25.027010705080073,
+  "input_grid_sha256": "555671ece2d9bad3efa9d2307cf2d2ba68d15293fe96c051b06aba78addae6e4",
+  "input_flow_sha256": "7fa4a503f74203da68e47311af3cf34a4bc01fc6854fb91c61f78fdabf63f224",
+  "H5_roundtrip_exact": true,
+  "model": "wall-local; local parallel; zero explicit curvature",
+  "old_seed_source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/outputs/native_points/i119_p0.json"
+}

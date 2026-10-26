@@ -1,0 +1,183 @@
+COMMAND ["/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10", "-f", "config.ini", "-pep_tol", "1e-13", "-pep_max_it", "1000", "-pep_nev", "1", "-pep_ncv", "8", "-st_pc_factor_mat_solver_type", "superlu", "-pep_view_vectors", "binary:out/all_vectors.petsc:default:append"]
+Load done! 
+Compute metrics! 
+Compute flow grads done! 
+ No freestream Prandtl number is input,
+ The Pr is set to 0.72.
+ LST_LOCAL is used.
+ LST_SPATIAL_MODE is used.
+ LST is solved.
+ bc wall is used at y0.
+ bc farfield is used at yn.
+[general]
+  title = SweptBluntPlate
+  screen = F
+
+[filenames]
+  dir = /home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xbeta_four_omega_20261026/inputs/rough_f100kHz_B_pair030_f09dd90ad759/in/
+  grid = grid_vertical2d_N.h5
+  flow = flow_vertical2d_N.h5
+  output prefix = /out/
+
+[freestream]
+  ma = 6.00000
+  re = 79100
+  te = 226.5
+
+[domain]
+  in = 9
+  jn = 400
+  istart = 1
+  iend = 9
+  iloc = 5
+
+[lst]
+  alpha = -27.2857802170595, 1.02280500628414e-12
+  omega = 12.1455734042887, 0
+  beta = 21.0098967594246, 0
+  adjoint = F
+  method = LST_local
+  mode = LST_SPATIAL_MODE
+  profile_coordinates = wall_local
+
+[lpse]
+  adjoint = F
+  solve_alpha = both
+  sigma_p = 1.00d0
+
+[npse]
+  omega0 = 1.0d0
+  beta0 = 1.0d0
+  m_global = 4
+  n_global = 4
+  ndis = 3
+  dis_+1 = 1, 0
+  dis_+1_alpha = 2.0, 0.004
+  dis_+2 = 1, 1
+  dis_+2_alpha = 2.0, 0.001
+  dis_+3 = 1, -1
+  dis_+3_alpha = 2.0, 0.001
+
+[bc]
+  y_0 = BC_WALL
+  y_inf = BC_FARFIELD
+
+[3dsog]
+  i_x0 = 1
+  i_x1 = 911
+  initial_alpha = 0.0
+  initial_beta = 0.15
+
+[neutral]
+  enabled = T
+  track_initial_target = T
+  task = 33
+  outer_parameter = iloc
+  inner_parameter = beta
+  outer_min = 5
+  outer_max = 5
+  outer_points = 1
+  inner_min = 21.009895759424616
+  inner_max = 21.009897759424618
+  scan_points = 3
+  growth_tol = 1e-08
+  parameter_tol = 1e-07
+  max_iterations = 70
+  eigen_error_tol = 1e-07
+  max_eigen_jump = 4
+  continuation_step = 0.05
+  output_prefix = out/neutral
+  adaptive_steps = T
+  minimum_step = 1e-07
+  vector_tracking = T
+  minimum_overlap = 0.95
+  sample_only = T
+  reverse_outer = F
+  reverse_inner = F
+  anchor_row_seed = T
+  retry_eigenpairs = 8
+  station_predictor = F
+
+ reading curvature file!
+ reading curvature file done!
+==========Compute LST local!========== 
+===  k=-1: end LST. 
+===  k= 0: output eigen function. 
+===  k= 1: Modify local Re. 
+===  k= 2: Modify alpha_r. 
+===  k= 3: Modify beta_r. 
+===  k= 4: Modify omega_r. 
+===  k= 5: Modify alpha_i. 
+===  k= 6: Modify beta_i. 
+===  k= 7: Modify omega_i. 
+===  k= 8: Modify iloc. 
+===  k=31: neutral curves across stations (safeguarded secant). 
+===  k=32: neutral curves across stations (bisection). 
+===  k=33: growth contours and neutral curves. 
+===  k=36: arclength neutral curve at a station. 
+===  k=37: neutral branches in a parameter plane. 
+===  neutral settings: [neutral] in the input config file. 
+===  delta_k=ki*pk.(eg. k, ki, pk=4, 20, 0.001 means delta_omega_r=20*0.001) 
+====================================== 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+  iloc=   5  x=         -0.55717  drx=          0.00000  drz=          0.00000
+  Re=      79100.00000  Ma=          6.00000  Te=        226.50000
+  omega=         12.14557+          0.00000i
+  alpha=        -27.28578+          0.00000i
+  beta =         21.00990+          0.00000i
+ wall bc is used.
+ ncov=           1
+           0        (-27.285790217059247,8.47516020801659882E-013) The error is   5.0017262486328576E-013
+ pep_get_eigenvalue...
+alpha------------> -27.2857902   0.0000000
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix done! 
+Set spatial LST EVP matrix BC done! 
+Set spatial LST EVP matrix BC done! 
+LST_LOCAL is done. 
+[WARNING] yaksa: 4 leaked handle pool objects
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+STOP 1
+ wall bc is used.
+ ncov=           1
+           0        (-27.285785820912981,1.11800082742564833E-012) The error is   7.9934532617337362E-014
+ pep_get_eigenvalue...
+alpha------------> -27.2857858   0.0000000
+ MAC selection nconv=           1  eligible=           1  required=  0.94999999999999996     
+ MAC best index=           0  eigen=        (-27.285785820912981,1.11800082742564833E-012)  overlap=  0.99999999999999911       residual=   7.9934532617337362E-014  jump=   4.3961462665720404E-006
+ MAC second candidate: none within residual/jump/norm gates.
+ MAC accepted= T
+ wall bc is used.
+ ncov=           1
+           0        (-27.285790217059368,1.10252660065036531E-012) The error is   1.5747356069886041E-013
+ pep_get_eigenvalue...
+alpha------------> -27.2857902   0.0000000
+ MAC selection nconv=           1  eligible=           1  required=  0.94999999999999996     
+ MAC best index=           0  eigen=        (-27.285790217059368,1.10252660065036531E-012)  overlap=   1.0000000000000000       residual=   1.5747356069886041E-013  jump=   4.3961463873642970E-006
+ MAC second candidate: none within residual/jump/norm gates.
+ MAC accepted= T
+ wall bc is used.
+ ncov=           1
+           0        (-27.285794613205880,1.20378454755563499E-012) The error is   1.7203147155965836E-013
+ pep_get_eigenvalue...
+alpha------------> -27.2857946   0.0000000
+ MAC selection nconv=           1  eligible=           1  required=  0.94999999999999996     
+ MAC best index=           0  eigen=        (-27.285794613205880,1.20378454755563499E-012)  overlap=  0.99999999999999578       residual=   1.7203147155965836E-013  jump=   4.3961465117092766E-006
+ MAC second candidate: none within residual/jump/norm gates.
+ MAC accepted= T
+ wall bc is used.
+ ncov=           1
+           0        (-27.285790217059187,1.12185595871525482E-012) The error is   1.1964922880401253E-013
+ pep_get_eigenvalue...
+alpha------------> -27.2857902   0.0000000
+ Neutral task=          33  result=no bracketed root prefix=out/neutral

@@ -1,0 +1,71 @@
+{
+  "reason": "Owned obsolete adapters, diagnostic and superseded 2D controller; Tecplot ASCII read-back retained by hash and reproducible macro",
+  "kept": "Final scripts, required contour support, actual inputs, raw matrices/vectors and attempt logs",
+  "time": "2026-10-26T17:02:26.0466557+08:00",
+  "removed": [
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\work\\M3_xbeta_four_omega_20261026\\adapt_contour.py",
+      "sha256": "a67f3f298d87da1d9ece170cdb7d8b1e4cf3709a67c28336ce3f154fec4f945a"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\work\\M3_xbeta_four_omega_20261026\\adapt_finalize.py",
+      "sha256": "a5419a5003cbbaa5860fd29fa017bd0ae33ee176327ef93048aff2df480d3174"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\work\\M3_xbeta_four_omega_20261026\\make_spatial_controller.py",
+      "sha256": "b02dfc2578fdcaccba82e0a83092b6a85d8d59e0431076544b886432ec87353d"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\work\\M3_xbeta_four_omega_20261026\\diagnose_native.py",
+      "sha256": "abba8eea265c2c1a03d31b20f76eedc4fbf50d60c87b3549f3fc31b0d1af5d51"
+    },
+    {
+      "path": "\\\\wsl.localhost\\Ubuntu\\home\\zaza\\attachment_line\\Han2019_SweptBluntPlate\\75°\\neutral_xbeta_four_omega_20261026\\work\\adapt_contour.py",
+      "sha256": "a67f3f298d87da1d9ece170cdb7d8b1e4cf3709a67c28336ce3f154fec4f945a"
+    },
+    {
+      "path": "\\\\wsl.localhost\\Ubuntu\\home\\zaza\\attachment_line\\Han2019_SweptBluntPlate\\75°\\neutral_xbeta_four_omega_20261026\\work\\adapt_finalize.py",
+      "sha256": "a5419a5003cbbaa5860fd29fa017bd0ae33ee176327ef93048aff2df480d3174"
+    },
+    {
+      "path": "\\\\wsl.localhost\\Ubuntu\\home\\zaza\\attachment_line\\Han2019_SweptBluntPlate\\75°\\neutral_xbeta_four_omega_20261026\\work\\make_spatial_controller.py",
+      "sha256": "b02dfc2578fdcaccba82e0a83092b6a85d8d59e0431076544b886432ec87353d"
+    },
+    {
+      "path": "\\\\wsl.localhost\\Ubuntu\\home\\zaza\\attachment_line\\Han2019_SweptBluntPlate\\75°\\neutral_xbeta_four_omega_20261026\\work\\diagnose_native.py",
+      "sha256": "abba8eea265c2c1a03d31b20f76eedc4fbf50d60c87b3549f3fc31b0d1af5d51"
+    },
+    {
+      "path": "\\\\wsl.localhost\\Ubuntu\\home\\zaza\\attachment_line\\Han2019_SweptBluntPlate\\75°\\neutral_xbeta_four_omega_20261026\\work\\spatial_contour.py",
+      "sha256": "0aa6cdacb20676ca1f705d4b65ba105f20ff94ceb91aededa4a5a686c5cce9ac"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_xbeta_four_omega_20261026\\M3_xbeta_f-100kHz_comparison_roundtrip.dat",
+      "sha256": "48a3ba68e0faad17ddefb480cedcbf8aab1e9c0cc6a4cd27580a501820d92842"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_xbeta_four_omega_20261026\\M3_xbeta_f-50kHz_comparison_roundtrip.dat",
+      "sha256": "351218247f59d55303b1487b4db452552da909953de44ce5f1329ac0c0058243"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_xbeta_four_omega_20261026\\M3_xbeta_f+50kHz_comparison_roundtrip.dat",
+      "sha256": "bfa383fd6209710d02ddf6e519693468a4a0a6deee412c4821776d23eb0c4d24"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_xbeta_four_omega_20261026\\M3_xbeta_f+100kHz_comparison_roundtrip.dat",
+      "sha256": "ee859c6923ba614b080ed553d46b03c852349444f370c6c048044019aad95952"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_xbeta_four_omega_20261026\\M3_xbeta_four_frequencies_roundtrip.dat",
+      "sha256": "2563a1057df6a3c77a15a67eb53d547ee6df3f636eaee5501b8eefd603348fcb"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_xbeta_four_omega_20261026\\bluntplate_M3_xbeta_four_frequencies_roundtrip.dat",
+      "sha256": "31dc2ef82064f002736f2eade12344de767a4ee57faee5f6993ab6bee994f9cd"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_xbeta_four_omega_20261026\\rough_M3_xbeta_four_frequencies_roundtrip.dat",
+      "sha256": "a04fa500fedc058b1aa7a66ba63880ad60631e28a5c27c5c2360b181d8a430df"
+    }
+  ]
+}

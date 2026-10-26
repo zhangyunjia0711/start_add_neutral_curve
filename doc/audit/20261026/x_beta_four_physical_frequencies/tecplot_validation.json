@@ -1,0 +1,99 @@
+{
+  "created": "2026-10-26T16:54:35.177022+08:00",
+  "tools": "Preplot and Tecplot 360 EX 2024 R1",
+  "batch_log_sha256": "b0bcb51ea695f8b0afb3f96b108f9e0cad4b864c290a7eef9f80bd1386d7c3ef",
+  "macro_log_error_free": true,
+  "files": [
+    {
+      "file": "M3_xbeta_f-100kHz_comparison.plt",
+      "binary_magic": "#!TDV112",
+      "sha256": "05d5dd5c7b3fdf2fad5978138bb438fa270a3d2f1fa2c038afa391b8125a2350",
+      "source_sha256": "12dd2e1aa0544b46e9f77b22471f7860baa776d01ad983671a27a8168120bf7a",
+      "roundtrip_sha256": "48a3ba68e0faad17ddefb480cedcbf8aab1e9c0cc6a4cd27580a501820d92842",
+      "zones": 4,
+      "points": 1052,
+      "double_values": 15780,
+      "all_values_exact": true,
+      "frequencies_verified": true,
+      "all_boundaries_closed": true
+    },
+    {
+      "file": "M3_xbeta_f-50kHz_comparison.plt",
+      "binary_magic": "#!TDV112",
+      "sha256": "f0ddbf4467d0cf9df02096c5ab1fb56efd0356a9e23dd028f5f711ba8933757b",
+      "source_sha256": "1fdabb66e346812f9c910a77abc14d7e13a1b0a95dbf58034dc58004ec72643d",
+      "roundtrip_sha256": "351218247f59d55303b1487b4db452552da909953de44ce5f1329ac0c0058243",
+      "zones": 4,
+      "points": 2930,
+      "double_values": 43950,
+      "all_values_exact": true,
+      "frequencies_verified": true,
+      "all_boundaries_closed": true
+    },
+    {
+      "file": "M3_xbeta_f+50kHz_comparison.plt",
+      "binary_magic": "#!TDV112",
+      "sha256": "c4d589ab4bc2bd5f96281ca8119783ede78bee6f2cadb202315a25c13176b4dd",
+      "source_sha256": "2ec7692e9ba43de96d9742d8ab8ee5a8c6dcf4a483f33b3e16237961707a02b6",
+      "roundtrip_sha256": "bfa383fd6209710d02ddf6e519693468a4a0a6deee412c4821776d23eb0c4d24",
+      "zones": 4,
+      "points": 2930,
+      "double_values": 43950,
+      "all_values_exact": true,
+      "frequencies_verified": true,
+      "all_boundaries_closed": true
+    },
+    {
+      "file": "M3_xbeta_f+100kHz_comparison.plt",
+      "binary_magic": "#!TDV112",
+      "sha256": "ceac02693d0673fd866a9827f119a811b8d98785aa26013197f7ae0c82897e74",
+      "source_sha256": "ae2620db4749f9818b188872476aa8032afaac31323fe9ea912124d9a64c75b6",
+      "roundtrip_sha256": "ee859c6923ba614b080ed553d46b03c852349444f370c6c048044019aad95952",
+      "zones": 4,
+      "points": 1052,
+      "double_values": 15780,
+      "all_values_exact": true,
+      "frequencies_verified": true,
+      "all_boundaries_closed": true
+    },
+    {
+      "file": "M3_xbeta_four_frequencies.plt",
+      "binary_magic": "#!TDV112",
+      "sha256": "42e3c20d9ce44cd18299c7b35e8133a2fa63c7d0fbf1479505575a2749b02f07",
+      "source_sha256": "1a13cb60d69feb2d6f61c4c75244601bf86a584881105c6c2b303681ee3b5f73",
+      "roundtrip_sha256": "2563a1057df6a3c77a15a67eb53d547ee6df3f636eaee5501b8eefd603348fcb",
+      "zones": 16,
+      "points": 7964,
+      "double_values": 119460,
+      "all_values_exact": true,
+      "frequencies_verified": true,
+      "all_boundaries_closed": true
+    },
+    {
+      "file": "bluntplate_M3_xbeta_four_frequencies.plt",
+      "binary_magic": "#!TDV112",
+      "sha256": "f1603fb88fa4a7562121183538d841727defda4de949de3fce44ad3f0a1b7e54",
+      "source_sha256": "a3ae909fe330a8f37e85530a83a1e104e1a7e242e25a1ad00a87d0a21187a54d",
+      "roundtrip_sha256": "31dc2ef82064f002736f2eade12344de767a4ee57faee5f6993ab6bee994f9cd",
+      "zones": 8,
+      "points": 5884,
+      "double_values": 88260,
+      "all_values_exact": true,
+      "frequencies_verified": true,
+      "all_boundaries_closed": true
+    },
+    {
+      "file": "rough_M3_xbeta_four_frequencies.plt",
+      "binary_magic": "#!TDV112",
+      "sha256": "7a49fba239d81651d1096830ad890a2875d6a5d9984867a3244bc4f2e6b735e3",
+      "source_sha256": "d6428aba3b1789f6e28dc07c85919d5d64457b4f87d6cd467033805b6a181f95",
+      "roundtrip_sha256": "a04fa500fedc058b1aa7a66ba63880ad60631e28a5c27c5c2360b181d8a430df",
+      "zones": 8,
+      "points": 2080,
+      "double_values": 31200,
+      "all_values_exact": true,
+      "frequencies_verified": true,
+      "all_boundaries_closed": true
+    }
+  ]
+}

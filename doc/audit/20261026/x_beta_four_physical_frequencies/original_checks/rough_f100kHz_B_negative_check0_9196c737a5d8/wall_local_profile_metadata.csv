@@ -1,0 +1,5 @@
+# wall_local: frozen wall basis; zero explicit curvature; direct spatial local LST only.
+# x_global is unchanged in standard solver tables; s_polyline is independent metadata.
+# Tangential baseflow derivatives are unavailable and set to zero for the frozen profile.
+iloc,x_global_N,y_global_N,s_polyline_N,t_x,t_y,n_x,n_y,n_min,n_max,max_tangential_drift,max_abs_Vn,max_abs_Qn,max_abs_Qnn,min_delta_n,identity_flat,normal_derivatives_finite
+26, -6.6625127719222421E-001,  7.2304744371430996E-001,  8.2243383069345932E-001,  7.6430411165949341E-001,  6.4485597221425561E-001, -6.4485597221425561E-001,  7.6430411165949341E-001,  0.0000000000000000E+000,  7.2406038470817791E+000,  4.0713986537710412E-007,  1.6690166840324558E-001,  1.5892909870728016E+002,  1.0110385040777728E+004,  2.0654491588379200E-004,F,T

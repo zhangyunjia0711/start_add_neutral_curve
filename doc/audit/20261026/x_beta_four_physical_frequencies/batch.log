@@ -1,0 +1,132 @@
+Tecplot 2024.1.0.52134 Batch Log
+ACTION: PageControl: CREATE
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: ReadDataSet: "M3_xbeta_f-100kHz_comparison.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: M3_xbeta_f-100kHz_comparison.lay
+ACTION: WriteDataSet: M3_xbeta_f-100kHz_comparison_roundtrip.dat
+ACTION: ReadDataSet: "M3_xbeta_f-50kHz_comparison.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: M3_xbeta_f-50kHz_comparison.lay
+ACTION: WriteDataSet: M3_xbeta_f-50kHz_comparison_roundtrip.dat
+ACTION: ReadDataSet: "M3_xbeta_f+50kHz_comparison.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: M3_xbeta_f+50kHz_comparison.lay
+ACTION: WriteDataSet: M3_xbeta_f+50kHz_comparison_roundtrip.dat
+ACTION: ReadDataSet: "M3_xbeta_f+100kHz_comparison.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: M3_xbeta_f+100kHz_comparison.lay
+ACTION: WriteDataSet: M3_xbeta_f+100kHz_comparison_roundtrip.dat
+ACTION: ReadDataSet: "M3_xbeta_four_frequencies.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: M3_xbeta_four_frequencies.lay
+ACTION: WriteDataSet: M3_xbeta_four_frequencies_roundtrip.dat
+ACTION: ReadDataSet: "bluntplate_M3_xbeta_four_frequencies.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: bluntplate_M3_xbeta_four_frequencies.lay
+ACTION: WriteDataSet: bluntplate_M3_xbeta_four_frequencies_roundtrip.dat
+ACTION: ReadDataSet: "rough_M3_xbeta_four_frequencies.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: rough_M3_xbeta_four_frequencies.lay
+ACTION: WriteDataSet: rough_M3_xbeta_four_frequencies_roundtrip.dat
+ACTION: Quit
+ACTION: PageControl: CREATE
