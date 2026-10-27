@@ -1,0 +1,50 @@
+{
+  "created": "2026-10-27T16:12:57.733235+08:00",
+  "files": [
+    {
+      "path": "analyze.py",
+      "sha256": "a9ae22aae22858e83c4f0470666f698147fe507a79cb5b809549be4cda3adffc",
+      "bytes": 6300
+    },
+    {
+      "path": "archive.py",
+      "sha256": "97ebd3690e4dea9da4461e014c4be31ac6da8d752214d2e48186dcd9174f57a9",
+      "bytes": 2892
+    },
+    {
+      "path": "case_comparison_metadata.json",
+      "sha256": "1e0361d784fa2f828fd9ca54cf99cb3e6d47aaf9df0b401a61e934c85bad3c80",
+      "bytes": 1374
+    },
+    {
+      "path": "metrics_provenance.json",
+      "sha256": "87f89d715cf71c3a4e89ed445819fef091c4beb82141e91a7c9fe0a0cdd49a43",
+      "bytes": 15515
+    },
+    {
+      "path": "neutral_boundary_metrics.csv",
+      "sha256": "2948a644e9e711b604848e008280536ea31575b7d804a4507ae4424375368a0c",
+      "bytes": 3768
+    },
+    {
+      "path": "neutral_boundary_quantitative_comparison.png",
+      "sha256": "6186b4afa8980803a8b9a271163ad0b88a76ca037d4d96de488f65de529ef11b",
+      "bytes": 317117
+    },
+    {
+      "path": "neutral_boundary_quantitative_comparison.svg",
+      "sha256": "b6e2365bea964f530de0ba7e73e803adad17bd9b50a5aa8b72cee796de26f9c9",
+      "bytes": 65044
+    },
+    {
+      "path": "结果解读.md",
+      "sha256": "2b433d0a81bd471b51afb64c25ccafbe0886b4e668a01dc0b503fb8cc667d0b9",
+      "bytes": 5292
+    }
+  ],
+  "excluded": [
+    "工作日志_*.md",
+    "git_version.json",
+    "delivery_manifest.json"
+  ]
+}

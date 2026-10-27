@@ -1,0 +1,41 @@
+{
+  "cases": [
+    {
+      "case": "bluntplate",
+      "streamwise_stations": 841,
+      "normal_points": 400,
+      "flat_start_mm": 0.0,
+      "wall_y_at_global_x_minus25_mm": 24.494633497523164,
+      "freestream": {
+        "ma": "6.00000",
+        "re": "79100",
+        "te": "226.5"
+      },
+      "boundary": {
+        "y_0": "BC_WALL",
+        "y_inf": "BC_FARFIELD"
+      },
+      "config": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/cases/bluntplate/config.ini",
+      "config_sha256": "11a931cfe90991f3dfab6a7a4880bfd3c61283f92449bc940990da400c0ae249"
+    },
+    {
+      "case": "rough",
+      "streamwise_stations": 361,
+      "normal_points": 400,
+      "flat_start_mm": 14.858163,
+      "wall_y_at_global_x_minus25_mm": 23.78808890865224,
+      "freestream": {
+        "ma": "6.00000",
+        "re": "79100",
+        "te": "226.5"
+      },
+      "boundary": {
+        "y_0": "BC_WALL",
+        "y_inf": "BC_FARFIELD"
+      },
+      "config": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/cases/rough/config.ini",
+      "config_sha256": "74d4db3b8a21445933664ff236af48cfde2cbdeff1e12e288c3b26975112ba39"
+    }
+  ],
+  "interpretation": "Case names are labels; rough is not established to mean surface roughness. Wall geometries and streamwise grids differ."
+}
