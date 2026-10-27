@@ -19,7 +19,7 @@ def main():
             s=p.read_text(encoding='utf-8-sig');p.write_text('\n'.join(v.rstrip() for v in s.splitlines()).rstrip()+'\n',encoding='utf-8')
     files=[dict(path=p.name,sha256=sha(p),bytes=p.stat().st_size) for p in sorted(DEST.iterdir()) if p.is_file() and p.name not in ['delivery_manifest.json','git_version.json'] and not p.name.startswith('工作日志_')]
     (DEST/'delivery_manifest.json').write_text(json.dumps(dict(created=datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).isoformat(),files=files,excluded=['工作日志_*.md','git_version.json','delivery_manifest.json']),ensure_ascii=False,indent=2)+'\n')
-    shutil.copytree(DEST,TARGET,dirs_exist_ok=True)
+    shutil.copytree(DEST,TARGET,dirs_exist_ok=True,ignore=shutil.ignore_patterns('git_version.json'))
     for p in TARGET.rglob('*'):
         if p.is_file():p.chmod(0o644)
     assert all(sha(TARGET/r['path'])==r['sha256'] for r in files)

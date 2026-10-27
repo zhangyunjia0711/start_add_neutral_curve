@@ -47,8 +47,9 @@ def main():
     fig,axes=plt.subplots(2,2,figsize=(12,8.4));fig.subplots_adjust(left=.085,right=.98,bottom=.14,top=.86,hspace=.34,wspace=.27)
     for case,color in [('bluntplate','#2166ac'),('rough','#c44e32')]:
         xend=[r[case+'_x_extent_mm'] if r['f_kHz'] else np.nan for r in records]
-        axes[0,0].plot(FS,xend,'o-',color=color,label=case)
-        axes[1,0].plot(FS,[r[case+'_beta_width'] for r in records],'o-',color=color,label=case)
+        label='Baseline blunt plate' if case=='bluntplate' else 'Continuous-curvature nose'
+        axes[0,0].plot(FS,xend,'o-',color=color,label=label)
+        axes[1,0].plot(FS,[r[case+'_beta_width'] for r in records],'o-',color=color,label=label)
     axes[0,0].plot([0],[1100],'^',mfc='none',mec='black',ms=8);axes[0,0].annotate('f = 0: both open at 1100 mm',xy=(0,1100),xytext=(-90,1010),fontsize=9)
     axes[0,0].set(ylabel='Downstream neutral closure x (mm)',xlabel='f (kHz)',title='Where does the neutral domain end?');axes[0,0].legend(frameon=False)
     xs=[r['f_kHz'] for r in records if r['f_kHz']]
@@ -61,9 +62,9 @@ def main():
     axes[1,1].bar(FS,[r['beta_width_change_percent'] for r in records],width=14,color='#608a76')
     axes[1,1].set(ylabel='Beta width increase: rough vs bluntplate (%)',xlabel='f (kHz)',title='At global x = -25 mm; interpolation estimate')
     for ax in axes.flat:ax.set_xticks(FS);ax.grid(axis='y',alpha=.2);ax.set_axisbelow(True)
-    fig.suptitle('Quantifying the neutral boundaries of the tracked M3 family',y=.96,fontsize=14)
+    fig.suptitle('M3 neutral boundaries: baseline and continuous-curvature nose geometries',y=.96,fontsize=14)
     fig.text(.5,.90,'Boundary geometry describes where growth is possible. Growth magnitude and N factors are not contained here.',ha='center',fontsize=10)
-    fig.text(.5,.035,'Different wall geometries and x grids. Flat-section starts: 0 and 14.858163 mm. A coordinate shift is not a causal decomposition.',ha='center',fontsize=9)
+    fig.text(.5,.035,'Head geometry is the intended design change. Flat starts: 0 and 14.858163 mm. The solver uses a local tangent-plane model.',ha='center',fontsize=9)
     for ext in ['png','svg']:fig.savefig(DEST/('neutral_boundary_quantitative_comparison.'+ext),dpi=200,facecolor='white')
     plt.close(fig);shutil.copy2(__file__,DEST/'analyze.py')
     print('METRICS',[(r['f_kHz'],round(r['delta_x_close_rough_minus_bluntplate_mm'],3) if r['f_kHz'] else None,round(r['delta_x_close_from_flat_start_mm'],3) if r['f_kHz'] else None,round(r['beta_width_change_percent'],3)) for r in records],flush=True)
