@@ -1,0 +1,38 @@
+{
+  "time": "2026-10-27T20:55:37.032182+08:00",
+  "betas": [
+    -30.0,
+    -20.0,
+    -10.0,
+    -7.0,
+    0.0,
+    10.0,
+    20.0
+  ],
+  "root": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027",
+  "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027",
+  "protected_files": 94,
+  "source_scripts": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/common.py",
+      "sha256": "03c02770c8823b7754551627ea30e9eda642870ab9b92fbd9b3bd7764a79b7ab"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/core.py",
+      "sha256": "2f808d7d37afc0a4ed18e6fed18d523f0ac60dd302f7d8fb59a4f5766040ae89"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/solver.py",
+      "sha256": "d5afebabae7f6968d89ce5c0220247123a4489b413d925347d21e32151d6e71b"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/physical.py",
+      "sha256": "a416ef4740ae6147eb5c12a78692dfd86f7045489a2f53c4de45d20c1dcb2286"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/run_adapter.py",
+      "sha256": "8c2c9e6f2cc7256f030511959df9ffad4d7a3414fa6dd48160e31fbffeb35abb"
+    }
+  ],
+  "model": "Unchanged frozen wall-local, zero-explicit-curvature LST"
+}

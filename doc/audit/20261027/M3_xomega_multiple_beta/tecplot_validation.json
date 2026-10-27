@@ -1,0 +1,32 @@
+{
+  "tool": "Tecplot 360 EX 2024 R1/Preplot",
+  "files": [
+    {
+      "file": "M3_xomega_multiple_beta.plt",
+      "sha256": "c93485e097fb19731653fadff3bc0b2e901ac44f4b29368d77512a546d08c7e1",
+      "source_sha256": "5ad15e830bb4f129c04685b0a9a36552c72f51be88e5ec037d1ff969a4f9e289",
+      "roundtrip_sha256": "cc488a5d39ab04b016ef869356bccc70341c835af409acf5eff78c9a8e483387",
+      "zones": 15,
+      "points": 6131,
+      "all_values_exact": true
+    },
+    {
+      "file": "bluntplate_M3_xomega_multiple_beta.plt",
+      "sha256": "220c90bf9d8b79dd99340e33e58221e1988af230547bc455e0821ac169f335b9",
+      "source_sha256": "35625194eee22f778eeba12a13ce4fdc0e9a54bc976d9db6b25e1ab7fdef4fc2",
+      "roundtrip_sha256": "a159b70af6fcd61f179174fe7937fb22b48b2063dc8a1a12975baf5dbfccb4d2",
+      "zones": 8,
+      "points": 4524,
+      "all_values_exact": true
+    },
+    {
+      "file": "rough_M3_xomega_multiple_beta.plt",
+      "sha256": "85dd83e691928e9190f728c84a19d97865065521f3f20d29bd0dffcc46008540",
+      "source_sha256": "ac616b93e252b59b94048ec9250d71ba55b88e6be252400cc98725ced6d7c7e7",
+      "roundtrip_sha256": "303077cd8a338136b662ff17e6bf682630cea7976aedc22289724ff61c1952cf",
+      "zones": 7,
+      "points": 1607,
+      "all_values_exact": true
+    }
+  ]
+}

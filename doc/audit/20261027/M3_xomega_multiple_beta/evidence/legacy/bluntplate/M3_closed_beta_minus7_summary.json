@@ -1,0 +1,273 @@
+{
+  "created": "2026-10-24T22:00:03.662986+08:00",
+  "status": "closed_M3_component_computed",
+  "fixed_beta": -7.0,
+  "native_station_range": [
+    10,
+    711
+  ],
+  "native_station_count": 702,
+  "native_unique_neutral_points": 1564,
+  "closed_curve_rows": 1571,
+  "solved_interpolated_flow_turning_points": 6,
+  "curve_first_last_coordinates_exactly_equal": true,
+  "terminal_point_kind": 2,
+  "terminal_point_note": "Coordinates repeat the independently verified start; Kind intentionally differs from the first row.",
+  "closure_validation": {
+    "initial_section_interpolation_z": [
+      1.189910699481934,
+      4.000132460708057
+    ],
+    "initial_distance_to_start": 0.00012330344982085467,
+    "actual_corrected_point": {
+      "alpha_r": 80.00434970343846,
+      "omega_r": 7.296886943596204,
+      "omega_i": 9.035838483689718e-14,
+      "beta_r": -7.0,
+      "raw_MAC": 1.0,
+      "right_residual": 2.6873927430569654e-13,
+      "nev": 1,
+      "seconds": 0.003663249000000146,
+      "left_residual": 1.5865037389016434e-13,
+      "omega_alpha_r": 0.16750438263162182,
+      "omega_alpha_i": -0.027773065917528827,
+      "original_real_frequency_polynomial_residual": 2.714554674784756e-13,
+      "omega_xi_r": 0.10775617676594104,
+      "omega_xi_i": -0.005833966544504468,
+      "xi": 119.00000000076882,
+      "x_mm": -25.070568019739586,
+      "native_bracket": [
+        119,
+        120
+      ],
+      "theta": 7.688214509471436e-10,
+      "alpha_i": 0.0
+    },
+    "scaled_return_error": 1.0615914359600361e-11,
+    "raw_MAC_to_start": 0.9999999999999987,
+    "omega_difference": 1.0731771027394643e-10,
+    "trace": [
+      {
+        "z": [
+          1.189910699481934,
+          4.000132460708057
+        ],
+        "point": {
+          "alpha_r": 80.00264921416115,
+          "omega_r": 7.295620774543788,
+          "omega_i": 9.820984153577089e-05,
+          "beta_r": -7.0,
+          "raw_MAC": 0.9999949412895862,
+          "right_residual": 4.1023028735196216e-13,
+          "nev": 1,
+          "seconds": 0.014360518000000155,
+          "left_residual": 1.3850656727726815e-13,
+          "omega_alpha_r": 0.16749361939367063,
+          "omega_alpha_i": -0.027768317802756237,
+          "original_real_frequency_polynomial_residual": 4.152145433120846e-05,
+          "omega_xi_r": 0.10988159475059384,
+          "omega_xi_i": -0.005708447621766109,
+          "xi": 118.9910699481934,
+          "x_mm": -25.07199064734821,
+          "native_bracket": [
+            118,
+            119
+          ],
+          "theta": 0.9910699481933989,
+          "alpha_i": 0.0
+        },
+        "F": [
+          9.820984153577089e-05,
+          -3.644274552266902e-17
+        ]
+      },
+      {
+        "z": [
+          1.1900000121732557,
+          4.000217496754955
+        ],
+        "point": {
+          "alpha_r": 80.0043499350991,
+          "omega_r": 7.296887113491975,
+          "omega_i": -1.3531277894481843e-08,
+          "beta_r": -7.0,
+          "raw_MAC": 0.9999999947863252,
+          "right_residual": 2.716411912165356e-13,
+          "nev": 1,
+          "seconds": 0.02681993699999996,
+          "left_residual": 1.331222677247009e-13,
+          "omega_alpha_r": 0.16750438405717102,
+          "omega_alpha_i": -0.027773066559095252,
+          "original_real_frequency_polynomial_residual": 5.720774342983691e-09,
+          "omega_xi_r": 0.10775617940156779,
+          "omega_xi_i": -0.005833966838330709,
+          "xi": 119.00000121732558,
+          "x_mm": -25.070567824626018,
+          "native_bracket": [
+            119,
+            120
+          ],
+          "theta": 1.2173255754532875e-06,
+          "alpha_i": 0.0
+        },
+        "F": [
+          -1.3531277894481843e-08,
+          2.761142103048195e-16
+        ]
+      },
+      {
+        "z": [
+          1.1900000000076882,
+          4.000217485171923
+        ],
+        "point": {
+          "alpha_r": 80.00434970343846,
+          "omega_r": 7.296886943596204,
+          "omega_i": 9.035838483689718e-14,
+          "beta_r": -7.0,
+          "raw_MAC": 1.0,
+          "right_residual": 2.6873927430569654e-13,
+          "nev": 1,
+          "seconds": 0.003663249000000146,
+          "left_residual": 1.5865037389016434e-13,
+          "omega_alpha_r": 0.16750438263162182,
+          "omega_alpha_i": -0.027773065917528827,
+          "original_real_frequency_polynomial_residual": 2.714554674784756e-13,
+          "omega_xi_r": 0.10775617676594104,
+          "omega_xi_i": -0.005833966544504468,
+          "xi": 119.00000000076882,
+          "x_mm": -25.070568019739586,
+          "native_bracket": [
+            119,
+            120
+          ],
+          "theta": 7.688214509471436e-10,
+          "alpha_i": 0.0
+        },
+        "F": [
+          9.035838483689718e-14,
+          -1.5787903510724435e-16
+        ]
+      }
+    ],
+    "passed": true
+  },
+  "minimum_adjacent_display_point_raw_MAC": 0.9918942366481172,
+  "maximum_neutral_temporal_imag": 1.4470690853809857e-11,
+  "maximum_original_real_frequency_polynomial_residual": 3.655826280873645e-12,
+  "x_range_mm": [
+    -34.94689647375438,
+    605.0822403972597
+  ],
+  "observed_frequency_range": [
+    -8.254599064221322,
+    8.958442175880931
+  ],
+  "native_four_root_station_intervals": [
+    [
+      439,
+      478
+    ],
+    [
+      578,
+      617
+    ]
+  ],
+  "deduplicated_jobs": [
+    {
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/outputs/native_points/i119_p2.json",
+      "same_root_as": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/outputs/native_points/i119_p0.json",
+      "raw_MAC": 1.0000000000000007
+    }
+  ],
+  "native_spatial_independent_checks": 47,
+  "native_spatial_maximum_abs_growth": 1.187557681252246e-10,
+  "native_spatial_minimum_raw_MAC": 0.9999999999999982,
+  "original_inputs": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/config.ini",
+      "sha256": "054b3a25f58b5a8cb85df99315a5697e416f828281b98fe01e07957da5c6f41f"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in/grid_vertical2d_N.h5",
+      "sha256": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in/flow_vertical2d_N.h5",
+      "sha256": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M2/config.ini",
+      "sha256": "394f278eec398f94acc0bc564b77e1b3285279d205221fb555c3b3debc99b0a1"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M2/in/grid_vertical2d_N_uniform.h5",
+      "sha256": "cab6ccbced735d4ea746893e95a2b41b098389c9715aa64df2b73b1934e218de"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M2/in/flow_vertical2d_N_uniform.h5",
+      "sha256": "d66770ad1a04dfa58eefe3012aeca81cdb351e7d1ffb475882aaf24ce1a9154c"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/config.ini",
+      "sha256": "03b525f6300a306831d802c5b0753d48632dbda10872835cba5b3f54cac2ff6a"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/in/grid_vertical2d_N.h5",
+      "sha256": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/in/flow_vertical2d_N.h5",
+      "sha256": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+    },
+    {
+      "path": "/home/zaza/start/START_ALL_IN_ONE/START_ALL_IN_ONE/bin/START_LST",
+      "sha256": "807169bb401e558d9509c11f75304e5694d1d8af6925660fca251e8bc29f469a"
+    }
+  ],
+  "turning_points": [
+    {
+      "xi": 617.3978110452236,
+      "x_mm": 385.24317255503894,
+      "omega_r": -4.852052664276528,
+      "alpha_r": 5.964826915627948,
+      "temporal_imag_residual": 8.264473510383695e-12
+    },
+    {
+      "xi": 577.0145598280008,
+      "x_mm": 311.951533864976,
+      "omega_r": -5.6739144606922505,
+      "alpha_r": 2.444238647058078,
+      "temporal_imag_residual": 2.4643931643628103e-13
+    },
+    {
+      "xi": 711.5861086527748,
+      "x_mm": 605.0822403972597,
+      "omega_r": -5.605393873808307,
+      "alpha_r": 2.8970689850462295,
+      "temporal_imag_residual": 1.4470690853809857e-11
+    },
+    {
+      "xi": 438.19886659435866,
+      "x_mm": 106.18248592196055,
+      "omega_r": -7.470471931739364,
+      "alpha_r": -4.919197950410158,
+      "temporal_imag_residual": 3.58546636933417e-12
+    },
+    {
+      "xi": 478.0906573561472,
+      "x_mm": 161.40159867604302,
+      "omega_r": -6.119362839638528,
+      "alpha_r": 0.4458419077692136,
+      "temporal_imag_residual": 4.475518805384382e-15
+    },
+    {
+      "xi": 9.403320835547804,
+      "x_mm": -34.94689647375438,
+      "omega_r": -4.91527633535733,
+      "alpha_r": 19.541927262521988,
+      "temporal_imag_residual": 8.78649309885536e-12
+    }
+  ],
+  "qualification": "One connected M3 seed continuation, not enumeration of every eigenmode at beta=-7. Final points use native operators or re-solved interpolated local-flow profiles; operator-linear guide nodes are excluded."
+}

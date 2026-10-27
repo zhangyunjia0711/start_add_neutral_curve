@@ -1,0 +1,1164 @@
+{
+  "case": "rough",
+  "beta": -30.0,
+  "status": "closed_verified",
+  "guide": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/outputs/rough_beta-30_temporal_c0_guide.json",
+  "guide_sha256": "123d74d98063c68116b920b6fc5aebe0a03e9a58df2b19b885a1b844144ee9b8",
+  "points": [
+    {
+      "xi": 46.0,
+      "x_mm": -2.3755464871933625,
+      "alpha_r": 12.048608842226786,
+      "alpha_i": -8.439676091671383e-15,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -23.587315404765093,
+      "omega_i": 0.0,
+      "growth": 8.439676091671383e-15,
+      "right_residual": 3.2354819786071366e-14,
+      "left_residual": 9.188675361731502e-15,
+      "raw_MAC": 1.0,
+      "border_error_r": 3.929855549181261e-18,
+      "border_error_i": 4.913618518961222e-17,
+      "native_bracket": [
+        46,
+        47
+      ],
+      "theta": 0.0,
+      "case": "rough",
+      "kind": 0,
+      "guide_order": 0.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/q0000.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/p0000.npy",
+      "x_flat_mm": -17.233709487193362,
+      "alpha_omega_i": 0.268148564100426
+    },
+    {
+      "xi": 47.0,
+      "x_mm": -1.2350536918609083,
+      "alpha_r": 11.023784485828326,
+      "alpha_i": 2.379983298106837e-15,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -23.747813208658457,
+      "omega_i": 0.0,
+      "growth": -2.379983298106837e-15,
+      "right_residual": 2.9510524379769623e-14,
+      "left_residual": 8.51939410937325e-15,
+      "raw_MAC": 0.9999999999999998,
+      "border_error_r": -5.1533826699543515e-17,
+      "border_error_i": 7.617145894548104e-17,
+      "native_bracket": [
+        47,
+        48
+      ],
+      "theta": 0.0,
+      "case": "rough",
+      "kind": 0,
+      "guide_order": 4.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/q0001.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/p0001.npy",
+      "x_flat_mm": -16.093216691860906,
+      "alpha_omega_i": 0.20193436972463305
+    },
+    {
+      "case": "rough",
+      "kind": 1,
+      "xi": 47.79265174207426,
+      "x_mm": -0.3289399939900957,
+      "x_flat_mm": -15.187102993990095,
+      "alpha_r": 5.346792262936206,
+      "alpha_i": 3.532403218918167e-13,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -25.166903033217086,
+      "omega_i": 0.0,
+      "growth": -3.532403218918167e-13,
+      "right_residual": 3.767718749902415e-14,
+      "left_residual": 8.591400620207347e-15,
+      "raw_MAC": 0.9999999999999989,
+      "guide_order": 14.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/outputs/rough_beta-30_temporal_c0_tip0_q.npy",
+      "original_receipt": {
+        "run": "rough_beta-30_temporal_c0_tip0_independent_922e375e9791",
+        "original_residual": 1.140709350113686e-13
+      },
+      "generation": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/inputs/rough_beta-30_temporal_c0_tip0_pair047_d7e367982cb5/generation.json",
+      "endpoint_checks": [
+        {
+          "station": 47,
+          "errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "station": 48,
+          "errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "turning_condition": "Im(alpha)=Im(alpha_omega)=0 at fixed real beta",
+      "trace": [
+        {
+          "xi": 47.73883858727546,
+          "omega_r": -25.2020521941979,
+          "alpha_r": 5.233704473756981,
+          "F": [
+            -0.010825756880129047,
+            -0.0034067455268589936
+          ],
+          "point": {
+            "value_r": 5.233704473756981,
+            "value_i": -0.010825756880129047,
+            "raw_MAC": 0.9999986945223316,
+            "right_residual": 1.223838195323701e-11,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.019726835991605185,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 2.5535377697028775e-13,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 5.233704473756981,
+            "alpha_i": -0.010825756880129047,
+            "beta_r": -30.0,
+            "omega_r": -25.2020521941979,
+            "growth": 0.010825756880129047,
+            "iloc": 5,
+            "alpha_beta_r": -3.014936710387038,
+            "alpha_beta_i": -0.27900892576937153,
+            "alpha_omega_r": 3.745366812913891,
+            "alpha_omega_i": -0.0034067455268589936
+          }
+        },
+        {
+          "xi": 47.79329740173055,
+          "omega_r": -25.167266833584723,
+          "alpha_r": 5.3452076962357635,
+          "F": [
+            0.00013149204992684045,
+            -4.975706263872723e-05
+          ],
+          "point": {
+            "value_r": 5.3452076962357635,
+            "value_i": 0.00013149204992684045,
+            "raw_MAC": 0.9999788510246694,
+            "right_residual": 3.969592109578949e-14,
+            "nev": 0,
+            "newton_iterations": 3,
+            "seconds": 0.025921159991412424,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 8.789185806519528e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 5.3452076962357635,
+            "alpha_i": 0.00013149204992684045,
+            "beta_r": -30.0,
+            "omega_r": -25.167266833584723,
+            "growth": -0.00013149204992684045,
+            "iloc": 5,
+            "alpha_beta_r": -3.017232211428038,
+            "alpha_beta_i": -0.28896177150633207,
+            "alpha_omega_r": 3.7461259703629493,
+            "alpha_omega_i": -4.975706263872723e-05
+          }
+        },
+        {
+          "xi": 47.79265173308594,
+          "omega_r": -25.166903026167883,
+          "alpha_r": 5.346792292430408,
+          "F": [
+            -1.829753068650473e-09,
+            9.202150914908107e-10
+          ],
+          "point": {
+            "value_r": 5.346792292430408,
+            "value_i": -1.829753068650473e-09,
+            "raw_MAC": 0.999999998115803,
+            "right_residual": 4.3844324163777284e-14,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.019744121003895998,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 8.578029450540584e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 5.346792292430408,
+            "alpha_i": -1.829753068650473e-09,
+            "beta_r": -30.0,
+            "omega_r": -25.166903026167883,
+            "growth": 1.829753068650473e-09,
+            "iloc": 5,
+            "alpha_beta_r": -3.017243878506566,
+            "alpha_beta_i": -0.2889159381103524,
+            "alpha_omega_r": 3.7461545673053696,
+            "alpha_omega_i": 9.202150914908107e-10
+          }
+        },
+        {
+          "xi": 47.79265174207426,
+          "omega_r": -25.166903033217086,
+          "alpha_r": 5.346792262936152,
+          "F": [
+            4.217218537945689e-13,
+            2.1311236299072354e-14
+          ],
+          "point": {
+            "value_r": 5.346792262936152,
+            "value_i": 4.217218537945689e-13,
+            "raw_MAC": 1.0000000000000007,
+            "right_residual": 3.767718749902415e-14,
+            "nev": 0,
+            "newton_iterations": 1,
+            "seconds": 0.00978748699708376,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 8.591400620207347e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 5.346792262936152,
+            "alpha_i": 4.217218537945689e-13,
+            "beta_r": -30.0,
+            "omega_r": -25.166903033217086,
+            "growth": -4.217218537945689e-13,
+            "iloc": 5,
+            "alpha_beta_r": -3.017243878242203,
+            "alpha_beta_i": -0.288915938565378,
+            "alpha_omega_r": 3.7461545668108096,
+            "alpha_omega_i": 2.1311236299072354e-14
+          }
+        }
+      ],
+      "guide_guess": {
+        "value_r": -25.2020521941979,
+        "value_i": 1.5414714315536364e-14,
+        "raw_MAC": 1.0,
+        "right_residual": 3.604873429424722e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008890465993317775,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 9.105998329932804e-15,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 47.73883858727546,
+        "x_mm": -0.3904560849801153,
+        "alpha_r": 5.23802636753937,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.2020521941979,
+        "omega_i": 1.5414714315536364e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.00020261870242941179,
+        "omega_xi_i": -0.04700473875120222,
+        "original_real_frequency_polynomial_residual": 3.61886645604909e-14
+      }
+    },
+    {
+      "xi": 47.0,
+      "x_mm": -1.2350536918609083,
+      "alpha_r": -0.1565886362800479,
+      "alpha_i": 2.6947634562252822e-12,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -26.723339582247483,
+      "omega_i": 0.0,
+      "growth": -2.6947634562252822e-12,
+      "right_residual": 3.385012821500072e-14,
+      "left_residual": 9.271962816483543e-15,
+      "raw_MAC": 1.0000000000000002,
+      "border_error_r": -7.535900898369943e-15,
+      "border_error_i": -4.330595041028073e-15,
+      "native_bracket": [
+        47,
+        48
+      ],
+      "theta": 0.0,
+      "case": "rough",
+      "kind": 0,
+      "guide_order": 21.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/q0002.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/p0002.npy",
+      "x_flat_mm": -16.093216691860906,
+      "alpha_omega_i": -0.19036473714989965
+    },
+    {
+      "xi": 46.0,
+      "x_mm": -2.3755464871933625,
+      "alpha_r": -0.7003083341793336,
+      "alpha_i": 1.739201244773597e-13,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -26.963538834287277,
+      "omega_i": 0.0,
+      "growth": -1.739201244773597e-13,
+      "right_residual": 3.462324245622336e-14,
+      "left_residual": 1.0108523365938778e-14,
+      "raw_MAC": 0.9999999999999991,
+      "border_error_r": -4.727077237451806e-16,
+      "border_error_i": -3.844479865350225e-16,
+      "native_bracket": [
+        46,
+        47
+      ],
+      "theta": 0.0,
+      "case": "rough",
+      "kind": 0,
+      "guide_order": 22.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/q0003.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/p0003.npy",
+      "x_flat_mm": -17.233709487193362,
+      "alpha_omega_i": -0.2486534057971302
+    },
+    {
+      "xi": 45.0,
+      "x_mm": -3.5128259124068704,
+      "alpha_r": 0.8242677029703295,
+      "alpha_i": -3.020934906352006e-14,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -26.646222902072154,
+      "omega_i": 0.0,
+      "growth": 3.020934906352006e-14,
+      "right_residual": 3.167354577655566e-14,
+      "left_residual": 9.574092129113068e-15,
+      "raw_MAC": 1.0000000000000002,
+      "border_error_r": -1.1839370248679806e-18,
+      "border_error_i": -1.7874599603943873e-17,
+      "native_bracket": [
+        45,
+        46
+      ],
+      "theta": 0.0,
+      "case": "rough",
+      "kind": 0,
+      "guide_order": 24.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/q0004.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/p0004.npy",
+      "x_flat_mm": -18.37098891240687,
+      "alpha_omega_i": -0.2336675370199248
+    },
+    {
+      "case": "rough",
+      "kind": 1,
+      "xi": 44.11887105416884,
+      "x_mm": -4.5115295004199,
+      "x_flat_mm": -19.369692500419898,
+      "alpha_r": 6.426687869495887,
+      "alpha_i": -1.146982427584923e-10,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -25.25297609747883,
+      "omega_i": 0.0,
+      "growth": 1.146982427584923e-10,
+      "right_residual": 1.8428210920308106e-13,
+      "left_residual": 1.2144211591026862e-14,
+      "raw_MAC": 0.9999999999999996,
+      "guide_order": 29.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/outputs/rough_beta-30_temporal_c0_tip1_q.npy",
+      "original_receipt": {
+        "run": "rough_beta-30_temporal_c0_tip1_independent_c014c637f9b7",
+        "original_residual": 9.243148021487854e-14
+      },
+      "generation": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/inputs/rough_beta-30_temporal_c0_tip1_pair044_95388693c2db/generation.json",
+      "endpoint_checks": [
+        {
+          "station": 44,
+          "errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "station": 45,
+          "errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "turning_condition": "Im(alpha)=Im(alpha_omega)=0 at fixed real beta",
+      "trace": [
+        {
+          "xi": 44.17231197358484,
+          "omega_r": -25.14945520852247,
+          "alpha_r": 6.8037722315843405,
+          "F": [
+            -0.0103022457655138,
+            0.020432715560340178
+          ],
+          "point": {
+            "value_r": 6.8037722315843405,
+            "value_i": -0.0103022457655138,
+            "raw_MAC": 0.9999990031796402,
+            "right_residual": 9.515005781986561e-12,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.019128914005705155,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.655411729381951e-13,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.8037722315843405,
+            "alpha_i": -0.0103022457655138,
+            "beta_r": -30.0,
+            "omega_r": -25.14945520852247,
+            "growth": 0.0103022457655138,
+            "iloc": 5,
+            "alpha_beta_r": -3.1724289535975734,
+            "alpha_beta_i": 0.14115404367668402,
+            "alpha_omega_r": 3.828776271191224,
+            "alpha_omega_i": 0.020432715560340178
+          }
+        },
+        {
+          "xi": 44.11332575874657,
+          "omega_r": -25.253494412119164,
+          "alpha_r": 6.426690333970673,
+          "F": [
+            0.0011899058729720508,
+            -0.00013807987090731606
+          ],
+          "point": {
+            "value_r": 6.426690333970673,
+            "value_i": 0.0011899058729720508,
+            "raw_MAC": 0.9999597165135973,
+            "right_residual": 2.6709456462300815e-13,
+            "nev": 0,
+            "newton_iterations": 3,
+            "seconds": 0.028009818997816183,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.0158861333152792e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.426690333970673,
+            "alpha_i": 0.0011899058729720508,
+            "beta_r": -30.0,
+            "omega_r": -25.253494412119164,
+            "growth": -0.0011899058729720508,
+            "iloc": 5,
+            "alpha_beta_r": -3.1760289458655766,
+            "alpha_beta_i": 0.16674921380601068,
+            "alpha_omega_r": 3.829446068735861,
+            "alpha_omega_i": -0.00013807987090731606
+          }
+        },
+        {
+          "xi": 44.11886680635793,
+          "omega_r": -25.252977618858935,
+          "alpha_r": 6.426683566590348,
+          "F": [
+            9.106741975107949e-07,
+            -3.2492595447476935e-07
+          ],
+          "point": {
+            "value_r": 6.426683566590348,
+            "value_i": 9.106741975107949e-07,
+            "raw_MAC": 0.999999846419145,
+            "right_residual": 5.0572826019519254e-14,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.01782269800605718,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 8.93956922763848e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.426683566590348,
+            "alpha_i": 9.106741975107949e-07,
+            "beta_r": -30.0,
+            "omega_r": -25.252977618858935,
+            "growth": -9.106741975107949e-07,
+            "iloc": 5,
+            "alpha_beta_r": -3.1754528739978087,
+            "alpha_beta_i": 0.16593656092995232,
+            "alpha_omega_r": 3.8293036258874955,
+            "alpha_omega_i": -3.2492595447476935e-07
+          }
+        },
+        {
+          "xi": 44.11887105416884,
+          "omega_r": -25.25297609747883,
+          "alpha_r": 6.426687869498385,
+          "F": [
+            -1.10326255755653e-10,
+            -1.8186878176809205e-12
+          ],
+          "point": {
+            "value_r": 6.426687869498385,
+            "value_i": -1.10326255755653e-10,
+            "raw_MAC": 0.9999999999999047,
+            "right_residual": 1.8428210920308106e-13,
+            "nev": 0,
+            "newton_iterations": 1,
+            "seconds": 0.010073830999317579,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.2144211591026862e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.426687869498385,
+            "alpha_i": -1.10326255755653e-10,
+            "beta_r": -30.0,
+            "omega_r": -25.25297609747883,
+            "growth": 1.10326255755653e-10,
+            "iloc": 5,
+            "alpha_beta_r": -3.1754524591755104,
+            "alpha_beta_i": 0.16593574153987886,
+            "alpha_omega_r": 3.829303525818937,
+            "alpha_omega_i": -1.8186878176809205e-12
+          }
+        }
+      ],
+      "guide_guess": {
+        "value_r": -25.14945520852247,
+        "value_i": -5.409858565461694e-15,
+        "raw_MAC": 1.0,
+        "right_residual": 3.76678777814743e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008965133005403914,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 9.036519725730774e-15,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 44.17231197358484,
+        "x_mm": -4.450957619062481,
+        "alpha_r": 6.812842332165761,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.14945520852247,
+        "omega_i": -5.409858565461694e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.0014198137555836293,
+        "omega_xi_i": 0.04231342852448093,
+        "original_real_frequency_polynomial_residual": 3.7644943823223356e-14
+      }
+    },
+    {
+      "xi": 45.0,
+      "x_mm": -3.5128259124068704,
+      "alpha_r": 11.26317843523441,
+      "alpha_i": 7.432175410064839e-11,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -23.900157056311812,
+      "omega_i": 0.0,
+      "growth": -7.432175410064839e-11,
+      "right_residual": 3.601520888278337e-14,
+      "left_residual": 8.853021186183485e-15,
+      "raw_MAC": 1.0000000000000013,
+      "border_error_r": -1.9986176393405886e-15,
+      "border_error_i": -1.0818782633588394e-13,
+      "native_bracket": [
+        45,
+        46
+      ],
+      "theta": 0.0,
+      "case": "rough",
+      "kind": 0,
+      "guide_order": 33.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/q0005.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/p0005.npy",
+      "x_flat_mm": -18.37098891240687,
+      "alpha_omega_i": 0.246319928849133
+    },
+    {
+      "xi": 46.0,
+      "x_mm": -2.3755464871933625,
+      "alpha_r": 12.048608842226786,
+      "alpha_i": -8.439676091671383e-15,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -23.587315404765093,
+      "omega_i": 0.0,
+      "growth": 8.439676091671383e-15,
+      "right_residual": 3.2354819786071366e-14,
+      "left_residual": 9.188675361731502e-15,
+      "raw_MAC": 1.0,
+      "border_error_r": 3.929855549181261e-18,
+      "border_error_i": 4.913618518961222e-17,
+      "native_bracket": [
+        46,
+        47
+      ],
+      "theta": 0.0,
+      "case": "rough",
+      "kind": 2,
+      "guide_order": 0.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/q0000.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-30_temporal_c0_native_crossings/p0000.npy",
+      "x_flat_mm": -17.233709487193362,
+      "alpha_omega_i": 0.268148564100426,
+      "verified_closure": true
+    }
+  ],
+  "native_points": 6,
+  "native_stations": 3,
+  "native_counts": {
+    "45": 2,
+    "46": 2,
+    "47": 2
+  },
+  "physical_tips": [
+    {
+      "case": "rough",
+      "kind": 1,
+      "xi": 47.79265174207426,
+      "x_mm": -0.3289399939900957,
+      "x_flat_mm": -15.187102993990095,
+      "alpha_r": 5.346792262936206,
+      "alpha_i": 3.532403218918167e-13,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -25.166903033217086,
+      "omega_i": 0.0,
+      "growth": -3.532403218918167e-13,
+      "right_residual": 3.767718749902415e-14,
+      "left_residual": 8.591400620207347e-15,
+      "raw_MAC": 0.9999999999999989,
+      "guide_order": 14.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/outputs/rough_beta-30_temporal_c0_tip0_q.npy",
+      "original_receipt": {
+        "run": "rough_beta-30_temporal_c0_tip0_independent_922e375e9791",
+        "original_residual": 1.140709350113686e-13
+      },
+      "generation": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/inputs/rough_beta-30_temporal_c0_tip0_pair047_d7e367982cb5/generation.json",
+      "endpoint_checks": [
+        {
+          "station": 47,
+          "errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "station": 48,
+          "errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "turning_condition": "Im(alpha)=Im(alpha_omega)=0 at fixed real beta",
+      "trace": [
+        {
+          "xi": 47.73883858727546,
+          "omega_r": -25.2020521941979,
+          "alpha_r": 5.233704473756981,
+          "F": [
+            -0.010825756880129047,
+            -0.0034067455268589936
+          ],
+          "point": {
+            "value_r": 5.233704473756981,
+            "value_i": -0.010825756880129047,
+            "raw_MAC": 0.9999986945223316,
+            "right_residual": 1.223838195323701e-11,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.019726835991605185,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 2.5535377697028775e-13,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 5.233704473756981,
+            "alpha_i": -0.010825756880129047,
+            "beta_r": -30.0,
+            "omega_r": -25.2020521941979,
+            "growth": 0.010825756880129047,
+            "iloc": 5,
+            "alpha_beta_r": -3.014936710387038,
+            "alpha_beta_i": -0.27900892576937153,
+            "alpha_omega_r": 3.745366812913891,
+            "alpha_omega_i": -0.0034067455268589936
+          }
+        },
+        {
+          "xi": 47.79329740173055,
+          "omega_r": -25.167266833584723,
+          "alpha_r": 5.3452076962357635,
+          "F": [
+            0.00013149204992684045,
+            -4.975706263872723e-05
+          ],
+          "point": {
+            "value_r": 5.3452076962357635,
+            "value_i": 0.00013149204992684045,
+            "raw_MAC": 0.9999788510246694,
+            "right_residual": 3.969592109578949e-14,
+            "nev": 0,
+            "newton_iterations": 3,
+            "seconds": 0.025921159991412424,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 8.789185806519528e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 5.3452076962357635,
+            "alpha_i": 0.00013149204992684045,
+            "beta_r": -30.0,
+            "omega_r": -25.167266833584723,
+            "growth": -0.00013149204992684045,
+            "iloc": 5,
+            "alpha_beta_r": -3.017232211428038,
+            "alpha_beta_i": -0.28896177150633207,
+            "alpha_omega_r": 3.7461259703629493,
+            "alpha_omega_i": -4.975706263872723e-05
+          }
+        },
+        {
+          "xi": 47.79265173308594,
+          "omega_r": -25.166903026167883,
+          "alpha_r": 5.346792292430408,
+          "F": [
+            -1.829753068650473e-09,
+            9.202150914908107e-10
+          ],
+          "point": {
+            "value_r": 5.346792292430408,
+            "value_i": -1.829753068650473e-09,
+            "raw_MAC": 0.999999998115803,
+            "right_residual": 4.3844324163777284e-14,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.019744121003895998,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 8.578029450540584e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 5.346792292430408,
+            "alpha_i": -1.829753068650473e-09,
+            "beta_r": -30.0,
+            "omega_r": -25.166903026167883,
+            "growth": 1.829753068650473e-09,
+            "iloc": 5,
+            "alpha_beta_r": -3.017243878506566,
+            "alpha_beta_i": -0.2889159381103524,
+            "alpha_omega_r": 3.7461545673053696,
+            "alpha_omega_i": 9.202150914908107e-10
+          }
+        },
+        {
+          "xi": 47.79265174207426,
+          "omega_r": -25.166903033217086,
+          "alpha_r": 5.346792262936152,
+          "F": [
+            4.217218537945689e-13,
+            2.1311236299072354e-14
+          ],
+          "point": {
+            "value_r": 5.346792262936152,
+            "value_i": 4.217218537945689e-13,
+            "raw_MAC": 1.0000000000000007,
+            "right_residual": 3.767718749902415e-14,
+            "nev": 0,
+            "newton_iterations": 1,
+            "seconds": 0.00978748699708376,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 8.591400620207347e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 5.346792262936152,
+            "alpha_i": 4.217218537945689e-13,
+            "beta_r": -30.0,
+            "omega_r": -25.166903033217086,
+            "growth": -4.217218537945689e-13,
+            "iloc": 5,
+            "alpha_beta_r": -3.017243878242203,
+            "alpha_beta_i": -0.288915938565378,
+            "alpha_omega_r": 3.7461545668108096,
+            "alpha_omega_i": 2.1311236299072354e-14
+          }
+        }
+      ],
+      "guide_guess": {
+        "value_r": -25.2020521941979,
+        "value_i": 1.5414714315536364e-14,
+        "raw_MAC": 1.0,
+        "right_residual": 3.604873429424722e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008890465993317775,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 9.105998329932804e-15,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 47.73883858727546,
+        "x_mm": -0.3904560849801153,
+        "alpha_r": 5.23802636753937,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.2020521941979,
+        "omega_i": 1.5414714315536364e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.00020261870242941179,
+        "omega_xi_i": -0.04700473875120222,
+        "original_real_frequency_polynomial_residual": 3.61886645604909e-14
+      }
+    },
+    {
+      "case": "rough",
+      "kind": 1,
+      "xi": 44.11887105416884,
+      "x_mm": -4.5115295004199,
+      "x_flat_mm": -19.369692500419898,
+      "alpha_r": 6.426687869495887,
+      "alpha_i": -1.146982427584923e-10,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -25.25297609747883,
+      "omega_i": 0.0,
+      "growth": 1.146982427584923e-10,
+      "right_residual": 1.8428210920308106e-13,
+      "left_residual": 1.2144211591026862e-14,
+      "raw_MAC": 0.9999999999999996,
+      "guide_order": 29.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/outputs/rough_beta-30_temporal_c0_tip1_q.npy",
+      "original_receipt": {
+        "run": "rough_beta-30_temporal_c0_tip1_independent_c014c637f9b7",
+        "original_residual": 9.243148021487854e-14
+      },
+      "generation": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/inputs/rough_beta-30_temporal_c0_tip1_pair044_95388693c2db/generation.json",
+      "endpoint_checks": [
+        {
+          "station": 44,
+          "errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "station": 45,
+          "errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "turning_condition": "Im(alpha)=Im(alpha_omega)=0 at fixed real beta",
+      "trace": [
+        {
+          "xi": 44.17231197358484,
+          "omega_r": -25.14945520852247,
+          "alpha_r": 6.8037722315843405,
+          "F": [
+            -0.0103022457655138,
+            0.020432715560340178
+          ],
+          "point": {
+            "value_r": 6.8037722315843405,
+            "value_i": -0.0103022457655138,
+            "raw_MAC": 0.9999990031796402,
+            "right_residual": 9.515005781986561e-12,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.019128914005705155,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.655411729381951e-13,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.8037722315843405,
+            "alpha_i": -0.0103022457655138,
+            "beta_r": -30.0,
+            "omega_r": -25.14945520852247,
+            "growth": 0.0103022457655138,
+            "iloc": 5,
+            "alpha_beta_r": -3.1724289535975734,
+            "alpha_beta_i": 0.14115404367668402,
+            "alpha_omega_r": 3.828776271191224,
+            "alpha_omega_i": 0.020432715560340178
+          }
+        },
+        {
+          "xi": 44.11332575874657,
+          "omega_r": -25.253494412119164,
+          "alpha_r": 6.426690333970673,
+          "F": [
+            0.0011899058729720508,
+            -0.00013807987090731606
+          ],
+          "point": {
+            "value_r": 6.426690333970673,
+            "value_i": 0.0011899058729720508,
+            "raw_MAC": 0.9999597165135973,
+            "right_residual": 2.6709456462300815e-13,
+            "nev": 0,
+            "newton_iterations": 3,
+            "seconds": 0.028009818997816183,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.0158861333152792e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.426690333970673,
+            "alpha_i": 0.0011899058729720508,
+            "beta_r": -30.0,
+            "omega_r": -25.253494412119164,
+            "growth": -0.0011899058729720508,
+            "iloc": 5,
+            "alpha_beta_r": -3.1760289458655766,
+            "alpha_beta_i": 0.16674921380601068,
+            "alpha_omega_r": 3.829446068735861,
+            "alpha_omega_i": -0.00013807987090731606
+          }
+        },
+        {
+          "xi": 44.11886680635793,
+          "omega_r": -25.252977618858935,
+          "alpha_r": 6.426683566590348,
+          "F": [
+            9.106741975107949e-07,
+            -3.2492595447476935e-07
+          ],
+          "point": {
+            "value_r": 6.426683566590348,
+            "value_i": 9.106741975107949e-07,
+            "raw_MAC": 0.999999846419145,
+            "right_residual": 5.0572826019519254e-14,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.01782269800605718,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 8.93956922763848e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.426683566590348,
+            "alpha_i": 9.106741975107949e-07,
+            "beta_r": -30.0,
+            "omega_r": -25.252977618858935,
+            "growth": -9.106741975107949e-07,
+            "iloc": 5,
+            "alpha_beta_r": -3.1754528739978087,
+            "alpha_beta_i": 0.16593656092995232,
+            "alpha_omega_r": 3.8293036258874955,
+            "alpha_omega_i": -3.2492595447476935e-07
+          }
+        },
+        {
+          "xi": 44.11887105416884,
+          "omega_r": -25.25297609747883,
+          "alpha_r": 6.426687869498385,
+          "F": [
+            -1.10326255755653e-10,
+            -1.8186878176809205e-12
+          ],
+          "point": {
+            "value_r": 6.426687869498385,
+            "value_i": -1.10326255755653e-10,
+            "raw_MAC": 0.9999999999999047,
+            "right_residual": 1.8428210920308106e-13,
+            "nev": 0,
+            "newton_iterations": 1,
+            "seconds": 0.010073830999317579,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.2144211591026862e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.426687869498385,
+            "alpha_i": -1.10326255755653e-10,
+            "beta_r": -30.0,
+            "omega_r": -25.25297609747883,
+            "growth": 1.10326255755653e-10,
+            "iloc": 5,
+            "alpha_beta_r": -3.1754524591755104,
+            "alpha_beta_i": 0.16593574153987886,
+            "alpha_omega_r": 3.829303525818937,
+            "alpha_omega_i": -1.8186878176809205e-12
+          }
+        }
+      ],
+      "guide_guess": {
+        "value_r": -25.14945520852247,
+        "value_i": -5.409858565461694e-15,
+        "raw_MAC": 1.0,
+        "right_residual": 3.76678777814743e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008965133005403914,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 9.036519725730774e-15,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 44.17231197358484,
+        "x_mm": -4.450957619062481,
+        "alpha_r": 6.812842332165761,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.14945520852247,
+        "omega_i": -5.409858565461694e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.0014198137555836293,
+        "omega_xi_i": 0.04231342852448093,
+        "original_real_frequency_polynomial_residual": 3.7644943823223356e-14
+      }
+    }
+  ],
+  "original_checks": [
+    {
+      "native_index": 0,
+      "alpha_difference": 6.777602889354093e-14,
+      "raw_MAC": 0.9999999999999978,
+      "receipt": {
+        "run": "rough_beta-30_temporal_c0_nativecheck0000_456dd81fbdf6",
+        "original_residual": 1.4384071382422514e-13
+      },
+      "frequency_side_checks": [
+        {
+          "offset": -0.0001,
+          "growth": 2.6813730928206567e-05,
+          "residual": 3.1863483670285794e-10
+        },
+        {
+          "offset": 0.0001,
+          "growth": -2.6815981857312434e-05,
+          "residual": 3.186254935113705e-10
+        }
+      ]
+    },
+    {
+      "native_index": 1,
+      "alpha_difference": 3.1465517548232676e-13,
+      "raw_MAC": 1.0000000000000007,
+      "receipt": {
+        "run": "rough_beta-30_temporal_c0_nativecheck0001_1295d4d61f2d",
+        "original_residual": 1.363788090868575e-13
+      },
+      "frequency_side_checks": [
+        {
+          "offset": -0.0001,
+          "growth": 2.0192018257445346e-05,
+          "residual": 2.9325628286352604e-10
+        },
+        {
+          "offset": 0.0001,
+          "growth": -2.0194855699833707e-05,
+          "residual": 2.932488308645309e-10
+        }
+      ]
+    },
+    {
+      "native_index": 2,
+      "alpha_difference": 1.0154223072458378e-13,
+      "raw_MAC": 1.0000000000000002,
+      "receipt": {
+        "run": "rough_beta-30_temporal_c0_nativecheck0002_3221ac543c4d",
+        "original_residual": 8.488247464085622e-14
+      },
+      "frequency_side_checks": [
+        {
+          "offset": -0.0001,
+          "growth": -1.9037876703996523e-05,
+          "residual": 1.5412251851795628e-10
+        },
+        {
+          "offset": 0.0001,
+          "growth": 1.9035070662605226e-05,
+          "residual": 1.5411604360718363e-10
+        }
+      ]
+    },
+    {
+      "native_index": 3,
+      "alpha_difference": 2.723263552631568e-13,
+      "raw_MAC": 0.9999999999999987,
+      "receipt": {
+        "run": "rough_beta-30_temporal_c0_nativecheck0003_9f88653c9060",
+        "original_residual": 1.2558113066240508e-13
+      },
+      "frequency_side_checks": [
+        {
+          "offset": -0.0001,
+          "growth": -2.486662041474049e-05,
+          "residual": 1.4072516691046773e-10
+        },
+        {
+          "offset": 0.0001,
+          "growth": 2.486406072068188e-05,
+          "residual": 1.407194963312774e-10
+        }
+      ]
+    },
+    {
+      "native_index": 4,
+      "alpha_difference": 1.8120845550824483e-13,
+      "raw_MAC": 1.0000000000000007,
+      "receipt": {
+        "run": "rough_beta-30_temporal_c0_nativecheck0004_297e317675c9",
+        "original_residual": 9.32812977399534e-14
+      },
+      "frequency_side_checks": [
+        {
+          "offset": -0.0001,
+          "growth": -2.3368075639892167e-05,
+          "residual": 1.4791656457259246e-10
+        },
+        {
+          "offset": 0.0001,
+          "growth": 2.3365431687693415e-05,
+          "residual": 1.4791005361335115e-10
+        }
+      ]
+    },
+    {
+      "native_index": 5,
+      "alpha_difference": 1.4854190790797265e-13,
+      "raw_MAC": 1.000000000000002,
+      "receipt": {
+        "run": "rough_beta-30_temporal_c0_nativecheck0005_893a6949b3f0",
+        "original_residual": 9.930088263543147e-14
+      },
+      "frequency_side_checks": [
+        {
+          "offset": -0.0001,
+          "growth": 2.4631009553593026e-05,
+          "residual": 3.0768400533175585e-10
+        },
+        {
+          "offset": 0.0001,
+          "growth": -2.4632976191187066e-05,
+          "residual": 3.0767349538845843e-10
+        }
+      ]
+    }
+  ],
+  "minimum_adjacent_raw_MAC": 0.9896791837918476,
+  "x_range_mm": [
+    -4.5115295004199,
+    -0.3289399939900957
+  ],
+  "omega_range": [
+    -26.963538834287277,
+    -23.587315404765093
+  ]
+}

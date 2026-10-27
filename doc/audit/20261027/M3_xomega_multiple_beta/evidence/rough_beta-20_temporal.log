@@ -1,0 +1,51 @@
+TEMPORAL rough_beta-20_temporal_c0 100 27.06158131580286 -12.461215559866785
+TEMPORAL rough_beta-20_temporal_c0 200 32.78214848977795 -11.128125026533855
+TEMPORAL rough_beta-20_temporal_c0 300 35.06254246945212 -9.030515335043527
+TEMPORAL rough_beta-20_temporal_c0 400 32.0 -11.498682718294981
+TEMPORAL rough_beta-20_temporal_c0 500 24.823916459587764 -12.677930003977584
+TEMPORAL rough_beta-20_temporal_c0 600 15.910926816555293 -10.584634157632989
+TEMPORAL rough_beta-20_temporal_c0 700 24.39176076050085 -7.233305537416473
+TEMPORAL rough_beta-20_temporal_c0 800 34.02488641076374 -8.167801457180484
+TEMPORAL rough_beta-20_temporal_c0 900 32.590680395630464 -11.131258235826175
+TEMPORAL rough_beta-20_temporal_c0 1000 33.59544858816248 -10.74074314367187
+TEMPORAL rough_beta-20_temporal_c0 1100 34.737147396802925 -9.027087794085324
+TEMPORAL rough_beta-20_temporal_c0 1200 34.34898418588529 -8.664670197206734
+TEMPORAL rough_beta-20_temporal_c0 1300 34.63873296627644 -8.997173514172445
+TEMPORAL rough_beta-20_temporal_c0 1400 35.02709243866291 -10.143199076635643
+TEMPORAL rough_beta-20_temporal_c0 1500 32.48974907429489 -11.160097850726835
+TEMPORAL rough_beta-20_temporal_c0 1600 25.780880326672044 -12.576553189931998
+TEMPORAL rough_beta-20_temporal_c0 1700 12.118125536563262 -13.073138963837316
+TEMPORAL rough_beta-20_temporal_c0 1800 23.160473335523577 -7.495870928719548
+TEMPORAL rough_beta-20_temporal_c0 1900 33.778581837441536 -8.232022964048998
+TEMPORAL rough_beta-20_temporal_c0 2000 33.4090734181156 -10.82964133776714
+TEMPORAL rough_beta-20_temporal_c0 2100 32.83295784965451 -11.13944405565777
+TEMPORAL rough_beta-20_temporal_c0 2200 35.12363513572508 -9.618842998494273
+TEMPORAL rough_beta-20_temporal_c0 2300 34.662098977684344 -9.009969867979773
+TEMPORAL rough_beta-20_temporal_c0 2400 34.76598578519763 -9.023243111729968
+TEMPORAL rough_beta-20_temporal_c0 2500 35.002402479247245 -10.221342170927063
+TEMPORAL rough_beta-20_temporal_c0 2600 33.281911372331805 -10.927209045427253
+TEMPORAL rough_beta-20_temporal_c0 2700 27.431354118400336 -12.37175868169983
+TEMPORAL rough_beta-20_temporal_c0 2800 15.0 -13.369038244468703
+TEMPORAL rough_beta-20_temporal_c0 2900 22.03270983686468 -7.8062494804764
+TEMPORAL rough_beta-20_temporal_c0 3000 33.00650337452412 -7.721561848084117
+TEMPORAL rough_beta-20_temporal_c0 3100 33.79974341063085 -10.73926554395232
+TEMPORAL rough_beta-20_temporal_c0 3200 32.062175982508776 -11.441810125764624
+TEMPORAL rough_beta-20_temporal_c0 3300 35.0 -10.228595927650192
+TEMPORAL rough_beta-20_temporal_c0 3400 35.0 -8.812913397167677
+TEMPORAL rough_beta-20_temporal_c0 3500 33.81908981777422 -10.744926297369119
+TEMPORAL rough_beta-20_temporal_c0 3600 34.96404465891075 -8.860848216985826
+TEMPORAL rough_beta-20_temporal_c0 3700 33.64250853278289 -10.73075508742361
+Traceback (most recent call last):
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xomega_multiple_beta_20261027/work/temporal.py", line 177, in <module>
+    args = parser.parse_args()
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xomega_multiple_beta_20261027/work/temporal.py", line 164, in one
+    tag = f'{case}_beta{beta:+g}_temporal_c{len(guides)}'
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xomega_multiple_beta_20261027/work/temporal.py", line 100, in trace
+    else:
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xomega_multiple_beta_20261027/work/temporal.py", line 34, in correct
+    r, v, p = self.evaluate(z, q, omega)
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xomega_multiple_beta_20261027/work/temporal.py", line 16, in evaluate
+    omega, v, r, p = qep([K, G, G * 0], target, q, True)
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xomega_multiple_beta_20261027/work/core.py", line 133, in qep
+    update=splu(bordered).solve(np.r_[-Q@q,0j]);dlam=update[-1]
+KeyboardInterrupt

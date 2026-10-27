@@ -1,0 +1,1950 @@
+{
+  "case": "bluntplate",
+  "beta": -30.0,
+  "seed": {
+    "case": "bluntplate",
+    "beta": -30.0,
+    "source_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f-200.0kHz_S_final.json",
+    "source": {
+      "case": "bluntplate",
+      "kind": 0,
+      "xi": 228.0,
+      "x_mm": -2.9743762080354608,
+      "x_flat_mm": -2.9743762080354608,
+      "alpha_r": 8.263307875472188,
+      "alpha_i": -1.4184241756178384e-13,
+      "beta_r": -30.050755639686706,
+      "beta_i": 0.0,
+      "omega_r": -24.29114680857737,
+      "omega_i": 0.0,
+      "growth": 1.4184241756178384e-13,
+      "right_residual": 1.7570869861224854e-13,
+      "left_residual": 1.8468655784187764e-14,
+      "raw_MAC": 0.9999999999999991,
+      "guide_index": 20,
+      "alpha_beta_i": -0.36312294971106024,
+      "guide_order": 20.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/bluntplate_f-200.0kHz_S_final/q0014.npy"
+    },
+    "status": "neutral_corrected",
+    "point": {
+      "xi": 227.99999999999997,
+      "x_mm": -2.9743762080354608,
+      "alpha_r": 8.800978032608844,
+      "alpha_i": 0.0,
+      "beta_r": -30.0,
+      "beta_i": 0.0,
+      "omega_r": -24.09942917322189,
+      "omega_i": 0.0,
+      "growth": 0.0,
+      "right_residual": 2.2723939821115514e-13,
+      "left_residual": 3.3460318385723545e-14,
+      "raw_MAC": 0.9999110659363046,
+      "border_error_r": -2.281240536851193e-16,
+      "border_error_i": 8.478097155309964e-16,
+      "native_bracket": [
+        228,
+        229
+      ],
+      "theta": 0.0
+    },
+    "z": [
+      4.56,
+      0.4400489016304422,
+      -2.409942917322189
+    ],
+    "tangent": [
+      -0.15165163875674065,
+      0.8721315351594457,
+      0.46517562902931997
+    ],
+    "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/outputs/seed000_q.npy",
+    "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/outputs/seed000_p.npy",
+    "trace": [
+      {
+        "point": {
+          "xi": 227.99999999999997,
+          "x_mm": -2.9743762080354608,
+          "alpha_r": 8.263307875472188,
+          "alpha_i": 0.0,
+          "beta_r": -30.0,
+          "beta_i": 0.0,
+          "omega_r": -24.29114680857737,
+          "omega_i": 0.0,
+          "growth": 0.0,
+          "right_residual": 0.00017180695610431306,
+          "left_residual": 0.00017171801141484534,
+          "raw_MAC": 0.9998072672345457,
+          "border_error_r": -0.00016993747594055015,
+          "border_error_i": -2.5388472737721115e-05,
+          "native_bracket": [
+            228,
+            229
+          ],
+          "theta": 0.0
+        },
+        "F": [
+          -0.00016993747594055015,
+          -2.5388472737721115e-05,
+          0.0
+        ]
+      },
+      {
+        "point": {
+          "xi": 227.99999999999997,
+          "x_mm": -2.9743762080354608,
+          "alpha_r": 8.79336488556429,
+          "alpha_i": 0.0,
+          "beta_r": -30.0,
+          "beta_i": 0.0,
+          "omega_r": -24.10155225523299,
+          "omega_i": 0.0,
+          "growth": 0.0,
+          "right_residual": 2.575979753446286e-07,
+          "left_residual": 2.575625148759501e-07,
+          "raw_MAC": 0.9999128004541985,
+          "border_error_r": 3.4014545883917627e-08,
+          "border_error_i": -2.553537042848129e-07,
+          "native_bracket": [
+            228,
+            229
+          ],
+          "theta": 0.0
+        },
+        "F": [
+          3.4014545883917627e-08,
+          -2.553537042848129e-07,
+          0.0
+        ]
+      },
+      {
+        "point": {
+          "xi": 227.99999999999997,
+          "x_mm": -2.9743762080354608,
+          "alpha_r": 8.800985458131493,
+          "alpha_i": 0.0,
+          "beta_r": -30.0,
+          "beta_i": 0.0,
+          "omega_r": -24.099427079070605,
+          "omega_i": 0.0,
+          "growth": 0.0,
+          "right_residual": 2.61120490522977e-10,
+          "left_residual": 2.610836115653019e-10,
+          "raw_MAC": 0.9999110643226123,
+          "border_error_r": 6.344228623858128e-11,
+          "border_error_i": 2.5330794866453913e-10,
+          "native_bracket": [
+            228,
+            229
+          ],
+          "theta": 0.0
+        },
+        "F": [
+          6.344228623858128e-11,
+          2.5330794866453913e-10,
+          0.0
+        ]
+      },
+      {
+        "point": {
+          "xi": 227.99999999999997,
+          "x_mm": -2.9743762080354608,
+          "alpha_r": 8.800978032608844,
+          "alpha_i": 0.0,
+          "beta_r": -30.0,
+          "beta_i": 0.0,
+          "omega_r": -24.09942917322189,
+          "omega_i": 0.0,
+          "growth": 0.0,
+          "right_residual": 2.2723939821115514e-13,
+          "left_residual": 3.3460318385723545e-14,
+          "raw_MAC": 0.9999110659363046,
+          "border_error_r": -2.281240536851193e-16,
+          "border_error_i": 8.478097155309964e-16,
+          "native_bracket": [
+            228,
+            229
+          ],
+          "theta": 0.0
+        },
+        "F": [
+          -2.281240536851193e-16,
+          8.478097155309964e-16,
+          0.0
+        ]
+      }
+    ],
+    "jacobian_relative_error": 2.421550608082632e-06
+  },
+  "scale": [
+    50.0,
+    20.0,
+    10.0
+  ],
+  "status": "closed_verified",
+  "records": [
+    {
+      "index": 0,
+      "z": [
+        4.56,
+        0.4400489016304422,
+        -2.409942917322189
+      ],
+      "point": {
+        "xi": 227.99999999999997,
+        "x_mm": -2.9743762080354608,
+        "alpha_r": 8.800978032608844,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -24.09942917322189,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.222314814888794e-13,
+        "left_residual": 3.972329468196282e-14,
+        "raw_MAC": 0.9999999999999998,
+        "border_error_r": -2.304792669470698e-16,
+        "border_error_i": 7.23180920892085e-16,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.1516516387567416,
+        -0.8721315351594455,
+        -0.46517562902932
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0000.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0000.npy",
+      "step": 0.025,
+      "iterations": 0
+    },
+    {
+      "index": 1,
+      "z": [
+        4.563550877530977,
+        0.41823356163171715,
+        -2.421628090192556
+      ],
+      "point": {
+        "xi": 228.17754387654884,
+        "x_mm": -2.9338415459575407,
+        "alpha_r": 8.364671232634343,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -24.21628090192556,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.274650064358028e-13,
+        "left_residual": 4.2356325912822875e-14,
+        "raw_MAC": 0.9999131450094793,
+        "border_error_r": -2.278281113497991e-16,
+        "border_error_i": 8.082466646603554e-16,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.17754387654883885
+      },
+      "tangent": [
+        0.13262169721852587,
+        -0.8729170333191829,
+        -0.46949689921032944
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0001.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0001.npy",
+      "step": 0.025,
+      "iterations": 3
+    },
+    {
+      "index": 2,
+      "z": [
+        4.567066408469783,
+        0.39312755189911636,
+        -2.4351921857099454
+      ],
+      "point": {
+        "xi": 228.35332042348915,
+        "x_mm": -2.893710379116148,
+        "alpha_r": 7.862551037982327,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -24.351921857099455,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.2895830021196255e-13,
+        "left_residual": 3.654397839629954e-14,
+        "raw_MAC": 0.9999044836382205,
+        "border_error_r": 4.127759443170706e-16,
+        "border_error_i": 9.567199802782913e-16,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.3533204234891514
+      },
+      "tangent": [
+        0.11212494847708251,
+        -0.8733895927996584,
+        -0.47393946355864736
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0002.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0002.npy",
+      "step": 0.028749999999999998,
+      "iterations": 3
+    },
+    {
+      "index": 3,
+      "z": [
+        4.570401419502725,
+        0.36424588255877205,
+        -2.4509402151717286
+      ],
+      "point": {
+        "xi": 228.52007097513626,
+        "x_mm": -2.8556399179225,
+        "alpha_r": 7.284917651175441,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -24.509402151717286,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.1820291718282084e-13,
+        "left_residual": 3.410765057519694e-14,
+        "raw_MAC": 0.9998989094083099,
+        "border_error_r": 5.090633422734054e-16,
+        "border_error_i": 4.31261244861086e-15,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.5200709751362638
+      },
+      "tangent": [
+        0.08975944220629438,
+        -0.8734788621460292,
+        -0.478516373720788
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0003.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0003.npy",
+      "step": 0.033062499999999995,
+      "iterations": 3
+    },
+    {
+      "index": 4,
+      "z": [
+        4.573339053460344,
+        0.33103703419803304,
+        -2.469227922794343
+      ],
+      "point": {
+        "xi": 228.66695267301722,
+        "x_mm": -2.822105672164393,
+        "alpha_r": 6.620740683960661,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -24.69227922794343,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.2098610910655515e-13,
+        "left_residual": 3.482467880928136e-14,
+        "raw_MAC": 0.9998986152972397,
+        "border_error_r": 2.0738171009896047e-15,
+        "border_error_i": 1.0257702506065044e-14,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.6669526730172208
+      },
+      "tangent": [
+        0.06481450593740222,
+        -0.8730757917909763,
+        -0.4832574278877151
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0004.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0004.npy",
+      "step": 0.03802187499999999,
+      "iterations": 3
+    },
+    {
+      "index": 5,
+      "z": [
+        4.575546374047566,
+        0.29287766871000154,
+        -2.4904714071704896
+      ],
+      "point": {
+        "xi": 228.77731870237832,
+        "x_mm": -2.796908240453458,
+        "alpha_r": 5.85755337420003,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -24.904714071704895,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.3116310019752796e-13,
+        "left_residual": 4.643876972674299e-14,
+        "raw_MAC": 0.9999060269428273,
+        "border_error_r": 7.350514520705141e-15,
+        "border_error_i": 3.2457447055442205e-14,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.7773187023783237
+      },
+      "tangent": [
+        0.03600708814903612,
+        -0.8719813693898482,
+        -0.488213048821959
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0005.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0005.npy",
+      "step": 0.04372515624999999,
+      "iterations": 3
+    },
+    {
+      "index": 6,
+      "z": [
+        4.576487882491165,
+        0.2490726865903625,
+        -2.51515919551265
+      ],
+      "point": {
+        "xi": 228.82439412455824,
+        "x_mm": -2.786160551671787,
+        "alpha_r": 4.98145373180725,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.151591955126502,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.6382767178855424e-13,
+        "left_residual": 1.4023000203747676e-13,
+        "raw_MAC": 0.9999221807055051,
+        "border_error_r": 3.1166517713070693e-14,
+        "border_error_i": 1.316048233427893e-13,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.8243941245582391
+      },
+      "tangent": [
+        0.0008912797926849016,
+        -0.8697732491941688,
+        -0.49345080869986363
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0006.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0006.npy",
+      "step": 0.05028392968749998,
+      "iterations": 3
+    },
+    {
+      "index": 7,
+      "z": [
+        4.575236132854657,
+        0.19887359566041307,
+        -2.543866835920353
+      ],
+      "point": {
+        "xi": 228.76180664273286,
+        "x_mm": -2.8004497655574694,
+        "alpha_r": 3.9774719132082614,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.43866835920353,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 8.413139486945643e-13,
+        "left_residual": 8.095635041145692e-13,
+        "raw_MAC": 0.9999400347027836,
+        "border_error_r": 2.0098300342535308e-13,
+        "border_error_i": 7.84039880653557e-13,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.7618066427328642
+      },
+      "tangent": [
+        -0.04569693632647194,
+        -0.8653924380468757,
+        -0.49900673159954345
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0007.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0007.npy",
+      "step": 0.05782651914062497,
+      "iterations": 3
+    },
+    {
+      "index": 8,
+      "z": [
+        4.569975522598529,
+        0.14156739528296738,
+        -2.577268691495603
+      ],
+      "point": {
+        "xi": 228.49877612992645,
+        "x_mm": -2.8605016984094416,
+        "alpha_r": 2.8313479056593476,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.772686914956033,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.237347723475794e-13,
+        "left_residual": 3.349378136622302e-14,
+        "raw_MAC": 0.9999146213063932,
+        "border_error_r": 6.224733995499397e-17,
+        "border_error_i": -2.700536979107316e-16,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.4987761299264548
+      },
+      "tangent": [
+        -0.1168373753377877,
+        -0.8554494929451756,
+        -0.5045346298759075
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0008.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0008.npy",
+      "step": 0.06650049701171871,
+      "iterations": 4
+    },
+    {
+      "index": 9,
+      "z": [
+        4.56445228404432,
+        0.10903303092358893,
+        -2.5966151525969488
+      ],
+      "point": {
+        "xi": 228.222614202216,
+        "x_mm": -2.9235516364649015,
+        "alpha_r": 2.1806606184717787,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.966151525969487,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 6.016989274232328e-13,
+        "left_residual": 5.588673297922423e-13,
+        "raw_MAC": 0.9999319630692286,
+        "border_error_r": 1.488321978468209e-13,
+        "border_error_i": 5.374828588801487e-13,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.22261420221599337
+      },
+      "tangent": [
+        -0.17495309703726547,
+        -0.8442597448909565,
+        -0.5065736836766458
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0009.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0009.npy",
+      "step": 0.03823778578173826,
+      "iterations": 3
+    },
+    {
+      "index": 10,
+      "z": [
+        4.56,
+        0.09004215847526911,
+        -2.6080819856422153
+      ],
+      "point": {
+        "xi": 227.99999999999997,
+        "x_mm": -2.9743762080354608,
+        "alpha_r": 1.8008431695053821,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.080819856422153,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 8.873402086082995e-13,
+        "left_residual": 8.605883793222593e-13,
+        "raw_MAC": 0.9999559084791012,
+        "border_error_r": 5.618873607514755e-13,
+        "border_error_i": 6.511160943751676e-13,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.22033809373930735,
+        -0.8334914085849583,
+        -0.5066983286556117
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0010.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0010.npy",
+      "step": 0.043973453648998996,
+      "iterations": 3
+    },
+    {
+      "index": 11,
+      "z": [
+        4.546360784865187,
+        0.04850012164121443,
+        -2.6337074570498595
+      ],
+      "point": {
+        "xi": 227.31803924325936,
+        "x_mm": -3.1299863171063027,
+        "alpha_r": 0.9700024328242886,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.337074570498594,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.3185815292531174e-13,
+        "left_residual": 3.5432307913818853e-14,
+        "raw_MAC": 0.9995771005159275,
+        "border_error_r": -1.428692682131097e-17,
+        "border_error_i": -1.4719856125266045e-16,
+        "native_bracket": [
+          227,
+          228
+        ],
+        "theta": 0.3180392432593635
+      },
+      "tangent": [
+        -0.3478587801877208,
+        -0.7927990058348627,
+        -0.5004637902921291
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0011.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0011.npy",
+      "step": 0.050569471696348844,
+      "iterations": 4
+    },
+    {
+      "index": 12,
+      "z": [
+        4.54,
+        0.03559390437119731,
+        -2.641943426265538
+      ],
+      "point": {
+        "xi": 227.0,
+        "x_mm": -3.2025566532190877,
+        "alpha_r": 0.7118780874239462,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.41943426265538,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.497622066202309e-13,
+        "left_residual": 9.446875357571329e-14,
+        "raw_MAC": 0.9999065091551289,
+        "border_error_r": 6.328296833627588e-14,
+        "border_error_i": 6.008075961551923e-14,
+        "native_bracket": [
+          227,
+          228
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.4228057165965141,
+        -0.7611822445627318,
+        -0.4917691700134829
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0012.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0012.npy",
+      "step": 0.05815489245080117,
+      "iterations": 3
+    },
+    {
+      "index": 13,
+      "z": [
+        4.52,
+        0.007915318939394914,
+        -2.6604196741136223
+      ],
+      "point": {
+        "xi": 225.99999999999997,
+        "x_mm": -3.4305999115346193,
+        "alpha_r": 0.15830637878789827,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.604196741136224,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.396188437588521e-13,
+        "left_residual": 4.004544617772024e-14,
+        "raw_MAC": 0.9990840490823627,
+        "border_error_r": 1.9363990299048102e-16,
+        "border_error_i": -1.5004266653792376e-17,
+        "native_bracket": [
+          226,
+          227
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.6613819420859842,
+        -0.6109965268820212,
+        -0.4350369763832487
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0013.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0013.npy",
+      "step": 0.06687812631842134,
+      "iterations": 4
+    },
+    {
+      "index": 14,
+      "z": [
+        4.5,
+        -0.0054022419323376805,
+        -2.670605960769411
+      ],
+      "point": {
+        "xi": 225.0,
+        "x_mm": -3.6584962143678705,
+        "alpha_r": -0.10804483864675361,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.706059607694108,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.59079158637911e-13,
+        "left_residual": 3.422350967204996e-14,
+        "raw_MAC": 0.9991137677027834,
+        "border_error_r": -1.9864270269820171e-16,
+        "border_error_i": -6.044246104503684e-17,
+        "native_bracket": [
+          225,
+          226
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.8963376244081699,
+        -0.32660373266664444,
+        -0.29984806965950894
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0014.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0014.npy",
+      "step": 0.07690984526618454,
+      "iterations": 4
+    },
+    {
+      "index": 15,
+      "z": [
+        4.48,
+        -0.009658311745980816,
+        -2.6755671247426966
+      ],
+      "point": {
+        "xi": 224.00000000000003,
+        "x_mm": -3.88623579939972,
+        "alpha_r": -0.19316623491961632,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.755671247426967,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.566821363354672e-13,
+        "left_residual": 3.724711431054855e-14,
+        "raw_MAC": 0.9991515214171747,
+        "border_error_r": -1.0853140541552123e-16,
+        "border_error_i": 2.9188203473123795e-16,
+        "native_bracket": [
+          224,
+          225
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.9932001665690708,
+        0.01421279377635365,
+        -0.11554836918036038
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0015.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0015.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 16,
+      "z": [
+        4.46,
+        -0.006614849719781928,
+        -2.6763268094891313
+      ],
+      "point": {
+        "xi": 223.0,
+        "x_mm": -4.113808911024319,
+        "alpha_r": -0.13229699439563858,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.763268094891313,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.5027733275211576e-13,
+        "left_residual": 4.3921840452284994e-14,
+        "raw_MAC": 0.9991938483610346,
+        "border_error_r": -1.274291182680893e-16,
+        "border_error_i": -2.85354977873313e-16,
+        "native_bracket": [
+          223,
+          224
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.9456672034589265,
+        0.3185633116474824,
+        0.06504580520188896
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0016.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0016.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 17,
+      "z": [
+        4.44,
+        0.0025667468091330396,
+        -2.6735789080137558
+      ],
+      "point": {
+        "xi": 222.00000000000003,
+        "x_mm": -4.341205800766989,
+        "alpha_r": 0.051334936182660794,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.735789080137558,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.4733499156300214e-13,
+        "left_residual": 8.0709874711343e-14,
+        "raw_MAC": 0.9992352248536113,
+        "border_error_r": -1.3340079525990605e-17,
+        "border_error_i": -1.6272874310822098e-17,
+        "native_bracket": [
+          222,
+          223
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.834445677582215,
+        0.5167672591602985,
+        0.19144714942853147
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0017.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0017.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 18,
+      "z": [
+        4.42,
+        0.017061293185265062,
+        -2.6678328419238078
+      ],
+      "point": {
+        "xi": 221.0,
+        "x_mm": -4.56841672770181,
+        "alpha_r": 0.3412258637053012,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.678328419238078,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 6.816439290157286e-13,
+        "left_residual": 6.389226746628839e-13,
+        "raw_MAC": 0.9992726005254392,
+        "border_error_r": 4.404965385562501e-13,
+        "border_error_i": 4.556606879997093e-13,
+        "native_bracket": [
+          221,
+          222
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.7262267905690355,
+        0.632560564482127,
+        0.2691872599545727
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0018.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0018.npy",
+      "step": 0.08,
+      "iterations": 3
+    },
+    {
+      "index": 19,
+      "z": [
+        4.4,
+        0.03681559675486731,
+        -2.659145554610263
+      ],
+      "point": {
+        "xi": 220.00000000000003,
+        "x_mm": -4.79543195886888,
+        "alpha_r": 0.7363119350973462,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.59145554610263,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 5.763026479488502e-13,
+        "left_residual": 5.189866670011723e-13,
+        "raw_MAC": 0.9993056152214096,
+        "border_error_r": 3.374175333405046e-13,
+        "border_error_i": 3.855950082625699e-13,
+        "native_bracket": [
+          220,
+          221
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.6272402839114288,
+        0.7087997300360316,
+        0.3227577558162756
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0019.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0019.npy",
+      "step": 0.08,
+      "iterations": 3
+    },
+    {
+      "index": 20,
+      "z": [
+        4.38,
+        0.06184872960855113,
+        -2.6475524369090824
+      ],
+      "point": {
+        "xi": 219.0,
+        "x_mm": -5.022241769691275,
+        "alpha_r": 1.2369745921710227,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.475524369090824,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 6.087195907139069e-13,
+        "left_residual": 5.429227026720047e-13,
+        "raw_MAC": 0.9993321031152269,
+        "border_error_r": 3.3299724574057614e-13,
+        "border_error_i": 4.282871157902707e-13,
+        "native_bracket": [
+          219,
+          220
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.5427392623474969,
+        0.7592628657257812,
+        0.3591016483342415
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0020.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0020.npy",
+      "step": 0.08,
+      "iterations": 3
+    },
+    {
+      "index": 21,
+      "z": [
+        4.36,
+        0.09282227293825775,
+        -2.6327221773296694
+      ],
+      "point": {
+        "xi": 218.00000000000003,
+        "x_mm": -5.248836444391576,
+        "alpha_r": 1.8564454587651549,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.327221773296692,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 8.791102182341815e-13,
+        "left_residual": 8.341214291797665e-13,
+        "raw_MAC": 0.9993500903507925,
+        "border_error_r": 4.671272046339963e-13,
+        "border_error_i": 6.910671071336589e-13,
+        "native_bracket": [
+          218,
+          219
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.4644226822390466,
+        0.7966322451470891,
+        0.38689615947150247
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0021.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0021.npy",
+      "step": 0.08,
+      "iterations": 3
+    },
+    {
+      "index": 22,
+      "z": [
+        4.34,
+        0.1306165421705242,
+        -2.6142353346454543
+      ],
+      "point": {
+        "xi": 217.0,
+        "x_mm": -5.475206276408081,
+        "alpha_r": 2.612330843410484,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -26.14235334645454,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.544615487058863e-13,
+        "left_residual": 2.279992651009044e-14,
+        "raw_MAC": 0.9993556966634942,
+        "border_error_r": -4.914718811008733e-17,
+        "border_error_i": 1.1224582689927632e-17,
+        "native_bracket": [
+          217,
+          218
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.3932949076461629,
+        0.8241669320436951,
+        0.40751439697914954
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0022.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0022.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 23,
+      "z": [
+        4.32,
+        0.17773104682830532,
+        -2.590762612817079
+      ],
+      "point": {
+        "xi": 216.0,
+        "x_mm": -5.701341568810608,
+        "alpha_r": 3.5546209365661063,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.90762612817079,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.799908860946226e-13,
+        "left_residual": 2.195676843659003e-14,
+        "raw_MAC": 0.9993416685867929,
+        "border_error_r": 3.286906800287123e-16,
+        "border_error_i": -2.9604149225211067e-16,
+        "native_bracket": [
+          216,
+          217
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.3189143867741659,
+        0.8467824375528442,
+        0.42573832028667674
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0023.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0023.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 24,
+      "z": [
+        4.3,
+        0.23976946341287603,
+        -2.5593352796216844
+      ],
+      "point": {
+        "xi": 215.0,
+        "x_mm": -5.927232634715867,
+        "alpha_r": 4.79538926825752,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.593352796216845,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.826532683003452e-13,
+        "left_residual": 4.238977438262664e-14,
+        "raw_MAC": 0.9992907550987173,
+        "border_error_r": 4.944321639110148e-16,
+        "border_error_i": 5.508556352939084e-16,
+        "native_bracket": [
+          215,
+          216
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.23551843567747494,
+        0.8653374603369567,
+        0.4424049572434977
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0024.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0024.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 25,
+      "z": [
+        4.284675110167045,
+        0.30963328403978596,
+        -2.523324927749373
+      ],
+      "point": {
+        "xi": 214.23375550835226,
+        "x_mm": -6.1001258679653265,
+        "alpha_r": 6.192665680795719,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.23324927749373,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.9143099068479815e-13,
+        "left_residual": 4.173344533794442e-14,
+        "raw_MAC": 0.9994516156615634,
+        "border_error_r": 1.8046713760741433e-16,
+        "border_error_i": 6.51864867864186e-18,
+        "native_bracket": [
+          214,
+          215
+        ],
+        "theta": 0.23375550835226022
+      },
+      "tangent": [
+        -0.14867286356017154,
+        0.8772358451487593,
+        0.4564577216204809
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0025.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0025.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 26,
+      "z": [
+        4.28,
+        0.34134700087708114,
+        -2.506751561731194
+      ],
+      "point": {
+        "xi": 214.0,
+        "x_mm": -6.152869797702406,
+        "alpha_r": 6.826940017541623,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -25.06751561731194,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.9078917305096466e-13,
+        "left_residual": 4.4773717089004343e-14,
+        "raw_MAC": 0.9999217780642411,
+        "border_error_r": 2.236472192086925e-16,
+        "border_error_i": -2.549510643232754e-16,
+        "native_bracket": [
+          214,
+          215
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        -0.11036901990908302,
+        0.8800320891374346,
+        0.46191146503709
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0026.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0026.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 27,
+      "z": [
+        4.274647677214204,
+        0.41194059209117107,
+        -2.4693347502291703
+      ],
+      "point": {
+        "xi": 213.73238386071017,
+        "x_mm": -6.213183408966456,
+        "alpha_r": 8.238811841823422,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -24.6933475022917,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.9158712847433844e-13,
+        "left_residual": 4.164868351777039e-14,
+        "raw_MAC": 0.9997215918895545,
+        "border_error_r": 1.5296548080944803e-16,
+        "border_error_i": 2.833482790590323e-17,
+        "native_bracket": [
+          213,
+          214
+        ],
+        "theta": 0.732383860710172
+      },
+      "tangent": [
+        -0.022937360399252198,
+        0.8811408223899365,
+        0.47229728838508184
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0027.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0027.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 28,
+      "z": [
+        4.27651814601949,
+        0.4823023545051576,
+        -2.431129401897539
+      ],
+      "point": {
+        "xi": 213.8259073009745,
+        "x_mm": -6.192105695061949,
+        "alpha_r": 9.646047090103153,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -24.311294018975392,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.7539317583972056e-13,
+        "left_residual": 3.494047596259127e-14,
+        "raw_MAC": 0.9998036341995998,
+        "border_error_r": -1.6172572613979569e-16,
+        "border_error_i": -9.242385623416781e-17,
+        "native_bracket": [
+          213,
+          214
+        ],
+        "theta": 0.8259073009745066
+      },
+      "tangent": [
+        0.07132824167817838,
+        0.8737347511077417,
+        0.4811443303685412
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0028.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0028.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 29,
+      "z": [
+        4.28,
+        0.5142773970203364,
+        -2.4133902873700253
+      ],
+      "point": {
+        "xi": 214.0,
+        "x_mm": -6.152869797702406,
+        "alpha_r": 10.285547940406728,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -24.13390287370025,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.8463874088642054e-13,
+        "left_residual": 3.8282655764336586e-14,
+        "raw_MAC": 0.9999599890942404,
+        "border_error_r": 9.696071170862678e-16,
+        "border_error_i": 1.1189007884956353e-14,
+        "native_bracket": [
+          214,
+          215
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.11930008473819959,
+        0.8668099170174888,
+        0.48415705875427717
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0029.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0029.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 30,
+      "z": [
+        4.2942156348336615,
+        0.5828041983371984,
+        -2.374344357428542
+      ],
+      "point": {
+        "xi": 214.71078174168306,
+        "x_mm": -5.9924910220064085,
+        "alpha_r": 11.656083966743969,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -23.743443574285422,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.7818610163668455e-13,
+        "left_residual": 3.6673358327932916e-14,
+        "raw_MAC": 0.9997511329421476,
+        "border_error_r": -2.967173472015089e-16,
+        "border_error_i": 5.2137425845587976e-17,
+        "native_bracket": [
+          214,
+          215
+        ],
+        "theta": 0.7107817416830642
+      },
+      "tangent": [
+        0.24005456332220015,
+        0.8385986895077979,
+        0.48900515803413747
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0030.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0030.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 31,
+      "z": [
+        4.3,
+        0.6013438330213822,
+        -2.363448013004808
+      ],
+      "point": {
+        "xi": 215.0,
+        "x_mm": -5.927232634715867,
+        "alpha_r": 12.026876660427643,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -23.63448013004808,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 3.2741225658899315e-13,
+        "left_residual": 1.6322098236572028e-13,
+        "raw_MAC": 0.9999695817791499,
+        "border_error_r": 1.0806265658879586e-14,
+        "border_error_i": 1.4816970784333683e-13,
+        "native_bracket": [
+          215,
+          216
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.2821080042491395,
+        0.8257304416702101,
+        0.48845093063447753
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0031.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0031.npy",
+      "step": 0.08,
+      "iterations": 3
+    },
+    {
+      "index": 32,
+      "z": [
+        4.32,
+        0.6480493262477892,
+        -2.3350764427032895
+      ],
+      "point": {
+        "xi": 216.0,
+        "x_mm": -5.701341568810608,
+        "alpha_r": 12.960986524955784,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -23.350764427032896,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.7363609904516e-13,
+        "left_residual": 6.70075944331843e-14,
+        "raw_MAC": 0.9996633373195571,
+        "border_error_r": 7.83611309262444e-17,
+        "border_error_i": -2.82690275359702e-17,
+        "native_bracket": [
+          216,
+          217
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.41358953586396785,
+        0.7720418591797645,
+        0.482592025937106
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0032.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0032.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 33,
+      "z": [
+        4.34,
+        0.6789642171881841,
+        -2.3151004536914788
+      ],
+      "point": {
+        "xi": 217.0,
+        "x_mm": -5.475206276408081,
+        "alpha_r": 13.579284343763682,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -23.151004536914787,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.7098941969520744e-13,
+        "left_residual": 6.385959265290813e-14,
+        "raw_MAC": 0.999633020636166,
+        "border_error_r": 6.188146466902992e-17,
+        "border_error_i": 2.378066071267053e-16,
+        "native_bracket": [
+          217,
+          218
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.550399989870486,
+        0.6933210840714984,
+        0.4651512931643761
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0033.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0033.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 34,
+      "z": [
+        4.36,
+        0.6995631051119332,
+        -2.3005890503985524
+      ],
+      "point": {
+        "xi": 218.00000000000003,
+        "x_mm": -5.248836444391576,
+        "alpha_r": 13.991262102238665,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -23.005890503985526,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.618737078828741e-13,
+        "left_residual": 6.274452710092018e-14,
+        "raw_MAC": 0.9995833835343777,
+        "border_error_r": -1.378327753168122e-16,
+        "border_error_i": 2.3655660333983617e-16,
+        "native_bracket": [
+          218,
+          219
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.6922614864277983,
+        0.5798737999776878,
+        0.4295583901033846
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0034.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0034.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 35,
+      "z": [
+        4.38,
+        0.7124376440661241,
+        -2.290196273659334
+      ],
+      "point": {
+        "xi": 219.0,
+        "x_mm": -5.022241769691275,
+        "alpha_r": 14.248752881322481,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -22.90196273659334,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 8.67817336792799e-13,
+        "left_residual": 8.329100319037155e-13,
+        "raw_MAC": 0.9995221507201031,
+        "border_error_r": 2.790326355618428e-14,
+        "border_error_i": 8.298589856362628e-13,
+        "native_bracket": [
+          219,
+          220
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.8508859787370249,
+        0.3873452399721712,
+        0.3549038126868128
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0035.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0035.npy",
+      "step": 0.08,
+      "iterations": 3
+    },
+    {
+      "index": 36,
+      "z": [
+        4.4,
+        0.7179730557322379,
+        -2.283716099249371
+      ],
+      "point": {
+        "xi": 220.00000000000003,
+        "x_mm": -4.79543195886888,
+        "alpha_r": 14.359461114644759,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -22.83716099249371,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 5.87817953360263e-13,
+        "left_residual": 5.265644934417761e-13,
+        "raw_MAC": 0.9994401306474211,
+        "border_error_r": 2.1482941326192546e-14,
+        "border_error_i": 5.215591571249742e-13,
+        "native_bracket": [
+          220,
+          221
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.9654257724871855,
+        0.11985646236926495,
+        0.23148975408394745
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0036.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0036.npy",
+      "step": 0.08,
+      "iterations": 3
+    },
+    {
+      "index": 37,
+      "z": [
+        4.42,
+        0.7168926562728324,
+        -2.2807930884324743
+      ],
+      "point": {
+        "xi": 221.0,
+        "x_mm": -4.56841672770181,
+        "alpha_r": 14.337853125456647,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -22.807930884324744,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 5.585007685564301e-13,
+        "left_residual": 5.047950265176266e-13,
+        "raw_MAC": 0.9993460478803288,
+        "border_error_r": 2.747817144611636e-14,
+        "border_error_i": 4.994730342366465e-13,
+        "native_bracket": [
+          221,
+          222
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.9774768667502801,
+        -0.20219015055002193,
+        0.0604823775046468
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0037.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0037.npy",
+      "step": 0.08,
+      "iterations": 3
+    },
+    {
+      "index": 38,
+      "z": [
+        4.44,
+        0.7090065301711354,
+        -2.281545236088533
+      ],
+      "point": {
+        "xi": 222.00000000000003,
+        "x_mm": -4.341205800766989,
+        "alpha_r": 14.180130603422707,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -22.81545236088533,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 6.69775682982583e-13,
+        "left_residual": 6.294226317027046e-13,
+        "raw_MAC": 0.9992328303875684,
+        "border_error_r": 4.6863872514793813e-14,
+        "border_error_i": 6.243942535465301e-13,
+        "native_bracket": [
+          222,
+          223
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.8833680976199109,
+        -0.4588722628486775,
+        -0.09537845928465027
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0038.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0038.npy",
+      "step": 0.08,
+      "iterations": 3
+    },
+    {
+      "index": 39,
+      "z": [
+        4.46,
+        0.6944765079440636,
+        -2.285929065667425
+      ],
+      "point": {
+        "xi": 223.0,
+        "x_mm": -4.113808911024319,
+        "alpha_r": 13.889530158881271,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -22.85929065667425,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.4290379552800764e-13,
+        "left_residual": 7.619727555950955e-14,
+        "raw_MAC": 0.9991107680274512,
+        "border_error_r": 2.837331929874065e-16,
+        "border_error_i": -3.609953943020249e-16,
+        "native_bracket": [
+          223,
+          224
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.7271124085649895,
+        -0.6480219669287448,
+        -0.22666070609750755
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0039.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0039.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 40,
+      "z": [
+        4.48,
+        0.6718650796252184,
+        -2.294766922560585
+      ],
+      "point": {
+        "xi": 224.00000000000003,
+        "x_mm": -3.88623579939972,
+        "alpha_r": 13.437301592504367,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -22.94766922560585,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.375386670539644e-13,
+        "left_residual": 6.44797476559314e-14,
+        "raw_MAC": 0.9989533638726175,
+        "border_error_r": 2.7358337365206803e-16,
+        "border_error_i": -6.976020728625653e-16,
+        "native_bracket": [
+          224,
+          225
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.5696894975813024,
+        -0.7583289697875164,
+        -0.31684546694968974
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0040.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0040.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 41,
+      "z": [
+        4.5,
+        0.6393846213362263,
+        -2.309115297990523
+      ],
+      "point": {
+        "xi": 225.0,
+        "x_mm": -3.6584962143678705,
+        "alpha_r": 12.787692426724526,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -23.09115297990523,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.3324528347821e-13,
+        "left_residual": 6.748240256655382e-14,
+        "raw_MAC": 0.9987567741799949,
+        "border_error_r": -1.593415785292633e-16,
+        "border_error_i": 7.684839312656509e-17,
+        "native_bracket": [
+          225,
+          226
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.44533245113627234,
+        -0.8142664407944307,
+        -0.3723562425432524
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0041.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0041.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 42,
+      "z": [
+        4.52,
+        0.5952340488589537,
+        -2.3300612307052453
+      ],
+      "point": {
+        "xi": 225.99999999999997,
+        "x_mm": -3.4305999115346193,
+        "alpha_r": 11.904680977179074,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -23.300612307052454,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.2164529349766074e-13,
+        "left_residual": 4.136390465887166e-14,
+        "raw_MAC": 0.998534323170384,
+        "border_error_r": 1.900497376523764e-16,
+        "border_error_i": -5.933507630002307e-18,
+        "native_bracket": [
+          226,
+          227
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.3309627500233692,
+        -0.8480757462937598,
+        -0.41380090218032517
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0042.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0042.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 43,
+      "z": [
+        4.54,
+        0.5329186756160336,
+        -2.3612955571033463
+      ],
+      "point": {
+        "xi": 227.0,
+        "x_mm": -3.2025566532190877,
+        "alpha_r": 10.658373512320672,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -23.612955571033464,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.2398559248260985e-13,
+        "left_residual": 3.9601583801209294e-14,
+        "raw_MAC": 0.9982033999977865,
+        "border_error_r": -3.814614156554929e-16,
+        "border_error_i": 5.083693415585514e-16,
+        "native_bracket": [
+          227,
+          228
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.23923321726353478,
+        -0.864464399179043,
+        -0.44211850256436286
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0043.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0043.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 44,
+      "z": [
+        4.555921855521326,
+        0.4633275325642437,
+        -2.397557096757064
+      ],
+      "point": {
+        "xi": 227.7960927760663,
+        "x_mm": -3.0209038491688096,
+        "alpha_r": 9.266550651284874,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -23.97557096757064,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.2242021938668991e-13,
+        "left_residual": 3.392637622945921e-14,
+        "raw_MAC": 0.9986010141395224,
+        "border_error_r": -1.3585107126297721e-16,
+        "border_error_i": 3.2001158224361965e-17,
+        "native_bracket": [
+          227,
+          228
+        ],
+        "theta": 0.7960927760663026
+      },
+      "tangent": [
+        0.16313536049638924,
+        -0.8718852398929837,
+        -0.46173908499548466
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0044.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0044.npy",
+      "step": 0.08,
+      "iterations": 4
+    },
+    {
+      "index": 45,
+      "z": [
+        4.56,
+        0.4400489017426443,
+        -2.4099429172589213
+      ],
+      "point": {
+        "xi": 227.99999999999997,
+        "x_mm": -2.9743762080354608,
+        "alpha_r": 8.800978034852886,
+        "alpha_i": 0.0,
+        "beta_r": -30.0,
+        "beta_i": 0.0,
+        "omega_r": -24.09942917258921,
+        "omega_i": 0.0,
+        "growth": 0.0,
+        "right_residual": 2.3760077047926975e-13,
+        "left_residual": 8.635144636508417e-14,
+        "raw_MAC": 0.9998898434103917,
+        "border_error_r": 2.5731083028891364e-14,
+        "border_error_i": 7.481372104384377e-14,
+        "native_bracket": [
+          228,
+          229
+        ],
+        "theta": 0.0
+      },
+      "tangent": [
+        0.15165163884275354,
+        -0.8721315351547788,
+        -0.4651756290100286
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/q0045.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/bluntplate_beta-30_c0_guide/p0045.npy",
+      "step": 0.08,
+      "iterations": 3
+    }
+  ],
+  "failures": [
+    {
+      "index": 8,
+      "step": 0.07647557156347652,
+      "reason": "AssertionError('Neutral corrector exits native interpolation cell')"
+    }
+  ],
+  "model": "Guide: native matrices and piecewise native-operator interpolation",
+  "closure": {
+    "passed": true,
+    "scaled_distance": 1.2881036577157742e-10,
+    "raw_MAC": 1.0000000000000004,
+    "method": "Actual corrected native-section return"
+  },
+  "finished": true
+}

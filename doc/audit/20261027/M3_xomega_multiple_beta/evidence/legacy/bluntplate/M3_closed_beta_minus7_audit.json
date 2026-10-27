@@ -1,0 +1,866 @@
+{
+  "created": "2026-10-24T22:08:27.434403+08:00",
+  "rows": 1571,
+  "point_kind_counts": {
+    "0": 1564,
+    "1": 6,
+    "2": 1
+  },
+  "unique_native_points": 1564,
+  "original_station_count": 702,
+  "first_last_physical_coordinates_exact": true,
+  "metadata_kind_intentionally_differs": true,
+  "all_beta_strictly_minus7": true,
+  "no_operator_guide_points_exported": true,
+  "curve_max_abs_temporal_imag": 1.4470690853809857e-11,
+  "curve_max_original_polynomial_residual": 3.655826280873645e-12,
+  "spatial_side_checks": [
+    {
+      "station": 119,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i119_p0_7a206740a348/out/neutral_field.plt",
+      "sha256": "71f4cef455ed6c940189a38d3da494ed00876f8dcc53627b1042b5c4a01e81f9",
+      "omega": [
+        7.296886843488886,
+        7.296886943488887,
+        7.296887043488887
+      ],
+      "growth": [
+        9.638695777053935e-08,
+        4.921807106595772e-11,
+        -9.628769099720613e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 174,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i174_p0_e9faa338a921/out/neutral_field.plt",
+      "sha256": "32d4fae9a3a4a0082375f51d7eb8c5934454fba79aaca4ec50c56a363d229105",
+      "omega": [
+        8.89737410190969,
+        8.89737420190969,
+        8.89737430190969
+      ],
+      "growth": [
+        7.199423021973e-08,
+        -6.044516937333161e-13,
+        -7.1994579934391e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 240,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i240_p0_05b4485caba1/out/neutral_field.plt",
+      "sha256": "56a655aea3fd8b46411132de4ef2d64757e7d4944740ca3632ee854c8b51eb7b",
+      "omega": [
+        5.783546864446558,
+        5.783546964446558,
+        5.783547064446559
+      ],
+      "growth": [
+        5.528603792893551e-08,
+        -1.85964997619842e-12,
+        -5.528962274220201e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 241,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i241_p0_2283f8b581f8/out/neutral_field.plt",
+      "sha256": "12f8c054e11b4bfb5b2f67eb50b546164537fe3efea2aa86559b806252f90f0d",
+      "omega": [
+        5.745190162898066,
+        5.745190262898066,
+        5.745190362898066
+      ],
+      "growth": [
+        5.540683446628072e-08,
+        -8.597114640593148e-14,
+        -5.540682259448037e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 321,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i321_p0_5771004fcf22/out/neutral_field.plt",
+      "sha256": "e60ba5ce154c5ceb0e731597de160dad6fdb73992cebc53a103cdfde6c756e83",
+      "omega": [
+        5.651368449788428,
+        5.651368549788428,
+        5.651368649788428
+      ],
+      "growth": [
+        4.163012699009144e-08,
+        3.731422444958601e-14,
+        -4.163005045556296e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 438,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i438_p0_97b2710beb90/out/neutral_field.plt",
+      "sha256": "e0612d70b28cf05a18f9011c9e759ec147de5f1d3de48044a7da477c3a29f049",
+      "omega": [
+        0.7342501005063321,
+        0.734250200506332,
+        0.734250300506332
+      ],
+      "growth": [
+        2.179362998934673e-08,
+        -3.569403589645843e-12,
+        -2.180090938700156e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 454,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i454_p0_e789bfcc33c7/out/neutral_field.plt",
+      "sha256": "84559c86f852a1fd18ed49f32f37bcc38ea1460e3c38fe23053a67fd2e229e1e",
+      "omega": [
+        0.01710787964869874,
+        0.01710797964869874,
+        0.01710807964869874
+      ],
+      "growth": [
+        1.954008074985591e-08,
+        -7.395653521611499e-14,
+        -1.954012582150482e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 478,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i478_p0_40fc811f9f16/out/neutral_field.plt",
+      "sha256": "aa098c96519e32153ae17f04e9ba9a94bd9ce0b05729261a6562d8da497ff6cf",
+      "omega": [
+        -0.8249055051960561,
+        -0.8249054051960562,
+        -0.8249053051960562
+      ],
+      "growth": [
+        1.708929676425012e-08,
+        -1.126126703616915e-13,
+        -1.708949033806975e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 577,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i577_p0_37e0828a2061/out/neutral_field.plt",
+      "sha256": "be50110a48cfdd5b2395611d9d6ced7422183685ce1f2f0b3458e601c0a52d59",
+      "omega": [
+        -3.39115625346157,
+        -3.391156153461571,
+        -3.391156053461571
+      ],
+      "growth": [
+        1.120434640123842e-08,
+        -1.133471659755606e-13,
+        -1.120438168936794e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 600,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i600_p0_482dcafcd2e4/out/neutral_field.plt",
+      "sha256": "e619de55491f41e5eda749907e728d77ed28dea042f0269bf34da9cbae12346c",
+      "omega": [
+        -4.030918377394038,
+        -4.030918277394037,
+        -4.030918177394037
+      ],
+      "growth": [
+        9.600909493452222e-09,
+        -4.433883896885162e-12,
+        -9.610133430506819e-09
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 617,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i617_p0_3f20df7a0cfb/out/neutral_field.plt",
+      "sha256": "a78fe03bf99ad9ae4b56bbd8c850630ea0e842102dfb66e5797eaed7ee3db9b6",
+      "omega": [
+        -4.752119997848982,
+        -4.752119897848981,
+        -4.752119797848981
+      ],
+      "growth": [
+        2.200307196844448e-09,
+        6.356978919268838e-14,
+        -2.200298508911044e-09
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 617,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i617_p1_dab8595d1ad1/out/neutral_field.plt",
+      "sha256": "dd92993bc6dcafde27f0325b67947bdb7b5eef6bf63e141fc71d991b261e62f1",
+      "omega": [
+        -4.944963323432273,
+        -4.944963223432272,
+        -4.944963123432272
+      ],
+      "growth": [
+        -2.38735781062927e-09,
+        -5.122157702177235e-14,
+        2.38728694103893e-09
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 600,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i600_p1_31bc055502b4/out/neutral_field.plt",
+      "sha256": "12aa3f9016742ff56c50f48e4079dd3e9880e62b4fe3e56f4df18229c478e52b",
+      "omega": [
+        -5.372047361719411,
+        -5.372047261719411,
+        -5.372047161719411
+      ],
+      "growth": [
+        -1.391323556494998e-08,
+        8.251489854340181e-14,
+        1.391326542889825e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 600,
+      "ordinal": 2,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i600_p2_5bb3281f74ef/out/neutral_field.plt",
+      "sha256": "542ac34af6dd25029454ae1351af1813e4dfd8df9c9cdd0df8b1526eac143442",
+      "omega": [
+        -5.714481550946707,
+        -5.714481450946707,
+        -5.714481350946707
+      ],
+      "growth": [
+        4.394860968117162e-08,
+        -2.192667446911664e-14,
+        -4.394866397377081e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 617,
+      "ordinal": 2,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i617_p2_8134c08579f2/out/neutral_field.plt",
+      "sha256": "a122fbd173b30dabcfc5c75f0fb8b88ca482ead97251f4557577e951db692f66",
+      "omega": [
+        -5.694163036335344,
+        -5.694162936335344,
+        -5.694162836335344
+      ],
+      "growth": [
+        7.058244035509985e-08,
+        -6.126616171669672e-14,
+        -7.058235205804033e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 650,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i650_p0_52b32e0f01a4/out/neutral_field.plt",
+      "sha256": "5d4f43c7be54f96c7c180381230f23f66ccb53d1778314bfaf001ede0d0aa6c1",
+      "omega": [
+        -5.644997318042972,
+        -5.644997218042971,
+        -5.644997118042971
+      ],
+      "growth": [
+        1.301708193070109e-07,
+        -1.345452392205916e-13,
+        -1.301707272622119e-07
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 700,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i700_p0_04bb6d69a485/out/neutral_field.plt",
+      "sha256": "3fa4925a60d0c85c71edcbfc091ca4dd67f98225ded669f4bd3bec557091af4e",
+      "omega": [
+        -5.579584500962116,
+        -5.579584400962116,
+        -5.579584300962115
+      ],
+      "growth": [
+        1.584322608006719e-07,
+        -1.035617729001021e-13,
+        -1.584326876557246e-07
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 711,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i711_p0_22829958d34a/out/neutral_field.plt",
+      "sha256": "5aedd15e09f5b0d4d462297cffbc05379e1a949b3b7cc834390e0903ec094fda",
+      "omega": [
+        -5.592020882121624,
+        -5.592020782121623,
+        -5.592020682121623
+      ],
+      "growth": [
+        4.021253273990305e-08,
+        -1.815445647955157e-13,
+        -4.021277770903453e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 711,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i711_p1_abe53d8e7551/out/neutral_field.plt",
+      "sha256": "567c22b0d4c14ee973dc1e1cba49f03fc795fd4fa82fd058f346441559213fe9",
+      "omega": [
+        -5.624205209005461,
+        -5.624205109005461,
+        -5.62420500900546
+      ],
+      "growth": [
+        -3.575337606716381e-08,
+        -4.908390072346664e-14,
+        3.575296021738892e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 700,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i700_p1_3839d2ee7ee3/out/neutral_field.plt",
+      "sha256": "7f3ff60499421103f503f40d20e778728ace76c860a67ad7dfd16c9aed593152",
+      "omega": [
+        -5.745152770939525,
+        -5.745152670939524,
+        -5.745152570939524
+      ],
+      "growth": [
+        -9.528497427954096e-08,
+        -6.314238286310506e-13,
+        9.528373055807823e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 650,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i650_p1_2b7ef187b711/out/neutral_field.plt",
+      "sha256": "13c7d557221563c5822c1efa83dff3c2d8a3cb83985789f68edd99f650e4c9d2",
+      "omega": [
+        -6.26687191548624,
+        -6.26687181548624,
+        -6.266871715486239
+      ],
+      "growth": [
+        -7.209040733703081e-08,
+        2.185020811319956e-14,
+        7.209025795462548e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 617,
+      "ordinal": 3,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i617_p3_fab2ef69ec45/out/neutral_field.plt",
+      "sha256": "0cff0ad8533d1d9af387430cfd9e39e03bbf5e0745dc74baf8eddf308e939d68",
+      "omega": [
+        -6.607812202831099,
+        -6.607812102831099,
+        -6.607812002831099
+      ],
+      "growth": [
+        -7.685599968378702e-08,
+        -1.169428189771531e-13,
+        7.68559879866386e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 600,
+      "ordinal": 3,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i600_p3_7df61212c9eb/out/neutral_field.plt",
+      "sha256": "8ab954e81cde799f7793ffe7a71b9c2cbe3296463a424f1764149d913327fbee",
+      "omega": [
+        -6.777603551133961,
+        -6.77760345113396,
+        -6.77760335113396
+      ],
+      "growth": [
+        -8.308447298741273e-08,
+        1.52813283232622e-14,
+        8.308458260421091e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 577,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i577_p1_64f81fcd7609/out/neutral_field.plt",
+      "sha256": "9966a382a7117276fd0e8b4991a7f5628d0731809bcd591fd863e657db4b0b3b",
+      "omega": [
+        -7.00803809070483,
+        -7.00803799070483,
+        -7.00803789070483
+      ],
+      "growth": [
+        -9.323002027487077e-08,
+        -4.393562202303819e-12,
+        9.322044829019662e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 478,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i478_p1_2165f799d8eb/out/neutral_field.plt",
+      "sha256": "a35adaaeaaa68a8e4da520c8ccda45de223df3036882c57f415977a2aa542bae",
+      "omega": [
+        -8.176442053057901,
+        -8.176441953057902,
+        -8.176441853057902
+      ],
+      "growth": [
+        -7.061429875882445e-08,
+        -7.953039170083132e-13,
+        7.061258850789533e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 454,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i454_p1_b3219bf5b0c9/out/neutral_field.plt",
+      "sha256": "37ba7829c364a137a061bf96711acf063958af4cfedf9d1cac45d68fb9205024",
+      "omega": [
+        -8.217172825776629,
+        -8.21717272577663,
+        -8.21717262577663
+      ],
+      "growth": [
+        -6.260385740303779e-08,
+        -4.776936960648993e-14,
+        6.260392438286876e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 454,
+      "ordinal": 2,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i454_p2_7e956e7d7869/out/neutral_field.plt",
+      "sha256": "81cfcb3afe0246dbb4bf97c884b30b6ba220a75bd51df0cf0d24b788530b3200",
+      "omega": [
+        -6.592717889056261,
+        -6.592717789056261,
+        -6.59271768905626
+      ],
+      "growth": [
+        3.817529624335606e-08,
+        2.086670928208434e-11,
+        -3.813351197840315e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 478,
+      "ordinal": 2,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i478_p2_54d187a80cf7/out/neutral_field.plt",
+      "sha256": "04e50503172aeefc4e5a2afb42b2865746766a7e6172b12e09413dac8a201bf8",
+      "omega": [
+        -6.131438035874273,
+        -6.131437935874273,
+        -6.131437835874273
+      ],
+      "growth": [
+        1.744039967249815e-09,
+        -1.028259810193533e-13,
+        -1.74405994716237e-09
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 478,
+      "ordinal": 3,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i478_p3_25d1d3727ed1/out/neutral_field.plt",
+      "sha256": "a9699a1134c943cac2d7d1932294d005e1e9ce57dbddff1b36c4d5d1f504d13d",
+      "omega": [
+        -6.108354879217598,
+        -6.108354779217597,
+        -6.108354679217597
+      ],
+      "growth": [
+        -1.673038425394464e-09,
+        2.467017291102043e-12,
+        1.678128957124612e-09
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 454,
+      "ordinal": 3,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i454_p3_af818588b7d9/out/neutral_field.plt",
+      "sha256": "115ca4e0c8714a957e5eb26f6645bdbdd26b33fc20686b4ddde789debf94c7b3",
+      "omega": [
+        -6.010251802984668,
+        -6.010251702984668,
+        -6.010251602984668
+      ],
+      "growth": [
+        -2.078284102207962e-08,
+        3.724417633031679e-14,
+        2.078287764813793e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 438,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i438_p1_e6b4a5893144/out/neutral_field.plt",
+      "sha256": "3b6f71901204f948ccf7049e82b56d15c03b663de64d7ef13adcc1f483c3ef97",
+      "omega": [
+        -5.981260073457693,
+        -5.981259973457693,
+        -5.981259873457692
+      ],
+      "growth": [
+        -2.40205352858875e-08,
+        -7.245357154165298e-14,
+        2.402048130719283e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 321,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i321_p1_8d8a82e413f2/out/neutral_field.plt",
+      "sha256": "50f5697145f0f7f8448d646973c04d5b5b6b01211be3853e2ee226dc0882f0b5",
+      "omega": [
+        -5.266568134709745,
+        -5.266568034709745,
+        -5.266567934709744
+      ],
+      "growth": [
+        -2.744465091910347e-08,
+        6.102834100864728e-13,
+        2.744588142401593e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 240,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i240_p1_df38ca0a1bad/out/neutral_field.plt",
+      "sha256": "3970868e55aa18ff02a09be376560f4bb432bcb293787448f015f53fac4b8732",
+      "omega": [
+        -4.186312945291276,
+        -4.186312845291276,
+        -4.186312745291276
+      ],
+      "growth": [
+        -2.380447410104531e-08,
+        -7.199428532326698e-14,
+        2.38044323714369e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 241,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i241_p1_b7e4668622da/out/neutral_field.plt",
+      "sha256": "ea1b53ce24f71ce3bd18f859bf5400de94c92f4874194da38f0910497bcdd580",
+      "omega": [
+        -4.195961036762804,
+        -4.195960936762804,
+        -4.195960836762803
+      ],
+      "growth": [
+        -2.39120592686116e-08,
+        -2.291244010060914e-14,
+        2.391209631714417e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 174,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i174_p1_f26370b03e93/out/neutral_field.plt",
+      "sha256": "d7c892c0531105c9dab5927ea80e9372f384911757d54fc88175a3313b8f2ca4",
+      "omega": [
+        -4.590377485208264,
+        -4.590377385208264,
+        -4.590377285208263
+      ],
+      "growth": [
+        -3.172464165401395e-08,
+        7.681268564650341e-14,
+        3.172485744595938e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 119,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i119_p1_041ecfa0ee66/out/neutral_field.plt",
+      "sha256": "5e6923c711242a2632bc62b487b24fda7228d3fc2fad36778fcb552234a8544b",
+      "omega": [
+        -4.67380166622369,
+        -4.673801566223689,
+        -4.673801466223689
+      ],
+      "growth": [
+        -4.755133422725386e-08,
+        1.049680717115064e-12,
+        4.75535494327131e-08
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 48,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i048_p0_c0ea24f1a2f2/out/neutral_field.plt",
+      "sha256": "9b5bf767200592531e044bebe2d7eb8ec326e577eabfc002b704799500f47ce4",
+      "omega": [
+        -4.698771699796752,
+        -4.698771599796752,
+        -4.698771499796751
+      ],
+      "growth": [
+        -1.432979942877046e-07,
+        5.369389351478659e-11,
+        1.434042122417856e-07
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 32,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i032_p0_9b7df5d08806/out/neutral_field.plt",
+      "sha256": "622db2c027a5d5fdd873f6ec669ff6ee02bea6db0003ab9c90fd4346b51c56d2",
+      "omega": [
+        -4.724568759856226,
+        -4.724568659856226,
+        -4.724568559856226
+      ],
+      "growth": [
+        -2.700133710144693e-07,
+        -1.750714553548599e-12,
+        2.700076936852325e-07
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 19,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i019_p0_bf2633b1fd6d/out/neutral_field.plt",
+      "sha256": "9471a0bdc07ac4da9399e836f6618634730f591c7174ec5a75d9e7f39d0f956d",
+      "omega": [
+        -4.76512704082876,
+        -4.76512694082876,
+        -4.76512684082876
+      ],
+      "growth": [
+        -9.536065932830026e-07,
+        5.094415599100397e-12,
+        9.536240237425431e-07
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 16,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i016_p0_2427485a3b45/out/neutral_field.plt",
+      "sha256": "4c6e3e6ffe4374dd23e8046c688c454cdc39a1770731c25504e9a342119d61b8",
+      "omega": [
+        -4.784126018343396,
+        -4.784125918343396,
+        -4.784125818343395
+      ],
+      "growth": [
+        -1.938793238559152e-06,
+        -1.187557681252246e-10,
+        1.938574781761643e-06
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 10,
+      "ordinal": 0,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i010_p0_59804600e6b9/out/neutral_field.plt",
+      "sha256": "fbaa82181dbeb68e7081be716f1b57f4a79e0fdad90d1a1166c2079ecfba1043",
+      "omega": [
+        -4.874919257460871,
+        -4.87491915746087,
+        -4.87491905746087
+      ],
+      "growth": [
+        -3.49274429599779e-06,
+        6.444165372677203e-12,
+        3.492838572817466e-06
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 10,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i010_p1_fac33b12b5c2/out/neutral_field.plt",
+      "sha256": "0ee5d17fb553e3d82d6d82a913cb095bd0a1bf176f31a9439762bfcaeb9f97e7",
+      "omega": [
+        -4.939735405349977,
+        -4.939735305349977,
+        -4.939735205349977
+      ],
+      "growth": [
+        1.504291263426488e-06,
+        1.548544600451303e-11,
+        -1.504254011023499e-06
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 16,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i016_p1_530a51f95fc0/out/neutral_field.plt",
+      "sha256": "bac103031d92e057a1469c1f1e0b20660b94db0b559bb4d7ddb1ca0c5b3bfd26",
+      "omega": [
+        -4.774375155904307,
+        -4.774375055904307,
+        -4.774374955904307
+      ],
+      "growth": [
+        1.321573994886586e-05,
+        7.063035997437368e-11,
+        -1.321559712714384e-05
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 19,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i019_p1_71c1afb2b135/out/neutral_field.plt",
+      "sha256": "02a6c84be0799a0840ba0ef7f67dc80e772b4c2d02b2d22cc5bc988f40fb1fe2",
+      "omega": [
+        -4.596693589639663,
+        -4.596693489639663,
+        -4.596693389639663
+      ],
+      "growth": [
+        4.415452738140863e-06,
+        -6.202433213908722e-11,
+        -4.415604287993319e-06
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 32,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i032_p1_9c17805434ea/out/neutral_field.plt",
+      "sha256": "d1224584b5571858dc7af96511495f6745220cef07a939a00e5050842cc3b754",
+      "omega": [
+        -3.338685198598216,
+        -3.338685098598216,
+        -3.338684998598216
+      ],
+      "growth": [
+        6.292443981524543e-07,
+        1.835560428694766e-11,
+        -6.292245484447774e-07
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 48,
+      "ordinal": 1,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i048_p1_a2b6e3a9ea56/out/neutral_field.plt",
+      "sha256": "8f21519490dfc47d88726810b87c896ded94daf387a3c19d1058132ef2f35097",
+      "omega": [
+        -1.204055039458324,
+        -1.204054939458324,
+        -1.204054839458324
+      ],
+      "growth": [
+        2.77498849688843e-07,
+        4.283537901945672e-12,
+        -2.774964669770206e-07
+      ],
+      "strict_sign_crossing": true
+    },
+    {
+      "station": 119,
+      "ordinal": 2,
+      "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_M3_beta_minus7_closed_20261024/runs/M3b7_native_fresh_i119_p2_a6d276deaef5/out/neutral_field.plt",
+      "sha256": "41b7566986628cc88ea004f74b27a35827e37f89d83c995d5403f5559e5d1197",
+      "omega": [
+        7.296886843540401,
+        7.296886943540401,
+        7.296887043540401
+      ],
+      "growth": [
+        9.633707880497852e-08,
+        5.90493934831799e-13,
+        -9.633650936510201e-08
+      ],
+      "strict_sign_crossing": true
+    }
+  ],
+  "strict_side_sign_crossings": 47,
+  "spatial_side_check_count": 47,
+  "source_inputs_unchanged": true,
+  "original_inputs": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/config.ini",
+      "sha256": "054b3a25f58b5a8cb85df99315a5697e416f828281b98fe01e07957da5c6f41f"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in/grid_vertical2d_N.h5",
+      "sha256": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M1/in/flow_vertical2d_N.h5",
+      "sha256": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M2/config.ini",
+      "sha256": "394f278eec398f94acc0bc564b77e1b3285279d205221fb555c3b3debc99b0a1"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M2/in/grid_vertical2d_N_uniform.h5",
+      "sha256": "cab6ccbced735d4ea746893e95a2b41b098389c9715aa64df2b73b1934e218de"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M2/in/flow_vertical2d_N_uniform.h5",
+      "sha256": "d66770ad1a04dfa58eefe3012aeca81cdb351e7d1ffb475882aaf24ce1a9154c"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/config.ini",
+      "sha256": "03b525f6300a306831d802c5b0753d48632dbda10872835cba5b3f54cac2ff6a"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/in/grid_vertical2d_N.h5",
+      "sha256": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/in/flow_vertical2d_N.h5",
+      "sha256": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86"
+    },
+    {
+      "path": "/home/zaza/start/START_ALL_IN_ONE/START_ALL_IN_ONE/bin/START_LST",
+      "sha256": "807169bb401e558d9509c11f75304e5694d1d8af6925660fca251e8bc29f469a"
+    }
+  ],
+  "solver_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+  "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c",
+  "python_syntax_passed": true
+}

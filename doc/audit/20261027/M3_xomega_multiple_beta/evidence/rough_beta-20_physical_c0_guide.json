@@ -1,0 +1,4301 @@
+{
+  "case": "rough",
+  "beta": -20.0,
+  "seed": {
+    "case": "rough",
+    "beta": -20.0,
+    "source_path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extended_frequencies_20261027/outputs/rough_f-110kHz_S_final.json",
+    "source": {
+      "case": "rough",
+      "kind": 0,
+      "xi": 15.0,
+      "x_mm": -31.22145520643922,
+      "x_flat_mm": -46.07961820643922,
+      "alpha_r": 27.160190719880138,
+      "alpha_i": 4.4638206064241765e-13,
+      "beta_r": -19.981850937940926,
+      "beta_i": 0.0,
+      "omega_r": -13.360130744717553,
+      "omega_i": 0.0,
+      "growth": -4.4638206064241765e-13,
+      "right_residual": 1.2443377025022188e-14,
+      "left_residual": 2.171974736709819e-14,
+      "raw_MAC": 1.0000000000000007,
+      "guide_index": 196,
+      "alpha_beta_i": 0.7480380300301992,
+      "guide_order": 196.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extended_frequencies_20261027/work/rough_f-110kHz_S_final/q0014.npy"
+    },
+    "status": "neutral_corrected",
+    "point": {
+      "xi": 15.0,
+      "x_mm": -31.22145520643922,
+      "alpha_r": 27.23207161688379,
+      "alpha_i": 0.0,
+      "beta_r": -20.0,
+      "beta_i": 0.0,
+      "omega_r": -13.369038244469715,
+      "omega_i": 0.0,
+      "growth": 0.0,
+      "right_residual": 1.801503379772801e-14,
+      "left_residual": 2.9314664046605135e-14,
+      "raw_MAC": 0.9999996458836371,
+      "border_error_r": -1.1191254061658615e-16,
+      "border_error_i": -1.1815833785349225e-16,
+      "native_bracket": [
+        15,
+        16
+      ],
+      "theta": 0.0
+    },
+    "z": [
+      0.3,
+      1.3616035808441895,
+      -1.3369038244469715
+    ],
+    "tangent": [
+      0.6429319697131682,
+      -0.6592082879517636,
+      0.38997809607265166
+    ],
+    "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/outputs/seed028_q.npy",
+    "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/outputs/seed028_p.npy",
+    "trace": [
+      {
+        "point": {
+          "xi": 15.0,
+          "x_mm": -31.22145520643922,
+          "alpha_r": 27.16019071988014,
+          "alpha_i": 0.0,
+          "beta_r": -20.0,
+          "beta_i": 0.0,
+          "omega_r": -13.360130744717553,
+          "omega_i": 0.0,
+          "growth": 0.0,
+          "right_residual": 6.206440326831964e-05,
+          "left_residual": 6.20656568064404e-05,
+          "raw_MAC": 0.9999481055939894,
+          "border_error_r": 6.184169962833886e-05,
+          "border_error_i": -5.2720249666123276e-06,
+          "native_bracket": [
+            15,
+            16
+          ],
+          "theta": 0.0
+        },
+        "F": [
+          6.184169962833886e-05,
+          -5.2720249666123276e-06,
+          0.0
+        ]
+      },
+      {
+        "point": {
+          "xi": 15.0,
+          "x_mm": -31.22145520643922,
+          "alpha_r": 27.23330018983924,
+          "alpha_i": 0.0,
+          "beta_r": -20.0,
+          "beta_i": 0.0,
+          "omega_r": -13.368944661041997,
+          "omega_i": 0.0,
+          "growth": 0.0,
+          "right_residual": 1.2601589287421885e-07,
+          "left_residual": 1.2601587882218713e-07,
+          "raw_MAC": 0.9999996318908689,
+          "border_error_r": -1.1352826126934583e-07,
+          "border_error_i": -5.469318982975399e-08,
+          "native_bracket": [
+            15,
+            16
+          ],
+          "theta": 0.0
+        },
+        "F": [
+          -1.1352826126934583e-07,
+          -5.469318982975399e-08,
+          0.0
+        ]
+      },
+      {
+        "point": {
+          "xi": 15.0,
+          "x_mm": -31.22145520643922,
+          "alpha_r": 27.23207155997865,
+          "alpha_i": 0.0,
+          "beta_r": -20.0,
+          "beta_i": 0.0,
+          "omega_r": -13.369038248269955,
+          "omega_i": 0.0,
+          "growth": 0.0,
+          "right_residual": 7.643577193356327e-12,
+          "left_residual": 7.643700861885987e-12,
+          "raw_MAC": 0.9999996458843372,
+          "border_error_r": 7.313886419573772e-12,
+          "border_error_i": 2.2206694111774304e-12,
+          "native_bracket": [
+            15,
+            16
+          ],
+          "theta": 0.0
+        },
+        "F": [
+          7.313886419573772e-12,
+          2.2206694111774304e-12,
+          0.0
+        ]
+      },
+      {
+        "point": {
+          "xi": 15.0,
+          "x_mm": -31.22145520643922,
+          "alpha_r": 27.23207161688379,
+          "alpha_i": 0.0,
+          "beta_r": -20.0,
+          "beta_i": 0.0,
+          "omega_r": -13.369038244469715,
+          "omega_i": 0.0,
+          "growth": 0.0,
+          "right_residual": 1.801503379772801e-14,
+          "left_residual": 2.9314664046605135e-14,
+          "raw_MAC": 0.9999996458836371,
+          "border_error_r": -1.1191254061658615e-16,
+          "border_error_i": -1.1815833785349225e-16,
+          "native_bracket": [
+            15,
+            16
+          ],
+          "theta": 0.0
+        },
+        "F": [
+          -1.1191254061658615e-16,
+          -1.1815833785349225e-16,
+          0.0
+        ]
+      }
+    ],
+    "jacobian_relative_error": 5.0962373432201656e-05
+  },
+  "scale": [
+    50.0,
+    20.0
+  ],
+  "status": "closed_verified",
+  "records": [
+    {
+      "index": 0,
+      "z": [
+        0.3,
+        1.3616035808441895
+      ],
+      "point": {
+        "value_r": -13.369038244469731,
+        "value_i": 3.433555194192454e-14,
+        "raw_MAC": 1.0,
+        "right_residual": 1.214737589716523e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.003907350997906178,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.2601557726705267e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 15.0,
+        "x_mm": -31.22145520643922,
+        "alpha_r": 27.23207161688379,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.369038244469731,
+        "omega_i": 3.433555194192454e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.014887275215845961,
+        "omega_xi_i": 0.016930737949460577,
+        "original_real_frequency_polynomial_residual": 1.8918100887943846e-14
+      },
+      "tangent": [
+        0.33179706276972865,
+        -0.9433507879560925
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0000.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0000.npy"
+    },
+    {
+      "index": 1,
+      "z": [
+        0.3049747559202924,
+        1.347452545229353
+      ],
+      "point": {
+        "value_r": -13.356523273478555,
+        "value_i": 3.728710529029346e-14,
+        "raw_MAC": 0.9999999999999997,
+        "right_residual": 1.2219929726591342e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0048747230030130595,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.175633809728483e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 15.24873779601462,
+        "x_mm": -31.083608474971236,
+        "alpha_r": 26.94905090458706,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.356523273478555,
+        "omega_i": 3.728710529029346e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.015356488691127287,
+        "omega_xi_i": 0.017471174255835158,
+        "original_real_frequency_polynomial_residual": 2.0113874302951535e-14
+      },
+      "tangent": [
+        0.33168183730805784,
+        -0.9433913073586967
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0001.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0001.npy"
+    },
+    {
+      "index": 2,
+      "z": [
+        0.3107042391629122,
+        1.3311818478511483
+      ],
+      "point": {
+        "value_r": -13.343418932344328,
+        "value_i": -5.75019888861209e-14,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 1.2378683659982385e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.003700071989442222,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.1930431549139915e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 15.53521195814561,
+        "x_mm": -30.924848819090613,
+        "alpha_r": 26.623636957022967,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.343418932344328,
+        "omega_i": -5.75019888861209e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.015888252267326496,
+        "omega_xi_i": 0.018005928199562815,
+        "original_real_frequency_polynomial_residual": 2.7698825813558526e-14
+      },
+      "tangent": [
+        0.33283257161698776,
+        -0.9429859380026951
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0002.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0002.npy"
+    },
+    {
+      "index": 3,
+      "z": [
+        0.31733371935342664,
+        1.3124848637825939
+      ],
+      "point": {
+        "value_r": -13.329769727972527,
+        "value_i": -2.96657573865304e-14,
+        "raw_MAC": 1.0,
+        "right_residual": 1.2529297559379381e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0037089639954501763,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.4346367090496523e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 15.866685967671332,
+        "x_mm": -30.741150927126412,
+        "alpha_r": 26.249697275651876,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.329769727972527,
+        "omega_i": -2.96657573865304e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.0164888359962363,
+        "omega_xi_i": 0.01849753888990137,
+        "original_real_frequency_polynomial_residual": 1.7811498426993407e-14
+      },
+      "tangent": [
+        0.3358518002454727,
+        -0.9419148413056646
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0003.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0003.npy"
+    },
+    {
+      "index": 4,
+      "z": [
+        0.32,
+        1.3050281316832901
+      ],
+      "point": {
+        "value_r": -13.324673704871412,
+        "value_i": 7.528381714753366e-12,
+        "raw_MAC": 0.9999999999894269,
+        "right_residual": 8.710862763967015e-11,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.003285922997747548,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.4070203831500167e-12,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 16.0,
+        "x_mm": -30.66727030299222,
+        "alpha_r": 26.100562633665803,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.324673704871412,
+        "omega_i": 7.528381714753366e-12,
+        "growth": 0.0,
+        "omega_alpha_i": 0.01672518793745787,
+        "omega_xi_i": 0.013932230994130317,
+        "original_real_frequency_polynomial_residual": 8.759958317587677e-11
+      },
+      "tangent": [
+        0.4328680147307929,
+        -0.9014573100391511
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0004.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0004.npy"
+    },
+    {
+      "index": 5,
+      "z": [
+        0.3310871506799376,
+        1.281249056836736
+      ],
+      "point": {
+        "value_r": -13.293155830107859,
+        "value_i": 6.483784898116132e-13,
+        "raw_MAC": 0.9999999999991964,
+        "right_residual": 1.4055070200730431e-12,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00601271000050474,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.443336291639019e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 16.554357533996882,
+        "x_mm": -30.340342359240065,
+        "alpha_r": 25.62498113673472,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.293155830107859,
+        "omega_i": 6.483784898116132e-13,
+        "growth": 0.0,
+        "omega_alpha_i": 0.017518066826870755,
+        "omega_xi_i": 0.015387957698444336,
+        "original_real_frequency_polynomial_residual": 1.4166427094604833e-12
+      },
+      "tangent": [
+        0.41442536802609947,
+        -0.9100833007678101
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0005.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0005.npy"
+    },
+    {
+      "index": 6,
+      "z": [
+        0.34,
+        1.2614498190131591
+      ],
+      "point": {
+        "value_r": -13.27217073596786,
+        "value_i": -8.568570608659907e-15,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 1.2242666966766375e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.004085285007022321,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.054410205080019e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 17.0,
+        "x_mm": -30.077528261615015,
+        "alpha_r": 25.228996380263183,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.27217073596786,
+        "omega_i": -8.568570608659907e-15,
+        "growth": 0.0,
+        "omega_alpha_i": 0.018145432603528504,
+        "omega_xi_i": 0.011359010046312075,
+        "original_real_frequency_polynomial_residual": 1.2762089721469449e-14
+      },
+      "tangent": [
+        0.5384434181575865,
+        -0.8426616672441999
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0006.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0006.npy"
+    },
+    {
+      "index": 7,
+      "z": [
+        0.35755111855897326,
+        1.2314904317568782
+      ],
+      "point": {
+        "value_r": -13.220066352830575,
+        "value_i": -4.632755588581381e-15,
+        "raw_MAC": 1.0,
+        "right_residual": 1.2682947510263213e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.004652078991057351,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.158612015795364e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 17.877555927948663,
+        "x_mm": -29.529468431892084,
+        "alpha_r": 24.629808635137564,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.220066352830575,
+        "omega_i": -4.632755588581381e-15,
+        "growth": 0.0,
+        "omega_alpha_i": 0.01911813732992995,
+        "omega_xi_i": 0.013920776732847799,
+        "original_real_frequency_polynomial_residual": 1.2814150857499354e-14
+      },
+      "tangent": [
+        0.4814753167432364,
+        -0.876459650735275
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0007.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0007.npy"
+    },
+    {
+      "index": 8,
+      "z": [
+        0.36,
+        1.2270052900038315
+      ],
+      "point": {
+        "value_r": -13.214121847874239,
+        "value_i": 3.4258230869871216e-14,
+        "raw_MAC": 1.0,
+        "right_residual": 1.296090770508905e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.004366893001133576,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.1807916459624465e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 18.0,
+        "x_mm": -29.452998459846082,
+        "alpha_r": 24.54010580007663,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.214121847874239,
+        "omega_i": 3.4258230869871216e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.01925343961987138,
+        "omega_xi_i": 0.009080765418682189,
+        "original_real_frequency_polynomial_residual": 1.9485004789186368e-14
+      },
+      "tangent": [
+        0.6468057408897276,
+        -0.7626547931745334
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0008.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0008.npy"
+    },
+    {
+      "index": 9,
+      "z": [
+        0.38,
+        1.1994852517338337
+      ],
+      "point": {
+        "value_r": -13.151642169058382,
+        "value_i": -4.94739525173189e-13,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 1.258038016577066e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006018363987095654,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.8300535748179847e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 19.0,
+        "x_mm": -28.794523976877734,
+        "alpha_r": 23.989705034676675,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.151642169058382,
+        "omega_i": -4.94739525173189e-13,
+        "growth": 0.0,
+        "omega_alpha_i": 0.02011242264544251,
+        "omega_xi_i": 0.007000629924016889,
+        "original_real_frequency_polynomial_residual": 2.1178671142379596e-13
+      },
+      "tangent": [
+        0.7543731058578137,
+        -0.6564458981198952
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0009.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0009.npy"
+    },
+    {
+      "index": 10,
+      "z": [
+        0.4,
+        1.17754644083987
+      ],
+      "point": {
+        "value_r": -13.085039849487792,
+        "value_i": -3.7756688577568163e-13,
+        "raw_MAC": 1.0,
+        "right_residual": 1.1990258812480793e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.004206254001474008,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.769344512899125e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 20.0,
+        "x_mm": -28.103013880512695,
+        "alpha_r": 23.5509288167974,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.085039849487792,
+        "omega_i": -3.7756688577568163e-13,
+        "growth": 0.0,
+        "omega_alpha_i": 0.020762031220399064,
+        "omega_xi_i": 0.00526429520580404,
+        "original_real_frequency_polynomial_residual": 1.608514643680536e-13
+      },
+      "tangent": [
+        0.8446084333069727,
+        -0.5353845294615274
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0010.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0010.npy"
+    },
+    {
+      "index": 11,
+      "z": [
+        0.42,
+        1.1598075799166765
+      ],
+      "point": {
+        "value_r": -13.015967935633533,
+        "value_i": -1.640619804950504e-13,
+        "raw_MAC": 1.0000000000000022,
+        "right_residual": 1.213453537912601e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.004034272002172656,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.98354933549624e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 21.0,
+        "x_mm": -27.379443985654948,
+        "alpha_r": 23.19615159833353,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.015967935633533,
+        "omega_i": -1.640619804950504e-13,
+        "growth": 0.0,
+        "omega_alpha_i": 0.021226378898900042,
+        "omega_xi_i": 0.0034232135569407813,
+        "original_real_frequency_polynomial_residual": 6.993882664513893e-14
+      },
+      "tangent": [
+        0.9274564719859484,
+        -0.37393113346093265
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0011.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0011.npy"
+    },
+    {
+      "index": 12,
+      "z": [
+        0.44,
+        1.1461861296938725
+      ],
+      "point": {
+        "value_r": -12.942505069864632,
+        "value_i": -2.2113143594614234e-14,
+        "raw_MAC": 0.9999999999999973,
+        "right_residual": 1.2314519214059629e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0034308379981666803,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.8852064347618892e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 22.0,
+        "x_mm": -26.62485124471571,
+        "alpha_r": 22.92372259387745,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.942505069864632,
+        "omega_i": -2.2113143594614234e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.02152926535095892,
+        "omega_xi_i": 0.0016926628416535213,
+        "original_real_frequency_polynomial_residual": 1.556390740903799e-14
+      },
+      "tangent": [
+        0.9812255890625983,
+        -0.1928635356119887
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0012.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0012.npy"
+    },
+    {
+      "index": 13,
+      "z": [
+        0.46,
+        1.13626582329442
+      ],
+      "point": {
+        "value_r": -12.864016245147717,
+        "value_i": 5.207888244226158e-14,
+        "raw_MAC": 0.9999999999999993,
+        "right_residual": 1.1540807341215913e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0035342640039743856,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.7847925019023276e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 23.0,
+        "x_mm": -25.84032609438634,
+        "alpha_r": 22.7253164658884,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.864016245147717,
+        "omega_i": 5.207888244226158e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.021686867524218025,
+        "omega_xi_i": -1.2719033521663134e-06,
+        "original_real_frequency_polynomial_residual": 2.4349733167218114e-14
+      },
+      "tangent": [
+        0.999999989251086,
+        0.00014662137547923664
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0013.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0013.npy"
+    },
+    {
+      "index": 14,
+      "z": [
+        0.48,
+        1.1299137086459217
+      ],
+      "point": {
+        "value_r": -12.779112979454972,
+        "value_i": -3.8770881157490016e-14,
+        "raw_MAC": 1.0,
+        "right_residual": 1.1349055474812895e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0034289270115550607,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.643439903339757e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 24.0,
+        "x_mm": -25.02701070508007,
+        "alpha_r": 22.598274172918433,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.779112979454972,
+        "omega_i": -3.8770881157490016e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.021712802017251766,
+        "omega_xi_i": -0.0016535323757697084,
+        "original_real_frequency_polynomial_residual": 1.9599291303797114e-14
+      },
+      "tangent": [
+        0.9823547031102958,
+        0.18702737039557274
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0014.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0014.npy"
+    },
+    {
+      "index": 15,
+      "z": [
+        0.5,
+        1.1269264048585885
+      ],
+      "point": {
+        "value_r": -12.687250604705854,
+        "value_i": -8.832668546945132e-14,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 1.0472999293094693e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.003349981998326257,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.5998340412143315e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 25.0,
+        "x_mm": -24.18609204936335,
+        "alpha_r": 22.53852809717177,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.687250604705854,
+        "omega_i": -8.832668546945132e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.02159904257859168,
+        "omega_xi_i": -0.0033659258966660015,
+        "original_real_frequency_polynomial_residual": 3.7463562705901145e-14
+      },
+      "tangent": [
+        0.9317831800935434,
+        0.36301529622698153
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0015.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0015.npy"
+    },
+    {
+      "index": 16,
+      "z": [
+        0.52,
+        1.1273084734489003
+      ],
+      "point": {
+        "value_r": -12.587673272278561,
+        "value_i": -1.5479435877186677e-14,
+        "raw_MAC": 0.9999999999999993,
+        "right_residual": 1.0454625853608853e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0038479760114569217,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.7844121205079834e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 26.0,
+        "x_mm": -23.318794701727846,
+        "alpha_r": 22.546169468978007,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.587673272278561,
+        "omega_i": -1.5479435877186677e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.02134354519268819,
+        "omega_xi_i": -0.004761863799127977,
+        "original_real_frequency_polynomial_residual": 1.2231624407557702e-14
+      },
+      "tangent": [
+        0.8733372674241557,
+        0.4871160203977168
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0016.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0016.npy"
+    },
+    {
+      "index": 17,
+      "z": [
+        0.54,
+        1.130409173550528
+      ],
+      "point": {
+        "value_r": -12.481241111305348,
+        "value_i": 2.250894719534925e-13,
+        "raw_MAC": 0.9999999999999509,
+        "right_residual": 3.925191858369626e-13,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0030883159924997017,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.7995731380874292e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 27.0,
+        "x_mm": -22.426376035753652,
+        "alpha_r": 22.60818347101056,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.481241111305348,
+        "omega_i": 2.250894719534925e-13,
+        "growth": 0.0,
+        "omega_alpha_i": 0.02097085737111602,
+        "omega_xi_i": -0.007297042713264016,
+        "original_real_frequency_polynomial_residual": 4.139492061805437e-13
+      },
+      "tangent": [
+        0.7544794059890062,
+        0.6563237203838335
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0017.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0017.npy"
+    },
+    {
+      "index": 18,
+      "z": [
+        0.56,
+        1.1391160586520075
+      ],
+      "point": {
+        "value_r": -12.354683002248306,
+        "value_i": 2.9554815473615713e-12,
+        "raw_MAC": 0.9999999999993037,
+        "right_residual": 5.640973283636068e-12,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.003402828995604068,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.1326228961235265e-13,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 28.000000000000004,
+        "x_mm": -21.510118133138885,
+        "alpha_r": 22.78232117304015,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.354683002248306,
+        "omega_i": 2.9554815473615713e-12,
+        "growth": 0.0,
+        "omega_alpha_i": 0.020437847468452452,
+        "omega_xi_i": -0.007628741100831624,
+        "original_real_frequency_polynomial_residual": 5.903524409852682e-12
+      },
+      "tangent": [
+        0.7311172111496005,
+        0.6822518769199765
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0018.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0018.npy"
+    },
+    {
+      "index": 19,
+      "z": [
+        0.58,
+        1.14838087573641
+      ],
+      "point": {
+        "value_r": -12.226429978529696,
+        "value_i": 8.86001182334125e-15,
+        "raw_MAC": 0.9999999999999996,
+        "right_residual": 1.0973437797454205e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.004806256998563185,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.5831951619378948e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 28.999999999999996,
+        "x_mm": -20.571322552001888,
+        "alpha_r": 22.9676175147282,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.226429978529696,
+        "omega_i": 8.86001182334125e-15,
+        "growth": 0.0,
+        "omega_alpha_i": 0.019853023902455347,
+        "omega_xi_i": -0.01613993540057453,
+        "original_real_frequency_polynomial_residual": 1.1364933431265025e-14
+      },
+      "tangent": [
+        0.44147795886365904,
+        0.8972720946499881
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0019.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0019.npy"
+    },
+    {
+      "index": 20,
+      "z": [
+        0.6,
+        1.1767030563527179
+      ],
+      "point": {
+        "value_r": -12.020788486278438,
+        "value_i": 1.472565496485536e-14,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 1.0398884187471607e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.004062566993525252,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.5616909861947554e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 30.0,
+        "x_mm": -19.611301409140335,
+        "alpha_r": 23.534061127054358,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.020788486278438,
+        "omega_i": 1.472565496485536e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.0187399443420527,
+        "omega_xi_i": -0.016631035480321823,
+        "original_real_frequency_polynomial_residual": 1.1863639808260125e-14
+      },
+      "tangent": [
+        0.4109121771628555,
+        0.9116749325605493
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0020.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0020.npy"
+    },
+    {
+      "index": 21,
+      "z": [
+        0.62,
+        1.2094911962027073
+      ],
+      "point": {
+        "value_r": -11.786744601362628,
+        "value_i": -1.6672055357933313e-14,
+        "raw_MAC": 0.9999999999999992,
+        "right_residual": 9.439415838603378e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.003308754996396601,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.3856389576312117e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 31.0,
+        "x_mm": -18.631370975744456,
+        "alpha_r": 24.189823924054146,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -11.786744601362628,
+        "omega_i": -1.6672055357933313e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.017549047756100184,
+        "omega_xi_i": -0.02551220741381271,
+        "original_real_frequency_polynomial_residual": 1.1393915770494137e-14
+      },
+      "tangent": [
+        0.26528866194320644,
+        0.9641690338547402
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0021.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0021.npy"
+    },
+    {
+      "index": 22,
+      "z": [
+        0.6430710034799012,
+        1.26537302030747
+      ],
+      "point": {
+        "value_r": -11.429647774900358,
+        "value_i": -3.3120165654798857e-15,
+        "raw_MAC": 0.9999999999999976,
+        "right_residual": 9.748740976417594e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006518021007650532,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.4881912541075074e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 32.15355017399506,
+        "x_mm": -17.476867403325972,
+        "alpha_r": 25.3074604061494,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -11.429647774900358,
+        "omega_i": -3.3120165654798857e-15,
+        "growth": 0.0,
+        "omega_alpha_i": 0.015465275889689052,
+        "omega_xi_i": -0.0228917521649853,
+        "original_real_frequency_polynomial_residual": 9.816223205747908e-15
+      },
+      "tangent": [
+        0.2608756318393686,
+        0.9653724176256593
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0022.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0022.npy"
+    },
+    {
+      "index": 23,
+      "z": [
+        0.6542495854595348,
+        1.29342828671917
+      ],
+      "point": {
+        "value_r": -11.252129366039178,
+        "value_i": 7.705501631332082e-13,
+        "raw_MAC": 0.9999999999995854,
+        "right_residual": 9.227985912237196e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.009123997006099671,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.3864402159834014e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 32.71247927297674,
+        "x_mm": -16.909098594388304,
+        "alpha_r": 25.8685657343834,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -11.252129366039178,
+        "omega_i": 7.705501631332082e-13,
+        "growth": 0.0,
+        "omega_alpha_i": 0.014234363087512957,
+        "omega_xi_i": -0.006835907529468035,
+        "original_real_frequency_polynomial_residual": 2.9991089595775363e-13
+      },
+      "tangent": [
+        0.6399956949891307,
+        0.7683784942301416
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0023.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0023.npy"
+    },
+    {
+      "index": 24,
+      "z": [
+        0.66,
+        1.2962076143037522
+      ],
+      "point": {
+        "value_r": -11.213417776929862,
+        "value_i": 1.3225515966355862e-14,
+        "raw_MAC": 0.9999999999999996,
+        "right_residual": 9.964682640097067e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007324103004066274,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.4631767009218216e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 33.0,
+        "x_mm": -16.617030600389956,
+        "alpha_r": 25.924152286075042,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -11.213417776929862,
+        "omega_i": 1.3225515966355862e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.013932624481649598,
+        "omega_xi_i": -0.030168260398624736,
+        "original_real_frequency_polynomial_residual": 1.1075291163085125e-14
+      },
+      "tangent": [
+        0.1816585853581094,
+        0.9833616620377726
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0024.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0024.npy"
+    },
+    {
+      "index": 25,
+      "z": [
+        0.666068671425,
+        1.3255941308311998
+      ],
+      "point": {
+        "value_r": -11.050957492790127,
+        "value_i": 7.200583785012462e-15,
+        "raw_MAC": 0.9999999999999977,
+        "right_residual": 1.0141846591783596e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00800616700144019,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.459209966305388e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 33.303433571250004,
+        "x_mm": -16.303942585729878,
+        "alpha_r": 26.511882616623996,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -11.050957492790127,
+        "omega_i": 7.200583785012462e-15,
+        "growth": 0.0,
+        "omega_alpha_i": 0.012778558915921374,
+        "omega_xi_i": -0.02145829429946916,
+        "original_real_frequency_polynomial_residual": 1.0497849750778618e-14
+      },
+      "tangent": [
+        0.23171945183460516,
+        0.9727826559111085
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0025.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0025.npy"
+    },
+    {
+      "index": 26,
+      "z": [
+        0.6801792418040455,
+        1.3576982253860554
+      ],
+      "point": {
+        "value_r": -10.838562825146385,
+        "value_i": -2.223663798878235e-14,
+        "raw_MAC": 0.9999999999999984,
+        "right_residual": 9.634712808002351e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008005961004528217,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.3468584741206e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 34.008962090202274,
+        "x_mm": -15.575833956780455,
+        "alpha_r": 27.15396450772111,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -10.838562825146385,
+        "omega_i": -2.223663798878235e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.011119839887722627,
+        "omega_xi_i": -0.034631600144522566,
+        "original_real_frequency_polynomial_residual": 1.2697160100186213e-14
+      },
+      "tangent": [
+        0.12738936837985299,
+        0.9918527858627924
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0026.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0026.npy"
+    },
+    {
+      "index": 27,
+      "z": [
+        0.6847086849520164,
+        1.3918998706118222
+      ],
+      "point": {
+        "value_r": -10.658140313161104,
+        "value_i": 3.183005408951502e-14,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 9.388652534038338e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007886324005085044,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.340051548154982e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 34.23543424760082,
+        "x_mm": -15.338818335976558,
+        "alpha_r": 27.837997412236444,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -10.658140313161104,
+        "omega_i": 3.183005408951502e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.00971655041007334,
+        "omega_xi_i": -0.028236283363770178,
+        "original_real_frequency_polynomial_residual": 1.476373756581493e-14
+      },
+      "tangent": [
+        0.13636059125401656,
+        0.9906592699575647
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0027.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0027.npy"
+    },
+    {
+      "index": 28,
+      "z": [
+        0.6897347701008393,
+        1.4260333422128724
+      ],
+      "point": {
+        "value_r": -10.475512864507067,
+        "value_i": -1.2198171780879673e-14,
+        "raw_MAC": 1.000000000000001,
+        "right_residual": 9.033152320990312e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008309661992825568,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.3291816323510744e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 34.48673850504196,
+        "x_mm": -15.075814550998013,
+        "alpha_r": 28.52066684425745,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -10.475512864507067,
+        "omega_i": -1.2198171780879673e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.008220387289993476,
+        "omega_xi_i": -0.020425584823837526,
+        "original_real_frequency_polynomial_residual": 9.951114571290503e-15
+      },
+      "tangent": [
+        0.15893590743234315,
+        0.9872889026666194
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0028.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0028.npy"
+    },
+    {
+      "index": 29,
+      "z": [
+        0.6965222062325002,
+        1.4598848648918028
+      ],
+      "point": {
+        "value_r": -10.28515113072136,
+        "value_i": -1.7298147884326932e-14,
+        "raw_MAC": 1.0,
+        "right_residual": 8.558112477019763e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007868476997828111,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.4360310410198286e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 34.82611031162501,
+        "x_mm": -14.720643211860425,
+        "alpha_r": 29.197697297836058,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -10.28515113072136,
+        "omega_i": -1.7298147884326932e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.006600151288864816,
+        "omega_xi_i": -0.009124051462479065,
+        "original_real_frequency_polynomial_residual": 1.0561953809121026e-14
+      },
+      "tangent": [
+        0.2779500263812476,
+        0.9605955355063147
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0029.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0029.npy"
+    },
+    {
+      "index": 30,
+      "z": [
+        0.7,
+        1.468343021443166
+      ],
+      "point": {
+        "value_r": -10.228595927649879,
+        "value_i": 1.1907268218151477e-15,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 8.863310797917726e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0069089500029804185,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.4076527100722267e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 35.0,
+        "x_mm": -14.538658049026191,
+        "alpha_r": 29.366860428863323,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -10.228595927649879,
+        "omega_i": 1.1907268218151477e-15,
+        "growth": 0.0,
+        "omega_alpha_i": 0.006113127806266543,
+        "omega_xi_i": -0.04158779695518526,
+        "original_real_frequency_polynomial_residual": 8.871809345393207e-15
+      },
+      "tangent": [
+        0.05869595072352565,
+        0.9982759064350204
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0030.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0030.npy"
+    },
+    {
+      "index": 31,
+      "z": [
+        0.7018238997313765,
+        1.5027953649781958
+      ],
+      "point": {
+        "value_r": -10.05846273525047,
+        "value_i": 3.669053028964131e-14,
+        "raw_MAC": 1.0000000000000009,
+        "right_residual": 8.659093674425818e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008089816008578055,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.3442101465364033e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 35.09119498656882,
+        "x_mm": -14.441986117163793,
+        "alpha_r": 30.055907299563916,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -10.05846273525047,
+        "omega_i": 3.669053028964131e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.00465071493616079,
+        "omega_xi_i": -0.03978904261570287,
+        "original_real_frequency_polynomial_residual": 1.5546263767118616e-14
+      },
+      "tangent": [
+        0.04670270933686415,
+        0.9989088331477485
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0031.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0031.npy"
+    },
+    {
+      "index": 32,
+      "z": [
+        0.7032012519229497,
+        1.5372686550105097
+      ],
+      "point": {
+        "value_r": -9.890926433618816,
+        "value_i": 3.7860035226532884e-15,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 8.413682888614487e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007908355997642502,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.3397747110648851e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 35.16006259614748,
+        "x_mm": -14.368982489319734,
+        "alpha_r": 30.745373100210195,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -9.890926433618816,
+        "omega_i": 3.7860035226532884e-15,
+        "growth": 0.0,
+        "omega_alpha_i": 0.003180639570421402,
+        "omega_xi_i": -0.038681723501568524,
+        "original_real_frequency_polynomial_residual": 8.520759013891235e-15
+      },
+      "tangent": [
+        0.03287258485628762,
+        0.9994595505396234
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0032.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0032.npy"
+    },
+    {
+      "index": 33,
+      "z": [
+        0.7040783565534877,
+        1.571758462311859
+      ],
+      "point": {
+        "value_r": -9.72643641999495,
+        "value_i": 2.1613587150205995e-14,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 7.889023537656237e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00837115800823085,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.536642315408712e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 35.20391782767439,
+        "x_mm": -14.32249342107716,
+        "alpha_r": 31.43516924623718,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -9.72643641999495,
+        "omega_i": 2.1613587150205995e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.0017172099511738525,
+        "omega_xi_i": -0.03845924349753554,
+        "original_real_frequency_polynomial_residual": 1.0909911467114602e-14
+      },
+      "tangent": [
+        0.01785720135455128,
+        0.9998405474673364
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0033.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0033.npy"
+    },
+    {
+      "index": 34,
+      "z": [
+        0.7044326025676568,
+        1.6062576374503055
+      ],
+      "point": {
+        "value_r": -9.565337651563592,
+        "value_i": -4.2792350048763474e-14,
+        "raw_MAC": 0.9999999999999993,
+        "right_residual": 8.118734038862723e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007629779996932484,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.4226719770181964e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 35.22163012838284,
+        "x_mm": -14.303717363405156,
+        "alpha_r": 32.12515274900611,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -9.565337651563592,
+        "omega_i": -4.2792350048763474e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.0002720336163185663,
+        "omega_xi_i": -0.03924861756237307,
+        "original_real_frequency_polynomial_residual": 1.7296996396537507e-14
+      },
+      "tangent": [
+        0.002772404102422459,
+        0.9999961568803617
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0034.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0034.npy"
+    },
+    {
+      "index": 35,
+      "z": [
+        0.704283008953752,
+        1.6407581847739852
+      ],
+      "point": {
+        "value_r": -9.407782836520159,
+        "value_i": 1.3721112764729201e-14,
+        "raw_MAC": 1.0000000000000007,
+        "right_residual": 8.132565839229194e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008103202999336645,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.4688072789702063e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 35.2141504476876,
+        "x_mm": -14.311646255219587,
+        "alpha_r": 32.815163695479704,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -9.407782836520159,
+        "omega_i": 1.3721112764729201e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.0011466659124466845,
+        "omega_xi_i": -0.04107909249778845,
+        "original_real_frequency_polynomial_residual": 9.253176155958329e-15
+      },
+      "tangent": [
+        -0.011164749497743745,
+        0.9999376722419516
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0035.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0035.npy"
+    },
+    {
+      "index": 36,
+      "z": [
+        0.7036855796089203,
+        1.675253664650931
+      ],
+      "point": {
+        "value_r": -9.253715116447285,
+        "value_i": -6.06537528833855e-14,
+        "raw_MAC": 1.0000000000000022,
+        "right_residual": 7.998628818304684e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.011555940000107512,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.3811446617686427e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 35.18427898044602,
+        "x_mm": -14.343311728887144,
+        "alpha_r": 33.50507329301862,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -9.253715116447285,
+        "omega_i": -6.06537528833855e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.002533828355712343,
+        "omega_xi_i": -0.04388276946893578,
+        "original_real_frequency_polynomial_residual": 2.3111688723249433e-14
+      },
+      "tangent": [
+        -0.02309018170725783,
+        0.9997333862129072
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0036.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0036.npy"
+    },
+    {
+      "index": 37,
+      "z": [
+        0.7027166175091315,
+        1.7097404858019714
+      ],
+      "point": {
+        "value_r": -9.10292765688535,
+        "value_i": -7.497483891919232e-15,
+        "raw_MAC": 0.9999999999999993,
+        "right_residual": 7.496395268895424e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008076594996964559,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.3714127986542636e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 35.13583087545658,
+        "x_mm": -14.394669507210482,
+        "alpha_r": 34.19480971603943,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -9.10292765688535,
+        "omega_i": -7.497483891919232e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.0038866044651560037,
+        "omega_xi_i": -0.0475241851274458,
+        "original_real_frequency_polynomial_residual": 7.847766838997991e-15
+      },
+      "tangent": [
+        -0.03269515562468727,
+        0.9994653704849796
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0037.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0037.npy"
+    },
+    {
+      "index": 38,
+      "z": [
+        0.7014547671192827,
+        1.744217661923049
+      ],
+      "point": {
+        "value_r": -8.955152287486474,
+        "value_i": 5.893836169960099e-15,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 6.657976428392391e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00794307999603916,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.3483940008971753e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 35.072738355964134,
+        "x_mm": -14.461551207344266,
+        "alpha_r": 34.88435323846098,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -8.955152287486474,
+        "omega_i": 5.893836169960099e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.005203269067332335,
+        "omega_xi_i": -0.05183850407713275,
+        "original_real_frequency_polynomial_residual": 7.043755411860465e-15
+      },
+      "tangent": [
+        -0.04011751776859329,
+        0.9991949683460614
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0038.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0038.npy"
+    },
+    {
+      "index": 39,
+      "z": [
+        0.6998305250701063,
+        1.7786802448339003
+      ],
+      "point": {
+        "value_r": -8.811032553907397,
+        "value_i": 4.39112346255638e-15,
+        "raw_MAC": 1.0000000000000013,
+        "right_residual": 8.37107020571735e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008285276999231428,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.4787521612413166e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 34.99152625350532,
+        "x_mm": -14.54752629273898,
+        "alpha_r": 35.573604896678006,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -8.811032553907397,
+        "omega_i": 4.39112346255638e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.006476544100600412,
+        "omega_xi_i": -0.010294690065302812,
+        "original_real_frequency_polynomial_residual": 8.518896295096462e-15
+      },
+      "tangent": [
+        -0.24403767818696723,
+        0.9697657509033377
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0039.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0039.npy"
+    },
+    {
+      "index": 40,
+      "z": [
+        0.6941878177199249,
+        1.812835881665495
+      ],
+      "point": {
+        "value_r": -8.695418763802664,
+        "value_i": -6.21423113528569e-15,
+        "raw_MAC": 1.0000000000000009,
+        "right_residual": 7.444886522901514e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00802367199503351,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.639497424202673e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 34.70939088599624,
+        "x_mm": -14.842796537209786,
+        "alpha_r": 36.256717633309904,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -8.695418763802664,
+        "omega_i": -6.21423113528569e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.007538045209372074,
+        "omega_xi_i": -0.02388853254542641,
+        "original_real_frequency_polynomial_residual": 7.760970339900616e-15
+      },
+      "tangent": [
+        -0.12522672687759367,
+        0.9921281504299354
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0040.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0040.npy"
+    },
+    {
+      "index": 41,
+      "z": [
+        0.6903491286497679,
+        1.8471250947248172
+      ],
+      "point": {
+        "value_r": -8.569776267883904,
+        "value_i": 2.3543968720573078e-14,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 7.805532021717729e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007853544011595659,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.5372300684866216e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 34.517456432488395,
+        "x_mm": -15.043666543370247,
+        "alpha_r": 36.942501894496345,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -8.569776267883904,
+        "omega_i": 2.3543968720573078e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.008645990938291733,
+        "omega_xi_i": -0.03403639288050061,
+        "original_real_frequency_polynomial_residual": 1.1500244838590951e-14
+      },
+      "tangent": [
+        -0.10108828542392749,
+        0.9948774590621955
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0041.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0041.npy"
+    },
+    {
+      "index": 42,
+      "z": [
+        0.686607595750203,
+        1.8866242053905349
+      ],
+      "point": {
+        "value_r": -8.423063295584615,
+        "value_i": -1.5661769605080557e-14,
+        "raw_MAC": 1.0000000000000009,
+        "right_residual": 7.20414879443992e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.009811865995288827,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.6640803011753175e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 34.330379787510154,
+        "x_mm": -15.239452584607086,
+        "alpha_r": 37.7324841078107,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -8.423063295584615,
+        "omega_i": -1.5661769605080557e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.009908170700499336,
+        "omega_xi_i": -0.044388803942901144,
+        "original_real_frequency_polynomial_residual": 9.095598672394302e-15
+      },
+      "tangent": [
+        -0.0889315420290185,
+        0.9960377406666582
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0042.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0042.npy"
+    },
+    {
+      "index": 43,
+      "z": [
+        0.6832220172818584,
+        1.926154750949779
+      ],
+      "point": {
+        "value_r": -8.276417647516386,
+        "value_i": 4.329227275761879e-15,
+        "raw_MAC": 1.0,
+        "right_residual": 7.905446443282004e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.009227221991750412,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.590783407490057e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 34.161100864092916,
+        "x_mm": -15.416612327259891,
+        "alpha_r": 38.523095018995576,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -8.276417647516386,
+        "omega_i": 4.329227275761879e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.011137433565810201,
+        "omega_xi_i": -0.053949441141305246,
+        "original_real_frequency_polynomial_residual": 8.122990028335716e-15
+      },
+      "tangent": [
+        -0.08229671140234916,
+        0.9966078723812883
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0043.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0043.npy"
+    },
+    {
+      "index": 44,
+      "z": [
+        0.68,
+        1.9662864170134586
+      ],
+      "point": {
+        "value_r": -8.128700850585599,
+        "value_i": 2.3798117761014568e-12,
+        "raw_MAC": 0.9999999999998483,
+        "right_residual": 1.337385103402655e-12,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007645113000762649,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.448606548797518e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 34.0,
+        "x_mm": -15.585213279154527,
+        "alpha_r": 39.32572834026917,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -8.128700850585599,
+        "omega_i": 2.3798117761014568e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.012341042383832847,
+        "omega_xi_i": -0.06305328505363077,
+        "original_real_frequency_polynomial_residual": 1.3518786459012895e-12
+      },
+      "tangent": [
+        -0.07805077629043919,
+        0.9969493850343957
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0044.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0044.npy"
+    },
+    {
+      "index": 45,
+      "z": [
+        0.6704224012194695,
+        2.011617443104738
+      ],
+      "point": {
+        "value_r": -8.009573826143322,
+        "value_i": 4.0003544554467535e-13,
+        "raw_MAC": 0.9999999999998936,
+        "right_residual": 6.332522689947442e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0083524500078056,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.5795300895527815e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 33.52112006097347,
+        "x_mm": -16.079329895034263,
+        "alpha_r": 40.23234886209476,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -8.009573826143322,
+        "omega_i": 4.0003544554467535e-13,
+        "growth": 0.0,
+        "omega_alpha_i": -0.013414345261037745,
+        "omega_xi_i": -0.036947197086776344,
+        "original_real_frequency_polynomial_residual": 1.6400900632148883e-13
+      },
+      "tangent": [
+        -0.14371952152858417,
+        0.9896184613938822
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0045.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0045.npy"
+    },
+    {
+      "index": 46,
+      "z": [
+        0.6647572845417415,
+        2.0568996037452694
+      ],
+      "point": {
+        "value_r": -7.865601001069688,
+        "value_i": 6.599549844624275e-15,
+        "raw_MAC": 0.9999999999999987,
+        "right_residual": 7.576572714404188e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.009433697006898,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.5624460767173373e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 33.23786422708708,
+        "x_mm": -16.37159817077923,
+        "alpha_r": 41.137992074905384,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.865601001069688,
+        "omega_i": 6.599549844624275e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.014560178098498217,
+        "omega_xi_i": -0.05255051074857791,
+        "original_real_frequency_polynomial_residual": 7.964704727546277e-15
+      },
+      "tangent": [
+        -0.11015362548633502,
+        0.993914573186356
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0046.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0046.npy"
+    },
+    {
+      "index": 47,
+      "z": [
+        0.66,
+        2.1033563445306376
+      ],
+      "point": {
+        "value_r": -7.713959872130531,
+        "value_i": -2.5690657490021125e-14,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 7.600480741235724e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007983973002410494,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.5198080794591408e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 33.0,
+        "x_mm": -16.617030600389956,
+        "alpha_r": 42.067126890612755,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.713959872130531,
+        "omega_i": -2.5690657490021125e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.01570251954882318,
+        "omega_xi_i": -0.0656570077634016,
+        "original_real_frequency_polynomial_residual": 1.2260484453706827e-14
+      },
+      "tangent": [
+        -0.09522917973939492,
+        0.9954553748542231
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0047.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0047.npy"
+    },
+    {
+      "index": 48,
+      "z": [
+        0.6531817320803658,
+        2.1289351340490597
+      ],
+      "point": {
+        "value_r": -7.668121963664504,
+        "value_i": -3.583334854226964e-14,
+        "raw_MAC": 0.9999999999999987,
+        "right_residual": 7.052987524825311e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008216867994633503,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.6021529362211695e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 32.65908660401829,
+        "x_mm": -16.963335691930325,
+        "alpha_r": 42.578702680981195,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.668121963664504,
+        "omega_i": -3.583334854226964e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.016156897574063408,
+        "omega_xi_i": -0.03290121667422979,
+        "original_real_frequency_polynomial_residual": 1.4659789198599413e-14
+      },
+      "tangent": [
+        -0.19274587950278754,
+        0.9812487074817967
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0048.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0048.npy"
+    },
+    {
+      "index": 49,
+      "z": [
+        0.6488075184226316,
+        2.154812347336373
+      ],
+      "point": {
+        "value_r": -7.601932296739699,
+        "value_i": -1.4327920955085203e-14,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 7.401947852375587e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008565105992602184,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.6852738109516245e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 32.44037592113158,
+        "x_mm": -17.18550538062746,
+        "alpha_r": 43.09624694672746,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.601932296739699,
+        "omega_i": -1.4327920955085203e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.01667533549081526,
+        "omega_xi_i": -0.04481709581517213,
+        "original_real_frequency_polynomial_residual": 9.113900560169887e-15
+      },
+      "tangent": [
+        -0.14720869341025228,
+        0.9891054547339461
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0049.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0049.npy"
+    },
+    {
+      "index": 50,
+      "z": [
+        0.6447738071714023,
+        2.1847146801038817
+      ],
+      "point": {
+        "value_r": -7.518618493730893,
+        "value_i": -2.4780963615741006e-15,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 6.950210373113151e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007878125994466245,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.6829758263594267e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 32.23869035857012,
+        "x_mm": -17.3903806892204,
+        "alpha_r": 43.694293602077636,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.518618493730893,
+        "omega_i": -2.4780963615741006e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.017281279367034,
+        "omega_xi_i": -0.05586506247324836,
+        "original_real_frequency_polynomial_residual": 7.042189707209443e-15
+      },
+      "tangent": [
+        -0.12279937067419103,
+        0.9924315163083156
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0050.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0050.npy"
+    },
+    {
+      "index": 51,
+      "z": [
+        0.6412949472668414,
+        2.214684663439554
+      ],
+      "point": {
+        "value_r": -7.432170410942165,
+        "value_i": 2.9112792929289674e-14,
+        "raw_MAC": 1.0000000000000009,
+        "right_residual": 7.114017746953918e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007808643989847042,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.7370385758415165e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 32.06474736334207,
+        "x_mm": -17.567074669554593,
+        "alpha_r": 44.29369326879108,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.432170410942165,
+        "omega_i": 2.9112792929289674e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.017878211382288497,
+        "omega_xi_i": -0.06527053484515595,
+        "original_real_frequency_polynomial_residual": 1.2613818621615533e-14
+      },
+      "tangent": [
+        -0.10891199842685245,
+        0.9940513953506979
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0051.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0051.npy"
+    },
+    {
+      "index": 52,
+      "z": [
+        0.64,
+        2.22673670409254
+      ],
+      "point": {
+        "value_r": -7.397023883373564,
+        "value_i": -3.5709085407540754e-14,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 6.4974460310131836e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00751570999273099,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.575143317645056e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 32.0,
+        "x_mm": -17.632846040974613,
+        "alpha_r": 44.5347340818508,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.397023883373564,
+        "omega_i": -3.5709085407540754e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.018113439731557112,
+        "omega_xi_i": -0.06871514863667033,
+        "original_real_frequency_polynomial_residual": 1.5093160280778105e-14
+      },
+      "tangent": [
+        -0.10485944735576155,
+        0.9944870518514779
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0052.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0052.npy"
+    },
+    {
+      "index": 53,
+      "z": [
+        0.6323699253315531,
+        2.260669386987653
+      ],
+      "point": {
+        "value_r": -7.340557823942154,
+        "value_i": -1.4645097255703657e-14,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 6.911480734780542e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007112715000403114,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.6111789635015008e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 31.618496266577655,
+        "x_mm": -18.013787031504613,
+        "alpha_r": 45.21338773975306,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.340557823942154,
+        "omega_i": -1.4645097255703657e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.018668615252726374,
+        "omega_xi_i": -0.04132833136838259,
+        "original_real_frequency_polynomial_residual": 8.775262425509191e-15
+      },
+      "tangent": [
+        -0.17780673204458974,
+        0.984065427722986
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0053.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0053.npy"
+    },
+    {
+      "index": 54,
+      "z": [
+        0.6269063220841041,
+        2.294939919307635
+      ],
+      "point": {
+        "value_r": -7.264538476612167,
+        "value_i": -3.379941871208054e-14,
+        "raw_MAC": 1.0000000000000013,
+        "right_residual": 6.387734688705214e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006874037993839011,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.817532891797459e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 31.345316104205207,
+        "x_mm": -18.286564235317975,
+        "alpha_r": 45.898798386152706,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.264538476612167,
+        "omega_i": -3.379941871208054e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.019243098464777543,
+        "omega_xi_i": -0.05378140993605664,
+        "original_real_frequency_polynomial_residual": 1.4193700044237128e-14
+      },
+      "tangent": [
+        -0.1416771466859372,
+        0.9899129184463306
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0054.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0054.npy"
+    },
+    {
+      "index": 55,
+      "z": [
+        0.6217117021375292,
+        2.3345033380135463
+      ],
+      "point": {
+        "value_r": -7.169236435714519,
+        "value_i": -2.50009273651171e-14,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 6.537250874839635e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.008024027003557421,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.9357419662568995e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 31.08558510687646,
+        "x_mm": -18.545912112483368,
+        "alpha_r": 46.69006676027092,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.169236435714519,
+        "omega_i": -2.50009273651171e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.019886866835063677,
+        "omega_xi_i": -0.06537560070344854,
+        "original_real_frequency_polynomial_residual": 1.1431676029177951e-14
+      },
+      "tangent": [
+        -0.12078674312522195,
+        0.9926784790077811
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0055.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0055.npy"
+    },
+    {
+      "index": 56,
+      "z": [
+        0.62,
+        2.3488896380036453
+      ],
+      "point": {
+        "value_r": -7.133692682252848,
+        "value_i": 4.123367818208255e-14,
+        "raw_MAC": 0.9999999999999984,
+        "right_residual": 6.732701673680869e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0067129689996363595,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.7435974755118322e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 31.0,
+        "x_mm": -18.631370975744456,
+        "alpha_r": 46.9777927600729,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.133692682252848,
+        "omega_i": 4.123367818208255e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.02011312969660885,
+        "omega_xi_i": -0.06909180732352836,
+        "original_real_frequency_polynomial_residual": 1.6354521533759414e-14
+      },
+      "tangent": [
+        -0.11566143730047194,
+        0.9932886951544294
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0056.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0056.npy"
+    },
+    {
+      "index": 57,
+      "z": [
+        0.6110272549275461,
+        2.3939029541184627
+      ],
+      "point": {
+        "value_r": -7.0649199243734255,
+        "value_i": -5.578823206497414e-14,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 6.640725359265939e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007379821996437386,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.7300035304910488e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 30.551362746377304,
+        "x_mm": -19.071004274124483,
+        "alpha_r": 47.878059082369255,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.0649199243734255,
+        "omega_i": -5.578823206497414e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.020668846950204944,
+        "omega_xi_i": -0.046143611836779785,
+        "original_real_frequency_polynomial_residual": 2.256413185018439e-14
+      },
+      "tangent": [
+        -0.176361339501887,
+        0.9843254938937122
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0057.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0057.npy"
+    },
+    {
+      "index": 58,
+      "z": [
+        0.6024946188071111,
+        2.445982593994835
+      ],
+      "point": {
+        "value_r": -6.971404964158716,
+        "value_i": 3.099856674555594e-14,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 6.840243372010056e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00742981000803411,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.920991368678371e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 30.124730940355555,
+        "x_mm": -19.489073764699842,
+        "alpha_r": 48.9196518798967,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -6.971404964158716,
+        "omega_i": 3.099856674555594e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.021282936021398354,
+        "omega_xi_i": -0.05630854156906016,
+        "original_real_frequency_polynomial_residual": 1.3975856016709973e-14
+      },
+      "tangent": [
+        -0.14948913206522416,
+        0.98876336875634
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0058.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0058.npy"
+    },
+    {
+      "index": 59,
+      "z": [
+        0.6,
+        2.4628421341256894
+      ],
+      "point": {
+        "value_r": -6.93953227403255,
+        "value_i": 2.366866448854671e-14,
+        "raw_MAC": 0.9999999999999993,
+        "right_residual": 7.765913380796974e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006728413995006122,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 1.692283262783148e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 30.0,
+        "x_mm": -19.611301409140335,
+        "alpha_r": 49.25684268251379,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -6.93953227403255,
+        "omega_i": 2.366866448854671e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.02147242793407254,
+        "omega_xi_i": -0.05927384929909496,
+        "original_real_frequency_polynomial_residual": 1.116093715011072e-14
+      },
+      "tangent": [
+        -0.14340549505409125,
+        0.9896640157085085
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0059.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0059.npy"
+    },
+    {
+      "index": 60,
+      "z": [
+        0.588288195146952,
+        2.5217236159075345
+      ],
+      "point": {
+        "value_r": -6.865977042806484,
+        "value_i": -3.5977368455795433e-14,
+        "raw_MAC": 0.9999999999999954,
+        "right_residual": 9.703643854905698e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00725298399629537,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.402073576072984e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 29.4144097573476,
+        "x_mm": -20.173480423140067,
+        "alpha_r": 50.43447231815069,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -6.865977042806484,
+        "omega_i": -3.5977368455795433e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.022099986391679833,
+        "omega_xi_i": -0.05113981417466307,
+        "original_real_frequency_polynomial_residual": 1.6772579593436946e-14
+      },
+      "tangent": [
+        -0.1703332628361732,
+        0.9853865127814483
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0060.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0060.npy"
+    },
+    {
+      "index": 61,
+      "z": [
+        0.58,
+        2.5739317808063333
+      ],
+      "point": {
+        "value_r": -6.7834327040145945,
+        "value_i": -2.1657860857911288e-14,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 7.198580176713917e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0064124210039153695,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.128660092045754e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 28.999999999999996,
+        "x_mm": -20.571322552001888,
+        "alpha_r": 51.47863561612667,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -6.7834327040145945,
+        "omega_i": -2.1657860857911288e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.022616282406374148,
+        "omega_xi_i": -0.061514490393873654,
+        "original_real_frequency_polynomial_residual": 1.1191853276975821e-14
+      },
+      "tangent": [
+        -0.14549815252102932,
+        0.9893585232932333
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0061.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0061.npy"
+    },
+    {
+      "index": 62,
+      "z": [
+        0.56,
+        2.647363394701153
+      ],
+      "point": {
+        "value_r": -6.797482071419365,
+        "value_i": 2.917171787698432e-14,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 7.02106906256871e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006889473996125162,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.242779148905491e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 28.000000000000004,
+        "x_mm": -21.510118133138885,
+        "alpha_r": 52.94726789402306,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -6.797482071419365,
+        "omega_i": 2.917171787698432e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.022998608969992937,
+        "omega_xi_i": -0.0426192681208316,
+        "original_real_frequency_polynomial_residual": 1.3477933543988996e-14
+      },
+      "tangent": [
+        -0.21099242922275618,
+        0.9774876954778922
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0062.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0062.npy"
+    },
+    {
+      "index": 63,
+      "z": [
+        0.5442763029626639,
+        2.705384120011808
+      ],
+      "point": {
+        "value_r": -6.8263204437283145,
+        "value_i": 1.655711098103656e-13,
+        "raw_MAC": 0.9999999999998652,
+        "right_residual": 2.334772860195709e-13,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007076816007611342,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.1969155357718145e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 27.213815148133197,
+        "x_mm": -22.230466216577863,
+        "alpha_r": 54.10768240023616,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -6.8263204437283145,
+        "omega_i": 1.655711098103656e-13,
+        "growth": 0.0,
+        "omega_alpha_i": -0.023198349376371455,
+        "omega_xi_i": -0.041162226095299716,
+        "original_real_frequency_polynomial_residual": 2.472390838859817e-13
+      },
+      "tangent": [
+        -0.21991457533581016,
+        0.9755191333617556
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0063.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0063.npy"
+    },
+    {
+      "index": 64,
+      "z": [
+        0.54,
+        2.7252226195543137
+      ],
+      "point": {
+        "value_r": -6.823354623991267,
+        "value_i": 7.846597798882193e-14,
+        "raw_MAC": 0.9999999999999948,
+        "right_residual": 3.7295367777951777e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006092900992371142,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.492648711808527e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 27.0,
+        "x_mm": -22.426376035753652,
+        "alpha_r": 54.504452391086275,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -6.823354623991267,
+        "omega_i": 7.846597798882193e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.023275102412254008,
+        "omega_xi_i": -0.045077154632918746,
+        "original_real_frequency_polynomial_residual": 3.861342111995184e-14
+      },
+      "tangent": [
+        -0.20226669022937682,
+        0.9793304784513005
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0064.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0064.npy"
+    },
+    {
+      "index": 65,
+      "z": [
+        0.52,
+        2.791316091216944
+      ],
+      "point": {
+        "value_r": -6.916084517689933,
+        "value_i": -4.599742067857072e-14,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 7.719509384674527e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006934916993486695,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.2236119250297976e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 26.0,
+        "x_mm": -23.318794701727846,
+        "alpha_r": 55.826321824338876,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -6.916084517689933,
+        "omega_i": -4.599742067857072e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.023307586841423995,
+        "omega_xi_i": -0.039083704263370926,
+        "original_real_frequency_polynomial_residual": 2.0376985895641222e-14
+      },
+      "tangent": [
+        -0.23203010765306764,
+        0.9727086044353188
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0065.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0065.npy"
+    },
+    {
+      "index": 66,
+      "z": [
+        0.5,
+        2.8501854551589223
+      ],
+      "point": {
+        "value_r": -7.058888482433106,
+        "value_i": 1.550768788359257e-14,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 8.173324520438604e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006311589997494593,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.367627896090974e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 25.0,
+        "x_mm": -24.18609204936335,
+        "alpha_r": 57.003709103178444,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.058888482433106,
+        "omega_i": 1.550768788359257e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.023171308938589007,
+        "omega_xi_i": -0.03477905128296858,
+        "original_real_frequency_polynomial_residual": 1.0484215373526301e-14
+      },
+      "tangent": [
+        -0.25750986559688593,
+        0.9662756693202379
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0066.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0066.npy"
+    },
+    {
+      "index": 67,
+      "z": [
+        0.48,
+        2.8997094683885667
+      ],
+      "point": {
+        "value_r": -7.256068620481501,
+        "value_i": 1.9680536989924084e-14,
+        "raw_MAC": 0.9999999999999996,
+        "right_residual": 8.767630825522467e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0067999879975104704,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.5486668960518124e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 24.0,
+        "x_mm": -25.02701070508007,
+        "alpha_r": 57.994189367771334,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.256068620481501,
+        "omega_i": 1.9680536989924084e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.022840454505408316,
+        "omega_xi_i": -0.029363043587076552,
+        "original_real_frequency_polynomial_residual": 1.1871989733573577e-14
+      },
+      "tangent": [
+        -0.29709657757605845,
+        0.9548474347206432
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0067.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0067.npy"
+    },
+    {
+      "index": 68,
+      "z": [
+        0.46,
+        2.9380626725006587
+      ],
+      "point": {
+        "value_r": -7.5074873861194416,
+        "value_i": 3.974761904420866e-14,
+        "raw_MAC": 1.000000000000001,
+        "right_residual": 7.944392113151899e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00607892700645607,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.6823633700497584e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 23.0,
+        "x_mm": -25.84032609438634,
+        "alpha_r": 58.76125345001317,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.5074873861194416,
+        "omega_i": 3.974761904420866e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.02236239893654591,
+        "omega_xi_i": -0.02326151402268514,
+        "original_real_frequency_polynomial_residual": 1.8901521189104447e-14
+      },
+      "tangent": [
+        -0.3589169791278848,
+        0.9333694885165861
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0068.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0068.npy"
+    },
+    {
+      "index": 69,
+      "z": [
+        0.44,
+        2.964453039842953
+      ],
+      "point": {
+        "value_r": -7.809795745356602,
+        "value_i": 7.249447558753006e-15,
+        "raw_MAC": 0.9999999999999997,
+        "right_residual": 8.110267610880489e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.005845837004017085,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.5557172397876965e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 22.0,
+        "x_mm": -26.62485124471571,
+        "alpha_r": 59.28906079685906,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -7.809795745356602,
+        "omega_i": 7.249447558753006e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.021765436446479318,
+        "omega_xi_i": -0.016986308773049057,
+        "original_real_frequency_polynomial_residual": 8.599211074390793e-15
+      },
+      "tangent": [
+        -0.4561194755526934,
+        0.8899185490939808
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0069.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0069.npy"
+    },
+    {
+      "index": 70,
+      "z": [
+        0.42,
+        2.9780154908357184
+      ],
+      "point": {
+        "value_r": -8.160321728233617,
+        "value_i": -2.82162431137617e-14,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 7.980448934324612e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006433533999370411,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.7343353401272965e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 21.0,
+        "x_mm": -27.379443985654948,
+        "alpha_r": 59.560309816714366,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -8.160321728233617,
+        "omega_i": -2.82162431137617e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.02104353308771085,
+        "omega_xi_i": -0.010467500616986354,
+        "original_real_frequency_polynomial_residual": 1.4604893177491585e-14
+      },
+      "tangent": [
+        -0.6266637980244129,
+        0.7792897306173218
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0070.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0070.npy"
+    },
+    {
+      "index": 71,
+      "z": [
+        0.4,
+        2.977468835681635
+      ],
+      "point": {
+        "value_r": -8.556380931559024,
+        "value_i": -1.8999266732157117e-15,
+        "raw_MAC": 0.9999999999999984,
+        "right_residual": 8.60115746166078e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00568821799242869,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.8355917795108098e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 20.0,
+        "x_mm": -28.103013880512695,
+        "alpha_r": 59.5493767136327,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -8.556380931559024,
+        "omega_i": -1.8999266732157117e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.02019605261643566,
+        "omega_xi_i": -0.0037678707305616693,
+        "original_real_frequency_polynomial_residual": 8.624724449667297e-15
+      },
+      "tangent": [
+        -0.9062716411230477,
+        0.4226957682496217
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0071.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0071.npy"
+    },
+    {
+      "index": 72,
+      "z": [
+        0.38,
+        2.961422954156915
+      ],
+      "point": {
+        "value_r": -8.994208982060297,
+        "value_i": 1.7370423204042457e-14,
+        "raw_MAC": 0.9999999999999999,
+        "right_residual": 8.917153617341541e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.005756637008744292,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.8407166558210252e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 19.0,
+        "x_mm": -28.794523976877734,
+        "alpha_r": 59.228459083138304,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -8.994208982060297,
+        "omega_i": 1.7370423204042457e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.01922723305503992,
+        "omega_xi_i": 0.002918820843710744,
+        "original_real_frequency_polynomial_residual": 1.1833738816124262e-14
+      },
+      "tangent": [
+        -0.9349335992897925,
+        -0.35482272322814057
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0072.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0072.npy"
+    },
+    {
+      "index": 73,
+      "z": [
+        0.36,
+        2.9274573585581107
+      ],
+      "point": {
+        "value_r": -9.4709939333823,
+        "value_i": -3.2780436633594586e-14,
+        "raw_MAC": 1.0,
+        "right_residual": 1.0277307949256144e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00561099499464035,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.292364446150119e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 18.0,
+        "x_mm": -29.452998459846082,
+        "alpha_r": 58.54914717116222,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -9.4709939333823,
+        "omega_i": -3.2780436633594586e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.018123377171594717,
+        "omega_xi_i": 0.009813153438462749,
+        "original_real_frequency_polynomial_residual": 1.7509645705774216e-14
+      },
+      "tangent": [
+        -0.5941869947721423,
+        -0.8043269330587222
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0073.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0073.npy"
+    },
+    {
+      "index": 74,
+      "z": [
+        0.33947296653379566,
+        2.8710664634433334
+      ],
+      "point": {
+        "value_r": -9.997045040813276,
+        "value_i": -8.471303715744579e-12,
+        "raw_MAC": 0.9999999999999994,
+        "right_residual": 9.992413520169147e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.005948702004388906,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.593818143734968e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 16.973648326689784,
+        "x_mm": -30.093068951226684,
+        "alpha_r": 57.42132926886667,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -9.997045040813276,
+        "omega_i": -8.471303715744579e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.016823938360964918,
+        "omega_xi_i": 0.026843374971018377,
+        "original_real_frequency_polynomial_residual": 3.7737074609485325e-12
+      },
+      "tangent": [
+        -0.24317262197143602,
+        -0.9699830286780986
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0074.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0074.npy"
+    },
+    {
+      "index": 75,
+      "z": [
+        0.3246605386980195,
+        2.8129231543152637
+      ],
+      "point": {
+        "value_r": -10.400810329711906,
+        "value_i": -8.059867959130192e-12,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 1.0463249160267164e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.007282257007318549,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.3182306999193006e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 16.233026934900973,
+        "x_mm": -30.529844522707844,
+        "alpha_r": 56.25846308630528,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -10.400810329711906,
+        "omega_i": -8.059867959130192e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.01573792286743443,
+        "omega_xi_i": 0.02412970993657572,
+        "original_real_frequency_polynomial_residual": 3.591775494506381e-12
+      },
+      "tangent": [
+        -0.25243925085171376,
+        -0.9676127451772354
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0075.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0075.npy"
+    },
+    {
+      "index": 76,
+      "z": [
+        0.32,
+        2.7952492012124557
+      ],
+      "point": {
+        "value_r": -10.523692786246555,
+        "value_i": -1.3516237074999989e-14,
+        "raw_MAC": 0.9999999999999993,
+        "right_residual": 1.0679176095472547e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.005281111996737309,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.325787653270705e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 16.0,
+        "x_mm": -30.66727030299222,
+        "alpha_r": 55.90498402424912,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -10.523692786246555,
+        "omega_i": -1.3516237074999989e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.015401853933781573,
+        "omega_xi_i": 0.023094356964110524,
+        "original_real_frequency_polynomial_residual": 1.2242075277125197e-14
+      },
+      "tangent": [
+        -0.2577503931365611,
+        -0.9662115373136196
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0076.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0076.npy"
+    },
+    {
+      "index": 77,
+      "z": [
+        0.30889729833465585,
+        2.7362853391570816
+      ],
+      "point": {
+        "value_r": -10.842830428305412,
+        "value_i": -2.1636462562391182e-13,
+        "raw_MAC": 0.9999999999999958,
+        "right_residual": 1.734012954902924e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006450176006183028,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.4118571425679286e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 15.444864916732792,
+        "x_mm": -30.9749177855127,
+        "alpha_r": 54.72570678314163,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -10.842830428305412,
+        "omega_i": -2.1636462562391182e-13,
+        "growth": 0.0,
+        "omega_alpha_i": -0.014437837818536518,
+        "omega_xi_i": 0.03082678946517575,
+        "original_real_frequency_polynomial_residual": 9.575425836441134e-14
+      },
+      "tangent": [
+        -0.18413797712597432,
+        -0.9829004046087042
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0077.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0077.npy"
+    },
+    {
+      "index": 78,
+      "z": [
+        0.3,
+        2.6887747416217462
+      ],
+      "point": {
+        "value_r": -11.090801459709432,
+        "value_i": -8.500613320789516e-15,
+        "raw_MAC": 1.0,
+        "right_residual": 9.707077891609765e-15,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.005362001989851706,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.2202861973374594e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 15.0,
+        "x_mm": -31.22145520643922,
+        "alpha_r": 53.77549483243492,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -11.090801459709432,
+        "omega_i": -8.500613320789516e-15,
+        "growth": 0.0,
+        "omega_alpha_i": -0.013655754767049144,
+        "omega_xi_i": 0.02913075651396068,
+        "original_real_frequency_polynomial_residual": 1.0369018254515117e-14
+      },
+      "tangent": [
+        -0.18429782632249542,
+        -0.9828704447753038
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0078.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0078.npy"
+    },
+    {
+      "index": 79,
+      "z": [
+        0.29152596724280294,
+        2.62937594342405
+      ],
+      "point": {
+        "value_r": -11.344905941538462,
+        "value_i": -3.713808892664062e-12,
+        "raw_MAC": 0.9999999999999778,
+        "right_residual": 7.845526902001162e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006156127987196669,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.4160020639423184e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 14.576298362140147,
+        "x_mm": -31.44090427944373,
+        "alpha_r": 52.587518868481,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -11.344905941538462,
+        "omega_i": -3.713808892664062e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.012749246269899357,
+        "omega_xi_i": 0.03641912202825089,
+        "original_real_frequency_polynomial_residual": 1.63744378979305e-12
+      },
+      "tangent": [
+        -0.13867508592913058,
+        -0.9903379324970585
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0079.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0079.npy"
+    },
+    {
+      "index": 80,
+      "z": [
+        0.2833468953858859,
+        2.5699358628457
+      ],
+      "point": {
+        "value_r": -11.585031671073715,
+        "value_i": -1.982102648842296e-12,
+        "raw_MAC": 0.9999999999999792,
+        "right_residual": 7.155983432362105e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006156620002002455,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.322571910336652e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 14.167344769294296,
+        "x_mm": -31.65271485281132,
+        "alpha_r": 51.398717256914,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -11.585031671073715,
+        "omega_i": -1.982102648842296e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.011831680633908092,
+        "omega_xi_i": 0.03499072588421854,
+        "original_real_frequency_polynomial_residual": 8.696608393865939e-13
+      },
+      "tangent": [
+        -0.13403459326704,
+        -0.9909766535129568
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0080.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0080.npy"
+    },
+    {
+      "index": 81,
+      "z": [
+        0.28,
+        2.5450162147292272
+      ],
+      "point": {
+        "value_r": -11.681762963353288,
+        "value_i": 3.708257769057372e-14,
+        "raw_MAC": 1.0000000000000016,
+        "right_residual": 1.083326717808056e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.005326759011950344,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.746439118692847e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 14.000000000000002,
+        "x_mm": -31.739388236183828,
+        "alpha_r": 50.90032429458454,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -11.681762963353288,
+        "omega_i": 3.708257769057372e-14,
+        "growth": 0.0,
+        "omega_alpha_i": -0.011443336664072865,
+        "omega_xi_i": 0.0343209313912779,
+        "original_real_frequency_polynomial_residual": 1.9201314950230566e-14
+      },
+      "tangent": [
+        -0.13219806925265173,
+        -0.9912233201886803
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0081.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0081.npy"
+    },
+    {
+      "index": 82,
+      "z": [
+        0.2736566106029069,
+        2.485352186131889
+      ],
+      "point": {
+        "value_r": -11.880759244891534,
+        "value_i": -5.5539427685549205e-12,
+        "raw_MAC": 0.9999999999999838,
+        "right_residual": 6.414220816465901e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006788093000068329,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.099416413907342e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 13.682830530145345,
+        "x_mm": -31.891966649449433,
+        "alpha_r": 49.70704372263778,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -11.880759244891534,
+        "omega_i": -5.5539427685549205e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.010536888970923523,
+        "omega_xi_i": 0.04085243205310093,
+        "original_real_frequency_polynomial_residual": 2.4439940588152556e-12
+      },
+      "tangent": [
+        -0.10262551659384228,
+        -0.9947200628035241
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0082.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0082.npy"
+    },
+    {
+      "index": 83,
+      "z": [
+        0.26768715182561686,
+        2.425649578906076
+      ],
+      "point": {
+        "value_r": -12.067012495012056,
+        "value_i": -5.361306633197801e-12,
+        "raw_MAC": 0.9999999999999737,
+        "right_residual": 9.669052610361328e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.005567377011175267,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.8709824433808665e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 13.384357591280843,
+        "x_mm": -32.03555085834425,
+        "alpha_r": 48.512991578121515,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.067012495012056,
+        "omega_i": -5.361306633197801e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.009608554553023537,
+        "omega_xi_i": 0.03971811880581615,
+        "original_real_frequency_polynomial_residual": 2.3496990697923276e-12
+      },
+      "tangent": [
+        -0.09631756345183434,
+        -0.9953506552821986
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0083.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0083.npy"
+    },
+    {
+      "index": 84,
+      "z": [
+        0.2621051605968389,
+        2.365909470342249
+      ],
+      "point": {
+        "value_r": -12.240981808657919,
+        "value_i": -5.79456231102836e-12,
+        "raw_MAC": 0.9999999999999545,
+        "right_residual": 1.5472586249141497e-13,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00643456399848219,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.292426881129483e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 13.105258029841945,
+        "x_mm": -32.1698152572695,
+        "alpha_r": 47.31818940684498,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.240981808657919,
+        "omega_i": -5.79456231102836e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.008655047978615979,
+        "omega_xi_i": 0.038451840662679544,
+        "original_real_frequency_polynomial_residual": 2.52941504685887e-12
+      },
+      "tangent": [
+        -0.08967247663573004,
+        -0.9959713082885543
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0084.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0084.npy"
+    },
+    {
+      "index": 85,
+      "z": [
+        0.26,
+        2.342158377040026
+      ],
+      "point": {
+        "value_r": -12.306773533885632,
+        "value_i": -3.959971804991358e-16,
+        "raw_MAC": 0.9999999999999991,
+        "right_residual": 1.199795106719095e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00509189598960802,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.1230063109734116e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 13.0,
+        "x_mm": -32.22045097319798,
+        "alpha_r": 46.843167540800515,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.306773533885632,
+        "omega_i": -3.959971804991358e-16,
+        "growth": 0.0,
+        "omega_alpha_i": -0.00826839518912796,
+        "omega_xi_i": 0.037920577389965536,
+        "original_real_frequency_polynomial_residual": 1.2011255667862449e-14
+      },
+      "tangent": [
+        -0.08688817808743043,
+        -0.996218070759935
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0085.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0085.npy"
+    },
+    {
+      "index": 86,
+      "z": [
+        0.2557622914641084,
+        2.2823078246319306
+      ],
+      "point": {
+        "value_r": -12.453455441305058,
+        "value_i": -7.615348267484876e-12,
+        "raw_MAC": 0.9999999999999847,
+        "right_residual": 5.814756493495524e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.005961900009424426,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.440556814066762e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.78811457320542,
+        "x_mm": -32.31445431043062,
+        "alpha_r": 45.64615649263861,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.453455441305058,
+        "omega_i": -7.615348267484876e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.007282748866691812,
+        "omega_xi_i": 0.04341521226551407,
+        "original_real_frequency_polynomial_residual": 3.3302245723021195e-12
+      },
+      "tangent": [
+        -0.06694805223100518,
+        -0.9977564624208025
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0086.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0086.npy"
+    },
+    {
+      "index": 87,
+      "z": [
+        0.25197788721884873,
+        2.2224268378809504
+      ],
+      "point": {
+        "value_r": -12.589157497297881,
+        "value_i": -9.508217720581226e-12,
+        "raw_MAC": 0.9999999999999711,
+        "right_residual": 1.029063392850783e-13,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006036471007973887,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.3891397782558944e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.598894360942436,
+        "x_mm": -32.39840218591068,
+        "alpha_r": 44.44853675761901,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.589157497297881,
+        "omega_i": -9.508217720581226e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.0062589533401228685,
+        "omega_xi_i": 0.042298426222321446,
+        "original_real_frequency_polynomial_residual": 4.145239116055728e-12
+      },
+      "tangent": [
+        -0.05908511671630564,
+        -0.9982529483966579
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0087.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0087.npy"
+    },
+    {
+      "index": 88,
+      "z": [
+        0.24868727556605347,
+        2.1625165977734873
+      ],
+      "point": {
+        "value_r": -12.714084357097306,
+        "value_i": -8.597859332797637e-13,
+        "raw_MAC": 0.999999999999999,
+        "right_residual": 1.1730749165463726e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.00640017598925624,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.062998160243891e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.434363778302673,
+        "x_mm": -32.47139646437025,
+        "alpha_r": 43.25033195546975,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.714084357097306,
+        "omega_i": -8.597859332797637e-13,
+        "growth": 0.0,
+        "omega_alpha_i": -0.005192855850366832,
+        "omega_xi_i": 0.04111320417514562,
+        "original_real_frequency_polynomial_residual": 3.7587129246569364e-13
+      },
+      "tangent": [
+        -0.05045815494010809,
+        -0.998726175986211
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0088.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0088.npy"
+    },
+    {
+      "index": 89,
+      "z": [
+        0.24594177407566345,
+        2.1025787804820775
+      ],
+      "point": {
+        "value_r": -12.82836703704846,
+        "value_i": -1.5622852537731439e-12,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 1.286582531144617e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.005142998998053372,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 3.046190829705168e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.297088703783173,
+        "x_mm": -32.53229878936216,
+        "alpha_r": 42.051575609641546,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.82836703704846,
+        "omega_i": -1.5622852537731439e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.004080150619955799,
+        "omega_xi_i": 0.03988616548969535,
+        "original_real_frequency_polynomial_residual": 6.809403379295657e-13
+      },
+      "tangent": [
+        -0.040883741999108145,
+        -0.9991639102970794
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0089.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0089.npy"
+    },
+    {
+      "index": 90,
+      "z": [
+        0.24380384410460162,
+        2.042616052840286
+      ],
+      "point": {
+        "value_r": -12.932082344573104,
+        "value_i": -2.7756522914122657e-12,
+        "raw_MAC": 1.0000000000000009,
+        "right_residual": 1.2181000902081486e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006388125009834766,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.7297202111299085e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.190192205230082,
+        "x_mm": -32.57972360641774,
+        "alpha_r": 40.85232105680572,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -12.932082344573104,
+        "omega_i": -2.7756522914122657e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.002916383907303808,
+        "omega_xi_i": 0.03864270603473267,
+        "original_real_frequency_polynomial_residual": 1.2072523454523786e-12
+      },
+      "tangent": [
+        -0.030174449194880763,
+        -0.9995446476350047
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0090.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0090.npy"
+    },
+    {
+      "index": 91,
+      "z": [
+        0.24234720259155546,
+        1.9826326926306848
+      ],
+      "point": {
+        "value_r": -13.02527497544391,
+        "value_i": -4.737311852183032e-12,
+        "raw_MAC": 0.9999999999999996,
+        "right_residual": 1.2695145327915877e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006728549997205846,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.7408481313091423e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.117360129577772,
+        "x_mm": -32.61203568314935,
+        "alpha_r": 39.652653852613696,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.02527497544391,
+        "omega_i": -4.737311852183032e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.0016970047007588349,
+        "omega_xi_i": 0.037406506197211906,
+        "original_real_frequency_polynomial_residual": 2.0572843003149163e-12
+      },
+      "tangent": [
+        -0.01814363895891812,
+        -0.9998353906345426
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0091.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0091.npy"
+    },
+    {
+      "index": 92,
+      "z": [
+        0.2416565588553017,
+        1.9226353472963398
+      ],
+      "point": {
+        "value_r": -13.107983513325365,
+        "value_i": -7.919934661780483e-12,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 1.323250864533347e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.006053967998013832,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.8514666361445e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.082827942765086,
+        "x_mm": -32.62735594774443,
+        "alpha_r": 38.45270694592679,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.107983513325365,
+        "omega_i": -7.919934661780483e-12,
+        "growth": 0.0,
+        "omega_alpha_i": -0.0004174851179689302,
+        "omega_xi_i": 0.0361988574019885,
+        "original_real_frequency_polynomial_residual": 3.435252674645785e-12
+      },
+      "tangent": [
+        -0.004613191747423936,
+        -0.9999893591743371
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0092.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0092.npy"
+    },
+    {
+      "index": 93,
+      "z": [
+        0.2418268043795618,
+        1.8626339234564018
+      ],
+      "point": {
+        "value_r": -13.180270801687529,
+        "value_i": -2.1051643952761977e-14,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 1.2495174851668679e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0062919869960751384,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.710663826526035e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.09134021897809,
+        "x_mm": -32.62357946163316,
+        "alpha_r": 37.252678469128035,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.180270801687529,
+        "omega_i": -2.1051643952761977e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.0009264579325691009,
+        "omega_xi_i": 0.03503762509327352,
+        "original_real_frequency_polynomial_residual": 1.5469946570898135e-14
+      },
+      "tangent": [
+        0.010576129111562544,
+        -0.9999440711824914
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0093.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0093.npy"
+    },
+    {
+      "index": 94,
+      "z": [
+        0.2429615408388795,
+        1.8026425693302062
+      ],
+      "point": {
+        "value_r": -13.242257698292153,
+        "value_i": -2.4411513188949724e-14,
+        "raw_MAC": 0.9999999999999991,
+        "right_residual": 1.2333539647871238e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.005886615996132605,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.395587468829888e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.148077041943974,
+        "x_mm": -32.59840807168221,
+        "alpha_r": 36.052851386604125,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.242257698292153,
+        "omega_i": -2.4411513188949724e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.0023385034914759433,
+        "omega_xi_i": 0.033935772947532,
+        "original_real_frequency_polynomial_residual": 1.6126794891427196e-14
+      },
+      "tangent": [
+        0.027553409693798096,
+        -0.9996203327335061
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0094.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0094.npy"
+    },
+    {
+      "index": 95,
+      "z": [
+        0.24517099468078593,
+        1.7426806817511609
+      ],
+      "point": {
+        "value_r": -13.294156787134833,
+        "value_i": 4.473477006980108e-14,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 1.2321160135995247e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.003999986991402693,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.4231628513678206e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.258549734039297,
+        "x_mm": -32.549396670156696,
+        "alpha_r": 34.853613635023216,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.294156787134833,
+        "omega_i": 4.473477006980108e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.0038211964386900376,
+        "omega_xi_i": 0.0328992605702322,
+        "original_real_frequency_polynomial_residual": 2.2598819099679364e-14
+      },
+      "tangent": [
+        0.046409299950510755,
+        -0.998922507944487
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0095.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0095.npy"
+    },
+    {
+      "index": 96,
+      "z": [
+        0.24856969016474745,
+        1.6827738637088048
+      ],
+      "point": {
+        "value_r": -13.336299103244304,
+        "value_i": -5.764986418006944e-14,
+        "raw_MAC": 0.9999999999999984,
+        "right_residual": 1.3464684186621919e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.004406924999784678,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.6871086993324697e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.428484508237373,
+        "x_mm": -32.47400481273564,
+        "alpha_r": 33.65547727417609,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.336299103244304,
+        "omega_i": -5.764986418006944e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.00537523196636837,
+        "omega_xi_i": 0.031924188484054504,
+        "original_real_frequency_polynomial_residual": 2.847019550336378e-14
+      },
+      "tangent": [
+        0.06719772645541422,
+        -0.9977396782524103
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0096.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0096.npy"
+    },
+    {
+      "index": 97,
+      "z": [
+        0.25327478158664457,
+        1.6229548248807382
+      ],
+      "point": {
+        "value_r": -13.369142531431931,
+        "value_i": 1.6195617063034578e-14,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 1.2617972482775793e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0041222750005545095,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.279217681706897e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.66373907933223,
+        "x_mm": -32.36963371408717,
+        "alpha_r": 32.459096497614766,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.369142531431931,
+        "omega_i": 1.6195617063034578e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.006998583573085136,
+        "omega_xi_i": 0.030993086661905346,
+        "original_real_frequency_polynomial_residual": 1.431745759879987e-14
+      },
+      "tangent": [
+        0.08995823056053286,
+        -0.995945539050413
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0097.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0097.npy"
+    },
+    {
+      "index": 98,
+      "z": [
+        0.25940669975347436,
+        1.5632644290098443
+      ],
+      "point": {
+        "value_r": -13.393245767505459,
+        "value_i": -2.6004511572634275e-14,
+        "raw_MAC": 0.9999999999999998,
+        "right_residual": 1.288069191540394e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.004549367004074156,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.3570005772634822e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 12.970334987673718,
+        "x_mm": -32.233611907387285,
+        "alpha_r": 31.265288580196888,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.393245767505459,
+        "omega_i": -2.6004511572634275e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.008685579355618112,
+        "omega_xi_i": 0.030070312353353838,
+        "original_real_frequency_polynomial_residual": 1.6915355995823987e-14
+      },
+      "tangent": [
+        0.11477343227792454,
+        -0.993391694772583
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0098.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0098.npy"
+    },
+    {
+      "index": 99,
+      "z": [
+        0.26,
+        1.5581790194279832
+      ],
+      "point": {
+        "value_r": -13.394916685151996,
+        "value_i": 5.90827206832002e-14,
+        "raw_MAC": 1.0000000000000004,
+        "right_residual": 1.3963083676500277e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.0032495410123374313,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.4200829797819364e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 13.0,
+        "x_mm": -32.22045097319798,
+        "alpha_r": 31.163580388559666,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.394916685151996,
+        "omega_i": 5.90827206832002e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.008832174657920328,
+        "omega_xi_i": 0.02548257575728316,
+        "original_real_frequency_polynomial_residual": 2.897076726957133e-14
+      },
+      "tangent": [
+        0.13732518845458724,
+        -0.9905260181418316
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0099.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0099.npy"
+    },
+    {
+      "index": 100,
+      "z": [
+        0.2690665585169483,
+        1.498862119046864
+      ],
+      "point": {
+        "value_r": -13.400029451384308,
+        "value_i": -3.304369713849281e-14,
+        "raw_MAC": 1.0000000000000002,
+        "right_residual": 1.2988230962124866e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.004333870994742028,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.123054554087151e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 13.453327925847415,
+        "x_mm": -32.002371800424875,
+        "alpha_r": 29.97724238093728,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.400029451384308,
+        "omega_i": -3.304369713849281e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.01059928015696282,
+        "omega_xi_i": 0.025341923564007437,
+        "original_real_frequency_polynomial_residual": 1.9258176199045758e-14
+      },
+      "tangent": [
+        0.16500703785799473,
+        -0.9862923894349639
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0100.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0100.npy"
+    },
+    {
+      "index": 101,
+      "z": [
+        0.2798285844183471,
+        1.4398287222485624
+      ],
+      "point": {
+        "value_r": -13.39907908693279,
+        "value_i": 2.0542111477250383e-14,
+        "raw_MAC": 0.9999999999999997,
+        "right_residual": 1.3387501090302301e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.004514748987276107,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.0829325111790337e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 13.991429220917356,
+        "x_mm": -31.743511318627668,
+        "alpha_r": 28.79657444497125,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.39907908693279,
+        "omega_i": 2.0542111477250383e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.012402262641408073,
+        "omega_xi_i": 0.02508992679455513,
+        "original_real_frequency_polynomial_residual": 1.6142371338958562e-14
+      },
+      "tangent": [
+        0.19396968450873087,
+        -0.981007523667165
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0101.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0101.npy"
+    },
+    {
+      "index": 102,
+      "z": [
+        0.28,
+        1.4389628054880472
+      ],
+      "point": {
+        "value_r": -13.399024852067413,
+        "value_i": -4.4822805105836354e-14,
+        "raw_MAC": 0.9999999999999817,
+        "right_residual": 1.5030414272563922e-13,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.003211253002518788,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.3309252833724172e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 14.000000000000002,
+        "x_mm": -31.739388236183828,
+        "alpha_r": 28.779256109760944,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.399024852067413,
+        "omega_i": -4.4822805105836354e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.01242893186504035,
+        "omega_xi_i": 0.02058990883987993,
+        "original_real_frequency_polynomial_residual": 1.4974474196978778e-13
+      },
+      "tangent": [
+        0.23471167668317194,
+        -0.9720650332300685
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0102.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0102.npy"
+    },
+    {
+      "index": 103,
+      "z": [
+        0.29477695756320527,
+        1.3808065365332687
+      ],
+      "point": {
+        "value_r": -13.376313892146536,
+        "value_i": 1.1302945158304523e-14,
+        "raw_MAC": 1.0000000000000009,
+        "right_residual": 1.2531448002471325e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.005037629001890309,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.166119350172478e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 14.738847878160263,
+        "x_mm": -31.35671451612791,
+        "alpha_r": 27.616130730665375,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.376313892146536,
+        "omega_i": 1.1302945158304523e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.014279759917330421,
+        "omega_xi_i": 0.021370180204817,
+        "original_real_frequency_polynomial_residual": 1.3483720651968101e-14
+      },
+      "tangent": [
+        0.25821927186600024,
+        -0.9660863354985374
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0103.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0103.npy"
+    },
+    {
+      "index": 104,
+      "z": [
+        0.3,
+        1.3616035808441118
+      ],
+      "point": {
+        "value_r": -13.369038244469872,
+        "value_i": 1.734916367216465e-14,
+        "raw_MAC": 1.0000000000000022,
+        "right_residual": 1.200520242671336e-14,
+        "nev": 0,
+        "newton_iterations": 1,
+        "seconds": 0.003956242013373412,
+        "method": "original_polynomial_bordered_Newton",
+        "left_residual": 2.233126430209216e-14,
+        "adjoint_nev": 0,
+        "adjoint_inverse_iterations": 0,
+        "adjoint_method": "bordered_physical_null_vector",
+        "xi": 15.0,
+        "x_mm": -31.22145520643922,
+        "alpha_r": 27.232071616882237,
+        "alpha_i": 0.0,
+        "beta_r": -20.0,
+        "beta_i": 0.0,
+        "omega_r": -13.369038244469872,
+        "omega_i": 1.734916367216465e-14,
+        "growth": 0.0,
+        "omega_alpha_i": 0.014887275215847134,
+        "omega_xi_i": 0.016930737949456275,
+        "original_real_frequency_polynomial_residual": 1.42655609465811e-14
+      },
+      "tangent": [
+        0.33179706276982696,
+        -0.9433507879560581
+      ],
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/q0104.npy",
+      "left_vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/rough_beta-20_physical_c0/p0104.npy"
+    }
+  ],
+  "failures": [
+    {
+      "index": 22,
+      "step": 0.06,
+      "reason": "AssertionError(('Unresolved eigenvector continuity', 0.81409174942444, -11.097082153951135))"
+    },
+    {
+      "index": 47,
+      "step": 0.05247018749999999,
+      "reason": "AssertionError()"
+    }
+  ],
+  "model": "Guide evaluated on reassembled physical local profiles; finite-difference xi derivatives; no CFD mesh refinement",
+  "closure": {
+    "passed": true,
+    "distance": 7.771561172376096e-14,
+    "tangent_dot": 1.0,
+    "raw_MAC": 0.9999999999999998
+  },
+  "finished": true
+}

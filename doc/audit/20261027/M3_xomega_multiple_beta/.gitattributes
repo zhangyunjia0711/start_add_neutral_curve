@@ -1,0 +1,9 @@
+* -text
+*.md text eol=lf
+*.py text eol=lf
+*.lay -whitespace
+*.log -whitespace
+*.csv -whitespace
+*.json -whitespace
+*.svg -whitespace
+evidence_runs/** -whitespace

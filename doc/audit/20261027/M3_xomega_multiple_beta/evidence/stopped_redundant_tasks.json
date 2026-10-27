@@ -1,0 +1,27 @@
+{
+  "time": "2026-10-27T21:41:19.175517+08:00",
+  "tasks": [
+    {
+      "pid": 216447,
+      "args": [
+        "/usr/bin/python3",
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/temporal.py",
+        "rough",
+        "-20"
+      ],
+      "reason": "All corresponding corrected native roots now covered by physically verified final contours; duplicate calculations stopped"
+    },
+    {
+      "pid": 244801,
+      "args": [
+        "python3",
+        "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xomega_multiple_beta_20261027/work/physical_trace.py",
+        "--seed",
+        "34",
+        "--tag",
+        "rough_beta-10_physical_c0"
+      ],
+      "reason": "All corresponding corrected native roots now covered by physically verified final contours; duplicate calculations stopped"
+    }
+  ]
+}

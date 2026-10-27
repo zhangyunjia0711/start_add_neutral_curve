@@ -1,0 +1,100 @@
+Tecplot 2024.1.0.52134 Batch Log
+ACTION: PageControl: CREATE
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: LoadAddOn
+ACTION: ReadDataSet: "M3_xomega_multiple_beta.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: M3_xomega_multiple_beta.lay
+ACTION: WriteDataSet: M3_xomega_multiple_beta_roundtrip.dat
+ACTION: View: Fit
+ACTION: SaveLayout: M3_xomega_multiple_beta_physical_kHz.lay
+ACTION: ReadDataSet: "bluntplate_M3_xomega_multiple_beta.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: bluntplate_M3_xomega_multiple_beta.lay
+ACTION: WriteDataSet: bluntplate_M3_xomega_multiple_beta_roundtrip.dat
+ACTION: View: Fit
+ACTION: SaveLayout: bluntplate_M3_xomega_multiple_beta_physical_kHz.lay
+ACTION: ReadDataSet: "rough_M3_xomega_multiple_beta.plt"
+ACTION: DeleteLineMaps
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: CreateLineMap
+ACTION: View: Fit
+ACTION: SaveLayout: rough_M3_xomega_multiple_beta.lay
+ACTION: WriteDataSet: rough_M3_xomega_multiple_beta_roundtrip.dat
+ACTION: View: Fit
+ACTION: SaveLayout: rough_M3_xomega_multiple_beta_physical_kHz.lay
+ACTION: Quit
+ACTION: PageControl: CREATE
