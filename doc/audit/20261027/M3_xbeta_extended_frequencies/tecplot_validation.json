@@ -1,0 +1,33 @@
+{
+  "tool": "Tecplot 360 EX 2024 R1 / Preplot",
+  "binary_magic": "#!TDV112",
+  "files": [
+    {
+      "file": "M3_xbeta_extended_frequencies.plt",
+      "sha256": "2e604476b0cab19eeee3b212478d6b3795688b0641e278a2baf7b6f3e3c22e64",
+      "source_sha256": "7057c1c6a6153218f7c556987b64e3b9a3c285c9d47855e05e281850aed84c0d",
+      "roundtrip_sha256": "0adac290963f45bfd7dad19f2f1966bddfc96201fee4c99d42e618304a4b449a",
+      "zones": 30,
+      "points": 13540,
+      "all_values_exact": true
+    },
+    {
+      "file": "bluntplate_M3_xbeta_extended_frequencies.plt",
+      "sha256": "3c078a5cb79614481e17d25113b5dd8835c6f796e9c533f766a1ef68f76a0cd1",
+      "source_sha256": "310a5d3fe8232339b250231fc6aa1418ed79a042a00e3bd8e4ea8d972a22ec22",
+      "roundtrip_sha256": "138e6150f20cb9d50b5047e26ec1482e419cb06593d5b87d50d15620caf44169",
+      "zones": 15,
+      "points": 9973,
+      "all_values_exact": true
+    },
+    {
+      "file": "rough_M3_xbeta_extended_frequencies.plt",
+      "sha256": "804fc0f079aae40b09727ffcddc9434c52ebd70950d88a262fdead5cdb120a37",
+      "source_sha256": "72ded4f46aad1fca82ff7acf8a747e55b6e18570eb13920d23e03a0643a1933d",
+      "roundtrip_sha256": "d49fcad9ea44b4647fd4484be77af12b6bca7d3739becefcf7c555c3ce078494",
+      "zones": 15,
+      "points": 3567,
+      "all_values_exact": true
+    }
+  ]
+}

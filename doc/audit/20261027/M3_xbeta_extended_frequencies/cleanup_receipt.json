@@ -1,0 +1,31 @@
+{
+  "removed": [
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_xbeta_extended_frequencies_20261027\\M3_xbeta_extended_frequencies_roundtrip.dat",
+      "sha256": "0adac290963f45bfd7dad19f2f1966bddfc96201fee4c99d42e618304a4b449a",
+      "reason": "Verified redundant roundtrip; certificate and original DAT/PLT retained"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_xbeta_extended_frequencies_20261027\\bluntplate_M3_xbeta_extended_frequencies_roundtrip.dat",
+      "sha256": "138e6150f20cb9d50b5047e26ec1482e419cb06593d5b87d50d15620caf44169",
+      "reason": "Verified redundant roundtrip; certificate and original DAT/PLT retained"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\outputs\\M3_xbeta_extended_frequencies_20261027\\rough_M3_xbeta_extended_frequencies_roundtrip.dat",
+      "sha256": "d49fcad9ea44b4647fd4484be77af12b6bca7d3739becefcf7c555c3ce078494",
+      "reason": "Verified redundant roundtrip; certificate and original DAT/PLT retained"
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\75°\\work\\M3_xbeta_extended_frequencies_20261027\\negative_frequency_cap.py",
+      "sha256": "305d7dec5adf7003355658f7bbe02091bc5b080bcfbe1e52cf0bd2e9ac4c32a2",
+      "reason": "Unsuccessful optional cap-candidate attempt; outcome retained in work log and isolated diagnostic output"
+    },
+    {
+      "path": "\\\\wsl.localhost\\Ubuntu\\home\\zaza\\attachment_line\\Han2019_SweptBluntPlate\\75°\\neutral_xbeta_extended_frequencies_20261027\\work\\negative_frequency_cap.py",
+      "sha256": "305d7dec5adf7003355658f7bbe02091bc5b080bcfbe1e52cf0bd2e9ac4c32a2",
+      "reason": "Unsuccessful optional cap-candidate attempt; outcome retained in work log and isolated diagnostic output"
+    }
+  ],
+  "scope": "Only explicit files created by this task",
+  "retained": "Original user data, frozen solver, all final and necessary reproduction files, stage logs, isolated WSL inputs/matrices and diagnostic evidence"
+}

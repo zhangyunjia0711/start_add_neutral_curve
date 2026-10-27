@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xbeta_extended_frequencies_20261027/work/finalize.py", line 94, in <module>
+    if __name__=='__main__':main()
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xbeta_extended_frequencies_20261027/work/finalize.py", line 65, in main
+    left=dict(l,turning_guess=m['point']);folds.append(tip(case,left,r,len(folds)))
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xbeta_extended_frequencies_20261027/work/finalize.py", line 13, in tip
+    return solve_tip(case,left,right,index,OMEGA,TAG)
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xbeta_extended_frequencies_20261027/work/physical_fold_bordered.py", line 52, in solve_tip
+    assert np.max(abs(F/scales))<1e-7 and res<1e-7,('Bordered physical fold unresolved',tag,index,opt.message,F/scales,trace[-1])
+AssertionError: ('Bordered physical fold unresolved', 'bluntplate_f200kHz_S', 0, 'The maximum number of function evaluations is exceeded.', array([-7.63207560e-06, -2.39826578e-03,  1.03177049e-03]), {'xi': 310.9068835140108, 'alpha_r': 45.05694868541375, 'beta_r': 11.938803495424626, 'F': [-1.2600542503449388e-06, -6.284859833897465e-08, 2.469866039257099e-06], 'scaled_F': [-1.757622286977353e-05, -0.002379739512746653, 0.0010431487741303584], 'original_matrix_residual': 1.2616154243333832e-06, 'coefficient_scaled_residual': 3.776789575685491e-11, 'raw_MAC': 0.9999917186264078})

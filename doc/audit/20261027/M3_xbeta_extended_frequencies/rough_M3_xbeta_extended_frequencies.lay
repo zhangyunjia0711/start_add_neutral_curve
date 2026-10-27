@@ -1,0 +1,513 @@
+#!MC 1410
+$!VarSet |LFBD| = 'E:\work\calc\Instability of attachment line\Han2019_SweptBluntPlate\75°\outputs\M3_xbeta_extended_frequencies_20261027'
+$!VarSet |LFDSFN1| = '"|LFBD|\rough_M3_xbeta_extended_frequencies.plt"'
+$!SetStyleBase Factory
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    }
+$!Page 
+  Name = ''
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 1
+      Y1 = 0.25
+      X2 = 10
+      Y2 = 8.25
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  VarPositionList =  [1-13]
+$!RemoveVar |LFDSFN1|
+$!FrameLayout 
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 1
+    Y = 0.25
+    }
+  Width = 9
+  Height = 8
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1-15]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    XYPos
+      {
+      X = 95
+      }
+    }
+$!LineMap  [1]
+  Name = 'rough_f-112kHz'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Cyan
+    LinePattern = Dashed
+    }
+  Symbols
+    {
+    Show = No
+    Color = Red
+    FillColor = Red
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = 'rough_f-110kHz'
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Blue
+    LinePattern = Dotted
+    }
+  Symbols
+    {
+    Show = No
+    Color = Green
+    FillColor = Green
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [3]
+  Name = 'rough_f-100kHz'
+  Assign
+    {
+    Zone = 3
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Purple
+    }
+  Symbols
+    {
+    Show = No
+    Color = Blue
+    FillColor = Blue
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [4]
+  Name = 'rough_f-75kHz'
+  Assign
+    {
+    Zone = 4
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Purple
+    LinePattern = Dashed
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom1
+    FillColor = Custom1
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [5]
+  Name = 'rough_f-50kHz'
+  Assign
+    {
+    Zone = 5
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Blue
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom3
+    FillColor = Custom3
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [6]
+  Name = 'rough_f-25kHz'
+  Assign
+    {
+    Zone = 6
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Cyan
+    LinePattern = Dashed
+    }
+  Symbols
+    {
+    Show = No
+    Color = Purple
+    FillColor = Purple
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [7]
+  Name = 'rough_f+0kHz'
+  Assign
+    {
+    Zone = 7
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Black
+    }
+  Symbols
+    {
+    Show = No
+    Color = Red
+    FillColor = Red
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [8]
+  Name = 'rough_f+25kHz'
+  Assign
+    {
+    Zone = 8
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Green
+    LinePattern = Dotted
+    }
+  Symbols
+    {
+    Show = No
+    Color = Green
+    FillColor = Green
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [9]
+  Name = 'rough_f+50kHz'
+  Assign
+    {
+    Zone = 9
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Green
+    }
+  Symbols
+    {
+    Show = No
+    Color = Blue
+    FillColor = Blue
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!LineMap  [10]
+  Name = 'rough_f+75kHz'
+  Assign
+    {
+    Zone = 10
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Red
+    LinePattern = Dashed
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom1
+    FillColor = Custom1
+    }
+  BarCharts
+    {
+    Color = Custom1
+    FillColor = Custom1
+    }
+  ErrorBars
+    {
+    Color = Custom1
+    }
+$!LineMap  [11]
+  Name = 'rough_f+100kHz'
+  Assign
+    {
+    Zone = 11
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Red
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom3
+    FillColor = Custom3
+    }
+  BarCharts
+    {
+    Color = Custom3
+    FillColor = Custom3
+    }
+  ErrorBars
+    {
+    Color = Custom3
+    }
+$!LineMap  [12]
+  Name = 'rough_f+125kHz'
+  Assign
+    {
+    Zone = 12
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Black
+    LinePattern = Dashed
+    }
+  Symbols
+    {
+    Show = No
+    Color = Purple
+    FillColor = Purple
+    }
+  BarCharts
+    {
+    Color = Purple
+    FillColor = Purple
+    }
+  ErrorBars
+    {
+    Color = Purple
+    }
+$!LineMap  [13]
+  Name = 'rough_f+150kHz'
+  Assign
+    {
+    Zone = 13
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Purple
+    LinePattern = Dotted
+    }
+  Symbols
+    {
+    Show = No
+    Color = Red
+    FillColor = Red
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [14]
+  Name = 'rough_f+175kHz'
+  Assign
+    {
+    Zone = 14
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Green
+    LinePattern = Dashed
+    }
+  Symbols
+    {
+    Show = No
+    Color = Green
+    FillColor = Green
+    }
+  BarCharts
+    {
+    Color = Green
+    FillColor = Green
+    }
+  ErrorBars
+    {
+    Color = Green
+    }
+$!LineMap  [15]
+  Name = 'rough_f+200kHz'
+  Assign
+    {
+    Zone = 15
+    XAxisVar = 1
+    YAxisVar = 2
+    }
+  Lines
+    {
+    Color = Blue
+    LinePattern = Dashed
+    }
+  Symbols
+    {
+    Show = No
+    Color = Blue
+    FillColor = Blue
+    }
+  BarCharts
+    {
+    Color = Blue
+    FillColor = Blue
+    }
+  ErrorBars
+    {
+    Color = Blue
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+$!XYLineAxis 
+  XDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -34.984169324840998172
+    RangeMax = 1100.1134984169325435
+    GRSpacing = 200
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    CoordScale = Linear
+    RangeMin = -23.407749507301076619
+    RangeMax = 15.439287657979534174
+    GRSpacing = 5
+    }
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!RemoveVar |LFBD|
+$!SetStyleBase Config

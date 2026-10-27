@@ -1,0 +1,52 @@
+{
+  "created": "2026-10-27T16:52:29.718133+08:00",
+  "root": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extended_frequencies_20261027",
+  "sources": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extra_frequencies_20261027/work/common.py",
+      "sha256": "03c02770c8823b7754551627ea30e9eda642870ab9b92fbd9b3bd7764a79b7ab"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extra_frequencies_20261027/work/run_adapter.py",
+      "sha256": "8c2c9e6f2cc7256f030511959df9ffad4d7a3414fa6dd48160e31fbffeb35abb"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extra_frequencies_20261027/work/core.py",
+      "sha256": "2f808d7d37afc0a4ed18e6fed18d523f0ac60dd302f7d8fb59a4f5766040ae89"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extra_frequencies_20261027/work/solver.py",
+      "sha256": "d5afebabae7f6968d89ce5c0220247123a4489b413d925347d21e32151d6e71b"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extra_frequencies_20261027/work/contour.py",
+      "sha256": "3be11382abff85d85ee58d4a73388e248c7e7df54fc8d3a434075a8fa130a684"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extra_frequencies_20261027/work/contour3d.py",
+      "sha256": "c6c0289d2b42c7bd32bc5baa8fbff17a4c6044a21ad90fcab3d930ed8378b0bb"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extra_frequencies_20261027/work/physical.py",
+      "sha256": "a416ef4740ae6147eb5c12a78692dfd86f7045489a2f53c4de45d20c1dcb2286"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extra_frequencies_20261027/work/finalize.py",
+      "sha256": "4b86272251c696627c1302cc05c91f915700d061704a466035606726ec5916c0"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extra_frequencies_20261027/work/physical_fold_bordered.py",
+      "sha256": "fbabb22cf936bdf444c672dd602e1171f5de3a60af7178daa9c0b1cbcf242d2a"
+    }
+  ],
+  "protected_files": 59,
+  "frequencies_kHz": [
+    -200,
+    -150,
+    -125,
+    125,
+    150,
+    200
+  ],
+  "model": "Frozen local wall basis, zero explicit curvature; unchanged from prior nine frequencies"
+}
