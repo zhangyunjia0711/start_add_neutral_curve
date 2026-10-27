@@ -1,0 +1,11 @@
+{"name": "bluntplate_f-75kHz_S_physical_tip0_spatial_f57e34b6dce6", "seconds": 0.119, "terminal": "no bracketed root", "rejected": 0, "peaks": [{"iloc": 5.0, "omega_r": -9.10918005321651, "beta_r": -16.90119638766179, "alpha_r": 20.69840997192572, "alpha_i": 1.713897973468933e-11, "growth": -1.713897973468933e-11}]}
+Traceback (most recent call last):
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xbeta_extra_frequencies_20261027/work/finalize.py", line 94, in <module>
+    if __name__=='__main__':main()
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xbeta_extra_frequencies_20261027/work/finalize.py", line 65, in main
+    left=dict(l,turning_guess=m['point']);folds.append(tip(case,left,r,len(folds)))
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xbeta_extra_frequencies_20261027/work/finalize.py", line 13, in tip
+    return solve_tip(case,left,right,index,OMEGA,TAG)
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_xbeta_extra_frequencies_20261027/work/tip_correction.py", line 41, in solve_tip
+    assert accepted,('Physical spatial fold corrector stalled',tag,index,trace[-1])
+AssertionError: ('Physical spatial fold corrector stalled', 'bluntplate_f-75kHz_S', 1, {'xi': 11.451472741152173, 'beta_r': -12.444869747043274, 'alpha_r': 22.68965973844613, 'F': [0.020548892624709665, -1.1105312156404572], 'point': {'value_r': 22.68965973844613, 'value_i': 0.020548892624709665, 'raw_MAC': 0.9999999835188885, 'right_residual': 2.6049647375065577e-11, 'nev': 0, 'newton_iterations': 2, 'seconds': 0.03311894400394522, 'method': 'original_polynomial_bordered_Newton', 'left_residual': 1.711356653489726e-13, 'adjoint_nev': 0, 'adjoint_inverse_iterations': 0, 'adjoint_method': 'bordered_physical_null_vector', 'alpha_r': 22.68965973844613, 'alpha_i': 0.020548892624709665, 'beta_r': -12.444869747043274, 'omega_r': -9.109180053216512, 'growth': -0.020548892624709665, 'iloc': 5, 'alpha_beta_r': -604.4995473603974, 'alpha_beta_i': -1.1105312156404572, 'alpha_omega_r': 749.096301852786, 'alpha_omega_i': -23.89183631987553}})

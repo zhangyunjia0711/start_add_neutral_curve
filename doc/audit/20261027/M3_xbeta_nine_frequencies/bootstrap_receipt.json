@@ -1,0 +1,59 @@
+{
+  "created": "2026-10-27T14:15:35.745454+08:00",
+  "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026",
+  "root": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_extra_frequencies_20261027",
+  "frequencies_kHz": [
+    -75,
+    -25,
+    25,
+    75
+  ],
+  "source_code": [
+    {
+      "name": "run_adapter.py",
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/work/run_adapter.py",
+      "sha256": "8c2c9e6f2cc7256f030511959df9ffad4d7a3414fa6dd48160e31fbffeb35abb"
+    },
+    {
+      "name": "core.py",
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/work/core.py",
+      "sha256": "2f808d7d37afc0a4ed18e6fed18d523f0ac60dd302f7d8fb59a4f5766040ae89"
+    },
+    {
+      "name": "solver.py",
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/work/solver.py",
+      "sha256": "d5afebabae7f6968d89ce5c0220247123a4489b413d925347d21e32151d6e71b"
+    },
+    {
+      "name": "contour.py",
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/work/contour.py",
+      "sha256": "41342345404626b95a4fc8766660725d6f1795a39590cb13f1408a07a09e5cf9"
+    },
+    {
+      "name": "contour3d.py",
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/work/contour3d.py",
+      "sha256": "465625bb0fd6768383a5f4ede8da6580e1108768bf20165d9605ea6d42976e8d"
+    },
+    {
+      "name": "physical.py",
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/work/physical.py",
+      "sha256": "a416ef4740ae6147eb5c12a78692dfd86f7045489a2f53c4de45d20c1dcb2286"
+    },
+    {
+      "name": "tip_correction.py",
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/work/tip_correction.py",
+      "sha256": "867f2f6cc31727214c83c95597f6a7e19a0f5cb93e0e7f2eb7e869150c37d646"
+    },
+    {
+      "name": "finalize.py",
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/work/finalize.py",
+      "sha256": "dd977a3daef8be3249d402c29052ac76508712a2c2d33b69e319b20259917fa8"
+    }
+  ],
+  "changes": [
+    "Signed new frequencies; same representative seeds from direct frequency continuation",
+    "Open-domain handling added to existing real-alpha/beta 3D pseudo-arclength guide",
+    "Original physical-profile turning point correction retained",
+    "Original caches shared for reading; new outputs/runs/physical-profile inputs isolated"
+  ]
+}
