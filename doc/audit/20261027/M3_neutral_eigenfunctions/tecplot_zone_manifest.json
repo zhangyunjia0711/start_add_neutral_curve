@@ -1,0 +1,230 @@
+{
+  "variables": [
+    "n_mm",
+    "f_kHz",
+    "beta",
+    "alpha_r",
+    "alpha_i",
+    "x_mm",
+    "case_id",
+    "boundary_id",
+    "rho_abs",
+    "rho_real",
+    "rho_imag",
+    "u_abs",
+    "u_real",
+    "u_imag",
+    "v_abs",
+    "v_real",
+    "v_imag",
+    "w_abs",
+    "w_real",
+    "w_imag",
+    "T_abs",
+    "T_real",
+    "T_imag"
+  ],
+  "zones": [
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "bluntplate_lower_f-100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "bluntplate_lower_f-50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "bluntplate_lower_f+0kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "bluntplate_lower_f+50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "bluntplate_lower_f+100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "bluntplate_upper_f-100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "bluntplate_upper_f-50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "bluntplate_upper_f+0kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "bluntplate_upper_f+50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "bluntplate_upper_f+100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "rough_lower_f-100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "rough_lower_f-50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "rough_lower_f+0kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "rough_lower_f+50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "rough_lower_f+100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "rough_upper_f-100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "rough_upper_f-50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "rough_upper_f+0kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "rough_upper_f+50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "M3_neutral_eigenfunctions",
+      "zone": "rough_upper_f+100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "bluntplate_M3_neutral_eigenfunctions",
+      "zone": "bluntplate_lower_f-100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "bluntplate_M3_neutral_eigenfunctions",
+      "zone": "bluntplate_lower_f-50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "bluntplate_M3_neutral_eigenfunctions",
+      "zone": "bluntplate_lower_f+0kHz",
+      "points": 400
+    },
+    {
+      "dataset": "bluntplate_M3_neutral_eigenfunctions",
+      "zone": "bluntplate_lower_f+50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "bluntplate_M3_neutral_eigenfunctions",
+      "zone": "bluntplate_lower_f+100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "bluntplate_M3_neutral_eigenfunctions",
+      "zone": "bluntplate_upper_f-100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "bluntplate_M3_neutral_eigenfunctions",
+      "zone": "bluntplate_upper_f-50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "bluntplate_M3_neutral_eigenfunctions",
+      "zone": "bluntplate_upper_f+0kHz",
+      "points": 400
+    },
+    {
+      "dataset": "bluntplate_M3_neutral_eigenfunctions",
+      "zone": "bluntplate_upper_f+50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "bluntplate_M3_neutral_eigenfunctions",
+      "zone": "bluntplate_upper_f+100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "rough_M3_neutral_eigenfunctions",
+      "zone": "rough_lower_f-100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "rough_M3_neutral_eigenfunctions",
+      "zone": "rough_lower_f-50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "rough_M3_neutral_eigenfunctions",
+      "zone": "rough_lower_f+0kHz",
+      "points": 400
+    },
+    {
+      "dataset": "rough_M3_neutral_eigenfunctions",
+      "zone": "rough_lower_f+50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "rough_M3_neutral_eigenfunctions",
+      "zone": "rough_lower_f+100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "rough_M3_neutral_eigenfunctions",
+      "zone": "rough_upper_f-100kHz",
+      "points": 400
+    },
+    {
+      "dataset": "rough_M3_neutral_eigenfunctions",
+      "zone": "rough_upper_f-50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "rough_M3_neutral_eigenfunctions",
+      "zone": "rough_upper_f+0kHz",
+      "points": 400
+    },
+    {
+      "dataset": "rough_M3_neutral_eigenfunctions",
+      "zone": "rough_upper_f+50kHz",
+      "points": 400
+    },
+    {
+      "dataset": "rough_M3_neutral_eigenfunctions",
+      "zone": "rough_upper_f+100kHz",
+      "points": 400
+    }
+  ],
+  "normalization": "See eigenfunction_verification.json"
+}

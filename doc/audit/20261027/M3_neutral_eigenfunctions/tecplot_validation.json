@@ -1,0 +1,38 @@
+{
+  "created": "2026-10-27T12:58:20.034781+08:00",
+  "tool": "Tecplot 360 EX 2024 R1 / Preplot",
+  "binary_magic": "#!TDV112",
+  "batch_log_sha256": "5b43b1e270ba08f9370bde395ffd26d0ba4599c0c69b086bf68e0a4672b137ba",
+  "files": [
+    {
+      "file": "M3_neutral_eigenfunctions.plt",
+      "sha256": "dd81aa38a6353f1e1cbddfbcada691778fc135b5567bce3a5def4a074120cadc",
+      "source_sha256": "e1b477d977247c0855d561c2097162f3e88c6792b12e85a6ae5ffb9ab7b9bc73",
+      "roundtrip_sha256": "c21f4afde26097509007887fd95abacabf66292b55c219bfe19cba43defc46c7",
+      "zones": 20,
+      "points": 8000,
+      "double_values": 184000,
+      "all_values_exact": true
+    },
+    {
+      "file": "bluntplate_M3_neutral_eigenfunctions.plt",
+      "sha256": "d51e77b60f75bf29f880c299838b5a02b6c910b097adfc2cedd20fae7888076e",
+      "source_sha256": "0138ff08914c87f14a89124524180f9f3e27f7e08411f956c3fe6b4261a427e5",
+      "roundtrip_sha256": "9bdd28348367b16ea9570876293dd042d02d8613138612d259a24c2bd04d1435",
+      "zones": 10,
+      "points": 4000,
+      "double_values": 92000,
+      "all_values_exact": true
+    },
+    {
+      "file": "rough_M3_neutral_eigenfunctions.plt",
+      "sha256": "9d01bad2919e19666a246fa28aac44e42c69808d1af961e8796a73a1c01d81c2",
+      "source_sha256": "90ce18a87e972bc3b99b838ee67c495cecb1e5442ca544ec607f940e19dc8863",
+      "roundtrip_sha256": "9c50ed475b56989eb741b7404168e607ac6816a8754e5e94ea2405c828a1335a",
+      "zones": 10,
+      "points": 4000,
+      "double_values": 92000,
+      "all_values_exact": true
+    }
+  ]
+}
