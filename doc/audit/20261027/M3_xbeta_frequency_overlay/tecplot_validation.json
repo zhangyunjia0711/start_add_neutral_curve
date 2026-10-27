@@ -1,0 +1,44 @@
+{
+  "created": "2026-10-27T12:21:32.361685+08:00",
+  "tool": "Tecplot 360 EX 2024 R1 / Preplot",
+  "binary_magic": "#!TDV112",
+  "batch_log_sha256": "af6a4a90f61591fb0c0ec479c7d84a4c2e5d86f12350b1f211d4cc57cba7e837",
+  "files": [
+    {
+      "file": "M3_xbeta_five_frequencies_same_branch.plt",
+      "sha256": "ba2f8237aab05586d17ff204c99a2b01d0afaf2b835b2d6cf8662492d14877e5",
+      "source_sha256": "7a5a43f01016aec2de309187d7fcc108612776b7ffa1ed755cc4643acb9876eb",
+      "roundtrip_sha256": "baf224d2a389b0aa2789e38d55eb519c91a3754cea5efcdbfcdb496a8946136f",
+      "zones": 10,
+      "points": 6312,
+      "double_values": 82056,
+      "all_values_exact": true,
+      "zero_frequency_open_zones": 2,
+      "nonzero_frequency_zones_closed": true
+    },
+    {
+      "file": "bluntplate_M3_xbeta_five_frequencies.plt",
+      "sha256": "02e9dd21e9ba65eba3ed4fc6e3213bb62dee25706f08b2440ff7c973ea970cf6",
+      "source_sha256": "53fdcc86e0f909416ab53f80b915bbe4b3a186db3c6d49459ae8dde0603cc658",
+      "roundtrip_sha256": "88b9bbf43853091c2a15ceb1c6621cea40e90252bc9aef1dde60c646eb1ae01f",
+      "zones": 5,
+      "points": 4563,
+      "double_values": 59319,
+      "all_values_exact": true,
+      "zero_frequency_open_zones": 1,
+      "nonzero_frequency_zones_closed": true
+    },
+    {
+      "file": "rough_M3_xbeta_five_frequencies.plt",
+      "sha256": "944e6746e0bfa12608ab87b813d1a2d6b2fca2d68dc0d5c02036c11ea6be38c9",
+      "source_sha256": "d76642d5ff4b93e9f5994e1207831885c432dab85c69c7dc5cf912f70ddd30c8",
+      "roundtrip_sha256": "3070400800730aa2f899b41c1f6cc01769c68deba762aa70c6a437c03da0c137",
+      "zones": 5,
+      "points": 1749,
+      "double_values": 22737,
+      "all_values_exact": true,
+      "zero_frequency_open_zones": 1,
+      "nonzero_frequency_zones_closed": true
+    }
+  ]
+}

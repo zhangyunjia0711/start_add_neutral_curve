@@ -1,0 +1,27 @@
+{
+  "physical_quantity": "signed cyclic frequency f",
+  "unit": "kHz",
+  "Lref_m": 0.035,
+  "Uref_m_per_s": 1810.6307411853716,
+  "formula": "omega_nd=2*pi*f_kHz*1000*Lref/Uref",
+  "reference_source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/outputs/input_conversion.json",
+  "frequencies": [
+    {
+      "f_kHz": -100,
+      "omega_nd": -12.145573404288685
+    },
+    {
+      "f_kHz": -50,
+      "omega_nd": -6.0727867021443425
+    },
+    {
+      "f_kHz": 50,
+      "omega_nd": 6.0727867021443425
+    },
+    {
+      "f_kHz": 100,
+      "omega_nd": 12.145573404288685
+    }
+  ],
+  "supersedes_preliminary_dimensionless_50_100": true
+}
