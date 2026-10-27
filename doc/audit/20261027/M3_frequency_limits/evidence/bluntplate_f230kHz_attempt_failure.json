@@ -1,0 +1,8 @@
+{
+  "case": "bluntplate",
+  "sign": 1,
+  "f_kHz": 230.0,
+  "status": "failed",
+  "reason": "AssertionError(('Unresolved eigenvector continuity', 0.09156622628854812, (37.165792325812255-0.029067746650414502j)))",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 91, in safe_one\n    try:return one(job)\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 76, in one\n    roots,checks=root_pair(p,cap,qcap,f);audit.append(dict(xi=x,kind=kind,checks=checks))\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 40, in root_pair\n    bb=lastb+direction*h;aa,v,rr=p.solve_alpha(bb,lasta,lastq,True)\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/solver.py\", line 64, in solve_alpha\n    K=self.spatial(beta);a,q,r,p=qep(K,target,qref,left)\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/core.py\", line 137, in qep\n    if not ok or overlap<.95:return qep_arnoldi(K,target,qref,left)\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/core.py\", line 94, in qep_arnoldi\n    assert chosen is not None,('Unresolved eigenvector continuity',overlap,target)\nAssertionError: ('Unresolved eigenvector continuity', 0.09156622628854812, (37.165792325812255-0.029067746650414502j))\n"
+}

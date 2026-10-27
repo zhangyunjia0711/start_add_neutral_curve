@@ -1,0 +1,32 @@
+{
+  "tool": "Tecplot 360 EX 2024 R1 / Preplot",
+  "files": [
+    {
+      "file": "M3_frequency_limits_neutral_curves.plt",
+      "sha256": "9359f6b4d2e745af6eebd5c16bc7d9a730dd18fd7a85c7e738a58ef0e9d5747f",
+      "source_sha256": "5178b43e0ef1e58fbd69642d13ec6b5bc63535fc38719870d63e10bc217e0e03",
+      "roundtrip_sha256": "da68c000974527db4d375f5c636126ef6b3a006c58b7eed3cd0561d8a14af186",
+      "zones": 23,
+      "points": 1819,
+      "all_values_exact": true
+    },
+    {
+      "file": "bluntplate_M3_frequency_limits.plt",
+      "sha256": "e8a3ccea199af43df476825be3623e098932eda99b7cb16cab4dd6e246468c89",
+      "source_sha256": "34a7c74f31bfdef403597df50660cd15cc160cde9078372233546e5172b809d9",
+      "roundtrip_sha256": "a50f4cd589f43e08db845d39563955117ed08cd51212a571b1f2d910f375b17c",
+      "zones": 12,
+      "points": 1370,
+      "all_values_exact": true
+    },
+    {
+      "file": "rough_M3_frequency_limits.plt",
+      "sha256": "3d03a691b32c617a465676181cfe343a77ffe2a9228fd42b825349b807d2dcd5",
+      "source_sha256": "756385405296ff8b181e41a9da29d7cead4417a63bb8c85ccd0d4d0fe0d75a10",
+      "roundtrip_sha256": "920ed1693be03f6b141fd3fd5bbb79ae73cc368762d7b59c6881a11b217d17b5",
+      "zones": 11,
+      "points": 449,
+      "all_values_exact": true
+    }
+  ]
+}

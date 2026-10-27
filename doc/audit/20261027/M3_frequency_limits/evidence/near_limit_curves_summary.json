@@ -1,0 +1,218 @@
+[
+  {
+    "case": "bluntplate",
+    "sign": 1,
+    "f_kHz": 230.0,
+    "status": "failed",
+    "reason": "AssertionError(('Unresolved eigenvector continuity', 0.09156622628854812, (37.165792325812255-0.029067746650414502j)))",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 91, in safe_one\n    try:return one(job)\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 76, in one\n    roots,checks=root_pair(p,cap,qcap,f);audit.append(dict(xi=x,kind=kind,checks=checks))\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 40, in root_pair\n    bb=lastb+direction*h;aa,v,rr=p.solve_alpha(bb,lasta,lastq,True)\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/solver.py\", line 64, in solve_alpha\n    K=self.spatial(beta);a,q,r,p=qep(K,target,qref,left)\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/core.py\", line 137, in qep\n    if not ok or overlap<.95:return qep_arnoldi(K,target,qref,left)\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/core.py\", line 94, in qep_arnoldi\n    assert chosen is not None,('Unresolved eigenvector continuity',overlap,target)\nAssertionError: ('Unresolved eigenvector continuity', 0.09156622628854812, (37.165792325812255-0.029067746650414502j))\n"
+  },
+  {
+    "case": "bluntplate",
+    "sign": 1,
+    "f_kHz": 250.0,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -17.0248905033348,
+      6.808479791865156
+    ],
+    "beta_range": [
+      14.113466500158195,
+      20.295553184144254
+    ],
+    "maximum_growth_error": 9.564874391652933e-13,
+    "maximum_right_residual": 4.727129851988357e-10
+  },
+  {
+    "case": "bluntplate",
+    "sign": 1,
+    "f_kHz": 275.0,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -12.85560558399668,
+      1.01905606976418
+    ],
+    "beta_range": [
+      17.848313633571294,
+      21.934759010633126
+    ],
+    "maximum_growth_error": 4.857403270840804e-13,
+    "maximum_right_residual": 4.674227472847896e-10
+  },
+  {
+    "case": "bluntplate",
+    "sign": 1,
+    "f_kHz": 290.0,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -7.756992324820153,
+      -3.691874696199191
+    ],
+    "beta_range": [
+      20.85124687241903,
+      22.087780698284423
+    ],
+    "maximum_growth_error": 6.004146629206598e-14,
+    "maximum_right_residual": 3.1617419289905573e-10
+  },
+  {
+    "case": "bluntplate",
+    "sign": 1,
+    "f_kHz": 291.6,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -5.855977282403323,
+      -5.523926391580112
+    ],
+    "beta_range": [
+      21.554421391297154,
+      21.7179513467781
+    ],
+    "maximum_growth_error": 8.211880916204287e-14,
+    "maximum_right_residual": 3.407394627102954e-10
+  },
+  {
+    "case": "rough",
+    "sign": 1,
+    "f_kHz": 230.0,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -19.12431250315076,
+      11.79097774255274
+    ],
+    "beta_range": [
+      11.890094956464171,
+      17.562940123094318
+    ],
+    "maximum_growth_error": 3.77934820462057e-13,
+    "maximum_right_residual": 4.369770972901613e-10
+  },
+  {
+    "case": "rough",
+    "sign": 1,
+    "f_kHz": 250.0,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -14.817081305621628,
+      4.795011608875737
+    ],
+    "beta_range": [
+      14.90895791521664,
+      18.66624322557408
+    ],
+    "maximum_growth_error": 4.370625857262534e-13,
+    "maximum_right_residual": 1.7260646012008678e-10
+  },
+  {
+    "case": "rough",
+    "sign": 1,
+    "f_kHz": 260.0,
+    "status": "failed",
+    "reason": "AssertionError(('No interior instability', 260.0, {'beta': 17.345069287452294, 'alpha_r': 62.47892052518115, 'alpha_i': 0.0005201288664236054, 'beta_derivative': 5.538543034874074e-11, 'beta_curvature': 0.06696220653661404}))",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 91, in safe_one\n    try:return one(job)\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 76, in one\n    roots,checks=root_pair(p,cap,qcap,f);audit.append(dict(xi=x,kind=kind,checks=checks))\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 35, in root_pair\n    assert a.imag<0 and abs(r['alpha_beta_i'])<1e-6,('No interior instability',f,trace[-1])\nAssertionError: ('No interior instability', 260.0, {'beta': 17.345069287452294, 'alpha_r': 62.47892052518115, 'alpha_i': 0.0005201288664236054, 'beta_derivative': 5.538543034874074e-11, 'beta_curvature': 0.06696220653661404})\n"
+  },
+  {
+    "case": "rough",
+    "sign": 1,
+    "f_kHz": 264.5,
+    "status": "failed",
+    "reason": "AssertionError(('No interior instability', 264.5, {'beta': 18.241826085368757, 'alpha_r': 57.85600347886882, 'alpha_i': 0.000967253224540691, 'beta_derivative': 8.82853728152429e-11, 'beta_curvature': 0.06549672305726723}))",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 91, in safe_one\n    try:return one(job)\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 76, in one\n    roots,checks=root_pair(p,cap,qcap,f);audit.append(dict(xi=x,kind=kind,checks=checks))\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 35, in root_pair\n    assert a.imag<0 and abs(r['alpha_beta_i'])<1e-6,('No interior instability',f,trace[-1])\nAssertionError: ('No interior instability', 264.5, {'beta': 18.241826085368757, 'alpha_r': 57.85600347886882, 'alpha_i': 0.000967253224540691, 'beta_derivative': 8.82853728152429e-11, 'beta_curvature': 0.06549672305726723})\n"
+  },
+  {
+    "case": "bluntplate",
+    "sign": -1,
+    "f_kHz": -113.0,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -30.394513260890264,
+      -26.553275473261785
+    ],
+    "beta_range": [
+      -22.746851127933624,
+      -21.256873821240838
+    ],
+    "maximum_growth_error": 1.1123322433899711e-12,
+    "maximum_right_residual": 4.844632001145461e-10
+  },
+  {
+    "case": "bluntplate",
+    "sign": -1,
+    "f_kHz": -114.0,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -29.256166712380406,
+      -27.970117062592387
+    ],
+    "beta_range": [
+      -22.38478151255958,
+      -21.885356074103395
+    ],
+    "maximum_growth_error": 7.895000571269545e-13,
+    "maximum_right_residual": 4.916421569336997e-10
+  },
+  {
+    "case": "bluntplate",
+    "sign": -1,
+    "f_kHz": -114.12,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -28.77778659043146,
+      -28.480496253789603
+    ],
+    "beta_range": [
+      -22.208404922414637,
+      -22.09256733802154
+    ],
+    "maximum_growth_error": 3.7668591932726175e-13,
+    "maximum_right_residual": 2.5467249863673964e-10
+  },
+  {
+    "case": "rough",
+    "sign": -1,
+    "f_kHz": -114.0,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -31.191513894128903,
+      -26.389087151128876
+    ],
+    "beta_range": [
+      -23.208818360792527,
+      -21.192813468009142
+    ],
+    "maximum_growth_error": 1.0285777886193082e-12,
+    "maximum_right_residual": 3.495849747247433e-10
+  },
+  {
+    "case": "rough",
+    "sign": -1,
+    "f_kHz": -115.0,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -30.591791147647964,
+      -27.257951428717988
+    ],
+    "beta_range": [
+      -23.032713390459246,
+      -21.63269023347737
+    ],
+    "maximum_growth_error": 1.151364674596579e-12,
+    "maximum_right_residual": 4.1289076960949323e-10
+  },
+  {
+    "case": "rough",
+    "sign": -1,
+    "f_kHz": -115.95,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -28.826567133847586,
+      -28.778104596268324
+    ],
+    "beta_range": [
+      -22.598932204785363,
+      -22.473896878006908
+    ],
+    "maximum_growth_error": 3.444572552406431e-13,
+    "maximum_right_residual": 4.303530965829953e-10
+  }
+]

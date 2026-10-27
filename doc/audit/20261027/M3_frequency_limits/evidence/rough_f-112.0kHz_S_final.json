@@ -1,0 +1,3383 @@
+{
+  "case": "rough",
+  "f_kHz": -112.0,
+  "component": "S",
+  "omega_r": -13.603042212803327,
+  "status": "closed_verified",
+  "points": [
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 79.0,
+      "x_mm": 36.000737412904506,
+      "x_flat_mm": 21.14257441290451,
+      "alpha_r": 12.307124243881937,
+      "alpha_i": -3.1167265461901934e-13,
+      "beta_r": -18.9902589877934,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 3.1167265461901934e-13,
+      "right_residual": 1.2387629564809017e-14,
+      "left_residual": 2.9027683424281694e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 0,
+      "alpha_beta_i": -0.5546427596120058,
+      "guide_order": 0.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0000.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 80.0,
+      "x_mm": 37.22480627395794,
+      "x_flat_mm": 22.36664327395794,
+      "alpha_r": 12.309762428604094,
+      "alpha_i": -2.287591350453854e-13,
+      "beta_r": -18.98107327284682,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 2.287591350453854e-13,
+      "right_residual": 1.1022871698033056e-14,
+      "left_residual": 3.1013969349537925e-15,
+      "raw_MAC": 0.9999999999999998,
+      "guide_index": 1,
+      "alpha_beta_i": -0.5575570384542815,
+      "guide_order": 1.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0001.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 81.0,
+      "x_mm": 38.45697445977942,
+      "x_flat_mm": 23.59881145977942,
+      "alpha_r": 12.304585246721436,
+      "alpha_i": -3.6095570311619313e-13,
+      "beta_r": -18.96947504465296,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 3.6095570311619313e-13,
+      "right_residual": 1.1099665561093759e-14,
+      "left_residual": 2.6488838108784426e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 2,
+      "alpha_beta_i": -0.5590722277979603,
+      "guide_order": 2.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0002.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 82.0,
+      "x_mm": 39.69768815847941,
+      "x_flat_mm": 24.83952515847941,
+      "alpha_r": 12.291604444826746,
+      "alpha_i": -3.089179657422745e-13,
+      "beta_r": -18.95552912695992,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 3.089179657422745e-13,
+      "right_residual": 1.0612855492634356e-14,
+      "left_residual": 2.7932118460250434e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 3,
+      "alpha_beta_i": -0.5589483571386528,
+      "guide_order": 3.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0003.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 83.0,
+      "x_mm": 40.94739665263776,
+      "x_flat_mm": 26.08923365263776,
+      "alpha_r": 12.270659654683584,
+      "alpha_i": -4.65740864876552e-13,
+      "beta_r": -18.939239834714957,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 4.65740864876552e-13,
+      "right_residual": 1.0621456531505143e-14,
+      "left_residual": 2.5796142507938364e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 4,
+      "alpha_beta_i": -0.5568685845600444,
+      "guide_order": 4.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0004.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 84.0,
+      "x_mm": 42.20655248199585,
+      "x_flat_mm": 27.348389481995852,
+      "alpha_r": 12.241239092182827,
+      "alpha_i": -6.79009405139651e-13,
+      "beta_r": -18.920514015417236,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 6.79009405139651e-13,
+      "right_residual": 1.0299493614719962e-14,
+      "left_residual": 2.52400050569358e-15,
+      "raw_MAC": 0.9999999999999998,
+      "guide_index": 5,
+      "alpha_beta_i": -0.5524896515486151,
+      "guide_order": 5.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0005.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 85.0,
+      "x_mm": 43.475611607328176,
+      "x_flat_mm": 28.61744860732818,
+      "alpha_r": 12.202398431412318,
+      "alpha_i": -1.004114883445434e-12,
+      "beta_r": -18.899155820044903,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.004114883445434e-12,
+      "right_residual": 1.068754630457461e-14,
+      "left_residual": 2.4788626187834472e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 6,
+      "alpha_beta_i": -0.5454645306724121,
+      "guide_order": 6.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0006.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 86.0,
+      "x_mm": 44.75503357555387,
+      "x_flat_mm": 29.89687057555387,
+      "alpha_r": 12.153151235392773,
+      "alpha_i": -1.573707099111361e-12,
+      "beta_r": -18.8749594517339,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.573707099111361e-12,
+      "right_residual": 8.972285960389388e-15,
+      "left_residual": 2.4347593187302576e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 7,
+      "alpha_beta_i": -0.535321995022633,
+      "guide_order": 7.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0007.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 87.0,
+      "x_mm": 46.045281686145884,
+      "x_flat_mm": 31.187118686145887,
+      "alpha_r": 12.092165575401225,
+      "alpha_i": -2.308290001820625e-12,
+      "beta_r": -18.847616589735733,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 2.308290001820625e-12,
+      "right_residual": 9.287053321307335e-15,
+      "left_residual": 2.510986092702616e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 8,
+      "alpha_beta_i": -0.5214922625780274,
+      "guide_order": 8.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0008.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 88.0,
+      "x_mm": 47.3468231588987,
+      "x_flat_mm": 32.4886601588987,
+      "alpha_r": 12.017606687917429,
+      "alpha_i": -3.3404746347499985e-12,
+      "beta_r": -18.816679941817466,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 3.3404746347499985e-12,
+      "right_residual": 9.327900079898171e-15,
+      "left_residual": 2.2694131112509363e-15,
+      "raw_MAC": 0.9999999999999998,
+      "guide_index": 9,
+      "alpha_beta_i": -0.5033334896037527,
+      "guide_order": 9.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0009.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 89.0,
+      "x_mm": 48.660129303116676,
+      "x_flat_mm": 33.80196630311668,
+      "alpha_r": 11.926979551323331,
+      "alpha_i": -4.094384610547718e-12,
+      "beta_r": -18.78151563328798,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 4.094384610547718e-12,
+      "right_residual": 9.59926195903263e-15,
+      "left_residual": 2.1016568542528147e-15,
+      "raw_MAC": 0.9999999999999998,
+      "guide_index": 10,
+      "alpha_beta_i": -0.4801358774034997,
+      "guide_order": 10.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0010.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 90.0,
+      "x_mm": 49.985675688283614,
+      "x_flat_mm": 35.127512688283616,
+      "alpha_r": 11.816539973270622,
+      "alpha_i": -1.5326550193834634e-12,
+      "beta_r": -18.74116885352415,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.5326550193834634e-12,
+      "right_residual": 8.220444468440678e-15,
+      "left_residual": 2.2081684163972352e-15,
+      "raw_MAC": 0.9999999999999994,
+      "guide_index": 11,
+      "alpha_beta_i": -0.45122455829498376,
+      "guide_order": 11.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0011.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 91.0,
+      "x_mm": 51.32394231627216,
+      "x_flat_mm": 36.46577931627216,
+      "alpha_r": 11.681160394828336,
+      "alpha_i": 1.8165020221067477e-14,
+      "beta_r": -18.694310294289384,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -1.8165020221067477e-14,
+      "right_residual": 9.365996743390914e-15,
+      "left_residual": 2.0392982711641557e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 12,
+      "alpha_beta_i": -0.4159838827105818,
+      "guide_order": 12.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0012.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 92.0,
+      "x_mm": 52.67541379516197,
+      "x_flat_mm": 37.817250795161975,
+      "alpha_r": 11.5138968845147,
+      "alpha_i": 1.1532199643880278e-14,
+      "beta_r": -18.63908290416689,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -1.1532199643880278e-14,
+      "right_residual": 9.252517516598979e-15,
+      "left_residual": 1.967698474186769e-15,
+      "raw_MAC": 1.0000000000000007,
+      "guide_index": 13,
+      "alpha_beta_i": -0.3739879416145634,
+      "guide_order": 13.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0013.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 93.0,
+      "x_mm": 54.04057951472426,
+      "x_flat_mm": 39.18241651472426,
+      "alpha_r": 11.303904329339112,
+      "alpha_i": 1.8982589331713782e-15,
+      "beta_r": -18.572558572511007,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -1.8982589331713782e-15,
+      "right_residual": 8.516319849734542e-15,
+      "left_residual": 1.8361362679018274e-15,
+      "raw_MAC": 0.9999999999999996,
+      "guide_index": 14,
+      "alpha_beta_i": -0.3253308198374475,
+      "guide_order": 14.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0014.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 94.0,
+      "x_mm": 55.41993382363606,
+      "x_flat_mm": 40.56177082363606,
+      "alpha_r": 11.033259550366312,
+      "alpha_i": 7.862827187315975e-14,
+      "beta_r": -18.489866376377964,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -7.862827187315975e-14,
+      "right_residual": 7.54214723158688e-15,
+      "left_residual": 1.7889843812149646e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 15,
+      "alpha_beta_i": -0.27094155680105386,
+      "guide_order": 15.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0015.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 95.0,
+      "x_mm": 56.81397620849375,
+      "x_flat_mm": 41.95581320849375,
+      "alpha_r": 10.671880747228592,
+      "alpha_i": -5.728098339169366e-14,
+      "beta_r": -18.38275795711364,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 5.728098339169366e-14,
+      "right_residual": 6.175133396786001e-15,
+      "left_residual": 1.8171356545140713e-15,
+      "raw_MAC": 0.9999999999999999,
+      "guide_index": 16,
+      "alpha_beta_i": -0.21306142813073672,
+      "guide_order": 16.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0016.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 96.0,
+      "x_mm": 58.22321147468447,
+      "x_flat_mm": 43.36504847468447,
+      "alpha_r": 10.167797228137678,
+      "alpha_i": 4.0681449250042036e-14,
+      "beta_r": -18.236839089995463,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -4.0681449250042036e-14,
+      "right_residual": 6.005275765956686e-15,
+      "left_residual": 1.8785381419013586e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 17,
+      "alpha_beta_i": -0.15564643421239566,
+      "guide_order": 17.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0017.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 97.0,
+      "x_mm": 59.64814992918446,
+      "x_flat_mm": 44.789986929184465,
+      "alpha_r": 9.42652619061309,
+      "alpha_i": 8.287982039230557e-13,
+      "beta_r": -18.025706103958264,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -8.287982039230557e-13,
+      "right_residual": 5.666031707170377e-15,
+      "left_residual": 1.7345295248373857e-15,
+      "raw_MAC": 0.9999999999999998,
+      "guide_index": 18,
+      "alpha_beta_i": -0.103334810166991,
+      "guide_order": 18.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0018.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 98.0,
+      "x_mm": 61.08930756534907,
+      "x_flat_mm": 46.23114456534907,
+      "alpha_r": 8.228001937728559,
+      "alpha_i": 1.898976391481001e-15,
+      "beta_r": -17.687839846425867,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -1.898976391481001e-15,
+      "right_residual": 6.704877158212962e-15,
+      "left_residual": 1.6144888831088524e-15,
+      "raw_MAC": 0.999999999999999,
+      "guide_index": 19,
+      "alpha_beta_i": -0.055417876455475405,
+      "guide_order": 19.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0019.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 1,
+      "xi": 98.6182049468465,
+      "x_mm": 61.99058774405485,
+      "x_flat_mm": 47.13242474405485,
+      "alpha_r": 6.205057555508732,
+      "alpha_i": -1.245505382467177e-11,
+      "beta_r": -17.124103788138953,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.245505382467177e-11,
+      "right_residual": 5.954996735748311e-15,
+      "left_residual": 1.473645370557406e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_order": 20.0,
+      "guide_left_index": 19,
+      "guide_right_index": 21,
+      "guide_xi": 98.56646142188183,
+      "native_bracket": [
+        98,
+        99
+      ],
+      "theta": 0.6182049468465038,
+      "trace": [
+        {
+          "xi": 98.56646142188183,
+          "beta_r": -17.30035603150424,
+          "alpha_r": 6.841451386777037,
+          "F": [
+            0.00024626967701877294,
+            -0.016551265581286702
+          ],
+          "point": {
+            "value_r": 6.841451386777037,
+            "value_i": 0.00024626967701877294,
+            "raw_MAC": 0.9955001665118973,
+            "right_residual": 2.1727291834082644e-12,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.01967965300718788,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.1712306391428922e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.841451386777037,
+            "alpha_i": 0.00024626967701877294,
+            "beta_r": -17.30035603150424,
+            "omega_r": -13.603042212803327,
+            "growth": -0.00024626967701877294,
+            "iloc": 5,
+            "alpha_beta_r": -3.6302075136165857,
+            "alpha_beta_i": -0.016551265581286702,
+            "alpha_omega_r": 3.862673001132148,
+            "alpha_omega_i": -0.2741576395057871
+          }
+        },
+        {
+          "xi": 98.67849910388479,
+          "beta_r": -17.12546872153546,
+          "alpha_r": 6.2127371521580335,
+          "F": [
+            0.0013827698469631292,
+            -0.00028885729811059475
+          ],
+          "point": {
+            "value_r": 6.2127371521580335,
+            "value_i": 0.0013827698469631292,
+            "raw_MAC": 0.9993654475182246,
+            "right_residual": 6.449472990868088e-12,
+            "nev": 0,
+            "newton_iterations": 3,
+            "seconds": 0.03144279899424873,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.5183447151090898e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.2127371521580335,
+            "alpha_i": 0.0013827698469631292,
+            "beta_r": -17.12546872153546,
+            "omega_r": -13.603042212803327,
+            "growth": -0.0013827698469631292,
+            "iloc": 5,
+            "alpha_beta_r": -3.6184042132713348,
+            "alpha_beta_i": -0.00028885729811059475,
+            "alpha_omega_r": 3.8385765136424648,
+            "alpha_omega_i": -0.28650172272676205
+          }
+        },
+        {
+          "xi": 98.61805872084783,
+          "beta_r": -17.124111271550486,
+          "alpha_r": 6.205077984738858,
+          "F": [
+            -3.361492321697989e-06,
+            -3.0691746782925777e-07
+          ],
+          "point": {
+            "value_r": 6.205077984738858,
+            "value_i": -3.361492321697989e-06,
+            "raw_MAC": 0.9999983328950578,
+            "right_residual": 1.6124504401364393e-14,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.020352142993942834,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.5258823018211286e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.205077984738858,
+            "alpha_i": -3.361492321697989e-06,
+            "beta_r": -17.124111271550486,
+            "omega_r": -13.603042212803327,
+            "growth": 3.361492321697989e-06,
+            "iloc": 5,
+            "alpha_beta_r": -3.6181932622545747,
+            "alpha_beta_i": -3.0691746782925777e-07,
+            "alpha_omega_r": 3.8385139812396027,
+            "alpha_omega_i": -0.2875319359769042
+          }
+        },
+        {
+          "xi": 98.61820493192995,
+          "beta_r": -17.12410378803703,
+          "alpha_r": 6.205057554459731,
+          "F": [
+            -3.4289520874161643e-10,
+            4.939452146120323e-11
+          ],
+          "point": {
+            "value_r": 6.205057554459731,
+            "value_i": -3.4289520874161643e-10,
+            "raw_MAC": 0.9999999999888455,
+            "right_residual": 3.824531131481485e-12,
+            "nev": 0,
+            "newton_iterations": 1,
+            "seconds": 0.011559788006707095,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.3155506866565423e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.205057554459731,
+            "alpha_i": -3.4289520874161643e-10,
+            "beta_r": -17.12410378803703,
+            "omega_r": -13.603042212803327,
+            "growth": 3.4289520874161643e-10,
+            "iloc": 5,
+            "alpha_beta_r": -3.6181930668631797,
+            "alpha_beta_i": 4.939452146120323e-11,
+            "alpha_omega_r": 3.8385127396603678,
+            "alpha_omega_i": -0.28753027845899776
+          }
+        },
+        {
+          "xi": 98.6182049468465,
+          "beta_r": -17.124103788138953,
+          "alpha_r": 6.205057555508632,
+          "F": [
+            -1.246427706666407e-11,
+            1.7730754269996093e-12
+          ],
+          "point": {
+            "value_r": 6.205057555508632,
+            "value_i": -1.246427706666407e-11,
+            "raw_MAC": 1.0000000000000004,
+            "right_residual": 5.954996735748311e-15,
+            "nev": 0,
+            "newton_iterations": 1,
+            "seconds": 0.01075347900041379,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.473645370557406e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.205057555508632,
+            "alpha_i": -1.246427706666407e-11,
+            "beta_r": -17.124103788138953,
+            "omega_r": -13.603042212803327,
+            "growth": 1.246427706666407e-11,
+            "iloc": 5,
+            "alpha_beta_r": -3.618193066895907,
+            "alpha_beta_i": 1.7730754269996093e-12,
+            "alpha_omega_r": 3.8385127396415726,
+            "alpha_omega_i": -0.28753027822235483
+          }
+        }
+      ],
+      "endpoint_checks": [
+        {
+          "station": 98,
+          "relative_matrix_errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "station": 99,
+          "relative_matrix_errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "original_receipt": {
+        "run": "rough_f-112.0kHz_S_physical_tip0_spatial_3b0f3fc98556",
+        "original_residual": 5.59667698076185e-14
+      },
+      "generation": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/inputs/rough_f-112.0kHz_S_pair098_f8c12c916efc/generation.json",
+      "turning_condition": "Im(alpha)=0 and Im(alpha_beta)=0; real beta and omega",
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_f-112.0kHz_S_tip0.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 98.0,
+      "x_mm": 61.08930756534907,
+      "x_flat_mm": 46.23114456534907,
+      "alpha_r": 4.199652114941901,
+      "alpha_i": 4.454756849285236e-15,
+      "beta_r": -16.574919980677358,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -4.454756849285236e-15,
+      "right_residual": 5.0144304238120556e-15,
+      "left_residual": 1.6929189490585303e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 23,
+      "alpha_beta_i": 0.05103662404116629,
+      "guide_order": 23.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0020.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 97.0,
+      "x_mm": 59.64814992918446,
+      "x_flat_mm": 44.789986929184465,
+      "alpha_r": 2.916942527087014,
+      "alpha_i": -1.237728487257457e-12,
+      "beta_r": -16.22861371303895,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.237728487257457e-12,
+      "right_residual": 6.302315401358412e-15,
+      "left_residual": 1.879734843360297e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 25,
+      "alpha_beta_i": 0.08288600528071205,
+      "guide_order": 25.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0021.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 96.0,
+      "x_mm": 58.22321147468447,
+      "x_flat_mm": 43.36504847468447,
+      "alpha_r": 1.9397199250991881,
+      "alpha_i": -5.849736953020993e-15,
+      "beta_r": -15.966709352893831,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 5.849736953020993e-15,
+      "right_residual": 5.85035237157002e-15,
+      "left_residual": 1.8865917314829558e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 26,
+      "alpha_beta_i": 0.10663312168632146,
+      "guide_order": 26.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0022.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 95.0,
+      "x_mm": 56.81397620849375,
+      "x_flat_mm": 41.95581320849375,
+      "alpha_r": 1.0690766384702484,
+      "alpha_i": 3.678308273428648e-15,
+      "beta_r": -15.734268637033415,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -3.678308273428648e-15,
+      "right_residual": 7.60988483190199e-15,
+      "left_residual": 2.1872311623714062e-15,
+      "raw_MAC": 0.9999999999999993,
+      "guide_index": 27,
+      "alpha_beta_i": 0.12743180357125214,
+      "guide_order": 27.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0023.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 94.0,
+      "x_mm": 55.41993382363606,
+      "x_flat_mm": 40.56177082363606,
+      "alpha_r": 0.23605535098874514,
+      "alpha_i": -1.990433349239114e-15,
+      "beta_r": -15.512277710209476,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.990433349239114e-15,
+      "right_residual": 8.029296915013495e-15,
+      "left_residual": 2.216326697135531e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 28,
+      "alpha_beta_i": 0.1469926216140973,
+      "guide_order": 28.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0024.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 93.0,
+      "x_mm": 54.04057951472426,
+      "x_flat_mm": 39.18241651472426,
+      "alpha_r": -0.5999523732316515,
+      "alpha_i": -4.1824041492944923e-13,
+      "beta_r": -15.28955762256979,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 4.1824041492944923e-13,
+      "right_residual": 6.9378527255281156e-15,
+      "left_residual": 2.2094344797606234e-15,
+      "raw_MAC": 0.9999999999999996,
+      "guide_index": 29,
+      "alpha_beta_i": 0.16608766955267257,
+      "guide_order": 29.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0025.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 92.0,
+      "x_mm": 52.67541379516197,
+      "x_flat_mm": 37.817250795161975,
+      "alpha_r": -1.4739463199321017,
+      "alpha_i": 2.1696688978090412e-13,
+      "beta_r": -15.05646119423287,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -2.1696688978090412e-13,
+      "right_residual": 6.856268954631451e-15,
+      "left_residual": 2.3380896588456296e-15,
+      "raw_MAC": 0.9999999999999998,
+      "guide_index": 30,
+      "alpha_beta_i": 0.18489082641170682,
+      "guide_order": 30.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0026.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 91.0,
+      "x_mm": 51.32394231627216,
+      "x_flat_mm": 36.46577931627216,
+      "alpha_r": -2.4278192369327054,
+      "alpha_i": 1.0393134113107076e-14,
+      "beta_r": -14.801359199541805,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -1.0393134113107076e-14,
+      "right_residual": 9.072809021633739e-15,
+      "left_residual": 2.375114719191808e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 31,
+      "alpha_beta_i": 0.20258727347440364,
+      "guide_order": 31.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0027.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 90.0,
+      "x_mm": 49.985675688283614,
+      "x_flat_mm": 35.127512688283616,
+      "alpha_r": -3.527867972050801,
+      "alpha_i": 3.725068107516748e-16,
+      "beta_r": -14.505563550053179,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -3.725068107516748e-16,
+      "right_residual": 9.485181443409737e-15,
+      "left_residual": 2.5020173555504968e-15,
+      "raw_MAC": 0.9999999999999991,
+      "guide_index": 32,
+      "alpha_beta_i": 0.2158054730599997,
+      "guide_order": 32.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0028.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 89.0,
+      "x_mm": 48.660129303116676,
+      "x_flat_mm": 33.80196630311668,
+      "alpha_r": -4.911171354594757,
+      "alpha_i": 5.205510958209688e-14,
+      "beta_r": -14.129384368916366,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -5.205510958209688e-14,
+      "right_residual": 9.121186856183279e-15,
+      "left_residual": 2.558230977857779e-15,
+      "raw_MAC": 0.9999999999999998,
+      "guide_index": 33,
+      "alpha_beta_i": 0.21343904711670905,
+      "guide_order": 33.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0029.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 88.0,
+      "x_mm": 47.3468231588987,
+      "x_flat_mm": 32.4886601588987,
+      "alpha_r": -6.923496448623428,
+      "alpha_i": 4.5802815209085376e-14,
+      "beta_r": -13.565676541181277,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -4.5802815209085376e-14,
+      "right_residual": 9.363682331708416e-15,
+      "left_residual": 3.1010418496777098e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 35,
+      "alpha_beta_i": 0.17319961944592377,
+      "guide_order": 35.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0030.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 87.0,
+      "x_mm": 46.045281686145884,
+      "x_flat_mm": 31.187118686145887,
+      "alpha_r": -9.121485290156041,
+      "alpha_i": 4.055329743944082e-12,
+      "beta_r": -12.89773406467698,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -4.055329743944082e-12,
+      "right_residual": 1.3164949538789396e-14,
+      "left_residual": 3.637134049632451e-15,
+      "raw_MAC": 1.0000000000000009,
+      "guide_index": 37,
+      "alpha_beta_i": 0.2179104282632819,
+      "guide_order": 37.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0031.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 86.0,
+      "x_mm": 44.75503357555387,
+      "x_flat_mm": 29.89687057555387,
+      "alpha_r": -9.987888449610034,
+      "alpha_i": 1.693848832800892e-14,
+      "beta_r": -12.59175612942505,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -1.693848832800892e-14,
+      "right_residual": 1.0923454500267527e-14,
+      "left_residual": 3.762939781916353e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 39,
+      "alpha_beta_i": 0.3451605962200144,
+      "guide_order": 39.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0032.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 85.0,
+      "x_mm": 43.475611607328176,
+      "x_flat_mm": 28.61744860732818,
+      "alpha_r": -10.290234854482376,
+      "alpha_i": -5.674969810226794e-13,
+      "beta_r": -12.456591534122161,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 5.674969810226794e-13,
+      "right_residual": 1.1891964186878675e-14,
+      "left_residual": 3.846381067770783e-15,
+      "raw_MAC": 0.9999999999999997,
+      "guide_index": 40,
+      "alpha_beta_i": 0.4550851406574842,
+      "guide_order": 40.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0033.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 84.0,
+      "x_mm": 42.20655248199585,
+      "x_flat_mm": 27.348389481995852,
+      "alpha_r": -10.3597315082241,
+      "alpha_i": 1.6269875556172592e-14,
+      "beta_r": -12.395446729290624,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -1.6269875556172592e-14,
+      "right_residual": 1.225470718415731e-14,
+      "left_residual": 3.853707877847958e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 41,
+      "alpha_beta_i": 0.5492305269167552,
+      "guide_order": 41.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0034.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 83.0,
+      "x_mm": 40.94739665263776,
+      "x_flat_mm": 26.08923365263776,
+      "alpha_r": -10.299236623602727,
+      "alpha_i": -1.3762284968054052e-14,
+      "beta_r": -12.376757632212655,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.3762284968054052e-14,
+      "right_residual": 1.0811775137752025e-14,
+      "left_residual": 4.161644156639774e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 42,
+      "alpha_beta_i": 0.6322559719989508,
+      "guide_order": 42.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0035.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 82.0,
+      "x_mm": 39.69768815847941,
+      "x_flat_mm": 24.83952515847941,
+      "alpha_r": -10.152093642837755,
+      "alpha_i": 3.3326996342582254e-16,
+      "beta_r": -12.386832023272719,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -3.3326996342582254e-16,
+      "right_residual": 1.5471689326938923e-14,
+      "left_residual": 4.100732686364934e-15,
+      "raw_MAC": 1.0000000000000013,
+      "guide_index": 43,
+      "alpha_beta_i": 0.7067297829414959,
+      "guide_order": 43.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0036.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 81.0,
+      "x_mm": 38.45697445977942,
+      "x_flat_mm": 23.59881145977942,
+      "alpha_r": -9.940130507713755,
+      "alpha_i": 5.022289223369031e-15,
+      "beta_r": -12.418653735476205,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -5.022289223369031e-15,
+      "right_residual": 1.513272570983786e-14,
+      "left_residual": 4.091539705658469e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 44,
+      "alpha_beta_i": 0.7739084705470971,
+      "guide_order": 44.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0037.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 80.0,
+      "x_mm": 37.22480627395794,
+      "x_flat_mm": 22.36664327395794,
+      "alpha_r": -9.675586633754175,
+      "alpha_i": -8.472957472621164e-16,
+      "beta_r": -12.4682367851249,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 8.472957472621164e-16,
+      "right_residual": 1.496899615318722e-14,
+      "left_residual": 3.827127736731306e-15,
+      "raw_MAC": 0.9999999999999991,
+      "guide_index": 45,
+      "alpha_beta_i": 0.8342182043411994,
+      "guide_order": 45.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0038.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 79.0,
+      "x_mm": 36.000737412904506,
+      "x_flat_mm": 21.14257441290451,
+      "alpha_r": -9.365852334301696,
+      "alpha_i": -3.010959285800899e-12,
+      "beta_r": -12.53315163231919,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 3.010959285800899e-12,
+      "right_residual": 1.3781747108268774e-14,
+      "left_residual": 4.09531119310381e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 46,
+      "alpha_beta_i": 0.8874758969143522,
+      "guide_order": 46.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0039.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 78.0,
+      "x_mm": 34.784324621405595,
+      "x_flat_mm": 19.926161621405598,
+      "alpha_r": -9.015523801187799,
+      "alpha_i": -4.159613863325063e-12,
+      "beta_r": -12.611884922092822,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 4.159613863325063e-12,
+      "right_residual": 1.5044407092244926e-14,
+      "left_residual": 4.301967878616077e-15,
+      "raw_MAC": 0.9999999999999999,
+      "guide_index": 47,
+      "alpha_beta_i": 0.9330599571285156,
+      "guide_order": 47.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0040.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 77.0,
+      "x_mm": 33.575127416634025,
+      "x_flat_mm": 18.716964416634028,
+      "alpha_r": -8.627620914340785,
+      "alpha_i": -2.245710409631139e-12,
+      "beta_r": -12.703460885427141,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 2.245710409631139e-12,
+      "right_residual": 1.5119595376514017e-14,
+      "left_residual": 4.408655292770511e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 48,
+      "alpha_beta_i": 0.9701011255107231,
+      "guide_order": 48.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0041.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 76.0,
+      "x_mm": 32.3727079286449,
+      "x_flat_mm": 17.514544928644902,
+      "alpha_r": -8.203958031250812,
+      "alpha_i": 6.049181561571007e-13,
+      "beta_r": -12.807312918968933,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -6.049181561571007e-13,
+      "right_residual": 1.6509383056071603e-14,
+      "left_residual": 4.552267880771585e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 49,
+      "alpha_beta_i": 0.997539814789136,
+      "guide_order": 49.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0042.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 75.0,
+      "x_mm": 31.17663074181375,
+      "x_flat_mm": 16.31846774181375,
+      "alpha_r": -7.745379524415138,
+      "alpha_i": 4.350406264745063e-12,
+      "beta_r": -12.923194655287686,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -4.350406264745063e-12,
+      "right_residual": 1.574439908560301e-14,
+      "left_residual": 4.506193274884199e-15,
+      "raw_MAC": 1.000000000000001,
+      "guide_index": 50,
+      "alpha_beta_i": 1.014195603742618,
+      "guide_order": 50.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0043.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 74.0,
+      "x_mm": 29.986462737166818,
+      "x_flat_mm": 15.128299737166818,
+      "alpha_r": -7.252015596698743,
+      "alpha_i": 9.790727014693838e-12,
+      "beta_r": -13.051098951559508,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -9.790727014693838e-12,
+      "right_residual": 1.8694377683119387e-14,
+      "left_residual": 4.701456891858575e-15,
+      "raw_MAC": 0.9999999999999999,
+      "guide_index": 51,
+      "alpha_beta_i": 1.0190001774760862,
+      "guide_order": 51.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0044.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 73.0,
+      "x_mm": 28.801772935541283,
+      "x_flat_mm": 13.943609935541284,
+      "alpha_r": -6.7233212674025555,
+      "alpha_i": 2.441872016353401e-14,
+      "beta_r": -13.191228291477323,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -2.441872016353401e-14,
+      "right_residual": 1.8959854688527135e-14,
+      "left_residual": 4.545259406556701e-15,
+      "raw_MAC": 0.9999999999999998,
+      "guide_index": 52,
+      "alpha_beta_i": 1.0110801601885382,
+      "guide_order": 52.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0045.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 72.0,
+      "x_mm": 27.622132341520082,
+      "x_flat_mm": 12.763969341520083,
+      "alpha_r": -6.158151792797121,
+      "alpha_i": 1.7403925002077797e-14,
+      "beta_r": -13.343980654490334,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -1.7403925002077797e-14,
+      "right_residual": 1.8996237270008105e-14,
+      "left_residual": 4.60863052837126e-15,
+      "raw_MAC": 1.000000000000001,
+      "guide_index": 53,
+      "alpha_beta_i": 0.9899013947546658,
+      "guide_order": 53.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0046.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 71.0,
+      "x_mm": 26.447113788086913,
+      "x_flat_mm": 11.588950788086914,
+      "alpha_r": -5.5545769304477846,
+      "alpha_i": 8.55767377196353e-15,
+      "beta_r": -13.510019244892032,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -8.55767377196353e-15,
+      "right_residual": 2.0692206022053555e-14,
+      "left_residual": 4.994307479635608e-15,
+      "raw_MAC": 1.0000000000000009,
+      "guide_index": 54,
+      "alpha_beta_i": 0.9555633401022853,
+      "guide_order": 54.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0047.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 70.0,
+      "x_mm": 25.27629178194053,
+      "x_flat_mm": 10.41812878194053,
+      "alpha_r": -4.909656884161231,
+      "alpha_i": 3.332447475788757e-14,
+      "beta_r": -13.690341305603939,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -3.332447475788757e-14,
+      "right_residual": 2.0899870465648354e-14,
+      "left_residual": 4.828756947857104e-15,
+      "raw_MAC": 1.000000000000001,
+      "guide_index": 55,
+      "alpha_beta_i": 0.9088461715249329,
+      "guide_order": 55.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0048.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 69.0,
+      "x_mm": 24.109242349418594,
+      "x_flat_mm": 9.251079349418594,
+      "alpha_r": -4.2192439716956365,
+      "alpha_i": 2.4459925128037336e-15,
+      "beta_r": -13.886343471187933,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -2.4459925128037336e-15,
+      "right_residual": 1.9679556323727335e-14,
+      "left_residual": 4.5396964360986314e-15,
+      "raw_MAC": 0.9999999999999999,
+      "guide_index": 56,
+      "alpha_beta_i": 0.8511169157729491,
+      "guide_order": 56.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0049.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 68.0,
+      "x_mm": 22.945542882968503,
+      "x_flat_mm": 8.087379882968504,
+      "alpha_r": -3.4775816884951785,
+      "alpha_i": -3.782528787659756e-14,
+      "beta_r": -14.099971315940058,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 3.782528787659756e-14,
+      "right_residual": 2.278670843707767e-14,
+      "left_residual": 4.725828387434658e-15,
+      "raw_MAC": 1.0000000000000007,
+      "guide_index": 57,
+      "alpha_beta_i": 0.7840497883692009,
+      "guide_order": 57.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0050.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 67.0,
+      "x_mm": 21.78477198811434,
+      "x_flat_mm": 6.9266089881143404,
+      "alpha_r": -2.6764012346744974,
+      "alpha_i": 2.2543101814292835e-15,
+      "beta_r": -14.334021146018518,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -2.2543101814292835e-15,
+      "right_residual": 2.2009541391945487e-14,
+      "left_residual": 5.3263518948780586e-15,
+      "raw_MAC": 0.999999999999998,
+      "guide_index": 58,
+      "alpha_beta_i": 0.7094463376033837,
+      "guide_order": 58.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0051.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 66.0,
+      "x_mm": 20.626509330864266,
+      "x_flat_mm": 5.768346330864267,
+      "alpha_r": -1.803483612726699,
+      "alpha_i": -1.7611340809930366e-14,
+      "beta_r": -14.592609681922728,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.7611340809930366e-14,
+      "right_residual": 1.697341696627469e-14,
+      "left_residual": 4.978864796672628e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 59,
+      "alpha_beta_i": 0.6290362530573856,
+      "guide_order": 59.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0052.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 65.0,
+      "x_mm": 19.47033548549958,
+      "x_flat_mm": 4.612172485499579,
+      "alpha_r": -0.840339742731108,
+      "alpha_i": -3.7039035850783296e-14,
+      "beta_r": -14.881963133765188,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 3.7039035850783296e-14,
+      "right_residual": 1.5240055299729922e-14,
+      "left_residual": 5.203719615045188e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 60,
+      "alpha_beta_i": 0.5439606436553398,
+      "guide_order": 60.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0053.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 64.0,
+      "x_mm": 18.315831782694374,
+      "x_flat_mm": 3.457668782694375,
+      "alpha_r": 0.24371700115317846,
+      "alpha_i": -2.8516060459517722e-15,
+      "beta_r": -15.212355561321797,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 2.8516060459517722e-15,
+      "right_residual": 1.6656599826000927e-14,
+      "left_residual": 5.169024132677113e-15,
+      "raw_MAC": 0.9999999999999994,
+      "guide_index": 61,
+      "alpha_beta_i": 0.4542341392246899,
+      "guide_order": 61.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0054.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 63.0,
+      "x_mm": 17.162580157908646,
+      "x_flat_mm": 2.304417157908647,
+      "alpha_r": 1.5064528003869202,
+      "alpha_i": -4.774025748022554e-14,
+      "beta_r": -15.602975904296333,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 4.774025748022554e-14,
+      "right_residual": 1.6403312274950168e-14,
+      "left_residual": 5.3709146665734536e-15,
+      "raw_MAC": 1.0000000000000009,
+      "guide_index": 62,
+      "alpha_beta_i": 0.35780542915258895,
+      "guide_order": 62.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0055.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 62.0,
+      "x_mm": 16.010162999999977,
+      "x_flat_mm": 1.151999999999978,
+      "alpha_r": 3.090930148442717,
+      "alpha_i": 1.4130318838958053e-13,
+      "beta_r": -16.10105234045295,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -1.4130318838958053e-13,
+      "right_residual": 2.011384386456734e-14,
+      "left_residual": 5.625384724038467e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 64,
+      "alpha_beta_i": 0.24624662350836554,
+      "guide_order": 64.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0056.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 61.0,
+      "x_mm": 14.858162999999998,
+      "x_flat_mm": -1.7763568394002505e-15,
+      "alpha_r": 5.918262865117871,
+      "alpha_i": 1.1847308975578915e-13,
+      "beta_r": -17.009078027275127,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -1.1847308975578915e-13,
+      "right_residual": 1.971330737744565e-14,
+      "left_residual": 5.854055041656975e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 66,
+      "alpha_beta_i": 0.05922803222629027,
+      "guide_order": 66.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0057.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 1,
+      "xi": 60.93452990047686,
+      "x_mm": 14.782776444308444,
+      "x_flat_mm": -0.07538655569155495,
+      "alpha_r": 6.793188226873942,
+      "alpha_i": 2.958683252097703e-10,
+      "beta_r": -17.294577170662375,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -2.958683252097703e-10,
+      "right_residual": 4.568026412490192e-12,
+      "left_residual": 1.6815897901973157e-13,
+      "raw_MAC": 1.0000000000000007,
+      "guide_order": 67.0,
+      "guide_left_index": 66,
+      "guide_right_index": 68,
+      "guide_xi": 60.96265375456012,
+      "native_bracket": [
+        60,
+        61
+      ],
+      "theta": 0.9345299004768606,
+      "trace": [
+        {
+          "xi": 60.96265375456012,
+          "beta_r": -17.44687187725184,
+          "alpha_r": 7.257369616517489,
+          "F": [
+            -0.0008998989673247305,
+            -0.032197970640971074
+          ],
+          "point": {
+            "value_r": 7.257369616517489,
+            "value_i": -0.0008998989673247305,
+            "raw_MAC": 0.998966859740841,
+            "right_residual": 3.030744489906364e-11,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.0205133410054259,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 2.6047645014066825e-13,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 7.257369616517489,
+            "alpha_i": -0.0008998989673247305,
+            "beta_r": -17.44687187725184,
+            "omega_r": -13.603042212803327,
+            "growth": 0.0008998989673247305,
+            "iloc": 5,
+            "alpha_beta_r": -3.0292412991552147,
+            "alpha_beta_i": -0.032197970640971074,
+            "alpha_omega_r": 3.1703063047604876,
+            "alpha_omega_i": 0.37504731907155425
+          }
+        },
+        {
+          "xi": 60.913468115569316,
+          "beta_r": -17.295389012555436,
+          "alpha_r": 6.7947881613237175,
+          "F": [
+            0.002568924446066093,
+            0.0005880521678473068
+          ],
+          "point": {
+            "value_r": 6.7947881613237175,
+            "value_i": 0.002568924446066093,
+            "raw_MAC": 0.9998714092925588,
+            "right_residual": 4.596872017912348e-12,
+            "nev": 0,
+            "newton_iterations": 3,
+            "seconds": 0.0296878170047421,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.364626501975583e-13,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.7947881613237175,
+            "alpha_i": 0.002568924446066093,
+            "beta_r": -17.295389012555436,
+            "omega_r": -13.603042212803327,
+            "growth": -0.002568924446066093,
+            "iloc": 5,
+            "alpha_beta_r": -3.052811676295971,
+            "alpha_beta_i": 0.0005880521678473068,
+            "alpha_omega_r": 3.190061060410136,
+            "alpha_omega_i": 0.3466054718040329
+          }
+        },
+        {
+          "xi": 60.93457768355703,
+          "beta_r": -17.294573661687114,
+          "alpha_r": 6.793179500384814,
+          "F": [
+            -5.840885361018865e-06,
+            -9.885128485780707e-07
+          ],
+          "point": {
+            "value_r": 6.793179500384814,
+            "value_i": -5.840885361018865e-06,
+            "raw_MAC": 0.9999970677395363,
+            "right_residual": 4.302656888905691e-12,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.01937885899678804,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 7.3091294614373e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.793179500384814,
+            "alpha_i": -5.840885361018865e-06,
+            "beta_r": -17.294573661687114,
+            "omega_r": -13.603042212803327,
+            "growth": 5.840885361018865e-06,
+            "iloc": 5,
+            "alpha_beta_r": -3.052398196684119,
+            "alpha_beta_i": -9.885128485780707e-07,
+            "alpha_omega_r": 3.190828654319926,
+            "alpha_omega_i": 0.34855528034399813
+          }
+        },
+        {
+          "xi": 60.93452990047686,
+          "beta_r": -17.294577170662375,
+          "alpha_r": 6.793188226915164,
+          "F": [
+            1.8771594117645055e-10,
+            7.542992875509238e-11
+          ],
+          "point": {
+            "value_r": 6.793188226915164,
+            "value_i": 1.8771594117645055e-10,
+            "raw_MAC": 0.9999999999846501,
+            "right_residual": 4.568026412490192e-12,
+            "nev": 0,
+            "newton_iterations": 1,
+            "seconds": 0.011003929990692995,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.6815897901973157e-13,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.793188226915164,
+            "alpha_i": 1.8771594117645055e-10,
+            "beta_r": -17.294577170662375,
+            "omega_r": -13.603042212803327,
+            "growth": -1.8771594117645055e-10,
+            "iloc": 5,
+            "alpha_beta_r": -3.052398872171274,
+            "alpha_beta_i": 7.542992875509238e-11,
+            "alpha_omega_r": 3.1908266677257675,
+            "alpha_omega_i": 0.34855114688175587
+          }
+        }
+      ],
+      "endpoint_checks": [
+        {
+          "station": 60,
+          "relative_matrix_errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "station": 61,
+          "relative_matrix_errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "original_receipt": {
+        "run": "rough_f-112.0kHz_S_physical_tip1_spatial_ed5382ac1def",
+        "original_residual": 1.623735965595677e-13
+      },
+      "generation": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/inputs/rough_f-112.0kHz_S_pair060_b5d6318a154d/generation.json",
+      "turning_condition": "Im(alpha)=0 and Im(alpha_beta)=0; real beta and omega",
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_f-112.0kHz_S_tip1.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 61.0,
+      "x_mm": 14.858162999999998,
+      "x_flat_mm": -1.7763568394002505e-15,
+      "alpha_r": 7.612174048795678,
+      "alpha_i": 4.5172966405815174e-14,
+      "beta_r": -17.563880613450404,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -4.5172966405815174e-14,
+      "right_residual": 2.6879664364614428e-14,
+      "left_residual": 5.595340939011348e-15,
+      "raw_MAC": 0.999999999999998,
+      "guide_index": 68,
+      "alpha_beta_i": -0.056591539408910776,
+      "guide_order": 68.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0058.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 62.0,
+      "x_mm": 16.010162999999977,
+      "x_flat_mm": 1.151999999999978,
+      "alpha_r": 9.497860240350299,
+      "alpha_i": 2.2448831806210327e-14,
+      "beta_r": -18.188786319976327,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -2.2448831806210327e-14,
+      "right_residual": 1.7250083262148235e-14,
+      "left_residual": 5.716297143868693e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 70,
+      "alpha_beta_i": -0.20431418795261014,
+      "guide_order": 70.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0059.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 63.0,
+      "x_mm": 17.162580157908646,
+      "x_flat_mm": 2.304417157908647,
+      "alpha_r": 10.230430259319721,
+      "alpha_i": 2.0886709096467325e-14,
+      "beta_r": -18.431038054942213,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -2.0886709096467325e-14,
+      "right_residual": 1.6546689677622492e-14,
+      "left_residual": 5.5755473443520306e-15,
+      "raw_MAC": 1.0000000000000007,
+      "guide_index": 71,
+      "alpha_beta_i": -0.2723041486868276,
+      "guide_order": 71.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0060.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 64.0,
+      "x_mm": 18.315831782694374,
+      "x_flat_mm": 3.457668782694375,
+      "alpha_r": 10.69375227551112,
+      "alpha_i": 1.7123190312244662e-13,
+      "beta_r": -18.582090525214337,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -1.7123190312244662e-13,
+      "right_residual": 2.218683349885453e-14,
+      "left_residual": 5.135826279308138e-15,
+      "raw_MAC": 1.0000000000000007,
+      "guide_index": 72,
+      "alpha_beta_i": -0.3206752385786501,
+      "guide_order": 72.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0061.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 65.0,
+      "x_mm": 19.47033548549958,
+      "x_flat_mm": 4.612172485499579,
+      "alpha_r": 11.025638950340431,
+      "alpha_i": -2.6151936212704364e-14,
+      "beta_r": -18.687985696299307,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 2.6151936212704364e-14,
+      "right_residual": 2.0343120451617742e-14,
+      "left_residual": 4.811760081179852e-15,
+      "raw_MAC": 1.0000000000000018,
+      "guide_index": 73,
+      "alpha_beta_i": -0.35867909579515456,
+      "guide_order": 73.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0062.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 66.0,
+      "x_mm": 20.626509330864266,
+      "x_flat_mm": 5.768346330864267,
+      "alpha_r": 11.277028323428077,
+      "alpha_i": 6.3999275620546085e-12,
+      "beta_r": -18.766012467739113,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -6.3999275620546085e-12,
+      "right_residual": 1.8746839493585027e-14,
+      "left_residual": 4.366730921445082e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 74,
+      "alpha_beta_i": -0.3898690777621048,
+      "guide_order": 74.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0063.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 67.0,
+      "x_mm": 21.78477198811434,
+      "x_flat_mm": 6.9266089881143404,
+      "alpha_r": 11.475297029426603,
+      "alpha_i": -3.7893376545662647e-13,
+      "beta_r": -18.82550154200491,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 3.7893376545662647e-13,
+      "right_residual": 1.9581258432766648e-14,
+      "left_residual": 4.115251612819705e-15,
+      "raw_MAC": 0.9999999999999998,
+      "guide_index": 75,
+      "alpha_beta_i": -0.41606459433788406,
+      "guide_order": 75.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0064.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 68.0,
+      "x_mm": 22.945542882968503,
+      "x_flat_mm": 8.087379882968504,
+      "alpha_r": 11.635780982222604,
+      "alpha_i": -2.4823763971106275e-12,
+      "beta_r": -18.87168059797856,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 2.4823763971106275e-12,
+      "right_residual": 1.7825455388071302e-14,
+      "left_residual": 4.4682397348939545e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 76,
+      "alpha_beta_i": -0.43842716976403295,
+      "guide_order": 76.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0065.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 69.0,
+      "x_mm": 24.109242349418594,
+      "x_flat_mm": 9.251079349418594,
+      "alpha_r": 11.76789873854795,
+      "alpha_i": -2.720487333912334e-12,
+      "beta_r": -18.907780357520696,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 2.720487333912334e-12,
+      "right_residual": 1.6326016670698168e-14,
+      "left_residual": 4.127163670759259e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 77,
+      "alpha_beta_i": -0.45777757228167476,
+      "guide_order": 77.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0066.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 70.0,
+      "x_mm": 25.27629178194053,
+      "x_flat_mm": 10.41812878194053,
+      "alpha_r": 11.87833507627957,
+      "alpha_i": -2.250001928479331e-12,
+      "beta_r": -18.936114957894635,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 2.250001928479331e-12,
+      "right_residual": 1.839564682256013e-14,
+      "left_residual": 4.043889125671378e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 78,
+      "alpha_beta_i": -0.4745870119560122,
+      "guide_order": 78.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0067.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 71.0,
+      "x_mm": 26.447113788086913,
+      "x_flat_mm": 11.588950788086914,
+      "alpha_r": 11.97152779201321,
+      "alpha_i": -1.7435846208702592e-12,
+      "beta_r": -18.95823967176549,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.7435846208702592e-12,
+      "right_residual": 1.5233298993379145e-14,
+      "left_residual": 3.866526260976511e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 79,
+      "alpha_beta_i": -0.4891969055217035,
+      "guide_order": 79.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0068.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 72.0,
+      "x_mm": 27.622132341520082,
+      "x_flat_mm": 12.763969341520083,
+      "alpha_r": 12.050029345007385,
+      "alpha_i": -1.2217046105338745e-12,
+      "beta_r": -18.975083070243848,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.2217046105338745e-12,
+      "right_residual": 1.5586729334366238e-14,
+      "left_residual": 3.3879024316682886e-15,
+      "raw_MAC": 0.9999999999999993,
+      "guide_index": 80,
+      "alpha_beta_i": -0.5019793782515382,
+      "guide_order": 80.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0069.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 73.0,
+      "x_mm": 28.801772935541283,
+      "x_flat_mm": 13.943609935541284,
+      "alpha_r": 12.115598489128352,
+      "alpha_i": -7.767730863157539e-13,
+      "beta_r": -18.98731134250792,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 7.767730863157539e-13,
+      "right_residual": 1.45109474227099e-14,
+      "left_residual": 3.573932331861764e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 81,
+      "alpha_beta_i": -0.5132566993555284,
+      "guide_order": 81.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0070.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 74.0,
+      "x_mm": 29.986462737166818,
+      "x_flat_mm": 15.128299737166818,
+      "alpha_r": 12.169772039343217,
+      "alpha_i": -5.514860091760596e-13,
+      "beta_r": -18.995505712572903,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 5.514860091760596e-13,
+      "right_residual": 1.555040997676317e-14,
+      "left_residual": 3.46369568273154e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 82,
+      "alpha_beta_i": -0.5232165352104096,
+      "guide_order": 82.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0071.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 75.0,
+      "x_mm": 31.17663074181375,
+      "x_flat_mm": 16.31846774181375,
+      "alpha_r": 12.214233064584478,
+      "alpha_i": -3.975116172826615e-13,
+      "beta_r": -19.0002707063408,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 3.975116172826615e-13,
+      "right_residual": 1.2791762118664679e-14,
+      "left_residual": 3.1355586812275203e-15,
+      "raw_MAC": 0.9999999999999996,
+      "guide_index": 83,
+      "alpha_beta_i": -0.5318561651148306,
+      "guide_order": 83.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0072.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 76.0,
+      "x_mm": 32.3727079286449,
+      "x_flat_mm": 17.514544928644902,
+      "alpha_r": 12.249920228778105,
+      "alpha_i": -2.638753734288503e-13,
+      "beta_r": -19.001967676485798,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 2.638753734288503e-13,
+      "right_residual": 1.4262627544872265e-14,
+      "left_residual": 3.217279157798018e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 84,
+      "alpha_beta_i": -0.5392347038799024,
+      "guide_order": 84.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0073.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 77.0,
+      "x_mm": 33.575127416634025,
+      "x_flat_mm": 18.716964416634028,
+      "alpha_r": 12.277107278680381,
+      "alpha_i": -2.018274566117123e-13,
+      "beta_r": -19.00075592175234,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 2.018274566117123e-13,
+      "right_residual": 1.237084457805017e-14,
+      "left_residual": 3.098548636803872e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_index": 85,
+      "alpha_beta_i": -0.5454798301457116,
+      "guide_order": 85.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0074.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 0,
+      "xi": 78.0,
+      "x_mm": 34.784324621405595,
+      "x_flat_mm": 19.926161621405598,
+      "alpha_r": 12.296217642039519,
+      "alpha_i": -1.9918016536931451e-13,
+      "beta_r": -18.996838855313932,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.9918016536931451e-13,
+      "right_residual": 1.1993931143276586e-14,
+      "left_residual": 2.9627974652877792e-15,
+      "raw_MAC": 1.0000000000000002,
+      "guide_index": 86,
+      "alpha_beta_i": -0.5505977223944412,
+      "guide_order": 86.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0075.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 2,
+      "xi": 79.0,
+      "x_mm": 36.000737412904506,
+      "x_flat_mm": 21.14257441290451,
+      "alpha_r": 12.307124243881937,
+      "alpha_i": -3.1167265461901934e-13,
+      "beta_r": -18.9902589877934,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 3.1167265461901934e-13,
+      "right_residual": 1.2387629564809017e-14,
+      "left_residual": 2.9027683424281694e-15,
+      "raw_MAC": 1.0,
+      "guide_index": 0,
+      "alpha_beta_i": -0.5546427596120058,
+      "guide_order": 0.0,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_f-112.0kHz_S_final/q0000.npy",
+      "verified_closure": true
+    }
+  ],
+  "native_point_count": 76,
+  "native_station_count": 38,
+  "physical_tips": [
+    {
+      "case": "rough",
+      "kind": 1,
+      "xi": 98.6182049468465,
+      "x_mm": 61.99058774405485,
+      "x_flat_mm": 47.13242474405485,
+      "alpha_r": 6.205057555508732,
+      "alpha_i": -1.245505382467177e-11,
+      "beta_r": -17.124103788138953,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": 1.245505382467177e-11,
+      "right_residual": 5.954996735748311e-15,
+      "left_residual": 1.473645370557406e-15,
+      "raw_MAC": 1.0000000000000004,
+      "guide_order": 20.0,
+      "guide_left_index": 19,
+      "guide_right_index": 21,
+      "guide_xi": 98.56646142188183,
+      "native_bracket": [
+        98,
+        99
+      ],
+      "theta": 0.6182049468465038,
+      "trace": [
+        {
+          "xi": 98.56646142188183,
+          "beta_r": -17.30035603150424,
+          "alpha_r": 6.841451386777037,
+          "F": [
+            0.00024626967701877294,
+            -0.016551265581286702
+          ],
+          "point": {
+            "value_r": 6.841451386777037,
+            "value_i": 0.00024626967701877294,
+            "raw_MAC": 0.9955001665118973,
+            "right_residual": 2.1727291834082644e-12,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.01967965300718788,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.1712306391428922e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.841451386777037,
+            "alpha_i": 0.00024626967701877294,
+            "beta_r": -17.30035603150424,
+            "omega_r": -13.603042212803327,
+            "growth": -0.00024626967701877294,
+            "iloc": 5,
+            "alpha_beta_r": -3.6302075136165857,
+            "alpha_beta_i": -0.016551265581286702,
+            "alpha_omega_r": 3.862673001132148,
+            "alpha_omega_i": -0.2741576395057871
+          }
+        },
+        {
+          "xi": 98.67849910388479,
+          "beta_r": -17.12546872153546,
+          "alpha_r": 6.2127371521580335,
+          "F": [
+            0.0013827698469631292,
+            -0.00028885729811059475
+          ],
+          "point": {
+            "value_r": 6.2127371521580335,
+            "value_i": 0.0013827698469631292,
+            "raw_MAC": 0.9993654475182246,
+            "right_residual": 6.449472990868088e-12,
+            "nev": 0,
+            "newton_iterations": 3,
+            "seconds": 0.03144279899424873,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.5183447151090898e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.2127371521580335,
+            "alpha_i": 0.0013827698469631292,
+            "beta_r": -17.12546872153546,
+            "omega_r": -13.603042212803327,
+            "growth": -0.0013827698469631292,
+            "iloc": 5,
+            "alpha_beta_r": -3.6184042132713348,
+            "alpha_beta_i": -0.00028885729811059475,
+            "alpha_omega_r": 3.8385765136424648,
+            "alpha_omega_i": -0.28650172272676205
+          }
+        },
+        {
+          "xi": 98.61805872084783,
+          "beta_r": -17.124111271550486,
+          "alpha_r": 6.205077984738858,
+          "F": [
+            -3.361492321697989e-06,
+            -3.0691746782925777e-07
+          ],
+          "point": {
+            "value_r": 6.205077984738858,
+            "value_i": -3.361492321697989e-06,
+            "raw_MAC": 0.9999983328950578,
+            "right_residual": 1.6124504401364393e-14,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.020352142993942834,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.5258823018211286e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.205077984738858,
+            "alpha_i": -3.361492321697989e-06,
+            "beta_r": -17.124111271550486,
+            "omega_r": -13.603042212803327,
+            "growth": 3.361492321697989e-06,
+            "iloc": 5,
+            "alpha_beta_r": -3.6181932622545747,
+            "alpha_beta_i": -3.0691746782925777e-07,
+            "alpha_omega_r": 3.8385139812396027,
+            "alpha_omega_i": -0.2875319359769042
+          }
+        },
+        {
+          "xi": 98.61820493192995,
+          "beta_r": -17.12410378803703,
+          "alpha_r": 6.205057554459731,
+          "F": [
+            -3.4289520874161643e-10,
+            4.939452146120323e-11
+          ],
+          "point": {
+            "value_r": 6.205057554459731,
+            "value_i": -3.4289520874161643e-10,
+            "raw_MAC": 0.9999999999888455,
+            "right_residual": 3.824531131481485e-12,
+            "nev": 0,
+            "newton_iterations": 1,
+            "seconds": 0.011559788006707095,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.3155506866565423e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.205057554459731,
+            "alpha_i": -3.4289520874161643e-10,
+            "beta_r": -17.12410378803703,
+            "omega_r": -13.603042212803327,
+            "growth": 3.4289520874161643e-10,
+            "iloc": 5,
+            "alpha_beta_r": -3.6181930668631797,
+            "alpha_beta_i": 4.939452146120323e-11,
+            "alpha_omega_r": 3.8385127396603678,
+            "alpha_omega_i": -0.28753027845899776
+          }
+        },
+        {
+          "xi": 98.6182049468465,
+          "beta_r": -17.124103788138953,
+          "alpha_r": 6.205057555508632,
+          "F": [
+            -1.246427706666407e-11,
+            1.7730754269996093e-12
+          ],
+          "point": {
+            "value_r": 6.205057555508632,
+            "value_i": -1.246427706666407e-11,
+            "raw_MAC": 1.0000000000000004,
+            "right_residual": 5.954996735748311e-15,
+            "nev": 0,
+            "newton_iterations": 1,
+            "seconds": 0.01075347900041379,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.473645370557406e-15,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.205057555508632,
+            "alpha_i": -1.246427706666407e-11,
+            "beta_r": -17.124103788138953,
+            "omega_r": -13.603042212803327,
+            "growth": 1.246427706666407e-11,
+            "iloc": 5,
+            "alpha_beta_r": -3.618193066895907,
+            "alpha_beta_i": 1.7730754269996093e-12,
+            "alpha_omega_r": 3.8385127396415726,
+            "alpha_omega_i": -0.28753027822235483
+          }
+        }
+      ],
+      "endpoint_checks": [
+        {
+          "station": 98,
+          "relative_matrix_errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "station": 99,
+          "relative_matrix_errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "original_receipt": {
+        "run": "rough_f-112.0kHz_S_physical_tip0_spatial_3b0f3fc98556",
+        "original_residual": 5.59667698076185e-14
+      },
+      "generation": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/inputs/rough_f-112.0kHz_S_pair098_f8c12c916efc/generation.json",
+      "turning_condition": "Im(alpha)=0 and Im(alpha_beta)=0; real beta and omega",
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_f-112.0kHz_S_tip0.npy"
+    },
+    {
+      "case": "rough",
+      "kind": 1,
+      "xi": 60.93452990047686,
+      "x_mm": 14.782776444308444,
+      "x_flat_mm": -0.07538655569155495,
+      "alpha_r": 6.793188226873942,
+      "alpha_i": 2.958683252097703e-10,
+      "beta_r": -17.294577170662375,
+      "beta_i": 0.0,
+      "omega_r": -13.603042212803327,
+      "omega_i": 0.0,
+      "growth": -2.958683252097703e-10,
+      "right_residual": 4.568026412490192e-12,
+      "left_residual": 1.6815897901973157e-13,
+      "raw_MAC": 1.0000000000000007,
+      "guide_order": 67.0,
+      "guide_left_index": 66,
+      "guide_right_index": 68,
+      "guide_xi": 60.96265375456012,
+      "native_bracket": [
+        60,
+        61
+      ],
+      "theta": 0.9345299004768606,
+      "trace": [
+        {
+          "xi": 60.96265375456012,
+          "beta_r": -17.44687187725184,
+          "alpha_r": 7.257369616517489,
+          "F": [
+            -0.0008998989673247305,
+            -0.032197970640971074
+          ],
+          "point": {
+            "value_r": 7.257369616517489,
+            "value_i": -0.0008998989673247305,
+            "raw_MAC": 0.998966859740841,
+            "right_residual": 3.030744489906364e-11,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.0205133410054259,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 2.6047645014066825e-13,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 7.257369616517489,
+            "alpha_i": -0.0008998989673247305,
+            "beta_r": -17.44687187725184,
+            "omega_r": -13.603042212803327,
+            "growth": 0.0008998989673247305,
+            "iloc": 5,
+            "alpha_beta_r": -3.0292412991552147,
+            "alpha_beta_i": -0.032197970640971074,
+            "alpha_omega_r": 3.1703063047604876,
+            "alpha_omega_i": 0.37504731907155425
+          }
+        },
+        {
+          "xi": 60.913468115569316,
+          "beta_r": -17.295389012555436,
+          "alpha_r": 6.7947881613237175,
+          "F": [
+            0.002568924446066093,
+            0.0005880521678473068
+          ],
+          "point": {
+            "value_r": 6.7947881613237175,
+            "value_i": 0.002568924446066093,
+            "raw_MAC": 0.9998714092925588,
+            "right_residual": 4.596872017912348e-12,
+            "nev": 0,
+            "newton_iterations": 3,
+            "seconds": 0.0296878170047421,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.364626501975583e-13,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.7947881613237175,
+            "alpha_i": 0.002568924446066093,
+            "beta_r": -17.295389012555436,
+            "omega_r": -13.603042212803327,
+            "growth": -0.002568924446066093,
+            "iloc": 5,
+            "alpha_beta_r": -3.052811676295971,
+            "alpha_beta_i": 0.0005880521678473068,
+            "alpha_omega_r": 3.190061060410136,
+            "alpha_omega_i": 0.3466054718040329
+          }
+        },
+        {
+          "xi": 60.93457768355703,
+          "beta_r": -17.294573661687114,
+          "alpha_r": 6.793179500384814,
+          "F": [
+            -5.840885361018865e-06,
+            -9.885128485780707e-07
+          ],
+          "point": {
+            "value_r": 6.793179500384814,
+            "value_i": -5.840885361018865e-06,
+            "raw_MAC": 0.9999970677395363,
+            "right_residual": 4.302656888905691e-12,
+            "nev": 0,
+            "newton_iterations": 2,
+            "seconds": 0.01937885899678804,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 7.3091294614373e-14,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.793179500384814,
+            "alpha_i": -5.840885361018865e-06,
+            "beta_r": -17.294573661687114,
+            "omega_r": -13.603042212803327,
+            "growth": 5.840885361018865e-06,
+            "iloc": 5,
+            "alpha_beta_r": -3.052398196684119,
+            "alpha_beta_i": -9.885128485780707e-07,
+            "alpha_omega_r": 3.190828654319926,
+            "alpha_omega_i": 0.34855528034399813
+          }
+        },
+        {
+          "xi": 60.93452990047686,
+          "beta_r": -17.294577170662375,
+          "alpha_r": 6.793188226915164,
+          "F": [
+            1.8771594117645055e-10,
+            7.542992875509238e-11
+          ],
+          "point": {
+            "value_r": 6.793188226915164,
+            "value_i": 1.8771594117645055e-10,
+            "raw_MAC": 0.9999999999846501,
+            "right_residual": 4.568026412490192e-12,
+            "nev": 0,
+            "newton_iterations": 1,
+            "seconds": 0.011003929990692995,
+            "method": "original_polynomial_bordered_Newton",
+            "left_residual": 1.6815897901973157e-13,
+            "adjoint_nev": 0,
+            "adjoint_inverse_iterations": 0,
+            "adjoint_method": "bordered_physical_null_vector",
+            "alpha_r": 6.793188226915164,
+            "alpha_i": 1.8771594117645055e-10,
+            "beta_r": -17.294577170662375,
+            "omega_r": -13.603042212803327,
+            "growth": -1.8771594117645055e-10,
+            "iloc": 5,
+            "alpha_beta_r": -3.052398872171274,
+            "alpha_beta_i": 7.542992875509238e-11,
+            "alpha_omega_r": 3.1908266677257675,
+            "alpha_omega_i": 0.34855114688175587
+          }
+        }
+      ],
+      "endpoint_checks": [
+        {
+          "station": 60,
+          "relative_matrix_errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "station": 61,
+          "relative_matrix_errors": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "original_receipt": {
+        "run": "rough_f-112.0kHz_S_physical_tip1_spatial_ed5382ac1def",
+        "original_residual": 1.623735965595677e-13
+      },
+      "generation": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/inputs/rough_f-112.0kHz_S_pair060_b5d6318a154d/generation.json",
+      "turning_condition": "Im(alpha)=0 and Im(alpha_beta)=0; real beta and omega",
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_f-112.0kHz_S_tip1.npy"
+    }
+  ],
+  "additional_native_crossings_corrected": 0,
+  "original_checks": [
+    {
+      "point_index": 0,
+      "alpha_difference": 1.157213322665071e-13,
+      "raw_MAC": 0.9999999999999993,
+      "receipt": {
+        "run": "rough_f-112.0kHz_S_final_check0000_d3f3b29ad6eb",
+        "original_residual": 4.0563595798934756e-14
+      }
+    },
+    {
+      "point_index": 7,
+      "alpha_difference": 8.881451007665505e-14,
+      "raw_MAC": 1.0,
+      "receipt": {
+        "run": "rough_f-112.0kHz_S_final_check0007_0e252b9f1516",
+        "original_residual": 6.607643527244556e-14
+      }
+    },
+    {
+      "point_index": 14,
+      "alpha_difference": 4.7965000579994747e-14,
+      "raw_MAC": 1.0,
+      "receipt": {
+        "run": "rough_f-112.0kHz_S_final_check0014_2e4a3e6768a5",
+        "original_residual": 4.836755433177537e-14
+      }
+    },
+    {
+      "point_index": 21,
+      "alpha_difference": 9.435534118082452e-14,
+      "raw_MAC": 1.0,
+      "receipt": {
+        "run": "rough_f-112.0kHz_S_final_check0021_fa5705b955e0",
+        "original_residual": 7.76554326864632e-14
+      }
+    },
+    {
+      "point_index": 28,
+      "alpha_difference": 1.1924158023536767e-13,
+      "raw_MAC": 1.0000000000000009,
+      "receipt": {
+        "run": "rough_f-112.0kHz_S_final_check0028_d0fefdafe0d4",
+        "original_residual": 4.809110436208135e-14
+      }
+    },
+    {
+      "point_index": 35,
+      "alpha_difference": 8.634301876076157e-14,
+      "raw_MAC": 0.9999999999999998,
+      "receipt": {
+        "run": "rough_f-112.0kHz_S_final_check0035_fd8cbbf5d012",
+        "original_residual": 4.3957415067748897e-14
+      }
+    },
+    {
+      "point_index": 42,
+      "alpha_difference": 1.0420658621467286e-13,
+      "raw_MAC": 0.9999999999999984,
+      "receipt": {
+        "run": "rough_f-112.0kHz_S_final_check0042_84503eedc529",
+        "original_residual": 6.031222237228469e-14
+      }
+    },
+    {
+      "point_index": 49,
+      "alpha_difference": 1.2635744955633324e-13,
+      "raw_MAC": 1.0000000000000007,
+      "receipt": {
+        "run": "rough_f-112.0kHz_S_final_check0049_0ad600fba59f",
+        "original_residual": 8.562238003689503e-14
+      }
+    },
+    {
+      "point_index": 56,
+      "alpha_difference": 1.5490960909469535e-13,
+      "raw_MAC": 1.0000000000000004,
+      "receipt": {
+        "run": "rough_f-112.0kHz_S_final_check0056_dcf43eb03f97",
+        "original_residual": 1.0855631371658772e-13
+      }
+    },
+    {
+      "point_index": 63,
+      "alpha_difference": 1.3175713066191325e-13,
+      "raw_MAC": 0.9999999999999993,
+      "receipt": {
+        "run": "rough_f-112.0kHz_S_final_check0063_dec4bf873942",
+        "original_residual": 8.506492757426095e-14
+      }
+    },
+    {
+      "point_index": 70,
+      "alpha_difference": 1.1056478350163722e-13,
+      "raw_MAC": 1.0000000000000002,
+      "receipt": {
+        "run": "rough_f-112.0kHz_S_final_check0070_0bdf805171a8",
+        "original_residual": 6.45201851933867e-14
+      }
+    }
+  ],
+  "symmetry": [
+    {
+      "xi": 79.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.2387629564809017e-14
+    },
+    {
+      "xi": 80.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.1022871698033056e-14
+    },
+    {
+      "xi": 81.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.1099665561093759e-14
+    },
+    {
+      "xi": 82.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.0612855492634356e-14
+    },
+    {
+      "xi": 83.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.0621456531576863e-14
+    },
+    {
+      "xi": 84.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.0299493614719153e-14
+    },
+    {
+      "xi": 85.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.068754630457461e-14
+    },
+    {
+      "xi": 86.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 8.972285960389388e-15
+    },
+    {
+      "xi": 87.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 9.287053321307335e-15
+    },
+    {
+      "xi": 88.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 9.327900079898171e-15
+    },
+    {
+      "xi": 89.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 9.59926195903263e-15
+    },
+    {
+      "xi": 90.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 8.220444468440678e-15
+    },
+    {
+      "xi": 91.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 9.365996743390914e-15
+    },
+    {
+      "xi": 92.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 9.252517516598979e-15
+    },
+    {
+      "xi": 93.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 8.516319849738262e-15
+    },
+    {
+      "xi": 94.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 7.54214723158688e-15
+    },
+    {
+      "xi": 95.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 6.175133396786001e-15
+    },
+    {
+      "xi": 96.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 6.00527576595838e-15
+    },
+    {
+      "xi": 97.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 5.666031707170377e-15
+    },
+    {
+      "xi": 98.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 6.70487714322864e-15
+    },
+    {
+      "xi": 98.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 5.0144304238120556e-15
+    },
+    {
+      "xi": 97.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 6.302315401358412e-15
+    },
+    {
+      "xi": 96.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 5.85035237157002e-15
+    },
+    {
+      "xi": 95.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 7.60988483190199e-15
+    },
+    {
+      "xi": 94.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 8.029296915013495e-15
+    },
+    {
+      "xi": 93.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 6.9378527255281156e-15
+    },
+    {
+      "xi": 92.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 6.856268954631451e-15
+    },
+    {
+      "xi": 91.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 9.072809021633739e-15
+    },
+    {
+      "xi": 90.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 9.485181443409737e-15
+    },
+    {
+      "xi": 89.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 9.121186856183279e-15
+    },
+    {
+      "xi": 88.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 9.363682331708416e-15
+    },
+    {
+      "xi": 87.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.3164949538789396e-14
+    },
+    {
+      "xi": 86.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.0923454500267527e-14
+    },
+    {
+      "xi": 85.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.1891964186878675e-14
+    },
+    {
+      "xi": 84.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.225470718415731e-14
+    },
+    {
+      "xi": 83.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.081177513775203e-14
+    },
+    {
+      "xi": 82.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.5471689326938923e-14
+    },
+    {
+      "xi": 81.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.513272570983786e-14
+    },
+    {
+      "xi": 80.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.496899615318722e-14
+    },
+    {
+      "xi": 79.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.3781747108268774e-14
+    },
+    {
+      "xi": 78.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.5044407092244926e-14
+    },
+    {
+      "xi": 77.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.5119595376514017e-14
+    },
+    {
+      "xi": 76.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.6509383056071603e-14
+    },
+    {
+      "xi": 75.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.574439908560269e-14
+    },
+    {
+      "xi": 74.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.8694377683119387e-14
+    },
+    {
+      "xi": 73.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.89598546883998e-14
+    },
+    {
+      "xi": 72.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.8996237270008105e-14
+    },
+    {
+      "xi": 71.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 2.0692206022053555e-14
+    },
+    {
+      "xi": 70.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 2.0899870465648354e-14
+    },
+    {
+      "xi": 69.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.9679556323727335e-14
+    },
+    {
+      "xi": 68.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 2.278670843707767e-14
+    },
+    {
+      "xi": 67.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 2.2009541391984892e-14
+    },
+    {
+      "xi": 66.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.697341696627469e-14
+    },
+    {
+      "xi": 65.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.5240055299729922e-14
+    },
+    {
+      "xi": 64.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.6656599826000927e-14
+    },
+    {
+      "xi": 63.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.640331227495648e-14
+    },
+    {
+      "xi": 62.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 2.011384386456734e-14
+    },
+    {
+      "xi": 61.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.971330737744565e-14
+    },
+    {
+      "xi": 61.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 2.6879664364614428e-14
+    },
+    {
+      "xi": 62.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.7250083262148235e-14
+    },
+    {
+      "xi": 63.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.654668966416909e-14
+    },
+    {
+      "xi": 64.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 2.218683349885453e-14
+    },
+    {
+      "xi": 65.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 2.0343120451617742e-14
+    },
+    {
+      "xi": 66.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.8746839493585027e-14
+    },
+    {
+      "xi": 67.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.9581258432766648e-14
+    },
+    {
+      "xi": 68.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.7825455388071302e-14
+    },
+    {
+      "xi": 69.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.6326016670698168e-14
+    },
+    {
+      "xi": 70.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.839564682256013e-14
+    },
+    {
+      "xi": 71.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.5233300092996102e-14
+    },
+    {
+      "xi": 72.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.5586729334366238e-14
+    },
+    {
+      "xi": 73.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.451094742270803e-14
+    },
+    {
+      "xi": 74.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.555040997676317e-14
+    },
+    {
+      "xi": 75.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.2791762118664679e-14
+    },
+    {
+      "xi": 76.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.4262627544872265e-14
+    },
+    {
+      "xi": 77.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.237084457805017e-14
+    },
+    {
+      "xi": 78.0,
+      "matrix_symmetry_error": 0.0,
+      "conjugate_residual": 1.1993931143276586e-14
+    }
+  ],
+  "original_inputs": [
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/cases/bluntplate/config.ini",
+      "sha256": "11a931cfe90991f3dfab6a7a4880bfd3c61283f92449bc940990da400c0ae249",
+      "role": "isolated_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/cases/bluntplate/in/flow_vertical2d_N.h5",
+      "sha256": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86",
+      "role": "isolated_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/cases/bluntplate/in/grid_vertical2d_N.h5",
+      "sha256": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+      "role": "isolated_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/cases/rough/config.ini",
+      "sha256": "74d4db3b8a21445933664ff236af48cfde2cbdeff1e12e288c3b26975112ba39",
+      "role": "isolated_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/cases/rough/in/flow_vertical2d_N.h5",
+      "sha256": "bd6f8b8de9beb95b38959c222eee29865dc7c9aa1bc077fd05f329b6e8688edd",
+      "role": "isolated_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/cases/rough/in/grid_vertical2d_N.h5",
+      "sha256": "d6c649ec3eab1a236c55d09a7b7eceec5d925b3ec6c3cf14522f3d17d862ad7b",
+      "role": "isolated_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/in/grid_vertical2d_N.h5",
+      "sha256": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/in/flow_vertical2d_N.h5",
+      "sha256": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/M3/config.ini",
+      "sha256": "03b525f6300a306831d802c5b0753d48632dbda10872835cba5b3f54cac2ff6a",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_omega0_20261026/cases/bluntplate/config.ini",
+      "sha256": "0c921ab48c30423b5b8b86b467e03f03427243fb1a02ad3abc2bd2881852c6fd",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_omega0_20261026/cases/bluntplate/in/flow_vertical2d_N.h5",
+      "sha256": "3b4f210a73b3883e93a5dfbb8938a4c82b8bce7075554c9ccad023bf392bfd86",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_omega0_20261026/cases/bluntplate/in/grid_vertical2d_N.h5",
+      "sha256": "7cef87ec06a1f5494f6f45942914dbb4da9f2fb2b5ceedd2273da760341ab07f",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/M3/in/grid_vertical2d_N.h5",
+      "sha256": "d6c649ec3eab1a236c55d09a7b7eceec5d925b3ec6c3cf14522f3d17d862ad7b",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/M3/in/flow_vertical2d_N.h5",
+      "sha256": "bd6f8b8de9beb95b38959c222eee29865dc7c9aa1bc077fd05f329b6e8688edd",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/linear_curvature/theta1_0_f_1_over_2/rough/neutral_M3_beta_minus7_20261024/M3/config.ini",
+      "sha256": "e8f3f0eab44b1e5209e83f6fdffe90b306cfe171da6925ef79c6295bbb923ac7",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_omega0_20261026/cases/rough/config.ini",
+      "sha256": "27f7d1a22df585dc7c565e892ab4f237ff460f7173b349587f9af6d566e94c27",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_omega0_20261026/cases/rough/in/flow_vertical2d_N.h5",
+      "sha256": "bd6f8b8de9beb95b38959c222eee29865dc7c9aa1bc077fd05f329b6e8688edd",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_omega0_20261026/cases/rough/in/grid_vertical2d_N.h5",
+      "sha256": "d6c649ec3eab1a236c55d09a7b7eceec5d925b3ec6c3cf14522f3d17d862ad7b",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+      "sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c",
+      "role": "prior_protected_input"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_omega0_20261026/outputs/cases.json",
+      "sha256": "b539447e07994bcdeb7e7bbede35cfcefe054b903cf9548fc2fdd8148d233672",
+      "role": "previous_result"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_omega0_20261026/outputs/pilot.json",
+      "sha256": "b79cd677b4e3b45de8628b0e44d071fb8d149ae72744cb880746f1ed27ae31fd",
+      "role": "previous_result"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_omega0_20261026/outputs/bluntplate_final.json",
+      "sha256": "a9bc829c071bc93f99bea35c2d4d311fd336a1e6a59bd808547c1a1870fba9bf",
+      "role": "previous_result"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_omega0_20261026/outputs/rough_final.json",
+      "sha256": "a2f1f7d279db37b23c40fef1ccdf2159ab18894a910f0c9bcf269d2feaac6073",
+      "role": "previous_result"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/outputs/bluntplate_f100kHz_A_final.json",
+      "sha256": "34a53ae1fb73063f260f37fbb1333ecd9569e394cf328fa2cf8fe1a31bf20ada",
+      "role": "prior_result"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/outputs/bluntplate_f100kHz_B_final.json",
+      "sha256": "035e1ccb885b60a1e334309fe0c6d74cecbf32df77e39d7cbde1cbd767e2e6e0",
+      "role": "prior_result"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/outputs/bluntplate_f50kHz_A_final.json",
+      "sha256": "e0079cc40d0bf95dff9ee5d0e9aae7ad83a285cba32d5aeaa7094fbcc6ed5ac5",
+      "role": "prior_result"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/outputs/bluntplate_f50kHz_B_final.json",
+      "sha256": "7cbfb100ed0c5e8d7501968e8f81bd9587ee9e1aecf0b86643cd5679231b33bd",
+      "role": "prior_result"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/outputs/rough_f100kHz_A_final.json",
+      "sha256": "3836f698efcbf27f5f68c06d24d252b7e96483c58b787c6fa3d1ae42b09553e2",
+      "role": "prior_result"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/outputs/rough_f100kHz_B_final.json",
+      "sha256": "ab59d0130cbc3061b842eec8cb87c7b55c5e5772eefb441eb5dc8d5c90c30e7e",
+      "role": "prior_result"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/outputs/rough_f50kHz_A_final.json",
+      "sha256": "ad76045745a017c0141409284c3c7010652a27f25f0bd8cfd638c96150ca7b85",
+      "role": "prior_result"
+    },
+    {
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_xbeta_four_omega_20261026/outputs/rough_f50kHz_B_final.json",
+      "sha256": "ceb8aff8d8f27e5c1ac86479c7fb245850b55a3bf02a727ad87c5794f1e12c4b",
+      "role": "prior_result"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_frequency_overlay_20261027/bluntplate_f+0kHz.csv",
+      "sha256": "8bf3c9429bc56c11920b1214e0cf2dab6c2e77c3270ddad8481c3327f3ca1b70",
+      "role": "prior_selection"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_frequency_overlay_20261027/bluntplate_f+100kHz.csv",
+      "sha256": "f5c93565d9b713ac4228c2fc740380055348014c8026ee2988cae464f63a9e9b",
+      "role": "prior_selection"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_frequency_overlay_20261027/bluntplate_f+50kHz.csv",
+      "sha256": "7a0feb6983cfd219ec31ab8dc8b6959708bb3a818dc7ed3e19dadc3688523ebf",
+      "role": "prior_selection"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_frequency_overlay_20261027/bluntplate_f-100kHz.csv",
+      "sha256": "bff861c29be3032a793a55652eb9405adee4242fd56c92e6fba25f0a8ee9cbaf",
+      "role": "prior_selection"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_frequency_overlay_20261027/bluntplate_f-50kHz.csv",
+      "sha256": "0b9d223f85d84a28caab0fe050aeb27571fb740f6bb2585c36ec192d00d03867",
+      "role": "prior_selection"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_frequency_overlay_20261027/rough_f+0kHz.csv",
+      "sha256": "fe8a60381418843b3519d9d3b60ab089572f2e3ffc82b7a6a1194d91caf8984d",
+      "role": "prior_selection"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_frequency_overlay_20261027/rough_f+100kHz.csv",
+      "sha256": "7abbbda645e9f9b1bdab47c3ef1d26ef8db7303bf4b673a2dd90a5413839cb94",
+      "role": "prior_selection"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_frequency_overlay_20261027/rough_f+50kHz.csv",
+      "sha256": "5e369989b91aa60489f1dcfe2d4e23e3ea7e15e44803ef3770dddab4f665cb4f",
+      "role": "prior_selection"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_frequency_overlay_20261027/rough_f-100kHz.csv",
+      "sha256": "5cb4c12862d448074d69931f4a84b4c671cd0f3c3410f4ac4fa82c049a3a7c98",
+      "role": "prior_selection"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_frequency_overlay_20261027/rough_f-50kHz.csv",
+      "sha256": "957f3467dc5b0f654e043648b3e1838e72d2ef09f9ca6d5e84dde1be681a458d",
+      "role": "prior_selection"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/bluntplate_f+0kHz.csv",
+      "sha256": "47d59bf12ab93c71d07b410242e25b1f2f33065df84f77ba00ddf5e3c2363994",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/bluntplate_f+100kHz.csv",
+      "sha256": "8a3283e8cddf60c26b44d54e3dfcb17b033539f188c750255065d138ab3b37f1",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/bluntplate_f+25kHz.csv",
+      "sha256": "e4e043297210f8beba6396d49cbc2e0e7ca51cf9abde2bbfc0fbe56ad0189062",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/bluntplate_f+50kHz.csv",
+      "sha256": "4d96ff4e226de39e0283e87938550842b6d7780b30e73583de38d60beea93b49",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/bluntplate_f+75kHz.csv",
+      "sha256": "13f41598430806cb0a18462ce3c8854c4fcb79a6291a871bd30e61f8187c6189",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/bluntplate_f-100kHz.csv",
+      "sha256": "d25c768880cb003734a36b7a0d59d4a0a54bfaaa51f88b913eeca693d2ffb1e8",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/bluntplate_f-25kHz.csv",
+      "sha256": "f3ac1d3b904e4c28ced656f8027ae762c3d7d4b6da80828a6c3baec55f1c8452",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/bluntplate_f-50kHz.csv",
+      "sha256": "669d1593d29af00411a5a3bb85fb46317fd087d5ebf0e81fef3e2a537d6c3da4",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/bluntplate_f-75kHz.csv",
+      "sha256": "35229802cb18f7864609a5006ca9962d9c0d9a069709cc5ebcad9dd93d50333c",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/rough_f+0kHz.csv",
+      "sha256": "d77b3351c7ed62ee0909bdb442659937e512470b7f9564beb3f615a11b3d3528",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/rough_f+100kHz.csv",
+      "sha256": "85c992c2c7271f48691065b65be177caa2d75be352d201672263029782fd1287",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/rough_f+25kHz.csv",
+      "sha256": "26552304c657acf3b86526b358a7abbb959ddad7db332d76a6fccadabce404b9",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/rough_f+50kHz.csv",
+      "sha256": "b39171f5f4cb65c4546303b4125a863faf7221d4f2710f09506cb55e21b0b2d5",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/rough_f+75kHz.csv",
+      "sha256": "175808602f67aafe46a90e0aab35094a535e754bfaf17af5a2a268be5026217f",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/rough_f-100kHz.csv",
+      "sha256": "1268b1ea2e9371e394a9f0e94881aeffb3dba29ec49662a1be5346e24433b99d",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/rough_f-25kHz.csv",
+      "sha256": "2d99d310da94168f35db67bfe0e6790a1a2e58bea511441003e96a506becdcd4",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/rough_f-50kHz.csv",
+      "sha256": "a0d60cd87010f3790a7b8235801e0e58d6b9cbfca35dcbca98c3a5b11da72776",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_nine_frequencies_20261027/rough_f-75kHz.csv",
+      "sha256": "63fb215ce7ae8d6e0d4d8f0303b874de0f1ebe22feb851fd30922da6c5fcc97d",
+      "role": "prior_nine_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f+0kHz.csv",
+      "sha256": "47d59bf12ab93c71d07b410242e25b1f2f33065df84f77ba00ddf5e3c2363994",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f+100kHz.csv",
+      "sha256": "8a3283e8cddf60c26b44d54e3dfcb17b033539f188c750255065d138ab3b37f1",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f+125kHz.csv",
+      "sha256": "ac8669d541fd00b6622db6d78e2851f9f619b1f48ca0587dee089c22f018770e",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f+150kHz.csv",
+      "sha256": "4069e9f300b94cd6f0803dbb03f58715c78ac3aabcaf3b45525df60f3cdd2bc4",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f+175kHz.csv",
+      "sha256": "f69df97c6dc06fa7530a140715013530b5e1eb4c9e6282eeab7e567cb2b0aad4",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f+200kHz.csv",
+      "sha256": "228dd5f85e83023ef08c6f837fc1d4422f43f2602251c053a119b591ee1ce108",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f+25kHz.csv",
+      "sha256": "e4e043297210f8beba6396d49cbc2e0e7ca51cf9abde2bbfc0fbe56ad0189062",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f+50kHz.csv",
+      "sha256": "4d96ff4e226de39e0283e87938550842b6d7780b30e73583de38d60beea93b49",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f+75kHz.csv",
+      "sha256": "13f41598430806cb0a18462ce3c8854c4fcb79a6291a871bd30e61f8187c6189",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f-100kHz.csv",
+      "sha256": "d25c768880cb003734a36b7a0d59d4a0a54bfaaa51f88b913eeca693d2ffb1e8",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f-110kHz.csv",
+      "sha256": "e10dc4eb0774e98c969da16b4d9f19466110b16c0290cc37fb2df0710b356b47",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f-112kHz.csv",
+      "sha256": "67b1f8041a61f6054cef6e90248f3d0a777ab794da87994210e6f004f59a322e",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f-25kHz.csv",
+      "sha256": "f3ac1d3b904e4c28ced656f8027ae762c3d7d4b6da80828a6c3baec55f1c8452",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f-50kHz.csv",
+      "sha256": "669d1593d29af00411a5a3bb85fb46317fd087d5ebf0e81fef3e2a537d6c3da4",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f-75kHz.csv",
+      "sha256": "35229802cb18f7864609a5006ca9962d9c0d9a069709cc5ebcad9dd93d50333c",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/new_curve_summary.csv",
+      "sha256": "e0d7fe412ee2bb70a68771d69b832c00dfdf62d7a21cf76705f9c9377875125a",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f+0kHz.csv",
+      "sha256": "d77b3351c7ed62ee0909bdb442659937e512470b7f9564beb3f615a11b3d3528",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f+100kHz.csv",
+      "sha256": "85c992c2c7271f48691065b65be177caa2d75be352d201672263029782fd1287",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f+125kHz.csv",
+      "sha256": "0abaf6523ffa91ccb40ead9008765bb56511b7d32eca1425cb14ed7fcfe89d4d",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f+150kHz.csv",
+      "sha256": "2523be1945dcb12bf8777a60db240491f4ca24f8010fa12183f23b1433f6fc42",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f+175kHz.csv",
+      "sha256": "d1aa5bc713db826571d9b3c2360618d0ba5a10fe971a7d684bf149caf9db6e69",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f+200kHz.csv",
+      "sha256": "1958791f07b23ecbaf46965f5077ba30a262cf35e29d6aa7cde1aa96dd26a0a2",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f+25kHz.csv",
+      "sha256": "26552304c657acf3b86526b358a7abbb959ddad7db332d76a6fccadabce404b9",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f+50kHz.csv",
+      "sha256": "b39171f5f4cb65c4546303b4125a863faf7221d4f2710f09506cb55e21b0b2d5",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f+75kHz.csv",
+      "sha256": "175808602f67aafe46a90e0aab35094a535e754bfaf17af5a2a268be5026217f",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f-100kHz.csv",
+      "sha256": "1268b1ea2e9371e394a9f0e94881aeffb3dba29ec49662a1be5346e24433b99d",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f-110kHz.csv",
+      "sha256": "523da13045df9fdaf7df75c3abd360086833e591f154eccd497bd0006d7bd719",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f-112kHz.csv",
+      "sha256": "fd03e4ce6c1ea1348b65f0c07f80e667872ac330c8744ef35b90844674d80ea7",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f-25kHz.csv",
+      "sha256": "2d99d310da94168f35db67bfe0e6790a1a2e58bea511441003e96a506becdcd4",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f-50kHz.csv",
+      "sha256": "a0d60cd87010f3790a7b8235801e0e58d6b9cbfca35dcbca98c3a5b11da72776",
+      "role": "prior_extended_frequency_curve"
+    },
+    {
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75\u00b0/outputs/M3_xbeta_extended_frequencies_20261027/rough_f-75kHz.csv",
+      "sha256": "63fb215ce7ae8d6e0d4d8f0303b874de0f1ebe22feb851fd30922da6c5fcc97d",
+      "role": "prior_extended_frequency_curve"
+    }
+  ],
+  "maximum_growth_error": 2.958683252097703e-10,
+  "maximum_right_residual": 4.568026412490192e-12,
+  "x_range_mm": [
+    14.782776444308444,
+    61.99058774405485
+  ],
+  "negative_beta_range": [
+    -19.001967676485798,
+    -12.376757632212655
+  ]
+}

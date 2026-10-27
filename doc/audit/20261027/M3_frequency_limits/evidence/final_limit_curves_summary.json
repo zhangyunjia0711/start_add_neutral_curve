@@ -1,0 +1,50 @@
+[
+  {
+    "case": "rough",
+    "sign": 1,
+    "f_kHz": 264.53,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -5.777707520779001,
+      -5.773143029709853
+    ],
+    "beta_range": [
+      18.323164449050754,
+      18.39976287579074
+    ],
+    "maximum_growth_error": 6.273209016594179e-14,
+    "maximum_right_residual": 4.992655508253692e-10
+  },
+  {
+    "case": "bluntplate",
+    "sign": -1,
+    "f_kHz": -240.2,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -7.646614650898536,
+      -7.494109107304615
+    ],
+    "beta_range": [
+      -34.3984002837123,
+      -34.25890236346728
+    ],
+    "maximum_growth_error": 1.4674093645923592e-13,
+    "maximum_right_residual": 2.1414523863558838e-10
+  },
+  {
+    "case": "rough",
+    "sign": -1,
+    "f_kHz": -237.14,
+    "status": "closed_verified",
+    "x_range_mm": [
+      -5.780991797525744,
+      -5.77276914522817
+    ],
+    "beta_range": [
+      -33.414849087180556,
+      -33.350381756810876
+    ],
+    "maximum_growth_error": 6.069503627889269e-14,
+    "maximum_right_residual": 1.8134721747628138e-10
+  }
+]

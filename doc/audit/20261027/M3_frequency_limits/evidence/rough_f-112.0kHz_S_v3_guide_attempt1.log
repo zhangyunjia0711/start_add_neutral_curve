@@ -1,0 +1,9 @@
+ARC3 rough_f-112.0kHz_S 50 58.22321147468447 1.9397199273552759 -15.966709353539265
+Traceback (most recent call last):
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/work/contour3d.py", line 113, in <module>
+    if __name__=='__main__':main()
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/work/contour3d.py", line 105, in main
+    zz,rr,v,w,tt,tr=correct(pred,t0,q,p)
+  File "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/work/contour3d.py", line 55, in correct
+    assert factor>1e-9,'3D corrector exits native cell';zz+=factor*dz
+AssertionError: 3D corrector exits native cell

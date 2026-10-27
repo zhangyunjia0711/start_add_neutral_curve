@@ -1,0 +1,8 @@
+{
+  "case": "rough",
+  "sign": 1,
+  "f_kHz": 264.5,
+  "status": "failed",
+  "reason": "AssertionError(('No interior instability', 264.5, {'beta': 18.241826085368757, 'alpha_r': 57.85600347886882, 'alpha_i': 0.000967253224540691, 'beta_derivative': 8.82853728152429e-11, 'beta_curvature': 0.06549672305726723}))",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 91, in safe_one\n    try:return one(job)\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 76, in one\n    roots,checks=root_pair(p,cap,qcap,f);audit.append(dict(xi=x,kind=kind,checks=checks))\n  File \"/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/near_limit_curves.py\", line 35, in root_pair\n    assert a.imag<0 and abs(r['alpha_beta_i'])<1e-6,('No interior instability',f,trace[-1])\nAssertionError: ('No interior instability', 264.5, {'beta': 18.241826085368757, 'alpha_r': 57.85600347886882, 'alpha_i': 0.000967253224540691, 'beta_derivative': 8.82853728152429e-11, 'beta_curvature': 0.06549672305726723})\n"
+}

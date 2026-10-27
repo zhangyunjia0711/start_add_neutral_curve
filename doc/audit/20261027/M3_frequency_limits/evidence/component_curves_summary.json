@@ -1,0 +1,115 @@
+[
+  {
+    "case": "bluntplate",
+    "f_kHz": -112.0,
+    "stages": [
+      {
+        "script": "contour3d.py",
+        "exit": 0,
+        "status": "closed_verified",
+        "records": 249,
+        "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f-112.0kHz_S_v3_guide.log"
+      },
+      {
+        "script": "finalize.py",
+        "exit": 0,
+        "status": "closed_verified",
+        "records": 237,
+        "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f-112.0kHz_S_final.log"
+      }
+    ]
+  },
+  {
+    "case": "bluntplate",
+    "f_kHz": -150.0,
+    "stages": [
+      {
+        "script": "contour3d.py",
+        "exit": 0,
+        "status": "closed_verified",
+        "records": 158,
+        "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f-150.0kHz_S_v3_guide.log"
+      },
+      {
+        "script": "finalize.py",
+        "exit": 0,
+        "status": "closed_verified",
+        "records": 145,
+        "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f-150.0kHz_S_final.log"
+      }
+    ]
+  },
+  {
+    "case": "bluntplate",
+    "f_kHz": -200.0,
+    "stages": [
+      {
+        "script": "contour3d.py",
+        "exit": 0,
+        "status": "closed_verified",
+        "records": 62,
+        "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f-200.0kHz_S_v3_guide.log"
+      },
+      {
+        "script": "finalize.py",
+        "exit": 0,
+        "status": "closed_verified",
+        "records": 55,
+        "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f-200.0kHz_S_final.log"
+      }
+    ]
+  },
+  {
+    "case": "rough",
+    "f_kHz": -112.0,
+    "stages": [
+      {
+        "script": "contour3d.py",
+        "exit": 1,
+        "status": "running",
+        "records": 91,
+        "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_f-112.0kHz_S_v3_guide.log"
+      }
+    ]
+  },
+  {
+    "case": "rough",
+    "f_kHz": -150.0,
+    "stages": [
+      {
+        "script": "contour3d.py",
+        "exit": 0,
+        "status": "closed_verified",
+        "records": 64,
+        "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_f-150.0kHz_S_v3_guide.log"
+      },
+      {
+        "script": "finalize.py",
+        "exit": 0,
+        "status": "closed_verified",
+        "records": 33,
+        "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_f-150.0kHz_S_final.log"
+      }
+    ]
+  },
+  {
+    "case": "rough",
+    "f_kHz": -200.0,
+    "stages": [
+      {
+        "script": "contour3d.py",
+        "exit": 0,
+        "status": "closed_verified",
+        "records": 48,
+        "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_f-200.0kHz_S_v3_guide.log"
+      },
+      {
+        "script": "finalize.py",
+        "exit": 0,
+        "status": "closed_verified",
+        "records": 17,
+        "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_f-200.0kHz_S_final.log"
+      }
+    ]
+  }
+]

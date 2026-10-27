@@ -1,0 +1,110 @@
+[
+  {
+    "case": "bluntplate",
+    "sign": -1,
+    "status": "partial_with_recorded_failures",
+    "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/bluntplate_negative_native_fold_curve.json",
+    "native_extreme": {
+      "alpha_r": 33.657891021371654,
+      "alpha_i": 0.0,
+      "beta_r": -22.164670868823908,
+      "f_kHz": -114.12638797309545,
+      "omega_r": -13.8613042249356,
+      "right_residual": 2.0198436745659056e-13,
+      "coefficient_scaled_residual": 2.658418130629774e-19,
+      "scaled_F": [
+        -2.54120968297514e-15,
+        -9.481087593165846e-14,
+        -1.3931148084554814e-14
+      ],
+      "raw_MAC": 0.9999817396892456,
+      "iterations": 4,
+      "station": 95,
+      "xi": 95.0,
+      "x_mm": -28.582454430658757,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/bluntplate_negative_fold_vectors/i0095.npy",
+      "vector_sha256": "f8475c3e4dff9f33592f524208eb970f5fb8ee58dc7d504363c4ded6410eea97"
+    }
+  },
+  {
+    "case": "bluntplate",
+    "sign": 1,
+    "status": "partial_with_recorded_failures",
+    "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/bluntplate_positive_native_fold_curve.json",
+    "native_extreme": {
+      "alpha_r": 55.402620160598076,
+      "alpha_i": 0.0,
+      "beta_r": 21.64070936159974,
+      "f_kHz": 291.6440077774359,
+      "omega_r": 35.421837043817874,
+      "right_residual": 2.1966445307932217e-14,
+      "coefficient_scaled_residual": 1.0321052935470589e-19,
+      "scaled_F": [
+        1.7813329436717542e-15,
+        1.2310753332976607e-13,
+        -1.3118798543199036e-14
+      ],
+      "raw_MAC": 0.9999834938618322,
+      "iterations": 5,
+      "station": 216,
+      "xi": 216.0,
+      "x_mm": -5.701341568810608,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/bluntplate_positive_fold_vectors/i0216.npy",
+      "vector_sha256": "ed03206effeb0c75fe97b355caab8951098815769e90bd69a6314a093846bb99"
+    }
+  },
+  {
+    "case": "rough",
+    "sign": -1,
+    "status": "partial_with_recorded_failures",
+    "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_negative_native_fold_curve.json",
+    "native_extreme": {
+      "alpha_r": 34.365593392311354,
+      "alpha_i": 0.0,
+      "beta_r": -22.53846251314075,
+      "f_kHz": -115.96441956750925,
+      "omega_r": -14.084543701429146,
+      "right_residual": 1.66790832678764e-14,
+      "coefficient_scaled_residual": 3.4463818223381017e-19,
+      "scaled_F": [
+        -3.457002298415623e-15,
+        -7.603004949756962e-15,
+        1.982590755620612e-15
+      ],
+      "raw_MAC": 0.9959736366476029,
+      "iterations": 5,
+      "station": 19,
+      "xi": 19.0,
+      "x_mm": -28.794523976877734,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0019.npy",
+      "vector_sha256": "cec4d12a82347d0166e0715ab0ab05e4dba09741822799f4d79819d151678df4"
+    }
+  },
+  {
+    "case": "rough",
+    "sign": 1,
+    "status": "partial_with_recorded_failures",
+    "file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_positive_native_fold_curve.json",
+    "native_extreme": {
+      "alpha_r": 56.69159889809947,
+      "alpha_i": 0.0,
+      "beta_r": 18.36234736902397,
+      "f_kHz": 264.53878184040326,
+      "omega_r": 32.12975193123728,
+      "right_residual": 4.992857684444264e-15,
+      "coefficient_scaled_residual": 1.2751433823097106e-19,
+      "scaled_F": [
+        9.489937536248082e-15,
+        6.781712235620784e-14,
+        -1.4172822208649118e-14
+      ],
+      "raw_MAC": 0.9704685789825273,
+      "iterations": 6,
+      "station": 43,
+      "xi": 43.0,
+      "x_mm": -5.775160529663495,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_positive_fold_vectors/i0043.npy",
+      "vector_sha256": "4feb9f865291163d020a7d38d7d2f77b9abe8e3df1c39be868b3d194342b9bcd"
+    }
+  }
+]

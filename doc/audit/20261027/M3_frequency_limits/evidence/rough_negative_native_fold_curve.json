@@ -1,0 +1,1609 @@
+{
+  "case": "rough",
+  "sign": -1,
+  "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_negative_pilot.json",
+  "source_sha256": "27e5a5532840ebcadc24826a70a795235223ea2c186196ae61e8d546d0fff74b",
+  "records": [
+    {
+      "alpha_r": 20.00478945087349,
+      "alpha_i": 0.0,
+      "beta_r": -10.69023623175714,
+      "f_kHz": -64.84065606669765,
+      "omega_r": -7.875269478403126,
+      "right_residual": 2.5960872437048485e-14,
+      "coefficient_scaled_residual": 5.390813899488639e-19,
+      "scaled_F": [
+        3.683797770273825e-14,
+        4.1267418094241774e-14,
+        4.068451277280735e-14
+      ],
+      "raw_MAC": 0.9983503118453676,
+      "iterations": 12,
+      "station": 2,
+      "xi": 2.0,
+      "x_mm": -34.9809981656749,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0002.npy",
+      "vector_sha256": "9ee986d9d86c7ce57d873641bdf1926525d4e8688871c670eb79d64dd89069b0"
+    },
+    {
+      "alpha_r": 22.50551433287063,
+      "alpha_i": 0.0,
+      "beta_r": -12.199240719857109,
+      "f_kHz": -73.69295881345344,
+      "omega_r": -8.950432406480216,
+      "right_residual": 2.26725991857853e-14,
+      "coefficient_scaled_residual": 4.650657938465472e-19,
+      "scaled_F": [
+        -1.3306404167216846e-14,
+        -3.1016642054014628e-15,
+        1.3685068410965782e-13
+      ],
+      "raw_MAC": 0.9991369831457674,
+      "iterations": 9,
+      "station": 3,
+      "xi": 3.0,
+      "x_mm": -34.92377349353702,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0003.npy",
+      "vector_sha256": "e73317ca63fda77cc78f8852a98039c4c571412e4dff7d88df3c1ac6eae36d5f"
+    },
+    {
+      "alpha_r": 24.544096458615286,
+      "alpha_i": 0.0,
+      "beta_r": -13.349167061777393,
+      "f_kHz": -80.01618926493724,
+      "omega_r": -9.718425002487514,
+      "right_residual": 2.1139685708870812e-14,
+      "coefficient_scaled_residual": 4.2911369582930786e-19,
+      "scaled_F": [
+        -1.9383564863223475e-14,
+        -1.6541284773578717e-14,
+        3.5881958984847656e-14
+      ],
+      "raw_MAC": 0.9991978126999582,
+      "iterations": 8,
+      "station": 4,
+      "xi": 4.0,
+      "x_mm": -34.828038319138244,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0004.npy",
+      "vector_sha256": "adc3bf5cf803da1cbb126091c18c7e796cb20a86c59c392b9d624ca858ef0254"
+    },
+    {
+      "alpha_r": 26.335262403103826,
+      "alpha_i": 0.0,
+      "beta_r": -14.365232380444024,
+      "f_kHz": -85.3133171236085,
+      "omega_r": -10.361791554881458,
+      "right_residual": 2.1967786311294763e-14,
+      "coefficient_scaled_residual": 4.4200900406185e-19,
+      "scaled_F": [
+        6.87829929244479e-15,
+        5.451919267600585e-14,
+        -4.8621827038783814e-14
+      ],
+      "raw_MAC": 0.9999999999999998,
+      "iterations": 2,
+      "operator_substeps": 4,
+      "station": 5,
+      "xi": 5.0,
+      "x_mm": -34.69357251291741,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0005.npy",
+      "vector_sha256": "03a3f341d63525db6fcab72f95d781b5c1c514589512b4d51d5754df7da2a349"
+    },
+    {
+      "alpha_r": 27.92653006827409,
+      "alpha_i": 0.0,
+      "beta_r": -15.295381623064062,
+      "f_kHz": -89.92105526420563,
+      "omega_r": -10.921427773025089,
+      "right_residual": 2.232001413048446e-14,
+      "coefficient_scaled_residual": 4.458349841106442e-19,
+      "scaled_F": [
+        5.567524233515047e-15,
+        1.72772678173907e-14,
+        -1.5939469758344114e-13
+      ],
+      "raw_MAC": 0.9999999999999998,
+      "iterations": 1,
+      "operator_substeps": 4,
+      "station": 6,
+      "xi": 6.0,
+      "x_mm": -34.52022154757922,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0006.npy",
+      "vector_sha256": "cb89932bd5b77574eaee142151020828ec9cea46d837b21ecc5d281ede004501"
+    },
+    {
+      "alpha_r": 29.3430359908362,
+      "alpha_i": 0.0,
+      "beta_r": -16.164168292169776,
+      "f_kHz": -94.01907105765652,
+      "omega_r": -11.41915528933801,
+      "right_residual": 2.137085174029782e-14,
+      "coefficient_scaled_residual": 4.2439594839326164e-19,
+      "scaled_F": [
+        8.511761549124387e-16,
+        -5.171547123893383e-14,
+        -1.2685578931285377e-13
+      ],
+      "raw_MAC": 1.0000000000000004,
+      "iterations": 1,
+      "operator_substeps": 4,
+      "station": 7,
+      "xi": 7.0,
+      "x_mm": -34.30790299398537,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0007.npy",
+      "vector_sha256": "89300f6265bf3bac5124a4f2ba711daa06da9af006ae970bbe7c914e410fc163"
+    },
+    {
+      "alpha_r": 30.596834385659584,
+      "alpha_i": 0.0,
+      "beta_r": -16.982700076314753,
+      "f_kHz": -97.69828707571891,
+      "omega_r": -11.866017171514125,
+      "right_residual": 1.85739733135286e-14,
+      "coefficient_scaled_residual": 3.672347183944337e-19,
+      "scaled_F": [
+        2.8050588568422905e-15,
+        1.616939179905738e-14,
+        1.5600145325712357e-14
+      ],
+      "raw_MAC": 0.9985999298969748,
+      "iterations": 9,
+      "station": 8,
+      "xi": 8.0,
+      "x_mm": -34.056606041484216,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0008.npy",
+      "vector_sha256": "0d58218107a32cc7f5e09c4a6faa45432ce85e3cac90c698be96bb56ce398bd5"
+    },
+    {
+      "alpha_r": 31.69288724819205,
+      "alpha_i": 0.0,
+      "beta_r": -17.75863832243305,
+      "f_kHz": -101.02980495053986,
+      "omega_r": -12.2706491204775,
+      "right_residual": 2.0598979821202006e-14,
+      "coefficient_scaled_residual": 4.060579614826391e-19,
+      "scaled_F": [
+        -1.908465046621586e-15,
+        -2.121546973425968e-14,
+        3.296950571586038e-14
+      ],
+      "raw_MAC": 0.9984198069215136,
+      "iterations": 7,
+      "station": 9,
+      "xi": 9.0,
+      "x_mm": -33.76639699169312,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0009.npy",
+      "vector_sha256": "b63024a76e98a10b27f5e422b0030d1ca001dd33be6959ce0ee278cb06097d60"
+    },
+    {
+      "alpha_r": 32.62892359275472,
+      "alpha_i": 0.0,
+      "beta_r": -18.490843549954675,
+      "f_kHz": -104.0287960756207,
+      "omega_r": -12.634893788962298,
+      "right_residual": 1.5005393329119302e-13,
+      "coefficient_scaled_residual": 2.9532952599238035e-18,
+      "scaled_F": [
+        2.9491221292927377e-12,
+        -2.1991907768575767e-12,
+        -6.449069597686384e-13
+      ],
+      "raw_MAC": 0.9982325607746404,
+      "iterations": 6,
+      "station": 10,
+      "xi": 10.0,
+      "x_mm": -33.437415462349556,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0010.npy",
+      "vector_sha256": "06afee8b9e5a5de97250cdf028b55d008369b89b36ec6da705af0a155290f9e8"
+    },
+    {
+      "alpha_r": 33.402776882883174,
+      "alpha_i": 0.0,
+      "beta_r": -19.172330344748637,
+      "f_kHz": -106.67479891693297,
+      "omega_r": -12.956266006333445,
+      "right_residual": 1.865189575076859e-14,
+      "coefficient_scaled_residual": 3.6704075157285113e-19,
+      "scaled_F": [
+        3.4647802329251817e-15,
+        4.575768131699951e-14,
+        -2.4005118486523664e-14
+      ],
+      "raw_MAC": 0.9980405611383509,
+      "iterations": 6,
+      "station": 11,
+      "xi": 11.0,
+      "x_mm": -33.069884660698115,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0011.npy",
+      "vector_sha256": "4eefc49ed31db2a49162135074d69a6e715c1142eb7c2b5181b62d731008a716"
+    },
+    {
+      "alpha_r": 34.0122898720976,
+      "alpha_i": 0.0,
+      "beta_r": -19.803411709514407,
+      "f_kHz": -108.99440831500537,
+      "omega_r": -13.237995868469106,
+      "right_residual": 1.828971238758401e-14,
+      "coefficient_scaled_residual": 3.6036745455094534e-19,
+      "scaled_F": [
+        2.9172196532196795e-15,
+        -1.85620125104229e-14,
+        1.7815507201040237e-15
+      ],
+      "raw_MAC": 0.9978335179982636,
+      "iterations": 6,
+      "station": 12,
+      "xi": 12.0,
+      "x_mm": -32.66410270826412,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0012.npy",
+      "vector_sha256": "4ce8cf48179c4c7b30cfc39c65be50fec9b5150018dac52f5f7d9af6f77a89e7"
+    },
+    {
+      "alpha_r": 34.46339439035195,
+      "alpha_i": 0.0,
+      "beta_r": -20.37993023273884,
+      "f_kHz": -110.9833836097814,
+      "omega_r": -13.479568322889296,
+      "right_residual": 1.828090081045912e-14,
+      "coefficient_scaled_residual": 3.611577432522473e-19,
+      "scaled_F": [
+        8.389455251364226e-14,
+        4.0165611049214746e-13,
+        -1.0436145790276146e-13
+      ],
+      "raw_MAC": 0.9976113303088427,
+      "iterations": 5,
+      "station": 13,
+      "xi": 13.0,
+      "x_mm": -32.22045097319798,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0013.npy",
+      "vector_sha256": "12f952461a20486adf8ab7dfcce8b3424846a515e9f0a607f72e7858c2be7cfa"
+    },
+    {
+      "alpha_r": 34.76390610334192,
+      "alpha_i": 0.0,
+      "beta_r": -20.89808318637018,
+      "f_kHz": -112.63798218112792,
+      "omega_r": -13.6805288069185,
+      "right_residual": 1.7200369367556888e-14,
+      "coefficient_scaled_residual": 3.4119827292135253e-19,
+      "scaled_F": [
+        -1.403192274139094e-15,
+        7.612959088568998e-14,
+        2.870878229706794e-14
+      ],
+      "raw_MAC": 0.9973738828925637,
+      "iterations": 5,
+      "station": 14,
+      "xi": 14.0,
+      "x_mm": -31.739388236183828,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0014.npy",
+      "vector_sha256": "18d770ca1435902d457a17fdfb3c4b9ed88c41dfa4075dad05a95e21fca08152"
+    },
+    {
+      "alpha_r": 34.92315017711243,
+      "alpha_i": 0.0,
+      "beta_r": -21.354770570616374,
+      "f_kHz": -113.95657840825793,
+      "omega_r": -13.840679879590756,
+      "right_residual": 1.649904310432056e-14,
+      "coefficient_scaled_residual": 3.2907933847991295e-19,
+      "scaled_F": [
+        1.4405752038308927e-15,
+        -7.917159471869232e-14,
+        -9.801690054666556e-15
+      ],
+      "raw_MAC": 0.9971213667428289,
+      "iterations": 5,
+      "station": 15,
+      "xi": 15.0,
+      "x_mm": -31.22145520643922,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0015.npy",
+      "vector_sha256": "10a9bc4ca9d6d77650aeae6bb78fb6f5cedf858d8a21f86793db847b959b935c"
+    },
+    {
+      "alpha_r": 34.95166473786911,
+      "alpha_i": 0.0,
+      "beta_r": -21.747867684359584,
+      "f_kHz": -114.94122755931011,
+      "omega_r": -13.960271165006503,
+      "right_residual": 1.667450883848096e-14,
+      "coefficient_scaled_residual": 3.3486007545591364e-19,
+      "scaled_F": [
+        -2.060036287868148e-15,
+        1.016030694993611e-13,
+        2.782014635593532e-14
+      ],
+      "raw_MAC": 0.9968542257742621,
+      "iterations": 5,
+      "station": 16,
+      "xi": 16.0,
+      "x_mm": -30.66727030299222,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0016.npy",
+      "vector_sha256": "2d64caa2403a90e7ed3394d356a988fbb9dc07882e35e6b12f0cdfc61678b7d0"
+    },
+    {
+      "alpha_r": 34.86064735206786,
+      "alpha_i": 0.0,
+      "beta_r": -22.076200527733985,
+      "f_kHz": -115.59750563240001,
+      "omega_r": -14.03997990010989,
+      "right_residual": 1.655408128048125e-14,
+      "coefficient_scaled_residual": 3.351741560749836e-19,
+      "scaled_F": [
+        -3.0764790235090513e-15,
+        -1.639120840342627e-14,
+        1.3957120876398241e-14
+      ],
+      "raw_MAC": 0.9965729647072443,
+      "iterations": 5,
+      "station": 17,
+      "xi": 17.0,
+      "x_mm": -30.077528261615015,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0017.npy",
+      "vector_sha256": "ad15307fe2e38fae90865bb9c90e14271b4ab8f5c4293f09b7f9fa641d5f2e26"
+    },
+    {
+      "alpha_r": 34.66156755252372,
+      "alpha_i": 0.0,
+      "beta_r": -22.339566246253966,
+      "f_kHz": -115.9347672704617,
+      "omega_r": -14.080942259925179,
+      "right_residual": 1.7650760947493268e-14,
+      "coefficient_scaled_residual": 3.6079442612551765e-19,
+      "scaled_F": [
+        1.1032753039854098e-15,
+        3.298114030160863e-15,
+        -6.7630136159361384e-15
+      ],
+      "raw_MAC": 0.9962791761234964,
+      "iterations": 5,
+      "station": 18,
+      "xi": 18.0,
+      "x_mm": -29.452998459846082,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0018.npy",
+      "vector_sha256": "bd1105f2cb751ff4f92e520f2768034e25bb0a85a1e2e499a1d4d1944e79ea25"
+    },
+    {
+      "alpha_r": 34.365593392311354,
+      "alpha_i": 0.0,
+      "beta_r": -22.53846251314075,
+      "f_kHz": -115.96441956750925,
+      "omega_r": -14.084543701429146,
+      "right_residual": 1.66790832678764e-14,
+      "coefficient_scaled_residual": 3.4463818223381017e-19,
+      "scaled_F": [
+        -3.457002298415623e-15,
+        -7.603004949756962e-15,
+        1.982590755620612e-15
+      ],
+      "raw_MAC": 0.9959736366476029,
+      "iterations": 5,
+      "station": 19,
+      "xi": 19.0,
+      "x_mm": -28.794523976877734,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0019.npy",
+      "vector_sha256": "cec4d12a82347d0166e0715ab0ab05e4dba09741822799f4d79819d151678df4"
+    },
+    {
+      "alpha_r": 33.983125404900086,
+      "alpha_i": 0.0,
+      "beta_r": -22.673714025385408,
+      "f_kHz": -115.69788321455157,
+      "omega_r": -14.052171333031557,
+      "right_residual": 1.503730518797754e-14,
+      "coefficient_scaled_residual": 3.14489711640606e-19,
+      "scaled_F": [
+        3.4587379699535127e-15,
+        6.48646397039198e-14,
+        4.2430858426387145e-15
+      ],
+      "raw_MAC": 1.0000000000000002,
+      "iterations": 1,
+      "station": 20,
+      "xi": 20.0,
+      "x_mm": -28.103013880512695,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0020.npy",
+      "vector_sha256": "94efd0946fe83d2b5388d62b171a823b9d0894e6c95fe7a104097eecc354240a"
+    },
+    {
+      "alpha_r": 33.52510756434406,
+      "alpha_i": 0.0,
+      "beta_r": -22.751362239627557,
+      "f_kHz": -115.1835903666194,
+      "omega_r": -13.989707517672949,
+      "right_residual": 1.7051552929194788e-14,
+      "coefficient_scaled_residual": 3.6139471374264973e-19,
+      "scaled_F": [
+        3.6960789706274386e-14,
+        1.5057453501635063e-13,
+        -4.355418832069871e-14
+      ],
+      "raw_MAC": 0.9956515625534665,
+      "iterations": 4,
+      "station": 21,
+      "xi": 21.0,
+      "x_mm": -27.379443985654948,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0021.npy",
+      "vector_sha256": "913de8d0f6608f6c7a1d5123432f4a49570b00f68bf10522b42096027433b093"
+    },
+    {
+      "alpha_r": 33.00248798502811,
+      "alpha_i": 0.0,
+      "beta_r": -22.76969653862666,
+      "f_kHz": -114.40665620644022,
+      "omega_r": -13.895344408945393,
+      "right_residual": 1.4927285929592068e-14,
+      "coefficient_scaled_residual": 3.209958746932726e-19,
+      "scaled_F": [
+        7.37625180032574e-15,
+        -8.71363691985546e-15,
+        -2.0749485621295976e-14
+      ],
+      "raw_MAC": 0.9953250043950452,
+      "iterations": 4,
+      "station": 22,
+      "xi": 22.0,
+      "x_mm": -26.62485124471571,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0022.npy",
+      "vector_sha256": "952ddabd593a1890c7bb611901fffaaded11c98685903e1838ea547ee128338d"
+    },
+    {
+      "alpha_r": 32.42257963078686,
+      "alpha_i": 0.0,
+      "beta_r": -22.730955311534448,
+      "f_kHz": -113.38211889886902,
+      "omega_r": -13.77090847820001,
+      "right_residual": 1.458248042417564e-14,
+      "coefficient_scaled_residual": 3.1853297744185585e-19,
+      "scaled_F": [
+        1.0455463678945011e-15,
+        4.6818086719808073e-14,
+        1.4775365725167978e-15
+      ],
+      "raw_MAC": 0.9949918560780727,
+      "iterations": 4,
+      "station": 23,
+      "xi": 23.0,
+      "x_mm": -25.84032609438634,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0023.npy",
+      "vector_sha256": "b0a169a0d799423dbdc0483559ff376154851f3f2e2c82d1925c3a585d4658d3"
+    },
+    {
+      "alpha_r": 31.791383383892878,
+      "alpha_i": 0.0,
+      "beta_r": -22.636580419474125,
+      "f_kHz": -112.11745152243266,
+      "omega_r": -13.617307373674839,
+      "right_residual": 1.47462886077892e-14,
+      "coefficient_scaled_residual": 3.2756338236487707e-19,
+      "scaled_F": [
+        3.628821362742945e-15,
+        -4.9634594705050075e-14,
+        -1.0263687591419725e-14
+      ],
+      "raw_MAC": 0.9946689633746829,
+      "iterations": 4,
+      "station": 24,
+      "xi": 24.0,
+      "x_mm": -25.02701070508007,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0024.npy",
+      "vector_sha256": "f9b9c9e6d406d87bbadca5873f91546eb0195777f3a49b09563e0f77914bf739"
+    },
+    {
+      "alpha_r": 31.115667606565562,
+      "alpha_i": 0.0,
+      "beta_r": -22.490097752789495,
+      "f_kHz": -110.63904502982204,
+      "omega_r": -13.437746427901047,
+      "right_residual": 1.5503991131706675e-14,
+      "coefficient_scaled_residual": 3.505998064294129e-19,
+      "scaled_F": [
+        4.655569594057904e-15,
+        1.0197938792154495e-14,
+        -1.7353209865980732e-15
+      ],
+      "raw_MAC": 0.9943369534208181,
+      "iterations": 4,
+      "station": 25,
+      "xi": 25.0,
+      "x_mm": -24.18609204936335,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0025.npy",
+      "vector_sha256": "dfadf1a3fbd28c1f8637dd3522b00eb9dfda859d5648a3530907d727fab8e173"
+    },
+    {
+      "alpha_r": 30.4135793045914,
+      "alpha_i": 0.0,
+      "beta_r": -22.29861791860438,
+      "f_kHz": -108.98586485225886,
+      "omega_r": -13.236958215929961,
+      "right_residual": 1.5378801590184694e-14,
+      "coefficient_scaled_residual": 3.5439762487740505e-19,
+      "scaled_F": [
+        -2.7827177416306217e-16,
+        3.088159326175882e-14,
+        3.303199664805681e-15
+      ],
+      "raw_MAC": 0.9939612470239363,
+      "iterations": 4,
+      "station": 26,
+      "xi": 26.0,
+      "x_mm": -23.318794701727846,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0026.npy",
+      "vector_sha256": "c4526ed68e03c07a39ce18ce3f155daf6460aa9f78aaea7e5fadf1d6c19f60bd"
+    },
+    {
+      "alpha_r": 29.691548623952716,
+      "alpha_i": 0.0,
+      "beta_r": -22.07201963617347,
+      "f_kHz": -107.2184223695168,
+      "omega_r": -13.022292191809942,
+      "right_residual": 1.4182398197566321e-14,
+      "coefficient_scaled_residual": 3.333804621550439e-19,
+      "scaled_F": [
+        3.5137066992442467e-15,
+        -1.0332230398327976e-14,
+        -4.1139665763789556e-15
+      ],
+      "raw_MAC": 0.9936126644553552,
+      "iterations": 4,
+      "station": 27,
+      "xi": 27.0,
+      "x_mm": -22.426376035753652,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0027.npy",
+      "vector_sha256": "1d0b03069a1d25bd140b58ae195f498a15df422327c6bcd82738ca79ccc2b56d"
+    },
+    {
+      "alpha_r": 28.932310205289042,
+      "alpha_i": 0.0,
+      "beta_r": -21.78562865599027,
+      "f_kHz": -105.17031005603657,
+      "omega_r": -12.773537207373925,
+      "right_residual": 1.493480836157644e-14,
+      "coefficient_scaled_residual": 3.584524982199414e-19,
+      "scaled_F": [
+        1.6600377648501612e-14,
+        -1.3986515474629232e-13,
+        -3.981297705889104e-14
+      ],
+      "raw_MAC": 0.9932467824705071,
+      "iterations": 4,
+      "station": 28,
+      "xi": 28.0,
+      "x_mm": -21.510118133138885,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0028.npy",
+      "vector_sha256": "f617716819e12be0c7e8bcf882df60e7ee3698663901ea83d47cbdc7e7fabd42"
+    },
+    {
+      "alpha_r": 28.237124050950115,
+      "alpha_i": 0.0,
+      "beta_r": -21.517908596769967,
+      "f_kHz": -103.26523579677618,
+      "omega_r": -12.542155014809246,
+      "right_residual": 1.3665486242361586e-14,
+      "coefficient_scaled_residual": 3.3513174139169193e-19,
+      "scaled_F": [
+        9.85781381322429e-15,
+        -6.422807168790419e-14,
+        -1.9146034011956837e-14
+      ],
+      "raw_MAC": 0.9932483600628966,
+      "iterations": 4,
+      "station": 29,
+      "xi": 29.0,
+      "x_mm": -20.571322552001888,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0029.npy",
+      "vector_sha256": "52f8326f1f7b3c8bf066e75d1d1cc18e8c406b3fd419a6d3e736ebce10b524eb"
+    },
+    {
+      "alpha_r": 27.390926486425972,
+      "alpha_i": 0.0,
+      "beta_r": -21.072400527932473,
+      "f_kHz": -100.3989596644884,
+      "omega_r": -12.194029343192627,
+      "right_residual": 1.3928167116614935e-14,
+      "coefficient_scaled_residual": 3.4937058357797413e-19,
+      "scaled_F": [
+        4.557356231204225e-16,
+        3.099837326121965e-15,
+        2.2472798188746814e-15
+      ],
+      "raw_MAC": 0.9916834816266121,
+      "iterations": 5,
+      "station": 30,
+      "xi": 30.0,
+      "x_mm": -19.611301409140335,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0030.npy",
+      "vector_sha256": "a1d780529131202ae168736a6b85a4ec3da132e578207df1b316ae72b0bfa129"
+    },
+    {
+      "alpha_r": 26.577027993409565,
+      "alpha_i": 0.0,
+      "beta_r": -20.63632623575497,
+      "f_kHz": -97.60503709533073,
+      "omega_r": -11.854691426696593,
+      "right_residual": 1.4343178849048418e-14,
+      "coefficient_scaled_residual": 3.6826981834972024e-19,
+      "scaled_F": [
+        -1.1325948031268076e-15,
+        2.9960900264105943e-14,
+        5.7610979236107734e-15
+      ],
+      "raw_MAC": 0.9908871468915432,
+      "iterations": 5,
+      "station": 31,
+      "xi": 31.0,
+      "x_mm": -18.631370975744456,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0031.npy",
+      "vector_sha256": "8fa83ed1d83fe9326730199faff2be5e4197fa6f4f10f58617d235a102d15f91"
+    },
+    {
+      "alpha_r": 25.78166758664385,
+      "alpha_i": 0.0,
+      "beta_r": -20.180413518941602,
+      "f_kHz": -94.72552817501642,
+      "omega_r": -11.50495855709678,
+      "right_residual": 1.435867027166602e-14,
+      "coefficient_scaled_residual": 3.685598266399467e-19,
+      "scaled_F": [
+        -5.895280138945496e-16,
+        3.026575697208035e-14,
+        3.0093482745462162e-15
+      ],
+      "raw_MAC": 0.9841702796528247,
+      "iterations": 5,
+      "station": 32,
+      "xi": 32.0,
+      "x_mm": -17.632846040974613,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0032.npy",
+      "vector_sha256": "8438c7f096e78b5c3528952a68ba5c9c9bfe6a129a27bdf7d6a2b770f53df9dd"
+    },
+    {
+      "alpha_r": 25.008683462346582,
+      "alpha_i": 0.0,
+      "beta_r": -19.785024655684186,
+      "f_kHz": -92.4110923661574,
+      "omega_r": -11.223857057036664,
+      "right_residual": 1.8678408201933853e-14,
+      "coefficient_scaled_residual": 4.794278124106225e-19,
+      "scaled_F": [
+        8.487743873823107e-14,
+        1.3513989450156658e-12,
+        1.1062345805585801e-13
+      ],
+      "raw_MAC": 0.9814693460271425,
+      "iterations": 4,
+      "station": 33,
+      "xi": 33.0,
+      "x_mm": -16.617030600389956,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0033.npy",
+      "vector_sha256": "a1718de90acf82acde5ed655483ddea46a073b000ee3ced2b6e2ee6c32a55611"
+    },
+    {
+      "alpha_r": 24.2798605701905,
+      "alpha_i": 0.0,
+      "beta_r": -19.393986748275175,
+      "f_kHz": -90.14955860253822,
+      "omega_r": -10.949180813713523,
+      "right_residual": 1.628522230145699e-14,
+      "coefficient_scaled_residual": 4.1810134103966145e-19,
+      "scaled_F": [
+        2.6755703889123714e-14,
+        1.4423263969197702e-12,
+        2.0049896249681195e-13
+      ],
+      "raw_MAC": 0.9810293078393443,
+      "iterations": 4,
+      "station": 34,
+      "xi": 34.0,
+      "x_mm": -15.585213279154527,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0034.npy",
+      "vector_sha256": "e9f53eb8f56d24dc850c4178342a648d78bf74e1499342e8faad86c7b9d0643e"
+    },
+    {
+      "alpha_r": 23.56655651993901,
+      "alpha_i": 0.0,
+      "beta_r": -18.987580469788664,
+      "f_kHz": -87.82565587431053,
+      "omega_r": -10.666929502012362,
+      "right_residual": 1.4535026389035833e-14,
+      "coefficient_scaled_residual": 3.7340212636751093e-19,
+      "scaled_F": [
+        -6.833210370768379e-16,
+        -6.720202137735661e-15,
+        -5.78958759239241e-16
+      ],
+      "raw_MAC": 0.9806802706402831,
+      "iterations": 5,
+      "station": 35,
+      "xi": 35.0,
+      "x_mm": -14.538658049026191,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0035.npy",
+      "vector_sha256": "6f305a38c4b8df988eab45dbfe4a527420cbcfbf2de61144762718701808a49f"
+    },
+    {
+      "alpha_r": 22.87358370686221,
+      "alpha_i": 0.0,
+      "beta_r": -18.57962964229091,
+      "f_kHz": -85.53352840910931,
+      "omega_r": -10.388537478206487,
+      "right_residual": 1.574346551323007e-14,
+      "coefficient_scaled_residual": 4.048436531727765e-19,
+      "scaled_F": [
+        -6.897466715174803e-16,
+        1.1613278015312983e-14,
+        1.9273223272903345e-15
+      ],
+      "raw_MAC": 0.9804984887827464,
+      "iterations": 5,
+      "station": 36,
+      "xi": 36.0,
+      "x_mm": -13.478600522843644,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0036.npy",
+      "vector_sha256": "334cb99dd8c5247a3a45bbf4ddafd62fe9e4a883694b9df024802fc6d8f57963"
+    },
+    {
+      "alpha_r": 22.19740407819517,
+      "alpha_i": 0.0,
+      "beta_r": -18.169955555268768,
+      "f_kHz": -83.27393786370753,
+      "omega_r": -10.114097249878347,
+      "right_residual": 6.59505131680246e-14,
+      "coefficient_scaled_residual": 1.6982669126969156e-18,
+      "scaled_F": [
+        -5.943693399495753e-13,
+        9.30946662569907e-13,
+        1.2787312499407359e-12
+      ],
+      "raw_MAC": 0.9804306268401911,
+      "iterations": 4,
+      "station": 37,
+      "xi": 37.0,
+      "x_mm": -12.406240851376642,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0037.npy",
+      "vector_sha256": "115ff416a280518aec6862ae71bf2c7efb225a786165bb63fab779654702717f"
+    },
+    {
+      "alpha_r": 21.538467845916152,
+      "alpha_i": 0.0,
+      "beta_r": -17.76362562700255,
+      "f_kHz": -81.07935909966075,
+      "omega_r": -9.847553075176114,
+      "right_residual": 1.5130112561224173e-14,
+      "coefficient_scaled_residual": 3.9031325264022543e-19,
+      "scaled_F": [
+        8.908423920290827e-17,
+        -1.3095528740873136e-14,
+        -2.57068497498894e-15
+      ],
+      "raw_MAC": 0.9804628461502283,
+      "iterations": 5,
+      "station": 38,
+      "xi": 38.0,
+      "x_mm": -11.32273732348063,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0038.npy",
+      "vector_sha256": "2dcee9ae7eea21abecabbe50506c7acc361d11d94071b7809063701e1d3bb029"
+    },
+    {
+      "alpha_r": 20.89840866377576,
+      "alpha_i": 0.0,
+      "beta_r": -17.364775740539365,
+      "f_kHz": -78.97267848172503,
+      "omega_r": -9.591684634330807,
+      "right_residual": 1.6201156016489913e-14,
+      "coefficient_scaled_residual": 4.1886796920477377e-19,
+      "scaled_F": [
+        -1.6180385908820003e-15,
+        -5.102038916253524e-15,
+        -2.18060296287318e-15
+      ],
+      "raw_MAC": 0.9805833553063131,
+      "iterations": 5,
+      "station": 39,
+      "xi": 39.0,
+      "x_mm": -10.229203360750164,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0039.npy",
+      "vector_sha256": "4e1383bb5e40208d8f4c13a3559de295d8141748244dff949de7ca7c7a8adeee"
+    },
+    {
+      "alpha_r": 20.28441251915502,
+      "alpha_i": 0.0,
+      "beta_r": -16.9791760824036,
+      "f_kHz": -76.97660208611299,
+      "omega_r": -9.349249710496068,
+      "right_residual": 1.5659044784935405e-14,
+      "coefficient_scaled_residual": 4.059032800242913e-19,
+      "scaled_F": [
+        2.1520757672202712e-16,
+        -7.210549593294249e-15,
+        -2.53098659973904e-15
+      ],
+      "raw_MAC": 0.9807612938955335,
+      "iterations": 5,
+      "station": 40,
+      "xi": 40.0,
+      "x_mm": -9.126700527947365,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0040.npy",
+      "vector_sha256": "e8004b1108526eb446a3fa30daa0768b3e086b5c77f42f352469a94c7c783d6a"
+    },
+    {
+      "alpha_r": 19.698877739233446,
+      "alpha_i": 0.0,
+      "beta_r": -16.60911536459459,
+      "f_kHz": -75.09699308722556,
+      "omega_r": -9.120960419822579,
+      "right_residual": 1.6920813752400938e-14,
+      "coefficient_scaled_residual": 4.399138208501675e-19,
+      "scaled_F": [
+        1.287953408689384e-16,
+        3.1387456803104454e-14,
+        2.364178153186537e-15
+      ],
+      "raw_MAC": 0.9809971916144291,
+      "iterations": 5,
+      "station": 41,
+      "xi": 41.0,
+      "x_mm": -8.0162365595546,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0041.npy",
+      "vector_sha256": "e56747138289995a7d7010cbd83e6d7c604c817879e85e2d45467488f2634b7d"
+    },
+    {
+      "alpha_r": 19.14118533658611,
+      "alpha_i": 0.0,
+      "beta_r": -16.256928620562487,
+      "f_kHz": -73.34710112224495,
+      "omega_r": -8.90842600672011,
+      "right_residual": 1.6248342879798846e-14,
+      "coefficient_scaled_residual": 4.238392775265122e-19,
+      "scaled_F": [
+        6.786232274654644e-16,
+        -1.7954447917829057e-14,
+        -2.0056120134600886e-15
+      ],
+      "raw_MAC": 0.9812965458642451,
+      "iterations": 5,
+      "station": 42,
+      "xi": 42.0,
+      "x_mm": -6.89876034002927,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0042.npy",
+      "vector_sha256": "337ffd4c3c9ddcdd5f29725d21071f81baeb90e67871d149ce1aeb7b2e5015f8"
+    },
+    {
+      "alpha_r": 18.612335137974092,
+      "alpha_i": 0.0,
+      "beta_r": -15.927804884931543,
+      "f_kHz": -71.75792192455727,
+      "omega_r": -8.715411080739266,
+      "right_residual": 1.5423717134955902e-14,
+      "coefficient_scaled_residual": 4.038102110909338e-19,
+      "scaled_F": [
+        -2.412632183054426e-16,
+        -2.0998517502247434e-15,
+        3.570418984596376e-15
+      ],
+      "raw_MAC": 0.981685849025496,
+      "iterations": 5,
+      "station": 43,
+      "xi": 43.0,
+      "x_mm": -5.775160529663495,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0043.npy",
+      "vector_sha256": "0b03666ca2ca1481e71b525b21053fe75f74514b4c6f7876d9a51b1b40c62678"
+    },
+    {
+      "alpha_r": 18.112894844432432,
+      "alpha_i": 0.0,
+      "beta_r": -15.623762771108014,
+      "f_kHz": -70.3381197557542,
+      "omega_r": -8.542967966131608,
+      "right_residual": 1.7519388187611416e-14,
+      "coefficient_scaled_residual": 4.604933003806719e-19,
+      "scaled_F": [
+        1.0215567499156084e-15,
+        -3.7227301543328805e-15,
+        1.5832587555297e-15
+      ],
+      "raw_MAC": 0.9821387902621195,
+      "iterations": 5,
+      "station": 44,
+      "xi": 44.0,
+      "x_mm": -4.6462622757656575,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0044.npy",
+      "vector_sha256": "ba928a07a124e0b25bacedd6479652e84a8a13cb748abbd30c1ea1a11ad414f4"
+    },
+    {
+      "alpha_r": 17.643575340276726,
+      "alpha_i": 0.0,
+      "beta_r": -15.345498249046534,
+      "f_kHz": -69.08655577444158,
+      "omega_r": -8.390958344079644,
+      "right_residual": 1.541105040224363e-14,
+      "coefficient_scaled_residual": 4.0678112952391347e-19,
+      "scaled_F": [
+        -5.636885837397716e-16,
+        6.674930418206728e-15,
+        2.540969935035309e-16
+      ],
+      "raw_MAC": 0.9826345729035858,
+      "iterations": 5,
+      "station": 45,
+      "xi": 45.0,
+      "x_mm": -3.5128259124068704,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0045.npy",
+      "vector_sha256": "8c126ed53367eb19d67bef4701cf2226eb0f42f54f424d07fa5bef29b8b61aab"
+    },
+    {
+      "alpha_r": 17.201949527397943,
+      "alpha_i": 0.0,
+      "beta_r": -15.094748653635657,
+      "f_kHz": -68.01915237234672,
+      "omega_r": -8.26131608035834,
+      "right_residual": 1.6666428995182975e-14,
+      "coefficient_scaled_residual": 4.418677100180167e-19,
+      "scaled_F": [
+        1.0718370300139993e-15,
+        7.973496581286065e-15,
+        3.1023944395384894e-15
+      ],
+      "raw_MAC": 0.9831460555958145,
+      "iterations": 5,
+      "station": 46,
+      "xi": 46.0,
+      "x_mm": -2.3755464871933625,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0046.npy",
+      "vector_sha256": "8f50b707fc805c47820ccaec1f44293cab078fe26740e948893b0777bb97ffac"
+    },
+    {
+      "alpha_r": 16.79143776714544,
+      "alpha_i": 0.0,
+      "beta_r": -14.874126889327064,
+      "f_kHz": -67.14399035948568,
+      "omega_r": -8.15502263567985,
+      "right_residual": 1.5648543249095997e-14,
+      "coefficient_scaled_residual": 4.1678120147942924e-19,
+      "scaled_F": [
+        1.0937323160119787e-15,
+        -1.0658304103663814e-14,
+        -4.3361047449684585e-15
+      ],
+      "raw_MAC": 0.9836434280349886,
+      "iterations": 5,
+      "station": 47,
+      "xi": 47.0,
+      "x_mm": -1.2350536918609083,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0047.npy",
+      "vector_sha256": "b87e34987ef08a9ef5a17d2bf5a73a961b2600fd6458bcc8789f5c91ec5ed614"
+    },
+    {
+      "alpha_r": 16.40926692940581,
+      "alpha_i": 0.0,
+      "beta_r": -14.677999028649126,
+      "f_kHz": -66.41879583028305,
+      "omega_r": -8.066943601811658,
+      "right_residual": 1.7676093436756166e-14,
+      "coefficient_scaled_residual": 4.730031441653172e-19,
+      "scaled_F": [
+        1.4275065479452445e-16,
+        1.1925384947798365e-14,
+        -6.43185126558493e-16
+      ],
+      "raw_MAC": 0.9841608516355261,
+      "iterations": 5,
+      "station": 48,
+      "xi": 48.0,
+      "x_mm": -0.09191143937605886,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0048.npy",
+      "vector_sha256": "fee20e3f89522882488b5525fe88cde7f35fc4d12bc8f25e8fb7ebed1b9859a8"
+    },
+    {
+      "alpha_r": 16.053494190271188,
+      "alpha_i": 0.0,
+      "beta_r": -14.508035259277243,
+      "f_kHz": -65.85711079390482,
+      "omega_r": -7.998723733417436,
+      "right_residual": 1.7411091844094892e-14,
+      "coefficient_scaled_residual": 4.681671069191864e-19,
+      "scaled_F": [
+        5.502049568087007e-16,
+        1.936567593080106e-15,
+        3.3594888703493446e-15
+      ],
+      "raw_MAC": 0.9847244896246823,
+      "iterations": 5,
+      "station": 49,
+      "xi": 49.0,
+      "x_mm": 1.0533801858324712,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0049.npy",
+      "vector_sha256": "ec4bac8c48b97d7637a7056edbcced263d4b9fd6b58e04827e82570954de2bc6"
+    },
+    {
+      "alpha_r": 15.725563597394157,
+      "alpha_i": 0.0,
+      "beta_r": -14.372827022759454,
+      "f_kHz": -65.51715636610832,
+      "omega_r": -7.957434318848283,
+      "right_residual": 1.8548363414158304e-14,
+      "coefficient_scaled_residual": 5.011792761698613e-19,
+      "scaled_F": [
+        -7.107431169751765e-16,
+        -2.0417834629970648e-15,
+        -2.4500617516653136e-16
+      ],
+      "raw_MAC": 0.9853647782087833,
+      "iterations": 5,
+      "station": 50,
+      "xi": 50.0,
+      "x_mm": 2.200383337717405,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0050.npy",
+      "vector_sha256": "0c59c0d9b1ab4b15130a844c4604f530e94c378b49415fe501942058d45a8bd3"
+    },
+    {
+      "alpha_r": 15.426541658708334,
+      "alpha_i": 0.0,
+      "beta_r": -14.274945480310834,
+      "f_kHz": -65.4141261873574,
+      "omega_r": -7.94492071285952,
+      "right_residual": 1.655882733294185e-14,
+      "coefficient_scaled_residual": 4.495817171983451e-19,
+      "scaled_F": [
+        -1.0466211310603628e-15,
+        -2.454633592631105e-15,
+        1.2154015027061117e-15
+      ],
+      "raw_MAC": 0.9860298155863708,
+      "iterations": 5,
+      "station": 51,
+      "xi": 51.0,
+      "x_mm": 3.348720732565598,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0051.npy",
+      "vector_sha256": "aee5c5884e652edbc075283b46bd6f6d561faffe2aa0e207f2722a77b96de910"
+    },
+    {
+      "alpha_r": 15.149329786245467,
+      "alpha_i": 0.0,
+      "beta_r": -14.206492125838901,
+      "f_kHz": -65.50009872992844,
+      "omega_r": -7.955362571125018,
+      "right_residual": 1.6731175340716293e-14,
+      "coefficient_scaled_residual": 4.564220468268369e-19,
+      "scaled_F": [
+        1.6589110639993356e-16,
+        9.076902805780773e-15,
+        2.3886060861068203e-16
+      ],
+      "raw_MAC": 0.9867357297231057,
+      "iterations": 5,
+      "station": 52,
+      "xi": 52.0,
+      "x_mm": 4.498071846867571,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0052.npy",
+      "vector_sha256": "712d0e62ba16e204cd551ca9a7252a868e9d34c3af2fae5a51cd2edff4dfaee7"
+    },
+    {
+      "alpha_r": 14.901548034415843,
+      "alpha_i": 0.0,
+      "beta_r": -14.176930348379607,
+      "f_kHz": -65.83151100527266,
+      "omega_r": -7.995614492297775,
+      "right_residual": 1.6004830150611968e-14,
+      "coefficient_scaled_residual": 4.386361571527792e-19,
+      "scaled_F": [
+        6.387528744439552e-16,
+        1.3963480697076457e-14,
+        -1.5084499089172185e-15
+      ],
+      "raw_MAC": 0.9872996019327527,
+      "iterations": 5,
+      "station": 53,
+      "xi": 53.0,
+      "x_mm": 5.648170127094973,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0053.npy",
+      "vector_sha256": "01cf04ca06aed1d792739e90f00dbdf595c8b94c201ff635254279ec683efd0a"
+    },
+    {
+      "alpha_r": 14.69630649116809,
+      "alpha_i": 0.0,
+      "beta_r": -14.201197423132015,
+      "f_kHz": -66.49028314887614,
+      "omega_r": -8.075626146566142,
+      "right_residual": 1.6527187429948487e-14,
+      "coefficient_scaled_residual": 4.549906745056932e-19,
+      "scaled_F": [
+        1.654795183257122e-14,
+        -3.5885830260963197e-13,
+        1.0793008706040619e-14
+      ],
+      "raw_MAC": 0.9877080519888893,
+      "iterations": 4,
+      "station": 54,
+      "xi": 54.0,
+      "x_mm": 6.798799005730962,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0054.npy",
+      "vector_sha256": "589df322ad1d5f6847ab0eddc9eafb14e49496a74950a7dfed4ffac51e65c989"
+    },
+    {
+      "alpha_r": 14.518751894063321,
+      "alpha_i": 0.0,
+      "beta_r": -14.265060355195828,
+      "f_kHz": -67.40389450560164,
+      "omega_r": -8.186589484527154,
+      "right_residual": 1.77150259011958e-14,
+      "coefficient_scaled_residual": 4.898111289647301e-19,
+      "scaled_F": [
+        5.87308432508285e-16,
+        -6.401933129966646e-14,
+        2.4198198725498307e-15
+      ],
+      "raw_MAC": 0.9880471275556999,
+      "iterations": 4,
+      "station": 55,
+      "xi": 55.0,
+      "x_mm": 7.949787352518652,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0055.npy",
+      "vector_sha256": "1f3b01d4d0ecec1a8b352a4522880e0628750adb67406b4a8f7e26501873a159"
+    },
+    {
+      "alpha_r": 14.359079261131134,
+      "alpha_i": 0.0,
+      "beta_r": -14.355193489360857,
+      "f_kHz": -68.49509462132876,
+      "omega_r": -8.319121995570475,
+      "right_residual": 1.527220979694081e-14,
+      "coefficient_scaled_residual": 4.2403801157223704e-19,
+      "scaled_F": [
+        1.3384423051589812e-15,
+        -4.009151511266901e-14,
+        -2.894931877475302e-15
+      ],
+      "raw_MAC": 0.9882983782652807,
+      "iterations": 4,
+      "station": 56,
+      "xi": 56.0,
+      "x_mm": 9.10100496544161,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0056.npy",
+      "vector_sha256": "fecca3a6a2ed68080f8febf150a2a326e0c3d84b1a779e0d154732e1655fd6ed"
+    },
+    {
+      "alpha_r": 14.22458935788213,
+      "alpha_i": 0.0,
+      "beta_r": -14.48753084930744,
+      "f_kHz": -69.86997048154726,
+      "omega_r": -8.486108552391158,
+      "right_residual": 1.6939025554344177e-14,
+      "coefficient_scaled_residual": 4.722202346155776e-19,
+      "scaled_F": [
+        -5.58680008727063e-15,
+        -1.9631446786786595e-14,
+        -1.8460232276490188e-15
+      ],
+      "raw_MAC": 0.988585685047526,
+      "iterations": 4,
+      "station": 57,
+      "xi": 57.0,
+      "x_mm": 10.252357410049624,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0057.npy",
+      "vector_sha256": "793aa522d60750f66c52a827b6aee24d9a17f65916c0cf98a46c93dcc6372b95"
+    },
+    {
+      "alpha_r": 14.066027611954699,
+      "alpha_i": 0.0,
+      "beta_r": -14.574952791836637,
+      "f_kHz": -70.98749108016273,
+      "omega_r": -8.621837837004046,
+      "right_residual": 1.5552466345923094e-14,
+      "coefficient_scaled_residual": 4.352643111039758e-19,
+      "scaled_F": [
+        3.8268515279036416e-15,
+        -1.5420345738781674e-13,
+        -5.428546771758046e-15
+      ],
+      "raw_MAC": 0.9883630186272757,
+      "iterations": 4,
+      "station": 58,
+      "xi": 58.0,
+      "x_mm": 11.403780202410541,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0058.npy",
+      "vector_sha256": "d2dd008aabf078784eba1918783c2aaeff729ef8ddcdf304755cc09b92df9de2"
+    },
+    {
+      "alpha_r": 14.008426318243368,
+      "alpha_i": 0.0,
+      "beta_r": -14.834904356848817,
+      "f_kHz": -73.16821074817695,
+      "omega_r": -8.886698745024473,
+      "right_residual": 1.552177954466056e-14,
+      "coefficient_scaled_residual": 4.360050682323947e-19,
+      "scaled_F": [
+        9.53871945402872e-16,
+        1.061934189558427e-14,
+        1.2403023556032002e-15
+      ],
+      "raw_MAC": 0.9896065431988095,
+      "iterations": 5,
+      "station": 59,
+      "xi": 59.0,
+      "x_mm": 12.555233900912205,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0059.npy",
+      "vector_sha256": "0964621f4efb92576dd08743c7a11866b7037dbcc0425d10b191093b2c8892b5"
+    },
+    {
+      "alpha_r": 13.85122011409644,
+      "alpha_i": 0.0,
+      "beta_r": -14.887407148535301,
+      "f_kHz": -74.04998395469107,
+      "omega_r": -8.993795157080998,
+      "right_residual": 1.5738534261978267e-14,
+      "coefficient_scaled_residual": 4.436985696355094e-19,
+      "scaled_F": [
+        2.7126814906961006e-15,
+        -6.855530897092009e-14,
+        1.2039363132020572e-14
+      ],
+      "raw_MAC": 0.9910214071309613,
+      "iterations": 4,
+      "station": 60,
+      "xi": 60.0,
+      "x_mm": 13.706697579286699,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0060.npy",
+      "vector_sha256": "e122bcde6c86adcae6d2a8476be2dd9547ed04d34ce52e81459fad7e07c6fa05"
+    },
+    {
+      "alpha_r": 13.731482193118858,
+      "alpha_i": 0.0,
+      "beta_r": -15.084309577225177,
+      "f_kHz": -75.96078552864127,
+      "omega_r": -9.225872964855421,
+      "right_residual": 6.593629099230972e-14,
+      "coefficient_scaled_residual": 1.8652348450449878e-18,
+      "scaled_F": [
+        -6.737170662150275e-13,
+        1.7818006064058324e-12,
+        7.797423926127377e-13
+      ],
+      "raw_MAC": 0.9879118569274,
+      "iterations": 4,
+      "station": 61,
+      "xi": 61.0,
+      "x_mm": 14.858162999999998,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0061.npy",
+      "vector_sha256": "53906552801e67794ac894e051f6f3989b80964cce006b2c0b2c53d40f703f32"
+    },
+    {
+      "alpha_r": 13.621189213704149,
+      "alpha_i": 0.0,
+      "beta_r": -15.2301483540285,
+      "f_kHz": -77.45163506604749,
+      "omega_r": -9.406945189768592,
+      "right_residual": 1.8408472726487145e-14,
+      "coefficient_scaled_residual": 5.363396473702823e-19,
+      "scaled_F": [
+        -1.276693469782305e-13,
+        -3.615290563833059e-13,
+        1.015530280558543e-13
+      ],
+      "raw_MAC": 0.9982286493148432,
+      "iterations": 4,
+      "station": 62,
+      "xi": 62.0,
+      "x_mm": 16.010162999999977,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0062.npy",
+      "vector_sha256": "0fbea6a99df1d05720a5adc98f500effec5a6727ce27d4f99e02c5bb944d80dc"
+    },
+    {
+      "alpha_r": 13.499333139891956,
+      "alpha_i": 0.0,
+      "beta_r": -15.366631404933777,
+      "f_kHz": -78.91546166872665,
+      "omega_r": -9.584735324308495,
+      "right_residual": 2.2384437316414278e-14,
+      "coefficient_scaled_residual": 6.715268148764928e-19,
+      "scaled_F": [
+        -1.691351397743193e-13,
+        -1.4307171760981915e-12,
+        7.914536733509031e-14
+      ],
+      "raw_MAC": 0.9984930261875539,
+      "iterations": 4,
+      "station": 63,
+      "xi": 63.0,
+      "x_mm": 17.162580157908646,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0063.npy",
+      "vector_sha256": "a7ab62bf0ffae7af070374d78008d4f3401df8d6a6e8c8bafc4bbc1c42f524d4"
+    },
+    {
+      "alpha_r": 13.373936611250057,
+      "alpha_i": 0.0,
+      "beta_r": -15.494329916004734,
+      "f_kHz": -80.32923292604079,
+      "omega_r": -9.756445950134319,
+      "right_residual": 1.5224715953236812e-14,
+      "coefficient_scaled_residual": 4.701152547943499e-19,
+      "scaled_F": [
+        -8.768583487636039e-16,
+        -1.3811043271473497e-16,
+        -2.8820713356625852e-15
+      ],
+      "raw_MAC": 0.9987104173045848,
+      "iterations": 5,
+      "station": 64,
+      "xi": 64.0,
+      "x_mm": 18.315831782694374,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0064.npy",
+      "vector_sha256": "6100e0dd329d8c8d67d06f3f9fa2515b00beadb947507d7de273b0492420f2ac"
+    },
+    {
+      "alpha_r": 13.24354889875539,
+      "alpha_i": 0.0,
+      "beta_r": -15.610602698370108,
+      "f_kHz": -81.67274537745128,
+      "omega_r": -9.919623241116138,
+      "right_residual": 5.297031777613235e-14,
+      "coefficient_scaled_residual": 1.682988517385721e-18,
+      "scaled_F": [
+        -5.600373461842677e-13,
+        -9.991648037018519e-13,
+        3.909169433584512e-13
+      ],
+      "raw_MAC": 0.9988849789382577,
+      "iterations": 4,
+      "station": 65,
+      "xi": 65.0,
+      "x_mm": 19.47033548549958,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0065.npy",
+      "vector_sha256": "c5ab930cb7dc288be84546f22a690e34b003f8db865ce9a45b6b702a26bc0de4"
+    },
+    {
+      "alpha_r": 13.106752102355095,
+      "alpha_i": 0.0,
+      "beta_r": -15.715372710410016,
+      "f_kHz": -82.94590123906698,
+      "omega_r": -10.074255320839677,
+      "right_residual": 1.1754865566876602e-13,
+      "coefficient_scaled_residual": 3.8416433861777344e-18,
+      "scaled_F": [
+        -1.2979210694324858e-12,
+        1.792805354008215e-12,
+        1.1446935614881896e-12
+      ],
+      "raw_MAC": 0.9990340666754253,
+      "iterations": 4,
+      "station": 66,
+      "xi": 66.0,
+      "x_mm": 20.626509330864266,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0066.npy",
+      "vector_sha256": "2990d7ef7e3b64478858ff3974040638eb7a5c92360e6db22173b7a3dac892f9"
+    },
+    {
+      "alpha_r": 12.96144334667028,
+      "alpha_i": 0.0,
+      "beta_r": -15.809824948692889,
+      "f_kHz": -84.16188754184806,
+      "omega_r": -10.22194382983005,
+      "right_residual": 1.3868404452591782e-14,
+      "coefficient_scaled_residual": 4.66055283685758e-19,
+      "scaled_F": [
+        4.888400716165267e-16,
+        -1.2081406361504945e-14,
+        3.637591708214587e-15
+      ],
+      "raw_MAC": 0.9991539138561011,
+      "iterations": 5,
+      "station": 67,
+      "xi": 67.0,
+      "x_mm": 21.78477198811434,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0067.npy",
+      "vector_sha256": "21b737f5509d3f95d403af4bf5d982e24d55e47c921beae60986aeaa28f6fcc7"
+    },
+    {
+      "alpha_r": 12.803370181218678,
+      "alpha_i": 0.0,
+      "beta_r": -15.892681301160733,
+      "f_kHz": -85.3207735555181,
+      "omega_r": -10.36269718129238,
+      "right_residual": 1.3604188406223968e-14,
+      "coefficient_scaled_residual": 4.699586897568416e-19,
+      "scaled_F": [
+        -2.598488546843305e-16,
+        -2.0459457122618282e-14,
+        2.162091405538527e-15
+      ],
+      "raw_MAC": 0.9992478912618977,
+      "iterations": 5,
+      "station": 68,
+      "xi": 68.0,
+      "x_mm": 22.945542882968503,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0068.npy",
+      "vector_sha256": "f530d9eb50e7bea704c7c445dbad8914c83d27a03d1eee1d808faeaf094c20e3"
+    },
+    {
+      "alpha_r": 12.626708742614174,
+      "alpha_i": 0.0,
+      "beta_r": -15.961869202450693,
+      "f_kHz": -86.42071286706415,
+      "omega_r": -10.496291117778833,
+      "right_residual": 1.5015472487826787e-14,
+      "coefficient_scaled_residual": 5.3305423712750735e-19,
+      "scaled_F": [
+        -5.467345700000463e-17,
+        4.6828356772263345e-15,
+        2.5149182232764484e-15
+      ],
+      "raw_MAC": 0.9993138300378688,
+      "iterations": 5,
+      "station": 69,
+      "xi": 69.0,
+      "x_mm": 24.109242349418594,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0069.npy",
+      "vector_sha256": "ca49b11c0273b93b377c603ffefea3d39f8815d6b915a44a392905fefe95e7fe"
+    },
+    {
+      "alpha_r": 12.422784280038508,
+      "alpha_i": 0.0,
+      "beta_r": -16.016200463195407,
+      "f_kHz": -87.47443408846338,
+      "omega_r": -10.624271602200443,
+      "right_residual": 1.3639263370190331e-14,
+      "coefficient_scaled_residual": 4.974437600824386e-19,
+      "scaled_F": [
+        -8.818849111408319e-16,
+        3.639385979266587e-15,
+        -1.6964840858625135e-15
+      ],
+      "raw_MAC": 0.9993365040599451,
+      "iterations": 5,
+      "station": 70,
+      "xi": 70.0,
+      "x_mm": 25.27629178194053,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0070.npy",
+      "vector_sha256": "737a840928da910c050e29cef3fc4e5f68d925e3a92ba25dc14980289e0c03f4"
+    },
+    {
+      "alpha_r": 12.173588195442253,
+      "alpha_i": 0.0,
+      "beta_r": -16.051484901107102,
+      "f_kHz": -88.49525027744713,
+      "omega_r": -10.748255581756327,
+      "right_residual": 1.49294129696539e-14,
+      "coefficient_scaled_residual": 5.592434378484691e-19,
+      "scaled_F": [
+        -4.032801934184396e-16,
+        7.369096786127439e-15,
+        -6.700413734783575e-15
+      ],
+      "raw_MAC": 0.9992791406639249,
+      "iterations": 5,
+      "station": 71,
+      "xi": 71.0,
+      "x_mm": 26.447113788086913,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0071.npy",
+      "vector_sha256": "97c034e4c2a6aadc226e77e622a51e56184e8d747c5d154b69cb37a7d7076caa"
+    },
+    {
+      "alpha_r": 11.833516704207936,
+      "alpha_i": 0.0,
+      "beta_r": -16.054177479767326,
+      "f_kHz": -89.49476634437575,
+      "omega_r": -10.869652539352801,
+      "right_residual": 1.5991707914621655e-14,
+      "coefficient_scaled_residual": 6.151221734934743e-19,
+      "scaled_F": [
+        -8.072445349117035e-16,
+        -2.382592043609678e-15,
+        1.6172086514855639e-15
+      ],
+      "raw_MAC": 0.9989917232321114,
+      "iterations": 5,
+      "station": 72,
+      "xi": 72.0,
+      "x_mm": 27.622132341520082,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0072.npy",
+      "vector_sha256": "e7a287b10db978067136da59c196766bc012aa1f5d00cecd2cddf2ae422c5149"
+    },
+    {
+      "alpha_r": 11.188061550862985,
+      "alpha_i": 0.0,
+      "beta_r": -15.95909880528511,
+      "f_kHz": -90.52149391773507,
+      "omega_r": -10.99435449043723,
+      "right_residual": 1.6629331455181995e-14,
+      "coefficient_scaled_residual": 6.568001720525313e-19,
+      "scaled_F": [
+        -6.758739302192701e-16,
+        2.1099791152353094e-14,
+        9.802966390933848e-16
+      ],
+      "raw_MAC": 0.9969977804788921,
+      "iterations": 6,
+      "station": 73,
+      "xi": 73.0,
+      "x_mm": 28.801772935541283,
+      "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0073.npy",
+      "vector_sha256": "55cc048d9d76472d2d0dffc1e9677669728c9c1a85fc32273775f44e4711c3b2"
+    }
+  ],
+  "failures": [
+    {
+      "from_station": 8,
+      "to_station": 7,
+      "reason": "AssertionError()"
+    },
+    {
+      "from_station": 7,
+      "to_station": 6,
+      "reason": "AssertionError()"
+    },
+    {
+      "from_station": 6,
+      "to_station": 5,
+      "reason": "AssertionError()"
+    },
+    {
+      "from_station": 2,
+      "to_station": 1,
+      "reason": "AssertionError()"
+    },
+    {
+      "from_station": 2,
+      "to_station": 1,
+      "subdivisions": 4,
+      "reason": "AssertionError()"
+    },
+    {
+      "from_station": 2,
+      "to_station": 1,
+      "subdivisions": 16,
+      "reason": "AssertionError(('Fold not solved', '`xtol` termination condition is satisfied.', {'z': [0.9092162605905412, -0.930443391432896, -0.5616666630970475], 'scaled_F': [0.00015039704461431471, -0.000152604271105889, 2.00421419568854e-12], 'residual': 5.7682720087845215e-06, 'MAC': 0.999864256609624}))"
+    },
+    {
+      "from_station": 73,
+      "to_station": 74,
+      "reason": "AssertionError(('Fold not solved', 'The maximum number of function evaluations is exceeded.', {'z': [0.5602107648839092, -1.607057333136635, -0.9146165128318247], 'scaled_F': [-1.517407413540214e-05, -0.0013963591803847091, 0.00361051600866865], 'residual': 3.025686601450478e-06, 'MAC': 0.9997477993574906}))"
+    },
+    {
+      "from_station": 73,
+      "to_station": 74,
+      "subdivisions": 4,
+      "reason": "AssertionError(('Fold not solved', '`xtol` termination condition is satisfied.', {'z': [0.5241148102426644, -1.5790620684808565, -0.9108875336547819], 'scaled_F': [7.421343466748393e-05, -0.00048360338148399997, 0.0009695467613411558], 'residual': 6.288705862907209e-06, 'MAC': 0.9991973710538721}))"
+    },
+    {
+      "from_station": 73,
+      "to_station": 74,
+      "subdivisions": 16,
+      "reason": "AssertionError(('Fold not solved', '`xtol` termination condition is satisfied.', {'z': [0.5152880022485413, -1.5715576231021255, -0.909576228214606], 'scaled_F': [2.802365517369785e-05, -0.00013258695289726605, 0.00026853856777730474], 'residual': 2.3674417794363207e-06, 'MAC': 0.9996623933291768}))"
+    }
+  ],
+  "directions": [
+    {
+      "direction": -1,
+      "last_station": 2,
+      "complete": false
+    },
+    {
+      "direction": 1,
+      "last_station": 73,
+      "complete": false
+    }
+  ],
+  "status": "partial_with_recorded_failures",
+  "native_extreme": {
+    "alpha_r": 34.365593392311354,
+    "alpha_i": 0.0,
+    "beta_r": -22.53846251314075,
+    "f_kHz": -115.96441956750925,
+    "omega_r": -14.084543701429146,
+    "right_residual": 1.66790832678764e-14,
+    "coefficient_scaled_residual": 3.4463818223381017e-19,
+    "scaled_F": [
+      -3.457002298415623e-15,
+      -7.603004949756962e-15,
+      1.982590755620612e-15
+    ],
+    "raw_MAC": 0.9959736366476029,
+    "iterations": 5,
+    "station": 19,
+    "xi": 19.0,
+    "x_mm": -28.794523976877734,
+    "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/work/rough_negative_fold_vectors/i0019.npy",
+    "vector_sha256": "cec4d12a82347d0166e0715ab0ab05e4dba09741822799f4d79819d151678df4"
+  },
+  "station_count": 72
+}

@@ -1,0 +1,20 @@
+{
+  "case": "rough",
+  "f_kHz": -112.0,
+  "stages": [
+    {
+      "script": "contour3d.py",
+      "exit": 0,
+      "status": "closed_verified",
+      "records": 88,
+      "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_f-112.0kHz_S_v3_guide.log"
+    },
+    {
+      "script": "finalize.py",
+      "exit": 0,
+      "status": "closed_verified",
+      "records": 79,
+      "log": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/rough_f-112.0kHz_S_final.log"
+    }
+  ]
+}

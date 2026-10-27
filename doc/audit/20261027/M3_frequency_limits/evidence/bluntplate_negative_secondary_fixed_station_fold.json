@@ -1,0 +1,53 @@
+{
+  "case": "bluntplate",
+  "station": 360,
+  "x_mm": 38.35859777989282,
+  "alpha_r": 6.130312011024735,
+  "alpha_i": 0.0,
+  "beta_r": -18.929285756255766,
+  "f_kHz": -123.05183685503344,
+  "omega_r": -14.945351170553643,
+  "status": "solved",
+  "scaled_F": [
+    -6.930856316737074e-16,
+    1.4839366656821075e-16,
+    7.932340923731474e-16
+  ],
+  "right_residual": 9.972705664344427e-15,
+  "scaled_residual": 5.890010016897011e-19,
+  "MAC": 1.0,
+  "trace": [
+    {
+      "alpha_r": 6.130312010912961,
+      "beta_r": -18.929285756541663,
+      "f_kHz": -123.05183685746837,
+      "scaled_F": [
+        2.3553787674997587e-16,
+        2.4349187339717363e-11,
+        3.590544309324946e-13
+      ],
+      "right_residual": 1.0863042025621653e-13,
+      "MAC": 1.0000000000000009
+    },
+    {
+      "alpha_r": 6.130312011024735,
+      "beta_r": -18.929285756255766,
+      "f_kHz": -123.05183685503344,
+      "scaled_F": [
+        -6.930856316737074e-16,
+        1.4839366656821075e-16,
+        7.932340923731474e-16
+      ],
+      "right_residual": 9.972705664344427e-15,
+      "MAC": 1.0
+    }
+  ],
+  "message": "`gtol` termination condition is satisfied.",
+  "derivative_check": [
+    3.706993239326107e-12,
+    1.515430642554477e-11,
+    3.907564487922454e-11
+  ],
+  "vector_file": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/neutral_m3_frequency_limits_20261027/outputs/bluntplate_negative_secondary_fixed_station_fold.npy",
+  "vector_sha256": "7c3787e48a6f4b104bce270a1f3e8cbf85289fd96c36f6d99a6122aa87c52497"
+}

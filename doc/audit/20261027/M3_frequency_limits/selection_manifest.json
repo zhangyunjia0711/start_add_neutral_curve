@@ -1,0 +1,161 @@
+{
+  "curves": [
+    {
+      "case": "bluntplate",
+      "f_kHz": 200.0,
+      "region": "positive",
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f+200kHz.csv",
+      "sha256": "228dd5f85e83023ef08c6f837fc1d4422f43f2602251c053a119b591ee1ce108",
+      "prior": true
+    },
+    {
+      "case": "bluntplate",
+      "f_kHz": -112.0,
+      "region": "nose",
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_xbeta_extended_frequencies_20261027/bluntplate_f-112kHz.csv",
+      "sha256": "67b1f8041a61f6054cef6e90248f3d0a777ab794da87994210e6f004f59a322e",
+      "prior": true
+    },
+    {
+      "case": "bluntplate",
+      "f_kHz": 250.0,
+      "region": "positive",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f250kHz_neutral.json",
+      "sha256": "d726bd011574d8a5a317d4db934e0d72e2d9eff625155f915a02433cfae8d3b1",
+      "prior": false
+    },
+    {
+      "case": "bluntplate",
+      "f_kHz": 275.0,
+      "region": "positive",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f275kHz_neutral.json",
+      "sha256": "74d05364acda21965caed1b8663865a2ccd51197abae3ad048343a15e1f6f11c",
+      "prior": false
+    },
+    {
+      "case": "bluntplate",
+      "f_kHz": 290.0,
+      "region": "positive",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f290kHz_neutral.json",
+      "sha256": "6bb39c1b7b96e6a23712e555eae3249326b3d2e9923d4b555cdff401ccd0b1ec",
+      "prior": false
+    },
+    {
+      "case": "bluntplate",
+      "f_kHz": 291.6,
+      "region": "positive",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f291.6kHz_neutral.json",
+      "sha256": "7caa4def2a8aed96ef0004dfbec7c43affbf4e4d5c604300d5e02927a2296e9c",
+      "prior": false
+    },
+    {
+      "case": "bluntplate",
+      "f_kHz": -112.0,
+      "region": "downstream",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f-112.0kHz_S_final.json",
+      "sha256": "c0f8762329f7d1ab89105fe521c72c9bbf1104771c77a8a5c5300a217ebd9596",
+      "prior": false
+    },
+    {
+      "case": "bluntplate",
+      "f_kHz": -150.0,
+      "region": "downstream",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f-150.0kHz_S_final.json",
+      "sha256": "a2c82caeedf0cb2d2080ca95db3ca9b03e2f09fc061a0afe68b461c1bd86fd21",
+      "prior": false
+    },
+    {
+      "case": "bluntplate",
+      "f_kHz": -200.0,
+      "region": "downstream",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/bluntplate_f-200.0kHz_S_final.json",
+      "sha256": "050b069f4d82a5469b43b15971521b49c78ff70d3676d1857757fab9db9d6a43",
+      "prior": false
+    },
+    {
+      "case": "bluntplate",
+      "f_kHz": -240.2,
+      "region": "downstream",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/bluntplate_secondary_f-240.2kHz_neutral.json",
+      "sha256": "c9b3ae564dd039cce4cbc35bad106d3b135b68046004a6fbe72e4787be7f9bdc",
+      "prior": false
+    },
+    {
+      "case": "rough",
+      "f_kHz": 200.0,
+      "region": "positive",
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_xbeta_extended_frequencies_20261027/rough_f+200kHz.csv",
+      "sha256": "1958791f07b23ecbaf46965f5077ba30a262cf35e29d6aa7cde1aa96dd26a0a2",
+      "prior": true
+    },
+    {
+      "case": "rough",
+      "f_kHz": -112.0,
+      "region": "nose",
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_xbeta_extended_frequencies_20261027/rough_f-112kHz.csv",
+      "sha256": "fd03e4ce6c1ea1348b65f0c07f80e667872ac330c8744ef35b90844674d80ea7",
+      "prior": true
+    },
+    {
+      "case": "rough",
+      "f_kHz": 230.0,
+      "region": "positive",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/rough_f230kHz_neutral.json",
+      "sha256": "654c37cae32db0f0a017499f51ecdc21f35d094559cb133e675b3eee1fa994d3",
+      "prior": false
+    },
+    {
+      "case": "rough",
+      "f_kHz": 250.0,
+      "region": "positive",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/rough_f250kHz_neutral.json",
+      "sha256": "ced50e488e44f702a31ac4a543f5fd17da6806d9302e025bc7708799348ea1a2",
+      "prior": false
+    },
+    {
+      "case": "rough",
+      "f_kHz": 264.53,
+      "region": "positive",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/rough_f264.53kHz_neutral.json",
+      "sha256": "5a3543f0c38a3d5564d83ab104999ab8f6472baff3b18d534b2b61f03d9bb2e7",
+      "prior": false
+    },
+    {
+      "case": "rough",
+      "f_kHz": -112.0,
+      "region": "downstream",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/rough_f-112.0kHz_S_final.json",
+      "sha256": "f421ff7964ab47cab307449eed91cee74ff2fb60d0e0a16019b4668b8a841d2a",
+      "prior": false
+    },
+    {
+      "case": "rough",
+      "f_kHz": -150.0,
+      "region": "downstream",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/rough_f-150.0kHz_S_final.json",
+      "sha256": "739e0aabc376e05416bf5e14e57b3b434e329cdd0b82bd29ad5614ba20a6a97f",
+      "prior": false
+    },
+    {
+      "case": "rough",
+      "f_kHz": -200.0,
+      "region": "downstream",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/rough_f-200.0kHz_S_final.json",
+      "sha256": "d11dbb420b722fc9886c4b63de8418d33136919a3183f1839070ea40c7a68ad1",
+      "prior": false
+    },
+    {
+      "case": "rough",
+      "f_kHz": -237.14,
+      "region": "downstream",
+      "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/rough_secondary_f-237.14kHz_neutral.json",
+      "sha256": "3b4f5400499c6debc428258a3be66d144f274479c585d922a076e7219e7eb98b",
+      "prior": false
+    }
+  ],
+  "curve_count": 19,
+  "critical_points": 4,
+  "points": 1815,
+  "model": "Unchanged zero-explicit-curvature local-wall LST",
+  "no_added_conjugate": true
+}
