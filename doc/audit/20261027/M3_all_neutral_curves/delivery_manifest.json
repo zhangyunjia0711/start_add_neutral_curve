@@ -1,0 +1,403 @@
+{
+  "time": "2026-10-27T20:45:11.196243+08:00",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 133,
+      "sha256": "5ceccdceed977b284ef1017ff1de79cb1649108f4bcf0644cb4ab6a45c2f41b5"
+    },
+    {
+      "path": "M3_all_neutral_curves.dat",
+      "bytes": 2844194,
+      "sha256": "9b55c43be0764a65c56a044c123fafa6160addc104792e78e5d39bd17cb2ef9b"
+    },
+    {
+      "path": "M3_all_neutral_curves.lay",
+      "bytes": 20698,
+      "sha256": "8f64f960294fd3c7831416137a0a4e756594a5e38b2424ded676ddad735087f0"
+    },
+    {
+      "path": "M3_all_neutral_curves.plt",
+      "bytes": 1562508,
+      "sha256": "b9b6f1e5e933bbbdef7a57e0f674e9a164e0004a3610e108209178455bfe88fb"
+    },
+    {
+      "path": "M3_all_neutral_curves_both_geometries_overlay.png",
+      "bytes": 673932,
+      "sha256": "3811563fbf88a60dbb34d6840ea2c47abc0af0cb09c747c747b482ad05f6a8ba"
+    },
+    {
+      "path": "M3_all_neutral_curves_both_geometries_overlay.svg",
+      "bytes": 209734,
+      "sha256": "d691506b55df03f0fd6c05ff7ffb635046f441ea2f8cec783ed6a21aa934d196"
+    },
+    {
+      "path": "M3_all_neutral_curves_comparison.png",
+      "bytes": 813641,
+      "sha256": "2b535ca585c5eaeaa2a0d28aa741da1faf1e513431b314f716eb149b32c87aba"
+    },
+    {
+      "path": "M3_all_neutral_curves_comparison.svg",
+      "bytes": 229903,
+      "sha256": "2c247f6d38635ddb7047cba8a19501e74e705cae5fb0a93e1e247cc4b0e5a5da"
+    },
+    {
+      "path": "M3_all_neutral_curves_preplot.log",
+      "bytes": 788,
+      "sha256": "df49cac75e7f9c4c91956935261b1854d7eed86c90ccda9f9115402ee42cab83"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2891,
+      "sha256": "8ca2f8d251e675fe6a9a0ee12da121da247a9e94936e7108d32ef59c462a6a9d"
+    },
+    {
+      "path": "archive_all.py",
+      "bytes": 5176,
+      "sha256": "c4f3ffb207de64635e65ff137811eab128d2c2b7610a5214139ca489c7d07fe8"
+    },
+    {
+      "path": "batch.log",
+      "bytes": 3863,
+      "sha256": "52b02d50ca3fdae804125e94b99ea8071cb7180a1ab8c4389412a0ca7da1d9a7"
+    },
+    {
+      "path": "bluntplate_M3_all_neutral_curves.dat",
+      "bytes": 2093502,
+      "sha256": "f6a66afef94b0fd0a60beef92351a5ea3f36244582b7f015272a4e9afb0c1228"
+    },
+    {
+      "path": "bluntplate_M3_all_neutral_curves.lay",
+      "bytes": 11260,
+      "sha256": "37754eeeaeaecd83cecb40f50b398b441f41828c02c79c51122a035180b54dae"
+    },
+    {
+      "path": "bluntplate_M3_all_neutral_curves.plt",
+      "bytes": 1146040,
+      "sha256": "34463a69d442f6f0b49a4a98cb6df9fd2b2c24d36a3abcf37a8ada5988dba88e"
+    },
+    {
+      "path": "bluntplate_M3_all_neutral_curves_preplot.log",
+      "bytes": 444,
+      "sha256": "c46079ffa037c77dda41d2b0c284cbfa241a84e3f58eec515f622bca8d7d7702"
+    },
+    {
+      "path": "cleanup_receipt.json",
+      "bytes": 1381,
+      "sha256": "4f7fb54aa1774826478676b0d2243899bbaf406894b38cfdc745fe59ae6202e2"
+    },
+    {
+      "path": "curves/bluntplate_downstream_f-112kHz.csv",
+      "bytes": 46621,
+      "sha256": "20e8a69a5d5806013ed977a0105c05048e420fa4c45848344ca75cdda844d82b"
+    },
+    {
+      "path": "curves/bluntplate_downstream_f-150kHz.csv",
+      "bytes": 28740,
+      "sha256": "e29cdcb2259dcf4f43ed4803d0f0d6fd62120b47ec8144344abe71d3a588dfb3"
+    },
+    {
+      "path": "curves/bluntplate_downstream_f-200kHz.csv",
+      "bytes": 11141,
+      "sha256": "95919d78afc3184b806579338c6d1d3960641dc8dec66177c9819abbb27204c2"
+    },
+    {
+      "path": "curves/bluntplate_downstream_f-240.2kHz.csv",
+      "bytes": 12658,
+      "sha256": "afc34a48f7f6a2f8c5e81d13cc73c457eed8e4ebde91cf05d9abeae7c980c7a7"
+    },
+    {
+      "path": "curves/bluntplate_nose_f-112kHz.csv",
+      "bytes": 16872,
+      "sha256": "67b1f8041a61f6054cef6e90248f3d0a777ab794da87994210e6f004f59a322e"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+100kHz.csv",
+      "bytes": 117774,
+      "sha256": "8a3283e8cddf60c26b44d54e3dfcb17b033539f188c750255065d138ab3b37f1"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+125kHz.csv",
+      "bytes": 104474,
+      "sha256": "ac8669d541fd00b6622db6d78e2851f9f619b1f48ca0587dee089c22f018770e"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+150kHz.csv",
+      "bytes": 91673,
+      "sha256": "4069e9f300b94cd6f0803dbb03f58715c78ac3aabcaf3b45525df60f3cdd2bc4"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+175kHz.csv",
+      "bytes": 80464,
+      "sha256": "f69df97c6dc06fa7530a140715013530b5e1eb4c9e6282eeab7e567cb2b0aad4"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+200kHz.csv",
+      "bytes": 67785,
+      "sha256": "228dd5f85e83023ef08c6f837fc1d4422f43f2602251c053a119b591ee1ce108"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+250kHz.csv",
+      "bytes": 42981,
+      "sha256": "04bd4a949398ba5d0de21678185eb26190cd6ec97f62215744a4ff13ccf38e2a"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+25kHz.csv",
+      "bytes": 178856,
+      "sha256": "e4e043297210f8beba6396d49cbc2e0e7ca51cf9abde2bbfc0fbe56ad0189062"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+275kHz.csv",
+      "bytes": 25244,
+      "sha256": "caa70bcf02b2bb2578466474184a2945b7a9a924e0e280b1415766d699a5036d"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+290kHz.csv",
+      "bytes": 7770,
+      "sha256": "ecd6fe0c27caff49d5cc6c12df8bc38452f9e316a4be9181736f382ea085279f"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+291.6kHz.csv",
+      "bytes": 12494,
+      "sha256": "29ed3fe027c541824bd079b5f008253fdb17bb6369533af3a4903c523334f504"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+50kHz.csv",
+      "bytes": 149282,
+      "sha256": "4d96ff4e226de39e0283e87938550842b6d7780b30e73583de38d60beea93b49"
+    },
+    {
+      "path": "curves/bluntplate_positive_f+75kHz.csv",
+      "bytes": 132090,
+      "sha256": "13f41598430806cb0a18462ce3c8854c4fcb79a6291a871bd30e61f8187c6189"
+    },
+    {
+      "path": "curves/bluntplate_stationary_f+0kHz.csv",
+      "bytes": 284064,
+      "sha256": "47d59bf12ab93c71d07b410242e25b1f2f33065df84f77ba00ddf5e3c2363994"
+    },
+    {
+      "path": "curves/bluntplate_tracked_f-100kHz.csv",
+      "bytes": 41851,
+      "sha256": "d25c768880cb003734a36b7a0d59d4a0a54bfaaa51f88b913eeca693d2ffb1e8"
+    },
+    {
+      "path": "curves/bluntplate_tracked_f-110kHz.csv",
+      "bytes": 22756,
+      "sha256": "e10dc4eb0774e98c969da16b4d9f19466110b16c0290cc37fb2df0710b356b47"
+    },
+    {
+      "path": "curves/bluntplate_tracked_f-25kHz.csv",
+      "bytes": 282431,
+      "sha256": "f3ac1d3b904e4c28ced656f8027ae762c3d7d4b6da80828a6c3baec55f1c8452"
+    },
+    {
+      "path": "curves/bluntplate_tracked_f-50kHz.csv",
+      "bytes": 261481,
+      "sha256": "669d1593d29af00411a5a3bb85fb46317fd087d5ebf0e81fef3e2a537d6c3da4"
+    },
+    {
+      "path": "curves/bluntplate_tracked_f-75kHz.csv",
+      "bytes": 72202,
+      "sha256": "35229802cb18f7864609a5006ca9962d9c0d9a069709cc5ebcad9dd93d50333c"
+    },
+    {
+      "path": "curves/rough_downstream_f-112kHz.csv",
+      "bytes": 15562,
+      "sha256": "a681e2c71b631e78f6bd4cce6a4e65c89e1f68ef432ea532dabd5f02f1862342"
+    },
+    {
+      "path": "curves/rough_downstream_f-150kHz.csv",
+      "bytes": 6636,
+      "sha256": "c9ed152041e688feab894dfa188c820bcb93d02f287f6a41cd3517d20676d2d2"
+    },
+    {
+      "path": "curves/rough_downstream_f-200kHz.csv",
+      "bytes": 3520,
+      "sha256": "db6d9fda9ce3b6b7490a0a62c128cb4869ea1cabfd28dc5575fd26fe10bdc414"
+    },
+    {
+      "path": "curves/rough_downstream_f-237.14kHz.csv",
+      "bytes": 12664,
+      "sha256": "ac3573cba1249529ffe1bcc9dba867ee7729ae52c6848384defd847592b91b9a"
+    },
+    {
+      "path": "curves/rough_nose_f-112kHz.csv",
+      "bytes": 5121,
+      "sha256": "fd03e4ce6c1ea1348b65f0c07f80e667872ac330c8744ef35b90844674d80ea7"
+    },
+    {
+      "path": "curves/rough_positive_f+100kHz.csv",
+      "bytes": 35499,
+      "sha256": "85c992c2c7271f48691065b65be177caa2d75be352d201672263029782fd1287"
+    },
+    {
+      "path": "curves/rough_positive_f+125kHz.csv",
+      "bytes": 30042,
+      "sha256": "0abaf6523ffa91ccb40ead9008765bb56511b7d32eca1425cb14ed7fcfe89d4d"
+    },
+    {
+      "path": "curves/rough_positive_f+150kHz.csv",
+      "bytes": 25329,
+      "sha256": "2523be1945dcb12bf8777a60db240491f4ca24f8010fa12183f23b1433f6fc42"
+    },
+    {
+      "path": "curves/rough_positive_f+175kHz.csv",
+      "bytes": 20790,
+      "sha256": "d1aa5bc713db826571d9b3c2360618d0ba5a10fe971a7d684bf149caf9db6e69"
+    },
+    {
+      "path": "curves/rough_positive_f+200kHz.csv",
+      "bytes": 16424,
+      "sha256": "1958791f07b23ecbaf46965f5077ba30a262cf35e29d6aa7cde1aa96dd26a0a2"
+    },
+    {
+      "path": "curves/rough_positive_f+230kHz.csv",
+      "bytes": 11656,
+      "sha256": "63815c849dbcef285a0376a1eef1f5ac6d62e90888b28da3d5f41527051983a1"
+    },
+    {
+      "path": "curves/rough_positive_f+250kHz.csv",
+      "bytes": 7739,
+      "sha256": "1963c74757106de8b56366a201a6485e23752aba429f78cfc91f5f547ae6d85a"
+    },
+    {
+      "path": "curves/rough_positive_f+25kHz.csv",
+      "bytes": 67654,
+      "sha256": "26552304c657acf3b86526b358a7abbb959ddad7db332d76a6fccadabce404b9"
+    },
+    {
+      "path": "curves/rough_positive_f+264.53kHz.csv",
+      "bytes": 12515,
+      "sha256": "688e6be75ea7308fbd7567b34884101a08436f387567338974ded3d62bd1a265"
+    },
+    {
+      "path": "curves/rough_positive_f+50kHz.csv",
+      "bytes": 50483,
+      "sha256": "b39171f5f4cb65c4546303b4125a863faf7221d4f2710f09506cb55e21b0b2d5"
+    },
+    {
+      "path": "curves/rough_positive_f+75kHz.csv",
+      "bytes": 41743,
+      "sha256": "175808602f67aafe46a90e0aab35094a535e754bfaf17af5a2a268be5026217f"
+    },
+    {
+      "path": "curves/rough_stationary_f+0kHz.csv",
+      "bytes": 123823,
+      "sha256": "d77b3351c7ed62ee0909bdb442659937e512470b7f9564beb3f615a11b3d3528"
+    },
+    {
+      "path": "curves/rough_tracked_f-100kHz.csv",
+      "bytes": 9352,
+      "sha256": "1268b1ea2e9371e394a9f0e94881aeffb3dba29ec49662a1be5346e24433b99d"
+    },
+    {
+      "path": "curves/rough_tracked_f-110kHz.csv",
+      "bytes": 5881,
+      "sha256": "523da13045df9fdaf7df75c3abd360086833e591f154eccd497bd0006d7bd719"
+    },
+    {
+      "path": "curves/rough_tracked_f-25kHz.csv",
+      "bytes": 124619,
+      "sha256": "2d99d310da94168f35db67bfe0e6790a1a2e58bea511441003e96a506becdcd4"
+    },
+    {
+      "path": "curves/rough_tracked_f-50kHz.csv",
+      "bytes": 106763,
+      "sha256": "a0d60cd87010f3790a7b8235801e0e58d6b9cbfca35dcbca98c3a5b11da72776"
+    },
+    {
+      "path": "curves/rough_tracked_f-75kHz.csv",
+      "bytes": 15492,
+      "sha256": "63fb215ce7ae8d6e0d4d8f0303b874de0f1ebe22feb851fd30922da6c5fcc97d"
+    },
+    {
+      "path": "frequency_limits.json",
+      "bytes": 2616,
+      "sha256": "0cca180cef2be6199c47483af3b4ca945117dacb15c7feb3f7055ba6951e48f4"
+    },
+    {
+      "path": "native_tecplot.ps1",
+      "bytes": 971,
+      "sha256": "3776f9f5f1497344b5f618c1c5850c85a9bcbdb29278e899fc160ef6cb42efa1"
+    },
+    {
+      "path": "plot_validation.json",
+      "bytes": 3969,
+      "sha256": "f70316d8a5dc336cf13461d65c7017ddb894f05e16719d54b23b57fbb5924446"
+    },
+    {
+      "path": "publish_all.py",
+      "bytes": 16040,
+      "sha256": "e924920e2a85ac29931d8c09cd4fdeefd44aac7fa646d2d4b36e06b8ab38b94b"
+    },
+    {
+      "path": "rough_M3_all_neutral_curves.dat",
+      "bytes": 750919,
+      "sha256": "62ffe6809a943d8b800c40ee75d1209d686594db748d8a8b17200a94569a58f1"
+    },
+    {
+      "path": "rough_M3_all_neutral_curves.lay",
+      "bytes": 11397,
+      "sha256": "569c3c38656a744452b3838775afe7fd2a7fa7db861dce0fea9e5d20e396f015"
+    },
+    {
+      "path": "rough_M3_all_neutral_curves.plt",
+      "bytes": 417224,
+      "sha256": "211b621c27a01f4c952c4b32f88174ea83a1dfe0f44c413d4f9d98a4e8d32a67"
+    },
+    {
+      "path": "rough_M3_all_neutral_curves_preplot.log",
+      "bytes": 406,
+      "sha256": "240714e6455cf7605671f1813e3a42eda624296179f7cf2c7a46e9af6ac780d2"
+    },
+    {
+      "path": "selection_manifest.json",
+      "bytes": 35970,
+      "sha256": "5d531231b8c66fcf7ab13a390609ec718da02e954dc447fe279fe76dddcc4a20"
+    },
+    {
+      "path": "source_manifests/M3_frequency_limits_20261027/delivery_manifest.json",
+      "bytes": 229328,
+      "sha256": "d5dbf2e5f0890e34a84a1ae8612ab74573810ad45e1bc3ed625daba3ca4e5f0f"
+    },
+    {
+      "path": "source_manifests/M3_frequency_limits_20261027/selection_manifest.json",
+      "bytes": 6787,
+      "sha256": "98f8c21f0e2f4c6db07e1c036dfe54736abce55c5045090ebf6ab21c21a61781"
+    },
+    {
+      "path": "source_manifests/M3_xbeta_extended_frequencies_20261027/delivery_manifest.json",
+      "bytes": 216967,
+      "sha256": "bc79e093a4f570fb2d2578e84d58feffe1c5ad39893c258cbb8753b369e559a5"
+    },
+    {
+      "path": "source_manifests/M3_xbeta_extended_frequencies_20261027/selection_manifest.json",
+      "bytes": 16462,
+      "sha256": "315505fed37aa132296e2035872bed242d6fcf412a0d9f38b7d601a7212ee131"
+    },
+    {
+      "path": "source_preservation.json",
+      "bytes": 15082,
+      "sha256": "f524b8cd1f9fe4feca841d7b0d5be7cce9b59c479d920f7a3dcdc22e90d1dc52"
+    },
+    {
+      "path": "tecplot_roundtrip.mcr",
+      "bytes": 17961,
+      "sha256": "2fc8998583cbae54a2872bfa96545a3822768bb5b8696a8a4e083a46aa7c3ed9"
+    },
+    {
+      "path": "tecplot_validation.json",
+      "bytes": 1276,
+      "sha256": "e2550432c02dd9666555cdb98c4e11e30527f73f616d497e05099501c34e2fec"
+    },
+    {
+      "path": "工作日志_2026-10-27_全部M3中性曲线合图.md",
+      "bytes": 3841,
+      "sha256": "2385a34faee06b37983a976af38aca59f1f81a20dc716da28987e6b94f0107dd"
+    }
+  ],
+  "file_count": 79,
+  "total_bytes": 14208315,
+  "git_scope": "doc/audit/20261027/M3_all_neutral_curves/"
+}

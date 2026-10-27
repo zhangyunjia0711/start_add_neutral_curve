@@ -1,0 +1,32 @@
+{
+  "tool": "Tecplot 360 EX 2024 R1 / Preplot",
+  "files": [
+    {
+      "file": "M3_all_neutral_curves.plt",
+      "sha256": "b9b6f1e5e933bbbdef7a57e0f674e9a164e0004a3610e108209178455bfe88fb",
+      "source_sha256": "9b55c43be0764a65c56a044c123fafa6160addc104792e78e5d39bd17cb2ef9b",
+      "roundtrip_sha256": "98f0a995fd1a7e14f59d5abbff182f05564a2460b827d2466aa64672d1f706dd",
+      "zones": 49,
+      "points": 14811,
+      "all_values_exact": true
+    },
+    {
+      "file": "bluntplate_M3_all_neutral_curves.plt",
+      "sha256": "34463a69d442f6f0b49a4a98cb6df9fd2b2c24d36a3abcf37a8ada5988dba88e",
+      "source_sha256": "f6a66afef94b0fd0a60beef92351a5ea3f36244582b7f015272a4e9afb0c1228",
+      "roundtrip_sha256": "e6692ed86fb8dda982e6112d18c522e613cceebd6279d746fa3a918e3bda9dc6",
+      "zones": 25,
+      "points": 10905,
+      "all_values_exact": true
+    },
+    {
+      "file": "rough_M3_all_neutral_curves.plt",
+      "sha256": "211b621c27a01f4c952c4b32f88174ea83a1dfe0f44c413d4f9d98a4e8d32a67",
+      "source_sha256": "62ffe6809a943d8b800c40ee75d1209d686594db748d8a8b17200a94569a58f1",
+      "roundtrip_sha256": "a2387a49e5892d4e05bdf4975371bd9b3e933cb259ea3eed3099764976cb2cb4",
+      "zones": 24,
+      "points": 3906,
+      "all_values_exact": true
+    }
+  ]
+}

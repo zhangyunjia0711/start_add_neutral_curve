@@ -1,0 +1,60 @@
+{
+  "created": "2026-10-27T18:39:58.707572+08:00",
+  "limits": [
+    {
+      "case": "bluntplate",
+      "sign": 1,
+      "f_kHz": 291.6440077774359,
+      "omega_nd": 35.421837043817874,
+      "x_mm": -5.701341568810608,
+      "xi": 216.0,
+      "beta": 21.64070936159974,
+      "alpha_r": 55.402620160598076,
+      "right_residual": 2.180312774506443e-14,
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/bluntplate_positive_refined_limit.json",
+      "sha256": "1e54bcc8a05eb20cc4e3b467cebebc1e4f569223ad978cadcae312f43748c74f"
+    },
+    {
+      "case": "bluntplate",
+      "sign": -1,
+      "f_kHz": -240.23377453859194,
+      "omega_nd": -29.177769428478065,
+      "x_mm": -7.573623513198163,
+      "xi": 207.6743897368083,
+      "beta": -34.33312542783382,
+      "alpha_r": 5.409421478761287,
+      "right_residual": 3.3306742670991767e-13,
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/bluntplate_negative_secondary_refined_limit.json",
+      "sha256": "e5a020e51c9172c50e4da4e1539b82417cc78dd2198817831ac53b76eaadede8"
+    },
+    {
+      "case": "rough",
+      "sign": 1,
+      "f_kHz": 264.53878184040326,
+      "omega_nd": 32.12975193123728,
+      "x_mm": -5.775160529663495,
+      "xi": 43.0,
+      "beta": 18.36234736902397,
+      "alpha_r": 56.691598898100104,
+      "right_residual": 4.605034755796467e-15,
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/rough_positive_refined_limit.json",
+      "sha256": "6cda00e93226407f172c8cd214467551b651da652dbd6707cada136099823582"
+    },
+    {
+      "case": "rough",
+      "sign": -1,
+      "f_kHz": -237.15258456716955,
+      "omega_nd": -28.803541238773377,
+      "x_mm": -5.775160529663495,
+      "xi": 43.0,
+      "beta": -33.38344960430187,
+      "alpha_r": 3.820366960714981,
+      "right_residual": 5.3022491172002005e-14,
+      "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75°/neutral_m3_frequency_limits_20261027/outputs/rough_negative_secondary_refined_limit.json",
+      "sha256": "7c5dbc6befb875d8eb2eeb948b0163e8ef263fc2d8b1ceac42ef99214a52216e"
+    }
+  ],
+  "scope": "Numerical extinction estimates for the tracked M3 representative and resolved connected pockets; no conjugate copy added",
+  "model": "Frozen local wall coordinates, zero explicit curvature; original CFD grids",
+  "interpolation": "Actual reassembled local-profile refinement; not CFD mesh refinement or a grid-convergence uncertainty estimate"
+}
