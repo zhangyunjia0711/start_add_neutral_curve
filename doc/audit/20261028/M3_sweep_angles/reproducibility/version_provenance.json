@@ -1,0 +1,11 @@
+{
+  "created": "2026-10-28T15:33:30.630865+08:00",
+  "base_commit": "b391bde3184540a820e554b153082370e6ef3819",
+  "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893",
+  "local_stage": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028",
+  "dependencies": [
+    "Ubuntu Python 3.8, numpy, scipy, h5py, matplotlib",
+    "PETSc/SLEPc, MPI shared libraries from build_receipt.json"
+  ],
+  "archive_scope": "Lightweight evidence; original fields, all coefficient caches and all continuation vectors are retained locally rather than copied here."
+}

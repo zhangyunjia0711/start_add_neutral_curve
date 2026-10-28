@@ -1,0 +1,38 @@
+--- a/src/public/wall_local_coordinates.f90
++++ b/src/public/wall_local_coordinates.f90
+@@ -13,7 +13,7 @@
+    public :: wall_local_grid, wall_local_flow
+    public :: frozen_wall_basis, projected_normal_derivatives
+ 
+-   logical, save :: configured=.false., enabled=.false.
++   logical, save :: configured=.false., enabled=.false., consistent_normal_derivatives=.false.
+    logical, save :: cached_identity=.false., metadata_started=.false.
+    integer, save :: cached_station=0
+    real(real64), allocatable, save :: wall_s(:), local_n(:), local_eta_n(:), local_eta_nn(:)
+@@ -36,14 +36,15 @@
+       select case(trim(selection))
+       case('global')
+          enabled=.false.
+-      case('wall_local')
++      case('wall_local','wall_local_consistent')
+          if (.not.direct_local.or..not.spatial.or.adjoint.or..not.comoving) &
+             error stop 'wall_local requires direct local spatial LST with COMOVING_CS; no adjoint/LPSE support.'
+          if (world_size/=1) error stop 'wall_local currently requires one MPI rank.'
+          enabled=.true.
+       case default
+-         error stop 'lst.profile_coordinates must be global or wall_local.'
++         error stop 'lst.profile_coordinates must be global, wall_local or wall_local_consistent.'
+       end select
++      consistent_normal_derivatives=trim(selection)=='wall_local_consistent'
+       configured=.true.
+       cached_station=0
+       metadata_started=.false.
+@@ -181,7 +182,7 @@
+       flat_scale=max(1.0_real64,maxval(abs(xx(ix,:))))
+       cached_identity=tangent(1)==1.0_real64.and.tangent(2)==0.0_real64.and. &
+                       normal(1)==0.0_real64.and.normal(2)==1.0_real64.and. &
+-                      maxval(abs(dx))<=16*epsilon(flat_scale)*flat_scale
++                      maxval(abs(dx))<=16*epsilon(flat_scale)*flat_scale.and..not.consistent_normal_derivatives
+       if (cached_identity) then
+          local_eta_n=global_eta_y(ix,:)
+          local_eta_nn=global_eta_yy(ix,:)

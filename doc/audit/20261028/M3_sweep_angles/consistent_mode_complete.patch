@@ -1,0 +1,70 @@
+diff --git a/src/public/wall_local_coordinates.f90 b/src/public/wall_local_coordinates.f90
+index a3714cb..cd7a1c9 100644
+--- a/src/public/wall_local_coordinates.f90
++++ b/src/public/wall_local_coordinates.f90
+@@ -13,7 +13,7 @@ module mod_wall_local_coordinates
+    public :: wall_local_grid, wall_local_flow
+    public :: frozen_wall_basis, projected_normal_derivatives
+ 
+-   logical, save :: configured=.false., enabled=.false.
++   logical, save :: configured=.false., enabled=.false., consistent_normal_derivatives=.false.
+    logical, save :: cached_identity=.false., metadata_started=.false.
+    integer, save :: cached_station=0
+    real(real64), allocatable, save :: wall_s(:), local_n(:), local_eta_n(:), local_eta_nn(:)
+@@ -36,14 +36,15 @@ contains
+       select case(trim(selection))
+       case('global')
+          enabled=.false.
+-      case('wall_local')
++      case('wall_local','wall_local_consistent')
+          if (.not.direct_local.or..not.spatial.or.adjoint.or..not.comoving) &
+             error stop 'wall_local requires direct local spatial LST with COMOVING_CS; no adjoint/LPSE support.'
+          if (world_size/=1) error stop 'wall_local currently requires one MPI rank.'
+          enabled=.true.
+       case default
+-         error stop 'lst.profile_coordinates must be global or wall_local.'
++         error stop 'lst.profile_coordinates must be global, wall_local or wall_local_consistent.'
+       end select
++      consistent_normal_derivatives=trim(selection)=='wall_local_consistent'
+       configured=.true.
+       cached_station=0
+       metadata_started=.false.
+@@ -181,7 +182,7 @@ contains
+       flat_scale=max(1.0_real64,maxval(abs(xx(ix,:))))
+       cached_identity=tangent(1)==1.0_real64.and.tangent(2)==0.0_real64.and. &
+                       normal(1)==0.0_real64.and.normal(2)==1.0_real64.and. &
+-                      maxval(abs(dx))<=16*epsilon(flat_scale)*flat_scale
++                      maxval(abs(dx))<=16*epsilon(flat_scale)*flat_scale.and..not.consistent_normal_derivatives
+       if (cached_identity) then
+          local_eta_n=global_eta_y(ix,:)
+          local_eta_nn=global_eta_yy(ix,:)
+diff --git a/tests/wall_local_profiles_test.f90 b/tests/wall_local_profiles_test.f90
+index 70b32b5..baf71d2 100644
+--- a/tests/wall_local_profiles_test.f90
++++ b/tests/wall_local_profiles_test.f90
+@@ -85,6 +85,25 @@ program test_wall_local_profiles
+    if (any(q/=expected).or.any(en/=reference_en).or.any(enn/=reference_enn).or. &
+        any(qn/=reference_qn).or.any(qnn/=reference_qnn)) error stop 'Identity flat profile was changed.'
+    if (abs(n(1))>0.0_real64) error stop 'Local wall origin was not zero.'
++   ! Consistent mode must ignore sentinel global derivatives even on an exact flat column.
++   call configure_wall_local_coordinates('wall_local_consistent',.true.,.true.,.false.,.true.)
++   q=qq(:,3,:); qn=dq0dy(:,3,:); qnn=dq0dyy(:,3,:); en=eta_y(3,:); enn=eta_yy(3,:)
++   call wall_local_grid(3,n,en,enn)
++   call wall_local_flow(3,q,qn,qnn)
++   if (maxval(abs(qn(2,:)-1.0_real64))>1e-10_real64.or.maxval(abs(qnn(2,:)))>1e-9_real64) &
++      error stop 'Consistent flat derivative did not use the projected normal profile.'
++   reference_en=en; reference_enn=enn; reference_qn=qn; reference_qnn=qnn
++   do i=1,in
++      do j=1,jn
++         xx(i,j)=xx(i,j)+1e-13_real64*(yy(i,j)-yy(i,1))
++      enddo
++   enddo
++   call configure_wall_local_coordinates('wall_local_consistent',.true.,.true.,.false.,.true.)
++   q=qq(:,3,:); qn=dq0dy(:,3,:); qnn=dq0dyy(:,3,:); en=eta_y(3,:); enn=eta_yy(3,:)
++   call wall_local_grid(3,n,en,enn)
++   call wall_local_flow(3,q,qn,qnn)
++   if (maxval(abs(qn-reference_qn))>1e-11_real64.or.maxval(abs(qnn-reference_qnn))>1e-10_real64) &
++      error stop 'Consistent derivatives changed under flat coordinate roundoff.'
+    open(newunit=unit,file='wall_local_profile_metadata.csv',status='old')
+    close(unit,status='delete')
+    print *, 'wall_local geometry, normal derivatives, rotation, and exact flat compatibility passed.'

@@ -1,0 +1,4289 @@
+{
+  "created": "2026-10-28T15:26:56.450688+08:00",
+  "curves": [
+    {
+      "angle": 30,
+      "f_kHz": -112.0,
+      "component": "S",
+      "zone": "s30_f-112.0kHz_S_final",
+      "output_csv": "curves/s30_f-112.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s30_f-112.0kHz_S_final.json",
+        "sha256": "cee600141af0947c87935d5bbc65a693604be907735a2cc7e207669622b675f9"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 45,
+      "x_range_mm": [
+        -29.16541421812324,
+        -26.210019542921394
+      ],
+      "beta_range": [
+        -82.25749137892763,
+        -74.36019885052613
+      ],
+      "max_growth_error": 1.602908907035802e-11,
+      "max_right_residual": 1.1037437644783982e-11
+    },
+    {
+      "angle": 30,
+      "f_kHz": -110.0,
+      "component": "S",
+      "zone": "s30_f-110.0kHz_S_final",
+      "output_csv": "curves/s30_f-110.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s30_f-110.0kHz_S_final.json",
+        "sha256": "e80e97b2264fe3465baddad3c2f969bf6eec8a467c821ee26d8d8d838481f6fb"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 85,
+      "x_range_mm": [
+        -30.170037539519704,
+        -24.415855464465245
+      ],
+      "beta_range": [
+        -85.34860223192223,
+        -69.99063784386163
+      ],
+      "max_growth_error": 9.891960304069754e-12,
+      "max_right_residual": 1.8219531437723404e-13
+    },
+    {
+      "angle": 30,
+      "f_kHz": -100.0,
+      "component": "S",
+      "zone": "s30_f-100.0kHz_S_final",
+      "output_csv": "curves/s30_f-100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s30_f-100.0kHz_S_final.json",
+        "sha256": "0bbe63f4eb472c39ce474c5d65c5bfedd6e7861e9a4da337254c668864d03708"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 179,
+      "x_range_mm": [
+        -31.84547201934836,
+        -18.836225327927067
+      ],
+      "beta_range": [
+        -91.71998650979582,
+        -56.88637342510155
+      ],
+      "max_growth_error": 9.151881133174546e-12,
+      "max_right_residual": 1.8698191435608674e-13
+    },
+    {
+      "angle": 30,
+      "f_kHz": -75.0,
+      "component": "S",
+      "zone": "s30_f-75.0kHz_S_final",
+      "output_csv": "curves/s30_f-75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s30_f-75.0kHz_S_final.json",
+        "sha256": "2132bae21aaf57cfaea03808b05fa8965c86150031da0e40a3a0069812aa816c"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 311,
+      "x_range_mm": [
+        -32.9314527258581,
+        -7.516859637813518
+      ],
+      "beta_range": [
+        -98.04197111931057,
+        -34.282336429668675
+      ],
+      "max_growth_error": 1.070607449623234e-11,
+      "max_right_residual": 2.897840851869879e-13
+    },
+    {
+      "angle": 30,
+      "f_kHz": -50.0,
+      "component": "S",
+      "zone": "s30_f-50.0kHz_S_final",
+      "output_csv": "curves/s30_f-50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s30_f-50.0kHz_S_final.json",
+        "sha256": "24313f90e09ddeaedb693c6b87f2c11b554358841937fa851c4fdac010d17e02"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 731,
+      "x_range_mm": [
+        -33.18024356226226,
+        78.54796437331461
+      ],
+      "beta_range": [
+        -100.74313052871302,
+        -14.976547554486723
+      ],
+      "max_growth_error": 4.705688189698757e-12,
+      "max_right_residual": 1.8957217590571442e-13
+    },
+    {
+      "angle": 30,
+      "f_kHz": -25.0,
+      "component": "S",
+      "zone": "s30_f-25.0kHz_S_final",
+      "output_csv": "curves/s30_f-25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s30_f-25.0kHz_S_final.json",
+        "sha256": "30030d2a28eb456768ebc26bb149c615f4ec816d09c0901403c100ecd195b0f7"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 981,
+      "x_range_mm": [
+        -33.117777370212146,
+        252.62178370043924
+      ],
+      "beta_range": [
+        -101.67407576540441,
+        -5.954021307627805
+      ],
+      "max_growth_error": 1.206187191030226e-10,
+      "max_right_residual": 1.8511780679142898e-13
+    },
+    {
+      "angle": 30,
+      "f_kHz": 0.0,
+      "component": "S",
+      "zone": "s30_f0.0kHz_S_final",
+      "output_csv": "curves/s30_f0.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s30_f0.0kHz_S_final.json",
+        "sha256": "c5fa5f78f7759af4c210ecd53bb7b3991f4be428da4f4da922598b14914ca672"
+      },
+      "closed": false,
+      "method": "wall_local_consistent",
+      "original_check_count": 12,
+      "physical_tip_count": 1,
+      "points": 1571,
+      "x_range_mm": [
+        -32.73963425228337,
+        1100.0000000000084
+      ],
+      "beta_range": [
+        -101.24594973889094,
+        -0.45808019574731035
+      ],
+      "max_growth_error": 9.705249843877633e-12,
+      "max_right_residual": 1.7308418239424865e-13
+    },
+    {
+      "angle": 30,
+      "f_kHz": 25.0,
+      "component": "S",
+      "zone": "s30_f25.0kHz_S_final",
+      "output_csv": "curves/s30_f25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s30_f25.0kHz_S_final.json",
+        "sha256": "6c284847e8066040618b1569f08e6cf6eb67b2cd624839162349902ecb130719"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 955,
+      "x_range_mm": [
+        -31.859968381441018,
+        255.61765132099478
+      ],
+      "beta_range": [
+        -99.45391308680433,
+        -6.173008102999579
+      ],
+      "max_growth_error": 9.383330948652611e-12,
+      "max_right_residual": 1.6671497463378524e-13
+    },
+    {
+      "angle": 30,
+      "f_kHz": 50.0,
+      "component": "S",
+      "zone": "s30_f50.0kHz_S_final",
+      "output_csv": "curves/s30_f50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s30_f50.0kHz_S_final.json",
+        "sha256": "bded30bf3aa919a79c38357ec4a7e0999a380944f679e97d9303b7e50c1f7ad8"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 645,
+      "x_range_mm": [
+        -30.267651238850917,
+        67.79280169464928
+      ],
+      "beta_range": [
+        -95.95285672539543,
+        -9.633016671312625
+      ],
+      "max_growth_error": 4.714934338073954e-11,
+      "max_right_residual": 1.4740349888110967e-13
+    },
+    {
+      "angle": 30,
+      "f_kHz": 75.0,
+      "component": "S",
+      "zone": "s30_f75.0kHz_S_final",
+      "output_csv": "curves/s30_f75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s30_f75.0kHz_S_final.json",
+        "sha256": "ea29d2c9cf7775f2a8c84eac0d9e0ca4c4f8d6d55fa397974c17edf9e8aa0d83"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 297,
+      "x_range_mm": [
+        -27.60294732436109,
+        1.838961230688115
+      ],
+      "beta_range": [
+        -89.73559883600173,
+        -14.029698852857424
+      ],
+      "max_growth_error": 9.82100898509093e-12,
+      "max_right_residual": 1.3960097941295302e-13
+    },
+    {
+      "angle": 30,
+      "f_kHz": 100.0,
+      "component": "S",
+      "zone": "s30_f100.0kHz_S_final",
+      "output_csv": "curves/s30_f100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s30_f100.0kHz_S_final.json",
+        "sha256": "1a17efce21fb5b7607a6c8c4cf8d88520287658e9cb13ab79cb77466c5908884"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 209,
+      "x_range_mm": [
+        -22.342814366080347,
+        -0.49259618393093796
+      ],
+      "beta_range": [
+        -76.94680493132701,
+        -22.58367972596677
+      ],
+      "max_growth_error": 9.9108379907892e-12,
+      "max_right_residual": 1.221517382668519e-13
+    },
+    {
+      "angle": 45,
+      "f_kHz": -112.0,
+      "component": "S",
+      "zone": "s45_f-112.0kHz_S_final",
+      "output_csv": "curves/s45_f-112.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f-112.0kHz_S_final.json",
+        "sha256": "682c559bb063781f0f5d82fa41d9f7d6de40ada570a60a524dbbef00ec179d5a"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 221,
+      "x_range_mm": [
+        -33.89629413104797,
+        -19.96273455462713
+      ],
+      "beta_range": [
+        -65.94832779226208,
+        -39.207548688894136
+      ],
+      "max_growth_error": 9.630232506545642e-12,
+      "max_right_residual": 1.438674998091887e-13
+    },
+    {
+      "angle": 45,
+      "f_kHz": -110.0,
+      "component": "S",
+      "zone": "s45_f-110.0kHz_S_final",
+      "output_csv": "curves/s45_f-110.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f-110.0kHz_S_final.json",
+        "sha256": "beb3172116d84784ee1c8a79c87a695ab4d488a5b32d1bfe17cccc7b82d1e4b5"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 229,
+      "x_range_mm": [
+        -33.9409550897538,
+        -19.35236953031568
+      ],
+      "beta_range": [
+        -66.16287262380277,
+        -38.28126056770492
+      ],
+      "max_growth_error": 2.886609017879554e-11,
+      "max_right_residual": 1.4381724811759826e-13
+    },
+    {
+      "angle": 45,
+      "f_kHz": -100.0,
+      "component": "S",
+      "zone": "s45_f-100.0kHz_S_final",
+      "output_csv": "curves/s45_f-100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f-100.0kHz_S_final.json",
+        "sha256": "dcb51ceec7d8f5829d558eef02c7ca2e3c1eccd1e6376c72564358e8fed690eb"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 265,
+      "x_range_mm": [
+        -34.09518992684424,
+        -16.347946067659727
+      ],
+      "beta_range": [
+        -66.9749639542906,
+        -33.73644721796767
+      ],
+      "max_growth_error": 1.285528777112261e-10,
+      "max_right_residual": 3.0349943935622737e-13
+    },
+    {
+      "angle": 45,
+      "f_kHz": -75.0,
+      "component": "P1",
+      "zone": "s45_f-75.0kHz_P1_final",
+      "output_csv": "curves/s45_f-75.0kHz_P1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f-75.0kHz_P1_final.json",
+        "sha256": "1cb2367894d48004d8ef72d4668bb1e541c87ee6c71565f2e3896a7d5e1e431e"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 341,
+      "x_range_mm": [
+        -34.205428553714846,
+        -8.787614567668589
+      ],
+      "beta_range": [
+        -67.80020394259653,
+        -23.114444300390122
+      ],
+      "max_growth_error": 9.959332677503574e-12,
+      "max_right_residual": 1.3854725027689273e-13
+    },
+    {
+      "angle": 45,
+      "f_kHz": -75.0,
+      "component": "S",
+      "zone": "s45_f-75.0kHz_S_final",
+      "output_csv": "curves/s45_f-75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f-75.0kHz_S_final.json",
+        "sha256": "93ee6d45e2e7ea46a039c7ce53534122758cb0970e424a4155616017d265d341"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 159,
+      "x_range_mm": [
+        16.975024888830458,
+        53.94002620820739
+      ],
+      "beta_range": [
+        -28.649282141560906,
+        -19.944918607631017
+      ],
+      "max_growth_error": 5.40292522288974e-12,
+      "max_right_residual": 3.005765871110478e-14
+    },
+    {
+      "angle": 45,
+      "f_kHz": -50.0,
+      "component": "S",
+      "zone": "s45_f-50.0kHz_S_final",
+      "output_csv": "curves/s45_f-50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f-50.0kHz_S_final.json",
+        "sha256": "5abb760fb31bcfcfa5987b54a990020e820f4235e43c844bd08c8a29ad74f341"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 865,
+      "x_range_mm": [
+        -34.142786193464396,
+        143.5956288365187
+      ],
+      "beta_range": [
+        -67.61625475880818,
+        -10.879566481720166
+      ],
+      "max_growth_error": 9.448150005043755e-12,
+      "max_right_residual": 1.4356261562626593e-13
+    },
+    {
+      "angle": 45,
+      "f_kHz": -25.0,
+      "component": "S",
+      "zone": "s45_f-25.0kHz_S_final",
+      "output_csv": "curves/s45_f-25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f-25.0kHz_S_final.json",
+        "sha256": "c6dd1bd0a182211799551401a93bade2a316a760709adad0fca4f202051eb1a1"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1241,
+      "x_range_mm": [
+        -33.97847515703319,
+        469.57113763149687
+      ],
+      "beta_range": [
+        -66.78176974737039,
+        -4.955799156346854
+      ],
+      "max_growth_error": 9.851701475611275e-12,
+      "max_right_residual": 1.337408935562278e-13
+    },
+    {
+      "angle": 45,
+      "f_kHz": 0.0,
+      "component": "S",
+      "zone": "s45_f0.0kHz_S_final",
+      "output_csv": "curves/s45_f0.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f0.0kHz_S_final.json",
+        "sha256": "6d0d2eb7e42ba1c23ce111e441b365af93880b5e8de715dafbe884d0ca01852d"
+      },
+      "closed": false,
+      "method": "wall_local_consistent",
+      "original_check_count": 12,
+      "physical_tip_count": 1,
+      "points": 1597,
+      "x_range_mm": [
+        -33.64453125301267,
+        1100.0000000000084
+      ],
+      "beta_range": [
+        -65.43203388519757,
+        -0.25787647448473566
+      ],
+      "max_growth_error": 9.998557502809577e-12,
+      "max_right_residual": 1.257868493130987e-13
+    },
+    {
+      "angle": 45,
+      "f_kHz": 25.0,
+      "component": "S",
+      "zone": "s45_f25.0kHz_S_final",
+      "output_csv": "curves/s45_f25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f25.0kHz_S_final.json",
+        "sha256": "f665dba797bee63648815d0f74b122a012637aa1131345e6389f6659ff0e8fdf"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1463,
+      "x_range_mm": [
+        -32.98414229631829,
+        841.732509045919
+      ],
+      "beta_range": [
+        -63.59309045870877,
+        -1.9655109882867106
+      ],
+      "max_growth_error": 8.599014654489372e-12,
+      "max_right_residual": 1.2038045783507927e-13
+    },
+    {
+      "angle": 45,
+      "f_kHz": 50.0,
+      "component": "S",
+      "zone": "s45_f50.0kHz_S_final",
+      "output_csv": "curves/s45_f50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f50.0kHz_S_final.json",
+        "sha256": "2c4fa0ab0db219842ace9eb5a290753f6c441a4ffb5e665da166df27cfdbbf18"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 969,
+      "x_range_mm": [
+        -31.91018463898876,
+        265.710758052882
+      ],
+      "beta_range": [
+        -61.21448476926553,
+        -2.4417464304316763
+      ],
+      "max_growth_error": 2.205834097736988e-10,
+      "max_right_residual": 2.1870348738609725e-12
+    },
+    {
+      "angle": 45,
+      "f_kHz": 75.0,
+      "component": "S",
+      "zone": "s45_f75.0kHz_S_final",
+      "output_csv": "curves/s45_f75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f75.0kHz_S_final.json",
+        "sha256": "bf6b88f29109af7b71eb7e7ae1419375da5e70e8cfdece69e5718a39ff9e4f88"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 747,
+      "x_range_mm": [
+        -30.372747304340994,
+        126.21970776582948
+      ],
+      "beta_range": [
+        -58.14377147380017,
+        -2.4686916894282542
+      ],
+      "max_growth_error": 1.792155662164253e-10,
+      "max_right_residual": 1.0722578793196456e-13
+    },
+    {
+      "angle": 45,
+      "f_kHz": 100.0,
+      "component": "S",
+      "zone": "s45_f100.0kHz_S_final",
+      "output_csv": "curves/s45_f100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f100.0kHz_S_final.json",
+        "sha256": "f41f64be1e8fd1837802373dc1bb671c374c7f7e2bba45c39c5dd4df1c4f5ae2"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 4,
+      "points": 733,
+      "x_range_mm": [
+        -28.184178629610777,
+        59.46550104319838
+      ],
+      "beta_range": [
+        -54.024413019788625,
+        -2.2664827057820682
+      ],
+      "max_growth_error": 1.839276510376095e-11,
+      "max_right_residual": 9.776014403270505e-14
+    },
+    {
+      "angle": 45,
+      "f_kHz": 125.0,
+      "component": "S",
+      "zone": "s45_f125.0kHz_S_final",
+      "output_csv": "curves/s45_f125.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f125.0kHz_S_final.json",
+        "sha256": "140e4c317d8fa469dd30942c1079d05fb99daa870fe69408194734901c8c1724"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 335,
+      "x_range_mm": [
+        -24.808621803262792,
+        10.880874314331647
+      ],
+      "beta_range": [
+        -47.89607056682235,
+        -2.4903593603373326
+      ],
+      "max_growth_error": 1.437372213527003e-11,
+      "max_right_residual": 1.4783887229984707e-12
+    },
+    {
+      "angle": 45,
+      "f_kHz": 150.0,
+      "component": "S",
+      "zone": "s45_f150.0kHz_S_final",
+      "output_csv": "curves/s45_f150.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s45_f150.0kHz_S_final.json",
+        "sha256": "5313956dda41bab99766217a5cfb57cd7cf9f68b9118f55f30207b47ff486faf"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 169,
+      "x_range_mm": [
+        -17.817098900948597,
+        0.2742834955397849
+      ],
+      "beta_range": [
+        -34.82930645300445,
+        -4.441275262904513
+      ],
+      "max_growth_error": 8.759831132169146e-12,
+      "max_right_residual": 4.525144804759508e-13
+    },
+    {
+      "angle": 50,
+      "f_kHz": -112.0,
+      "component": "S",
+      "zone": "s50_f-112.0kHz_S_final",
+      "output_csv": "curves/s50_f-112.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f-112.0kHz_S_final.json",
+        "sha256": "14ce73e78c967e27659b7af6b996f532d7a2c5e4e79256fc92592515e7bc25b9"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 225,
+      "x_range_mm": [
+        -34.18696587587157,
+        -20.728581034704327
+      ],
+      "beta_range": [
+        -56.65687173400186,
+        -34.34769181525332
+      ],
+      "max_growth_error": 2.331527538289609e-11,
+      "max_right_residual": 1.2515361835579275e-13
+    },
+    {
+      "angle": 50,
+      "f_kHz": -110.0,
+      "component": "S",
+      "zone": "s50_f-110.0kHz_S_final",
+      "output_csv": "curves/s50_f-110.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f-110.0kHz_S_final.json",
+        "sha256": "491d1bda7444b8e7fa1d771bc57bcc2a975f741e0e48bcffdc8643df89f0c5cd"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 231,
+      "x_range_mm": [
+        -34.22974462109326,
+        -20.15125186013539
+      ],
+      "beta_range": [
+        -56.80002459063643,
+        -33.673117379373636
+      ],
+      "max_growth_error": 1.808394194462668e-10,
+      "max_right_residual": 2.1683167958354233e-13
+    },
+    {
+      "angle": 50,
+      "f_kHz": -100.0,
+      "component": "S",
+      "zone": "s50_f-100.0kHz_S_final",
+      "output_csv": "curves/s50_f-100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f-100.0kHz_S_final.json",
+        "sha256": "991362117e639889cb8fcdf7f64e25315e78b08267a6b2a45ad7a283eea7a970"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 267,
+      "x_range_mm": [
+        -34.37680976952418,
+        -17.311864102769885
+      ],
+      "beta_range": [
+        -57.29354492329051,
+        -30.12267120754126
+      ],
+      "max_growth_error": 5.46692598594016e-11,
+      "max_right_residual": 1.3192275207374892e-13
+    },
+    {
+      "angle": 50,
+      "f_kHz": -75.0,
+      "component": "P1",
+      "zone": "s50_f-75.0kHz_P1_final",
+      "output_csv": "curves/s50_f-75.0kHz_P1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f-75.0kHz_P1_final.json",
+        "sha256": "91569fa7991a06b0ae1e729b93e553775a055eea72d336a2e108ff3f66d9e4f2"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 339,
+      "x_range_mm": [
+        -34.4597259342596,
+        -10.20187328686706
+      ],
+      "beta_range": [
+        -57.50405677240075,
+        -21.286101076325185
+      ],
+      "max_growth_error": 9.721255160648413e-12,
+      "max_right_residual": 1.2719665223582645e-13
+    },
+    {
+      "angle": 50,
+      "f_kHz": -75.0,
+      "component": "S",
+      "zone": "s50_f-75.0kHz_S_final",
+      "output_csv": "curves/s50_f-75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f-75.0kHz_S_final.json",
+        "sha256": "6b9226eb0bd7f78e1cb583d363a975b9c09dedc0866db45b41cea5758a75dacc"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 175,
+      "x_range_mm": [
+        19.65661182741628,
+        66.83905113335476
+      ],
+      "beta_range": [
+        -26.37490017334552,
+        -17.931831303825998
+      ],
+      "max_growth_error": 2.267743776938493e-11,
+      "max_right_residual": 5.0513898126563653e-14
+    },
+    {
+      "angle": 50,
+      "f_kHz": -50.0,
+      "component": "S",
+      "zone": "s50_f-50.0kHz_S_final",
+      "output_csv": "curves/s50_f-50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f-50.0kHz_S_final.json",
+        "sha256": "b98e1293d914e5a1839de4b120bd55d21087bf5507b0a57885fe1fd8040a63d1"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 403,
+      "x_range_mm": [
+        -34.36326569402044,
+        -2.328876868853346
+      ],
+      "beta_range": [
+        -56.87301221436119,
+        -13.125250776747883
+      ],
+      "max_growth_error": 9.77522579383543e-12,
+      "max_right_residual": 1.2378493198486394e-13
+    },
+    {
+      "angle": 50,
+      "f_kHz": -25.0,
+      "component": "S",
+      "zone": "s50_f-25.0kHz_S_final",
+      "output_csv": "curves/s50_f-25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f-25.0kHz_S_final.json",
+        "sha256": "5207fd1dd11c7f4e282e8c339c30c53b3cfbd01b5188c1c6a804b5f63fe29d34"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1331,
+      "x_range_mm": [
+        -34.1870058615586,
+        566.6262635417208
+      ],
+      "beta_range": [
+        -55.716631377337926,
+        -4.674565936600478
+      ],
+      "max_growth_error": 1.789312086914772e-10,
+      "max_right_residual": 1.1177892337836652e-13
+    },
+    {
+      "angle": 50,
+      "f_kHz": 0.0,
+      "component": "S",
+      "zone": "s50_f0.0kHz_S_final",
+      "output_csv": "curves/s50_f0.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f0.0kHz_S_final.json",
+        "sha256": "cea695a4d83e8bcf69e055212a4883fa592be3542d937dec18c3828a7b081f3f"
+      },
+      "closed": false,
+      "method": "wall_local_consistent",
+      "original_check_count": 12,
+      "physical_tip_count": 1,
+      "points": 1605,
+      "x_range_mm": [
+        -33.86656105531807,
+        1100.0000000000084
+      ],
+      "beta_range": [
+        -54.1583900574258,
+        -0.21454500482115385
+      ],
+      "max_growth_error": 1.945496293060264e-11,
+      "max_right_residual": 1.0914206102556205e-13
+    },
+    {
+      "angle": 50,
+      "f_kHz": 25.0,
+      "component": "S",
+      "zone": "s50_f25.0kHz_S_final",
+      "output_csv": "curves/s50_f25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f25.0kHz_S_final.json",
+        "sha256": "e74328c504b86d1d681dd2b9adf356e08382ace02731caf8c8da022805b0f6bf"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1549,
+      "x_range_mm": [
+        -33.24627086962599,
+        1010.4719035690887
+      ],
+      "beta_range": [
+        -52.23917513271333,
+        -1.083486804553579
+      ],
+      "max_growth_error": 9.823898256104481e-12,
+      "max_right_residual": 9.740340543811732e-14
+    },
+    {
+      "angle": 50,
+      "f_kHz": 50.0,
+      "component": "S",
+      "zone": "s50_f50.0kHz_S_final",
+      "output_csv": "curves/s50_f50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f50.0kHz_S_final.json",
+        "sha256": "24aeee2cc7eba7e6d818dcd6fc9fe4dfe14e57c1f765de5e245d9a576ef0dcd9"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1069,
+      "x_range_mm": [
+        -32.26331201559716,
+        341.84024947926434
+      ],
+      "beta_range": [
+        -49.94115175711079,
+        -0.9387532271715814
+      ],
+      "max_growth_error": 9.74940597946474e-12,
+      "max_right_residual": 1.043286473308329e-13
+    },
+    {
+      "angle": 50,
+      "f_kHz": 75.0,
+      "component": "S",
+      "zone": "s50_f75.0kHz_S_final",
+      "output_csv": "curves/s50_f75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f75.0kHz_S_final.json",
+        "sha256": "92fb7aef3e127a6b55a7502a17d2d056cb5d0015d4e04acb72dc1ece8e0b044e"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 817,
+      "x_range_mm": [
+        -30.89820896735232,
+        168.04099794993186
+      ],
+      "beta_range": [
+        -47.1849780611464,
+        -0.1954061152298661
+      ],
+      "max_growth_error": 6.181380138965226e-11,
+      "max_right_residual": 9.386648026389456e-14
+    },
+    {
+      "angle": 50,
+      "f_kHz": 100.0,
+      "component": "S",
+      "zone": "s50_f100.0kHz_S_final",
+      "output_csv": "curves/s50_f100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f100.0kHz_S_final.json",
+        "sha256": "ab855ea96c89c6e1625f318aead9e54f005d16bb3dc92778887977211b92db5a"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 679,
+      "x_range_mm": [
+        -29.03259433621897,
+        95.1812479889988
+      ],
+      "beta_range": [
+        -43.77515306898252,
+        0.8128850001502818
+      ],
+      "max_growth_error": 9.837317287796096e-12,
+      "max_right_residual": 9.644840560160938e-14
+    },
+    {
+      "angle": 50,
+      "f_kHz": 125.0,
+      "component": "S",
+      "zone": "s50_f125.0kHz_S_final",
+      "output_csv": "curves/s50_f125.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f125.0kHz_S_final.json",
+        "sha256": "eaab46c0d518cb16d39a8ece8b4f6104972d473552867eed14e070511c6f0eb5"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 539,
+      "x_range_mm": [
+        -26.37848148573887,
+        49.1670134447169
+      ],
+      "beta_range": [
+        -39.26128725087762,
+        1.5619474797638122
+      ],
+      "max_growth_error": 2.014086098981818e-11,
+      "max_right_residual": 1.5041777617930078e-12
+    },
+    {
+      "angle": 50,
+      "f_kHz": 150.0,
+      "component": "S",
+      "zone": "s50_f150.0kHz_S_final",
+      "output_csv": "curves/s50_f150.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f150.0kHz_S_final.json",
+        "sha256": "7d1e74451de0291d27a22259755a695f6d6c43972123d24c92b5cb0710307599"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 321,
+      "x_range_mm": [
+        -22.195860856376587,
+        13.48299023399315
+      ],
+      "beta_range": [
+        -32.280088956902866,
+        1.8517054049888662
+      ],
+      "max_growth_error": 1.460881799274785e-11,
+      "max_right_residual": 6.14098427789334e-13
+    },
+    {
+      "angle": 50,
+      "f_kHz": 175.0,
+      "component": "S",
+      "zone": "s50_f175.0kHz_S_final",
+      "output_csv": "curves/s50_f175.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s50_f175.0kHz_S_final.json",
+        "sha256": "a7de27777add31d6d41c42b94f3223cf1d4ff1a4ca2d5af9a124ee46556bfff0"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 143,
+      "x_range_mm": [
+        -14.743830216742795,
+        0.8842208093356049
+      ],
+      "beta_range": [
+        -17.64639922503139,
+        1.0118308584478006
+      ],
+      "max_growth_error": 1.412552713796391e-10,
+      "max_right_residual": 6.14307896896866e-14
+    },
+    {
+      "angle": 55,
+      "f_kHz": -112.0,
+      "component": "S",
+      "zone": "s55_f-112.0kHz_S_final",
+      "output_csv": "curves/s55_f-112.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f-112.0kHz_S_final.json",
+        "sha256": "2622475fce43cee2c821b4e85289ab7029608b525fc8d2e9ae3a25aaae0c6b2e"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 221,
+      "x_range_mm": [
+        -34.36239339702238,
+        -21.553036038645942
+      ],
+      "beta_range": [
+        -48.07045382691939,
+        -29.74293893527643
+      ],
+      "max_growth_error": 2.610203253456282e-11,
+      "max_right_residual": 2.5701810982691384e-12
+    },
+    {
+      "angle": 55,
+      "f_kHz": -110.0,
+      "component": "S",
+      "zone": "s55_f-110.0kHz_S_final",
+      "output_csv": "curves/s55_f-110.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f-110.0kHz_S_final.json",
+        "sha256": "20db82a1e4b3513fe256da45c71a8cc1a11753607481e13ccc476d5b794db615"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 229,
+      "x_range_mm": [
+        -34.410213212955114,
+        -20.986326708092435
+      ],
+      "beta_range": [
+        -48.1602619647859,
+        -29.1442939347297
+      ],
+      "max_growth_error": 9.489219734219583e-12,
+      "max_right_residual": 1.0483314751433664e-13
+    },
+    {
+      "angle": 55,
+      "f_kHz": -100.0,
+      "component": "S",
+      "zone": "s55_f-100.0kHz_S_final",
+      "output_csv": "curves/s55_f-100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f-100.0kHz_S_final.json",
+        "sha256": "dea85bfa448a427486f3a12a3babf7582d82887c212e50558224ddf290f68581"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 269,
+      "x_range_mm": [
+        -34.576352812217266,
+        -18.223623770917303
+      ],
+      "beta_range": [
+        -48.40582735733916,
+        -26.371567849766972
+      ],
+      "max_growth_error": 9.934015350425319e-12,
+      "max_right_residual": 1.0592985459622014e-13
+    },
+    {
+      "angle": 55,
+      "f_kHz": -75.0,
+      "component": "P1",
+      "zone": "s55_f-75.0kHz_P1_final",
+      "output_csv": "curves/s55_f-75.0kHz_P1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f-75.0kHz_P1_final.json",
+        "sha256": "3e8ef9457eb45374f03e723055988f1949e636a38a746682599eade5ee3b0070"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 341,
+      "x_range_mm": [
+        -34.67729761106256,
+        -11.376452824477344
+      ],
+      "beta_range": [
+        -48.110896842321466,
+        -19.505587147152216
+      ],
+      "max_growth_error": 2.223476164118172e-11,
+      "max_right_residual": 1.7966865472376373e-13
+    },
+    {
+      "angle": 55,
+      "f_kHz": -75.0,
+      "component": "S",
+      "zone": "s55_f-75.0kHz_S_final",
+      "output_csv": "curves/s55_f-75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f-75.0kHz_S_final.json",
+        "sha256": "0e2adcea4659251b918b545e0107157cd4ca2c8e4c1c10857cdb21ecd09d8e39"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 187,
+      "x_range_mm": [
+        22.302409110047854,
+        79.85797384970456
+      ],
+      "beta_range": [
+        -24.119133481357515,
+        -16.146856222592486
+      ],
+      "max_growth_error": 8.300213150187353e-12,
+      "max_right_residual": 2.7751289543538634e-14
+    },
+    {
+      "angle": 55,
+      "f_kHz": -50.0,
+      "component": "S",
+      "zone": "s55_f-50.0kHz_S_final",
+      "output_csv": "curves/s55_f-50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f-50.0kHz_S_final.json",
+        "sha256": "c05c9797f05dd99ce582440ba4588ab8b276b33adf55aaf20c2a4a9a71bda7d1"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 399,
+      "x_range_mm": [
+        -34.55147072133444,
+        -3.9092154006288147
+      ],
+      "beta_range": [
+        -47.09924431115141,
+        -12.476685197508289
+      ],
+      "max_growth_error": 8.931285742612313e-12,
+      "max_right_residual": 1.0210902204781509e-13
+    },
+    {
+      "angle": 55,
+      "f_kHz": -25.0,
+      "component": "S",
+      "zone": "s55_f-25.0kHz_S_final",
+      "output_csv": "curves/s55_f-25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f-25.0kHz_S_final.json",
+        "sha256": "8f912c61190f451abe468b07e6ea04c22012dde5a60d5d3403f2e3d4d185eae0"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1419,
+      "x_range_mm": [
+        -34.36044181671772,
+        686.2900404299921
+      ],
+      "beta_range": [
+        -45.65373480606954,
+        -4.3059196172847285
+      ],
+      "max_growth_error": 9.73720779703805e-12,
+      "max_right_residual": 9.871428754421143e-14
+    },
+    {
+      "angle": 55,
+      "f_kHz": 0.0,
+      "component": "S",
+      "zone": "s55_f0.0kHz_S_final",
+      "output_csv": "curves/s55_f0.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f0.0kHz_S_final.json",
+        "sha256": "c8227c767b2affa43c6176f44d2d1b1a83a161be7f34e355e2bc53cd70d8a56e"
+      },
+      "closed": false,
+      "method": "wall_local_consistent",
+      "original_check_count": 12,
+      "physical_tip_count": 1,
+      "points": 1611,
+      "x_range_mm": [
+        -34.05024600313088,
+        1100.0000000000084
+      ],
+      "beta_range": [
+        -43.89558823155984,
+        -0.1786425515890079
+      ],
+      "max_growth_error": 9.981109207477824e-12,
+      "max_right_residual": 9.508663769876542e-14
+    },
+    {
+      "angle": 55,
+      "f_kHz": 25.0,
+      "component": "S",
+      "zone": "s55_f25.0kHz_S_final",
+      "output_csv": "curves/s55_f25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f25.0kHz_S_final.json",
+        "sha256": "e3d90bc1c4492981fad7aef7ddd1974c3f4248b13db741a502b3ccd4a464e1dd"
+      },
+      "closed": false,
+      "method": "wall_local_consistent",
+      "original_check_count": 12,
+      "physical_tip_count": 1,
+      "points": 1591,
+      "x_range_mm": [
+        -33.463575631538056,
+        1100.0000000000084
+      ],
+      "beta_range": [
+        -41.87252931727157,
+        -0.37167028114763656
+      ],
+      "max_growth_error": 1.011727844722198e-11,
+      "max_right_residual": 8.58940374562804e-14
+    },
+    {
+      "angle": 55,
+      "f_kHz": 50.0,
+      "component": "S",
+      "zone": "s55_f50.0kHz_S_final",
+      "output_csv": "curves/s55_f50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f50.0kHz_S_final.json",
+        "sha256": "0ec11eab8854f34c28ccd68b82f93a5c826b5f3ab1568c3d152fe5d5401c54b5"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1135,
+      "x_range_mm": [
+        -32.555442660117016,
+        399.5129794771207
+      ],
+      "beta_range": [
+        -39.589747201225585,
+        0.28169247337386094
+      ],
+      "max_growth_error": 9.263214627849596e-12,
+      "max_right_residual": 8.452228736986351e-14
+    },
+    {
+      "angle": 55,
+      "f_kHz": 75.0,
+      "component": "S",
+      "zone": "s55_f75.0kHz_S_final",
+      "output_csv": "curves/s55_f75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f75.0kHz_S_final.json",
+        "sha256": "43619affab1d13a3acc3c674fc1f3617d5122815fcfbe96cb471fdc33fcfbdf6"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 879,
+      "x_range_mm": [
+        -31.327683217949918,
+        205.65206812480824
+      ],
+      "beta_range": [
+        -37.010157062057246,
+        1.5968159920257785
+      ],
+      "max_growth_error": 1.570547994565912e-11,
+      "max_right_residual": 8.809036104405904e-14
+    },
+    {
+      "angle": 55,
+      "f_kHz": 100.0,
+      "component": "S",
+      "zone": "s55_f100.0kHz_S_final",
+      "output_csv": "curves/s55_f100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f100.0kHz_S_final.json",
+        "sha256": "2d3c8f50669976f49daaa625b95a89a81c77cb4c19889c27b2e9c1ac407e4d49"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 733,
+      "x_range_mm": [
+        -29.70771763934566,
+        124.1109954697385
+      ],
+      "beta_range": [
+        -34.029681706479145,
+        3.0699620947237
+      ],
+      "max_growth_error": 9.783915554483867e-12,
+      "max_right_residual": 7.598508159049244e-13
+    },
+    {
+      "angle": 55,
+      "f_kHz": 125.0,
+      "component": "S",
+      "zone": "s55_f125.0kHz_S_final",
+      "output_csv": "curves/s55_f125.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f125.0kHz_S_final.json",
+        "sha256": "50dd34c527776b9569cdf3651ed16763329a0716929ccdd0a821aceaf150fa5d"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 625,
+      "x_range_mm": [
+        -27.539866644468532,
+        77.58455800735085
+      ],
+      "beta_range": [
+        -30.42801753310012,
+        4.3656900058522305
+      ],
+      "max_growth_error": 9.951310602827701e-12,
+      "max_right_residual": 7.680938643407353e-14
+    },
+    {
+      "angle": 55,
+      "f_kHz": 150.0,
+      "component": "S",
+      "zone": "s55_f150.0kHz_S_final",
+      "output_csv": "curves/s55_f150.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f150.0kHz_S_final.json",
+        "sha256": "7ebbcb46b87a383b06cd3c6909f7e03e9221061672bccf9357e6648f14d01f8c"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 497,
+      "x_range_mm": [
+        -24.55436477687993,
+        43.580186860969626
+      ],
+      "beta_range": [
+        -25.7033301041769,
+        5.429179427977756
+      ],
+      "max_growth_error": 9.85016425477976e-12,
+      "max_right_residual": 7.388691052976024e-14
+    },
+    {
+      "angle": 55,
+      "f_kHz": 175.0,
+      "component": "S",
+      "zone": "s55_f175.0kHz_S_final",
+      "output_csv": "curves/s55_f175.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f175.0kHz_S_final.json",
+        "sha256": "067c28e05829ebd389488fcf46f0124c6c5f687581fd0ff3ef01a7f64b9fa56b"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 319,
+      "x_range_mm": [
+        -20.505965855830468,
+        15.723151112997385
+      ],
+      "beta_range": [
+        -18.69429759698194,
+        6.152578320600104
+      ],
+      "max_growth_error": 7.23330693923009e-11,
+      "max_right_residual": 1.6400527473051215e-12
+    },
+    {
+      "angle": 55,
+      "f_kHz": 200.0,
+      "component": "S",
+      "zone": "s55_f200.0kHz_S_final",
+      "output_csv": "curves/s55_f200.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s55_f200.0kHz_S_final.json",
+        "sha256": "240d204b470475a95599d2836b8816affdd68e8a9771dca2247eca465053607e"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 159,
+      "x_range_mm": [
+        -15.852718155266976,
+        1.500804989005582
+      ],
+      "beta_range": [
+        -9.86029319623793,
+        6.201194065956179
+      ],
+      "max_growth_error": 6.317039383689302e-11,
+      "max_right_residual": 1.7605968126709975e-12
+    },
+    {
+      "angle": 60,
+      "f_kHz": -112.0,
+      "component": "S",
+      "zone": "s60_f-112.0kHz_S_final",
+      "output_csv": "curves/s60_f-112.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f-112.0kHz_S_final.json",
+        "sha256": "0eea766f364cf2d10cdeb315aee8f6c5430a92ccbdc32957804cc4eda003c0c2"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 217,
+      "x_range_mm": [
+        -34.42695990347348,
+        -22.22928777825713
+      ],
+      "beta_range": [
+        -40.39251415874344,
+        -26.135829647669635
+      ],
+      "max_growth_error": 9.444599452952275e-12,
+      "max_right_residual": 9.211017788322207e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": -110.0,
+      "component": "S",
+      "zone": "s60_f-110.0kHz_S_final",
+      "output_csv": "curves/s60_f-110.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f-110.0kHz_S_final.json",
+        "sha256": "8f7f863884d47d78c982712706c825b11b7994b015c53d1db199a9889d168c6c"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 227,
+      "x_range_mm": [
+        -34.48916553676516,
+        -21.650893547477217
+      ],
+      "beta_range": [
+        -40.44102191330437,
+        -25.56362981674802
+      ],
+      "max_growth_error": 3.772570564051501e-11,
+      "max_right_residual": 3.2054856565947836e-13
+    },
+    {
+      "angle": 60,
+      "f_kHz": -100.0,
+      "component": "S",
+      "zone": "s60_f-100.0kHz_S_final",
+      "output_csv": "curves/s60_f-100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f-100.0kHz_S_final.json",
+        "sha256": "7a956b890182579d0a6c2696b8d874dc610fc32a48847385240780a1a2e7be0d"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 269,
+      "x_range_mm": [
+        -34.69917580090622,
+        -18.86048970736248
+      ],
+      "beta_range": [
+        -40.486498462964406,
+        -22.927055924462692
+      ],
+      "max_growth_error": 9.917533521664291e-12,
+      "max_right_residual": 9.43659551677651e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": -75.0,
+      "component": "P1",
+      "zone": "s60_f-75.0kHz_P1_final",
+      "output_csv": "curves/s60_f-75.0kHz_P1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f-75.0kHz_P1_final.json",
+        "sha256": "6b20c4db4b8c2546c64ecd714eaa500d571fff4b4c72115614d2d78bb6090590"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 349,
+      "x_range_mm": [
+        -34.85342168994091,
+        -12.065424503789774
+      ],
+      "beta_range": [
+        -39.76425491363325,
+        -17.379580337992078
+      ],
+      "max_growth_error": 3.623504473957048e-11,
+      "max_right_residual": 9.295861679832477e-13
+    },
+    {
+      "angle": 60,
+      "f_kHz": -75.0,
+      "component": "S",
+      "zone": "s60_f-75.0kHz_S_final",
+      "output_csv": "curves/s60_f-75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f-75.0kHz_S_final.json",
+        "sha256": "eddbab17b34ef0156e9c4ba01010be544f72b44c6a68697c1d038bd59c64e891"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 209,
+      "x_range_mm": [
+        23.494259180997194,
+        95.57274890377694
+      ],
+      "beta_range": [
+        -22.103207669404767,
+        -14.70347229921536
+      ],
+      "max_growth_error": 6.825894565164864e-12,
+      "max_right_residual": 3.0511020851716654e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": -50.0,
+      "component": "S",
+      "zone": "s60_f-50.0kHz_S_final",
+      "output_csv": "curves/s60_f-50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f-50.0kHz_S_final.json",
+        "sha256": "e5192b72d9d813bc8488d46b2dec9f4caaeeff56ffa26e3e5272a9182e839f50"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 403,
+      "x_range_mm": [
+        -34.718699918323935,
+        -4.743425752492503
+      ],
+      "beta_range": [
+        -38.41444266006428,
+        -11.63863293209163
+      ],
+      "max_growth_error": 1.195199486052408e-11,
+      "max_right_residual": 9.686666274231362e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": -25.0,
+      "component": "S",
+      "zone": "s60_f-25.0kHz_S_final",
+      "output_csv": "curves/s60_f-25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f-25.0kHz_S_final.json",
+        "sha256": "cec2f42ba59ca18b8123f0db347b44b0e562d2b90aa3814e5d23f8d32cadbcac"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1509,
+      "x_range_mm": [
+        -34.509647626683936,
+        827.4019053739821
+      ],
+      "beta_range": [
+        -36.70796710160607,
+        -3.983752920358841
+      ],
+      "max_growth_error": 1.151015085853285e-11,
+      "max_right_residual": 8.925623585410142e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": 0.0,
+      "component": "S",
+      "zone": "s60_f0.0kHz_S_final",
+      "output_csv": "curves/s60_f0.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f0.0kHz_S_final.json",
+        "sha256": "4ff41ec62602c005803d07d423e5b24d0677c16feaa64fd537be0594f6dd9788"
+      },
+      "closed": false,
+      "method": "wall_local_consistent",
+      "original_check_count": 12,
+      "physical_tip_count": 1,
+      "points": 1617,
+      "x_range_mm": [
+        -34.20316100123653,
+        1100.0000000000084
+      ],
+      "beta_range": [
+        -34.75579352488936,
+        -0.14978997726622575
+      ],
+      "max_growth_error": 9.957172512326389e-12,
+      "max_right_residual": 8.319369500410797e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": 25.0,
+      "component": "S",
+      "zone": "s60_f25.0kHz_S_final",
+      "output_csv": "curves/s60_f25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f25.0kHz_S_final.json",
+        "sha256": "2dc9825501af22ddb5a4945099dae31636d8884559f543ea053fefe7c09e2af4"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1593,
+      "x_range_mm": [
+        -33.63225530603877,
+        1089.0967907763074
+      ],
+      "beta_range": [
+        -32.61096333358762,
+        0.20635740831887867
+      ],
+      "max_growth_error": 1.1864488055318e-11,
+      "max_right_residual": 7.519854170561839e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": 50.0,
+      "component": "S",
+      "zone": "s60_f50.0kHz_S_final",
+      "output_csv": "curves/s60_f50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f50.0kHz_S_final.json",
+        "sha256": "e33d0f500405f7aa838fdfc774dd87076692c79a34fe4a8abd2edfc0b3233638"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1151,
+      "x_range_mm": [
+        -32.77141049741685,
+        409.23488352160734
+      ],
+      "beta_range": [
+        -30.291130787555304,
+        1.2740732269549477
+      ],
+      "max_growth_error": 9.804554006255032e-11,
+      "max_right_residual": 1.2272455443722895e-13
+    },
+    {
+      "angle": 60,
+      "f_kHz": 75.0,
+      "component": "S",
+      "zone": "s60_f75.0kHz_S_final",
+      "output_csv": "curves/s60_f75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f75.0kHz_S_final.json",
+        "sha256": "e01c827e675d62562fcb8e763022d2d6cdadd34f8b965fe766733b641b76022e"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 901,
+      "x_range_mm": [
+        -31.642791618316423,
+        218.21808586962086
+      ],
+      "beta_range": [
+        -27.785332040735096,
+        2.985923129245185
+      ],
+      "max_growth_error": 9.151935011411546e-12,
+      "max_right_residual": 7.101905216827283e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": 100.0,
+      "component": "S",
+      "zone": "s60_f100.0kHz_S_final",
+      "output_csv": "curves/s60_f100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f100.0kHz_S_final.json",
+        "sha256": "cbb9de4e75154393d5d9d110953da716bf297529b1e003bcb6b8bb0815153b2e"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 765,
+      "x_range_mm": [
+        -30.206668307736635,
+        139.95069205945393
+      ],
+      "beta_range": [
+        -25.042432724217676,
+        4.768893123424086
+      ],
+      "max_growth_error": 8.644839328996663e-12,
+      "max_right_residual": 6.908708590305367e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": 125.0,
+      "component": "S",
+      "zone": "s60_f125.0kHz_S_final",
+      "output_csv": "curves/s60_f125.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f125.0kHz_S_final.json",
+        "sha256": "b4629272ef2aee1eae907954cf184f046d2fc6ffc0fbbc06785a410ab77d5cca"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 669,
+      "x_range_mm": [
+        -28.388277157493604,
+        94.59142711691156
+      ],
+      "beta_range": [
+        -21.955267044914287,
+        6.425509601567216
+      ],
+      "max_growth_error": 9.897596804040171e-12,
+      "max_right_residual": 6.822423736371014e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": 150.0,
+      "component": "S",
+      "zone": "s60_f150.0kHz_S_final",
+      "output_csv": "curves/s60_f150.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f150.0kHz_S_final.json",
+        "sha256": "4950773111853cd8dd606d522c0a062b8f13dacac0377b09b4edf03eef1e17a1"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 573,
+      "x_range_mm": [
+        -26.114998502235,
+        63.05094791714977
+      ],
+      "beta_range": [
+        -18.315294788673466,
+        7.942234854726272
+      ],
+      "max_growth_error": 9.964725778550846e-12,
+      "max_right_residual": 6.574052831093085e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": 175.0,
+      "component": "S",
+      "zone": "s60_f175.0kHz_S_final",
+      "output_csv": "curves/s60_f175.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f175.0kHz_S_final.json",
+        "sha256": "16507b67fc2128763add5d58df725c1c787ea1194f24530d8c09fd58ea4875e1"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 469,
+      "x_range_mm": [
+        -23.431547449806175,
+        38.93316318919818
+      ],
+      "beta_range": [
+        -13.81751138935016,
+        9.30113238974115
+      ],
+      "max_growth_error": 9.710875563271789e-12,
+      "max_right_residual": 6.169103061285862e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": 200.0,
+      "component": "S",
+      "zone": "s60_f200.0kHz_S_final",
+      "output_csv": "curves/s60_f200.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f200.0kHz_S_final.json",
+        "sha256": "3815807158332d74475d2f51e99a8ad798931862264995cebb17521cf9c07104"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 333,
+      "x_range_mm": [
+        -20.54843343782503,
+        17.99440264847025
+      ],
+      "beta_range": [
+        -8.498304429595592,
+        10.421163510691079
+      ],
+      "max_growth_error": 1.485605455110968e-11,
+      "max_right_residual": 8.931241114286336e-13
+    },
+    {
+      "angle": 60,
+      "f_kHz": 230.0,
+      "component": "S",
+      "zone": "s60_f230.0kHz_S_final",
+      "output_csv": "curves/s60_f230.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f230.0kHz_S_final.json",
+        "sha256": "53a3a2a8aad89e90aec2c51e8115c4e742e451209fe8867ad3d080d7543de434"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 169,
+      "x_range_mm": [
+        -16.499474173666034,
+        1.6896506993865208
+      ],
+      "beta_range": [
+        -1.9837818357083123,
+        11.19687513638853
+      ],
+      "max_growth_error": 9.47975480646986e-12,
+      "max_right_residual": 4.325933349722968e-14
+    },
+    {
+      "angle": 60,
+      "f_kHz": 250.0,
+      "component": "S",
+      "zone": "s60_f250.0kHz_S_final",
+      "output_csv": "curves/s60_f250.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s60_f250.0kHz_S_final.json",
+        "sha256": "a14e12ce07256ee302a0fd16151ba8b553555b001e8f0fa7002d4dbfd4f260c1"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 103,
+      "x_range_mm": [
+        -12.329977145814581,
+        -1.2879692920715993
+      ],
+      "beta_range": [
+        3.049928234550394,
+        10.705498935052198
+      ],
+      "max_growth_error": 7.881019385361637e-12,
+      "max_right_residual": 5.76396326311825e-13
+    },
+    {
+      "angle": 65,
+      "f_kHz": -112.0,
+      "component": "S",
+      "zone": "s65_f-112.0kHz_S_final",
+      "output_csv": "curves/s65_f-112.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f-112.0kHz_S_final.json",
+        "sha256": "1b5c12f905e327805b3363309a88b65b38c8d0e78a68a580e2c4d9886a2524a3"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 203,
+      "x_range_mm": [
+        -34.248139602699624,
+        -22.879557194764736
+      ],
+      "beta_range": [
+        -33.5916750505009,
+        -23.58481215701329
+      ],
+      "max_growth_error": 9.527680691277843e-12,
+      "max_right_residual": 3.929664260036008e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": -110.0,
+      "component": "S",
+      "zone": "s65_f-110.0kHz_S_final",
+      "output_csv": "curves/s65_f-110.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f-110.0kHz_S_final.json",
+        "sha256": "7c731756611e520d593925d7647e62042630bbaecb2ae2ef230087cb58708a74"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 213,
+      "x_range_mm": [
+        -34.366702952550014,
+        -22.24811284948778
+      ],
+      "beta_range": [
+        -33.616201205967016,
+        -23.001541723728927
+      ],
+      "max_growth_error": 7.87673372965264e-11,
+      "max_right_residual": 1.2406378362386162e-12
+    },
+    {
+      "angle": 65,
+      "f_kHz": -100.0,
+      "component": "S",
+      "zone": "s65_f-100.0kHz_S_final",
+      "output_csv": "curves/s65_f-100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f-100.0kHz_S_final.json",
+        "sha256": "d731a05215546e38b85af7fb8ecacad6979f0fd531c88ddb9f1cec3610b24e2f"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 265,
+      "x_range_mm": [
+        -34.72903420398052,
+        -19.260096873254902
+      ],
+      "beta_range": [
+        -33.518809880658274,
+        -20.385256877875303
+      ],
+      "max_growth_error": 9.578697289648226e-12,
+      "max_right_residual": 3.861528497794256e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": -75.0,
+      "component": "F1",
+      "zone": "s65_f-75.0kHz_F1_final",
+      "output_csv": "curves/s65_f-75.0kHz_F1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f-75.0kHz_F1_final.json",
+        "sha256": "7057f0a502772d5c7a3c1d69a84958ae8670f908658de30879642358e229be04"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 355,
+      "x_range_mm": [
+        -34.93922983078652,
+        -12.197339121467369
+      ],
+      "beta_range": [
+        -32.45189918779683,
+        -15.181764623244165
+      ],
+      "max_growth_error": 1.161813482647371e-11,
+      "max_right_residual": 5.872608170967216e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": -75.0,
+      "component": "S",
+      "zone": "s65_f-75.0kHz_S_final",
+      "output_csv": "curves/s65_f-75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f-75.0kHz_S_final.json",
+        "sha256": "08804237fd471f8e7fb04f7e6c1843ed130b1a4aed80787846d643552e09ccfc"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 257,
+      "x_range_mm": [
+        21.64749317479726,
+        120.8942828861189
+      ],
+      "beta_range": [
+        -20.44887068457379,
+        -13.129355586883033
+      ],
+      "max_growth_error": 7.387337541930326e-12,
+      "max_right_residual": 8.286196976892805e-15
+    },
+    {
+      "angle": 65,
+      "f_kHz": -50.0,
+      "component": "S",
+      "zone": "s65_f-50.0kHz_S_final",
+      "output_csv": "curves/s65_f-50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f-50.0kHz_S_final.json",
+        "sha256": "2736a96687ae9a83630436d9e95b29d1dca42d5023e0ab0d64c4bf06f198fe3c"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 413,
+      "x_range_mm": [
+        -34.84487695848481,
+        -4.690211321814084
+      ],
+      "beta_range": [
+        -30.820704079964408,
+        -10.692793639815362
+      ],
+      "max_growth_error": 1.704812999637674e-11,
+      "max_right_residual": 1.1558231076559966e-12
+    },
+    {
+      "angle": 65,
+      "f_kHz": -25.0,
+      "component": "S",
+      "zone": "s65_f-25.0kHz_S_final",
+      "output_csv": "curves/s65_f-25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f-25.0kHz_S_final.json",
+        "sha256": "591ece474f0a220c186c572960da4cf2fd1c2b668e052b4202f6de6af5e12143"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1569,
+      "x_range_mm": [
+        -34.628065577966574,
+        937.6628633099698
+      ],
+      "beta_range": [
+        -28.88767440024981,
+        -3.68787552835756
+      ],
+      "max_growth_error": 4.994358128456421e-11,
+      "max_right_residual": 4.795504479281721e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": 0.0,
+      "component": "S",
+      "zone": "s65_f0.0kHz_S_final",
+      "output_csv": "curves/s65_f0.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f0.0kHz_S_final.json",
+        "sha256": "8094b100f3094f326a445faaf1098d6f0e37419138db1c5276076600496a83c5"
+      },
+      "closed": false,
+      "method": "wall_local_consistent",
+      "original_check_count": 12,
+      "physical_tip_count": 1,
+      "points": 1621,
+      "x_range_mm": [
+        -34.317987372379505,
+        1100.0000000000084
+      ],
+      "beta_range": [
+        -26.756824262657418,
+        -0.1261854788274794
+      ],
+      "max_growth_error": 9.733792828513903e-12,
+      "max_right_residual": 3.300495800287833e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": 25.0,
+      "component": "S",
+      "zone": "s65_f25.0kHz_S_final",
+      "output_csv": "curves/s65_f25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f25.0kHz_S_final.json",
+        "sha256": "2cbf5f1e1a02ccf322a2589eb0973b5f888449d4630e65ddf8032f24c2c6f1a8"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1541,
+      "x_range_mm": [
+        -33.73947753861633,
+        960.4147647070994
+      ],
+      "beta_range": [
+        -24.482078135758258,
+        0.6617465081354225
+      ],
+      "max_growth_error": 9.768747205644363e-12,
+      "max_right_residual": 3.0922034937077894e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": 50.0,
+      "component": "S",
+      "zone": "s65_f50.0kHz_S_final",
+      "output_csv": "curves/s65_f50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f50.0kHz_S_final.json",
+        "sha256": "9cd9bd1b2e610f8c96d1a1effb405bffcd9569ea919383c5f6da7a7b0346acff"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1143,
+      "x_range_mm": [
+        -32.88595947918669,
+        398.37969752771875
+      ],
+      "beta_range": [
+        -22.08744419808098,
+        2.063133619304024
+      ],
+      "max_growth_error": 9.882482473305965e-12,
+      "max_right_residual": 3.06115478494514e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": 75.0,
+      "component": "S",
+      "zone": "s65_f75.0kHz_S_final",
+      "output_csv": "curves/s65_f75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f75.0kHz_S_final.json",
+        "sha256": "a3377be9d3c1ddd3606bc65abb896530504d3fa93a16dfc08247171864ec8834"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 915,
+      "x_range_mm": [
+        -31.798785469644557,
+        225.8014052539394
+      ],
+      "beta_range": [
+        -19.577285485418912,
+        4.039942850719638
+      ],
+      "max_growth_error": 5.009310937400439e-11,
+      "max_right_residual": 9.62920142295884e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": 100.0,
+      "component": "S",
+      "zone": "s65_f100.0kHz_S_final",
+      "output_csv": "curves/s65_f100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f100.0kHz_S_final.json",
+        "sha256": "acd2bf2bf62f8a85c4604e7d77e06d95ecec3e821c98aefd2861d479d22fbe19"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 781,
+      "x_range_mm": [
+        -30.461945140443653,
+        148.50991754239297
+      ],
+      "beta_range": [
+        -16.93069874793006,
+        6.040499520155674
+      ],
+      "max_growth_error": 9.892429887229686e-12,
+      "max_right_residual": 2.938975832450234e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": 125.0,
+      "component": "S",
+      "zone": "s65_f125.0kHz_S_final",
+      "output_csv": "curves/s65_f125.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f125.0kHz_S_final.json",
+        "sha256": "ae8bbd2f1ababafd50c06b510558c224a42af0ef7a2d12124f7cc26ade734cd0"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 691,
+      "x_range_mm": [
+        -28.85685099835138,
+        104.33897054444303
+      ],
+      "beta_range": [
+        -14.091237659655857,
+        7.962807119065747
+      ],
+      "max_growth_error": 9.80174890758429e-12,
+      "max_right_residual": 3.1000812872089555e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": 150.0,
+      "component": "S",
+      "zone": "s65_f150.0kHz_S_final",
+      "output_csv": "curves/s65_f150.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f150.0kHz_S_final.json",
+        "sha256": "1a31f4231c0592c2860593b23573721236f1987638fe6695a69c7acf6c0823f3"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 611,
+      "x_range_mm": [
+        -26.99983475768329,
+        74.91734084373842
+      ],
+      "beta_range": [
+        -10.963300625062331,
+        9.802029019600276
+      ],
+      "max_growth_error": 9.95232201391932e-12,
+      "max_right_residual": 3.7491074559290614e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": 175.0,
+      "component": "S",
+      "zone": "s65_f175.0kHz_S_final",
+      "output_csv": "curves/s65_f175.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f175.0kHz_S_final.json",
+        "sha256": "e9aa432a164407a540b0c90692389361066c7e3d65a70f80b2e68efcb4bd54bf"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 531,
+      "x_range_mm": [
+        -24.971367880611357,
+        52.751536915852036
+      ],
+      "beta_range": [
+        -7.4534924979869395,
+        11.548473359191334
+      ],
+      "max_growth_error": 1.885792840730031e-11,
+      "max_right_residual": 1.1564302285552765e-12
+    },
+    {
+      "angle": 65,
+      "f_kHz": 200.0,
+      "component": "S",
+      "zone": "s65_f200.0kHz_S_final",
+      "output_csv": "curves/s65_f200.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f200.0kHz_S_final.json",
+        "sha256": "39c6d72f4e04beaf8d8548854aa53340c56ed15e3dac82a12e3bd466468f26f7"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 443,
+      "x_range_mm": [
+        -22.823507248637306,
+        34.611153378198644
+      ],
+      "beta_range": [
+        -3.6174077992770584,
+        13.181149158948992
+      ],
+      "max_growth_error": 4.323464721386126e-11,
+      "max_right_residual": 7.752335729013114e-12
+    },
+    {
+      "angle": 65,
+      "f_kHz": 230.0,
+      "component": "S",
+      "zone": "s65_f230.0kHz_S_final",
+      "output_csv": "curves/s65_f230.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f230.0kHz_S_final.json",
+        "sha256": "e4f43b99815eb44e7439f3b961b53a50c2bb776257143363d1039339bb222df5"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 315,
+      "x_range_mm": [
+        -19.925115635243607,
+        16.131224579636488
+      ],
+      "beta_range": [
+        1.1611539347244382,
+        14.9201243742935
+      ],
+      "max_growth_error": 9.890893845491635e-12,
+      "max_right_residual": 2.2430698320047956e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": 250.0,
+      "component": "S",
+      "zone": "s65_f250.0kHz_S_final",
+      "output_csv": "curves/s65_f250.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f250.0kHz_S_final.json",
+        "sha256": "a24d94fe5d7e8c058d284121659f460f04d902fefc622f2198f1709ce42c912e"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 219,
+      "x_range_mm": [
+        -17.556487734684826,
+        6.436641653425927
+      ],
+      "beta_range": [
+        4.498672793511787,
+        15.854245055629537
+      ],
+      "max_growth_error": 2.496319176927392e-11,
+      "max_right_residual": 2.7011637214372466e-12
+    },
+    {
+      "angle": 65,
+      "f_kHz": 264.53,
+      "component": "S",
+      "zone": "s65_f264.53kHz_S_final",
+      "output_csv": "curves/s65_f264.53kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f264.53kHz_S_final.json",
+        "sha256": "d6431de904508e98375fab57896dbb71361a20a10a6892f773b32071981afae7"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 151,
+      "x_range_mm": [
+        -15.364848000007559,
+        1.1450182279330063
+      ],
+      "beta_range": [
+        7.148232841914383,
+        16.29311104412477
+      ],
+      "max_growth_error": 1.019043394892546e-10,
+      "max_right_residual": 1.8495733152280748e-14
+    },
+    {
+      "angle": 65,
+      "f_kHz": 275.0,
+      "component": "S",
+      "zone": "s65_f275.0kHz_S_final",
+      "output_csv": "curves/s65_f275.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s65_f275.0kHz_S_final.json",
+        "sha256": "db03a60b6ec2c666645e58de68985708391c7c743cbdeb872c58103f0d0b45c3"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 117,
+      "x_range_mm": [
+        -13.268273662775988,
+        -0.6098111315984008
+      ],
+      "beta_range": [
+        9.334060594150818,
+        16.314349105946295
+      ],
+      "max_growth_error": 1.355417082608386e-10,
+      "max_right_residual": 1.3990920365729057e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": -112.0,
+      "component": "S",
+      "zone": "s70_f-112.0kHz_S_final",
+      "output_csv": "curves/s70_f-112.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f-112.0kHz_S_final.json",
+        "sha256": "8b94f5e90695515db19b3bf95c8db3aa309a72d8ffc783531ca169b41f82287a"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 35,
+      "x_range_mm": [
+        -33.26370051148837,
+        -24.360508619708327
+      ],
+      "beta_range": [
+        -27.589410942540056,
+        -22.06795272020561
+      ],
+      "max_growth_error": 8.472191926229908e-11,
+      "max_right_residual": 5.78967288349476e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": -110.0,
+      "component": "S",
+      "zone": "s70_f-110.0kHz_S_final",
+      "output_csv": "curves/s70_f-110.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f-110.0kHz_S_final.json",
+        "sha256": "d8462c53857f716fb05aa75103febb70b3a37c450eefdd036d4d074aa1e91184"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 37,
+      "x_range_mm": [
+        -33.540421270324366,
+        -23.558238342644827
+      ],
+      "beta_range": [
+        -27.62855168133232,
+        -21.45549263018972
+      ],
+      "max_growth_error": 3.326637465845169e-11,
+      "max_right_residual": 6.021521224212322e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": -100.0,
+      "component": "S",
+      "zone": "s70_f-100.0kHz_S_final",
+      "output_csv": "curves/s70_f-100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f-100.0kHz_S_final.json",
+        "sha256": "bad22a00bcca3a692a4d2e98f0d6a67b0a082450b6c3eaebbbbea57a4e44b510"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 53,
+      "x_range_mm": [
+        -34.38669340761113,
+        -20.13341481815154
+      ],
+      "beta_range": [
+        -27.542233751443266,
+        -18.816571645173916
+      ],
+      "max_growth_error": 7.523711977902635e-12,
+      "max_right_residual": 5.794950636008462e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": -75.0,
+      "component": "F1",
+      "zone": "s70_f-75.0kHz_F1_final",
+      "output_csv": "curves/s70_f-75.0kHz_F1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f-75.0kHz_F1_final.json",
+        "sha256": "949dd22181b2995daa91325d63d27a0d25088aadfac9e1dbaa39ef85213ea6f1"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 75,
+      "x_range_mm": [
+        -34.948497256875434,
+        -12.994585058959169
+      ],
+      "beta_range": [
+        -26.265661531653834,
+        -13.564716828841515
+      ],
+      "max_growth_error": 5.419147189334397e-11,
+      "max_right_residual": 6.100577473182586e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": -75.0,
+      "component": "S",
+      "zone": "s70_f-75.0kHz_S_final",
+      "output_csv": "curves/s70_f-75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f-75.0kHz_S_final.json",
+        "sha256": "191839c23dc28c2d026445bfd11ba32e822e1b4107ab594a1ed2921693a464f6"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 31,
+      "x_range_mm": [
+        25.14592036479247,
+        78.99577142503705
+      ],
+      "beta_range": [
+        -17.514141627560885,
+        -13.472460264533137
+      ],
+      "max_growth_error": 1.326228656974059e-11,
+      "max_right_residual": 2.0030481362098366e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": -50.0,
+      "component": "S",
+      "zone": "s70_f-50.0kHz_S_final",
+      "output_csv": "curves/s70_f-50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f-50.0kHz_S_final.json",
+        "sha256": "f1181ea28bfca78cebc5cb71e5830bfdd13622ad272caa6f5eac828f2b878b5f"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 89,
+      "x_range_mm": [
+        -34.93780529208702,
+        -5.903128230562792
+      ],
+      "beta_range": [
+        -24.433083655412894,
+        -9.38597930091862
+      ],
+      "max_growth_error": 2.781318621682085e-11,
+      "max_right_residual": 5.141016621861253e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": -25.0,
+      "component": "S",
+      "zone": "s70_f-25.0kHz_S_final",
+      "output_csv": "curves/s70_f-25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f-25.0kHz_S_final.json",
+        "sha256": "e86390ec283b524be6dccbdd0f12555e3692591e5bf79295ce6657af60c71113"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 211,
+      "x_range_mm": [
+        -34.67463515257009,
+        636.9856705273878
+      ],
+      "beta_range": [
+        -22.3110531679963,
+        -3.6864493630285358
+      ],
+      "max_growth_error": 1.072603576240647e-11,
+      "max_right_residual": 3.901029512363967e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": 0.0,
+      "component": "S",
+      "zone": "s70_f0.0kHz_S_final",
+      "output_csv": "curves/s70_f0.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f0.0kHz_S_final.json",
+        "sha256": "bc35ff8d5d5b592f23682b94ed5b6a118156f96c1f8c9d4b6c8ad31a198e4a57"
+      },
+      "closed": false,
+      "method": "wall_local_consistent",
+      "original_check_count": 12,
+      "physical_tip_count": 1,
+      "points": 289,
+      "x_range_mm": [
+        -34.31678610018938,
+        3499.9999999999995
+      ],
+      "beta_range": [
+        -20.020126027351317,
+        -0.06730504142197041
+      ],
+      "max_growth_error": 9.897667097886728e-12,
+      "max_right_residual": 3.769756245197571e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": 25.0,
+      "component": "S",
+      "zone": "s70_f25.0kHz_S_final",
+      "output_csv": "curves/s70_f25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f25.0kHz_S_final.json",
+        "sha256": "54e8bd812b286e2862f2eb9b694de918fcde1f6aaa4ed0959195bdac61905900"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 189,
+      "x_range_mm": [
+        -33.66718319151652,
+        427.9358958486055
+      ],
+      "beta_range": [
+        -17.61590695844763,
+        1.100846039220997
+      ],
+      "max_growth_error": 2.762403121944704e-11,
+      "max_right_residual": 2.9642935934114483e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": 50.0,
+      "component": "S",
+      "zone": "s70_f50.0kHz_S_final",
+      "output_csv": "curves/s70_f50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f50.0kHz_S_final.json",
+        "sha256": "f97a62f60df8e1413e05448d598366180ef6498b3e146020f64205c738b649b0"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 163,
+      "x_range_mm": [
+        -32.735305301961276,
+        195.90198134658775
+      ],
+      "beta_range": [
+        -15.122454131944298,
+        2.8581011886753327
+      ],
+      "max_growth_error": 7.466662815419982e-12,
+      "max_right_residual": 2.520364199508724e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": 75.0,
+      "component": "S",
+      "zone": "s70_f75.0kHz_S_final",
+      "output_csv": "curves/s70_f75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f75.0kHz_S_final.json",
+        "sha256": "2a217497f68414efe0fff0e37e9b9c1e9f616dd61e13d673cfeeaf650753230d"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 145,
+      "x_range_mm": [
+        -31.580385729239282,
+        124.16039558811424
+      ],
+      "beta_range": [
+        -12.550141479161091,
+        5.0379583218454105
+      ],
+      "max_growth_error": 1.676033538091872e-11,
+      "max_right_residual": 2.7531949858170407e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": 100.0,
+      "component": "S",
+      "zone": "s70_f100.0kHz_S_final",
+      "output_csv": "curves/s70_f100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f100.0kHz_S_final.json",
+        "sha256": "e0fc1df183e37ac94715e5a6c2ca8cb87b66dfa76b3244a637fc9f4645319012"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 133,
+      "x_range_mm": [
+        -30.196941943633444,
+        87.21634001823799
+      ],
+      "beta_range": [
+        -9.893304679280199,
+        7.216031619463084
+      ],
+      "max_growth_error": 6.492619999831463e-11,
+      "max_right_residual": 2.964841145507237e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": 125.0,
+      "component": "S",
+      "zone": "s70_f125.0kHz_S_final",
+      "output_csv": "curves/s70_f125.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f125.0kHz_S_final.json",
+        "sha256": "b36d937ad0e7f2580607808b2d034379c74f00c889eda497c3afc2ea513f4eaa"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 119,
+      "x_range_mm": [
+        -28.60397402465338,
+        63.43348817594814
+      ],
+      "beta_range": [
+        -7.109809505756377,
+        9.317029203425475
+      ],
+      "max_growth_error": 8.335187442865856e-12,
+      "max_right_residual": 2.6537397906421076e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": 150.0,
+      "component": "S",
+      "zone": "s70_f150.0kHz_S_final",
+      "output_csv": "curves/s70_f150.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f150.0kHz_S_final.json",
+        "sha256": "faf297beea641b2653d0ab6b0a93906156dda36570d744edb270cc5912590d81"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 107,
+      "x_range_mm": [
+        -26.8627524655966,
+        46.839034569580676
+      ],
+      "beta_range": [
+        -4.139320670594106,
+        11.332031088370211
+      ],
+      "max_growth_error": 7.192351681698242e-11,
+      "max_right_residual": 2.9605640569140837e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": 175.0,
+      "component": "S",
+      "zone": "s70_f175.0kHz_S_final",
+      "output_csv": "curves/s70_f175.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f175.0kHz_S_final.json",
+        "sha256": "a57ce1b1814932c4c6c682ee28892165d212475e423cb853cca9923b97721aae"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 93,
+      "x_range_mm": [
+        -24.9443968784241,
+        33.26408478704866
+      ],
+      "beta_range": [
+        -0.9461330213000919,
+        13.242139415837826
+      ],
+      "max_growth_error": 8.525387047088765e-12,
+      "max_right_residual": 1.8810234769363473e-13
+    },
+    {
+      "angle": 70,
+      "f_kHz": 200.0,
+      "component": "S",
+      "zone": "s70_f200.0kHz_S_final",
+      "output_csv": "curves/s70_f200.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f200.0kHz_S_final.json",
+        "sha256": "762d5b7f6cb3a967b848f692f6638a848d99aabc6c68ee311bf99474d65d2d78"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 79,
+      "x_range_mm": [
+        -22.862873837710858,
+        21.705741427634898
+      ],
+      "beta_range": [
+        2.4153848526329464,
+        15.00327090390024
+      ],
+      "max_growth_error": 1.357717786063813e-10,
+      "max_right_residual": 4.838850339882494e-12
+    },
+    {
+      "angle": 70,
+      "f_kHz": 230.0,
+      "component": "S",
+      "zone": "s70_f230.0kHz_S_final",
+      "output_csv": "curves/s70_f230.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f230.0kHz_S_final.json",
+        "sha256": "50fe2f558b136ae85d4bcd22cb1ed7792965b1674bd75c07da37c885e6d1f0a6"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 57,
+      "x_range_mm": [
+        -20.065918301959723,
+        8.929288671152905
+      ],
+      "beta_range": [
+        6.707396447432789,
+        16.823032510025623
+      ],
+      "max_growth_error": 1.272555352328181e-11,
+      "max_right_residual": 8.939781003822755e-14
+    },
+    {
+      "angle": 70,
+      "f_kHz": 250.0,
+      "component": "S",
+      "zone": "s70_f250.0kHz_S_final",
+      "output_csv": "curves/s70_f250.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f250.0kHz_S_final.json",
+        "sha256": "0ceabafe0d591afc3fb1bb74522279ff83e70432dc14c39e2f37418eb7a2c6da"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 37,
+      "x_range_mm": [
+        -17.726240920432165,
+        -0.4381270728554669
+      ],
+      "beta_range": [
+        9.832968819871432,
+        17.731881936928005
+      ],
+      "max_growth_error": 1.030499365713977e-11,
+      "max_right_residual": 7.20509428688199e-14
+    },
+    {
+      "angle": 70,
+      "f_kHz": 264.53,
+      "component": "S",
+      "zone": "s70_f264.53kHz_S_final",
+      "output_csv": "curves/s70_f264.53kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f264.53kHz_S_final.json",
+        "sha256": "10a094a9386f547f586191369242f00fe2b1e85d0a09b765452eaf2737b90cd5"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 25,
+      "x_range_mm": [
+        -15.311171864946735,
+        -3.318594061568468
+      ],
+      "beta_range": [
+        12.418418422917759,
+        18.06784163207444
+      ],
+      "max_growth_error": 1.613460391645383e-10,
+      "max_right_residual": 8.64818453939366e-14
+    },
+    {
+      "angle": 70,
+      "f_kHz": 275.0,
+      "component": "S",
+      "zone": "s70_f275.0kHz_S_final",
+      "output_csv": "curves/s70_f275.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s70_f275.0kHz_S_final.json",
+        "sha256": "ff4fcbadb7a73ac98c77ad1789a818fa422266080210db50f9d226f50da72fc6"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 15,
+      "x_range_mm": [
+        -12.323353315615526,
+        -5.929447095204275
+      ],
+      "beta_range": [
+        14.728448908890678,
+        17.816343312120352
+      ],
+      "max_growth_error": 1.078812936832115e-10,
+      "max_right_residual": 1.3985226089825191e-11
+    },
+    {
+      "angle": 73,
+      "f_kHz": -200.0,
+      "component": "F1",
+      "zone": "s73_f-200.0kHz_F1_final",
+      "output_csv": "curves/s73_f-200.0kHz_F1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-200.0kHz_F1_final.json",
+        "sha256": "37833be38915d1b4e08542f3e199e1440866714817858f7bf21cf3bd7aedb4c1"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 57,
+      "x_range_mm": [
+        -4.3153712971092215,
+        1.9432688577464061
+      ],
+      "beta_range": [
+        -31.699084287630907,
+        -26.258912296953127
+      ],
+      "max_growth_error": 3.108932181732158e-11,
+      "max_right_residual": 3.926080886030039e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": -150.0,
+      "component": "F1",
+      "zone": "s73_f-150.0kHz_F1_final",
+      "output_csv": "curves/s73_f-150.0kHz_F1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-150.0kHz_F1_final.json",
+        "sha256": "4d6099a9ab0230bc54bb45a41c6884c36a52f26de5d94951e384e844bdce7f39"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 173,
+      "x_range_mm": [
+        -0.22886423409335543,
+        23.116456249414664
+      ],
+      "beta_range": [
+        -25.579632310596907,
+        -17.36360345433303
+      ],
+      "max_growth_error": 1.303283007978346e-10,
+      "max_right_residual": 1.73411883776577e-13
+    },
+    {
+      "angle": 73,
+      "f_kHz": -112.0,
+      "component": "F1",
+      "zone": "s73_f-112.0kHz_F1_final",
+      "output_csv": "curves/s73_f-112.0kHz_F1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-112.0kHz_F1_final.json",
+        "sha256": "cdfc0e759a79422b73853929ae452e101c4f98ecb795a7883e7258bb4cf4e5b5"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 247,
+      "x_range_mm": [
+        13.7865220818296,
+        82.89890910240548
+      ],
+      "beta_range": [
+        -19.494656751812833,
+        -12.15951689980331
+      ],
+      "max_growth_error": 9.545518892243046e-12,
+      "max_right_residual": 2.7908134096265147e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": -112.0,
+      "component": "S",
+      "zone": "s73_f-112.0kHz_S_final",
+      "output_csv": "curves/s73_f-112.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-112.0kHz_S_final.json",
+        "sha256": "6068e5f7b850c645d0588f5a3ec6e5d8b1a665e9b481744167f57054068cc4e8"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 133,
+      "x_range_mm": [
+        -32.476815404464475,
+        -24.22848185006793
+      ],
+      "beta_range": [
+        -24.874266526521204,
+        -21.026227191038355
+      ],
+      "max_growth_error": 3.62332395110065e-11,
+      "max_right_residual": 2.6632830486188406e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": -110.0,
+      "component": "F1",
+      "zone": "s73_f-110.0kHz_F1_final",
+      "output_csv": "curves/s73_f-110.0kHz_F1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-110.0kHz_F1_final.json",
+        "sha256": "8574d42fdf8753af3eb01dd499726a74c2078bb411a6bbbcc1389a18be83a3d6"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 247,
+      "x_range_mm": [
+        15.198723632380371,
+        88.10932505781976
+      ],
+      "beta_range": [
+        -19.18826518929295,
+        -11.907998531421528
+      ],
+      "max_growth_error": 1.640074209475661e-10,
+      "max_right_residual": 2.9683468164809853e-13
+    },
+    {
+      "angle": 73,
+      "f_kHz": -110.0,
+      "component": "S",
+      "zone": "s73_f-110.0kHz_S_final",
+      "output_csv": "curves/s73_f-110.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-110.0kHz_S_final.json",
+        "sha256": "66ef1977d2bdc30f05a668a6fed28f21aca6074d77014a8da770ad54370b0afa"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 153,
+      "x_range_mm": [
+        -32.89656397417208,
+        -23.281572687658674
+      ],
+      "beta_range": [
+        -24.91336679050559,
+        -20.433230739666527
+      ],
+      "max_growth_error": 1.963831393817608e-10,
+      "max_right_residual": 1.514376020773622e-12
+    },
+    {
+      "angle": 73,
+      "f_kHz": -100.0,
+      "component": "P1",
+      "zone": "s73_f-100.0kHz_P1_final",
+      "output_csv": "curves/s73_f-100.0kHz_P1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-100.0kHz_P1_final.json",
+        "sha256": "f9233391ff6ee5eb310bd85daed6db7deeec863257330c75e12c160425dbc665"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 243,
+      "x_range_mm": [
+        23.61634698874915,
+        118.0503867105303
+      ],
+      "beta_range": [
+        -18.59178195747856,
+        -10.681563874188228
+      ],
+      "max_growth_error": 1.106166970751288e-11,
+      "max_right_residual": 1.9129349966748598e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": -100.0,
+      "component": "S",
+      "zone": "s73_f-100.0kHz_S_final",
+      "output_csv": "curves/s73_f-100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-100.0kHz_S_final.json",
+        "sha256": "e773c1507325269ebf98576d354e790c26f9b46155a0b9a0bb8dba8979a94d91"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 235,
+      "x_range_mm": [
+        -34.1336264198161,
+        -19.313027931490065
+      ],
+      "beta_range": [
+        -24.717158965601207,
+        -17.86625074597753
+      ],
+      "max_growth_error": 3.254321029910206e-11,
+      "max_right_residual": 2.8517885930293477e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": -75.0,
+      "component": "P1",
+      "zone": "s73_f-75.0kHz_P1_final",
+      "output_csv": "curves/s73_f-75.0kHz_P1_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-75.0kHz_P1_final.json",
+        "sha256": "7c902624ca470b80c42bf71d709d4b0600154996af8ab1d089b8928ec7c61abb"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 371,
+      "x_range_mm": [
+        -34.95538788509403,
+        -10.874084359434072
+      ],
+      "beta_range": [
+        -23.242310467478934,
+        -12.782235403610159
+      ],
+      "max_growth_error": 6.960453923059031e-11,
+      "max_right_residual": 3.8110120669713845e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": -75.0,
+      "component": "S",
+      "zone": "s73_f-75.0kHz_S_final",
+      "output_csv": "curves/s73_f-75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-75.0kHz_S_final.json",
+        "sha256": "d2501de520b424af4dc9e501d812db498667d0bfbd8067e142fcbdc739dbf52d"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 487,
+      "x_range_mm": [
+        12.63084116677345,
+        243.30398997448606
+      ],
+      "beta_range": [
+        -18.243537192724975,
+        -7.829216565720923
+      ],
+      "max_growth_error": 1.360931254166885e-10,
+      "max_right_residual": 1.4189149391484428e-13
+    },
+    {
+      "angle": 73,
+      "f_kHz": -50.0,
+      "component": "S",
+      "zone": "s73_f-50.0kHz_S_final",
+      "output_csv": "curves/s73_f-50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-50.0kHz_S_final.json",
+        "sha256": "62584dc58403fc36eef29de3f7df42366d959c6876462aae90d6f36e490507f7"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 461,
+      "x_range_mm": [
+        -34.97287176892733,
+        -1.0433038778380377
+      ],
+      "beta_range": [
+        -21.256019205478246,
+        -8.727256955723906
+      ],
+      "max_growth_error": 9.946024666875671e-12,
+      "max_right_residual": 2.7482503386910416e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": -25.0,
+      "component": "S",
+      "zone": "s73_f-25.0kHz_S_final",
+      "output_csv": "curves/s73_f-25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f-25.0kHz_S_final.json",
+        "sha256": "0a9f11dfcc7b85d22021c1167b02d84f4a1211155a3048dabf05ffbf6dadf421"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1545,
+      "x_range_mm": [
+        -34.7314302456057,
+        871.988811963425
+      ],
+      "beta_range": [
+        -19.027996283202,
+        -3.152032244018113
+      ],
+      "max_growth_error": 2.762184799422625e-11,
+      "max_right_residual": 2.8613767968192656e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": 0.0,
+      "component": "S",
+      "zone": "s73_f0.0kHz_S_final",
+      "output_csv": "curves/s73_f0.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f0.0kHz_S_final.json",
+        "sha256": "c8c1d1a876afd256cb9a037a083e4ed89303c08a5cd89435125aad652998e803"
+      },
+      "closed": false,
+      "method": "wall_local_consistent",
+      "original_check_count": 12,
+      "physical_tip_count": 1,
+      "points": 1623,
+      "x_range_mm": [
+        -34.34190301117397,
+        1100.0000000000084
+      ],
+      "beta_range": [
+        -16.65217138608185,
+        -0.11702119137096693
+      ],
+      "max_growth_error": 9.914532660695627e-12,
+      "max_right_residual": 2.359816084945278e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": 25.0,
+      "component": "S",
+      "zone": "s73_f25.0kHz_S_final",
+      "output_csv": "curves/s73_f25.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f25.0kHz_S_final.json",
+        "sha256": "5e68617644a29b13971071b871f98024ca3d6147b6dd4cbb7c661a6a4b2f61e8"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 1101,
+      "x_range_mm": [
+        -33.63668842916738,
+        338.88822464297823
+      ],
+      "beta_range": [
+        -14.175066356674805,
+        1.2175577565709497
+      ],
+      "max_growth_error": 1.59618126578139e-11,
+      "max_right_residual": 2.3519374124092878e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": 50.0,
+      "component": "S",
+      "zone": "s73_f50.0kHz_S_final",
+      "output_csv": "curves/s73_f50.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f50.0kHz_S_final.json",
+        "sha256": "b24de5c21005a560fb9a955134a997cab611a7dbee2c9d18b7a2c5988a6ec38a"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 877,
+      "x_range_mm": [
+        -32.64455187929676,
+        184.5941381187584
+      ],
+      "beta_range": [
+        -11.623448152452758,
+        2.9878796761553557
+      ],
+      "max_growth_error": 2.263008203868809e-11,
+      "max_right_residual": 3.381804019035864e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": 75.0,
+      "component": "S",
+      "zone": "s73_f75.0kHz_S_final",
+      "output_csv": "curves/s73_f75.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f75.0kHz_S_final.json",
+        "sha256": "531ae33b9c04c78a708a33484256c7d3474d00b732daf3d8092d3768338f7cc6"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 10,
+      "physical_tip_count": 2,
+      "points": 769,
+      "x_range_mm": [
+        -31.439747137153542,
+        126.80976360307673
+      ],
+      "beta_range": [
+        -9.01090586889399,
+        5.222981069668689
+      ],
+      "max_growth_error": 1.039656692824075e-11,
+      "max_right_residual": 2.5178051606288907e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": 100.0,
+      "component": "S",
+      "zone": "s73_f100.0kHz_S_final",
+      "output_csv": "curves/s73_f100.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f100.0kHz_S_final.json",
+        "sha256": "d32443003ca51261301aaa90df6366d4f4a35118efe58357d7b374cf2752052b"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 693,
+      "x_range_mm": [
+        -30.046339581769317,
+        93.83588753935824
+      ],
+      "beta_range": [
+        -6.337684803720895,
+        7.4579249468299595
+      ],
+      "max_growth_error": 9.88224637193927e-12,
+      "max_right_residual": 1.9797734670633286e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": 125.0,
+      "component": "S",
+      "zone": "s73_f125.0kHz_S_final",
+      "output_csv": "curves/s73_f125.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f125.0kHz_S_final.json",
+        "sha256": "cfe5e4e40aafc5b366ee0a467bd3d546564485059821a29974a48b94835f901f"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 627,
+      "x_range_mm": [
+        -28.50242050190431,
+        71.53245842678268
+      ],
+      "beta_range": [
+        -3.582797789863441,
+        9.642047285178062
+      ],
+      "max_growth_error": 9.899230825427482e-12,
+      "max_right_residual": 2.054543121514346e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": 150.0,
+      "component": "S",
+      "zone": "s73_f150.0kHz_S_final",
+      "output_csv": "curves/s73_f150.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f150.0kHz_S_final.json",
+        "sha256": "598c392c81478e114b5b03cefe147487c972f7778148a88455b6e85f87f48d66"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 561,
+      "x_range_mm": [
+        -26.851486897778887,
+        54.76422073325287
+      ],
+      "beta_range": [
+        -0.711246164294715,
+        11.779544172565013
+      ],
+      "max_growth_error": 9.981174954446952e-12,
+      "max_right_residual": 8.407327549232017e-13
+    },
+    {
+      "angle": 73,
+      "f_kHz": 175.0,
+      "component": "S",
+      "zone": "s73_f175.0kHz_S_final",
+      "output_csv": "curves/s73_f175.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f175.0kHz_S_final.json",
+        "sha256": "425ff283e6c1061ee86adac667f5eb03db9bce334aff44c3b0882358c17d485b"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 497,
+      "x_range_mm": [
+        -25.102019084887058,
+        41.32683730594378
+      ],
+      "beta_range": [
+        2.288360781820998,
+        13.872995464560931
+      ],
+      "max_growth_error": 1.134297241077762e-11,
+      "max_right_residual": 3.38627685363126e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": 200.0,
+      "component": "S",
+      "zone": "s73_f200.0kHz_S_final",
+      "output_csv": "curves/s73_f200.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f200.0kHz_S_final.json",
+        "sha256": "cd6724a141b5a480dbf80108d6abeaf17720ba885732f74664826e16cb34c2d9"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 427,
+      "x_range_mm": [
+        -23.203429000584258,
+        30.00840040123661
+      ],
+      "beta_range": [
+        5.392167785889834,
+        15.91974710894971
+      ],
+      "max_growth_error": 3.026134543212173e-11,
+      "max_right_residual": 6.279622788336788e-13
+    },
+    {
+      "angle": 73,
+      "f_kHz": 230.0,
+      "component": "S",
+      "zone": "s73_f230.0kHz_S_final",
+      "output_csv": "curves/s73_f230.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f230.0kHz_S_final.json",
+        "sha256": "08126449f6eb6756e11c5bc2abe01a915988f8156735e48fe5bac8cbf23913ba"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 337,
+      "x_range_mm": [
+        -20.59361458093987,
+        18.20090608869636
+      ],
+      "beta_range": [
+        9.246225033841544,
+        18.281553160665073
+      ],
+      "max_growth_error": 9.988200123810836e-12,
+      "max_right_residual": 2.0634506108456384e-13
+    },
+    {
+      "angle": 73,
+      "f_kHz": 250.0,
+      "component": "S",
+      "zone": "s73_f250.0kHz_S_final",
+      "output_csv": "curves/s73_f250.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f250.0kHz_S_final.json",
+        "sha256": "92f697358c759b14bf77edb2fe13c0f84250e3a51c4d753c46cfbc203ed93acb"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 267,
+      "x_range_mm": [
+        -18.51074541463592,
+        11.129172426182857
+      ],
+      "beta_range": [
+        11.933837168374675,
+        19.762029434676272
+      ],
+      "max_growth_error": 3.996900633653225e-11,
+      "max_right_residual": 1.7640610216524041e-12
+    },
+    {
+      "angle": 73,
+      "f_kHz": 264.53,
+      "component": "S",
+      "zone": "s73_f264.53kHz_S_final",
+      "output_csv": "curves/s73_f264.53kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f264.53kHz_S_final.json",
+        "sha256": "b77c0ec8139a92df4f399e029face8d19838a00895f353323d36348d421f93c7"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 209,
+      "x_range_mm": [
+        -16.704337768197266,
+        6.293341060092068
+      ],
+      "beta_range": [
+        13.989048007617615,
+        20.758506096461282
+      ],
+      "max_growth_error": 6.791028705656269e-11,
+      "max_right_residual": 2.4633741097981483e-11
+    },
+    {
+      "angle": 73,
+      "f_kHz": 275.0,
+      "component": "S",
+      "zone": "s73_f275.0kHz_S_final",
+      "output_csv": "curves/s73_f275.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f275.0kHz_S_final.json",
+        "sha256": "9783cf88f29e6181eb712c194b701f80aec3db3b387d80900bd7c26c6460df0d"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 161,
+      "x_range_mm": [
+        -15.13916588256631,
+        2.370745689903133
+      ],
+      "beta_range": [
+        15.558744224152507,
+        21.40315761208244
+      ],
+      "max_growth_error": 1.109453659717858e-10,
+      "max_right_residual": 1.4517831021998926e-14
+    },
+    {
+      "angle": 73,
+      "f_kHz": 290.0,
+      "component": "S",
+      "zone": "s73_f290.0kHz_S_final",
+      "output_csv": "curves/s73_f290.0kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f290.0kHz_S_final.json",
+        "sha256": "5e78b79d04cbddb4d2e3135bfdde0f830357deaebd8c8e68dc95f9e4dbce01fd"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 107,
+      "x_range_mm": [
+        -12.15949248855142,
+        -0.5780143330933887
+      ],
+      "beta_range": [
+        18.065742048859793,
+        22.097000143451588
+      ],
+      "max_growth_error": 8.813915345147959e-11,
+      "max_right_residual": 1.26503412308685e-13
+    },
+    {
+      "angle": 73,
+      "f_kHz": 291.6,
+      "component": "S",
+      "zone": "s73_f291.6kHz_S_final",
+      "output_csv": "curves/s73_f291.6kHz_S_final.csv",
+      "source": {
+        "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/outputs/s73_f291.6kHz_S_final.json",
+        "sha256": "1838d8c559ea24292bdddca4e86b63ae8bb002ee38286580351ba3dfe9251b28"
+      },
+      "closed": true,
+      "method": "wall_local_consistent",
+      "original_check_count": 11,
+      "physical_tip_count": 2,
+      "points": 101,
+      "x_range_mm": [
+        -11.73881077528595,
+        -0.8466808951506227
+      ],
+      "beta_range": [
+        18.36718800855102,
+        22.138722430821613
+      ],
+      "max_growth_error": 1.444099192528661e-11,
+      "max_right_residual": 3.4413437175361014e-12
+    },
+    {
+      "angle": 75,
+      "f_kHz": -240.2,
+      "component": "downstream",
+      "zone": "s75_existing_bluntplate_downstream_f-240.2kHz",
+      "output_csv": "curves/s75_existing_bluntplate_downstream_f-240.2kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_downstream_f-240.2kHz.csv",
+        "sha256": "afc34a48f7f6a2f8c5e81d13cc73c457eed8e4ebde91cf05d9abeae7c980c7a7"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 55,
+      "x_range_mm": [
+        -7.646614650898536,
+        -7.494109107304615
+      ],
+      "beta_range": [
+        -34.3984002837123,
+        -34.25890236346728
+      ],
+      "max_growth_error": 1.4674093645923592e-13,
+      "max_right_residual": 2.1414523863558838e-10
+    },
+    {
+      "angle": 75,
+      "f_kHz": -200.0,
+      "component": "downstream",
+      "zone": "s75_existing_bluntplate_downstream_f-200kHz",
+      "output_csv": "curves/s75_existing_bluntplate_downstream_f-200kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_downstream_f-200kHz.csv",
+        "sha256": "95919d78afc3184b806579338c6d1d3960641dc8dec66177c9819abbb27204c2"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 55,
+      "x_range_mm": [
+        -6.30084321407135,
+        -0.3748434918680218
+      ],
+      "beta_range": [
+        -31.33555495800939,
+        -26.448573241096945
+      ],
+      "max_growth_error": 1.848573527075444e-11,
+      "max_right_residual": 2.270696907913507e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": -150.0,
+      "component": "downstream",
+      "zone": "s75_existing_bluntplate_downstream_f-150kHz",
+      "output_csv": "curves/s75_existing_bluntplate_downstream_f-150kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_downstream_f-150kHz.csv",
+        "sha256": "e29cdcb2259dcf4f43ed4803d0f0d6fd62120b47ec8144344abe71d3a588dfb3"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 145,
+      "x_range_mm": [
+        -2.1417837080309323,
+        15.382879262754141
+      ],
+      "beta_range": [
+        -25.424082153883944,
+        -17.585385042092263
+      ],
+      "max_growth_error": 5.149004257713501e-11,
+      "max_right_residual": 1.6618021515581383e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": -112.0,
+      "component": "downstream",
+      "zone": "s75_existing_bluntplate_downstream_f-112kHz",
+      "output_csv": "curves/s75_existing_bluntplate_downstream_f-112kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_downstream_f-112kHz.csv",
+        "sha256": "20e8a69a5d5806013ed977a0105c05048e420fa4c45848344ca75cdda844d82b"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 237,
+      "x_range_mm": [
+        7.093991991027141,
+        56.296579010000855
+      ],
+      "beta_range": [
+        -19.419949876365635,
+        -12.250297281319824
+      ],
+      "max_growth_error": 2.965492234912517e-11,
+      "max_right_residual": 6.451267638930152e-14
+    },
+    {
+      "angle": 75,
+      "f_kHz": -112.0,
+      "component": "nose",
+      "zone": "s75_existing_bluntplate_nose_f-112kHz",
+      "output_csv": "curves/s75_existing_bluntplate_nose_f-112kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_nose_f-112kHz.csv",
+        "sha256": "67b1f8041a61f6054cef6e90248f3d0a777ab794da87994210e6f004f59a322e"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 85,
+      "x_range_mm": [
+        -30.97742262621202,
+        -25.69119999076778
+      ],
+      "beta_range": [
+        -22.893328355642865,
+        -20.842534560072394
+      ],
+      "max_growth_error": 5.66373239804949e-11,
+      "max_right_residual": 1.640365989634606e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": -110.0,
+      "component": "tracked",
+      "zone": "s75_existing_bluntplate_tracked_f-110kHz",
+      "output_csv": "curves/s75_existing_bluntplate_tracked_f-110kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_tracked_f-110kHz.csv",
+        "sha256": "e10dc4eb0774e98c969da16b4d9f19466110b16c0290cc37fb2df0710b356b47"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 115,
+      "x_range_mm": [
+        -31.749889993448054,
+        -24.359323576282502
+      ],
+      "beta_range": [
+        -23.032503686237938,
+        -20.166671662115508
+      ],
+      "max_growth_error": 6.001000938398631e-12,
+      "max_right_residual": 2.1736574708425504e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": -100.0,
+      "component": "tracked",
+      "zone": "s75_existing_bluntplate_tracked_f-100kHz",
+      "output_csv": "curves/s75_existing_bluntplate_tracked_f-100kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_tracked_f-100kHz.csv",
+        "sha256": "d25c768880cb003734a36b7a0d59d4a0a54bfaaa51f88b913eeca693d2ffb1e8"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 213,
+      "x_range_mm": [
+        -33.611201443122326,
+        -19.64898289491314
+      ],
+      "beta_range": [
+        -22.937699524066268,
+        -17.557843896079692
+      ],
+      "max_growth_error": 7.076280760716226e-12,
+      "max_right_residual": 1.906556630280589e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": -75.0,
+      "component": "tracked",
+      "zone": "s75_existing_bluntplate_tracked_f-75kHz",
+      "output_csv": "curves/s75_existing_bluntplate_tracked_f-75kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_tracked_f-75kHz.csv",
+        "sha256": "35229802cb18f7864609a5006ca9962d9c0d9a069709cc5ebcad9dd93d50333c"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 369,
+      "x_range_mm": [
+        -34.91787156212047,
+        -10.479521095167687
+      ],
+      "beta_range": [
+        -21.4229132842824,
+        -12.445133847161571
+      ],
+      "max_growth_error": 3.916745066973621e-10,
+      "max_right_residual": 3.4858086633532364e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": -50.0,
+      "component": "tracked",
+      "zone": "s75_existing_bluntplate_tracked_f-50kHz",
+      "output_csv": "curves/s75_existing_bluntplate_tracked_f-50kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_tracked_f-50kHz.csv",
+        "sha256": "669d1593d29af00411a5a3bb85fb46317fd087d5ebf0e81fef3e2a537d6c3da4"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 1343,
+      "x_range_mm": [
+        -34.98892474813845,
+        505.2005835938467
+      ],
+      "beta_range": [
+        -19.373214480957643,
+        -5.1643700090401925
+      ],
+      "max_growth_error": 9.613986631991366e-12,
+      "max_right_residual": 3.0099969029661677e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": -25.0,
+      "component": "tracked",
+      "zone": "s75_existing_bluntplate_tracked_f-25kHz",
+      "output_csv": "curves/s75_existing_bluntplate_tracked_f-25kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_tracked_f-25kHz.csv",
+        "sha256": "f3ac1d3b904e4c28ced656f8027ae762c3d7d4b6da80828a6c3baec55f1c8452"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 1445,
+      "x_range_mm": [
+        -34.750683595003615,
+        691.8194555366135
+      ],
+      "beta_range": [
+        -17.084983910981837,
+        -3.1107846279326017
+      ],
+      "max_growth_error": 3.565559652891076e-11,
+      "max_right_residual": 3.241437891182437e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": 0.0,
+      "component": "stationary",
+      "zone": "s75_existing_bluntplate_stationary_f+0kHz",
+      "output_csv": "curves/s75_existing_bluntplate_stationary_f+0kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_stationary_f+0kHz.csv",
+        "sha256": "47d59bf12ab93c71d07b410242e25b1f2f33065df84f77ba00ddf5e3c2363994"
+      },
+      "closed": false,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 1621,
+      "x_range_mm": [
+        -34.320169779708735,
+        1100.0000000000084
+      ],
+      "beta_range": [
+        -14.654059200437773,
+        -0.13193328627824238
+      ],
+      "max_growth_error": 9.991491484897668e-12,
+      "max_right_residual": 2.597860993070587e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": 25.0,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+25kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+25kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+25kHz.csv",
+        "sha256": "e4e043297210f8beba6396d49cbc2e0e7ca51cf9abde2bbfc0fbe56ad0189062"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 927,
+      "x_range_mm": [
+        -33.541189067549205,
+        203.93676144759738
+      ],
+      "beta_range": [
+        -12.124841927918869,
+        1.318345035955569
+      ],
+      "max_growth_error": 9.958084796302679e-12,
+      "max_right_residual": 1.7590186478051272e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": 50.0,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+50kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+50kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+50kHz.csv",
+        "sha256": "4d96ff4e226de39e0283e87938550842b6d7780b30e73583de38d60beea93b49"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 777,
+      "x_range_mm": [
+        -32.458360365742266,
+        118.00335122323152
+      ],
+      "beta_range": [
+        -9.522729128455104,
+        3.1412127321991674
+      ],
+      "max_growth_error": 4.1693340191879e-11,
+      "max_right_residual": 1.8364163691140008e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": 75.0,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+75kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+75kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+75kHz.csv",
+        "sha256": "13f41598430806cb0a18462ce3c8854c4fcb79a6291a871bd30e61f8187c6189"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 687,
+      "x_range_mm": [
+        -31.154652735043165,
+        79.56880993938272
+      ],
+      "beta_range": [
+        -6.867145550221113,
+        5.412570170077407
+      ],
+      "max_growth_error": 4.279249374589609e-11,
+      "max_right_residual": 1.539002455672907e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": 100.0,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+100kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+100kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+100kHz.csv",
+        "sha256": "8a3283e8cddf60c26b44d54e3dfcb17b033539f188c750255065d138ab3b37f1"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 609,
+      "x_range_mm": [
+        -29.660371137474524,
+        56.87647637047764
+      ],
+      "beta_range": [
+        -4.160809195014695,
+        7.675684437535373
+      ],
+      "max_growth_error": 1.154149271857845e-11,
+      "max_right_residual": 1.5011870069831656e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": 125.0,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+125kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+125kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+125kHz.csv",
+        "sha256": "ac8669d541fd00b6622db6d78e2851f9f619b1f48ca0587dee089c22f018770e"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 539,
+      "x_range_mm": [
+        -28.022504895210524,
+        42.34801776565858
+      ],
+      "beta_range": [
+        -1.3816696526267493,
+        9.890922539166016
+      ],
+      "max_growth_error": 9.77883612438119e-12,
+      "max_right_residual": 1.731578231378009e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": 150.0,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+150kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+150kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+150kHz.csv",
+        "sha256": "4069e9f300b94cd6f0803dbb03f58715c78ac3aabcaf3b45525df60f3cdd2bc4"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 475,
+      "x_range_mm": [
+        -26.275977475132752,
+        32.40240364221621
+      ],
+      "beta_range": [
+        1.4988461727298095,
+        12.067668378235972
+      ],
+      "max_growth_error": 9.906791888716845e-12,
+      "max_right_residual": 1.273539576766623e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": 175.0,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+175kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+175kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+175kHz.csv",
+        "sha256": "f69df97c6dc06fa7530a140715013530b5e1eb4c9e6282eeab7e567cb2b0aad4"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 415,
+      "x_range_mm": [
+        -24.405580640223096,
+        24.583867838042647
+      ],
+      "beta_range": [
+        4.488356318758944,
+        14.212319796557974
+      ],
+      "max_growth_error": 9.803609664194254e-12,
+      "max_right_residual": 1.1240457228334653e-13
+    },
+    {
+      "angle": 75,
+      "f_kHz": 200.0,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+200kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+200kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+200kHz.csv",
+        "sha256": "228dd5f85e83023ef08c6f837fc1d4422f43f2602251c053a119b591ee1ce108"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 353,
+      "x_range_mm": [
+        -22.34351232099661,
+        18.115258164687507
+      ],
+      "beta_range": [
+        7.571479680259827,
+        16.31663989669065
+      ],
+      "max_growth_error": 9.83059065429023e-12,
+      "max_right_residual": 8.197051901496799e-14
+    },
+    {
+      "angle": 75,
+      "f_kHz": 250.0,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+250kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+250kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+250kHz.csv",
+        "sha256": "04bd4a949398ba5d0de21678185eb26190cd6ec97f62215744a4ff13ccf38e2a"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 217,
+      "x_range_mm": [
+        -17.0248905033348,
+        6.808479791865156
+      ],
+      "beta_range": [
+        14.113466500158195,
+        20.295553184144254
+      ],
+      "max_growth_error": 9.564874391652933e-13,
+      "max_right_residual": 4.727129851988357e-10
+    },
+    {
+      "angle": 75,
+      "f_kHz": 275.0,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+275kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+275kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+275kHz.csv",
+        "sha256": "caa70bcf02b2bb2578466474184a2945b7a9a924e0e280b1415766d699a5036d"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 127,
+      "x_range_mm": [
+        -12.85560558399668,
+        1.01905606976418
+      ],
+      "beta_range": [
+        17.848313633571294,
+        21.934759010633126
+      ],
+      "max_growth_error": 4.857403270840804e-13,
+      "max_right_residual": 4.674227472847896e-10
+    },
+    {
+      "angle": 75,
+      "f_kHz": 290.0,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+290kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+290kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+290kHz.csv",
+        "sha256": "ecd6fe0c27caff49d5cc6c12df8bc38452f9e316a4be9181736f382ea085279f"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 39,
+      "x_range_mm": [
+        -7.756992324820153,
+        -3.691874696199191
+      ],
+      "beta_range": [
+        20.85124687241903,
+        22.087780698284423
+      ],
+      "max_growth_error": 6.004146629206598e-14,
+      "max_right_residual": 3.1617419289905573e-10
+    },
+    {
+      "angle": 75,
+      "f_kHz": 291.6,
+      "component": "positive",
+      "zone": "s75_existing_bluntplate_positive_f+291.6kHz",
+      "output_csv": "curves/s75_existing_bluntplate_positive_f+291.6kHz.csv",
+      "source": {
+        "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027/curves/bluntplate_positive_f+291.6kHz.csv",
+        "sha256": "29ed3fe027c541824bd079b5f008253fdb17bb6369533af3a4903c523334f504"
+      },
+      "closed": true,
+      "method": "existing_75_legacy_wall_local",
+      "original_check_count": null,
+      "physical_tip_count": null,
+      "points": 55,
+      "x_range_mm": [
+        -5.855977282403323,
+        -5.523926391580112
+      ],
+      "beta_range": [
+        21.554421391297154,
+        21.7179513467781
+      ],
+      "max_growth_error": 8.211880916204287e-14,
+      "max_right_residual": 3.407394627102954e-10
+    }
+  ],
+  "method_codes": {
+    "0": "Retained original 75-degree wall_local result",
+    "1": "Current FPP fields with consistent projected-normal derivatives"
+  },
+  "new_angles": [
+    30,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    73
+  ],
+  "reused_angle": 75,
+  "pending_angles": [
+    63,
+    68,
+    80
+  ]
+}

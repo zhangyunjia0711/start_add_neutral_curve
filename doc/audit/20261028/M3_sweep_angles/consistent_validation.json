@@ -1,0 +1,1077 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "kind": "legacy_compatibility",
+      "case": "s75",
+      "station": 119,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "new": {
+        "descriptor": {
+          "case": "s75",
+          "station": 119,
+          "beta": -7.5,
+          "omega": -6.1,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i119_223b00f3ab13/out/P0.petsc",
+            "sha256": "97d03da80c60347776bf807b695a09de32133b2e940cd927b7d7d38bd7a4d10c"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i119_223b00f3ab13/out/P1.petsc",
+            "sha256": "9093f7d7c0a2e118c28d1d386d5b17aadfac80c10523dcd3542568dad5dbbabd"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i119_223b00f3ab13/out/P2.petsc",
+            "sha256": "01d08ab8a677a67e04f6927fa248b1090042a11b006c0bc3f6cc127549d4bea8"
+          }
+        ]
+      },
+      "old": {
+        "descriptor": {
+          "case": "s75",
+          "station": 119,
+          "beta": -7.5,
+          "omega": -6.1,
+          "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i119_01bf176d9aef/out/P0.petsc",
+            "sha256": "97d03da80c60347776bf807b695a09de32133b2e940cd927b7d7d38bd7a4d10c"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i119_01bf176d9aef/out/P1.petsc",
+            "sha256": "9093f7d7c0a2e118c28d1d386d5b17aadfac80c10523dcd3542568dad5dbbabd"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i119_01bf176d9aef/out/P2.petsc",
+            "sha256": "01d08ab8a677a67e04f6927fa248b1090042a11b006c0bc3f6cc127549d4bea8"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "legacy_compatibility",
+      "case": "s75",
+      "station": 680,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "new": {
+        "descriptor": {
+          "case": "s75",
+          "station": 680,
+          "beta": -7.5,
+          "omega": -6.1,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i680_ce28ac462e29/out/P0.petsc",
+            "sha256": "96b3d76d3be18cdfad81229df6e7c4a93e5225f87c7c92c622a3dd335a03cf82"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i680_ce28ac462e29/out/P1.petsc",
+            "sha256": "756d6e68240af88ab693e868779aa333eb94cbe8c6a842aab1ac9e962a25d264"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i680_ce28ac462e29/out/P2.petsc",
+            "sha256": "e362ceac4ab1959f19b93cd4e7e6217499d3c493d74979edc7e543443b4d5a81"
+          }
+        ]
+      },
+      "old": {
+        "descriptor": {
+          "case": "s75",
+          "station": 680,
+          "beta": -7.5,
+          "omega": -6.1,
+          "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i680_a50351406a8d/out/P0.petsc",
+            "sha256": "96b3d76d3be18cdfad81229df6e7c4a93e5225f87c7c92c622a3dd335a03cf82"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i680_a50351406a8d/out/P1.petsc",
+            "sha256": "756d6e68240af88ab693e868779aa333eb94cbe8c6a842aab1ac9e962a25d264"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i680_a50351406a8d/out/P2.petsc",
+            "sha256": "e362ceac4ab1959f19b93cd4e7e6217499d3c493d74979edc7e543443b4d5a81"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "legacy_compatibility",
+      "case": "s75",
+      "station": 681,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "new": {
+        "descriptor": {
+          "case": "s75",
+          "station": 681,
+          "beta": -7.5,
+          "omega": -6.1,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i681_1ed834830601/out/P0.petsc",
+            "sha256": "c645e3acc8c801ad47e884c9e5197284b1e2133c5ad001d64d15eebbd4c27bd4"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i681_1ed834830601/out/P1.petsc",
+            "sha256": "fc3e1ef8bddcf988bc9f836b25bcfec60c60daf37a9bdd58800523c6452301bc"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i681_1ed834830601/out/P2.petsc",
+            "sha256": "11b64fea08c0dc0d8575ac3963217dae2300999c4b3d8cc5d362fc68bd1ac59c"
+          }
+        ]
+      },
+      "old": {
+        "descriptor": {
+          "case": "s75",
+          "station": 681,
+          "beta": -7.5,
+          "omega": -6.1,
+          "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i681_bd16427b0f30/out/P0.petsc",
+            "sha256": "c645e3acc8c801ad47e884c9e5197284b1e2133c5ad001d64d15eebbd4c27bd4"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i681_bd16427b0f30/out/P1.petsc",
+            "sha256": "fc3e1ef8bddcf988bc9f836b25bcfec60c60daf37a9bdd58800523c6452301bc"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i681_bd16427b0f30/out/P2.petsc",
+            "sha256": "11b64fea08c0dc0d8575ac3963217dae2300999c4b3d8cc5d362fc68bd1ac59c"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "legacy_compatibility",
+      "case": "s30",
+      "station": 241,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "new": {
+        "descriptor": {
+          "case": "s30",
+          "station": 241,
+          "beta": -7.5,
+          "omega": -6.1,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i241_3447a155b171/out/P0.petsc",
+            "sha256": "94b98d38c6b2da772d9b2b1ab2de05b82ca01fdaa21e088e34560a4eded291e1"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i241_3447a155b171/out/P1.petsc",
+            "sha256": "60cccd80eabf5e8400914939bf9534264fb67b95e786a5a31095c572b7c5e182"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/new_legacy_regression_i241_3447a155b171/out/P2.petsc",
+            "sha256": "4052a91bdc9de9266103ad920eacd712cc722d5a4fb87da6173cdc6729ad09ff"
+          }
+        ]
+      },
+      "old": {
+        "descriptor": {
+          "case": "s30",
+          "station": 241,
+          "beta": -7.5,
+          "omega": -6.1,
+          "solver_sha256": "634b45c5d30e076f5b86ccb136e0734c1905beedde108477dceb8a75adc3853c"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/75\u00b0/bluntplate/neutral_beta_full_20261022/outputs/bin/START_LST_wall_local_v10",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i241_576a3f74fcde/out/P0.petsc",
+            "sha256": "94b98d38c6b2da772d9b2b1ab2de05b82ca01fdaa21e088e34560a4eded291e1"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i241_576a3f74fcde/out/P1.petsc",
+            "sha256": "60cccd80eabf5e8400914939bf9534264fb67b95e786a5a31095c572b7c5e182"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/old_v10_regression_i241_576a3f74fcde/out/P2.petsc",
+            "sha256": "4052a91bdc9de9266103ad920eacd712cc722d5a4fb87da6173cdc6729ad09ff"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "consistent_coordinate_roundoff_invariance",
+      "case": "s75",
+      "station": 681,
+      "errors": [
+        1.9215845015737963e-17,
+        0.0,
+        0.0
+      ],
+      "export": {
+        "descriptor": {
+          "case": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/inputs/consistent_roundoff_regression",
+          "station": 5,
+          "beta": -7.5,
+          "omega": -6.1,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "local_station": 5,
+        "native_slice": null,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_roundoff_i005_cd8ff57ee4b1/out/P0.petsc",
+            "sha256": "7e9a471e47d9af43645263b3e1d3d0da3797988a2042c2e41c10db302db6cbf5"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_roundoff_i005_cd8ff57ee4b1/out/P1.petsc",
+            "sha256": "b7783187a6eec8c86451f8a6b8cf0c72debeae60137f3517023237ae043ff538"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_roundoff_i005_cd8ff57ee4b1/out/P2.petsc",
+            "sha256": "11b64fea08c0dc0d8575ac3963217dae2300999c4b3d8cc5d362fc68bd1ac59c"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "consistent_native_stencil",
+      "case": "s30",
+      "station": 119,
+      "errors": [
+        9.02922967173255e-15,
+        5.664744303862201e-16,
+        0.0
+      ],
+      "cropped": {
+        "descriptor": {
+          "case": "s30",
+          "station": 119,
+          "beta": -7.0,
+          "omega": 2.3,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "local_station": 5,
+        "native_slice": {
+          "case": "s30",
+          "global_station": 119,
+          "local_station": 5,
+          "native_stencil_first": 115,
+          "native_stencil_last": 123,
+          "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s30",
+          "files": [
+            {
+              "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/inputs/native_stencils/s30/i119/in/grid_vertical2d_N.h5",
+              "sha256": "7f5184f5bd0e5623a450509db9e39228d64c36e932ea73dd1fc1a9a904a8d2d1"
+            },
+            {
+              "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/inputs/native_stencils/s30/i119/in/flow_vertical2d_N.h5",
+              "sha256": "50b0759c1f5919ff578f114d39521040b3c3136682d1cbac768f3b59fdf300a7"
+            }
+          ]
+        },
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i119_bd70b9cc01f1/out/P0.petsc",
+            "sha256": "b0dd79a54741f718593b14ecc1c6e56bc0554666d40cac7bd316db3277ce010b"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i119_bd70b9cc01f1/out/P1.petsc",
+            "sha256": "648896369e897d102154da51e46c50a667ac031d122f55322a8af3cdcef7857f"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i119_bd70b9cc01f1/out/P2.petsc",
+            "sha256": "1122ac526498521937bca584c7262fc4161a6a6b20ddc82017707049a4952d65"
+          }
+        ]
+      },
+      "full": {
+        "descriptor": {
+          "case": "s30",
+          "station": 119,
+          "beta": -7.0,
+          "omega": 2.3,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i119_bd70b9cc01f1/out/P0.petsc",
+            "sha256": "f85bf9f982eb3237ed21ac4e3cf489d20573964cf0b7269a94577ceed7519393"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i119_bd70b9cc01f1/out/P1.petsc",
+            "sha256": "2c207164c0f2c0926a51e8dbf6d376466d9beb86372af41c3d82f9fd4d68bf12"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i119_bd70b9cc01f1/out/P2.petsc",
+            "sha256": "1122ac526498521937bca584c7262fc4161a6a6b20ddc82017707049a4952d65"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "consistent_native_stencil",
+      "case": "s45",
+      "station": 241,
+      "errors": [
+        1.6195914427933183e-14,
+        7.522199252794375e-15,
+        0.0
+      ],
+      "cropped": {
+        "descriptor": {
+          "case": "s45",
+          "station": 241,
+          "beta": -7.0,
+          "omega": 2.3,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "local_station": 5,
+        "native_slice": {
+          "case": "s45",
+          "global_station": 241,
+          "local_station": 5,
+          "native_stencil_first": 237,
+          "native_stencil_last": 245,
+          "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s45",
+          "files": [
+            {
+              "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/inputs/native_stencils/s45/i241/in/grid_vertical2d_N.h5",
+              "sha256": "e272e88e47d090a19f513341eb58cfa778df89e87ebed87ccd5ea9b9a7f89bab"
+            },
+            {
+              "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/inputs/native_stencils/s45/i241/in/flow_vertical2d_N.h5",
+              "sha256": "4ab5bbae854be1738db83059fac052865e2bb53cb3a79131df2c8f441b1c9bc7"
+            }
+          ]
+        },
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i241_15a37dfbc613/out/P0.petsc",
+            "sha256": "48084007c3e4ef55f0d93ce304a34e9ef8b2a962ed8656c699ab2df606ff5b72"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i241_15a37dfbc613/out/P1.petsc",
+            "sha256": "9f4f6cd73f075a1e4063044bd579387f284edea21bc836d9e9c5713d9301f727"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i241_15a37dfbc613/out/P2.petsc",
+            "sha256": "4f8ee594c903091b8690c98b0f3ff5066645415d3641889dbdd8de9274f08558"
+          }
+        ]
+      },
+      "full": {
+        "descriptor": {
+          "case": "s45",
+          "station": 241,
+          "beta": -7.0,
+          "omega": 2.3,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i241_15a37dfbc613/out/P0.petsc",
+            "sha256": "6e4adfd44b0595ba94afadd968259fa1a46d551184a56152eb5c6256708927f4"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i241_15a37dfbc613/out/P1.petsc",
+            "sha256": "ab4c7359152a73acce09d6d2189647ecc2d2adc4a2c92a597938843346a613d2"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i241_15a37dfbc613/out/P2.petsc",
+            "sha256": "4f8ee594c903091b8690c98b0f3ff5066645415d3641889dbdd8de9274f08558"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "consistent_native_stencil",
+      "case": "s60",
+      "station": 400,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cropped": {
+        "descriptor": {
+          "case": "s60",
+          "station": 400,
+          "beta": -7.0,
+          "omega": 2.3,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "local_station": 5,
+        "native_slice": {
+          "case": "s60",
+          "global_station": 400,
+          "local_station": 5,
+          "native_stencil_first": 396,
+          "native_stencil_last": 404,
+          "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s60",
+          "files": [
+            {
+              "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/inputs/native_stencils/s60/i400/in/grid_vertical2d_N.h5",
+              "sha256": "72470eb17e9a607477a27aa5cb98356bbaddd0a5113c85e2b1dd063e178be0fd"
+            },
+            {
+              "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/inputs/native_stencils/s60/i400/in/flow_vertical2d_N.h5",
+              "sha256": "75fe3df02359af6b23dfa12b644f2c1837c92203381390b023bbc0897a3a66ce"
+            }
+          ]
+        },
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i400_3e4e25839267/out/P0.petsc",
+            "sha256": "a3a3b4096f7a34032b310029561ac59b6d042a378975a3eda5c182db069e1556"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i400_3e4e25839267/out/P1.petsc",
+            "sha256": "03f212561e4854f879509ba79b30f46be59af3b96d6ca12584decb861c960191"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i400_3e4e25839267/out/P2.petsc",
+            "sha256": "d1e42518c7fd8ab9a62b69eebb6236444c2a8559be63554fcc53249f201dffd8"
+          }
+        ]
+      },
+      "full": {
+        "descriptor": {
+          "case": "s60",
+          "station": 400,
+          "beta": -7.0,
+          "omega": 2.3,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i400_3e4e25839267/out/P0.petsc",
+            "sha256": "a3a3b4096f7a34032b310029561ac59b6d042a378975a3eda5c182db069e1556"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i400_3e4e25839267/out/P1.petsc",
+            "sha256": "03f212561e4854f879509ba79b30f46be59af3b96d6ca12584decb861c960191"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i400_3e4e25839267/out/P2.petsc",
+            "sha256": "d1e42518c7fd8ab9a62b69eebb6236444c2a8559be63554fcc53249f201dffd8"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "consistent_native_stencil",
+      "case": "s60",
+      "station": 2,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cropped": {
+        "descriptor": {
+          "case": "s60",
+          "station": 2,
+          "beta": -7.0,
+          "omega": 2.3,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "local_station": 2,
+        "native_slice": {
+          "case": "s60",
+          "global_station": 2,
+          "local_station": 2,
+          "native_stencil_first": 1,
+          "native_stencil_last": 9,
+          "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s60",
+          "files": [
+            {
+              "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/inputs/native_stencils/s60/i002/in/grid_vertical2d_N.h5",
+              "sha256": "6ceef7e32b53545bc8b583f3010913014acccb658c30994e1955ec4cef1f880f"
+            },
+            {
+              "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/inputs/native_stencils/s60/i002/in/flow_vertical2d_N.h5",
+              "sha256": "7c7c22986ed0ba5990ff459f2456c341dfba2b210d8a82a53d5286b306ef485a"
+            }
+          ]
+        },
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i002_ac39669ae9d5/out/P0.petsc",
+            "sha256": "8b8e05ecdf12f853a5bc750a868e2a549f4486e934a0b2a6c1b39e515678bf87"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i002_ac39669ae9d5/out/P1.petsc",
+            "sha256": "9dd187ad668d1ce3b33ed0d3d21f39544120b829750ef3a2f3b2f2a8c2417fca"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i002_ac39669ae9d5/out/P2.petsc",
+            "sha256": "364e70762ff3f6033902745acaac8791ef4a764ebb9afdf8cf1f4614bc3b7754"
+          }
+        ]
+      },
+      "full": {
+        "descriptor": {
+          "case": "s60",
+          "station": 2,
+          "beta": -7.0,
+          "omega": 2.3,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i002_ac39669ae9d5/out/P0.petsc",
+            "sha256": "8b8e05ecdf12f853a5bc750a868e2a549f4486e934a0b2a6c1b39e515678bf87"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i002_ac39669ae9d5/out/P1.petsc",
+            "sha256": "9dd187ad668d1ce3b33ed0d3d21f39544120b829750ef3a2f3b2f2a8c2417fca"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i002_ac39669ae9d5/out/P2.petsc",
+            "sha256": "364e70762ff3f6033902745acaac8791ef4a764ebb9afdf8cf1f4614bc3b7754"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "consistent_native_stencil",
+      "case": "s75",
+      "station": 681,
+      "errors": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cropped": {
+        "descriptor": {
+          "case": "s75",
+          "station": 681,
+          "beta": -7.0,
+          "omega": 2.3,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "local_station": 5,
+        "native_slice": {
+          "case": "s75",
+          "global_station": 681,
+          "local_station": 5,
+          "native_stencil_first": 677,
+          "native_stencil_last": 685,
+          "source": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s75",
+          "files": [
+            {
+              "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/inputs/native_stencils/s75/i681/in/grid_vertical2d_N.h5",
+              "sha256": "467dd58f0f29f68d10f8d04e6e3b92dc68120b7e52aac3700c8d826e6ada08cd"
+            },
+            {
+              "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/inputs/native_stencils/s75/i681/in/flow_vertical2d_N.h5",
+              "sha256": "955f99b039f7f6703d422364e897bdc6a1a7b3f63ce542d6c6cc36658b94c057"
+            }
+          ]
+        },
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i681_269718b10b40/out/P0.petsc",
+            "sha256": "54b99d0523b64c0d3636babc16bc28b8760f7208b2b40eff4008857b61a258bf"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i681_269718b10b40/out/P1.petsc",
+            "sha256": "fe78ef7021aaf4ff2843fd7c2b5e9d79c1cb53b3c84e30429a72432629c92c32"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_stencil_validation_i681_269718b10b40/out/P2.petsc",
+            "sha256": "11b64fea08c0dc0d8575ac3963217dae2300999c4b3d8cc5d362fc68bd1ac59c"
+          }
+        ]
+      },
+      "full": {
+        "descriptor": {
+          "case": "s75",
+          "station": 681,
+          "beta": -7.0,
+          "omega": 2.3,
+          "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+        },
+        "command": [
+          "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/work/solver_source/bin/START_LST",
+          "-f",
+          "config.ini",
+          "-pep_tol",
+          "1e-12",
+          "-pep_max_it",
+          "1",
+          "-pep_nev",
+          "1",
+          "-pep_ncv",
+          "8",
+          "-st_pc_factor_mat_solver_type",
+          "superlu",
+          "-pep_view_mat0",
+          "binary:out/P0.petsc",
+          "-pep_view_mat1",
+          "binary:out/P1.petsc",
+          "-pep_view_mat2",
+          "binary:out/P2.petsc"
+        ],
+        "matrix_only_export": true,
+        "exit": 0,
+        "files": [
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i681_269718b10b40/out/P0.petsc",
+            "sha256": "54b99d0523b64c0d3636babc16bc28b8760f7208b2b40eff4008857b61a258bf"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i681_269718b10b40/out/P1.petsc",
+            "sha256": "fe78ef7021aaf4ff2843fd7c2b5e9d79c1cb53b3c84e30429a72432629c92c32"
+          },
+          {
+            "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/matrix_exports/consistent_full_validation_i681_269718b10b40/out/P2.petsc",
+            "sha256": "11b64fea08c0dc0d8575ac3963217dae2300999c4b3d8cc5d362fc68bd1ac59c"
+          }
+        ]
+      }
+    }
+  ],
+  "solver_sha256": "e66c15b63c0a2dfaf74450e712e4c62f42a6a20d50b7612efc057855f3659893"
+}

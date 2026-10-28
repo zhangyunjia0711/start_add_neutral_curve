@@ -1,0 +1,24 @@
+{
+  "created": "2026-10-28T15:34:20.970734+08:00",
+  "removed_owned_attempt_scripts": [
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\work\\M3_sweep_angles_20261027\\repair70_flat_seed.py",
+      "sha256": "7b4af83cc754ab10e84f0a0ec9b73676cacfa1e3afd0a866ae2cf1f25fcd913f",
+      "bytes": 3479,
+      "reason": "Rejected flat-profile mode transfer had inadequate physical MAC; replaced by two-sided aligned physical-profile consensus."
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\work\\M3_sweep_angles_20261027\\audit70_spectrum.py",
+      "sha256": "8f3883814017646cd5c310b88d1fffb262c2e4d2e625513cb31bfbbe13944fba",
+      "bytes": 2443,
+      "reason": "Spectrum/shape diagnostic did not establish M3 identification; audit JSON retained, superseded by aligned physical transfer."
+    },
+    {
+      "path": "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\work\\M3_sweep_angles_20261027\\additional_seed_probe_legacy.py",
+      "sha256": "02140fb69df43e8bee0a71e8c663a3ea091ec21bccea0eb03d824d2429b038df",
+      "bytes": 4905,
+      "reason": "Superseded task backup of inefficient fixed-x pocket probe; actual attempts retained in supplemental search JSON, final frequency_surface.py retained."
+    }
+  ],
+  "preserved": "Final runtime and preparation scripts, numerical evidence and receipts, all original user data, prior input stages required by active symlinks, active matrices, and original 75-degree delivery. Interrupted cache diagnostic files retained with recovery receipts; not published as curves."
+}

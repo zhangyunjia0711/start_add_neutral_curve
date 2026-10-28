@@ -85,6 +85,25 @@ program test_wall_local_profiles
    if (any(q/=expected).or.any(en/=reference_en).or.any(enn/=reference_enn).or. &
        any(qn/=reference_qn).or.any(qnn/=reference_qnn)) error stop 'Identity flat profile was changed.'
    if (abs(n(1))>0.0_real64) error stop 'Local wall origin was not zero.'
+   ! Consistent mode must ignore sentinel global derivatives even on an exact flat column.
+   call configure_wall_local_coordinates('wall_local_consistent',.true.,.true.,.false.,.true.)
+   q=qq(:,3,:); qn=dq0dy(:,3,:); qnn=dq0dyy(:,3,:); en=eta_y(3,:); enn=eta_yy(3,:)
+   call wall_local_grid(3,n,en,enn)
+   call wall_local_flow(3,q,qn,qnn)
+   if (maxval(abs(qn(2,:)-1.0_real64))>1e-10_real64.or.maxval(abs(qnn(2,:)))>1e-9_real64) &
+      error stop 'Consistent flat derivative did not use the projected normal profile.'
+   reference_en=en; reference_enn=enn; reference_qn=qn; reference_qnn=qnn
+   do i=1,in
+      do j=1,jn
+         xx(i,j)=xx(i,j)+1e-13_real64*(yy(i,j)-yy(i,1))
+      enddo
+   enddo
+   call configure_wall_local_coordinates('wall_local_consistent',.true.,.true.,.false.,.true.)
+   q=qq(:,3,:); qn=dq0dy(:,3,:); qnn=dq0dyy(:,3,:); en=eta_y(3,:); enn=eta_yy(3,:)
+   call wall_local_grid(3,n,en,enn)
+   call wall_local_flow(3,q,qn,qnn)
+   if (maxval(abs(qn-reference_qn))>1e-11_real64.or.maxval(abs(qnn-reference_qnn))>1e-10_real64) &
+      error stop 'Consistent derivatives changed under flat coordinate roundoff.'
    open(newunit=unit,file='wall_local_profile_metadata.csv',status='old')
    close(unit,status='delete')
    print *, 'wall_local geometry, normal derivatives, rotation, and exact flat compatibility passed.'

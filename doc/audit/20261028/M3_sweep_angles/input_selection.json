@@ -1,0 +1,414 @@
+{
+  "created": "2026-10-28T09:40:59.200176+08:00",
+  "selected": [
+    {
+      "angle": 30,
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/30°/1.1m/fpp_output",
+      "source_nondimensional": true,
+      "source_reference": {
+        "length": 1.0,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6306164550106,
+        "pressure": 60357.71391605493,
+        "temperature": 226.5,
+        "viscosity": 1.4751587574666155e-05
+      },
+      "canonical_reference": {
+        "length": 0.035,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6307411853716,
+        "temperature": 226.5
+      },
+      "variables": [
+        "rho",
+        "u",
+        "v",
+        "w",
+        "T",
+        "p"
+      ],
+      "shape": [
+        841,
+        400
+      ],
+      "conversion": "Only reference-unit conversion and transposition; no profile interpolation",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_angles_fpp_20261028/cases/s30/in/grid_vertical2d_N.h5",
+          "sha256": "c384ee433e9272d8026ccdd3c5de583342a69842fad28616779feb85463d1805"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_angles_fpp_20261028/cases/s30/in/flow_vertical2d_N.h5",
+          "sha256": "5b259742bbe9500e4b823f2478a741262cf708e9c506790e7175d1224bc2d19c"
+        }
+      ]
+    },
+    {
+      "angle": 45,
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/45°swptangle/1.1m/fpp_output",
+      "source_nondimensional": true,
+      "source_reference": {
+        "length": 1.0,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6310589352543,
+        "pressure": 60357.74341638369,
+        "temperature": 226.5,
+        "viscosity": 1.4751587574666155e-05
+      },
+      "canonical_reference": {
+        "length": 0.035,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6307411853716,
+        "temperature": 226.5
+      },
+      "variables": [
+        "rho",
+        "u",
+        "v",
+        "w",
+        "T",
+        "p"
+      ],
+      "shape": [
+        841,
+        400
+      ],
+      "conversion": "Only reference-unit conversion and transposition; no profile interpolation",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_angles_fpp_20261028/cases/s45/in/grid_vertical2d_N.h5",
+          "sha256": "c384ee433e9272d8026ccdd3c5de583342a69842fad28616779feb85463d1805"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_angles_fpp_20261028/cases/s45/in/flow_vertical2d_N.h5",
+          "sha256": "1b2c209c71e705b938474eba9d81a2c2404969d79427dedf1325551b3fbcaee1"
+        }
+      ]
+    },
+    {
+      "angle": 60,
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/60°/1.1m/fpp_output",
+      "source_nondimensional": true,
+      "source_reference": {
+        "length": 1.0,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6311324806168,
+        "pressure": 60357.74831968211,
+        "temperature": 226.5,
+        "viscosity": 1.4751587574666155e-05
+      },
+      "canonical_reference": {
+        "length": 0.035,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6307411853716,
+        "temperature": 226.5
+      },
+      "variables": [
+        "rho",
+        "u",
+        "v",
+        "w",
+        "T"
+      ],
+      "shape": [
+        841,
+        400
+      ],
+      "conversion": "Only reference-unit conversion and transposition; no profile interpolation",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_angles_fpp_20261028/cases/s60/in/grid_vertical2d_N.h5",
+          "sha256": "7c42ef5c5ca0a705cd055144fcc12722b2d2478ea486fc15870aa8a270bfecce"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_angles_fpp_20261028/cases/s60/in/flow_vertical2d_N.h5",
+          "sha256": "a083a6c4fe3eabf1a7b2433f18e756e6cb15b2a3b97bd77ecb6deaa5ea07a59a"
+        }
+      ]
+    },
+    {
+      "angle": 50,
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/50°/1.1m/fpp_output",
+      "source_nondimensional": false,
+      "source_reference": {
+        "length": 1.0,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6310299939635,
+        "pressure": 60357.74148685642,
+        "temperature": 226.5,
+        "viscosity": 1.4751587574666155e-05
+      },
+      "canonical_reference": {
+        "length": 0.035,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6307411853716,
+        "temperature": 226.5
+      },
+      "variables": [
+        "rho",
+        "u",
+        "v",
+        "w",
+        "T",
+        "p"
+      ],
+      "shape": [
+        841,
+        400
+      ],
+      "x_range_mm": [
+        -35.0,
+        1100.0000000000084
+      ],
+      "conversion": "Only reference-unit conversion and transposition; no profile interpolation",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s50/in/grid_vertical2d_N.h5",
+          "sha256": "c384ee433e9272d8026ccdd3c5de583342a69842fad28616779feb85463d1805"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s50/in/flow_vertical2d_N.h5",
+          "sha256": "68eed2d1d55e53711cf6ea7b019f25815cc5771769fb1219ea133a218c63fc44"
+        }
+      ],
+      "source_hashes": {
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/50°/1.1m/fpp_output/grid_vertical2d.grd": "92e2a6baf588aaf1c8bf5f7760514f6ed520315d2957b66c2317f4294d986f1d",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/50°/1.1m/fpp_output/flow_vertical2d.dat": "cafe373b0b2f9f35f3f44dbf33b60e8b1a569c284fdea9f96464f31f5ca8ea02",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/50°/1.1m/fpp_output/flow_vertical2d.variables.json": "6dd9d2afb495572df13d7d001319a105b9270b713912d28e91e27a9ec0199a30",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/50°/1.1m/fpp_output/summary.json": "11d5aeefba5f1f59266dae532bf82106902f58ddafb059e38ed97ce8b8dbf3f7",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/50°/1.1m/fpp_output/fpp_ui_config.yaml": "f6dbe9af49f87199ef8404c983a4cc01ea79096b2c7a104eda6bf69d6d91ac48"
+      },
+      "source_files_stable_during_read": true
+    },
+    {
+      "angle": 55,
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/55°/1.1m/fpp_output",
+      "source_nondimensional": false,
+      "source_reference": {
+        "length": 1.0,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6307716784784,
+        "pressure": 60357.724264862656,
+        "temperature": 226.5,
+        "viscosity": 1.4751587574666155e-05
+      },
+      "canonical_reference": {
+        "length": 0.035,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6307411853716,
+        "temperature": 226.5
+      },
+      "variables": [
+        "rho",
+        "u",
+        "v",
+        "w",
+        "T",
+        "p"
+      ],
+      "shape": [
+        841,
+        400
+      ],
+      "x_range_mm": [
+        -35.0,
+        1100.0000000000084
+      ],
+      "conversion": "Only reference-unit conversion and transposition; no profile interpolation",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s55/in/grid_vertical2d_N.h5",
+          "sha256": "c384ee433e9272d8026ccdd3c5de583342a69842fad28616779feb85463d1805"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s55/in/flow_vertical2d_N.h5",
+          "sha256": "11e6006de4cbe03fe981b347d231a35e21583bfad4092e6dcde53da289d3a767"
+        }
+      ],
+      "source_hashes": {
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/55°/1.1m/fpp_output/grid_vertical2d.grd": "92e2a6baf588aaf1c8bf5f7760514f6ed520315d2957b66c2317f4294d986f1d",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/55°/1.1m/fpp_output/flow_vertical2d.dat": "730d064d07d53af3d6cb1ce5765f28c0dda356da37236afc3ba2b48d5e7ff339",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/55°/1.1m/fpp_output/flow_vertical2d.variables.json": "33d010f868a9af2d96852f6f11400489e29c2b973cb4cd19516620839cfbf5e2",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/55°/1.1m/fpp_output/summary.json": "47b13de8ff6cac48c4ce06cd2eba1976e59b88e7141f50d850d6da593eec369c",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/55°/1.1m/fpp_output/fpp_ui_config.yaml": "3269cfc88f7b852774e206bbd1bfd0854348638010a0586b1627ea30573c2c38"
+      },
+      "source_files_stable_during_read": true
+    },
+    {
+      "angle": 65,
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/65°/1.1m/fpp_output",
+      "source_nondimensional": false,
+      "source_reference": {
+        "length": 1.0,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6310119495608,
+        "pressure": 60357.740283829015,
+        "temperature": 226.5,
+        "viscosity": 1.4751587574666155e-05
+      },
+      "canonical_reference": {
+        "length": 0.035,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6307411853716,
+        "temperature": 226.5
+      },
+      "variables": [
+        "rho",
+        "u",
+        "v",
+        "w",
+        "T",
+        "p"
+      ],
+      "shape": [
+        841,
+        400
+      ],
+      "x_range_mm": [
+        -35.0,
+        1100.0000000000084
+      ],
+      "conversion": "Only reference-unit conversion and transposition; no profile interpolation",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s65/in/grid_vertical2d_N.h5",
+          "sha256": "6c24d91dc23fb61f39d475c450fbb99613bd2f2a195f9257f17db651fe76c48a"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s65/in/flow_vertical2d_N.h5",
+          "sha256": "33fee2980c3151d12883659ef78578cb99259495e83343db739f97c526e48a16"
+        }
+      ],
+      "source_hashes": {
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/65°/1.1m/fpp_output/grid_vertical2d.grd": "b59fe3d57d5863eef21cbb456f5c70c1683e7617b525016c229233ee906fc85f",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/65°/1.1m/fpp_output/flow_vertical2d.dat": "ee15e06f09f76d2b81dcd7072e82f260471aa2556fae4dc15ebe2004aa75bab1",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/65°/1.1m/fpp_output/flow_vertical2d.variables.json": "7288a51ad2179a154a55ba8659a15950a97524fc9f428d5de75fa3902f8dc7f8",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/65°/1.1m/fpp_output/summary.json": "a573f312546028192ca8f335bf40945a28a0d7e941f8d31781f0cd90888f1fdb",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/65°/1.1m/fpp_output/fpp_ui_config.yaml": "c11183cfb3c81c1a7e7038dbfdd51d6211d8457aec39e35b0b4f93d771c9f50a"
+      },
+      "source_files_stable_during_read": true
+    },
+    {
+      "angle": 70,
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/70°/1.1m/fpp_output",
+      "source_nondimensional": false,
+      "source_reference": {
+        "length": 1.0,
+        "density": 0.018411078289720332,
+        "velocity": 1810.629851257591,
+        "pressure": 60358.51928060773,
+        "temperature": 226.50130350901605,
+        "viscosity": 1.4751657842033878e-05
+      },
+      "canonical_reference": {
+        "length": 0.035,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6307411853716,
+        "temperature": 226.5
+      },
+      "variables": [
+        "rho",
+        "u",
+        "v",
+        "w",
+        "T",
+        "p"
+      ],
+      "shape": [
+        151,
+        400
+      ],
+      "x_range_mm": [
+        -35.0,
+        3499.9999999999995
+      ],
+      "conversion": "Only reference-unit conversion and transposition; no profile interpolation",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s70/in/grid_vertical2d_N.h5",
+          "sha256": "50fc2748ab7084708657116c1a6c76c0a7a1ebb673980d50e7c8bca61ffff6f0"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s70/in/flow_vertical2d_N.h5",
+          "sha256": "de3cac85decadfd37b241e15b27285b231ffff81f44fc4ccb2278a42adc67c25"
+        }
+      ],
+      "source_hashes": {
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/70°/1.1m/fpp_output/grid_vertical2d.grd": "6f2f858fc52a836214b0c3cefd91ec5010abc8a4536264eccbf361511dbb700f",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/70°/1.1m/fpp_output/flow_vertical2d.dat": "9ea0c50a6780247bea73b75b66aea120c98a92b27fdaf09df6eaf500cabdb120",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/70°/1.1m/fpp_output/flow_vertical2d.variables.json": "3a0ef30982bdec896e0adde92e40b51aaa90bdec54c4ade90d3785ca0735cc51",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/70°/1.1m/fpp_output/summary.json": "57b96c56b4ea6646bc2f50d563c964bcb82f62d364ff6bc22f178d7b9a09e54b",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/70°/1.1m/fpp_output/fpp_ui_config.yaml": "20d3f46c0891d0bca20b94a5b9b7f1671df26191b6b200ada5a2b229a1676239"
+      },
+      "source_files_stable_during_read": true
+    },
+    {
+      "angle": 73,
+      "path": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/73°/1.1m/fpp_output",
+      "source_nondimensional": false,
+      "source_reference": {
+        "length": 1.0,
+        "density": 0.018410817069110273,
+        "velocity": 1810.631148586981,
+        "pressure": 60357.74939349981,
+        "temperature": 226.5,
+        "viscosity": 1.4751587574666155e-05
+      },
+      "canonical_reference": {
+        "length": 0.035,
+        "density": 0.018410817069110273,
+        "velocity": 1810.6307411853716,
+        "temperature": 226.5
+      },
+      "variables": [
+        "rho",
+        "u",
+        "v",
+        "w",
+        "T",
+        "p"
+      ],
+      "shape": [
+        841,
+        400
+      ],
+      "x_range_mm": [
+        -35.0,
+        1100.0000000000084
+      ],
+      "conversion": "Only reference-unit conversion and transposition; no profile interpolation",
+      "files": [
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s73/in/grid_vertical2d_N.h5",
+          "sha256": "6c24d91dc23fb61f39d475c450fbb99613bd2f2a195f9257f17db651fe76c48a"
+        },
+        {
+          "path": "/home/zaza/attachment_line/Han2019_SweptBluntPlate/neutral_m3_sweep_consistent_20261028/cases/s73/in/flow_vertical2d_N.h5",
+          "sha256": "f18d764dc48b2748fc6e15ce0af58c04eb9a9c41da84f0e070703544ac0dff34"
+        }
+      ],
+      "source_hashes": {
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/73°/1.1m/fpp_output/grid_vertical2d.grd": "b59fe3d57d5863eef21cbb456f5c70c1683e7617b525016c229233ee906fc85f",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/73°/1.1m/fpp_output/flow_vertical2d.dat": "cf575551942f756d340d1709e617f838f9308c2236d9a87a156d80fd50acc388",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/73°/1.1m/fpp_output/flow_vertical2d.variables.json": "d42186eeac6a5ad5e9c44a2c0135a256d2ee15c182a7da04af2e80bbaf243777",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/73°/1.1m/fpp_output/summary.json": "d44a4b3024fa9e2334d97e885090352796c52b4c7d2646d23945083a8ffc9d70",
+        "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/73°/1.1m/fpp_output/fpp_ui_config.yaml": "817448456b21f4244e99020429df8bc1c5a5bc5c107790d9664910101895ca91"
+      },
+      "source_files_stable_during_read": true
+    }
+  ],
+  "pending_angles": [
+    63,
+    68,
+    80
+  ],
+  "rule": "User supplied fpp directory location and will supplement missing files; dense-grid status by 1.1m directory.",
+  "additional_input_check_time": "2026-10-28T10:52:11.406021+08:00",
+  "retained_75": {
+    "source_directory": "/mnt/e/work/calc/Instability of attachment line/Han2019_SweptBluntPlate/75°/outputs/M3_all_neutral_curves_20261027",
+    "selection_manifest_sha256": "5d531231b8c66fcf7ab13a390609ec718da02e954dc447fe279fe76dddcc4a20",
+    "delivery_manifest_sha256": "61a34d7b4e371f407564ce70558bad2cada32797d4642d8bf1d1fbef1447fe7f",
+    "recomputed": false,
+    "csv_copies_verified": true
+  }
+}

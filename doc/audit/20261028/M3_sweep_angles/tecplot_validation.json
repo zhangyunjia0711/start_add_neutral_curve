@@ -1,0 +1,138 @@
+{
+  "created": "2026-10-28T15:25:56.388476+08:00",
+  "passed": true,
+  "exporter": "Installed native Tecplot PREPLOT 2024.1",
+  "reader": "Independent restricted ordered-zone reader, installed Tecplot Binary Data File Format guide",
+  "checks": [
+    {
+      "file": "M3_sweep_angles_all_neutral_curves.plt",
+      "sha256": "1c91813077c5c2c3586ba69bb0f02fa2e3fc94adc8d9d4b530c5345ab17377ea",
+      "zones": 164,
+      "values": 1276860,
+      "exact_double_readback": true,
+      "bytes": 10292936,
+      "command": [
+        "E:\\Program Files\\Tecplot\\Tecplot 360 EX 2024 R1\\bin\\preplot.exe",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_sweep_angles_all_neutral_curves.dat",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_sweep_angles_all_neutral_curves.plt"
+      ]
+    },
+    {
+      "file": "M3_30deg_xbeta.plt",
+      "sha256": "86ad221f1e3ac6d5fb3995dd49ca4078a30ec8c40397e900dcaad160d55d4794",
+      "zones": 11,
+      "values": 90135,
+      "exact_double_readback": true,
+      "bytes": 726904,
+      "command": [
+        "E:\\Program Files\\Tecplot\\Tecplot 360 EX 2024 R1\\bin\\preplot.exe",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_30deg_xbeta.dat",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_30deg_xbeta.plt"
+      ]
+    },
+    {
+      "file": "M3_45deg_xbeta.plt",
+      "sha256": "4ceb701fbe218b208ab8ac902262d3b6ea0e228a829030e0d4d06054894f4826",
+      "zones": 14,
+      "values": 140010,
+      "exact_double_readback": true,
+      "bytes": 1127288,
+      "command": [
+        "E:\\Program Files\\Tecplot\\Tecplot 360 EX 2024 R1\\bin\\preplot.exe",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_45deg_xbeta.dat",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_45deg_xbeta.plt"
+      ]
+    },
+    {
+      "file": "M3_50deg_xbeta.plt",
+      "sha256": "27a28cb1c1e1454d071a1ad1929031f71bbf7e7d150aba4096332fc91a44d241",
+      "zones": 15,
+      "values": 145395,
+      "exact_double_readback": true,
+      "bytes": 1170828,
+      "command": [
+        "E:\\Program Files\\Tecplot\\Tecplot 360 EX 2024 R1\\bin\\preplot.exe",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_50deg_xbeta.dat",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_50deg_xbeta.plt"
+      ]
+    },
+    {
+      "file": "M3_55deg_xbeta.plt",
+      "sha256": "e0d21fd777402de8a3935abd9e419c3f155969378b419c20f0300d8fc2b24e1d",
+      "zones": 16,
+      "values": 159210,
+      "exact_double_readback": true,
+      "bytes": 1281808,
+      "command": [
+        "E:\\Program Files\\Tecplot\\Tecplot 360 EX 2024 R1\\bin\\preplot.exe",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_55deg_xbeta.dat",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_55deg_xbeta.plt"
+      ]
+    },
+    {
+      "file": "M3_60deg_xbeta.plt",
+      "sha256": "b28a3ed6709f57b87e829b37d2bd9ed21d5df5eb39353d0a18988c62c66248d9",
+      "zones": 18,
+      "values": 172890,
+      "exact_double_readback": true,
+      "bytes": 1392168,
+      "command": [
+        "E:\\Program Files\\Tecplot\\Tecplot 360 EX 2024 R1\\bin\\preplot.exe",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_60deg_xbeta.dat",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_60deg_xbeta.plt"
+      ]
+    },
+    {
+      "file": "M3_65deg_xbeta.plt",
+      "sha256": "694d9f896c07c525449e86c7772104ab1f170f948532fdbd9d6d1e7c35bb6f32",
+      "zones": 20,
+      "values": 185310,
+      "exact_double_readback": true,
+      "bytes": 1492452,
+      "command": [
+        "E:\\Program Files\\Tecplot\\Tecplot 360 EX 2024 R1\\bin\\preplot.exe",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_65deg_xbeta.dat",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_65deg_xbeta.plt"
+      ]
+    },
+    {
+      "file": "M3_70deg_xbeta.plt",
+      "sha256": "64035cefe7bcfd89dc0e21dbfcb583acd65615f674c9fe0718afade9f430bcd8",
+      "zones": 20,
+      "values": 29730,
+      "exact_double_readback": true,
+      "bytes": 247812,
+      "command": [
+        "E:\\Program Files\\Tecplot\\Tecplot 360 EX 2024 R1\\bin\\preplot.exe",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_70deg_xbeta.dat",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_70deg_xbeta.plt"
+      ]
+    },
+    {
+      "file": "M3_73deg_xbeta.plt",
+      "sha256": "71cbde4dfd70b390117e121567ecbc0358088c4192e9d8257fb1ea506a7de6ee",
+      "zones": 27,
+      "values": 190635,
+      "exact_double_readback": true,
+      "bytes": 1538312,
+      "command": [
+        "E:\\Program Files\\Tecplot\\Tecplot 360 EX 2024 R1\\bin\\preplot.exe",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_73deg_xbeta.dat",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_73deg_xbeta.plt"
+      ]
+    },
+    {
+      "file": "M3_75deg_xbeta.plt",
+      "sha256": "59987d6785345cb549ad9bc7a2d32a1f8f8a8b1e28a119928087c83c9d6f404b",
+      "zones": 23,
+      "values": 163545,
+      "exact_double_readback": true,
+      "bytes": 1321540,
+      "command": [
+        "E:\\Program Files\\Tecplot\\Tecplot 360 EX 2024 R1\\bin\\preplot.exe",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_75deg_xbeta.dat",
+        "E:\\work\\calc\\Instability of attachment line\\Han2019_SweptBluntPlate\\outputs\\M3_sweep_angles_20261028\\M3_75deg_xbeta.plt"
+      ]
+    }
+  ]
+}
